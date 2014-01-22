@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Robolectric</title>
+    <%= google_analytics_tag %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+</head>
+
+<body>
+    <a href="http://github.com/robolectric/robolectric">
+        <img class="github" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/>
+    </a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <%= partial "partials/toc" %>
+            </div>
+            <div class="col-md-8">
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

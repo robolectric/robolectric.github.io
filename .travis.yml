@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+- 2.1.0
+branches:
+  only:
+  - source
+env:
+  global:
+  - secure: "TgZKI8kytYOjZoC+NTtfLIashyen0eCEjiCKddY/JNgzsFqLNPddibZeIAPDelmcaNJikeAO94yvogtDnG5X0ySpkzHGCFitu6LJGFpf+HoJxMdtSuud/ag0EKjIWRBCEf5eGvFvkJTdNGYRLfofY8K+TKC2GoGs2jWIADX55nM="
+script:
+- scripts/build-ci.sh

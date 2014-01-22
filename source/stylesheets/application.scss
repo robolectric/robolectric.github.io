@@ -1,1 +1,28 @@
 @import "bootstrap";
+@import "highlight";
+
+body {
+    color: #333;
+}
+
+a {
+    color: #55862e;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #55862e;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+}
+
+img.logo {
+    margin: 20px 0 20px 20px;
+}
+
+img.github {
+    position: absolute; top: 0; right: 0; border: 0;
+}
