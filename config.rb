@@ -8,6 +8,8 @@ set :markdown, fenced_code_blocks: true, autolink: true, smartypants: true
 activate :syntax
 activate :directory_indexes
 
+page "/javadoc/*", :directory_index => false
+
 activate :deploy do |deploy|
     deploy.method = :git
     deploy.remote = 'origin'
