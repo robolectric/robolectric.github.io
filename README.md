@@ -7,7 +7,7 @@ This repository is the source for the docs that live at [robolectric.org](http:/
 ## Contributing
 
 Before submitting a pull request, view the docs locally to check that the content and
-layout are correct. You can do this by running:
+layout are correct. One can do this by running:
 
     middleman server
   
