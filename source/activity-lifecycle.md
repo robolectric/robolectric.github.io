@@ -5,7 +5,7 @@ title: Driving Activities Through Their Lifecycle
 
 # Back in my day...
 
-Prior to Robolectric 2.2, most tests created Activities by calling constructors directly, (`new MyActivity()`) and then manually calling lifecycle methods such as `onCreate()`. Also widely used were a set of methods in `ShadowActivity` (for instance `ShadowActivity.callOnCreate()`) that are precursors to `ActivityController`.
+Before Robolectric 2.2, most tests created Activities by calling constructors directly, (`new MyActivity()`) and then manually calling lifecycle methods such as `onCreate()`. Also widely used were a set of methods in `ShadowActivity` (for instance `ShadowActivity.callOnCreate()`) that are precursors to `ActivityController`.
 
 It was a mess. The `ActivityController` is a Robolectric API that changes all of this. Its goal is to mimic how Android creates your Activities and drives them through their lifecycle.
 
