@@ -6,6 +6,6 @@ branches:
   - source
 env:
   global:
-  - secure: cuPz1NfVQzTkLZn246b1TV8Y/T3rHcq2j0o1U9E12plGRRuLRMPmeji67r3GNC5/V4Qw4mXDTgMY3X0IgicVBU+4rCBs0AUrF2Fjs2+mzTH4NOhwXF8vjt9BMTtuj+VCnZYKBR4AMjhC9SOjTbgzlwJViWkFsMreXPVvhGG7mic=
+  - secure: VA03lCgyoDTFz3Jia42Du1VEw+R4nYw8EJNQP7CqKL+ArP5fjYKAc5mZWqje4jzp642TKBKZMd2v8sl5TeQjPZtUQc/wh05wjqV+CK77VZG5Rmi+IwLlAxH9vGkweS6/v1O1s+xV4rvxKuZqgYzzfSb5zOG/N4rSrx0RWYb8Hs4=
 script:
 - scripts/build-ci.sh
