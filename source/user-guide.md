@@ -7,7 +7,7 @@ title: User Guide
 [RobolectricSample](http://github.com/robolectric/RobolectricSample) is a Maven-enabled sample app that shows how to layout your project, includes example tests, and a `build.xml` file for compiling and
 running tests.
 
-<a href="http://github.com/robolectric/RobolectricSample"><img src="images/robolectricsample.jpg" style="border:1px solid #000;"/></a>
+![RobolectricSample](robolectricsample.jpg)
 
 ### Sample Tests
 [RobolectricSample's tests](https://github.com/robolectric/RobolectricSample/tree/master/src/test/java/com/pivotallabs) are an excellent source for sample test code. Of note:

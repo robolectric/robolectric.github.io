@@ -9,16 +9,12 @@
 </head>
 
 <body>
-    <a href="http://github.com/robolectric/robolectric">
-        <img class="github" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/>
-    </a>
-
-    <div class="container">
+    <div id="page" class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div id="sidebar" class="col-md-3">
                 <%= partial "partials/toc" %>
             </div>
-            <div class="col-md-8">
+            <div id="content" class="col-md-9">
                 <%= yield %>
             </div>
         </div>

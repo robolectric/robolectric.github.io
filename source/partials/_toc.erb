@@ -1,46 +1,36 @@
 <%= image_tag 'robolectric.png', class: 'logo' %>
 
-<nav>
-    <ul>
-        <li><%= link_to 'Welcome', '/index.html' %></li>
+<ul class="nav nav-stacked">
+    <li class="nav-header"><%= link_to 'Getting Started', '/index.html' %></li>
+    <li class="nav-item"><%= link_to 'Maven', '/maven-quick-start.html' %></li>
+    <li class="nav-item"><%= link_to 'IntelliJ', '/intellij-quick-start.html' %></li>
+    <li class="nav-item"><%= link_to 'Eclipse', '/eclipse-quick-start.html' %></li>
+    <li class="nav-item"><%= link_to 'Download Jars', '/download.html' %></li>
+</ul>
 
-        <li>Installation
-            <ul>
-                <li><%= link_to 'Maven', '/maven-quick-start.html' %></li>
-                <li><%= link_to 'IntelliJ', '/intellij-quick-start.html' %></li>
-                <li><%= link_to 'Eclipse', '/eclipse-quick-start.html' %></li>
-                <li><%= link_to 'Download Jars', '/download.html' %></li>
-            </ul>
-        </li>
+<ul class="nav nav-stacked">
+    <li class="nav-header"><%= link_to 'User Guide', '/user-guide.html' %>
+    <li class="nav-item"><%= link_to 'Driving the Activity Lifecycle', '/activity-lifecycle.html' %></li>
+    <li class="nav-item"><%= link_to 'Working with ApkLibs', '/apklibs.html' %></li>
+</ul>
 
-        <li><%= link_to 'User Guide', '/user-guide.html' %>
-            <ul>
-                <li><%= link_to 'Driving the Activity Lifecycle', '/activity-lifecycle.html' %></li>
-                <li><%= link_to 'Working with ApkLibs', '/apklibs.html' %></li>
-            </ul>
-        </li>
+<ul class="nav nav-stacked">
+    <li class="nav-header"><%= link_to 'Extending', '/extending.html' %></li>
+    <li class="nav-item"><%= link_to 'Test Runner', '/customizing.html' %></li>
+    <li class="nav-item"><%= link_to 'RoboGuice (Part 1)', '/roboguice.html' %></li>
+    <li class="nav-item"><%= link_to 'RoboGuice (Part 2)', '/roboguice2.html' %></li>
+</ul>
 
-        <li><%= link_to 'Extending', '/extending.html' %></li>
+<ul class="nav nav-stacked">
+    <li class="nav-header"><%= link_to 'Contributing', '/contributor-guidelines.html' %></li>
+    <li class="nav-item"><%= link_to 'Real Android Jars', '/android-jars.html' %></li>
+</ul>
 
-        <li>Customizing
-            <ul>
-                <li><%= link_to 'Test Runner', '/customizing.html' %></li>
-                <li><%= link_to 'RoboGuice', '/roboguice.html' %></li>
-            </ul>
-        </li>
+<ul class="nav nav-stacked">
+    <li class="nav-header"><%= link_to 'Resources', '/resources.html' %></li>
+    <li class="nav-item"><%= link_to 'JavaDoc', '/javadoc/index.html?overview-summary.html' %></li>
+    <li class="nav-item"><%= link_to 'Release Notes', '/release-notes.html' %></li>
 
-        <li>Contributing
-            <ul>
-                <li><%= link_to 'Guidelines', '/contributor-guidelines.html' %></li>
-                <li><%= link_to 'Real Android Jars', '/android-jars.html' %></li>
-            </ul>
-        </li>
-
-        <li><%= link_to 'Help and Resources', '/resources.html' %></li>
-        <li><%= link_to 'JavaDoc', '/javadoc/index.html?overview-summary.html' %></li>
-        <li><%= link_to 'Release Notes', '/release-notes.html' %></li>
-
-        <li><%= link_to 'Blog', 'http://robolectric.blogspot.com' %></li>
-        <li><%= link_to 'Google Group', 'http://groups.google.com/group/robolectric' %></li>
-    </ul>
-</nav>
+    <li class="nav-item"><%= link_to 'Blog', 'http://robolectric.blogspot.com' %></li>
+    <li class="nav-item"><%= link_to 'Google Group', 'http://groups.google.com/group/robolectric' %></li>
+</ul>
