@@ -132,7 +132,7 @@ public class MainActivityTest {
 
 To run the tests
 * "Run" &rarr; "Run Configurations..."
-* Select "JUnit" &rarr; "MyProjectTestConfiguration"
+* Select "JUnit" &rarr; "MyProjectTests"
 * Click "Run"
 
 The tests may take quite a while to start running after the first launch. Robolectric downloads a real Android jar on the first run, placing it in your local maven repo. Future test runs are considerably faster.
