@@ -4,128 +4,106 @@ title: Eclipse Quick Start
 ---
 
 ##Quick Start for Eclipse
+--- 
 
-## Maven 
-To open the project in Eclipse, make sure you have the
-[M2Eclipse plugin](http://m2eclipse.sonatype.org/installing-m2eclipse.html) installed, then:
-*  android update project -p $PATH --target xxx
-* Import... &rarr; Existing Maven Projects, find your project.
-* &lt;right click project&gt; &rarr; Android &rarr; Convert to Android Project
-* &lt;right click "gen" folder&gt; &rarr; Build Path &rarr; Add to Build Path
-
-
-
+###Download JARs
+You'll need at least the "robolectric-x.x.x-jar-with-dependencies" jar, which can be obtained [here](/download/). You may also want the source jar matching your Robolectric version from the same location, in case you run in to any bugs. Also recommended, but not required, is the [latest hamcrest-all jar](https://code.google.com/p/hamcrest/downloads/list).
+ 
 ###Project Creation
------------------------
 Create a project
-- File &rarr; New &rarr; Project... &rarr; Android &rarr; Android Project
-- Click "Next"
+* File &rarr; New &rarr; Project... &rarr; Android &rarr; Android Project
+* Click "Next"
 
 New Android Project dialog
-- Project Name: MyProject
-- Build Target: Click Target Name: "Google APIs", Vendor: "Google Inc.", Platform "2.2", Api Level: "8"
-- Type 'com.example' in package name
-- Check Create Activity, enter "MyActivity"
-- Click "Finish" (Do NOT create an Android Test project)
+* Project/Application Name: MyProject
+* Package Name: com.example.myproject
+* Target/Compile With: API 18
 
-Add a source test directory to your project
-- Right click on 'MyProject' in the package explorer &rarr; New... &rarr; Folder
-- Folder name: test (do not make this a source folder for this project - hang tight)
-- Click "Finish"
+Make sure to note the package name, as you'll need it later. Target SDK can't currently be set to anything higher than API18, as Robolectric doesn't yet support 19.
+
+Add a 'test' directory to your project
+* Right click on 'MyProject' in the package explorer &rarr; New... &rarr; Folder (**not** Source Folder)
+* Folder name: test (do not make this a source folder for this project - hang tight)
+* Click "Finish"
+
+Add a 'test' subdirectory under libs
+* Right click on 'libs' &rarr; New... &rarr; Folder (Again, **not** a source folder)
+* Folder name 'test' 
+* Click "Finish"
+
+Finally, drag and drop/otherwise copy your test-related jar files (robolectric/sources/hamcrest) into the libs/test directory.
 
 ###Create a *JAVA* project for your tests
-------------------------
 
-Create and configure test Java project
-- File &rarr; New &rarr; Java Project...
-- Project Name: MyProjectTest
-- Click "Next"
-- Expand the MyProjectTest row and select the "src" row
-- Click link "Remove source folder 'src' from build path"
-- Click link "Link additional source"
-- Browse to and select ".../MyProject/test"
-- Click "Finish" on the "Link additional sources" dialog (keep the new Java project dialog open)
+Create and configure test Java project (**not** an Android Application Project)
+* File &rarr; New &rarr; Java Project...
+* Project Name: MyProjectTests
+* Under "Project Layout", select "Use project folder as root for sources and class files"
+* On Source tab Under "Details", click "Link additional source"
+* Browse to and select ".../MyProject/test"
+* Click "Finish" on the "Link additional sources" dialog (keep the new Java project dialog open)
 
 Add dependency on the Android project
-- Select "Projects" tab at the top of the New Java Project dialog
-- Click "Add..."
-- Check "MyProject"
-- Click "OK"
-- Click "Finish" closing the new Java project dialog
+* Select "Projects" tab at the top of the New Java Project dialog
+* Click "Add..."
+* Check "MyProject"
+* Click "OK"
 
-###Add required directory structure and jars to test project
-At the command line:
-<pre>
-mkdir -p .../MyProjectTest/lib
-cp .../robolectric-X.X.X-jar-with-dependencies.jar .../MyProjectTest/lib
-</pre>
+Add required libraries
+* Select "Libraries" tab at the top of the New Java Project dialog
+* Robolectric jars
+  * Click "Add JARS"
+  * Select all jars from within MyProject/libs/test, then click "OK"
+* Android jars
+  * Click "Add External Jars"
+  * Navigate to your SDK install directory, then select "platforms/android-xx/android.jar", choosing the API version to match the one you chose for Target when creating the Android project.
+  * Click "Open" to add android.jar
+* JUnit
+  * Click "Add Library"
+  * Select JUnit, then click "Next"
+  * Change the JUnit version to 4 (Robolectric requires JUnit 4), then click "Finish"
 
-###Configure build path
-Back in Eclipse
-- Right click "MyProjectTest"
-- Select "Refresh"
-- Right click "MyProjectTest"
-- Select "Build Path" &rarr; "Configure Build Path..."
+Set classpath order
+  - Select "Order and Export" tab at the top of the New Java Project dialog
+  - Select android.jar, and move it down so that it appears below the robolectric jars
 
-Add JUnit library
-- Select "Libraries" tab at the top of the Properties dialog for MyProjectTest
-- Click "Add Library"
-- Select "JUnit"
-- Click "Next"
-- Select JUnit library version 4 (Robolectric is *not* compatible with JUnit 3)
-- Click "Finish" (keep the Properties dialog for MyProjectTest open)
+Click "Finish", closing the new Java project dialog
 
-Add Robolectric jar
-- Click "Add JARs..."
-- Expand MyProjectTest &rarr; lib
-- Select robolectric-X.X.X-jar-with-dependencies.jar
-- Click "OK" (keep the Properties dialog for MyProjectTest open)
-
-Add Android Jars
-- Click "Add External Jars..."
-- Navigate to &lt;your android install directory&gt;/platforms/android-8/android.jar
-- Click "Open"  (keep the Properties dialog for MyProjectTest open)
-- Click "Add External Jars..."
-- Navigate to &lt;your android install directory&gt;/add-ons/addon_google_apis_google_inc_8/libs/maps.jar
-- Click "Open"
-- Click "OK" on the Properties for MyProjectTest dialog
+Most of these settings can be changed later by right-clicking your test project, selecting "Build path" &rarr; "Configure Build Path"
 
 ### Create a test Run Configuration
------------------------------------------------
-Your tests will *not* run without this step. Your resources will not be found.
-- "Run" &rarr; "Run Configurations..."
-- Double click "*JUnit*" (not "Android JUnit Test")
-- Name: MyProjectTestConfiguration
-- Select the "Run all tests in the selected project, package or source folder:" radio button
-- Click the "Search" button
-- Select "MyProjectTest"
-- TestRunner: JUnit 4
-- Click on the link "Multiple launchers available Select one..." at the bottom of the dialog
-- Check the "Use configuration specific settings" box
-- Select "Eclipse JUnit Launcher"
-- Click "OK"
-- Click the "Arguments" tab
-- Under "Working directory:" select the "Other:" radio button
-- Click "Workspace..."
-- Select "MyProject" (*not* "MyProjectTest", The value inside of 'Other' edit box should be '${workspace_loc:MyProject}')
-- Click "OK"
-- Click "Close"
+Your tests will *not* run without this step; Robolectric will not be able to locate your project resources.
+* Click "Run" &rarr; "Run Configurations..."
+* Double click "*JUnit*" (**not** "Android JUnit Test")
+* Name: MyProjectTests
+* Select the "Run all tests in the selected project, package or source folder:" radio button
+* Click the "Search" button
+* Select "MyProjectTest"
+* Test runner: JUnit 4
+* Click on the link "Multiple launchers available Select one..." at the bottom of the dialog
+* Check the "Use configuration specific settings" box
+* Select "Eclipse JUnit Launcher"
+* Click "OK"
+* Click the "Arguments" tab
+* Under "Working directory:" select the "Other:" radio button
+* Click "Workspace..."
+* Select "MyProject" (**not** "MyProjectTest", The value inside of 'Other' edit box should be '${workspace_loc:MyProject}'), then click "OK"
+* Click "Apply" then "Close"
 
 ### Verify your setup
---------------------------------------------------------------------------------------------
-- Right click the "test" folder under "MyProjectTest"
-- Select "New"&rarr;"Class"
-- Package: "com.example"
-- Name: "MyActivityTest"
-- Click "Finish"
-- Add the following source:
+* Right click the "test" source folder under "MyProjectTest"
+* Select "New"&rarr;"Class"
+* Package: "com.example"
+* Name: "MainActivityTest" (the name of the default activity created in your Android project suffixed with "test"
+* Click "Finish"
+* Add the following source:
 
 ```java
-package com.example;
+package com.example.myproject;
 
-import com.example.MyActivity;
-import com.example.R;
-import com.xtremelabs.robolectric.RobolectricTestRunner;
+import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -133,40 +111,50 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
 @RunWith(RobolectricTestRunner.class)
-public class MyActivityTest {
+public class MainActivityTest {
 
+    MainActivity activity;
+    
+    @Before
+    public void setup()
+    {
+        this.activity = Robolectric.buildActivity(MainActivity.class).create().get();
+    }
+    
     @Test
-    public void shouldHaveHappySmiles() throws Exception {
-        String hello = new MyActivity().getResources().getString(R.string.hello);
-        assertThat(hello, equalTo("Hello World, MyActivity!"));
+    public void shouldHaveHappySmiles() throws Exception 
+    {
+        String hello = this.activity.getString(R.string.hello_world);
+        assertThat(hello, equalTo("Hello world!"));
     }
 }
 ```
 
 To run the tests
-- "Run" &rarr; "Run Configurations..."
-- Select "JUnit" &rarr; "MyProjectTestConfiguration"
-- Click "Run"
+* "Run" &rarr; "Run Configurations..."
+* Select "JUnit" &rarr; "MyProjectTests"
+* Click "Run"
+
+The tests may take quite a while to start running after the first launch. Robolectric downloads a real Android jar on the first run, placing it in your local maven repo. Future test runs are considerably faster.
 
 ###*If you get a RuntimeException saying: "no such layout layout/main"*
---------------------------------------------------------------------
 It means that you have tried to run a test for which you do not have a Run Configuration set up. To remedy this:
-- Right click on the test
-- "Run As" &rarr; "Run Configurations..."
-- Double click "JUnit" (this will magically make the test you're running appear under JUnit)
-- Select "MyActivityTest" (or the name of whichever test you are currently trying to run)
-- TestRunner: JUnit 4
-- Click on the link "Multiple launchers available Select one..." (or it also may appear as "Using XXX Launcher - Select
+* Right click on the test
+* "Run As" &rarr; "Run Configurations..."
+* Double click "JUnit" (this will magically make the test you're running appear under JUnit)
+* Select "MyActivityTest" (or the name of whichever test you are currently trying to run)
+* TestRunner: JUnit 4
+* Click on the link "Multiple launchers available Select one..." (or it also may appear as "Using XXX Launcher - Select
 other...") at the bottom of the dialog
-- Check the "Use configuration specific settings" box
-- Select "Eclipse JUnit Launcher"
-- Click "OK"
-- Click the "Arguments" tab
-- Under "Working directory:" select the "Other:" radio button
-- Click "Workspace..."
-- Select "MyProject" (*not* "MyProjectTest")
-- Click "OK"
-- Click "Close"
+* Check the "Use configuration specific settings" box
+* Select "Eclipse JUnit Launcher"
+* Click "OK"
+* Click the "Arguments" tab
+* Under "Working directory:" select the "Other:" radio button
+* Click "Workspace..."
+* Select "MyProject" (*not* "MyProjectTest")
+* Click "OK"
+* Click "Close"
 
 
 Are these instructions helpful? confusing? [Let us know](http://groups.google.com/group/robolectric)! any feedback is helpful. Thanks -Robolectric
