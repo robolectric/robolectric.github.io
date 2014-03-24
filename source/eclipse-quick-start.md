@@ -11,10 +11,12 @@ You'll need at least the "robolectric-x.x.x-jar-with-dependencies" jar, which ca
  
 ###Project Creation
 Create a project
+
 * File &rarr; New &rarr; Project... &rarr; Android &rarr; Android Project
 * Click "Next"
 
 New Android Project dialog
+
 * Project/Application Name: MyProject
 * Package Name: com.example.myproject
 * Target/Compile With: API 18
@@ -22,11 +24,13 @@ New Android Project dialog
 Make sure to note the package name, as you'll need it later. Target SDK can't currently be set to anything higher than API18, as Robolectric doesn't yet support 19.
 
 Add a 'test' directory to your project
+
 * Right click on 'MyProject' in the package explorer &rarr; New... &rarr; Folder (**not** Source Folder)
 * Folder name: test (do not make this a source folder for this project - hang tight)
 * Click "Finish"
 
 Add a 'test' subdirectory under libs
+
 * Right click on 'libs' &rarr; New... &rarr; Folder (Again, **not** a source folder)
 * Folder name 'test' 
 * Click "Finish"
@@ -36,6 +40,7 @@ Finally, drag and drop/otherwise copy your test-related jar files (robolectric/s
 ###Create a *JAVA* project for your tests
 
 Create and configure test Java project (**not** an Android Application Project)
+
 * File &rarr; New &rarr; Java Project...
 * Project Name: MyProjectTests
 * Under "Project Layout", select "Use project folder as root for sources and class files"
@@ -44,12 +49,14 @@ Create and configure test Java project (**not** an Android Application Project)
 * Click "Finish" on the "Link additional sources" dialog (keep the new Java project dialog open)
 
 Add dependency on the Android project
+
 * Select "Projects" tab at the top of the New Java Project dialog
 * Click "Add..."
 * Check "MyProject"
 * Click "OK"
 
 Add required libraries
+
 * Select "Libraries" tab at the top of the New Java Project dialog
 * Robolectric jars
   * Click "Add JARS"
@@ -64,8 +71,9 @@ Add required libraries
   * Change the JUnit version to 4 (Robolectric requires JUnit 4), then click "Finish"
 
 Set classpath order
-  - Select "Order and Export" tab at the top of the New Java Project dialog
-  - Select android.jar, and move it down so that it appears below the robolectric jars
+
+  * Select "Order and Export" tab at the top of the New Java Project dialog
+  * Select android.jar, and move it down so that it appears below the robolectric jars
 
 Click "Finish", closing the new Java project dialog
 
@@ -73,6 +81,7 @@ Most of these settings can be changed later by right-clicking your test project,
 
 ### Create a test Run Configuration
 Your tests will *not* run without this step; Robolectric will not be able to locate your project resources.
+
 * Click "Run" &rarr; "Run Configurations..."
 * Double click "*JUnit*" (**not** "Android JUnit Test")
 * Name: MyProjectTests
@@ -91,6 +100,7 @@ Your tests will *not* run without this step; Robolectric will not be able to loc
 * Click "Apply" then "Close"
 
 ### Verify your setup
+
 * Right click the "test" source folder under "MyProjectTest"
 * Select "New"&rarr;"Class"
 * Package: "com.example"
@@ -131,6 +141,7 @@ public class MainActivityTest {
 ```
 
 To run the tests
+
 * "Run" &rarr; "Run Configurations..."
 * Select "JUnit" &rarr; "MyProjectTests"
 * Click "Run"
@@ -139,6 +150,7 @@ The tests may take quite a while to start running after the first launch. Robole
 
 ###*If you get a RuntimeException saying: "no such layout layout/main"*
 It means that you have tried to run a test for which you do not have a Run Configuration set up. To remedy this:
+
 * Right click on the test
 * "Run As" &rarr; "Run Configurations..."
 * Double click "JUnit" (this will magically make the test you're running appear under JUnit)
