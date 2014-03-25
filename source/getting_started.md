@@ -13,4 +13,4 @@ If you're using JetBrains' excellent [IntelliJ IDEA](http://www.jetbrains.com/id
 
 <br>
 ### Eclipse
-If you're using Eclipse, you can try to get it to work by following the LIKELY OUT OF DATE [eclipse quick start instructions](eclipse-quick-start.html). If you try this or get it working otherwise, please let us know how and help us make the Deckards work for Eclipse.
+If you're using Eclipse, you can try to get it to work by following the [eclipse quick start instructions](eclipse-quick-start.html). If you try this or get it working otherwise, please let us know how and help us make the Deckards work for Eclipse.
