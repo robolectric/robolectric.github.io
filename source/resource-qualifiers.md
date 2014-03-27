@@ -19,4 +19,4 @@ public void thisUsesEnglishAndPortraitResources() {
 }
 ```
 
-Multiple qualifiers should be seperated by dashes and provided in the order put forth in [this list](http://developer.android.com/guide/topics/resources/providing-resources.html#table2).
+Multiple qualifiers should be separated by dashes and provided in the order put forth in [this list](http://developer.android.com/guide/topics/resources/providing-resources.html#table2).
