@@ -6,6 +6,8 @@ title: Eclipse Quick Start
 ##Quick Start for Eclipse
 --- 
 
+_Note:_ If you're using [Maven](http://maven.apache.org/) as your build tool you can include Robolectric tests in the same project as your application code without any additional configuration using the [Android for Maven Eclipse](http://rgladwell.github.io/m2e-android/) plugin.
+
 ###Download JARs
 You'll need at least the "robolectric-x.x.x-jar-with-dependencies" jar, which can be obtained [here](/download/). You may also want the source jar matching your Robolectric version from the same location, in case you run in to any bugs. Also recommended, but not required, is the [latest hamcrest-all jar](https://code.google.com/p/hamcrest/downloads/list).
  
