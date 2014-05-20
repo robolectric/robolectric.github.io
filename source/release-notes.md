@@ -6,6 +6,28 @@ title: Release Notes
 # Release Notes
 
 -----
+## [Release 2.3](http://repo1.maven.org/maven2/org/robolectric/robolectric/2.3) - May 20, 2014
+-----
+
+#### Features
+
+- Robolectric will now load (at runtime) the Android SDK that matches either the value of `targetSdkVersion` or the value specified in a `@Config` annotation.
+- Robolectric now uses a real implementation of SQLite instead of a collection of shadows and fakes. Tests can now be written to verify real database behavior.
+- Robolectric will now parse content provider declarations from your manifest and return them via the `ContentResolver` mechanism. In addition, `CursorLoaders` and `AsyncTaskLoaders` are now correctly tied into Robolectric's scheduler mechanism.
+- New `ServiceController` component (similar to `ActivityController`) which can be used to safely drive a service through its lifecycle.
+- Meta-data values, permissions, and intent filters are now parsed out of the manifest and available from `ShadowApplication`.
+- Removal of a bunch of unnecessary shadows.
+
+#### Bug Fixes
+
+- Lots of resource and manifest parsing fixes.
+- Lots of miscellaneous improvements to shadows.
+
+#### Upgrade Notes
+
+- The reflective lifecycle methods on `ShadowActivity` (`callOnCreate`, `callOnResume`, etc) have been removed. You are now required to use an `ActivityController` to drive an `Activity` through its lifecycle.
+
+-----
 ## [Release 2.2](http://repo1.maven.org/maven2/org/robolectric/robolectric/2.2) - October 7, 2013
 -----
 
