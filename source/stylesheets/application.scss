@@ -5,6 +5,20 @@ $gray:          #F5F6F6;
 $green:         #55862E;
 $light-green:   #A4C739;
 
+body, html {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: $gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
 a {
     color: $green;
     text-decoration: none;
@@ -15,21 +29,30 @@ a:visited {
     text-decoration: none;
 }
 
-#page {
-    padding-left: 0px;
+#wrapper {
+    min-height: 100%;
+}
+
+#header {
+}
+
+#footer {
 }
 
 #sidebar {
-    padding-left: 0px;
+    width: 250px;
+    float: left;
+    position: absolute;
     padding-right: 0px;
-    background-color: $gray;
 
     a {
         font-size: 16px;
     }
 
     .logo {
-        margin: 30px 0px 30px 45px;
+        display: block;
+        margin: 0 auto;
+        padding: 30px 0;
     }
 
     .nav-header {
@@ -47,7 +70,12 @@ a:visited {
 }
 
 #content {
-    padding-right: 15px;
+    padding: 0 30px 30px 30px;
+    min-height: 100%;
+    margin-left: 250px;
+    position: absolute;
+    background-color: white;
     border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
 }
 

@@ -4,20 +4,28 @@
     <meta charset="utf-8">
     <title>Robolectric</title>
     <%= google_analytics_tag %>
+    <%= favicon_tag 'images/favicon.png' %>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
 </head>
 
 <body>
-    <div id="page" class="container">
-        <div class="row">
-            <div id="sidebar" class="col-md-3">
-                <%= partial "partials/toc" %>
-            </div>
-            <div id="content" class="col-md-9">
-                <%= yield %>
-            </div>
+    <div id="wrapper">
+        <div id="header">
+            <%= partial "partials/header" %>
         </div>
+
+        <div id="sidebar">
+            <%= partial "partials/sidebar" %>
+        </div>
+
+        <div id="content">
+            <%= yield %>
+        </div>
+    </div>
+
+    <div id="footer">
+        <%= partial "partials/footer" %>
     </div>
 </body>
 </html>
