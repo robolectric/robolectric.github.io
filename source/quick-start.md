@@ -4,13 +4,12 @@ group: Setup
 order: 2
 ---
 
-## Quick Start
+# Quick Start
 
 The quickest way to get started using Robolectric is to add the pre-built jar with all dependencies included to your
 current project. Instructions for other setup methods are covered below.
 
-Use the <code>@RunWith</code> annotation available in JUnit 4 to run your tests
-under Robolectric:
+Use the `@RunWith` annotation available in JUnit 4 to run your tests under Robolectric:
 
 ```java
 @RunWith(RobolectricTestRunner.class)
@@ -31,13 +30,12 @@ using Robolectric as a sub-module of your project.
 Probably the easiest way to get started is to create a Maven project and then import it into your IDE of choice.
 However we have provided IDE specific instructions if that is the method you prefer.
 
-### Using Maven
+## Using Maven
 
 This is the method we recommend.
 
-If you are using Maven and the excellent
-[maven-android-plugin](http://code.google.com/p/maven-android-plugin/) to build your project, simply add this to the
-dependencies section of your <code>pom.xml</code>:
+If you are using Maven and the excellent [maven-android-plugin](http://code.google.com/p/maven-android-plugin/) to
+build your project, simply add this to the dependencies section of your `pom.xml`:
 
 ```xml
 <dependency>
@@ -48,16 +46,11 @@ dependencies section of your <code>pom.xml</code>:
 </dependency>
 ```
 
-<b>&gt;&gt; <a href="maven-quick-start.html">Detailed step-by-step Maven instructions</a></b>
+## Using IntelliJ
 
-### Using IntelliJ:
-* It just works!
+It just works!
 
-<b>&gt;&gt; <a href="intellij-quick-start.html">Detailed step-by-step IntelliJ instructions</a></b>
-
-in case it doesn't.
-
-### Using Eclipse:
+## Using Eclipse
 
 Eclipse will try to use the Android JUnit test runner by default for Android projects, so you will need a separate test
 project to run the test with Robolectric, and set up a run configuration to run the tests with the Eclipse JUnit
@@ -71,22 +64,21 @@ for the rest of the project. To make this work, use the "Link Source..." button 
 link from this test project to the source root for the tests under the main project.
 
 * Add the appropriate Android SDK jars to the test project's build path (e.g.
-<code>{android sdk root}/platforms/android-8/android.jar</code> and
-<code>{android sdk root}/add-ons/addon_google_apis_google_inc_8/libs/maps.jar</code>)
+`{android sdk root}/platforms/android-8/android.jar` and
+`{android sdk root}/add-ons/addon_google_apis_google_inc_8/libs/maps.jar`)
 
-* [Download](http://pivotal.github.com/robolectric/download.html) robolectric-X.X.X-jar-with-dependencies.jar place it in your test project and
-add it to the build path, along with the JUnit library.
+* [Download](http://pivotal.github.com/robolectric/download.html) robolectric-X.X.X-jar-with-dependencies.jar place it
+in your test project and add it to the build path, along with the JUnit library.
 
 * Add your app's project as a project dependency to the build path of your test project.
 
-* _Important!_ Add a new JUnit run/debug launch configuration to run the tests in the test folder. There may be a warning that
-multiple launchers are available, make sure to select the Eclipse JUnit Launcher instead of the Android JUnit Launcher.
-<b>Set the working directory to be the root of your main project, not that of your test project.</b>
+* _Important!_ Add a new JUnit run/debug launch configuration to run the tests in the test folder. There may be a
+warning that multiple launchers are available, make sure to select the Eclipse JUnit Launcher instead of the Android
+JUnit Launcher. <b>Set the working directory to be the root of your main project, not that of your test project.</b>
 
-<b>&gt;&gt; <a href="eclipse-quick-start.html">Detailed step-by-step Eclipse instructions</a></b>
+## In any configuration
 
-### In any configuration:
-* Use the <code>@RunWith</code> annotation available in JUnit 4 to run your tests under Robolectric:
+* Use the `@RunWith` annotation available in JUnit 4 to run your tests under Robolectric:
 
 ```java
 @RunWith(RobolectricTestRunner.class)
@@ -95,23 +87,21 @@ public class MyTest {
 }
 ```
 
-* See the [Robolectric sample application](https://github.com/robolectric/robolectricsample) for more examples to get you
-started.
-
 ## Setting up for Robolectric development
 
 If you find that you need to extend or modify Robolectric's simulation of Android or you'd like to contribute to the
 project, these instructions will help get you started. You can also track the progress of Robolectric as it evolves from
 its [Tracker page](http://www.pivotaltracker.com/projects/105008)
 
-
-### Using Maven:
+## Using Maven
 
 Clone the robolectric git repository, modify it as needed, and use maven to install a snapshot of Robolectric:
-* <code>git clone git://github.com/robolectric/robolectric.git</code>
-* modify <code>pom.xml</code> and modify Robolectric's version by appending <code>-SNAPSHOT</code>
-if it's not there already (e.g. <code>0.9.6-SNAPSHOT</code>)
-* <code>mvn install</code>
+
+* `git clone git://github.com/robolectric/robolectric.git`
+
+* Modify `pom.xml` and modify Robolectric's version by appending `-SNAPSHOT` if it's not there already (e.g. `0.9.6-SNAPSHOT`)
+
+* `mvn install`
 
 Modify your project's pom to depend on the the same version of Robolectric as you specified in the Robolectric pom.
 
@@ -119,20 +109,17 @@ To edit your project and Robolectric side-by-side in your IDE, follow the instru
 pom as a module (in IntelliJ) or a separate project (in Eclipse).
 
 
-### Using IntelliJ without Maven:
+## Using IntelliJ without Maven
 
 * [Download](http://pivotal.github.com/robolectric/download.html) robolectric-X.X.X-jar-with-dependencies.jar and add it to your other test
 library dependencies (such as junit.jar).
 
-<b>&gt;&gt; <a href="intellij-quick-start.html">Detailed step-by-step IntelliJ instructions</a></b>
+## Using Eclipse without Maven
 
-### Using Eclipse without Maven:
+* Follow the instructions for Eclipse quick start above, but don't download the robolectric-X.X.X-jar-with-dependencies.jar.
+Instead, use git to clone the Robolectric repository:
 
-* Follow the instructions for Eclipse quick start above, but don't download the
-robolectric-X.X.X-jar-with-dependencies.jar. Instead, use git to
-clone the Robolectric repository:
-
-  <code>git clone git://github.com/robolectric/robolectric.git</code>
+  `git clone git://github.com/robolectric/robolectric.git`
 
 (You'll probably want to fork the repo on github first so you can submit pull requests back to us.)
 

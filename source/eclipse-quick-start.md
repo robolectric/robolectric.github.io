@@ -4,15 +4,18 @@ group: Setup
 order: 3
 ---
 
-##Quick Start for Eclipse
---- 
+# Quick Start for Eclipse
 
-_Note:_ If you're using [Maven](http://maven.apache.org/) as your build tool you can include Robolectric tests in the same project as your application code without any additional configuration using the [Android for Maven Eclipse](http://rgladwell.github.io/m2e-android/) plugin.
+_Note:_ If you're using [Maven](http://maven.apache.org/) as your build tool you can include Robolectric tests in
+the same project as your application code without any additional configuration using the [Android for Maven Eclipse](http://rgladwell.github.io/m2e-android/) plugin.
 
-###Download JARs
-You'll need at least the "robolectric-x.x.x-jar-with-dependencies" jar, which can be obtained [here](/download/). You may also want the source jar matching your Robolectric version from the same location, in case you run in to any bugs. Also recommended, but not required, is the [latest hamcrest-all jar](https://code.google.com/p/hamcrest/downloads/list).
+## Download JARs
+
+You'll need at least the "robolectric-x.x.x-jar-with-dependencies" jar, which can be obtained [here](/download/).
+You may also want the source jar matching your Robolectric version from the same location, in case you run in to any
+bugs. Also recommended, but not required, is the [latest hamcrest-all jar](https://code.google.com/p/hamcrest/downloads/list).
  
-###Project Creation
+## Project Creation
 Create a project
 
 * File &rarr; New &rarr; Project... &rarr; Android &rarr; Android Project
@@ -24,7 +27,8 @@ New Android Project dialog
 * Package Name: com.example.myproject
 * Target/Compile With: API 18
 
-Make sure to note the package name, as you'll need it later. Target SDK can't currently be set to anything higher than API18, as Robolectric doesn't yet support 19.
+Make sure to note the package name, as you'll need it later. Target SDK can't currently be set to anything higher
+than API 18, as Robolectric doesn't yet support API 19.
 
 Add a 'test' directory to your project
 
@@ -40,7 +44,7 @@ Add a 'test' subdirectory under libs
 
 Finally, drag and drop/otherwise copy your test-related jar files (robolectric/sources/hamcrest) into the libs/test directory.
 
-###Create a *JAVA* project for your tests
+## Create a *JAVA* project for your tests
 
 Create and configure test Java project (**not** an Android Application Project)
 
@@ -82,7 +86,8 @@ Click "Finish", closing the new Java project dialog
 
 Most of these settings can be changed later by right-clicking your test project, selecting "Build path" &rarr; "Configure Build Path"
 
-### Create a test Run Configuration
+## Create a test Run Configuration
+
 Your tests will *not* run without this step; Robolectric will not be able to locate your project resources.
 
 * Click "Run" &rarr; "Run Configurations..."
@@ -102,7 +107,7 @@ Your tests will *not* run without this step; Robolectric will not be able to loc
 * Select "MyProject" (**not** "MyProjectTest", The value inside of 'Other' edit box should be '${workspace_loc:MyProject}'), then click "OK"
 * Click "Apply" then "Close"
 
-### Verify your setup
+## Verify your setup
 
 * Right click the "test" source folder under "MyProjectTest"
 * Select "New"&rarr;"Class"
@@ -151,7 +156,7 @@ To run the tests
 
 The tests may take quite a while to start running after the first launch. Robolectric downloads a real Android jar on the first run, placing it in your local maven repo. Future test runs are considerably faster.
 
-###*If you get a RuntimeException saying: "no such layout layout/main"*
+## *If you get a RuntimeException saying: "no such layout layout/main"*
 It means that you have tried to run a test for which you do not have a Run Configuration set up. To remedy this:
 
 * Right click on the test
@@ -170,6 +175,3 @@ other...") at the bottom of the dialog
 * Select "MyProject" (*not* "MyProjectTest")
 * Click "OK"
 * Click "Close"
-
-
-Are these instructions helpful? confusing? [Let us know](http://groups.google.com/group/robolectric)! any feedback is helpful. Thanks -Robolectric

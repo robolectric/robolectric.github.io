@@ -4,7 +4,7 @@ group: Setup
 order: 4
 ---
 
-## Downloads
+# Downloads
 
 Robolectric releases are available on [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.robolectric%22).
 
