@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Help and Resources
+title: Other Resources
+group: Contributing
+order: 4
 ---
 
 ## Who's Using Robolectric?

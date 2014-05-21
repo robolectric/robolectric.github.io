@@ -1,8 +1,3 @@
----
-layout: default
-title: "Robolectric: Unit Test your Android Application"
----
-
 # Robolectric
 
 ## Test-Drive Your Android Code

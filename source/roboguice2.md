@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Integrating RoboGuice and Robolectric part 2
+title: RoboGuice (Part 2)
+group: Customizing
+order: 4
 ---
 
 ### Test-only Bindings

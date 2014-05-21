@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Contributor Guidelines
+group: Contributing
+order: 1
 ---
 
 # Coding Guidelines

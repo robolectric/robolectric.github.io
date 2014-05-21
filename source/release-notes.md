@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Release Notes
+group: Contributing
+order: 3
 ---
 
 # Release Notes

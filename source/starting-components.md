@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Starting Other Components
+group: User Guide
+order: 2
 ---
 
 # Starting Other Components

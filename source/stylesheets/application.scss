@@ -3,7 +3,9 @@
 
 $gray:          #F5F6F6;
 $green:         #55862E;
+$border:        #CCCCCC;
 $light-green:   #A4C739;
+$sidebar-width: 250px;
 
 body, html {
     height: 100%;
@@ -34,13 +36,29 @@ a:visited {
 }
 
 #header {
+    height: 50px;
+    background-color: $light-green;
+
+    i {
+        top: 2px;
+        display: inline;
+        padding-right: 5px;
+    }
+
+    a {
+        color: white;
+        font-size: 18px;
+        &:hover {
+            background-color: $light-green;
+        }
+    }
 }
 
 #footer {
 }
 
 #sidebar {
-    width: 250px;
+    width: $sidebar-width;
     float: left;
     position: absolute;
     padding-right: 0px;
@@ -56,26 +74,20 @@ a:visited {
     }
 
     .nav-header {
+        color: white;
+        padding: 10px 15px;
+        font-size: 16px;
         background-color: $light-green;
-        a {
-            color: white;
-            &:hover {
-                background-color: $light-green;
-            }
-            &:visited {
-                color: white;
-            }
-        }
     }
 }
 
 #content {
     padding: 0 30px 30px 30px;
     min-height: 100%;
-    margin-left: 250px;
+    margin-left: $sidebar-width;
     position: absolute;
     background-color: white;
-    border-left: 1px solid #CCCCCC;
-    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid $border;
+    border-right: 1px solid $border;
 }
 

@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Driving Activities Through Their Lifecycle
+title: Driving the Activity Lifecycle
+group: User Guide
+order: 3
 ---
 
 # Back in my day...

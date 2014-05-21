@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Downloads
+group: Setup
+order: 4
 ---
 
 ## Downloads

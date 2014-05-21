@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Working with ApkLibs
+group: User Guide
+order: 4
 ---
 
 # Configuring ApkLibs

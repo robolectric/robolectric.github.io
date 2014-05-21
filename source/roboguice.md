@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Integrating RoboGuice and Robolectric
+title: RoboGuice (Part 1)
+group: Customizing
+order: 3
 ---
 
 # Integrating RoboGuice and Robolectric

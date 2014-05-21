@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Creating and Using Custom Shadows
+title: Creating Custom Shadows
+group: User Guide
+order: 4
 ---
 
 # What are Custom Shadows

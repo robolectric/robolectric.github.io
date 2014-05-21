@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Quick Start
+group: Setup
+order: 2
 ---
 
 ## Quick Start

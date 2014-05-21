@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Using qualified resources
+title: Using Qualified Resources
+group: User Guide
+order: 5
 ---
 
 # What are qualified resources

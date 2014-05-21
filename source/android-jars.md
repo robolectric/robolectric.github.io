@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Android Jars
+title: Real Android JARs
+group: Contributing
+order: 3
 ---
 
 ## How Robolectric Loads Android Jars

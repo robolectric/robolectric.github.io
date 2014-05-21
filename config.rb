@@ -8,7 +8,8 @@ set :markdown, fenced_code_blocks: true, autolink: true, smartypants: true
 activate :syntax
 activate :directory_indexes
 
-page "/javadoc/*", :directory_index => false
+page "/javadoc/*", directory_index: false
+page "/*", layout: 'default'
 
 activate :deploy do |deploy|
     deploy.method = :git

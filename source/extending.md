@@ -1,6 +1,7 @@
 ---
-layout: default
-title: User Guide
+title: Extending Robolectric
+group: Customizing
+order: 1
 ---
 
 ## Extending Robolectric

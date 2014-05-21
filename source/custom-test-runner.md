@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Customizing the Test Runner
+title: Custom the Test Runner
+group: Customizing
+order: 2
 ---
 
 # Customizing the Test Runner

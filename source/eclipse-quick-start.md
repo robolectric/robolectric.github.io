@@ -1,6 +1,7 @@
 ---
-layout: default
 title: Eclipse Quick Start
+group: Setup
+order: 3
 ---
 
 ##Quick Start for Eclipse
