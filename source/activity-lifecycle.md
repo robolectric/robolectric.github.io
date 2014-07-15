@@ -1,7 +1,7 @@
 ---
 title: Driving the Activity Lifecycle
 group: User Guide
-order: 3
+order: 4
 ---
 
 # Driving the Activity Lifecycle

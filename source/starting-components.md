@@ -1,7 +1,7 @@
 ---
 title: Starting Other Components
 group: User Guide
-order: 2
+order: 3
 ---
 
 # Starting Other Components
