@@ -88,5 +88,5 @@ drive the development of Android applications.
 
 __Google Group:__ [http://groups.google.com/group/robolectric](http://groups.google.com/group/robolectric)<br/>
 __Group Email:__ [robolectric@googlegroups.com](mailto:robolectric@googlegroups.com)<br/>
-__Samples:__ [http://github.com/robolectric/robolectric-samples](http://github.com/robolectric/robolectric-samples)
+__Samples:__ [https://github.com/robolectric/robolectric-samples](https://github.com/robolectric/robolectric-samples)
 

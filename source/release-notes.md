@@ -303,7 +303,7 @@ both IntelliJ and Eclipse.
 
 #### Other
 - We have added [Roboguice](http://code.google.com/p/roboguice/) integration to the
-  [RobolectricSample](http://github.com/robolectric/RobolectricSample) project.
+  [robolectric-samples](https://github.com/robolectric/robolectric-samples) project.
 - Support for maven and submission to central is WIP
 
 
