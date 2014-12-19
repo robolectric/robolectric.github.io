@@ -6,7 +6,7 @@ order: 1
 
 # Getting Started
 
-[RobolectricSample](http://github.com/robolectric/RobolectricSample) is a Maven-enabled sample app that shows how to layout your project, includes example tests, and a `build.xml` file for compiling and
+[robolectric-samples](https://github.com/robolectric/robolectric-samples) is a Maven-enabled sample app that shows how to layout your project, includes example tests, and a `build.xml` file for compiling and
 running tests.
 
 ## Test Annotations

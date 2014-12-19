@@ -6,7 +6,7 @@ order: 3
 
 # Integrating with RoboGuice
 
-The [RobolectricSample application](https://github.com/robolectric/RobolectricSample) includes an
+The [robolectric-samples](https://github.com/robolectric/robolectric-samples) includes an
 example of how to test Android applications that are built using the [RoboGuice](http://code.google.com/p/roboguice/)
 dependency injection framework. This article explains what we did and how you can add RoboGuice to your own projects.
 
