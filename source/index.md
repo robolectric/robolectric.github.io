@@ -63,7 +63,7 @@ We welcome contributions. Please [fork](http://github.com/robolectric/robolectri
 
 ## Sample Project
 
-Look at the [sample project](https://github.com/robolectric/robolectricsample) to see how fast and easy it can be to test
+Look at the [sample project](https://github.com/robolectric/robolectric-samples) to see how fast and easy it can be to test
 drive the development of Android applications.
 
 ## Robolectric's current maintainers:
@@ -88,5 +88,5 @@ drive the development of Android applications.
 
 __Google Group:__ [http://groups.google.com/group/robolectric](http://groups.google.com/group/robolectric)<br/>
 __Group Email:__ [robolectric@googlegroups.com](mailto:robolectric@googlegroups.com)<br/>
-__Samples:__ [http://github.com/robolectric/RobolectricSample](http://github.com/robolectric/RobolectricSample)
+__Samples:__ [http://github.com/robolectric/robolectric-samples](http://github.com/robolectric/robolectric-samples)
 
