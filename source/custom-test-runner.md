@@ -1,5 +1,5 @@
 ---
-title: Custom the Test Runner
+title: Customizing the Test Runner
 group: Customizing
 order: 2
 ---
