@@ -29,3 +29,43 @@ This is essentially the IntelliJ default Java style, but with two-space indents.
 * Indenting: http://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS but with two spaces, not four.
 * Curly braces for everything: if, else, etc.
 * One line of white space between methods
+
+# Building and Testing
+
+You can build Robolectric on the command-line, or from within IntelliJ.
+
+## Command-line
+
+In the command-line, there are a few scripts that you need to run to install correctly. If you are ever unsure, then check the [Travis build file](https://github.com/robolectric/robolectric/blob/master/.travis.yml), which should contain up-to-date build instructions.
+
+The following instructions assume that you have an `ANDROID_HOME` environment variable pointing to the location of the Android SDK, and that the `android` executable is available from the `PATH`. If this is not the case, then run:
+
+    export ANDROID_HOME=/path/to/my/android/sdk
+    export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+
+To install dependencies, you will need to run:
+
+    echo "y" | android update sdk --no-ui --filter platform-tools,tools
+    echo "y" | android update sdk --no-ui --filter build-tools-20.0.0
+    echo "y" | android update sdk --no-ui --filter android-18
+    echo "y" | android update sdk --no-ui --filter addon-google_apis-google-18,extra-android-support
+    ./scripts/install-maps-jar.sh
+    ./scripts/install-support-jar.sh
+    
+Then to build Robolectric and run the unit tests, you will need to do:
+
+    ./scripts/install-robolectric.sh
+
+Currently these build instructions do not support Windows; only *nix environments.
+
+## IntelliJ
+
+In IntelliJ, choose "Import Project," then choose the `pom.xml` in the root directory. You can continue clicking "Next" at this point. You do not need to change any of the default options, i.e. you don't need to tick "Import maven projects automatically" or "Search for projects recursively."
+
+If it fails to build, you may need to run `mvn compile` in the command line at the root directory.
+
+## Running individual tests
+
+Since the tests take awhile, you may be inclined to run them individually. To do this in IntelliJ, select the test you want to run in the left-hand panel, then choose **Run**, then **Edit Configurations**, then add `robolectric/` to the end of the **Working Directory**. Finally, choose **Run NameOfTheTest**.
+
+If you don't modify the run configuration, then you will see errors, because the tests expect to be run from that directory.
