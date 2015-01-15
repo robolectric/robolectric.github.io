@@ -8,10 +8,18 @@ This repository is the source for the docs that live at [robolectric.org](http:/
 
 Make sure you are in the `source` branch before making changes. This is the default branch so git should put you there automatically.
 
-Before submitting a pull request, view the docs locally to check that the content and
-layout are correct. One can do this by running:
+Before submitting a pull request, view the docs locally to check that the content and layout are correct. The docs are built using [middleman](https://github.com/middleman/middleman).
 
-    middleman server
+Assuming you don't already have [Bundler](http://bundler.io/) installed, you will first need to do:
+
+    gem install bundler
+    
+The above command may require `sudo`.
+
+Then run:
+
+    bundle install
+    bundle exec middleman server
   
 This will build the docs and make them available at [localhost:4567](http://localhost:4567). Once
 your pull request is accepted, the docs will be automatically built and pushed to the web by
