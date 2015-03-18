@@ -48,7 +48,7 @@ public class SandwichTest {
 }
 ```
 
-If you reference resources that are outside of your project (i.e. in a aar dependency), you will need to provide Robolectric with a pointer to the exploded aar in your build system. See the section titled "Working with Library Dependencies" for more information.
+If you reference resources that are outside of your project (i.e. in a aar dependency), you will need to provide Robolectric with a pointer to the exploded aar in your build system. See the section titled "Using Library Resources" for more information.
 
 ## Building with Android Studio
 

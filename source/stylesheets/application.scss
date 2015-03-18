@@ -2,6 +2,7 @@
 @import "highlight";
 
 $gray:          #F5F6F6;
+$white:         #FFFFFF;
 $green:         #55862E;
 $border:        #CCCCCC;
 $light-green:   #7FC06B;
@@ -15,7 +16,7 @@ body, html {
 body {
     font-size: 16px;
     line-height: 1.6;
-    background-color: $gray;
+    background-color: $white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +41,9 @@ a:visited {
     width: $sidebar-width;
     float: left;
     position: absolute;
-    padding-right: 0px;
+    padding-right: 0;
+    background-color: $gray;
+    border: 1px solid $border;
 
     a {
         font-size: 16px;
@@ -65,8 +68,5 @@ a:visited {
     min-height: 100%;
     margin-left: $sidebar-width;
     position: absolute;
-    background-color: white;
-    border-left: 1px solid $border;
-    border-right: 1px solid $border;
 }
 
