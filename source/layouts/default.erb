@@ -11,21 +11,14 @@
 
 <body>
     <div id="wrapper">
-        <div id="header">
-            <%= partial "partials/header" %>
-        </div>
-
         <div id="sidebar">
             <%= partial "partials/sidebar" %>
+            <%= partial "partials/resources" %>
         </div>
 
         <div id="content">
             <%= yield %>
         </div>
-    </div>
-
-    <div id="footer">
-        <%= partial "partials/footer" %>
     </div>
 </body>
 </html>

@@ -36,28 +36,6 @@ a:visited {
     min-height: 100%;
 }
 
-#header {
-    height: $header-height;
-    background-color: $light-green;
-
-    i {
-        top: 2px;
-        display: inline;
-        padding-right: 5px;
-    }
-
-    a {
-        color: white;
-        font-size: 18px;
-        &:hover {
-            background-color: $light-green;
-        }
-    }
-}
-
-#footer {
-}
-
 #sidebar {
     width: $sidebar-width;
     float: left;
