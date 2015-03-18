@@ -6,6 +6,7 @@ $green:         #55862E;
 $border:        #CCCCCC;
 $light-green:   #7FC06B;
 $sidebar-width: 250px;
+$header-height: 50px;
 
 body, html {
     height: 100%;
@@ -36,7 +37,7 @@ a:visited {
 }
 
 #header {
-    height: 50px;
+    height: $header-height;
     background-color: $light-green;
 
     i {

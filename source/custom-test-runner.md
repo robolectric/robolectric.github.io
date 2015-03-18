@@ -1,7 +1,7 @@
 ---
 title: Customizing the Test Runner
 group: Customizing
-order: 2
+order: 3
 ---
 
 # Customizing the Test Runner
