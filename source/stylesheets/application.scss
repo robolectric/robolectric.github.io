@@ -33,6 +33,12 @@ a:visited {
     text-decoration: none;
 }
 
+table {
+    @extend .table;
+    @extend .table-bordered;
+    @extend .table-striped;
+}
+
 #wrapper {
     min-height: 100%;
 }
