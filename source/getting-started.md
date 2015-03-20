@@ -53,3 +53,7 @@ If you reference resources that are outside of your project (i.e. in a aar depen
 ## Building with Android Studio
 
 Robolectric works with Android Studio 1.1.0 or newer. Simply follow the instructions above for working with Gradle. Enable the unit test support in the "Build Flavors" tab and run your test.
+
+## Sample Projects
+
+Look at the [Robolectric samples](https://github.com/robolectric/robolectric-samples) to see how fast and easy it can be to test drive the development of Android applications. In addition, check out the [Gradle](https://github.com/robolectric/deckard-gradle) or [Maven](https://github.com/robolectric/deckard-maven) starter projects.

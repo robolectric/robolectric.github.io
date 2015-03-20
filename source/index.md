@@ -43,7 +43,3 @@ An alternate approach to Robolectric is to use mock frameworks such as [Mockito]
 often yields tests that are essentially reverse implementations of the application code.
 
 Robolectric allows a test style that is closer to black box testing, making the tests more effective for refactoring and allowing the tests to focus on the behavior of the application instead of the implementation of Android. You can still use a mocking framework along with Robolectric if you like.
-
-## Sample Project
-
-Look at the [sample project](https://github.com/robolectric/robolectric-samples) to see how fast and easy it can be to test drive the development of Android applications.
