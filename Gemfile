@@ -7,4 +7,4 @@ gem 'middleman-livereload'
 gem 'middleman-google-analytics'
 
 gem 'redcarpet'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', require: false
