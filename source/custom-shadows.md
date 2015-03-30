@@ -1,7 +1,7 @@
 ---
 title: Creating Custom Shadows
-group: User Guide
-order: 4
+group: Customizing
+order: 2
 ---
 
 # Creating Custom Shadows

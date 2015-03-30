@@ -2,8 +2,8 @@ set :js_dir, 'javascripts'
 set :css_dir, 'stylesheets'
 set :images_dir, 'images'
 
+set :markdown, tables: true, autolink: true, gh_blockquote: true, fenced_code_blocks: true
 set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, autolink: true, smartypants: true
 
 activate :syntax
 activate :directory_indexes

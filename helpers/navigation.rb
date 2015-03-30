@@ -2,7 +2,7 @@ module Navigation
     def render_nav(groups)
         "".tap do |html|
             groups.each do |group|
-                html << render_nav_list(group, sitemap.where(:group => group).order_by(:order).all)
+                html << render_nav_list(group, sitemap.where(group: group).order_by(:order).all)
             end
         end
     end
