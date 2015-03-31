@@ -52,7 +52,15 @@ If you reference resources that are outside of your project (i.e. in a aar depen
 
 ## Building with Android Studio
 
-Robolectric works with Android Studio 1.1.0 or newer. Simply follow the instructions above for working with Gradle. Enable the unit test support in the "Build Flavors" tab and run your test.
+Robolectric works with Android Studio 1.1.0 or newer. Simply follow the instructions above for working with Gradle. Enable the unit test support in the "Build Variants" tab and run your test.
+
+![Android Enable Unit Tests](android-studio-enable-unit-tests.png)
+
+### Note for Mac Users
+
+If you are on a Mac, you will probably need to configure the default JUnit test runner configuration in order to work around a bug where Android Studio does not set the working directory to the module being tested. This can be accomplished by editing the run configurations, `Defaults -> JUnit` and changing the working directory value to `$MODULE_DIR$`.
+
+![Android Studio Configure Defaults](android-studio-configure-defaults.png)
 
 ## Sample Projects
 
