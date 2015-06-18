@@ -56,9 +56,9 @@ Robolectric works with Android Studio 1.1.0 or newer. Simply follow the instruct
 
 ![Android Enable Unit Tests](android-studio-enable-unit-tests.png)
 
-### Note for Mac Users
+### Note for Linux and Mac Users
 
-If you are on a Mac, you will probably need to configure the default JUnit test runner configuration in order to work around a bug where Android Studio does not set the working directory to the module being tested. This can be accomplished by editing the run configurations, `Defaults -> JUnit` and changing the working directory value to `$MODULE_DIR$`.
+If you are on Linux or on a Mac, you will probably need to configure the default JUnit test runner configuration in order to work around a bug where Android Studio does not set the working directory to the module being tested. This can be accomplished by editing the run configurations, `Defaults -> JUnit` and changing the working directory value to `$MODULE_DIR$`.
 
 ![Android Studio Configure Defaults](android-studio-configure-defaults.png)
 
