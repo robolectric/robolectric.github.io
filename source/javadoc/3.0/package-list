@@ -1,0 +1,15 @@
+org.robolectric
+org.robolectric.annotation
+org.robolectric.annotation.processing
+org.robolectric.annotation.processing.generator
+org.robolectric.annotation.processing.validator
+org.robolectric.fakes
+org.robolectric.shadows
+org.robolectric.shadows.gms
+org.robolectric.shadows.httpclient
+org.robolectric.shadows.maps
+org.robolectric.shadows.multidex
+org.robolectric.shadows.support.v4
+org.robolectric.shadows.util
+org.robolectric.util
+org.robolectric.util.concurrent
