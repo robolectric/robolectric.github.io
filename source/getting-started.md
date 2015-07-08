@@ -62,6 +62,10 @@ If you are on Linux or on a Mac, you will probably need to configure the default
 
 ![Android Studio Configure Defaults](android-studio-configure-defaults.png)
 
+## Building with Eclipse
+
+Install the [m2e-android](http://rgladwell.github.io/m2e-android/) plugin for Eclipse, and import the project as a Maven project. After importing into Eclipse, you have to mark the *consume-aar* goal as ignored, since AAR consumption is not yet supported by m2e-android. To do this, simply apply the Quick fix on the "Plugin execution not covered by lifecycle configuration" error. To run your tests, just right click on the project -> *Run as* -> *JUnit Test*, then choose the *Eclipse JUnit Launcher*.
+
 ## Sample Projects
 
 Look at the [Robolectric samples](https://github.com/robolectric/robolectric-samples) to see how fast and easy it can be to test drive the development of Android applications. In addition, check out the [Gradle](https://github.com/robolectric/deckard-gradle) or [Maven](https://github.com/robolectric/deckard-maven) starter projects.
