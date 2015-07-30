@@ -63,7 +63,7 @@ Activity activity = Robolectric.buildActivity(MyAwesomeActivity.class)
     .get();
 ```
 
-Check out the [`ActivityController` Java Docs](/javadoc/org/robolectric/util/ActivityController.html) to see more
+Check out the [`ActivityController` Java Docs](/javadoc/latest/org/robolectric/util/ActivityController.html) to see more
 public methods available for your testing needs.
 
 # Wait, What's This `visible()` Nonsense?
