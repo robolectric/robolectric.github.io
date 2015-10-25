@@ -58,7 +58,7 @@ public class SandwichTest {
 }
 ```
 
-By default, Robolectric will assume that your resources and assets are located in directories named `res` and `assets`, respectively. These paths are assumed to be relative to the directory where the manifest is located. You can change these values by adding the `resourcesDir` and `assetsDir` options to the `@Config` annotaton.
+By default, Robolectric will assume that your resources and assets are located in directories named `res` and `assets`, respectively. These paths are assumed to be relative to the directory where the manifest is located. You can change these values by adding the `resourceDir` and `assetDir` options to the `@Config` annotaton.
 
 ## Config Properties
 
