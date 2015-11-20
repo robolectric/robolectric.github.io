@@ -18,20 +18,20 @@ domain objects in your test classes.
 
 Custom shadows are structured much the same as normal shadow classes.  They must include the `@Implements(AndroidClassName.class)`
 annotation on the class definition.  You can use the normal shadow implementation options, such as shadowing instance
-methods using `@Implementation` or shadowing constructors using `public void __constructor(...)__`.
+methods using `@Implementation` or shadowing constructors using `public void __constructor__(...)`.
 
 ```java
 @Implements(Bitmap.class)
 public class MyShadowBitmap {
 	@RealObject private Bitmap realBitmap;
 	private int bitmapQuality = -1;
-	
+
 	@Implementation
 	public boolean compress(Bitmap.CompressFormat format, int quality, OutputStream stream) {
       bitmapQuality = quality;
       return realBitmap.compress(format, quality, stream);
     }
-    
+
     public int getQuality() {
       return bitmapQuality;
     }
