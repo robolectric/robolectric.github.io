@@ -78,7 +78,7 @@ Some options can be configured globally by setting these system properties:
 * **robolectric.dependency.dir** - When in offline mode, specifies a folder containing runtime dependencies.
 * **robolectric.dependency.repo.id** - Set the ID of the Maven repository to use for the runtime dependencies (default `sonatype`).
 * **robolectric.dependency.repo.url** - Set the URL of the Maven repository to use for the runtime dependencies (default `https://oss.sonatype.org/content/groups/public/`).
-* **robolectric.logging.enable** - Set to true to enable debug logging.
+* **robolectric.logging.enabled** - Set to true to enable debug logging.
 
 When using Gradle, you can configure the System Properties for unit tests with the `all` block (see [here](http://tools.android.com/tech-docs/unit-testing-support)). For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Sonatype:
 
