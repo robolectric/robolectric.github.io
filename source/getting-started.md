@@ -52,7 +52,7 @@ If you reference resources that are outside of your project (i.e. in a aar depen
 
 ## Building with Android Studio
 
-Robolectric works with Android Studio 1.1.0 or newer. Simply follow the instructions above for working with Gradle. Enable the unit test support in the "Build Variants" tab and run your test.
+Robolectric works with Android Studio 1.1.0 or newer. Simply follow the instructions above for working with Gradle. For versions of Android Studio older than 2.0.0, enable the unit test support in the "Build Variants" tab and run your test. As of Android Studio 2.0.0, the test artifacts feature is enabled by default, and the setting to enable/disable test artifacts can be found in File Menu -> Settings -> Build, Execution, Deployment -> Build Tools -> Gradle -> Experimental.
 
 ![Android Enable Unit Tests](android-studio-enable-unit-tests.png)
 
