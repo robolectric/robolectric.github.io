@@ -32,7 +32,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
     erubis (2.7.0)
-    eventmachine (1.0.7)
+    eventmachine (1.2.0.1)
     execjs (2.4.0)
     ffi (1.9.8)
     haml (4.0.6)
@@ -147,3 +147,6 @@ DEPENDENCIES
   middleman-livereload
   middleman-syntax
   redcarpet
+
+BUNDLED WITH
+   1.10.6
