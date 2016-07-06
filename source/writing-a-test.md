@@ -56,7 +56,7 @@ public class WelcomeActivityTest {
         WelcomeActivity activity = Robolectric.setupActivity(WelcomeActivity.class);
         activity.findViewById(R.id.login).performClick();
 
-        Intent expectedIntent = new Intent(activity, WelcomeActivity.class);
+        Intent expectedIntent = new Intent(activity, LoginActivity.class);
         assertThat(shadowOf(activity).getNextStartedActivity()).isEqualTo(expectedIntent);
     }
 }
