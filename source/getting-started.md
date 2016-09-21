@@ -16,10 +16,10 @@ Add the following to your build.gradle:
 testCompile "org.robolectric:robolectric:3.1.2"
 ```
 
-Annotate your test with the Gradle test runner:
+Annotate your test with the Robolectric test runner:
 
 ```
-@RunWith(RobolectricGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class SandwichTest {
 }
