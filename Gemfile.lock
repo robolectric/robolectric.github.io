@@ -147,6 +147,3 @@ DEPENDENCIES
   middleman-livereload
   middleman-syntax
   redcarpet
-
-BUNDLED WITH
-   1.10.6
