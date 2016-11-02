@@ -10,7 +10,7 @@ When Robolectric runs a test, it attempts to load and index all resources provid
 
 ### Using Libraries with Gradle
 
-If you use Gradle to build your application and you are using `RobolectricGradleTestRunner` to run your tests, no additional configuration is required. This is because the Android Gradle plugin will merge 3rd party library resources with your application's resources at build time.
+If you use Gradle to build your application and you are using `RobolectricTestRunner` to run your tests, no additional configuration is required. This is because the Android Gradle plugin will merge 3rd party library resources with your application's resources at build time. Note that the `RobolectricGradleTestRunner` test runner was [**deprecated**](https://github.com/robolectric/robolectric/wiki/3.0-to-3.1-Upgrade-Guide) in version 3.1.
 
 ### Using Libraries with Maven
 
