@@ -9,21 +9,30 @@ toc: true
 
 ## Getting Started
 
+Dependencies:
+
+* Android SDK with Tools, Extras, and 'Google APIs' for latest API level installed.
+
+Set Android environment variables:
+
+    export ANDROID_HOME=/path-to-sdk-root
+    export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
 [Fork](https://github.com/robolectric/robolectric) and clone the repo:
 
     git clone git@github.com:username/robolectric.git
     
-Install all required dependencies:
-
-    ./scripts/install-dependencies.sh
-
 Create a feature branch to make your changes:
 
-    git co -b my-feature-name
+    git checkout -b my-feature-name
     
+Copy all required Android dependencies to your local Maven repository:
+
+    ./scripts/install-dependencies.rb
+
 Perform a full build of all shadows:
 
-    ./gradlew install
+    ./gradlew clean assemble install compileTest
 
 We develop Robolectric on Mac and Linux. You might be able to figure out how to get it to work on Windows if you really want to for some reason. Good luck.
 
