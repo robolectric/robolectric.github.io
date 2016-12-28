@@ -70,7 +70,7 @@ public class SandwichTest {
 }
 ```
 
-Note that `sdk` and `minSdk`/`maxSdk` may not be specified in the same config annotation or file.
+Note that `sdk` and `minSdk`/`maxSdk` may not be specified in the same config annotation or file; however, `minSdk` and `maxSdk` may be specified together. If any of them is present, they override any SDK specification from a less-specific configuration location.
 
 ***Version note:*** *Prior to Robolectric 3.2, `minSdk` and `maxSdk` are ignored, and `NEWEST`, `OLDEST`, and `TARGET` are not supported. Also, only integers corresponding to API levels may be specified in a properties file.* 
 
@@ -93,16 +93,32 @@ public class SandwichTest {
 Robolectric provides defaults for Gradle and Maven, but allows you to customize the path to your manifest, resource directory, and assets directory. This can be useful if you have a custom build system. You can specify these values by setting:
 
 ```java
-@Config(res = "some/build/path/res")
+@Config(resourceDir = "some/build/path/res")
 public class SandwichTest {
 
-    @Config(res = "other/build/path/ham-sandwich/res")
+    @Config(resourceDir = "other/build/path/ham-sandwich/res")
     public void getSandwich_shouldReturnHamSandwich() {
     }
 }
 ```
 
 By default, Robolectric will assume that your resources and assets are located in directories named `res` and `assets`, respectively. These paths are assumed to be relative to the directory where the manifest is located. You can change these values by adding the `resourceDir` and `assetDir` options to the `@Config` annotaton.
+
+### Configure Qualifiers
+
+You can explicitly configure the set of resource qualifiers in effect for a test:
+
+```java
+public class SandwichTest {
+
+    @Config(qualifiers = "fr-xlarge")
+    public void getSandwichName() {
+      assertThat(sandwich.getName()).isEqualTo("Grande Croque Monégasque");
+    }
+}
+```
+
+See [Using Qualifiers](/using-qualifiers) for more details.
 
 ## System Properties
 
