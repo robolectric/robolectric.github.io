@@ -16,7 +16,7 @@ Create a feature branch to make your changes:
 
     git co -b my-feature-name
     
-Mavenize all required dependencies:
+Install all required dependencies:
 
     ./scripts/install-dependencies.sh
 
