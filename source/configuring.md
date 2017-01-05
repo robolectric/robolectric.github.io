@@ -24,12 +24,12 @@ Base classes are also searched for annotations, so if you find yourself specifyi
 
 ### `robolectric.properties` File
 
-To configure all Robolectric tests within a package or group of packages, create a file named `robolectric.properties` in the appropriate package. Generally, this file would be placed within the appropriate package directory under `src/resources/test` in your project tree. Robolectric will search for properties files up the hierarchy of packages (including the unnamed default package at the top level), with values in deeper packages overriding values in more shallow packages. When test classes or methods have `@Config` annotations, those override any config from properties files.
+To configure all Robolectric tests within a package or group of packages, create a file named `robolectric.properties` in the appropriate package. Generally, this file would be placed within the appropriate package directory under `src/test/resources` in your project tree. Robolectric will search for properties files up the hierarchy of packages (including the unnamed default package at the top level), with values in deeper packages overriding values in more shallow packages. When test classes or methods have `@Config` annotations, those override any config from properties files.
 
 Below is an example:
 
 ```properties
-# src/resources/test/com/mycompany/app/robolectric.properties
+# src/test/resources/com/mycompany/app/robolectric.properties
 sdk=18
 manifest=some/build/path/AndroidManifest.xml
 shadows=my.package.ShadowFoo,my.package.ShadowBar
