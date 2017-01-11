@@ -13,7 +13,7 @@ Robolectric works best with Gradle or Maven. If you are starting a new project, 
 Add the following to your build.gradle:
 
 ```
-testCompile "org.robolectric:robolectric:3.2.1"
+testCompile "org.robolectric:robolectric:3.2.2"
 ```
 
 Annotate your test with the Robolectric test runner:
@@ -35,7 +35,7 @@ Add the following to your pom.xml:
 <dependency>
    <groupId>org.robolectric</groupId>
    <artifactId>robolectric</artifactId>
-   <version>3.2.1</version>
+   <version>3.2.2</version>
    <scope>test</scope>
 </dependency>
 ```
