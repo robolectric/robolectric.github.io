@@ -1,6 +1,6 @@
 ---
 title: Build System Integration
-group: Customizing
+group: Customizing [hide]
 order: 4
 ---
 
