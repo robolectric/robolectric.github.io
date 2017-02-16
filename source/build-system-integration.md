@@ -15,10 +15,10 @@ This gives build system implementors the ability to perform manifest and resourc
 This supersedes Robolectric's support for merging multiple libraries specified via `@Config(libraries = {"lib1", "lib2"})` and `project.properties` support from legacy Eclipse ADT projects.
 
 Keys in the file:
-* `android_sdk_home`: Full path to the installed Android SDK.
-* `android_merged_manifest`: Full path to the project's merged `AndroidManifest.xml` file.
-* `android_merged_resources`: Full path to the project's merged resources.
-* `android_merged_assets`: Full path to the project's merged assets.
+- `android_sdk_home`: Full path to the installed Android SDK.
+- `android_merged_manifest`: Full path to the project's merged `AndroidManifest.xml` file.
+- `android_merged_resources`: Full path to the project's merged resources.
+- `android_merged_assets`: Full path to the project's merged assets.
 
 Note that Robolectric expects that build systems will have performed final `R.class` generation by the time unit tests are run.
 
