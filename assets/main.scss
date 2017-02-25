@@ -1,0 +1,80 @@
+---
+---
+
+$base-font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size: 14px;
+$base-mono-font-size: $base-font-size * 0.9;
+$sidebar-width: 250px !default;
+
+@import "minima";
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+pre, code {
+  font-size: $base-mono-font-size;
+}
+
+pre, pre.highlight, code {
+  background-color: #efefff !important;
+}
+
+@media print, screen and (min-width: $content-width + $sidebar-width + $spacing-unit) {
+  .site-header {
+    position: fixed;
+    left: $spacing-unit / 2;
+    width: $sidebar-width;
+
+    .logotype {
+      text-align: center;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 2em;
+      }
+    }
+  }
+
+  .site-nav {
+    line-height: inherit;
+  }
+
+  .site-title {
+    float: none;
+  }
+
+  .site-tagline {
+    color: #333333;
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  .page-content, .site-footer {
+    left: $sidebar-width + $spacing-unit;
+    position: relative;
+  }
+
+  div.wrapper {
+    width: auto;
+    margin: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+  }
+
+  li > ul {
+    margin-left: 1em;
+  }
+
+  li.expandable > ul {
+    display: none;
+  }
+
+  li.expandable.expanded > ul {
+    display: block;
+  }
+}

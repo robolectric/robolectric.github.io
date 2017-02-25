@@ -1,0 +1,76 @@
+<header class="site-header" role="banner">
+
+    <div class="logotype">
+        <a href="{{ "/" | relative_url}}"><img class="site-logo" src="/images/robolectric-stacked.png"/></a>
+        <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+        <div class="site-tagline">test-drive your Android code</div>
+    </div>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+
+        <div class="trigger">
+            {% assign groups = site.pages | map: "group" | uniq | compact %}
+            {% assign my_pages = site.pages | sort: "order" %}
+            <ul>
+                {% for group in groups %}
+                <li class="expandable">
+                    {{ group }}
+                    <ul>
+                        {% for my_page in my_pages %}
+                        {% if my_page.group == group and my_page.title %}
+                        <li>
+                            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <script type="application/javascript">
+            var nodes = document.getElementsByClassName("expandable");
+            var onClick = function(e) {
+                console.log(e.target);
+                console.log(e.target.classList);
+                if (e.target.classList.contains("expandable")) {
+                    e.target.classList.toggle("expanded");
+                }
+            };
+
+            for (var i = 0; i < nodes.length; i++) {
+                var node = nodes[i];
+                node.addEventListener("click", onClick);
+            }
+        </script>
+
+
+        <div class="posts">
+            Recent posts:
+            <div>
+                <ul class="post-list">
+                    {% for post in site.posts %}
+                    <li>
+                        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+                        <h2>
+                            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                        </h2>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+</nav>

@@ -18,7 +18,7 @@ testCompile "org.robolectric:robolectric:3.2.2"
 
 Annotate your test with the Robolectric test runner:
 
-```
+```java
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class SandwichTest {
@@ -31,7 +31,7 @@ Note that you must specify the `constants` field which points to the `BuildConfi
 
 Add the following to your pom.xml:
 
-```
+```xml
 <dependency>
    <groupId>org.robolectric</groupId>
    <artifactId>robolectric</artifactId>
@@ -42,7 +42,7 @@ Add the following to your pom.xml:
 
 Annotate your test with the base test runner:
 
-```
+```java
 @RunWith(RobolectricTestRunner.class)
 public class SandwichTest {
 }

@@ -1,3 +1,9 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+# layout: home
+---
 # Robolectric
 
 ## Test-Drive Your Android Code
@@ -8,7 +14,7 @@ Wouldn't it be nice to run your Android tests directly from inside your IDE? Per
 
 [Robolectric](http://robolectric.org/) is a unit test framework that de-fangs the Android SDK jar so you can test-drive the development of your Android app.  Tests run inside the JVM on your workstation in seconds. With Robolectric you can write tests like this:
 
-```
+```java
 @RunWith(RobolectricTestRunner.class)
 public class MyActivityTest {
 
