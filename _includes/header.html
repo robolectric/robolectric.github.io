@@ -18,11 +18,13 @@
 
         <div class="trigger">
             {% assign groups = site.pages | map: "group" | uniq | compact %}
+            {% assign groups = "Setup,User Guide,Customizing,Contributing" | split: "," %}
             {% assign my_pages = site.pages | sort: "order" %}
-            <ul>
+            <ul class="page-groups">
                 {% for group in groups %}
-                <li class="expandable">
-                    {{ group }}
+
+                <li class="expandable expanded">
+                    <div class="group">{{ group }}</div>
                     <ul>
                         {% for my_page in my_pages %}
                         {% if my_page.group == group and my_page.title %}
@@ -34,6 +36,15 @@
                     </ul>
                 </li>
                 {% endfor %}
+
+                <li class="expandable expanded">
+                    <div class="group">Resources</div>
+                    <ul>
+                        <li>
+                            <a class="page-link" href="/javadoc/latest/">Javadoc</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
@@ -56,19 +67,18 @@
 
         <div class="posts">
             Recent posts:
-            <div>
-                <ul class="post-list">
-                    {% for post in site.posts %}
-                    <li>
-                        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-                        <h2>
-                            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                        </h2>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+            <ul class="post-list">
+                {% for post in site.posts %}
+                <li>
+                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+                    <h2>
+                        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    </h2>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </nav>
 </header>

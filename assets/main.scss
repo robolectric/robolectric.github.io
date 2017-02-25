@@ -1,15 +1,28 @@
 ---
 ---
 
+$robo-green: #7FC06B;
+$robo-darker-green: #55862E;
+
 $base-font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size: 14px;
 $base-mono-font-size: $base-font-size * 0.9;
 $sidebar-width: 250px !default;
+$sidebar-bg-color: #F5F6F6;
+$sidebar-accent-color: $robo-green;
 
 @import "minima";
 
+a, a:visited {
+  color: $robo-darker-green;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
+}
+
+code {
+  padding: 1px;
 }
 
 pre, code {
@@ -35,18 +48,37 @@ pre, pre.highlight, code {
         padding-top: 2em;
       }
     }
+
+    .posts {
+      h2, .post-link {
+        font-size: $base-font-size;
+      }
+
+      .post-meta {
+        float: right;
+      }
+    }
   }
 
   .site-nav {
     line-height: inherit;
+    float: none;
+    background-color: $sidebar-bg-color;
+    margin: 1em 0;
   }
 
-  .site-title {
+  .site-title, .site-title:visited {
+    display: block;
     float: none;
+    line-height: inherit;
+    font-weight: bold;
+
+    color: darken($robo-darker-green, 10%);
+    //margin: 1em 0 0 0;
   }
 
   .site-tagline {
-    color: #333333;
+    color: $robo-darker-green;
     font-style: italic;
     font-weight: 100;
   }
@@ -66,8 +98,28 @@ pre, pre.highlight, code {
     margin-left: 0;
   }
 
-  li > ul {
-    margin-left: 1em;
+  ul.page-groups > li {
+    background-color: $sidebar-accent-color;
+
+    .group {
+      padding: 5px 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    ul {
+      margin-bottom: 5px;
+
+      > li {
+        background-color: $sidebar-bg-color;
+        padding-left: 0.5em;
+        padding-top: 4px;
+
+        a.page-link {
+          color: $robo-darker-green;
+        }
+      }
+    }
   }
 
   li.expandable > ul {
