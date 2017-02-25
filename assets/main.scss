@@ -1,132 +1,61 @@
 ---
 ---
 
-$robo-green: #7FC06B;
-$robo-darker-green: #55862E;
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700');
 
-$base-font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size: 14px;
-$base-mono-font-size: $base-font-size * 0.9;
-$sidebar-width: 250px !default;
-$sidebar-bg-color: #F5F6F6;
-$sidebar-accent-color: $robo-green;
+/*
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
 
-@import "minima";
+	@include skel-breakpoints((
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)',
+		xxsmall: '(max-width: 360px)',
+		xlarge-to-max: '(min-width: 1681px)',
+		small-to-xlarge: '(min-width: 481px) and (max-width: 1680px)'
+	));
 
-a, a:visited {
-  color: $robo-darker-green;
-}
+	@include skel-layout((
+		reset: 'full',
+		boxModel: 'border',
+		grid: ( gutters: 1.5em )
+	));
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-}
+// Base.
 
-code {
-  padding: 1px;
-}
+	@import 'base/page';
+	@import 'base/typography';
 
-pre, code {
-  font-size: $base-mono-font-size;
-}
+// Component.
 
-pre, pre.highlight, code {
-  background-color: #efefff !important;
-}
+	@import 'components/section';
+	@import 'components/form';
+	@import 'components/box';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/table';
+	@import 'components/button';
+	@import 'components/mini-posts';
+	@import 'components/features';
+	@import 'components/posts';
 
-@media print, screen and (min-width: $content-width + $sidebar-width + $spacing-unit) {
-  .site-header {
-    position: fixed;
-    left: $spacing-unit / 2;
-    width: $sidebar-width;
+// Layout.
 
-    .logotype {
-      text-align: center;
-
-      img {
-        display: block;
-        margin: 0 auto;
-        padding-top: 2em;
-      }
-    }
-
-    .posts {
-      h2, .post-link {
-        font-size: $base-font-size;
-      }
-
-      .post-meta {
-        float: right;
-      }
-    }
-  }
-
-  .site-nav {
-    line-height: inherit;
-    float: none;
-    background-color: $sidebar-bg-color;
-    margin: 1em 0;
-  }
-
-  .site-title, .site-title:visited {
-    display: block;
-    float: none;
-    line-height: inherit;
-    font-weight: bold;
-
-    color: darken($robo-darker-green, 10%);
-    //margin: 1em 0 0 0;
-  }
-
-  .site-tagline {
-    color: $robo-darker-green;
-    font-style: italic;
-    font-weight: 100;
-  }
-
-  .page-content, .site-footer {
-    left: $sidebar-width + $spacing-unit;
-    position: relative;
-  }
-
-  div.wrapper {
-    width: auto;
-    margin: 0;
-  }
-
-  ul {
-    list-style-type: none;
-    margin-left: 0;
-  }
-
-  ul.page-groups > li {
-    background-color: $sidebar-accent-color;
-
-    .group {
-      padding: 5px 10px;
-      color: white;
-      font-weight: bold;
-    }
-
-    ul {
-      margin-bottom: 5px;
-
-      > li {
-        background-color: $sidebar-bg-color;
-        padding-left: 0.5em;
-        padding-top: 4px;
-
-        a.page-link {
-          color: $robo-darker-green;
-        }
-      }
-    }
-  }
-
-  li.expandable > ul {
-    display: none;
-  }
-
-  li.expandable.expanded > ul {
-    display: block;
-  }
-}
+	@import 'layout/wrapper';
+	@import 'layout/main';
+	@import 'layout/sidebar';
+	@import 'layout/header';
+	@import 'layout/banner';
+	@import 'layout/footer';
+	@import 'layout/menu';
