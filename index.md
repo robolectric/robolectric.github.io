@@ -10,46 +10,6 @@ Running tests on an Android emulator or device is slow! Building, deploying, and
 
 Wouldn't it be nice to run your Android tests directly from inside your IDE? Perhaps you've tried, and been thwarted by the dreaded `java.lang.RuntimeException: Stub!`?
 
-<i id="front-android" class="fa fa-android" aria-hidden="true"></i>
-<img src="/images/logo-with-bubbles.png" class="flip-horizontal"/>
-
-<!-- Section -->
-<section>
-    <header class="major">
-        <h2>Erat lacinia</h2>
-    </header>
-    <div class="features">
-        <article>
-            <span class="icon fa-diamond"></span>
-            <div class="content">
-                <h3>Portitor ullamcorper</h3>
-                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-            </div>
-        </article>
-        <article>
-            <span class="icon fa-paper-plane"></span>
-            <div class="content">
-                <h3>Sapien veroeros</h3>
-                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-            </div>
-        </article>
-        <article>
-            <span class="icon fa-rocket"></span>
-            <div class="content">
-                <h3>Quam lorem ipsum</h3>
-                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-            </div>
-        </article>
-        <article>
-            <span class="icon fa-signal"></span>
-            <div class="content">
-                <h3>Sed magna finibus</h3>
-                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-            </div>
-        </article>
-    </div>
-</section>
-
 [Robolectric](http://robolectric.org/) is a unit test framework that de-fangs the Android SDK jar so you can test-drive the development of your Android app.  Tests run inside the JVM on your workstation in seconds. With Robolectric you can write tests like this:
 
 ```java
@@ -87,3 +47,43 @@ An alternate approach to Robolectric is to use mock frameworks such as [Mockito]
 often yields tests that are essentially reverse implementations of the application code.
 
 Robolectric allows a test style that is closer to black box testing, making the tests more effective for refactoring and allowing the tests to focus on the behavior of the application instead of the implementation of Android. You can still use a mocking framework along with Robolectric if you like.
+
+<!-- Section -->
+<!--
+<section>
+    <header class="major">
+        <h2>Erat lacinia</h2>
+    </header>
+    <div class="features">
+        <article>
+            <span class="icon fa-diamond"></span>
+            <div class="content">
+                <h3>Portitor ullamcorper</h3>
+                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+            </div>
+        </article>
+        <article>
+            <span class="icon fa-paper-plane"></span>
+            <div class="content">
+                <h3>Sapien veroeros</h3>
+                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+            </div>
+        </article>
+        <article>
+            <span class="icon fa-rocket"></span>
+            <div class="content">
+                <h3>Quam lorem ipsum</h3>
+                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+            </div>
+        </article>
+        <article>
+            <span class="icon fa-signal"></span>
+            <div class="content">
+                <h3>Sed magna finibus</h3>
+                <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+-->

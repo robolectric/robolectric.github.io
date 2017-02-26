@@ -144,11 +144,24 @@ header {
 //}
 
 
-#front-android {
-	font-size: 11em;
-	color: _palette(accent);
+#main-logo {
+	#front-android {
+		font-size: 11em;
+		//color: _palette(accent);
+		color: #bbbbbb;
+		letter-spacing: -13px;
 
-	+ img {
+		+ img {
+			vertical-align: top;
+		}
+	}
+
+	span {
+		font-family: _font(family-heading);
+		font-weight: _font(weight-heading);
+		color: _palette(accent);
+
+		font-size: 6em;
 		vertical-align: top;
 	}
 }
