@@ -16,7 +16,7 @@ If you use Gradle to build your application and you are using `RobolectricTestRu
 
 If you use Maven to build your application, you will need to tell Robolectric where the unpacked resources are located for each library you use. This can either be specified in the `@Config` annotation:
 
-```
+```java
 @RunWith(RobolectricTestRunner.class)
 @Config(libraries = {
     "build/unpacked-libraries/library1",
@@ -28,7 +28,7 @@ public class SandwichTest {
 
 or specified in the `robolectric.properties` file:
 
-```
+```properties
 libraries=build/unpacked-libraries/library1,build/unpacked-libraries/library2
 ```
 

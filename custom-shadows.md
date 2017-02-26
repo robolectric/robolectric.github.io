@@ -23,18 +23,17 @@ methods using `@Implementation` or shadowing constructors using `public void __c
 ```java
 @Implements(Bitmap.class)
 public class MyShadowBitmap {
-	@RealObject private Bitmap realBitmap;
-	private int bitmapQuality = -1;
+  @RealObject private Bitmap realBitmap;
+  private int bitmapQuality = -1;
+    
+  @Implementation
+  public boolean compress(Bitmap.CompressFormat format, int quality, OutputStream stream) {
+    bitmapQuality = quality;
+    return realBitmap.compress(format, quality, stream);
+  }
 
-	@Implementation
-	public boolean compress(Bitmap.CompressFormat format, int quality, OutputStream stream) {
-      bitmapQuality = quality;
-      return realBitmap.compress(format, quality, stream);
-    }
-
-    public int getQuality() {
-      return bitmapQuality;
-    }
+  public int getQuality() {
+    return bitmapQuality;
   }
 }
 ```

@@ -16,7 +16,7 @@ Given the following resources,
 
 *values/strings.xml*
 
-```
+```xml
 <string name="not_overridden">Not Overridden</string>
 <string name="overridden">Unqualified value</string>
 <string name="overridden_twice">Unqualified value</string>
@@ -24,21 +24,21 @@ Given the following resources,
 
 *values-en/strings.xml*
 
-```
+```xml
 <string name="overridden">English qualified value</string>
 <string name="overridden_twice">English qualified value</string>
 ```
 
 *values-en-port/strings.xml*
 
-```
+```xml
 <string name="overridden_twice">English portrait qualified value</string>
 ```
 
 this Robolectric test would pass, using the Android resource qualifier resolution rules.
 
 
-```
+```java
 @Test
 @Config(qualifiers="en-port")
 public void shouldUseEnglishAndPortraitResources() {

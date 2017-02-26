@@ -132,11 +132,13 @@ Some additional options can be configured globally by setting these system prope
 
 When using Gradle, you can configure the System Properties for unit tests with the `all` block (see [here](http://tools.android.com/tech-docs/unit-testing-support)). For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Sonatype:
 
-	android {
-	  testOptions {
-	    unitTests.all {
-	      systemProperty 'robolectric.dependency.repo.url', 'https://local-mirror/repo'
-	      systemProperty 'robolectric.dependency.repo.id', 'local'
-	    }
-	  }
-	}
+```groovy
+android {
+  testOptions {
+    unitTests.all {
+      systemProperty 'robolectric.dependency.repo.url', 'https://local-mirror/repo'
+      systemProperty 'robolectric.dependency.repo.id', 'local'
+    }
+  }
+}
+```

@@ -8,7 +8,7 @@ order: 2
 
 Let's say you have an activity layout that represents a welcome screen:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -26,7 +26,7 @@ Let's say you have an activity layout that represents a welcome screen:
 
 We want to write a test that asserts that when a user clicks on a button, the app launches the LoginActivity.
 
-```
+```java
 public class WelcomeActivity extends Activity {
 
     @Override
@@ -47,7 +47,7 @@ public class WelcomeActivity extends Activity {
 
 In order to test this, we can check that when a user clicks on the "Login" button, we start the correct intent. Because Robolectric is a unit testing framework, the LoginActivity will not actually be started, but we can check that the WelcomeActivity fired the correct intent:
 
-```
+```java
 @RunWith(RobolectricTestRunner.class)
 public class WelcomeActivityTest {
 

@@ -12,7 +12,7 @@ Robolectric works best with Gradle or Maven. If you are starting a new project, 
 
 Add the following to your build.gradle:
 
-```
+```groovy
 testCompile "org.robolectric:robolectric:3.2.2"
 ```
 
