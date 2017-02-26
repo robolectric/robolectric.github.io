@@ -144,25 +144,45 @@ header {
 //}
 
 
-#main-logo {
-	#front-android {
+.main-logo {
+	position: relative;
+	padding-top: 1em;
+
+	i.fa-android {
 		font-size: 11em;
-		//color: _palette(accent);
 		color: #bbbbbb;
 		letter-spacing: -13px;
-
-		+ img {
-			vertical-align: top;
-		}
 	}
 
-	span {
-		font-family: _font(family-heading);
-		font-weight: _font(weight-heading);
-		color: _palette(accent);
+	img {
+		position: absolute;
+	}
 
+	h1 {
+		color: _palette(accent);
 		font-size: 6em;
-		vertical-align: top;
+		position: absolute;
+		margin: 0;
+		left: 270px;
+		top: 20px;
+	}
+
+	h2 {
+		color: lighten(_palette(fg-bold), 8);
+		position: absolute;
+		left: 290px;
+		top: 103px;
+		width: 100%;
+	}
+
+	@include breakpoint(small) {
+		transform: scale(.6);
+		margin-left: -6em;
+	}
+
+	@include breakpoint(xsmall) {
+		transform: scale(.4);
+		margin-left: -8em;
 	}
 }
 
