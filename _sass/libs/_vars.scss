@@ -19,10 +19,13 @@
 		gutter:				3em
 	);
 
+//@import '../fonts/squareserif_bold_macroman/stylesheet.css';
+@import '../fonts/squareserif_demi_macroman/stylesheet.css';
+
 // Font.
 	$font: (
 		family:				('Open Sans', sans-serif),
-		family-heading:		('Roboto Slab', serif),
+		family-heading:		('square_serifdemi', 'Roboto Slab', serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				400,
 		weight-bold:		600,
@@ -40,5 +43,5 @@
 		fg-light:			#9fa3a6,
 		border:				rgba(210,215,217,0.75),
 		border-bg:			transparentize(#e6ebed, 0.75),
-		accent:				#f56a6a
+		accent:				#7FC06B
 	);

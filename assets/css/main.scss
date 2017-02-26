@@ -59,3 +59,91 @@
 	@import 'layout/banner';
 	@import 'layout/footer';
 	@import 'layout/menu';
+
+// custom...
+@import 'syntax-highlighting';
+
+header {
+	.logo {
+		position: relative;
+
+		img {
+			//float: left;
+		}
+
+		strong {
+			color: _palette(accent);
+			font-size: 3em;
+			position: absolute;
+			top: -10px;
+			left: 75px;
+		}
+	}
+
+	.description {
+		color: inherit;
+		font-family: "square_serifdemi", "Roboto Slab", serif;
+		position: absolute;
+		top: 75px;
+		left: 130px;
+	}
+}
+
+#sidebar {
+	.logo {
+		img {
+			display: block;
+			position: relative;
+			margin: 0 auto -7px auto;
+			left: -5px;
+		}
+
+		strong {
+			display: block;
+			text-align: center;
+			font-family: _font(family-heading);
+			font-weight: _font(weight-heading);
+			font-size: 2em;
+			color: _palette(accent);
+		}
+	}
+}
+
+.mini-post {
+	.date {
+		float: right;
+	}
+}
+
+#sidebar .inner > nav:first-child {
+	margin-top: 1em;
+}
+//header .logo strong {
+//	color: _palette(accent);
+//	font-size: 3em;
+//	position: relative;
+//	top: -.2em;
+//}
+
+
+#front-android {
+	font-size: 11em;
+	color: _palette(accent);
+
+	+ img {
+		vertical-align: top;
+	}
+}
+
+.flip-horizontal {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+header.major > :last-child {
+	margin-bottom: 1em;
+}

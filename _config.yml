@@ -14,17 +14,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Robolectric
-#email: your-email@domain.com
+email: robolectric@googlegroups.com
 description: > # this means to ignore newlines until "baseurl:"
   test-drive your Android code
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Robolectric
-github_username:  robolectric
+github_username: robolectric
 
 # Build settings
 markdown: kramdown
-theme: minima
 gems:
   - jekyll-feed
   - jekyll-redirect-from
@@ -32,16 +31,26 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+menu:
+  - title: Setup
+  - title: User Guide
+  - title: Customizing
+  - title: Contributing
+  - title: Resources
+    items:
+    - title: Javadoc
+      url: /javadoc/latest/
+
 whitelist:
   - jekyll-redirect-from
 
 
 #source: source
-permalink: pretty
+permalink: "/blog/:year/:month/:day/:title/"
 
 google_analytics: 'UA-58882116-1'
 disqus:
-  shortname: xxx # todo
+  shortname: robolectric
 
 defaults:
   -

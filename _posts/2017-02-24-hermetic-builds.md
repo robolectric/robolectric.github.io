@@ -3,6 +3,7 @@ layout: post
 title:  "Hermetic Builds with Robolectric"
 date:   2017-02-23 16:40:06 -0800
 categories: build
+description: They sure are good!
 ---
 Maybe you like hermetic builds?
 

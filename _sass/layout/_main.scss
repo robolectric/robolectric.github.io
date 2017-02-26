@@ -17,7 +17,7 @@
 			max-width: 110em;
 
 			> section {
-				@include padding(6em, 0);
+				@include padding(2em, 0);
 				border-top: solid 2px _palette(border);
 
 				&:first-of-type {
@@ -31,7 +31,7 @@
 				@include padding(0, 5em);
 
 				> section {
-					@include padding(5em, 0);
+					@include padding(1.25em, 0);
 				}
 			}
 		}
@@ -41,7 +41,7 @@
 				@include padding(0, 4em);
 
 				> section {
-					@include padding(4em, 0);
+					@include padding(1.25em, 0);
 				}
 			}
 		}
@@ -51,7 +51,7 @@
 				@include padding(0, 2em);
 
 				> section {
-					@include padding(3em, 0);
+					@include padding(1.25em, 0);
 				}
 			}
 		}
