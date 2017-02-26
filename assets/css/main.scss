@@ -67,16 +67,16 @@ header {
 	.logo {
 		position: relative;
 
-		img {
-			//float: left;
-		}
-
 		strong {
 			color: _palette(accent);
 			font-size: 3em;
 			position: absolute;
-			top: -10px;
 			left: 75px;
+
+			&.small {
+				font-size: 2em;
+				color: orange !important;
+			}
 		}
 	}
 
@@ -84,10 +84,28 @@ header {
 		color: inherit;
 		font-family: "square_serifdemi", "Roboto Slab", serif;
 		position: absolute;
-		top: 75px;
 		left: 130px;
+
+		&.small {
+			top: 2.14em;
+		}
 	}
 }
+
+#small-logo {
+	display: none !important;
+}
+
+@include breakpoint(small) {
+	strong {
+		font-size: 2.5em !important;
+	}
+
+	#small-logo {
+		display: block !important;
+	}
+}
+
 
 #sidebar {
 	.logo {

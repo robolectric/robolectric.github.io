@@ -52,6 +52,10 @@
 
     <!-- Sidebar -->
     <div id="sidebar">
+        {% unless page.front %}
+        <a href="/"><img id="small-logo" src="/images/logo-with-bubbles.png" style="right: -3em; position: fixed; transform: scale(-.33, .33); top: -2em; border: none; padding: none;"/></a>
+        {% endunless %}
+
         <div class="inner">
 
             {% unless page.front %}
