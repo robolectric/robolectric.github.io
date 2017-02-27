@@ -202,3 +202,48 @@ header {
 header.major > :last-child {
 	margin-bottom: 1em;
 }
+
+
+table {
+	td {
+		padding: .25em .5em;
+		border: solid 1px _palette(border); // more pronounced border
+
+		code {
+			border: solid 1px _palette(border-bg); // less pronounced border
+			margin: 0; // less margin/padding when inside a td
+			padding: 0;
+			letter-spacing: -0.1em; // narrower inside tables
+		}
+	}
+}
+
+code {
+	color: darken(_palette(fg), 10); // a little more contrasty
+}
+
+
+#toc-container {
+	border: solid 2px _palette(border);
+	padding: 1em;
+	max-width: 40em;
+	margin-bottom: 2em;
+
+	h2 {
+		margin: 0;
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		margin-left: 1em;
+		padding: 0;
+		font-family: _font(family-heading);
+
+		a {
+			color: _palette(fg);
+		}
+	}
+}

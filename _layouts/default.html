@@ -23,7 +23,9 @@
 
             <!-- Banner -->
             <section id="banner">
-                <div class="content">
+                <div id="main-content" class="content">
+                    {% if page.page_title %}<h1>{{ page.page_title | escape }}</h1>{% endif %}
+                    {% if page.toc == true %}<div id="toc-container"></div>{% endif %}
                     {{ content }}
                 </div>
 
@@ -46,6 +48,12 @@
 <script src="/assets/js/util.js"></script>
 <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/jquery.toc.js"></script>
 
+{% if page.toc == true %}
+<script type="application/javascript"><!--
+    $("#main-content").toc({renderIn: $("#toc-container")});
+//--></script>
+{% endif %}
 </body>
 </html>
