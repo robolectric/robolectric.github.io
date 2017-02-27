@@ -38,8 +38,12 @@ menu:
   - title: Contributing
   - title: Resources
     items:
+    - title: Release Notes
+      url: https://github.com/robolectric/robolectric/releases
     - title: Javadoc
       url: /javadoc/latest/
+    - title: Issues
+      url: https://github.com/robolectric/robolectric/issues
 
 whitelist:
   - jekyll-redirect-from
