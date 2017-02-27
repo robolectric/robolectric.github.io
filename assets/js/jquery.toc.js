@@ -36,7 +36,7 @@
             showAlways: false,
             minItemsToShowToc: 2,
             saveShowStatus: true,
-            contentsText: 'Contents',
+            contentsText: 'Contents:',
             hideText: 'hide',
             showText: 'show',
             showCollapsed: false};
@@ -51,6 +51,20 @@
         var itemNumber = 1;
 
         var tocContainer = $(this);
+        var usedAnchors = {};
+
+        function fixAnchorId(el, extra) {
+            var anchorId = $(el).attr('id');
+            if (!anchorId) {
+                anchorId = $(el).text().toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-");
+            }
+            if (usedAnchors[anchorId]) {
+                anchorId += extra;
+            }
+            usedAnchors[anchorId] = true;
+            $(el).attr('id', anchorId);
+            return anchorId;
+        }
 
         tocContainer.find('h2').each(function() {
             var levelHTML = '';
@@ -59,8 +73,7 @@
 
             h2.nextUntil('h2').filter('h3').each(function() {
                 ++innerSection;
-                var anchorId = config.anchorPrefix + tocLevel + '-' + tocSection + '-' +  + innerSection;
-                $(this).attr('id', anchorId);
+                var anchorId = fixAnchorId(this, tocLevel + '-' + tocSection + '-' + innerSection);
                 levelHTML += createLevelHTML(anchorId,
                     tocLevel + 1,
                     tocSection + innerSection,
@@ -70,8 +83,7 @@
             if (levelHTML) {
                 levelHTML = '<ul>' + levelHTML + '</ul>\n';
             }
-            var anchorId = config.anchorPrefix + tocLevel + '-' + tocSection;
-            h2.attr('id', anchorId);
+            var anchorId = fixAnchorId(this, tocLevel + '-' + tocSection);
             tocHTML += createLevelHTML(anchorId,
                 tocLevel,
                 tocSection,
