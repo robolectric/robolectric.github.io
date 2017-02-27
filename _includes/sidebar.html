@@ -23,11 +23,12 @@
 
         <!-- Menu -->
         <nav id="menu">
-            <header class="major">
-                <h2>Menu</h2>
-            </header>
+            <!--<header class="major">-->
+                <!--<h2>Menu</h2>-->
+            <!--</header>-->
 
             <ul>
+                <li><a href="/">Home</a></li>
                 {% for menu in site.menu %}
                 <li><span class="opener{% if page.group == menu.title %} active{% endif %}">{{ menu.title | escape }}</span>
                     <ul>
@@ -48,6 +49,7 @@
         </nav>
 
         <!-- Section -->
+        {% if false %}
         <section>
             <header class="major">
                 <h2><a href="/blog/">Recent Posts</a></h2>
@@ -66,11 +68,12 @@
                 <li><a href="/blog/" class="button">More…</a></li>
             </ul>
         </section>
+        {% endif %}
 
         <!-- Section -->
         <section>
             <header class="major">
-                <h2>Get in touch</h2>
+                <h2>Contact</h2>
             </header>
             <!--<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>-->
             <ul class="contact">
@@ -84,7 +87,8 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright">&copy; Various. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            <p class="copyright">&copy;2010-2017. All rights reserved.
+                <br/><small>Design: <a href="https://html5up.net">HTML5 UP</a>.</small></p>
         </footer>
 
     </div>
