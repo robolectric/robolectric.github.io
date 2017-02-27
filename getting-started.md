@@ -54,13 +54,13 @@ If you reference resources that are outside of your project (i.e. in a aar depen
 
 Robolectric works with Android Studio 1.1.0 or newer. Simply follow the instructions above for working with Gradle. For versions of Android Studio older than 2.0.0, enable the unit test support in the "Build Variants" tab and run your test. As of Android Studio 2.0.0, the test artifacts feature is enabled by default, and the setting to enable/disable test artifacts can be found in File Menu -> Settings -> Build, Execution, Deployment -> Build Tools -> Gradle -> Experimental.
 
-![Android Enable Unit Tests](android-studio-enable-unit-tests.png)
+![Android Enable Unit Tests](/images/android-studio-enable-unit-tests.png)
 
 ### Note for Linux and Mac Users
 
 If you are on Linux or on a Mac, you will probably need to configure the default JUnit test runner configuration in order to work around a bug where Android Studio does not set the working directory to the module being tested. This can be accomplished by editing the run configurations, `Defaults -> JUnit` and changing the working directory value to `$MODULE_DIR$`.
 
-![Android Studio Configure Defaults](android-studio-configure-defaults.png)
+![Android Studio Configure Defaults](/images/android-studio-configure-defaults.png)
 
 ## Building with Eclipse
 
