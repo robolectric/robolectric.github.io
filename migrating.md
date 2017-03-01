@@ -8,6 +8,51 @@ toc: true
 
 ## Migrating from 3.2 to 3.3
 
+There are some big changes to the way Robolectric implements PackageManager functionality.
+
+We have begun the process of switching from hand-rolled stubs towards PackageManager being implemented by a standard shadow as we do for the rest of the framework. The motivation here is for a number of reasons, 1) A Shadow will allow users tests to build against any version of Android. 2) Switching to a shadow will allow us to defer parsing the manifest until the test or code under test makes calls to the PackageManager. 3) It is more consistent with the way other framework code is handled rather than being a special case.
+
+This should all be backwards compatible for the 3.3 release but now you can start migrating your code.
+
+Instead of:
+
+`RobolectricPackageManager rpm = RuntimeEnvironment.getRobolectricPackageManager();`
+
+use:
+
+`ShadowPackageManager shadowPackageManager = shadowOf(context.getPackageManager());`
+
+Instead of:
+
+`PackageManager packageManager = RuntimeEnvironment.getPackageManager();`
+
+use
+
+`PackageManager packageManager = context.getPackageManager(); // Prefer Android Framework APIs where possible.`
+
+Instead of
+
+`RuntimeEnvironment.setRobolectricPackageManager(myCustomPackageManager);`
+
+Replace with a custom shadow (and be a good citizen and contribute your enhancements upstream :-)
+
+```
+@Implements(value = ApplicationPackageManager.class, inheritImplementationMethods = true)
+class MyCustomPackageManager extends ShadowApplicationPackageManager {
+}
+```
+If you are using a custom subclass of DefaultPackageManager to implement functionality missing in Robolectric check again as part of this work we've added support for a bunch more widley used PackageManager features and it might be now possible to completely remove your custom subclass.
+
+
+The following methods and classes will be removed in 3.4
+```RuntimeEnvironment.getPackageManager()
+RuntimeEnvironment.getRobolectricPackageManager()
+RuntimeEnvironment.setRobolectricPackageManager()
+DefaultPackageManager
+StubPackageManager
+RobolectricPackageManager
+```
+
 ---
 
 | 3.2 | 3.3 |
@@ -27,6 +72,9 @@ toc: true
 | `` | `org.robolectric.android.util.concurrent.RoboExecutorService` |
 | `` | `` |
 | `` | `` |
+
+
+
 
 ---
 
