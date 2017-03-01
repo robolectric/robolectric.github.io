@@ -4,25 +4,21 @@ title:  "Hermetic Builds with Robolectric"
 date:   2017-02-23 16:40:06 -0800
 categories: build
 hide: true
+author: Christian Williams
 ---
-Maybe you like hermetic builds?
+Robolectric needs access to multiple Android SDK jars in order to perform its magic, which means it needs special configuration beyond just setting up dependencies in your build. By default, it tries to download Android SDK jars from Maven Central.
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+But what if you have a [hermetic build environment](http://blog.fahhem.com/2013/12/hermetic-build-systems/)? You just need to do a little more configuration.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Here's a [Gradle build script](https://gist.github.com/xian/05c4f27da6d4156b9827842217c2cd5c) that'll help.
 
-Jekyll also offers powerful support for code snippets:
+1. Create an empty Gradle project (either `gradle init` or use Android Studio or IntelliJ).
+1. Paste the script into your `build.gradle`.
+1. Change the first line (`robolectricVersion`) to the version of Robolectric you want.
+1. Run the `filesForHermeticBuild` task: `./gradlew filesForHermeticBuild`
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Gradle will download all the dependencies you need to run Robolectric and place them in `build/output/libs`. Place the `.jar` files in your project's libs directory.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+You'll also find a file called `build/output/robolectric-deps.properties`. Place it in your test resources directory. Change the paths as indicated in the comment in that file.
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+You're all set! Robolectric will now load Android SDKs from the filesystem instead of attempting to download them from Maven Central.
