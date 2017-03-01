@@ -17,7 +17,7 @@ Here's a [Gradle build script](https://gist.github.com/xian/05c4f27da6d4156b9827
 
 Gradle will download all the dependencies you need to run Robolectric and place them in `build/output/libs`. Place the `.jar` files in your project's libs directory.
 
-Add the `.jar` files listed in `build/output/README.txt' as compile-time dependencies.
+Add the `.jar` files listed in `build/output/README.txt` as compile-time dependencies.
 
 Place the file called `build/output/robolectric-deps.properties` in your test resources directory. Change the paths as indicated in the comment in that file.
 
