@@ -15,10 +15,13 @@ Here's a [Gradle build script](https://gist.github.com/xian/05c4f27da6d4156b9827
 1. Create an empty Gradle project (either `gradle init` or use Android Studio or IntelliJ).
 1. Paste the script into your `build.gradle`.
 1. Change the first line (`robolectricVersion`) to the version of Robolectric you want.
+1. Change the list of `shadowArtifacts` or `androidSdkVersions` if you like.
 1. Run the `filesForHermeticBuild` task: `./gradlew filesForHermeticBuild`
 
 Gradle will download all the dependencies you need to run Robolectric and place them in `build/output/libs`. Place the `.jar` files in your project's libs directory.
 
-You'll also find a file called `build/output/robolectric-deps.properties`. Place it in your test resources directory. Change the paths as indicated in the comment in that file.
+Add the `.jar` files listed in `build/output/README.txt' as compile-time dependencies.
+
+Place the file called `build/output/robolectric-deps.properties` in your test resources directory. Change the paths as indicated in the comment in that file.
 
 You're all set! Robolectric will now load Android SDKs from the filesystem instead of attempting to download them from Maven Central.
