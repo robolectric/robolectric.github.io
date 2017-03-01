@@ -52,7 +52,7 @@ whitelist:
 #source: source
 permalink: "/blog/:year/:month/:day/:title/"
 
-google_analytics: 'UA-58882116-1'
+google_analytics: 'UA-19269905-2'
 disqus:
   shortname: robolectric
 
