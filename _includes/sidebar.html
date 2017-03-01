@@ -40,7 +40,7 @@
                         {% endfor %}
 
                         {% for menu_item in menu.items %}
-                        <li><a href="{{ menu_item.url | relative_url }}">{{ menu_item.title | escape }}</a></li>
+                        <li><a href="{{ menu_item.url }}">{{ menu_item.title | escape }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
