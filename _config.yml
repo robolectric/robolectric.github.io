@@ -54,8 +54,9 @@ show_drafts: true
 permalink: "/blog/:year/:month/:day/:title/"
 
 google_analytics: 'UA-19269905-2'
-disqus:
-  shortname: robolectric
+
+#disqus:
+#  shortname: robolectric
 
 defaults:
   -
