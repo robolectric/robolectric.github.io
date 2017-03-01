@@ -1,0 +1,21 @@
+---
+title: Blog
+page_title: Robolectric Blog
+---
+
+<ul>
+  {% for post in site.posts %}
+  {% unless post.hide %}
+    <li class="post">
+      <h3 class="post-title" itemprop="name headline"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      <p class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+        {% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}
+      <div>{{ post.excerpt }}</div>
+      <ul class="actions">
+        <li><a href="{{ post.url | relative_url }}" class="button">More…</a></li>
+      </ul>
+    </li>
+  {% endunless %}
+  {% endfor %}
+</ul>

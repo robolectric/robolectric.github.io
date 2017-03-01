@@ -223,6 +223,20 @@ code {
 	padding: 0.125em 0.25em;
 }
 
+.post {
+	h3 {
+		margin: 0;
+	}
+
+	.post-meta {
+		font-family: _font(family-heading);
+		font-size: 0.9em;
+		font-weight: 400;
+		letter-spacing: 0.075em;
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+}
 
 #toc-container {
 	border: solid 2px _palette(border);

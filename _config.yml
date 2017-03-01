@@ -48,6 +48,7 @@ menu:
 whitelist:
   - jekyll-redirect-from
 
+show_drafts: true
 
 #source: source
 permalink: "/blog/:year/:month/:day/:title/"
@@ -62,3 +63,8 @@ defaults:
       path: "" # all files
     values:
       layout: "default"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
