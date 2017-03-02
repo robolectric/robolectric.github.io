@@ -8,6 +8,26 @@ toc: true
 
 ## Migrating from 3.2 to 3.3
 
+## Moved classes
+
+| 3.2 (now `@Deprecated` | 3.3 |
+| ------------- | ------------- |
+| `org.robolectric.internal.Shadow` | `org.robolectric.shadow.api.Shadow` |
+| `org.robolectric.util.ActivityController` | `org.robolectric.android.controller.ActivityController` |
+| `org.robolectric.util.ContentProviderController` | `org.robolectric.android.controller.ContentProviderController` |
+| `org.robolectric.util.FragmentController` | `org.robolectric.android.controller.FragmentController` |
+| `org.robolectric.util.IntentServiceController` | `org.robolectric.android.controller.IntentServiceController` |
+| `org.robolectric.util.ServiceController` | `org.robolectric.android.controller.ServiceController` |
+| `org.robolectric.util.AccessibilityUtil` | `org.robolectric.android.AccessibilityUtil` |
+| `org.robolectric.util.ApplicationTestUtil` | `org.robolectric.android.ApplicationTestUtil` |
+| `org.robolectric.res.builder.StubPackageManager` | `org.robolectric.android.StubPackageManager` (but don't use unless you must) |
+| `org.robolectric.res.builder.XmlResourceParserImpl` | `org.robolectric.android.XmlResourceParserImpl` (but don't use unless you must) |
+| `org.robolectric.internal.fakes.RoboCharsets` | `org.robolectric.android.fakes.RoboCharsets` |
+| `org.robolectric.internal.fakes.RoboExtendedResponseCache` | `org.robolectric.android.fakes.RoboExtendedResponseCache` (but don't use unless you must) |
+| `org.robolectric.util.concurrent.RoboExecutorService` | `org.robolectric.android.util.concurrent.RoboExecutorService` (but don't use unless you must) |
+| `` | `` |
+| `` | `` |
+
 ### PackageManager
 There are some big changes to the way Robolectric implements `PackageManager` functionality.
 
@@ -76,29 +96,6 @@ DefaultPackageManager
 StubPackageManager
 RobolectricPackageManager
 ```
-
----
-
-| 3.2 | 3.3 |
-| ------------- | ------------- |
-| `org.robolectric.internal.Shadow` | `org.robolectric.shadow.api.Shadow` |
-| `org.robolectric.util.ActivityController` | `org.robolectric.android.controller.ActivityController` |
-| `org.robolectric.util.ContentProviderController` | `org.robolectric.android.controller.ContentProviderController` |
-| `org.robolectric.util.FragmentController` | `org.robolectric.android.controller.FragmentController` |
-| `org.robolectric.util.IntentServiceController` | `org.robolectric.android.controller.IntentServiceController` |
-| `org.robolectric.util.ServiceController` | `org.robolectric.android.controller.ServiceController` |
-| `` | `org.robolectric.android.AccessibilityUtil` |
-| `` | `org.robolectric.android.ApplicationTestUtil` |
-| `` | `org.robolectric.android.StubPackageManager` |
-| `` | `org.robolectric.android.XmlResourceParserImpl:` |
-| `org.robolectric.internal.fakes.RoboCharsets` | `org.robolectric.android.fakes.RoboCharsets` |
-| `org.robolectric.internal.fakes.RoboExtendedResponseCache` | `org.robolectric.android.fakes.RoboExtendedResponseCache` |
-| `` | `org.robolectric.android.util.concurrent.RoboExecutorService` |
-| `` | `` |
-| `` | `` |
-
-
-
 
 ---
 
