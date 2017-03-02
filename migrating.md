@@ -21,11 +21,11 @@ To simplify classloader logic and clean up packages, some classes have moved. Th
 | `org.robolectric.util.ServiceController` | `org.robolectric.android.controller.ServiceController` |
 | `org.robolectric.util.AccessibilityUtil` | `org.robolectric.android.AccessibilityUtil` |
 | `org.robolectric.util.ApplicationTestUtil` | `org.robolectric.android.ApplicationTestUtil` |
-| `org.robolectric.res.builder.StubPackageManager` | `org.robolectric.android.StubPackageManager` (but don't use unless you must) |
-| `org.robolectric.res.builder.XmlResourceParserImpl` | `org.robolectric.android.XmlResourceParserImpl` (but don't use unless you must) |
-| `org.robolectric.internal.fakes.RoboCharsets` | `org.robolectric.android.fakes.RoboCharsets` |
-| `org.robolectric.internal.fakes.RoboExtendedResponseCache` | `org.robolectric.android.fakes.RoboExtendedResponseCache` (but don't use unless you must) |
-| `org.robolectric.util.concurrent.RoboExecutorService` | `org.robolectric.android.util.concurrent.RoboExecutorService` (but don't use unless you must) |
+| `org.robolectric.res.builder.StubPackageManager` | `org.robolectric.android.StubPackageManager` <small>(but don't use unless you must)</small> |
+| `org.robolectric.res.builder.XmlResourceParserImpl` | `org.robolectric.android.XmlResourceParserImpl` <small>(but don't use unless you must)</small> |
+| `org.robolectric.internal.fakes.RoboCharsets` | `org.robolectric.android.fakes.RoboCharsets` <small>(but don't use unless you must)</small> |
+| `org.robolectric.internal.fakes.RoboExtendedResponseCache` | `org.robolectric.android.fakes.RoboExtendedResponseCache` <small>(but don't use unless you must)</small> |
+| `org.robolectric.util.concurrent.RoboExecutorService` | `org.robolectric.android.util.concurrent.RoboExecutorService` <small>(but don't use unless you must)</small> |
 | `` | `` |
 | `` | `` |
 
