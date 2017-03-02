@@ -8,44 +8,68 @@ toc: true
 
 ## Migrating from 3.2 to 3.3
 
-There are some big changes to the way Robolectric implements PackageManager functionality.
+### PackageManager
+There are some big changes to the way Robolectric implements `PackageManager` functionality.
 
-We have begun the process of switching from hand-rolled stubs towards PackageManager being implemented by a standard shadow as we do for the rest of the framework. The motivation here is for a number of reasons, 1) A Shadow will allow users tests to build against any version of Android. 2) Switching to a shadow will allow us to defer parsing the manifest until the test or code under test makes calls to the PackageManager. 3) It is more consistent with the way other framework code is handled rather than being a special case.
+We have begun the process of switching from using a subclass of `PackageManager` towards `PackageManager` being implemented by a standard shadow, as we do for the rest of the framework. This is for a number of reasons:
+* It is more consistent with the way other framework code is handled.
+* A shadow will allow users' tests to build against any version of Android.
+* Switching to a shadow will allow us to defer parsing the manifest until the test or code under test makes calls to the `PackageManager`.
 
 This should all be backwards compatible for the 3.3 release but now you can start migrating your code.
 
+Before, the Robolectric class `DefaultPackageManager` implemented all `PackageManager` functionality. If you wanted to change any of its behavior, you'd extend `DefaultPackageManager` (or `StubPackageManager`) and override whichever methods you liked. Test-related setup was accomplished by calling `RuntimeEnvironment.getRobolectricPackageManager()`, which had extra methods for modifying its behavior.
+
+As of 3.3, Robolectric uses the normal Android `ApplicationPackageManager`, and shadows all of its methods, causing it to delegate to an instance of `DefaultPackageManager`, which works as before. You can still replace it with your own subclass of `PackageManager` if you like, but that's deprecated. Instead of doing that, put your custom behavior in a subclass of `ShadowApplicationPackageManager`. For test-related setup, you can still access it through `RuntimeEnvironment.getRobolectricPackageManager()`, but you should start using `shadowOf(packageManager)` instead. Note that we've implemented quite a bit more of `PackageManager`, so you might not need any custom code any longer.
+
+Starting with 3.4, `DefaultPackageManager` will be removed and its functionality will be moved into `ShadowApplicationPackageManager`.
+
+In the future, 
+
 Instead of:
 
-`RobolectricPackageManager rpm = RuntimeEnvironment.getRobolectricPackageManager();`
+```java
+RobolectricPackageManager rpm = RuntimeEnvironment.getRobolectricPackageManager();
+```
 
 use:
 
-`ShadowPackageManager shadowPackageManager = shadowOf(context.getPackageManager());`
+```java
+ShadowPackageManager shadowPackageManager = shadowOf(context.getPackageManager());
+```
 
 Instead of:
 
-`PackageManager packageManager = RuntimeEnvironment.getPackageManager();`
+```java
+PackageManager packageManager = RuntimeEnvironment.getPackageManager();
+```
 
 use
 
-`PackageManager packageManager = context.getPackageManager(); // Prefer Android Framework APIs where possible.`
+```java
+PackageManager packageManager = context.getPackageManager(); // Prefer Android Framework APIs where possible.
+```
 
 Instead of
 
-`RuntimeEnvironment.setRobolectricPackageManager(myCustomPackageManager);`
+```java
+RuntimeEnvironment.setRobolectricPackageManager(myCustomPackageManager);
+```
 
 Replace with a custom shadow (and be a good citizen and contribute your enhancements upstream :-)
 
-```
+```java
 @Implements(value = ApplicationPackageManager.class, inheritImplementationMethods = true)
 class MyCustomPackageManager extends ShadowApplicationPackageManager {
 }
 ```
-If you are using a custom subclass of DefaultPackageManager to implement functionality missing in Robolectric check again as part of this work we've added support for a bunch more widley used PackageManager features and it might be now possible to completely remove your custom subclass.
+
+If you are using a custom subclass of `DefaultPackageManager` to implement functionality missing in Robolectric, check again as part of this work we've added support for a bunch more widely-used `PackageManager` features and it might be now possible to completely remove your custom subclass.
 
 
-The following methods and classes will be removed in 3.4
-```RuntimeEnvironment.getPackageManager()
+The following methods and classes will be removed in 3.4:
+```java
+RuntimeEnvironment.getPackageManager()
 RuntimeEnvironment.getRobolectricPackageManager()
 RuntimeEnvironment.setRobolectricPackageManager()
 DefaultPackageManager
