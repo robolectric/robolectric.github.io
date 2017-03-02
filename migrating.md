@@ -11,23 +11,21 @@ toc: true
 ### Moved classes
 To simplify classloader logic and clean up packages, some classes have moved. The old class locations are `@Deprecated` and will be removed in 3.4.
 
-| 3.2 (now `@Deprecated`) | 3.3 |
-| ------------- | ------------- |
-| `org.robolectric.internal.Shadow` | `org.robolectric.shadow.api.Shadow` |
-| `org.robolectric.util.ActivityController` | `org.robolectric.android.controller.ActivityController` |
-| `org.robolectric.util.ContentProviderController` | `org.robolectric.android.controller.ContentProviderController` |
-| `org.robolectric.util.FragmentController` | `org.robolectric.android.controller.FragmentController` |
-| `org.robolectric.util.IntentServiceController` | `org.robolectric.android.controller.IntentServiceController` |
-| `org.robolectric.util.ServiceController` | `org.robolectric.android.controller.ServiceController` |
-| `org.robolectric.util.AccessibilityUtil` | `org.robolectric.android.AccessibilityUtil` |
-| `org.robolectric.util.ApplicationTestUtil` | `org.robolectric.android.ApplicationTestUtil` |
-| `org.robolectric.res.builder.StubPackageManager` | `org.robolectric.android.StubPackageManager` <small>(but don't use unless you must)</small> |
-| `org.robolectric.res.builder.XmlResourceParserImpl` | `org.robolectric.android.XmlResourceParserImpl` <small>(but don't use unless you must)</small> |
-| `org.robolectric.internal.fakes.RoboCharsets` | `org.robolectric.android.fakes.RoboCharsets` <small>(but don't use unless you must)</small> |
+| 3.2 (now `@Deprecated`)                               | 3.3                                                   |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| `org.robolectric.internal.Shadow`                     | `org.robolectric.shadow.api.Shadow` |
+| `org.robolectric.util.ActivityController`             | `org.robolectric.android.controller.ActivityController` |
+| `org.robolectric.util.ContentProviderController`      | `org.robolectric.android.controller.ContentProviderController` |
+| `org.robolectric.util.FragmentController`             | `org.robolectric.android.controller.FragmentController` |
+| `org.robolectric.util.IntentServiceController`        | `org.robolectric.android.controller.IntentServiceController` |
+| `org.robolectric.util.ServiceController`              | `org.robolectric.android.controller.ServiceController` |
+| `org.robolectric.util.AccessibilityUtil`              | `org.robolectric.android.AccessibilityUtil` |
+| `org.robolectric.util.ApplicationTestUtil`            | `org.robolectric.android.ApplicationTestUtil` |
+| `org.robolectric.res.builder.StubPackageManager`      | `org.robolectric.android.StubPackageManager` <small>(but don't use unless you must)</small> |
+| `org.robolectric.res.builder.XmlResourceParserImpl`   | `org.robolectric.android.XmlResourceParserImpl` <small>(but don't use unless you must)</small> |
+| `org.robolectric.internal.fakes.RoboCharsets`         | `org.robolectric.android.fakes.RoboCharsets` <small>(but don't use unless you must)</small> |
 | `org.robolectric.internal.fakes.RoboExtendedResponseCache` | `org.robolectric.android.fakes.RoboExtendedResponseCache` <small>(but don't use unless you must)</small> |
 | `org.robolectric.util.concurrent.RoboExecutorService` | `org.robolectric.android.util.concurrent.RoboExecutorService` <small>(but don't use unless you must)</small> |
-| `` | `` |
-| `` | `` |
 
 ### PackageManager
 We have begun the process of switching from using a subclass of `PackageManager` towards `PackageManager` being implemented by a standard shadow, as we do for the rest of the framework. This is for a number of reasons:
@@ -43,18 +41,9 @@ As of 3.3, Robolectric uses the normal Android `ApplicationPackageManager`, and 
 
 Starting with 3.4, `DefaultPackageManager` will be removed and its functionality will be moved into `ShadowApplicationPackageManager`.
 
-In the future, 
-
-Instead of:
-
-```java
-RobolectricPackageManager rpm = RuntimeEnvironment.getRobolectricPackageManager();
-```
-
-use:
-
-```java
-ShadowPackageManager shadowPackageManager = shadowOf(context.getPackageManager());
+| 3.2 (now `@Deprecated`)                               | 3.3                                                   |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| `RobolectricPackageManager rpm<br/> = RuntimeEnvironment.getRobolectricPackageManager();` | `ShadowPackageManager shadowPackageManager<br/> = shadowOf(context.getPackageManager());` |
 ```
 
 Instead of:
