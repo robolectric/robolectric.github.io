@@ -43,28 +43,11 @@ Starting with 3.4, `DefaultPackageManager` will be removed and its functionality
 
 | 3.2 (now `@Deprecated`)                               | 3.3                                                   |
 | ----------------------------------------------------- | ----------------------------------------------------- |
-| `RobolectricPackageManager rpm`<br/>` = RuntimeEnvironment.getRobolectricPackageManager();` | `ShadowPackageManager shadowPackageManager`<br/>` = shadowOf(context.getPackageManager());` |
-```
+| `RobolectricPackageManager rpm`<br/>`  = RuntimeEnvironment.getRobolectricPackageManager();` | `ShadowPackageManager shadowPackageManager`<br/>`  = shadowOf(context.getPackageManager());` |
+| `PackageManager packageManager`<br/>`  = RuntimeEnvironment.getPackageManager();` | `// Prefer Android Framework APIs where possible.`<br/>`PackageManager packageManager = context.getPackageManager();` |
+| `RuntimeEnvironment.setRobolectricPackageManager(myCustomPackageManager);` | Use a custom shadow instead! See below. |
 
-Instead of:
-
-```java
-PackageManager packageManager = RuntimeEnvironment.getPackageManager();
-```
-
-use
-
-```java
-PackageManager packageManager = context.getPackageManager(); // Prefer Android Framework APIs where possible.
-```
-
-Instead of
-
-```java
-RuntimeEnvironment.setRobolectricPackageManager(myCustomPackageManager);
-```
-
-Replace with a custom shadow (and be a good citizen and contribute your enhancements upstream :-)
+Replace subclasses of `DefaultPackageManager` a custom shadow (and be a good citizen and contribute your enhancements upstream :-)
 
 ```java
 @Implements(value = ApplicationPackageManager.class, inheritImplementationMethods = true)
@@ -75,7 +58,7 @@ class MyCustomPackageManager extends ShadowApplicationPackageManager {
 If you are using a custom subclass of `DefaultPackageManager` to implement functionality missing in Robolectric, check again as part of this work we've added support for a bunch more widely-used `PackageManager` features and it might be now possible to completely remove your custom subclass.
 
 
-The following methods and classes will be removed in 3.4:
+The following methods and classes are deprecated will be removed in 3.4:
 ```java
 RuntimeEnvironment.getPackageManager()
 RuntimeEnvironment.getRobolectricPackageManager()
@@ -84,14 +67,6 @@ DefaultPackageManager
 StubPackageManager
 RobolectricPackageManager
 ```
-
----
-
-tbd:
-
-`RobolectricTestRunner.*`
-
-`AccountManager.removeAccount()` -> `AccountManager.removeAccount().getResult()`
 
 ---
 
@@ -123,7 +98,7 @@ class MyTestRunner extends RobolectricTestRunner {
 }
 ```
 
-### Package-level Configuration
+### Package-Level Configuration
 If you are using `robolectric.properties` file to configure all tests, the expected location of the file has been changed.
 
 - 3.1: `src/test/resources/robolectric.properties`
