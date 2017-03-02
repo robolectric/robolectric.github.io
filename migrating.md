@@ -43,7 +43,7 @@ Starting with 3.4, `DefaultPackageManager` will be removed and its functionality
 
 | 3.2 (now `@Deprecated`)                               | 3.3                                                   |
 | ----------------------------------------------------- | ----------------------------------------------------- |
-| `RobolectricPackageManager rpm<br/> = RuntimeEnvironment.getRobolectricPackageManager();` | `ShadowPackageManager shadowPackageManager<br/> = shadowOf(context.getPackageManager());` |
+| `RobolectricPackageManager rpm`<br/>` = RuntimeEnvironment.getRobolectricPackageManager();` | `ShadowPackageManager shadowPackageManager`<br/>` = shadowOf(context.getPackageManager());` |
 ```
 
 Instead of:
