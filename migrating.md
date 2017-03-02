@@ -9,9 +9,9 @@ toc: true
 ## Migrating from 3.2 to 3.3
 
 ### Moved classes
-To simplify classloader logic and clean up packages, some classes have moved:
+To simplify classloader logic and clean up packages, some classes have moved. The old class locations are `@Deprecated` and will be removed in 3.4.
 
-| 3.2 (now `@Deprecated` | 3.3 |
+| 3.2 (now `@Deprecated`) | 3.3 |
 | ------------- | ------------- |
 | `org.robolectric.internal.Shadow` | `org.robolectric.shadow.api.Shadow` |
 | `org.robolectric.util.ActivityController` | `org.robolectric.android.controller.ActivityController` |
