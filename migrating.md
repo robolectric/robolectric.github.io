@@ -30,8 +30,6 @@ To simplify classloader logic and clean up packages, some classes have moved. Th
 | `` | `` |
 
 ### PackageManager
-There are some big changes to the way Robolectric implements `PackageManager` functionality.
-
 We have begun the process of switching from using a subclass of `PackageManager` towards `PackageManager` being implemented by a standard shadow, as we do for the rest of the framework. This is for a number of reasons:
 * It is more consistent with the way other framework code is handled.
 * A shadow will allow users' tests to build against any version of Android.
