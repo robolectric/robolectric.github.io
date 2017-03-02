@@ -8,7 +8,7 @@ toc: true
 
 ## Migrating from 3.2 to 3.3
 
-## Moved classes
+### Moved classes
 
 | 3.2 (now `@Deprecated` | 3.3 |
 | ------------- | ------------- |
