@@ -9,6 +9,7 @@ toc: true
 ## Migrating from 3.2 to 3.3
 
 ### Moved classes
+To simplify classloader logic and clean up packages, some classes have moved:
 
 | 3.2 (now `@Deprecated` | 3.3 |
 | ------------- | ------------- |
