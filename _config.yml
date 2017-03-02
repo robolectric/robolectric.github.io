@@ -38,12 +38,14 @@ menu:
   - title: Contributing
   - title: Resources
     items:
+    - title: GitHub
+      url: https://github.com/robolectric/robolectric/
     - title: Release Notes
-      url: https://github.com/robolectric/robolectric/releases
+      url: https://github.com/robolectric/robolectric/releases/
     - title: Javadoc
       url: /javadoc/latest/
     - title: Issues
-      url: https://github.com/robolectric/robolectric/issues
+      url: https://github.com/robolectric/robolectric/issues/
 
 whitelist:
   - jekyll-redirect-from
@@ -69,3 +71,9 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+
+robolectric:
+  version:
+    current: 3.2.2
+    snapshot: 3.3-SNAPSHOT

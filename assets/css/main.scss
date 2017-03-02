@@ -128,6 +128,15 @@ header {
 			color: _palette(accent);
 		}
 	}
+
+	.inner > nav:first-child {
+		margin-top: 1em;
+	}
+
+	ul.contact > li {
+		margin-top: -0.25em;
+		border-top: none;
+	}
 }
 
 .mini-post {
@@ -137,9 +146,6 @@ header {
 	}
 }
 
-#sidebar .inner > nav:first-child {
-	margin-top: 1em;
-}
 //header .logo strong {
 //	color: _palette(accent);
 //	font-size: 3em;
