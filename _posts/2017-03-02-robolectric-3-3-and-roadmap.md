@@ -38,4 +38,4 @@ As always, thanks for your pull requests, bug reports, ideas and questions!
 
 Your Robolectric maintainers,
 
-&mdash;jongerrish@google.com and christianw@google.com
+&mdash;[jongerrish@google.com](mailto:jongerrish@google.com) and [christianw@google.com](mailto:christianw@google.com)
