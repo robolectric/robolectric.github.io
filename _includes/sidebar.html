@@ -49,7 +49,6 @@
         </nav>
 
         <!-- Section -->
-        {% if false %}
         <section>
             <header class="major">
                 <h2><a href="/blog/">Recent Posts</a></h2>
@@ -60,7 +59,7 @@
                     <!--<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>-->
                     <h4><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h4>
                     <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                    <p>{{ post.excerpt }}</p>
+                    {{ post.excerpt | truncatewords: 10 }}
                 </article>
                 {% endfor %}
             </div>
@@ -68,7 +67,6 @@
                 <li><a href="/blog/" class="button">More…</a></li>
             </ul>
         </section>
-        {% endif %}
 
         <!-- Section -->
         <section>
