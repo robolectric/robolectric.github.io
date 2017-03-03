@@ -3,7 +3,7 @@ title:  "Robolectric 3.3 and Roadmap"
 author: Christian Williams & Jonathan Gerrish
 ---
 
-Your Robolectric maintainers are pleased to announce the release of (Robolectric 3.3)[https://github.com/robolectric/robolectric/releases/tag/robolectric-3.3]! There's been a bunch of activity recently in Robolectric, and we wanted to give a quick update on our thinking about where the project is going.
+Your Robolectric maintainers are pleased to announce the release of [Robolectric 3.3](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.3)! There's been a bunch of activity recently in Robolectric, and we wanted to give a quick update on our thinking about where the project is going.
 
 ## Introduction
 
