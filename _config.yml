@@ -75,5 +75,5 @@ defaults:
 
 robolectric:
   version:
-    current: 3.2.2
-    snapshot: 3.3-SNAPSHOT
+    current: 3.3
+    snapshot: 3.4-SNAPSHOT
