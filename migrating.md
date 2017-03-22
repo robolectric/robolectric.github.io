@@ -14,6 +14,7 @@ To simplify classloader logic and clean up packages, some classes have moved. Th
 | 3.2 (now `@Deprecated`)                               | 3.3                                                   |
 | ----------------------------------------------------- | ----------------------------------------------------- |
 | `org.robolectric.internal.Shadow`                     | `org.robolectric.shadow.api.Shadow` |
+| `org.robolectric.internal.ShadowExtractor.extract()`  | `org.robolectric.shadow.api.Shadow.extract()` |
 | `org.robolectric.util.ActivityController`             | `org.robolectric.android.controller.ActivityController` |
 | `org.robolectric.util.ContentProviderController`      | `org.robolectric.android.controller.ContentProviderController` |
 | `org.robolectric.util.FragmentController`             | `org.robolectric.android.controller.FragmentController` |
