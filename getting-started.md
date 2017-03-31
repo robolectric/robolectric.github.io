@@ -6,7 +6,7 @@ order: 1
 
 # Getting Started
 
-Robolectric works best with Gradle or Maven. If you are starting a new project, we would reccomend Gradle first (since it is the build system of choice in Android Studio) and Maven second. Regardless, Robolectric should integrate well into whatever build tool you are using.
+Robolectric works best with Gradle or Maven. If you are starting a new project, we would recommend Gradle first (since it is the build system of choice in Android Studio) and Maven second. Regardless, Robolectric should integrate well into whatever build tool you are using.
 
 ## Building with Gradle
 
