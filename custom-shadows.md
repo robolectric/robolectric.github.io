@@ -46,8 +46,8 @@ the test in question with `@Config(shadows={MyShadowBitmap.class})`, and to incl
 `@Config(shadows={MyShadowBitmap.class, MyOtherCustomShadow.class})`.  This causes Robolectric to recognize and use
 your custom shadow when executing code against the class you shadowed.
 
-However, the `Robolectric.shadowOf()` method will not work with custom shadows, as it has to be implemented in
-Robolectric for each shadow class.  You can instead use `Robolectric.shadowOf_()` and cast the return value to the
+However, the `Shadows.shadowOf()` method will not work with custom shadows, as it has to be implemented in
+Robolectric for each shadow class.  You can instead use `Shadow.extract()` and cast the return value to the
 custom Shadow class you implemented.
 
 Also, if you choose to shadow an Android class that already is shadowed in Robolectric, you will replace the
