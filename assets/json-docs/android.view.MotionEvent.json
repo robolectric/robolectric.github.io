@@ -1,0 +1,306 @@
+{
+  "methods": {
+    "findPointerIndex(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "findPointerIndex(int)"
+    },
+    "getAction()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAction()"
+    },
+    "getActionIndex()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getActionIndex()"
+    },
+    "getActionMasked()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getActionMasked()"
+    },
+    "getDownTime()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getDownTime()"
+    },
+    "getEventTime()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getEventTime()"
+    },
+    "getPointerCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPointerCount()"
+    },
+    "getPointerId(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPointerId(int)"
+    },
+    "getPointerIdBits()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPointerIdBits()"
+    },
+    "getPressure(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "pointerIndex"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getPressure(int)"
+    },
+    "getRawX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getRawX()"
+    },
+    "getRawY()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getRawY()"
+    },
+    "getSource()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getSource()"
+    },
+    "getX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getX()"
+    },
+    "getX(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "pointerIndex"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getX(int)"
+    },
+    "getY()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getY()"
+    },
+    "getY(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "pointerIndex"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getY(int)"
+    },
+    "obtain(android.view.MotionEvent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "motionEvent"
+      ],
+      "returnType": "android.view.MotionEvent",
+      "exceptions": [],
+      "name": "obtain(android.view.MotionEvent)"
+    },
+    "obtain(long,long,int,float,float,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "downTime",
+        "eventTime",
+        "action",
+        "x",
+        "y",
+        "metaState"
+      ],
+      "returnType": "android.view.MotionEvent",
+      "exceptions": [],
+      "name": "obtain(long,long,int,float,float,int)"
+    },
+    "setAction(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAction(int)"
+    },
+    "setLocation(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLocation(float,float)"
+    },
+    "setPointer2(float,float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "android.view.MotionEvent",
+      "exceptions": [],
+      "name": "setPointer2(float,float)"
+    },
+    "setPointerIds(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "index0PointerId",
+        "index1PointerId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPointerIds(int,int)"
+    },
+    "setPointerIndex(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pointerIndex"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPointerIndex(int)"
+    },
+    "setSource(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "source"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSource(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.MotionEvent}.\n",
+  "name": "org.robolectric.shadows.ShadowMotionEvent"
+}

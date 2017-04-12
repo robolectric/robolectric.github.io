@@ -1,0 +1,27 @@
+{
+  "methods": {
+    "getLatestListPopupWindow()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.widget.ListPopupWindow",
+      "exceptions": [],
+      "name": "getLatestListPopupWindow()"
+    },
+    "show()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "show()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.ListPopupWindow}.\n",
+  "name": "org.robolectric.shadows.ShadowListPopupWindow"
+}

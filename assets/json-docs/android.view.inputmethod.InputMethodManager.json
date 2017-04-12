@@ -1,0 +1,94 @@
+{
+  "methods": {
+    "hideSoftInputFromWindow(android.os.IBinder,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "windowToken",
+        "flags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hideSoftInputFromWindow(android.os.IBinder,int)"
+    },
+    "hideSoftInputFromWindow(android.os.IBinder,int,android.os.ResultReceiver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "windowToken",
+        "flags",
+        "resultReceiver"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hideSoftInputFromWindow(android.os.IBinder,int,android.os.ResultReceiver)"
+    },
+    "isSoftInputVisible()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isSoftInputVisible()"
+    },
+    "peekInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.view.inputmethod.InputMethodManager",
+      "exceptions": [],
+      "name": "peekInstance()"
+    },
+    "showSoftInput(android.view.View,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "view",
+        "flags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "showSoftInput(android.view.View,int)"
+    },
+    "showSoftInput(android.view.View,int,android.os.ResultReceiver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "view",
+        "flags",
+        "resultReceiver"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "showSoftInput(android.view.View,int,android.os.ResultReceiver)"
+    },
+    "toggleSoftInput(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "showFlags",
+        "hideFlags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "toggleSoftInput(int,int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.inputmethod.InputMethodManager}.\n",
+  "name": "org.robolectric.shadows.ShadowInputMethodManager"
+}

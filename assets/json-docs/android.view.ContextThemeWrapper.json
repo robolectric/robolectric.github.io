@@ -1,0 +1,16 @@
+{
+  "methods": {
+    "callGetThemeResId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.Integer",
+      "exceptions": [],
+      "name": "callGetThemeResId()"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.ContextThemeWrapper}.\n",
+  "name": "org.robolectric.shadows.ShadowContextThemeWrapper"
+}

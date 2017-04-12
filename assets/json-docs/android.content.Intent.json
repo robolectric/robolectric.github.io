@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "getIntentClass()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor that returns the {@code Class} object set by\n{@link Intent#setClass(android.content.Context, Class)}\n\n@return the {@code Class} object set by\n        {@link Intent#setClass(android.content.Context, Class)}",
+      "params": [],
+      "returnType": "java.lang.Class\u003c?\u003e",
+      "exceptions": [],
+      "name": "getIntentClass()"
+    }
+  },
+  "documentation": " Shadow for {@link android.content.Intent}.\n",
+  "name": "org.robolectric.shadows.ShadowIntent"
+}

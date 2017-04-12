@@ -1,0 +1,18 @@
+{
+  "methods": {
+    "getSearchableInfo(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "componentName"
+      ],
+      "returnType": "android.app.SearchableInfo",
+      "exceptions": [],
+      "name": "getSearchableInfo(android.content.ComponentName)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.SearchManager}.\n",
+  "name": "org.robolectric.shadows.ShadowSearchManager"
+}

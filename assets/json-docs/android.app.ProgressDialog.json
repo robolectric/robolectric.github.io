@@ -1,0 +1,40 @@
+{
+  "methods": {
+    "getMessage()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the message displayed in the dialog",
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getMessage()"
+    },
+    "getProgressStyle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the style of the progress dialog",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getProgressStyle()"
+    },
+    "setProgressStyle(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "style"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProgressStyle(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.ProgressDialog}.\n",
+  "name": "org.robolectric.shadows.ShadowProgressDialog"
+}

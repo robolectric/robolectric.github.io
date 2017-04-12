@@ -1,0 +1,16 @@
+{
+  "methods": {
+    "initTabWidget()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "initTabWidget()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.TabWidget}.\n",
+  "name": "org.robolectric.shadows.ShadowTabWidget"
+}

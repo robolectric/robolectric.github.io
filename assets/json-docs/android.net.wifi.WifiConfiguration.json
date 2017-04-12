@@ -1,0 +1,26 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "copy()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.wifi.WifiConfiguration",
+      "exceptions": [],
+      "name": "copy()"
+    }
+  },
+  "documentation": " Shadow for {@link android.net.wifi.WifiConfiguration}.\n",
+  "name": "org.robolectric.shadows.ShadowWifiConfiguration"
+}

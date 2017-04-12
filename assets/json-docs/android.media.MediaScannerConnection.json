@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.media.MediaScannerConnection}.\n",
+  "name": "org.robolectric.shadows.ShadowMediaScannerConnection"
+}

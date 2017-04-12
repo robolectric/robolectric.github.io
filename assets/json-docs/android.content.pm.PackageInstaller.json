@@ -1,0 +1,136 @@
+{
+  "methods": {
+    "abandonSession(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "abandonSession(int)"
+    },
+    "createSession(android.content.pm.PackageInstaller.SessionParams)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "params"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "createSession(android.content.pm.PackageInstaller.SessionParams)"
+    },
+    "getAllSessions()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.pm.PackageInstaller.SessionInfo\u003e",
+      "exceptions": [],
+      "name": "getAllSessions()"
+    },
+    "getSessionInfo(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "android.content.pm.PackageInstaller.SessionInfo",
+      "exceptions": [],
+      "name": "getSessionInfo(int)"
+    },
+    "openSession(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "android.content.pm.PackageInstaller.Session",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "openSession(int)"
+    },
+    "registerSessionCallback(android.content.pm.PackageInstaller.SessionCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerSessionCallback(android.content.pm.PackageInstaller.SessionCallback,android.os.Handler)"
+    },
+    "setSessionFails(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.lang.Exception"
+      ],
+      "name": "setSessionFails(int)"
+    },
+    "setSessionFinishes(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "sessionId",
+        "success"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.lang.Exception"
+      ],
+      "name": "setSessionFinishes(int,boolean)"
+    },
+    "setSessionProgress(int,float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId",
+        "progress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSessionProgress(int,float)"
+    },
+    "setSessionSucceeds(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.lang.Exception"
+      ],
+      "name": "setSessionSucceeds(int)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowPackageInstaller"
+}

@@ -1,0 +1,16 @@
+{
+  "methods": {
+    "getGravity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getGravity()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.LinearLayout}.\n",
+  "name": "org.robolectric.shadows.ShadowLinearLayout"
+}

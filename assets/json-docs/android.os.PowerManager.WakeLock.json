@@ -1,0 +1,73 @@
+{
+  "methods": {
+    "acquire()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "acquire()"
+    },
+    "acquire(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [
+        "timeout"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "acquire(long)"
+    },
+    "isHeld()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isHeld()"
+    },
+    "isReferenceCounted()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor retrieves if the wake lock is reference counted or not\n\n@return Is the wake lock reference counted?",
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isReferenceCounted()"
+    },
+    "release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "release()"
+    },
+    "setReferenceCounted(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setReferenceCounted(boolean)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowPowerManager.ShadowWakeLock"
+}

@@ -1,0 +1,71 @@
+{
+  "methods": {
+    "ceil(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "ceil(float)"
+    },
+    "cos(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "angle"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "cos(float)"
+    },
+    "floor(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "floor(float)"
+    },
+    "sin(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "angle"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "sin(float)"
+    },
+    "sqrt(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "sqrt(float)"
+    }
+  },
+  "documentation": " Shadow for {@link android.util.FloatMath}.\n",
+  "name": "org.robolectric.shadows.ShadowFloatMath"
+}

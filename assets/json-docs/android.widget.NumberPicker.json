@@ -1,0 +1,138 @@
+{
+  "methods": {
+    "getDisplayedValues()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "name": "getDisplayedValues()"
+    },
+    "getMaxValue()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMaxValue()"
+    },
+    "getMinValue()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMinValue()"
+    },
+    "getOnValueChangeListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.NumberPicker.OnValueChangeListener",
+      "exceptions": [],
+      "name": "getOnValueChangeListener()"
+    },
+    "getValue()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getValue()"
+    },
+    "getWrapSelectorWheel()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getWrapSelectorWheel()"
+    },
+    "setDisplayedValues(java.lang.String[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "displayedValues"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDisplayedValues(java.lang.String[])"
+    },
+    "setMaxValue(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "maxValue"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaxValue(int)"
+    },
+    "setMinValue(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "minValue"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMinValue(int)"
+    },
+    "setOnValueChangedListener(android.widget.NumberPicker.OnValueChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnValueChangedListener(android.widget.NumberPicker.OnValueChangeListener)"
+    },
+    "setValue(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setValue(int)"
+    },
+    "setWrapSelectorWheel(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "wrapSelectorWheel"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWrapSelectorWheel(boolean)"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.NumberPicker}.\n",
+  "name": "org.robolectric.shadows.ShadowNumberPicker"
+}

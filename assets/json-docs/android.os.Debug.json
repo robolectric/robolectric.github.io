@@ -1,0 +1,40 @@
+{
+  "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    },
+    "getNativeHeapAllocatedSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getNativeHeapAllocatedSize()"
+    },
+    "getRuntimeStats()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.Map\u003cjava.lang.String,java.lang.String\u003e",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getRuntimeStats()"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.Debug}.\n",
+  "name": "org.robolectric.shadows.ShadowDebug"
+}

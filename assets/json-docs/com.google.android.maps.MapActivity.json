@@ -1,0 +1,68 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "isRouteDisplayed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isRouteDisplayed()"
+    },
+    "onCreate(android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bundle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onCreate(android.os.Bundle)"
+    },
+    "onDestroy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onDestroy()"
+    },
+    "onPause()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onPause()"
+    },
+    "onResume()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onResume()"
+    }
+  },
+  "documentation": " Shadow for {@link com.google.android.maps.MapActivity}.\n",
+  "name": "org.robolectric.shadows.maps.ShadowMapActivity"
+}

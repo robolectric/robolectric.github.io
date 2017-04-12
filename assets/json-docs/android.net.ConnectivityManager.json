@@ -1,0 +1,228 @@
+{
+  "methods": {
+    "addNetwork(android.net.Network,android.net.NetworkInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Adds new {@code network} to the list of all {@link android.net.Network}s.\n\n@param network The network.\n@param networkInfo The network info paired with the {@link android.net.Network}.",
+      "params": [
+        "network",
+        "networkInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addNetwork(android.net.Network,android.net.NetworkInfo)"
+    },
+    "clearAllNetworks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Clears the list of all {@link android.net.Network}s.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearAllNetworks()"
+    },
+    "getActiveNetwork()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Network",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getActiveNetwork()"
+    },
+    "getActiveNetworkInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.NetworkInfo",
+      "exceptions": [],
+      "name": "getActiveNetworkInfo()"
+    },
+    "getAllNetworkInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.NetworkInfo[]",
+      "exceptions": [],
+      "name": "getAllNetworkInfo()"
+    },
+    "getAllNetworks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Network[]",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getAllNetworks()"
+    },
+    "getBackgroundDataSetting()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getBackgroundDataSetting()"
+    },
+    "getNetworkCallbacks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003candroid.net.ConnectivityManager.NetworkCallback\u003e",
+      "exceptions": [],
+      "name": "getNetworkCallbacks()"
+    },
+    "getNetworkInfo(android.net.Network)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "network"
+      ],
+      "returnType": "android.net.NetworkInfo",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getNetworkInfo(android.net.Network)"
+    },
+    "getNetworkInfo(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkType"
+      ],
+      "returnType": "android.net.NetworkInfo",
+      "exceptions": [],
+      "name": "getNetworkInfo(int)"
+    },
+    "getNetworkPreference()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNetworkPreference()"
+    },
+    "isActiveNetworkMetered()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Count {@link ConnectivityManager#TYPE_MOBILE} networks as metered.\nOther types will be considered unmetered.\n\n@return True if the active network is metered.",
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isActiveNetworkMetered()"
+    },
+    "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "request",
+        "networkCallback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)"
+    },
+    "removeNetwork(android.net.Network)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Removes the {@code network} from the list of all {@link android.net.Network}s.\n@param network The network.",
+      "params": [
+        "network"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeNetwork(android.net.Network)"
+    },
+    "setActiveNetworkInfo(android.net.NetworkInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActiveNetworkInfo(android.net.NetworkInfo)"
+    },
+    "setBackgroundDataSetting(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "b"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBackgroundDataSetting(boolean)"
+    },
+    "setNetworkInfo(int,android.net.NetworkInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkType",
+        "networkInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkInfo(int,android.net.NetworkInfo)"
+    },
+    "setNetworkPreference(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "preference"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkPreference(int)"
+    },
+    "unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkCallback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)"
+    }
+  },
+  "documentation": " Shadow for {@link android.net.ConnectivityManager}.\n",
+  "name": "org.robolectric.shadows.ShadowConnectivityManager"
+}

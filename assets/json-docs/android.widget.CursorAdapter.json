@@ -1,0 +1,222 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,android.database.Cursor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "c"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.database.Cursor)"
+    },
+    "__constructor__(android.content.Context,android.database.Cursor,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "c",
+        "autoRequery"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.database.Cursor,boolean)"
+    },
+    "__constructor__(android.content.Context,android.database.Cursor,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "c",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.database.Cursor,int)"
+    },
+    "changeCursor(android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "newCursor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "changeCursor(android.database.Cursor)"
+    },
+    "convertToString(android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cursor"
+      ],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "convertToString(android.database.Cursor)"
+    },
+    "getCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCount()"
+    },
+    "getCursor()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "name": "getCursor()"
+    },
+    "getFilterQueryProvider()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.FilterQueryProvider",
+      "exceptions": [],
+      "name": "getFilterQueryProvider()"
+    },
+    "getItem(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "position"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getItem(int)"
+    },
+    "getItemId(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "position"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getItemId(int)"
+    },
+    "getView(int,android.view.View,android.view.ViewGroup)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "position",
+        "convertView",
+        "parent"
+      ],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getView(int,android.view.View,android.view.ViewGroup)"
+    },
+    "hasStableIds()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasStableIds()"
+    },
+    "initialize(android.content.Context,android.database.Cursor,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "context",
+        "c",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "initialize(android.content.Context,android.database.Cursor,int)"
+    },
+    "onContentChangedInternal()": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onContentChangedInternal()"
+    },
+    "runQueryOnBackgroundThread(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "constraint"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "name": "runQueryOnBackgroundThread(java.lang.CharSequence)"
+    },
+    "setFilterQueryProvider(android.widget.FilterQueryProvider)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "filterQueryProvider"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFilterQueryProvider(android.widget.FilterQueryProvider)"
+    },
+    "setViews(java.util.List\u003candroid.view.View\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android API.  Set a list of views to be returned for successive\ncalls to getView().\n\n@param views The list of views",
+      "params": [
+        "views"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setViews(java.util.List\u003candroid.view.View\u003e)"
+    },
+    "swapCursor(android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cursor"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "name": "swapCursor(android.database.Cursor)"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.CursorAdapter}.\n",
+  "name": "org.robolectric.shadows.ShadowCursorAdapter"
+}

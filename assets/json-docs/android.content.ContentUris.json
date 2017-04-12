@@ -1,0 +1,33 @@
+{
+  "methods": {
+    "parseId(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "contentUri"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "parseId(android.net.Uri)"
+    },
+    "withAppendedId(android.net.Uri,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "contentUri",
+        "id"
+      ],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "withAppendedId(android.net.Uri,long)"
+    }
+  },
+  "documentation": " Shadow for {@link android.content.ContentUris}.\n",
+  "name": "org.robolectric.shadows.ShadowContentUris"
+}

@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "getIntentRedelivery()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getIntentRedelivery()"
+    },
+    "setIntentRedelivery(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIntentRedelivery(boolean)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.IntentService}.\n",
+  "name": "org.robolectric.shadows.ShadowIntentService"
+}

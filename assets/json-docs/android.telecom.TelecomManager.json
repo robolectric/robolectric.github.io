@@ -1,0 +1,513 @@
+{
+  "methods": {
+    "acceptRingingCall()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "acceptRingingCall()"
+    },
+    "addNewIncomingCall(android.telecom.PhoneAccountHandle,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneAccount",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addNewIncomingCall(android.telecom.PhoneAccountHandle,android.os.Bundle)"
+    },
+    "addNewUnknownCall(android.telecom.PhoneAccountHandle,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneAccount",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addNewUnknownCall(android.telecom.PhoneAccountHandle,android.os.Bundle)"
+    },
+    "cancelMissedCallsNotification()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancelMissedCallsNotification()"
+    },
+    "clearAccounts()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "@deprecated",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearAccounts()"
+    },
+    "clearAccountsForPackage(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "clearAccountsForPackage(java.lang.String)"
+    },
+    "enablePhoneAccount(android.telecom.PhoneAccountHandle,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "handle",
+        "isEnabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enablePhoneAccount(android.telecom.PhoneAccountHandle,boolean)"
+    },
+    "endCall()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "endCall()"
+    },
+    "getAdnUriForPhoneAccount(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountHandle"
+      ],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "getAdnUriForPhoneAccount(android.telecom.PhoneAccountHandle)"
+    },
+    "getAllIncomingCalls()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowTelecomManager.CallRecord\u003e",
+      "exceptions": [],
+      "name": "getAllIncomingCalls()"
+    },
+    "getAllPhoneAccountHandles()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.telecom.PhoneAccountHandle\u003e",
+      "exceptions": [],
+      "name": "getAllPhoneAccountHandles()"
+    },
+    "getAllPhoneAccounts()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.telecom.PhoneAccount\u003e",
+      "exceptions": [],
+      "name": "getAllPhoneAccounts()"
+    },
+    "getAllPhoneAccountsCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAllPhoneAccountsCount()"
+    },
+    "getAllUnknownCalls()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowTelecomManager.CallRecord\u003e",
+      "exceptions": [],
+      "name": "getAllUnknownCalls()"
+    },
+    "getCallCapablePhoneAccounts()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.telecom.PhoneAccountHandle\u003e",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getCallCapablePhoneAccounts()"
+    },
+    "getCallCapablePhoneAccounts(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "includeDisabledAccounts"
+      ],
+      "returnType": "java.util.List\u003candroid.telecom.PhoneAccountHandle\u003e",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getCallCapablePhoneAccounts(boolean)"
+    },
+    "getCallState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCallState()"
+    },
+    "getConnectionManager()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.telecom.PhoneAccountHandle",
+      "exceptions": [],
+      "name": "getConnectionManager()"
+    },
+    "getCurrentTtyMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCurrentTtyMode()"
+    },
+    "getDefaultDialerPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getDefaultDialerPackage()"
+    },
+    "getDefaultOutgoingPhoneAccount(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uriScheme"
+      ],
+      "returnType": "android.telecom.PhoneAccountHandle",
+      "exceptions": [],
+      "name": "getDefaultOutgoingPhoneAccount(java.lang.String)"
+    },
+    "getDefaultPhoneApp()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "@deprecated",
+      "params": [],
+      "returnType": "android.content.ComponentName",
+      "exceptions": [],
+      "name": "getDefaultPhoneApp()"
+    },
+    "getLine1Number(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountHandle"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLine1Number(android.telecom.PhoneAccountHandle)"
+    },
+    "getPhoneAccount(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "account"
+      ],
+      "returnType": "android.telecom.PhoneAccount",
+      "exceptions": [],
+      "name": "getPhoneAccount(android.telecom.PhoneAccountHandle)"
+    },
+    "getPhoneAccountsForPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.telecom.PhoneAccountHandle\u003e",
+      "exceptions": [],
+      "name": "getPhoneAccountsForPackage()"
+    },
+    "getPhoneAccountsSupportingScheme(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uriScheme"
+      ],
+      "returnType": "java.util.List\u003candroid.telecom.PhoneAccountHandle\u003e",
+      "exceptions": [],
+      "name": "getPhoneAccountsSupportingScheme(java.lang.String)"
+    },
+    "getSimCallManager()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.telecom.PhoneAccountHandle",
+      "exceptions": [],
+      "name": "getSimCallManager()"
+    },
+    "getSimCallManager(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userId"
+      ],
+      "returnType": "android.telecom.PhoneAccountHandle",
+      "exceptions": [],
+      "name": "getSimCallManager(int)"
+    },
+    "getSystemDialerPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSystemDialerPackage()"
+    },
+    "getUserSelectedOutgoingPhoneAccount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.telecom.PhoneAccountHandle",
+      "exceptions": [],
+      "name": "getUserSelectedOutgoingPhoneAccount()"
+    },
+    "getVoiceMailNumber(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountHandle"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getVoiceMailNumber(android.telecom.PhoneAccountHandle)"
+    },
+    "handleMmi(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dialString"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "handleMmi(java.lang.String)"
+    },
+    "handleMmi(java.lang.String,android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dialString",
+        "accountHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "handleMmi(java.lang.String,android.telecom.PhoneAccountHandle)"
+    },
+    "isInCall()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isInCall()"
+    },
+    "isRinging()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isRinging()"
+    },
+    "isTtySupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isTtySupported()"
+    },
+    "isVoiceMailNumber(android.telecom.PhoneAccountHandle,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountHandle",
+        "number"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isVoiceMailNumber(android.telecom.PhoneAccountHandle,java.lang.String)"
+    },
+    "placeCall(android.net.Uri,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "address",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "placeCall(android.net.Uri,android.os.Bundle)"
+    },
+    "registerPhoneAccount(android.telecom.PhoneAccount)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "account"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerPhoneAccount(android.telecom.PhoneAccount)"
+    },
+    "setDefaultDialer(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setDefaultDialer(java.lang.String)"
+    },
+    "setSimCallManager(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "simCallManager"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimCallManager(android.telecom.PhoneAccountHandle)"
+    },
+    "setUserSelectedOutgoingPhoneAccount(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUserSelectedOutgoingPhoneAccount(android.telecom.PhoneAccountHandle)"
+    },
+    "showInCallScreen(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "showDialpad"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "showInCallScreen(boolean)"
+    },
+    "silenceRinger()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "silenceRinger()"
+    },
+    "unregisterPhoneAccount(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterPhoneAccount(android.telecom.PhoneAccountHandle)"
+    }
+  },
+  "documentation": " Shadow for {@link android.telecom.TelecomManager}.\n",
+  "name": "org.robolectric.shadows.ShadowTelecomManager"
+}

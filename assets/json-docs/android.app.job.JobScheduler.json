@@ -1,0 +1,67 @@
+{
+  "methods": {
+    "cancel(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [
+        "jobId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel(int)"
+    },
+    "cancelAll()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancelAll()"
+    },
+    "failOnJob(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [
+        "jobId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "failOnJob(int)"
+    },
+    "getAllPendingJobs()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.app.job.JobInfo\u003e",
+      "exceptions": [],
+      "name": "getAllPendingJobs()"
+    },
+    "schedule(android.app.job.JobInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [
+        "job"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "schedule(android.app.job.JobInfo)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.job.JobScheduler}.\n",
+  "name": "org.robolectric.shadows.ShadowJobScheduler"
+}

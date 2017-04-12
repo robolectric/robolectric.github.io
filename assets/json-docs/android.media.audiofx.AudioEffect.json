@@ -1,0 +1,41 @@
+{
+  "methods": {
+    "addEffect(android.media.audiofx.AudioEffect.Descriptor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "descriptor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addEffect(android.media.audiofx.AudioEffect.Descriptor)"
+    },
+    "queryEffects()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.media.audiofx.AudioEffect.Descriptor[]",
+      "exceptions": [],
+      "name": "queryEffects()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    }
+  },
+  "documentation": " Shadow for {@link android.media.audiofx.AudioEffect}.\n",
+  "name": "org.robolectric.shadows.ShadowAudioEffect"
+}

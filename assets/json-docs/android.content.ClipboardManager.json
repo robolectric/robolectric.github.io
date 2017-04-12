@@ -1,0 +1,94 @@
+{
+  "methods": {
+    "addPrimaryClipChangedListener(android.content.ClipboardManager.OnPrimaryClipChangedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPrimaryClipChangedListener(android.content.ClipboardManager.OnPrimaryClipChangedListener)"
+    },
+    "getPrimaryClip()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.ClipData",
+      "exceptions": [],
+      "name": "getPrimaryClip()"
+    },
+    "getPrimaryClipDescription()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.ClipDescription",
+      "exceptions": [],
+      "name": "getPrimaryClipDescription()"
+    },
+    "hasPrimaryClip()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasPrimaryClip()"
+    },
+    "hasText()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasText()"
+    },
+    "removePrimaryClipChangedListener(android.content.ClipboardManager.OnPrimaryClipChangedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removePrimaryClipChangedListener(android.content.ClipboardManager.OnPrimaryClipChangedListener)"
+    },
+    "setPrimaryClip(android.content.ClipData)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "clip"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPrimaryClip(android.content.ClipData)"
+    },
+    "setText(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "text"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setText(java.lang.CharSequence)"
+    }
+  },
+  "documentation": " Shadow for {@link android.content.ClipboardManager}.\n",
+  "name": "org.robolectric.shadows.ShadowClipboardManager"
+}

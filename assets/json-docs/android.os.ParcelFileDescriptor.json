@@ -1,0 +1,54 @@
+{
+  "methods": {
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "close()"
+    },
+    "getFileDescriptor()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.io.FileDescriptor",
+      "exceptions": [],
+      "name": "getFileDescriptor()"
+    },
+    "getStatSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getStatSize()"
+    },
+    "open(java.io.File,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "file",
+        "mode"
+      ],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [
+        "java.io.FileNotFoundException"
+      ],
+      "name": "open(java.io.File,int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.ParcelFileDescriptor}.\n",
+  "name": "org.robolectric.shadows.ShadowParcelFileDescriptor"
+}

@@ -1,0 +1,223 @@
+{
+  "methods": {
+    "dispatchMessage(android.os.Message)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "msg"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dispatchMessage(android.os.Message)"
+    },
+    "enqueueMessage(android.os.Message,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "msg",
+        "when"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "enqueueMessage(android.os.Message,long)"
+    },
+    "getHead()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.Message",
+      "exceptions": [],
+      "name": "getHead()"
+    },
+    "getScheduler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.util.Scheduler",
+      "exceptions": [],
+      "name": "getScheduler()"
+    },
+    "nativeDestroy(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "ptr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeDestroy(int)"
+    },
+    "nativeDestroy(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "ptr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeDestroy(long)"
+    },
+    "nativeInit()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.Number",
+      "exceptions": [],
+      "name": "nativeInit()"
+    },
+    "nativeIsIdling(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "ptr"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeIsIdling(int)"
+    },
+    "nativeIsIdling(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "ptr"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeIsIdling(long)"
+    },
+    "nativePollOnce(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "timeoutMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativePollOnce(int,int)"
+    },
+    "nativePollOnce(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "timeoutMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativePollOnce(long,int)"
+    },
+    "nativeWake(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "ptr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeWake(int)"
+    },
+    "nativeWake(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "ptr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWake(long)"
+    },
+    "removeSyncBarrier(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "token"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeSyncBarrier(int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setHead(android.os.Message)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "msg"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHead(android.os.Message)"
+    },
+    "setScheduler(org.robolectric.util.Scheduler)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "scheduler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScheduler(org.robolectric.util.Scheduler)"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.MessageQueue}.\n\n \u003cp\u003eThis class puts {@link android.os.Message}s into the scheduler queue instead of sending\n them to be handled on a separate thread. {@link android.os.Message}s that are scheduled to\n be dispatched can be triggered by calling {@link ShadowLooper#idleMainLooper}.\u003c/p\u003e\n\n @see ShadowLooper\n",
+  "name": "org.robolectric.shadows.ShadowMessageQueue"
+}

@@ -1,0 +1,41 @@
+{
+  "methods": {
+    "create(int,java.lang.String,android.os.Bundle,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "resultCode",
+        "resultData",
+        "resultExtras",
+        "ordered"
+      ],
+      "returnType": "android.content.BroadcastReceiver.PendingResult",
+      "exceptions": [],
+      "name": "create(int,java.lang.String,android.os.Bundle,boolean)"
+    },
+    "finish()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "finish()"
+    },
+    "getFuture()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "com.google.common.util.concurrent.ListenableFuture\u003candroid.content.BroadcastReceiver.PendingResult\u003e",
+      "exceptions": [],
+      "name": "getFuture()"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowBroadcastPendingResult"
+}

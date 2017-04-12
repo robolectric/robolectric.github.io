@@ -1,0 +1,67 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "close()"
+    },
+    "commit(android.content.IntentSender)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "statusReceiver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "commit(android.content.IntentSender)"
+    },
+    "fsync(java.io.OutputStream)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "out"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "fsync(java.io.OutputStream)"
+    },
+    "openWrite(java.lang.String,long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name",
+        "offsetBytes",
+        "lengthBytes"
+      ],
+      "returnType": "java.io.OutputStream",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "openWrite(java.lang.String,long,long)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowPackageInstaller.ShadowSession"
+}

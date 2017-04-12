@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.graphics.BitmapShader}.\n",
+  "name": "org.robolectric.shadows.ShadowBitmapShader"
+}

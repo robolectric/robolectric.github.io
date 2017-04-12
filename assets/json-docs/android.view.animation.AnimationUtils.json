@@ -1,0 +1,34 @@
+{
+  "methods": {
+    "loadInterpolator(android.content.Context,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "id"
+      ],
+      "returnType": "android.view.animation.Interpolator",
+      "exceptions": [],
+      "name": "loadInterpolator(android.content.Context,int)"
+    },
+    "loadLayoutAnimation(android.content.Context,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "id"
+      ],
+      "returnType": "android.view.animation.LayoutAnimationController",
+      "exceptions": [],
+      "name": "loadLayoutAnimation(android.content.Context,int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.animation.AnimationUtils}.\n",
+  "name": "org.robolectric.shadows.ShadowAnimationUtils"
+}

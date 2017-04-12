@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "nativeConstructor()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nativeConstructor()"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.Region}.\n",
+  "name": "org.robolectric.shadows.ShadowRegion"
+}

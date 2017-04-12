@@ -1,0 +1,29 @@
+{
+  "methods": {
+    "getGlobalActionsPerformed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
+      "exceptions": [],
+      "name": "getGlobalActionsPerformed()"
+    },
+    "performGlobalAction(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "performGlobalAction(int)"
+    }
+  },
+  "documentation": " Shadow of AccessibilityService that saves global actions to a list.\n",
+  "name": "org.robolectric.shadows.ShadowAccessibilityService"
+}

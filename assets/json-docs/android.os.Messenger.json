@@ -1,0 +1,32 @@
+{
+  "methods": {
+    "__constructor__(android.os.Handler)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.os.Handler)"
+    },
+    "send(android.os.Message)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "message"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "name": "send(android.os.Message)"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.Messenger}.\n",
+  "name": "org.robolectric.shadows.ShadowMessenger"
+}

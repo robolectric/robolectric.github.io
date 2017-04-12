@@ -1,0 +1,520 @@
+{
+  "methods": {
+    "__constructor__(android.graphics.Paint)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "otherPaint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.graphics.Paint)"
+    },
+    "__constructor__(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(int)"
+    },
+    "getAlpha()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAlpha()"
+    },
+    "getCap()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return cap",
+      "params": [],
+      "returnType": "android.graphics.Paint.Cap",
+      "exceptions": [],
+      "name": "getCap()"
+    },
+    "getColor()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getColor()"
+    },
+    "getColorFilter()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.ColorFilter",
+      "exceptions": [],
+      "name": "getColorFilter()"
+    },
+    "getFlags()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFlags()"
+    },
+    "getJoin()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return join",
+      "params": [],
+      "returnType": "android.graphics.Paint.Join",
+      "exceptions": [],
+      "name": "getJoin()"
+    },
+    "getPathEffect()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.PathEffect",
+      "exceptions": [],
+      "name": "getPathEffect()"
+    },
+    "getShader()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Shader",
+      "exceptions": [],
+      "name": "getShader()"
+    },
+    "getShadowColor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return shadow color (Paint related shadow, not Robolectric Shadow)",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getShadowColor()"
+    },
+    "getShadowDx()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return shadow Dx (Paint related shadow, not Robolectric Shadow)",
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getShadowDx()"
+    },
+    "getShadowDy()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return shadow Dx (Paint related shadow, not Robolectric Shadow)",
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getShadowDy()"
+    },
+    "getShadowRadius()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return shadow radius (Paint related shadow, not Robolectric Shadow)",
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getShadowRadius()"
+    },
+    "getStrokeCap()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Paint.Cap",
+      "exceptions": [],
+      "name": "getStrokeCap()"
+    },
+    "getStrokeJoin()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Paint.Join",
+      "exceptions": [],
+      "name": "getStrokeJoin()"
+    },
+    "getStrokeWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getStrokeWidth()"
+    },
+    "getStyle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Paint.Style",
+      "exceptions": [],
+      "name": "getStyle()"
+    },
+    "getTextAlign()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Paint.Align",
+      "exceptions": [],
+      "name": "getTextAlign()"
+    },
+    "getTextSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getTextSize()"
+    },
+    "getTypeface()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Typeface",
+      "exceptions": [],
+      "name": "getTypeface()"
+    },
+    "getWidth()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return width",
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getWidth()"
+    },
+    "isAntiAlias()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAntiAlias()"
+    },
+    "isDither()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isDither()"
+    },
+    "measureText(char[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "text",
+        "index",
+        "count"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "measureText(char[],int,int)"
+    },
+    "measureText(java.lang.CharSequence,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "text",
+        "start",
+        "end"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "measureText(java.lang.CharSequence,int,int)"
+    },
+    "measureText(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "text"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "measureText(java.lang.String)"
+    },
+    "measureText(java.lang.String,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "text",
+        "start",
+        "end"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "measureText(java.lang.String,int,int)"
+    },
+    "nInit()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nInit()"
+    },
+    "setAlpha(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "alpha"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAlpha(int)"
+    },
+    "setAntiAlias(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "antiAlias"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAntiAlias(boolean)"
+    },
+    "setColor(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "color"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setColor(int)"
+    },
+    "setColorFilter(android.graphics.ColorFilter)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "filter"
+      ],
+      "returnType": "android.graphics.ColorFilter",
+      "exceptions": [],
+      "name": "setColorFilter(android.graphics.ColorFilter)"
+    },
+    "setDither(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dither"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDither(boolean)"
+    },
+    "setFlags(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFlags(int)"
+    },
+    "setPathEffect(android.graphics.PathEffect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "effect"
+      ],
+      "returnType": "android.graphics.PathEffect",
+      "exceptions": [],
+      "name": "setPathEffect(android.graphics.PathEffect)"
+    },
+    "setShader(android.graphics.Shader)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "shader"
+      ],
+      "returnType": "android.graphics.Shader",
+      "exceptions": [],
+      "name": "setShader(android.graphics.Shader)"
+    },
+    "setShadowLayer(float,float,float,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "radius",
+        "dx",
+        "dy",
+        "color"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setShadowLayer(float,float,float,int)"
+    },
+    "setStrokeCap(android.graphics.Paint.Cap)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cap"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStrokeCap(android.graphics.Paint.Cap)"
+    },
+    "setStrokeJoin(android.graphics.Paint.Join)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "join"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStrokeJoin(android.graphics.Paint.Join)"
+    },
+    "setStrokeWidth(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "width"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStrokeWidth(float)"
+    },
+    "setStyle(android.graphics.Paint.Style)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "style"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStyle(android.graphics.Paint.Style)"
+    },
+    "setTextAlign(android.graphics.Paint.Align)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "align"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTextAlign(android.graphics.Paint.Align)"
+    },
+    "setTextSize(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "textSize"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTextSize(float)"
+    },
+    "setTypeface(android.graphics.Typeface)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "typeface"
+      ],
+      "returnType": "android.graphics.Typeface",
+      "exceptions": [],
+      "name": "setTypeface(android.graphics.Typeface)"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.Paint}.\n",
+  "name": "org.robolectric.shadows.ShadowPaint"
+}

@@ -1,0 +1,128 @@
+{
+  "methods": {
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "close()"
+    },
+    "delete()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "delete()"
+    },
+    "get(java.net.URI,java.lang.String,java.util.Map\u003cjava.lang.String,java.util.List\u003cjava.lang.String\u003e\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "requestMethod",
+        "requestHeaders"
+      ],
+      "returnType": "java.net.CacheResponse",
+      "exceptions": [],
+      "name": "get(java.net.URI,java.lang.String,java.util.Map\u003cjava.lang.String,java.util.List\u003cjava.lang.String\u003e\u003e)"
+    },
+    "getHitCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHitCount()"
+    },
+    "getInstalled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.net.http.HttpResponseCache",
+      "exceptions": [],
+      "name": "getInstalled()"
+    },
+    "getNetworkCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNetworkCount()"
+    },
+    "getRequestCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRequestCount()"
+    },
+    "install(java.io.File,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "directory",
+        "maxSize"
+      ],
+      "returnType": "android.net.http.HttpResponseCache",
+      "exceptions": [],
+      "name": "install(java.io.File,long)"
+    },
+    "maxSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "maxSize()"
+    },
+    "put(java.net.URI,java.net.URLConnection)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "urlConnection"
+      ],
+      "returnType": "java.net.CacheResponse",
+      "exceptions": [],
+      "name": "put(java.net.URI,java.net.URLConnection)"
+    },
+    "size()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "size()"
+    }
+  },
+  "documentation": " Shadow for {@link android.net.http.HttpResponseCache}.\n",
+  "name": "org.robolectric.shadows.ShadowHttpResponseCache"
+}

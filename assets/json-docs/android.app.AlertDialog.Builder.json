@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@code android.app.AlertDialog.Builder}.\n",
+  "name": "org.robolectric.shadows.ShadowAlertDialog.ShadowBuilder"
+}

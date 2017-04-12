@@ -1,0 +1,287 @@
+{
+  "methods": {
+    "create(android.content.Context,android.content.Intent[],boolean,boolean,boolean,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "context",
+        "intents",
+        "isActivity",
+        "isBroadcast",
+        "isService",
+        "requestCode",
+        "flags"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "create(android.content.Context,android.content.Intent[],boolean,boolean,boolean,int,int)"
+    },
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)"
+    },
+    "getActivities(android.content.Context,int,android.content.Intent[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "requestCode",
+        "intents",
+        "flags"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "getActivities(android.content.Context,int,android.content.Intent[],int)"
+    },
+    "getActivities(android.content.Context,int,android.content.Intent[],int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "requestCode",
+        "intents",
+        "flags",
+        "options"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "getActivities(android.content.Context,int,android.content.Intent[],int,android.os.Bundle)"
+    },
+    "getActivity(android.content.Context,int,android.content.Intent,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "requestCode",
+        "intent",
+        "flags"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "getActivity(android.content.Context,int,android.content.Intent,int)"
+    },
+    "getActivity(android.content.Context,int,android.content.Intent,int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "requestCode",
+        "intent",
+        "flags",
+        "options"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "getActivity(android.content.Context,int,android.content.Intent,int,android.os.Bundle)"
+    },
+    "getBroadcast(android.content.Context,int,android.content.Intent,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "requestCode",
+        "intent",
+        "flags"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "getBroadcast(android.content.Context,int,android.content.Intent,int)"
+    },
+    "getCreatedIntentFor(android.content.Intent[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "intents"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "getCreatedIntentFor(android.content.Intent[])"
+    },
+    "getFlags()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFlags()"
+    },
+    "getIntentSender()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.IntentSender",
+      "exceptions": [],
+      "name": "getIntentSender()"
+    },
+    "getRequestCode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRequestCode()"
+    },
+    "getSavedContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getSavedContext()"
+    },
+    "getSavedIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getSavedIntent()"
+    },
+    "getSavedIntents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent[]",
+      "exceptions": [],
+      "name": "getSavedIntents()"
+    },
+    "getService(android.content.Context,int,android.content.Intent,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "requestCode",
+        "intent",
+        "flags"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "getService(android.content.Context,int,android.content.Intent,int)"
+    },
+    "hashCode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "hashCode()"
+    },
+    "isActivityIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isActivityIntent()"
+    },
+    "isBroadcastIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isBroadcastIntent()"
+    },
+    "isServiceIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isServiceIntent()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "send()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "android.app.PendingIntent.CanceledException"
+      ],
+      "name": "send()"
+    },
+    "send(android.content.Context,int,android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "code",
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.app.PendingIntent.CanceledException"
+      ],
+      "name": "send(android.content.Context,int,android.content.Intent)"
+    }
+  },
+  "documentation": " Shadow for {@code android.app.PendingIntent}.\n",
+  "name": "org.robolectric.shadows.ShadowPendingIntent"
+}

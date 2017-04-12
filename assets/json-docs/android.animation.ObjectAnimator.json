@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.animation.ObjectAnimator}.\n",
+  "name": "org.robolectric.shadows.ShadowObjectAnimator"
+}

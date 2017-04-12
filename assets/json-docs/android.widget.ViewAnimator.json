@@ -1,0 +1,58 @@
+{
+  "methods": {
+    "getCurrentView()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getCurrentView()"
+    },
+    "getDisplayedChild()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDisplayedChild()"
+    },
+    "setDisplayedChild(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "whichChild"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDisplayedChild(int)"
+    },
+    "showNext()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "showNext()"
+    },
+    "showPrevious()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "showPrevious()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.ViewAnimator}.\n",
+  "name": "org.robolectric.shadows.ShadowViewAnimator"
+}

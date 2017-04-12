@@ -1,0 +1,97 @@
+{
+  "methods": {
+    "getNext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Convenience method to provide getter access to the private field\n\u003ccode\u003eMessage.next\u003c/code\u003e.\n\n@return The next message in the current message chain.\n@see #setNext(Message)",
+      "params": [],
+      "returnType": "android.os.Message",
+      "exceptions": [],
+      "name": "getNext()"
+    },
+    "isInUse()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isInUse()"
+    },
+    "recycle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "recycle()"
+    },
+    "recycleUnchecked()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Hook to unscheduled the callback when the message is recycled.\nInvokes {@link #unschedule()} and then calls through to the\npackage private method {@link Message}\u003ccode\u003e.recycleUnchecked()\non the real object.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "recycleUnchecked()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Resets the static state of the {@link Message} class by\nemptying the message pool.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setNext(android.os.Message)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Convenience method to provide setter access to the private field\n\u003ccode\u003eMessage.next\u003c/code\u003e.\n\n@param next the new next message for the current message.\n@see #getNext()",
+      "params": [
+        "next"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNext(android.os.Message)"
+    },
+    "setScheduledRunnable(java.lang.Runnable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Stores the \u003ccode\u003eRunnable\u003c/code\u003e instance that has been scheduled\nto invoke this message. This is called when the message is\nenqueued by {@link ShadowMessageQueue#enqueueMessage} and is used when\nthe message is recycled to ensure that the correct\n{@link Runnable} instance is removed from the associated scheduler.\n\n@param r the \u003ccode\u003eRunnable\u003c/code\u003e instance that is scheduled to\ntrigger this message.\n\n#if ($api \u003e\u003d 21)   * @see #recycleUnchecked()\n#else   * @see #recycle()\n#end",
+      "params": [
+        "r"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScheduledRunnable(java.lang.Runnable)"
+    },
+    "unschedule()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unschedule()"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.Message}.\n",
+  "name": "org.robolectric.shadows.ShadowMessage"
+}

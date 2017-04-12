@@ -1,0 +1,53 @@
+{
+  "methods": {
+    "getApplicationRestrictions(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getApplicationRestrictions(java.lang.String)"
+    },
+    "getUserProfiles()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.os.UserHandle\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getUserProfiles()"
+    },
+    "isUserUnlocked()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isUserUnlocked()"
+    },
+    "setUserUnlocked(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Setter for {@link UserManager#isUserUnlocked()}",
+      "params": [
+        "userUnlocked"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUserUnlocked(boolean)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowUserManager"
+}

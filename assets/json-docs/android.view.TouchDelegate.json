@@ -1,0 +1,39 @@
+{
+  "methods": {
+    "__constructor__(android.graphics.Rect,android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bounds",
+        "delegateView"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.graphics.Rect,android.view.View)"
+    },
+    "getBounds()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Rect",
+      "exceptions": [],
+      "name": "getBounds()"
+    },
+    "getDelegateView()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getDelegateView()"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.TouchDelegate}.\n",
+  "name": "org.robolectric.shadows.ShadowTouchDelegate"
+}

@@ -1,0 +1,41 @@
+{
+  "methods": {
+    "getName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getName()"
+    },
+    "makeInputDeviceNamed(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "deviceName"
+      ],
+      "returnType": "android.view.InputDevice",
+      "exceptions": [],
+      "name": "makeInputDeviceNamed(java.lang.String)"
+    },
+    "setDeviceName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "deviceName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDeviceName(java.lang.String)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.InputDevice}.\n",
+  "name": "org.robolectric.shadows.ShadowInputDevice"
+}

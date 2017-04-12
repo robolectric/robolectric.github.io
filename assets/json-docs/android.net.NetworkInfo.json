@@ -1,0 +1,167 @@
+{
+  "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    },
+    "getDetailedState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.NetworkInfo.DetailedState",
+      "exceptions": [],
+      "name": "getDetailedState()"
+    },
+    "getState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.NetworkInfo.State",
+      "exceptions": [],
+      "name": "getState()"
+    },
+    "getSubtype()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getSubtype()"
+    },
+    "getType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getType()"
+    },
+    "isAvailable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAvailable()"
+    },
+    "isConnected()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isConnected()"
+    },
+    "isConnectedOrConnecting()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isConnectedOrConnecting()"
+    },
+    "newInstance(android.net.NetworkInfo.DetailedState,int,int,boolean,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "detailedState",
+        "type",
+        "subType",
+        "isAvailable",
+        "isConnected"
+      ],
+      "returnType": "android.net.NetworkInfo",
+      "exceptions": [],
+      "name": "newInstance(android.net.NetworkInfo.DetailedState,int,int,boolean,boolean)"
+    },
+    "setAvailableStatus(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor\nSets up the return value of {@link #isAvailable()}.\n\n@param isAvailable the value that {@link #isAvailable()} will return.",
+      "params": [
+        "isAvailable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAvailableStatus(boolean)"
+    },
+    "setConnectionStatus(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n\u003cp\u003e\nSets up the return value of {@link #isConnectedOrConnecting()} and {@link #isConnected()}.\n\n@param isConnected the value that {@link #isConnectedOrConnecting()} and {@link #isConnected()} will return.",
+      "params": [
+        "isConnected"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConnectionStatus(boolean)"
+    },
+    "setConnectionType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor\nSets up the return value of {@link #getType()}.\n\n@param connectionType the value that {@link #getType()} will return.",
+      "params": [
+        "connectionType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConnectionType(int)"
+    },
+    "setDetailedState(android.net.NetworkInfo.DetailedState)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "detailedState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDetailedState(android.net.NetworkInfo.DetailedState)"
+    },
+    "setSubType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "subType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSubType(int)"
+    }
+  },
+  "documentation": " Shadow for {@code android.net.NetworkInfo}.\n",
+  "name": "org.robolectric.shadows.ShadowNetworkInfo"
+}

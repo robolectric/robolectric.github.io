@@ -1,0 +1,1384 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "addAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "addAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction)"
+    },
+    "addAction(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addAction(int)"
+    },
+    "addChild(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "child"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addChild(android.view.View)"
+    },
+    "addChild(android.view.View,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "root",
+        "virtualDescendantId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addChild(android.view.View,int)"
+    },
+    "addChild(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Add a child node to this one. Also initializes the parent field of the\nchild.\n\n@param child The node to be added as a child.",
+      "params": [
+        "child"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addChild(android.view.accessibility.AccessibilityNodeInfo)"
+    },
+    "areThereUnrecycledNodes(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Check for leaked objects that were {@code obtain}ed but never\n{@code recycle}d.\n\n@param printUnrecycledNodesToSystemErr - if true, stack traces of calls\n       to {@code obtain} that lack matching calls to {@code recycle} are\n       dumped to System.err.\n@return {@code true} if there are unrecycled nodes",
+      "params": [
+        "printUnrecycledNodesToSystemErr"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "areThereUnrecycledNodes(boolean)"
+    },
+    "canOpenPopup()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "canOpenPopup()"
+    },
+    "childrenEqualityCheck(org.robolectric.shadows.ShadowAccessibilityNodeInfo,java.util.LinkedList\u003corg.robolectric.shadows.ShadowAccessibilityNodeInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "otherShadow",
+        "visitedNodes"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "childrenEqualityCheck(org.robolectric.shadows.ShadowAccessibilityNodeInfo,java.util.LinkedList\u003corg.robolectric.shadows.ShadowAccessibilityNodeInfo\u003e)"
+    },
+    "describeContents()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "describeContents()"
+    },
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Equality check based on reference equality for mParent and mView and\nvalue equality for other fields.",
+      "params": [
+        "object"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)"
+    },
+    "getActionFromIdFromFrameWork(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction",
+      "exceptions": [],
+      "name": "getActionFromIdFromFrameWork(int)"
+    },
+    "getActionList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.view.accessibility.AccessibilityNodeInfo.AccessibilityAction\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getActionList()"
+    },
+    "getActionTypeMaskFromFramework()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getActionTypeMaskFromFramework()"
+    },
+    "getActions()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Obtain flags for actions supported. Currently only supports\n{@link AccessibilityNodeInfo#ACTION_CLICK},\n{@link AccessibilityNodeInfo#ACTION_LONG_CLICK},\n{@link AccessibilityNodeInfo#ACTION_SCROLL_FORWARD},\n{@link AccessibilityNodeInfo#ACTION_PASTE},\n{@link AccessibilityNodeInfo#ACTION_FOCUS},\n{@link AccessibilityNodeInfo#ACTION_SET_SELECTION},\n{@link AccessibilityNodeInfo#ACTION_SCROLL_BACKWARD}\nReturned value is derived from the getters.\n\n@return Action mask. 0 if no actions supported.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getActions()"
+    },
+    "getBoundsInParent(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outBounds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getBoundsInParent(android.graphics.Rect)"
+    },
+    "getBoundsInScreen(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outBounds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getBoundsInScreen(android.graphics.Rect)"
+    },
+    "getChild(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "getChild(int)"
+    },
+    "getChildCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getChildCount()"
+    },
+    "getClassName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getClassName()"
+    },
+    "getClone()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "documentation": "@return A shallow copy.",
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "getClone()"
+    },
+    "getCollectionInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo.CollectionInfo",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getCollectionInfo()"
+    },
+    "getCollectionItemInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo.CollectionItemInfo",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getCollectionItemInfo()"
+    },
+    "getContentDescription()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getContentDescription()"
+    },
+    "getError()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getError()"
+    },
+    "getInputType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getInputType()"
+    },
+    "getLabelFor()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "getLabelFor()"
+    },
+    "getLabeledBy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "getLabeledBy()"
+    },
+    "getLastLegacyActionFromFrameWork()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLastLegacyActionFromFrameWork()"
+    },
+    "getLiveRegion()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getLiveRegion()"
+    },
+    "getMaxTextLength()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getMaxTextLength()"
+    },
+    "getMovementGranularities()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMovementGranularities()"
+    },
+    "getPackageName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getPackageName()"
+    },
+    "getParent()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "getParent()"
+    },
+    "getPerformedActions()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "@return The list of arguments for the various calls to performAction. Unmodifiable.",
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
+      "exceptions": [],
+      "name": "getPerformedActions()"
+    },
+    "getPerformedActionsWithArgs()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "@return The list of arguments for the various calls to performAction. Unmodifiable.",
+      "params": [],
+      "returnType": "java.util.List\u003candroid.util.Pair\u003cjava.lang.Integer,android.os.Bundle\u003e\u003e",
+      "exceptions": [],
+      "name": "getPerformedActionsWithArgs()"
+    },
+    "getRangeInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo.RangeInfo",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getRangeInfo()"
+    },
+    "getText()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getText()"
+    },
+    "getTextSelectionEnd()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Gets the text selection end.\n\n@return The text selection end if there is selection or UNDEFINED_SELECTION_INDEX.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTextSelectionEnd()"
+    },
+    "getTextSelectionStart()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Gets the text selection start.\n\n@return The text selection start if there is selection or UNDEFINED_SELECTION_INDEX.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTextSelectionStart()"
+    },
+    "getTraversalAfter()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "getTraversalAfter()"
+    },
+    "getTraversalBefore()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "getTraversalBefore()"
+    },
+    "getViewIdResourceName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getViewIdResourceName()"
+    },
+    "getWindow()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityWindowInfo",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getWindow()"
+    },
+    "hashCode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "hashCode()"
+    },
+    "isAccessibilityFocused()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAccessibilityFocused()"
+    },
+    "isCheckable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isCheckable()"
+    },
+    "isChecked()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isChecked()"
+    },
+    "isClickable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isClickable()"
+    },
+    "isContentInvalid()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isContentInvalid()"
+    },
+    "isDismissable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isDismissable()"
+    },
+    "isEditable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isEditable()"
+    },
+    "isEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isEnabled()"
+    },
+    "isFocusable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isFocusable()"
+    },
+    "isFocused()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isFocused()"
+    },
+    "isLongClickable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLongClickable()"
+    },
+    "isMultiLine()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isMultiLine()"
+    },
+    "isPassword()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isPassword()"
+    },
+    "isPasteable()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isPasteable()"
+    },
+    "isScrollable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isScrollable()"
+    },
+    "isSelected()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isSelected()"
+    },
+    "isTextSelectionSetable()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isTextSelectionSetable()"
+    },
+    "isVisibleToUser()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isVisibleToUser()"
+    },
+    "obtain()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "obtain()"
+    },
+    "obtain(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "obtain(android.view.View)"
+    },
+    "obtain(android.view.View,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "root",
+        "virtualDescendantId"
+      ],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "obtain(android.view.View,int)"
+    },
+    "obtain(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "obtain(android.view.accessibility.AccessibilityNodeInfo)"
+    },
+    "performAction(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "performAction(int)"
+    },
+    "performAction(int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action",
+        "arguments"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "performAction(int,android.os.Bundle)"
+    },
+    "recycle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "recycle()"
+    },
+    "refresh()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "refresh()"
+    },
+    "removeAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "removeAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction)"
+    },
+    "removeAction(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "removeAction(int)"
+    },
+    "resetObtainedInstances()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledNodes}\nwill always return false if called immediately afterwards.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetObtainedInstances()"
+    },
+    "setAccessibilityFocused(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "focused"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccessibilityFocused(boolean)"
+    },
+    "setAccessibilityWindowInfo(android.view.accessibility.AccessibilityWindowInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccessibilityWindowInfo(android.view.accessibility.AccessibilityWindowInfo)"
+    },
+    "setBoundsInParent(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "b"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBoundsInParent(android.graphics.Rect)"
+    },
+    "setBoundsInScreen(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "b"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBoundsInScreen(android.graphics.Rect)"
+    },
+    "setCanOpenPopup(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "opensPopup"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setCanOpenPopup(boolean)"
+    },
+    "setCheckable(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "checkable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCheckable(boolean)"
+    },
+    "setChecked(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "checked"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setChecked(boolean)"
+    },
+    "setClassName(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setClassName(java.lang.CharSequence)"
+    },
+    "setClickable(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isClickable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setClickable(boolean)"
+    },
+    "setCollectionInfo(android.view.accessibility.AccessibilityNodeInfo.CollectionInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "collectionInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "setCollectionInfo(android.view.accessibility.AccessibilityNodeInfo.CollectionInfo)"
+    },
+    "setCollectionItemInfo(android.view.accessibility.AccessibilityNodeInfo.CollectionItemInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "collectionItemInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "setCollectionItemInfo(android.view.accessibility.AccessibilityNodeInfo.CollectionItemInfo)"
+    },
+    "setContentDescription(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "description"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setContentDescription(java.lang.CharSequence)"
+    },
+    "setContentInvalid(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "contentInvalid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setContentInvalid(boolean)"
+    },
+    "setDismissable(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dismissable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setDismissable(boolean)"
+    },
+    "setEditable(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isEditable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEditable(boolean)"
+    },
+    "setEnabled(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEnabled(boolean)"
+    },
+    "setError(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "error"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setError(java.lang.CharSequence)"
+    },
+    "setFocusable(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isFocusable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFocusable(boolean)"
+    },
+    "setFocused(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isFocused"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFocused(boolean)"
+    },
+    "setInputType(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "inputType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "setInputType(int)"
+    },
+    "setLabelFor(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLabelFor(android.view.accessibility.AccessibilityNodeInfo)"
+    },
+    "setLabeledBy(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLabeledBy(android.view.accessibility.AccessibilityNodeInfo)"
+    },
+    "setLiveRegion(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "liveRegion"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "setLiveRegion(int)"
+    },
+    "setLongClickable(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isLongClickable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLongClickable(boolean)"
+    },
+    "setMaxTextLength(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "maxTextLength"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setMaxTextLength(int)"
+    },
+    "setMovementGranularities(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "movementGranularities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMovementGranularities(int)"
+    },
+    "setMultiLine(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "multiLine"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setMultiLine(boolean)"
+    },
+    "setOnPerformActionListener(org.robolectric.shadows.ShadowAccessibilityNodeInfo.OnPerformActionListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Configure the return result of an action if it is performed\n\n@param listener The listener.",
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnPerformActionListener(org.robolectric.shadows.ShadowAccessibilityNodeInfo.OnPerformActionListener)"
+    },
+    "setPackageName(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPackageName(java.lang.CharSequence)"
+    },
+    "setPassword(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "password"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPassword(boolean)"
+    },
+    "setPasteable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isPasteable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasteable(boolean)"
+    },
+    "setRangeInfo(android.view.accessibility.AccessibilityNodeInfo.RangeInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "rangeInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "setRangeInfo(android.view.accessibility.AccessibilityNodeInfo.RangeInfo)"
+    },
+    "setRefreshReturnValue(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "refreshReturnValue"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRefreshReturnValue(boolean)"
+    },
+    "setScrollable(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isScrollable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScrollable(boolean)"
+    },
+    "setSelected(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "selected"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSelected(boolean)"
+    },
+    "setSource(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "source"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSource(android.view.View)"
+    },
+    "setSource(android.view.View,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "root",
+        "virtualDescendantId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSource(android.view.View,int)"
+    },
+    "setText(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "t"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setText(java.lang.CharSequence)"
+    },
+    "setTextSelection(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "start",
+        "end"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTextSelection(int,int)"
+    },
+    "setTextSelectionSetable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isTextSelectionSetable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTextSelectionSetable(boolean)"
+    },
+    "setTraversalAfter(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "setTraversalAfter(android.view.accessibility.AccessibilityNodeInfo)"
+    },
+    "setTraversalBefore(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "setTraversalBefore(android.view.accessibility.AccessibilityNodeInfo)"
+    },
+    "setViewIdResourceName(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "viewIdResourceName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "setViewIdResourceName(java.lang.String)"
+    },
+    "setVisibleToUser(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isVisibleToUser"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVisibleToUser(boolean)"
+    },
+    "writeToParcel(android.os.Parcel,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dest",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writeToParcel(android.os.Parcel,int)"
+    }
+  },
+  "documentation": " Shadow of {@link android.view.accessibility.AccessibilityNodeInfo} that allows a test to set\n properties that are locked in the original class. It also keeps track of calls to\n {@code obtain()} and {@code recycle()} to look for bugs that mismatches.\n",
+  "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo"
+}

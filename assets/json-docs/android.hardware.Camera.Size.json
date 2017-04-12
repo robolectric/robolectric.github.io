@@ -1,0 +1,20 @@
+{
+  "methods": {
+    "__constructor__(android.hardware.Camera,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "camera",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.hardware.Camera,int,int)"
+    }
+  },
+  "documentation": " Shadow for the Android {@code Camera.Size} value object.\n",
+  "name": "org.robolectric.shadows.ShadowCamera.ShadowSize"
+}

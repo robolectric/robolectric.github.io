@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "filter(java.lang.CharSequence,android.widget.Filter.FilterListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "constraint",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "filter(java.lang.CharSequence,android.widget.Filter.FilterListener)"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.Filter}.\n",
+  "name": "org.robolectric.shadows.ShadowFilter"
+}

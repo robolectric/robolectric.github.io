@@ -1,0 +1,26 @@
+{
+  "methods": {
+    "getTabHost()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.TabHost",
+      "exceptions": [],
+      "name": "getTabHost()"
+    },
+    "getTabWidget()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.TabWidget",
+      "exceptions": [],
+      "name": "getTabWidget()"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.TabActivity}.\n",
+  "name": "org.robolectric.shadows.ShadowTabActivity"
+}

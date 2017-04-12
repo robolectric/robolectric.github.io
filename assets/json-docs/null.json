@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "getNativePtr()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getNativePtr()"
+    },
+    "obtainStyledAttributes(android.content.res.Resources.Theme,android.util.AttributeSet,int[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "wrapper",
+        "set",
+        "attrs",
+        "defStyleAttr",
+        "defStyleRes"
+      ],
+      "returnType": "android.content.res.TypedArray",
+      "exceptions": [],
+      "name": "obtainStyledAttributes(android.content.res.Resources.Theme,android.util.AttributeSet,int[],int,int)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowResourcesImpl.ShadowThemeImpl"
+}

@@ -1,0 +1,27 @@
+{
+  "methods": {
+    "__constructor__(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "radius"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(float)"
+    },
+    "getRadius()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getRadius()"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowCornerPathEffect"
+}

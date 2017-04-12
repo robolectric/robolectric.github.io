@@ -1,0 +1,78 @@
+{
+  "methods": {
+    "getNativePtr()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getNativePtr()"
+    },
+    "getResources()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.res.Resources",
+      "exceptions": [],
+      "name": "getResources()"
+    },
+    "getShadowAssetManager()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowAssetManager",
+      "exceptions": [],
+      "name": "getShadowAssetManager()"
+    },
+    "obtainStyledAttributes(android.util.AttributeSet,int[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "set",
+        "attrs",
+        "defStyleAttr",
+        "defStyleRes"
+      ],
+      "returnType": "android.content.res.TypedArray",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "obtainStyledAttributes(android.util.AttributeSet,int[],int,int)"
+    },
+    "obtainStyledAttributes(int,int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "resid",
+        "attrs"
+      ],
+      "returnType": "android.content.res.TypedArray",
+      "exceptions": [
+        "android.content.res.Resources.NotFoundException"
+      ],
+      "maxSdk": 23,
+      "name": "obtainStyledAttributes(int,int[])"
+    },
+    "obtainStyledAttributes(int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "attrs"
+      ],
+      "returnType": "android.content.res.TypedArray",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "obtainStyledAttributes(int[])"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowResources.ShadowTheme"
+}

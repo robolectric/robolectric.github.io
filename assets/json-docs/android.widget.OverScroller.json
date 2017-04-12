@@ -1,0 +1,197 @@
+{
+  "methods": {
+    "abortAnimation()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "abortAnimation()"
+    },
+    "computeScrollOffset()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "computeScrollOffset()"
+    },
+    "deltaTime()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "deltaTime()"
+    },
+    "deltaX()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "deltaX()"
+    },
+    "deltaY()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "deltaY()"
+    },
+    "forceFinished(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "finished"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "forceFinished(boolean)"
+    },
+    "getCurrX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCurrX()"
+    },
+    "getCurrY()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCurrY()"
+    },
+    "getDuration()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDuration()"
+    },
+    "getFinalX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFinalX()"
+    },
+    "getFinalY()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFinalY()"
+    },
+    "getScheduler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.util.Scheduler",
+      "exceptions": [],
+      "name": "getScheduler()"
+    },
+    "getStartX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStartX()"
+    },
+    "getStartY()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStartY()"
+    },
+    "isFinished()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isFinished()"
+    },
+    "isScrollingInDirection(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "xvel",
+        "yvel"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isScrollingInDirection(float,float)"
+    },
+    "startScroll(int,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "startX",
+        "startY",
+        "dx",
+        "dy",
+        "duration"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startScroll(int,int,int,int,int)"
+    },
+    "timePassed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "timePassed()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.OverScroller}.\n",
+  "name": "org.robolectric.shadows.ShadowOverScroller"
+}

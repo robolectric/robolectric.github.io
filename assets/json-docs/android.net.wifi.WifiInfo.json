@@ -1,0 +1,173 @@
+{
+  "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    },
+    "getBSSID()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getBSSID()"
+    },
+    "getFrequency()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getFrequency()"
+    },
+    "getLinkSpeed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLinkSpeed()"
+    },
+    "getMacAddress()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getMacAddress()"
+    },
+    "getNetworkId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNetworkId()"
+    },
+    "getRssi()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRssi()"
+    },
+    "getSSID()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSSID()"
+    },
+    "setBSSID(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bssid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBSSID(java.lang.String)"
+    },
+    "setFrequency(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "frequency"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setFrequency(int)"
+    },
+    "setLinkSpeed(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "linkSpeed"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLinkSpeed(int)"
+    },
+    "setMacAddress(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "newMacAddress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMacAddress(java.lang.String)"
+    },
+    "setNetworkId(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkId(int)"
+    },
+    "setRssi(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "rssi"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRssi(int)"
+    },
+    "setSSID(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "ssid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSSID(java.lang.String)"
+    }
+  },
+  "documentation": " Shadow for {@link android.net.wifi.WifiInfo}.\n",
+  "name": "org.robolectric.shadows.ShadowWifiInfo"
+}

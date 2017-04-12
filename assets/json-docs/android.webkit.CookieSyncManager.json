@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "createInstance(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "ctx"
+      ],
+      "returnType": "android.webkit.CookieSyncManager",
+      "exceptions": [],
+      "name": "createInstance(android.content.Context)"
+    },
+    "getInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.webkit.CookieSyncManager",
+      "exceptions": [],
+      "name": "getInstance()"
+    }
+  },
+  "documentation": " Shadow for {@code android.webkit.CookieSyncManager}.\n",
+  "name": "org.robolectric.shadows.ShadowCookieSyncManager"
+}

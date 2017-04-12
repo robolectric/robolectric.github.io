@@ -1,0 +1,108 @@
+{
+  "methods": {
+    "create(android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.view.Window",
+      "exceptions": [
+        "java.lang.Exception"
+      ],
+      "name": "create(android.content.Context)"
+    },
+    "getBackgroundDrawable()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "getBackgroundDrawable()"
+    },
+    "getFlag(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flag"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getFlag(int)"
+    },
+    "getIndeterminateProgressBar()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.ProgressBar",
+      "exceptions": [],
+      "name": "getIndeterminateProgressBar()"
+    },
+    "getProgressBar()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.ProgressBar",
+      "exceptions": [],
+      "name": "getProgressBar()"
+    },
+    "getSoftInputMode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getSoftInputMode()"
+    },
+    "getTitle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getTitle()"
+    },
+    "setFlags(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flags",
+        "mask"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFlags(int,int)"
+    },
+    "setSoftInputMode(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "softInputMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSoftInputMode(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.Window}.\n",
+  "name": "org.robolectric.shadows.ShadowWindow"
+}

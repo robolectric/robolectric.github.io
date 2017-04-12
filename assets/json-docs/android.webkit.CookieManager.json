@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "getInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.webkit.CookieManager",
+      "exceptions": [],
+      "name": "getInstance()"
+    },
+    "resetCookies()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetCookies()"
+    }
+  },
+  "documentation": " Shadow for {@code android.webkit.CookieManager}.\n",
+  "name": "org.robolectric.shadows.ShadowCookieManager"
+}

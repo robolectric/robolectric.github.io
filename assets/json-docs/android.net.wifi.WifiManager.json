@@ -1,0 +1,268 @@
+{
+  "methods": {
+    "addNetwork(android.net.wifi.WifiConfiguration)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "config"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "addNetwork(android.net.wifi.WifiConfiguration)"
+    },
+    "calculateSignalLevel(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "rssi",
+        "numLevels"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "calculateSignalLevel(int,int)"
+    },
+    "checkAccessWifiStatePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkAccessWifiStatePermission()"
+    },
+    "createWifiLock(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lockType",
+        "tag"
+      ],
+      "returnType": "android.net.wifi.WifiManager.WifiLock",
+      "exceptions": [],
+      "name": "createWifiLock(int,java.lang.String)"
+    },
+    "createWifiLock(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "android.net.wifi.WifiManager.WifiLock",
+      "exceptions": [],
+      "name": "createWifiLock(java.lang.String)"
+    },
+    "enableNetwork(int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "netId",
+        "disableOthers"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "enableNetwork(int,boolean)"
+    },
+    "getConfiguredNetworks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.net.wifi.WifiConfiguration\u003e",
+      "exceptions": [],
+      "name": "getConfiguredNetworks()"
+    },
+    "getConnectionInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.wifi.WifiInfo",
+      "exceptions": [],
+      "name": "getConnectionInfo()"
+    },
+    "getDhcpInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.DhcpInfo",
+      "exceptions": [],
+      "name": "getDhcpInfo()"
+    },
+    "getLastEnabledNetwork()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.util.Pair\u003cjava.lang.Integer,java.lang.Boolean\u003e",
+      "exceptions": [],
+      "name": "getLastEnabledNetwork()"
+    },
+    "getScanResults()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.net.wifi.ScanResult\u003e",
+      "exceptions": [],
+      "name": "getScanResults()"
+    },
+    "isWifiEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isWifiEnabled()"
+    },
+    "makeCopy(android.net.wifi.WifiConfiguration,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "config",
+        "networkId"
+      ],
+      "returnType": "android.net.wifi.WifiConfiguration",
+      "exceptions": [],
+      "name": "makeCopy(android.net.wifi.WifiConfiguration,int)"
+    },
+    "removeNetwork(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "netId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "removeNetwork(int)"
+    },
+    "saveConfiguration()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "saveConfiguration()"
+    },
+    "setAccessWifiStatePermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accessWifiStatePermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccessWifiStatePermission(boolean)"
+    },
+    "setDhcpInfo(android.net.DhcpInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dhcpInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDhcpInfo(android.net.DhcpInfo)"
+    },
+    "setScanResults(java.util.List\u003candroid.net.wifi.ScanResult\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "scanResults"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScanResults(java.util.List\u003candroid.net.wifi.ScanResult\u003e)"
+    },
+    "setSignalLevelInPercent(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "level"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSignalLevelInPercent(float)"
+    },
+    "setWifiEnabled(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "wifiEnabled"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setWifiEnabled(boolean)"
+    },
+    "startScan()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "startScan()"
+    },
+    "updateNetwork(android.net.wifi.WifiConfiguration)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "config"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "updateNetwork(android.net.wifi.WifiConfiguration)"
+    },
+    "wasConfigurationSaved()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasConfigurationSaved()"
+    }
+  },
+  "documentation": " Shadow for {@link android.net.wifi.WifiManager}.\n",
+  "name": "org.robolectric.shadows.ShadowWifiManager"
+}

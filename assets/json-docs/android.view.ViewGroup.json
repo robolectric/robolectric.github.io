@@ -1,0 +1,145 @@
+{
+  "methods": {
+    "addView(android.view.View,int,android.view.ViewGroup.LayoutParams)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "child",
+        "index",
+        "params"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addView(android.view.View,int,android.view.ViewGroup.LayoutParams)"
+    },
+    "dump(java.io.PrintStream,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android method that dumps the state of this {@code ViewGroup} to {@code System.out}",
+      "params": [
+        "out",
+        "indent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dump(java.io.PrintStream,int)"
+    },
+    "getDisallowInterceptTouchEvent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getDisallowInterceptTouchEvent()"
+    },
+    "getInterceptedTouchEvent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.MotionEvent",
+      "exceptions": [],
+      "name": "getInterceptedTouchEvent()"
+    },
+    "getLayoutAnimation()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.animation.LayoutAnimationController",
+      "exceptions": [],
+      "name": "getLayoutAnimation()"
+    },
+    "getLayoutAnimationListener()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.animation.Animation.AnimationListener",
+      "exceptions": [],
+      "name": "getLayoutAnimationListener()"
+    },
+    "innerText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Returns a string representation of this {@code ViewGroup} by concatenating all of the\nstrings contained in all of the descendants of this {@code ViewGroup}.",
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "innerText()"
+    },
+    "onInterceptTouchEvent(android.view.MotionEvent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "ev"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "onInterceptTouchEvent(android.view.MotionEvent)"
+    },
+    "removedChild(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "child"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removedChild(android.view.View)"
+    },
+    "requestDisallowInterceptTouchEvent(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "disallowIntercept"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "requestDisallowInterceptTouchEvent(boolean)"
+    },
+    "setLayoutAnimation(android.view.animation.LayoutAnimationController)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "layoutAnim"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLayoutAnimation(android.view.animation.LayoutAnimationController)"
+    },
+    "setLayoutAnimationListener(android.view.animation.Animation.AnimationListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLayoutAnimationListener(android.view.animation.Animation.AnimationListener)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.ViewGroup}.\n",
+  "name": "org.robolectric.shadows.ShadowViewGroup"
+}

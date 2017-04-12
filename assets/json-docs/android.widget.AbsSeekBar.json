@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.widget.AbsSeekBar}.\n",
+  "name": "org.robolectric.shadows.ShadowAbsSeekBar"
+}

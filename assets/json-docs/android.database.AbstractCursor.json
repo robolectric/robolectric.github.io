@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "getNotificationUri_Compatibility()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Returns the Uri set by {@code setNotificationUri()}.\n\n@return Notification URI.",
+      "params": [],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "getNotificationUri_Compatibility()"
+    }
+  },
+  "documentation": " Shadow for {@link android.database.AbstractCursor}.\n",
+  "name": "org.robolectric.shadows.ShadowAbstractCursor"
+}

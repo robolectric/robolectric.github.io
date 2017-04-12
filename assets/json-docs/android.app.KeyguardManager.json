@@ -1,0 +1,86 @@
+{
+  "methods": {
+    "inKeyguardRestrictedInputMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "inKeyguardRestrictedInputMode()"
+    },
+    "isDeviceSecure()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isDeviceSecure()"
+    },
+    "isKeyguardSecure()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isKeyguardSecure()"
+    },
+    "newKeyguardLock(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "android.app.KeyguardManager.KeyguardLock",
+      "exceptions": [],
+      "name": "newKeyguardLock(java.lang.String)"
+    },
+    "setIsDeviceSecure(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isDeviceSecure"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsDeviceSecure(boolean)"
+    },
+    "setIsKeyguardSecure(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "secure"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsKeyguardSecure(boolean)"
+    },
+    "setinRestrictedInputMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "restricted"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setinRestrictedInputMode(boolean)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.KeyguardManager}.\n",
+  "name": "org.robolectric.shadows.ShadowKeyguardManager"
+}

@@ -1,0 +1,26 @@
+{
+  "methods": {
+    "cancel()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel()"
+    },
+    "wasCancelled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasCancelled()"
+    }
+  },
+  "documentation": " Shadow for {@link android.webkit.JsResult}.\n",
+  "name": "org.robolectric.shadows.ShadowJsResult"
+}

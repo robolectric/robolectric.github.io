@@ -1,0 +1,142 @@
+{
+  "methods": {
+    "disableForegroundDispatch(android.app.Activity)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "activity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "disableForegroundDispatch(android.app.Activity)"
+    },
+    "enableForegroundDispatch(android.app.Activity,android.app.PendingIntent,android.content.IntentFilter[],java.lang.String[][])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "activity",
+        "intent",
+        "filters",
+        "techLists"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enableForegroundDispatch(android.app.Activity,android.app.PendingIntent,android.content.IntentFilter[],java.lang.String[][])"
+    },
+    "getDisabledActivity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.app.Activity",
+      "exceptions": [],
+      "name": "getDisabledActivity()"
+    },
+    "getEnabledActivity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.app.Activity",
+      "exceptions": [],
+      "name": "getEnabledActivity()"
+    },
+    "getFilters()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.IntentFilter[]",
+      "exceptions": [],
+      "name": "getFilters()"
+    },
+    "getIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "getIntent()"
+    },
+    "getNdefPushMessageCallback()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.nfc.NfcAdapter.CreateNdefMessageCallback",
+      "exceptions": [],
+      "name": "getNdefPushMessageCallback()"
+    },
+    "getNfcAdapter(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.nfc.NfcAdapter",
+      "exceptions": [],
+      "name": "getNfcAdapter(android.content.Context)"
+    },
+    "getTechLists()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String[][]",
+      "exceptions": [],
+      "name": "getTechLists()"
+    },
+    "isEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isEnabled()"
+    },
+    "setEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEnabled(boolean)"
+    },
+    "setNdefPushMessageCallback(android.nfc.NfcAdapter.CreateNdefMessageCallback,android.app.Activity,android.app.Activity...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callback",
+        "activity",
+        "activities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNdefPushMessageCallback(android.nfc.NfcAdapter.CreateNdefMessageCallback,android.app.Activity,android.app.Activity...)"
+    }
+  },
+  "documentation": " Shadow for {@link android.nfc.NfcAdapter}.\n",
+  "name": "org.robolectric.shadows.ShadowNfcAdapter"
+}

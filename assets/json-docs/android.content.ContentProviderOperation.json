@@ -1,0 +1,88 @@
+{
+  "methods": {
+    "\u003cT\u003egetFieldReflectively(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "fieldName"
+      ],
+      "returnType": "T",
+      "exceptions": [],
+      "name": "\u003cT\u003egetFieldReflectively(java.lang.String)"
+    },
+    "getContentValues()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.ContentValues",
+      "exceptions": [],
+      "name": "getContentValues()"
+    },
+    "getExpectedCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.Integer",
+      "exceptions": [],
+      "name": "getExpectedCount()"
+    },
+    "getSelection()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSelection()"
+    },
+    "getSelectionArgs()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "name": "getSelectionArgs()"
+    },
+    "getSelectionArgsBackReferences()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Map\u003cjava.lang.Integer,java.lang.Integer\u003e",
+      "exceptions": [],
+      "name": "getSelectionArgsBackReferences()"
+    },
+    "getType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getType()"
+    },
+    "getValuesBackReferences()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.ContentValues",
+      "exceptions": [],
+      "name": "getValuesBackReferences()"
+    }
+  },
+  "documentation": " Shadow for {@link android.content.ContentProviderOperation}.\n",
+  "name": "org.robolectric.shadows.ShadowContentProviderOperation"
+}

@@ -1,0 +1,93 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,int,android.app.DatePickerDialog.OnDateSetListener,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "theme",
+        "callBack",
+        "year",
+        "monthOfYear",
+        "dayOfMonth"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "__constructor__(android.content.Context,int,android.app.DatePickerDialog.OnDateSetListener,int,int,int)"
+    },
+    "__constructor__(android.content.Context,int,android.app.DatePickerDialog.OnDateSetListener,java.util.Calendar,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "theme",
+        "callBack",
+        "calendar",
+        "year",
+        "monthOfYear",
+        "dayOfMonth"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "__constructor__(android.content.Context,int,android.app.DatePickerDialog.OnDateSetListener,java.util.Calendar,int,int,int)"
+    },
+    "getCalendar()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Calendar",
+      "exceptions": [],
+      "name": "getCalendar()"
+    },
+    "getDayOfMonth()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDayOfMonth()"
+    },
+    "getMonthOfYear()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMonthOfYear()"
+    },
+    "getOnDateSetListenerCallback()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.app.DatePickerDialog.OnDateSetListener",
+      "exceptions": [],
+      "name": "getOnDateSetListenerCallback()"
+    },
+    "getYear()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getYear()"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.DatePickerDialog}.\n",
+  "name": "org.robolectric.shadows.ShadowDatePickerDialog"
+}

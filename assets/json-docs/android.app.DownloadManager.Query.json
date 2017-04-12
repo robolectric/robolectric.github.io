@@ -1,0 +1,15 @@
+{
+  "methods": {
+    "getIds()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long[]",
+      "exceptions": [],
+      "name": "getIds()"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowDownloadManager.ShadowQuery"
+}

@@ -1,0 +1,102 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,int,android.database.Cursor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "layout",
+        "c"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,int,android.database.Cursor)"
+    },
+    "__constructor__(android.content.Context,int,android.database.Cursor,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "layout",
+        "c",
+        "autoRequery"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,int,android.database.Cursor,boolean)"
+    },
+    "__constructor__(android.content.Context,int,android.database.Cursor,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "layout",
+        "c",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,int,android.database.Cursor,int)"
+    },
+    "newDropDownView(android.content.Context,android.database.Cursor,android.view.ViewGroup)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "cursor",
+        "parent"
+      ],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "newDropDownView(android.content.Context,android.database.Cursor,android.view.ViewGroup)"
+    },
+    "newView(android.content.Context,android.database.Cursor,android.view.ViewGroup)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "cursor",
+        "parent"
+      ],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "newView(android.content.Context,android.database.Cursor,android.view.ViewGroup)"
+    },
+    "setDropDownViewResource(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dropDownLayout"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDropDownViewResource(int)"
+    },
+    "setViewResource(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "layout"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setViewResource(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.ResourceCursorAdapter}.\n",
+  "name": "org.robolectric.shadows.ShadowResourceCursorAdapter"
+}

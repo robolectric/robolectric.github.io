@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "getCallingPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getCallingPackage()"
+    },
+    "setCallingPackage(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callingPackage"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCallingPackage(java.lang.String)"
+    }
+  },
+  "documentation": " Shadow for {@link ContentProvider}.\n",
+  "name": "org.robolectric.shadows.ShadowContentProvider"
+}

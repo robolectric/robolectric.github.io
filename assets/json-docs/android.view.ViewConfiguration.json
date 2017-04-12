@@ -1,0 +1,341 @@
+{
+  "methods": {
+    "get(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.view.ViewConfiguration",
+      "exceptions": [],
+      "name": "get(android.content.Context)"
+    },
+    "getDoubleTapTimeout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDoubleTapTimeout()"
+    },
+    "getEdgeSlop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getEdgeSlop()"
+    },
+    "getFadingEdgeLength()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFadingEdgeLength()"
+    },
+    "getGlobalActionKeyTimeout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getGlobalActionKeyTimeout()"
+    },
+    "getJumpTapTimeout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getJumpTapTimeout()"
+    },
+    "getLongPressTimeout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLongPressTimeout()"
+    },
+    "getMaximumDrawingCacheSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMaximumDrawingCacheSize()"
+    },
+    "getMaximumFlingVelocity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMaximumFlingVelocity()"
+    },
+    "getMinimumFlingVelocity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMinimumFlingVelocity()"
+    },
+    "getPressedStateDuration()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPressedStateDuration()"
+    },
+    "getScaledDoubleTapSlop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScaledDoubleTapSlop()"
+    },
+    "getScaledEdgeSlop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScaledEdgeSlop()"
+    },
+    "getScaledFadingEdgeLength()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScaledFadingEdgeLength()"
+    },
+    "getScaledMaximumFlingVelocity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScaledMaximumFlingVelocity()"
+    },
+    "getScaledMinimumFlingVelocity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScaledMinimumFlingVelocity()"
+    },
+    "getScaledPagingTouchSlop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScaledPagingTouchSlop()"
+    },
+    "getScaledScrollBarSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScaledScrollBarSize()"
+    },
+    "getScaledTouchSlop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScaledTouchSlop()"
+    },
+    "getScaledWindowTouchSlop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScaledWindowTouchSlop()"
+    },
+    "getScrollBarFadeDuration()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScrollBarFadeDuration()"
+    },
+    "getScrollBarSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScrollBarSize()"
+    },
+    "getScrollDefaultDelay()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScrollDefaultDelay()"
+    },
+    "getScrollFriction()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getScrollFriction()"
+    },
+    "getTapTimeout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTapTimeout()"
+    },
+    "getTouchSlop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTouchSlop()"
+    },
+    "getWindowTouchSlop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWindowTouchSlop()"
+    },
+    "getZoomControlsTimeout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getZoomControlsTimeout()"
+    },
+    "hasPermanentMenuKey()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasPermanentMenuKey()"
+    },
+    "setHasPermanentMenuKey(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHasPermanentMenuKey(boolean)"
+    },
+    "setup(android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setup(android.content.Context)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.ViewConfiguration}.\n",
+  "name": "org.robolectric.shadows.ShadowViewConfiguration"
+}

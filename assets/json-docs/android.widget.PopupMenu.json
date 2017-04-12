@@ -1,0 +1,82 @@
+{
+  "methods": {
+    "dismiss()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dismiss()"
+    },
+    "getLatestPopupMenu()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.widget.PopupMenu",
+      "exceptions": [],
+      "name": "getLatestPopupMenu()"
+    },
+    "getOnMenuItemClickListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.PopupMenu.OnMenuItemClickListener",
+      "exceptions": [],
+      "name": "getOnMenuItemClickListener()"
+    },
+    "isShowing()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isShowing()"
+    },
+    "setLatestPopupMenu(org.robolectric.shadows.ShadowPopupMenu)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "latestPopupMenu"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLatestPopupMenu(org.robolectric.shadows.ShadowPopupMenu)"
+    },
+    "setOnMenuItemClickListener(android.widget.PopupMenu.OnMenuItemClickListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnMenuItemClickListener(android.widget.PopupMenu.OnMenuItemClickListener)"
+    },
+    "show()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "show()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.PopupMenu}.\n",
+  "name": "org.robolectric.shadows.ShadowPopupMenu"
+}

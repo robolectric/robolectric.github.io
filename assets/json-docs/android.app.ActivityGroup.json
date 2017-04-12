@@ -1,0 +1,29 @@
+{
+  "methods": {
+    "getCurrentActivity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.app.Activity",
+      "exceptions": [],
+      "name": "getCurrentActivity()"
+    },
+    "setCurrentActivity(android.app.Activity)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@param activity Current activity.",
+      "params": [
+        "activity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCurrentActivity(android.app.Activity)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.ActivityGroup}.\n",
+  "name": "org.robolectric.shadows.ShadowActivityGroup"
+}

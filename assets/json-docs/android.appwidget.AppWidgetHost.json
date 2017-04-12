@@ -1,0 +1,75 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "hostId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,int)"
+    },
+    "allocateAppWidgetId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "allocateAppWidgetId()"
+    },
+    "createView(android.content.Context,int,android.appwidget.AppWidgetProviderInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "appWidgetId",
+        "appWidget"
+      ],
+      "returnType": "android.appwidget.AppWidgetHostView",
+      "exceptions": [],
+      "name": "createView(android.content.Context,int,android.appwidget.AppWidgetProviderInfo)"
+    },
+    "getContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getContext()"
+    },
+    "getHostId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHostId()"
+    },
+    "setAppWidgetIdToAllocate(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "idToAllocate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAppWidgetIdToAllocate(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.appwidget.AppWidgetHost}.\n",
+  "name": "org.robolectric.shadows.ShadowAppWidgetHost"
+}

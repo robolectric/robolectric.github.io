@@ -1,0 +1,754 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,android.util.AttributeSet,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "attributeSet",
+        "defStyle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.util.AttributeSet,int)"
+    },
+    "buildDrawable(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "documentation": "Build drawable, either LayerDrawable or BitmapDrawable.\n\n@param resourceId Resource id\n@return Drawable",
+      "params": [
+        "resourceId"
+      ],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "buildDrawable(int)"
+    },
+    "callOnAttachedToWindow()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callOnAttachedToWindow()"
+    },
+    "callOnDetachedFromWindow()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callOnDetachedFromWindow()"
+    },
+    "checkedPerformClick()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.",
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "checkedPerformClick()"
+    },
+    "clearWasInvalidated()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Clears the wasInvalidated flag",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearWasInvalidated()"
+    },
+    "clickOn(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Calls {@code performClick()} on a {@code View} after ensuring that it and its ancestors are visible and that it\nis enabled.\n\n@param view the view to click on\n@return true if {@code View.OnClickListener}s were found and fired, false otherwise.\n@throws RuntimeException if the preconditions are not met.",
+      "params": [
+        "view"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "clickOn(android.view.View)"
+    },
+    "computeOpaqueFlags()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "computeOpaqueFlags()"
+    },
+    "didRequestLayout()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "didRequestLayout()"
+    },
+    "directly()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "directly()"
+    },
+    "draw(android.graphics.Canvas)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "canvas"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "draw(android.graphics.Canvas)"
+    },
+    "dump()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Dumps the status of this {@code View} to {@code System.out}",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dump()"
+    },
+    "dump(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Emits an xml-like representation of the view to System.out.\n\n@param view the view to dump",
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dump(android.view.View)"
+    },
+    "dump(java.io.PrintStream,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Dumps the status of this {@code View} to {@code System.out} at the given indentation level\n@param out Output stream.\n@param indent Indentation level.",
+      "params": [
+        "out",
+        "indent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dump(java.io.PrintStream,int)"
+    },
+    "dumpAttribute(java.io.PrintStream,java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out",
+        "name",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dumpAttribute(java.io.PrintStream,java.lang.String,java.lang.String)"
+    },
+    "dumpAttributes(java.io.PrintStream)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dumpAttributes(java.io.PrintStream)"
+    },
+    "dumpFirstPart(java.io.PrintStream,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out",
+        "indent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dumpFirstPart(java.io.PrintStream,int)"
+    },
+    "dumpIndent(java.io.PrintStream,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out",
+        "indent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dumpIndent(java.io.PrintStream,int)"
+    },
+    "getAttachInfo()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getAttachInfo()"
+    },
+    "getBackgroundColor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the color of this view\u0027s background, or 0 if it\u0027s not a solid color\n@deprecated Use FEST assertions instead.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBackgroundColor()"
+    },
+    "getBackgroundResourceId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the resource ID of this view\u0027s background\n@deprecated Use FEST assertions instead.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBackgroundResourceId()"
+    },
+    "getDrawingCache()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "getDrawingCache()"
+    },
+    "getGlobalVisibleRect(android.graphics.Rect,android.graphics.Point)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "rect",
+        "globalOffset"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getGlobalVisibleRect(android.graphics.Rect,android.graphics.Point)"
+    },
+    "getLastTouchEvent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.MotionEvent",
+      "exceptions": [],
+      "name": "getLastTouchEvent()"
+    },
+    "getOnClickListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-android accessor.\n\n@return Returns click listener, if set.",
+      "params": [],
+      "returnType": "android.view.View.OnClickListener",
+      "exceptions": [],
+      "name": "getOnClickListener()"
+    },
+    "getOnCreateContextMenuListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-android accessor.\n\n@return Returns create ContextMenu listener, if set.",
+      "params": [],
+      "returnType": "android.view.View.OnCreateContextMenuListener",
+      "exceptions": [],
+      "name": "getOnCreateContextMenuListener()"
+    },
+    "getOnLongClickListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-android accessor.\n\n@return Returns long click listener, if set.",
+      "params": [],
+      "returnType": "android.view.View.OnLongClickListener",
+      "exceptions": [],
+      "name": "getOnLongClickListener()"
+    },
+    "getOnSystemUiVisibilityChangeListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-android accessor.\n\n@return Returns system ui visibility change listener.",
+      "params": [],
+      "returnType": "android.view.View.OnSystemUiVisibilityChangeListener",
+      "exceptions": [],
+      "name": "getOnSystemUiVisibilityChangeListener()"
+    },
+    "getOnTouchListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-android accessor.\n\n@return Touch listener, if set.",
+      "params": [],
+      "returnType": "android.view.View.OnTouchListener",
+      "exceptions": [],
+      "name": "getOnTouchListener()"
+    },
+    "getQualifiers()": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "documentation": "This will be removed in Robolectric 3.4 use {@link RuntimeEnvironment#getQualifiers()} instead, however\nthe correct way to configure qualifiers is using {@link Config#qualifiers()} so a constant can be used if this\nis important to your tests. However, qualifier strings are typically just used to initialize the test environment\nin a certain configuration. {@link android.content.res.Configuration} changes should be managed through\n{@link org.robolectric.android.controller.ActivityController#configurationChange(android.content.res.Configuration)}\n@deprecated",
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getQualifiers()"
+    },
+    "getScrollX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScrollX()"
+    },
+    "getScrollY()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScrollY()"
+    },
+    "getWindowId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getWindowId()"
+    },
+    "innerText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Returns a string representation of this {@code View}. Unless overridden, it will be an empty string.\n\n\u003cp\u003e\nRobolectric extension.\n@return String representation of this view.",
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "innerText()"
+    },
+    "innerText(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Returns the text contained within this view.\n\n@param view the view to scan for text\n@return Text contained within this view.",
+      "params": [
+        "view"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "innerText(android.view.View)"
+    },
+    "invalidate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "invalidate()"
+    },
+    "invokeReflectively(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "methodName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "invokeReflectively(java.lang.String)"
+    },
+    "isAttachedToWindow()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAttachedToWindow()"
+    },
+    "lastHapticFeedbackPerformed()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "lastHapticFeedbackPerformed()"
+    },
+    "onLayout(boolean,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "changed",
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onLayout(boolean,int,int,int,int)"
+    },
+    "onLayoutWasCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "onLayoutWasCalled()"
+    },
+    "onTouchEvent(android.view.MotionEvent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "event"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "onTouchEvent(android.view.MotionEvent)"
+    },
+    "performHapticFeedback(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "hapticFeedbackType"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "performHapticFeedback(int)"
+    },
+    "post(java.lang.Runnable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "post(java.lang.Runnable)"
+    },
+    "postDelayed(java.lang.Runnable,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action",
+        "delayMills"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postDelayed(java.lang.Runnable,long)"
+    },
+    "postInvalidateDelayed(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "delayMilliseconds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postInvalidateDelayed(long)"
+    },
+    "removeCallbacks(java.lang.Runnable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeCallbacks(java.lang.Runnable)"
+    },
+    "requestLayout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "requestLayout()"
+    },
+    "scrollTo(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "scrollTo(int,int)"
+    },
+    "setAnimation(android.view.animation.Animation)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "animation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAnimation(android.view.animation.Animation)"
+    },
+    "setDidRequestLayout(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "didRequestLayout"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDidRequestLayout(boolean)"
+    },
+    "setGlobalVisibleRect(android.graphics.Rect)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "rect"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGlobalVisibleRect(android.graphics.Rect)"
+    },
+    "setMyParent(android.view.ViewParent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "viewParent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMyParent(android.view.ViewParent)"
+    },
+    "setOnClickListener(android.view.View.OnClickListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "onClickListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnClickListener(android.view.View.OnClickListener)"
+    },
+    "setOnCreateContextMenuListener(android.view.View.OnCreateContextMenuListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "onCreateContextMenuListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnCreateContextMenuListener(android.view.View.OnCreateContextMenuListener)"
+    },
+    "setOnFocusChangeListener(android.view.View.OnFocusChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "l"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnFocusChangeListener(android.view.View.OnFocusChangeListener)"
+    },
+    "setOnLongClickListener(android.view.View.OnLongClickListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "onLongClickListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnLongClickListener(android.view.View.OnLongClickListener)"
+    },
+    "setOnSystemUiVisibilityChangeListener(android.view.View.OnSystemUiVisibilityChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "onSystemUiVisibilityChangeListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnSystemUiVisibilityChangeListener(android.view.View.OnSystemUiVisibilityChangeListener)"
+    },
+    "setOnTouchListener(android.view.View.OnTouchListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "onTouchListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnTouchListener(android.view.View.OnTouchListener)"
+    },
+    "setScrollX(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "scrollX"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScrollX(int)"
+    },
+    "setScrollY(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "scrollY"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScrollY(int)"
+    },
+    "setViewFocus(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "hasFocus"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setViewFocus(boolean)"
+    },
+    "visualize(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param view the view to visualize\n@return Textual representation of the appearance of the object.",
+      "params": [
+        "view"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "visualize(android.view.View)"
+    },
+    "wasInvalidated()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return whether or not {@link #invalidate()} has been called",
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasInvalidated()"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.View}.\n",
+  "name": "org.robolectric.shadows.ShadowView"
+}

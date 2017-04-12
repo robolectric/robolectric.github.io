@@ -1,0 +1,45 @@
+{
+  "methods": {
+    "getDateFormat(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "java.text.DateFormat",
+      "exceptions": [],
+      "name": "getDateFormat(android.content.Context)"
+    },
+    "getLongDateFormat(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "java.text.DateFormat",
+      "exceptions": [],
+      "name": "getLongDateFormat(android.content.Context)"
+    },
+    "getTimeFormat(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "java.text.DateFormat",
+      "exceptions": [],
+      "name": "getTimeFormat(android.content.Context)"
+    }
+  },
+  "documentation": " Shadow for {@link android.text.format.DateFormat}.\n",
+  "name": "org.robolectric.shadows.ShadowDateFormat"
+}

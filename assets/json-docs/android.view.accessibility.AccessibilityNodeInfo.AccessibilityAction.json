@@ -1,0 +1,61 @@
+{
+  "methods": {
+    "__constructor__(int,java.lang.CharSequence)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id",
+        "label"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(int,java.lang.CharSequence)"
+    },
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "other"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)"
+    },
+    "getId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getId()"
+    },
+    "getLabel()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getLabel()"
+    },
+    "toString()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "toString()"
+    }
+  },
+  "documentation": " Shadow of AccessibilityAction.\n",
+  "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo.ShadowAccessibilityAction"
+}

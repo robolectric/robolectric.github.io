@@ -1,0 +1,21 @@
+{
+  "methods": {
+    "setMargins(int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMargins(int,int,int,int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.ViewGroup.MarginLayoutParams}.\n",
+  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowMarginLayoutParams"
+}

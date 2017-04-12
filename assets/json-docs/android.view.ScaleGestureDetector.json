@@ -1,0 +1,116 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,android.view.ScaleGestureDetector.OnScaleGestureListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.view.ScaleGestureDetector.OnScaleGestureListener)"
+    },
+    "getFocusX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getFocusX()"
+    },
+    "getFocusY()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getFocusY()"
+    },
+    "getListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.ScaleGestureDetector.OnScaleGestureListener",
+      "exceptions": [],
+      "name": "getListener()"
+    },
+    "getOnTouchEventMotionEvent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.MotionEvent",
+      "exceptions": [],
+      "name": "getOnTouchEventMotionEvent()"
+    },
+    "getScaleFactor()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getScaleFactor()"
+    },
+    "onTouchEvent(android.view.MotionEvent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "event"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "onTouchEvent(android.view.MotionEvent)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setFocusXY(float,float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "focusX",
+        "focusY"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFocusXY(float,float)"
+    },
+    "setScaleFactor(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "scaleFactor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScaleFactor(float)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.ScaleGestureDetector}.\n",
+  "name": "org.robolectric.shadows.ShadowScaleGestureDetector"
+}

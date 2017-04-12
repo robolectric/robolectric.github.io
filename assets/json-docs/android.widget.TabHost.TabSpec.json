@@ -1,0 +1,174 @@
+{
+  "methods": {
+    "getContentAsIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor\n\n@return the intent object set in a call to {@code TabSpec#setContent(Intent)}",
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getContentAsIntent()"
+    },
+    "getContentView()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getContentView()"
+    },
+    "getContentViewId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getContentViewId()"
+    },
+    "getIndicatorAsView()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the view object set in a call to {@code TabSpec#setIndicator(View)}",
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getIndicatorAsView()"
+    },
+    "getIndicatorIcon()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "getIndicatorIcon()"
+    },
+    "getIndicatorLabel()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getIndicatorLabel()"
+    },
+    "getTag()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getTag()"
+    },
+    "getText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Same as GetIndicatorLabel()\n\n@return Tab text.",
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getText()"
+    },
+    "setContent(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "android.widget.TabHost.TabSpec",
+      "exceptions": [],
+      "name": "setContent(android.content.Intent)"
+    },
+    "setContent(android.widget.TabHost.TabContentFactory)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "factory"
+      ],
+      "returnType": "android.widget.TabHost.TabSpec",
+      "exceptions": [],
+      "name": "setContent(android.widget.TabHost.TabContentFactory)"
+    },
+    "setContent(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "viewId"
+      ],
+      "returnType": "android.widget.TabHost.TabSpec",
+      "exceptions": [],
+      "name": "setContent(int)"
+    },
+    "setIndicator(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "android.widget.TabHost.TabSpec",
+      "exceptions": [],
+      "name": "setIndicator(android.view.View)"
+    },
+    "setIndicator(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "label"
+      ],
+      "returnType": "android.widget.TabHost.TabSpec",
+      "exceptions": [],
+      "name": "setIndicator(java.lang.CharSequence)"
+    },
+    "setIndicator(java.lang.CharSequence,android.graphics.drawable.Drawable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "label",
+        "icon"
+      ],
+      "returnType": "android.widget.TabHost.TabSpec",
+      "exceptions": [],
+      "name": "setIndicator(java.lang.CharSequence,android.graphics.drawable.Drawable)"
+    },
+    "setTag(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor, sets the tag on the TabSpec.\n\n@param tag The tag.",
+      "params": [
+        "tag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTag(java.lang.String)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowTabHost.ShadowTabSpec"
+}

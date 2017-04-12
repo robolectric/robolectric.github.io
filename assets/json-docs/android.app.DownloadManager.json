@@ -1,0 +1,79 @@
+{
+  "methods": {
+    "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Object,java.lang.Class)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "fieldName",
+        "object",
+        "aClass"
+      ],
+      "returnType": "T",
+      "exceptions": [],
+      "name": "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Object,java.lang.Class)"
+    },
+    "enqueue(android.app.DownloadManager.Request)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "request"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "enqueue(android.app.DownloadManager.Request)"
+    },
+    "getRequest(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.app.DownloadManager.Request",
+      "exceptions": [],
+      "name": "getRequest(long)"
+    },
+    "getRequestCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRequestCount()"
+    },
+    "query(android.app.DownloadManager.Query)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "query"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "name": "query(android.app.DownloadManager.Query)"
+    },
+    "remove(long...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "ids"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "remove(long...)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.DownloadManager}.\n",
+  "name": "org.robolectric.shadows.ShadowDownloadManager"
+}

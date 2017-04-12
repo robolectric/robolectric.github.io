@@ -1,0 +1,257 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context)"
+    },
+    "cancel()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel()"
+    },
+    "getDuration()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDuration()"
+    },
+    "getGravity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getGravity()"
+    },
+    "getLatestToast()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android accessor that returns the most recently shown {@code Toast}\n\n@return the most recently shown {@code Toast}",
+      "params": [],
+      "returnType": "android.widget.Toast",
+      "exceptions": [],
+      "name": "getLatestToast()"
+    },
+    "getTextOfLatestToast()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android accessor that returns the text of the most recently shown {@code Toast}\n\n@return the text of the most recently shown {@code Toast}",
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getTextOfLatestToast()"
+    },
+    "getView()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getView()"
+    },
+    "getXOffset()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getXOffset()"
+    },
+    "getYOffset()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getYOffset()"
+    },
+    "makeText(android.content.Context,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "resId",
+        "duration"
+      ],
+      "returnType": "android.widget.Toast",
+      "exceptions": [],
+      "name": "makeText(android.content.Context,int,int)"
+    },
+    "makeText(android.content.Context,java.lang.CharSequence,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context",
+        "text",
+        "duration"
+      ],
+      "returnType": "android.widget.Toast",
+      "exceptions": [],
+      "name": "makeText(android.content.Context,java.lang.CharSequence,int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android accessor that discards the recorded {@code Toast}s. Shown toasts are automatically cleared between\ntests. This method allows the user to discard recorded toasts during the test in order to make assertions clearer\ne.g:\n\n\u003cpre\u003e\n\n  // Show a single toast\n  myClass.showToast();\n\n  assertThat(ShadowToast.shownToastCount()).isEqualTo(1);\n  ShadowToast.reset();\n\n   // Show another toast\n  myClass.showToast();\n\n  assertThat(ShadowToast.shownToastCount()).isEqualTo(1);\n\n\u003c/pre\u003e",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setDuration(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "duration"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDuration(int)"
+    },
+    "setGravity(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "gravity",
+        "xOffset",
+        "yOffset"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGravity(int,int,int)"
+    },
+    "setText(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "resId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setText(int)"
+    },
+    "setText(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "text"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setText(java.lang.CharSequence)"
+    },
+    "setView(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setView(android.view.View)"
+    },
+    "show()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "show()"
+    },
+    "showedCustomToast(java.lang.CharSequence,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android query method that returns whether or not a particular custom {@code Toast} has been shown.\n\n@param message the message to search for\n@param layoutResourceIdToCheckForMessage\n               the id of the resource that contains the toast messages\n@return whether the {@code Toast} was requested",
+      "params": [
+        "message",
+        "layoutResourceIdToCheckForMessage"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "showedCustomToast(java.lang.CharSequence,int)"
+    },
+    "showedToast(java.lang.CharSequence)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "query method that returns whether or not a particular {@code Toast} has been shown.\n\n@param message the message to search for\n@return whether the {@code Toast} was requested",
+      "params": [
+        "message"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "showedToast(java.lang.CharSequence)"
+    },
+    "shownToastCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android accessor that returns the number of {@code Toast} requests that have been made during this test run\nor since {@link #reset()} has been called.\n\n@return the number of {@code Toast} requests that have been made during this test run\n        or since {@link #reset()} has been called.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "shownToastCount()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.Toast}.\n",
+  "name": "org.robolectric.shadows.ShadowToast"
+}

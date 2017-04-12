@@ -1,0 +1,26 @@
+{
+  "methods": {
+    "getResourceId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getResourceId()"
+    },
+    "getTextViewResourceId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTextViewResourceId()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.ArrayAdapter}.\n",
+  "name": "org.robolectric.shadows.ShadowArrayAdapter"
+}

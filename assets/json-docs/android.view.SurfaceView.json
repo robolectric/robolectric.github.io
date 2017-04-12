@@ -1,0 +1,36 @@
+{
+  "methods": {
+    "getFakeSurfaceHolder()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowSurfaceView.FakeSurfaceHolder",
+      "exceptions": [],
+      "name": "getFakeSurfaceHolder()"
+    },
+    "getHolder()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.SurfaceHolder",
+      "exceptions": [],
+      "name": "getHolder()"
+    },
+    "onAttachedToWindow()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onAttachedToWindow()"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.SurfaceView}.\n",
+  "name": "org.robolectric.shadows.ShadowSurfaceView"
+}

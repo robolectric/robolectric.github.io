@@ -1,0 +1,798 @@
+{
+  "methods": {
+    "nativeAppendFrom(int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "thisNativePtr",
+        "otherNativePtr",
+        "offset",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeAppendFrom(int,int,int,int)"
+    },
+    "nativeAppendFrom(long,long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "thisNativePtr",
+        "otherNativePtr",
+        "offset",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeAppendFrom(long,long,int,int)"
+    },
+    "nativeCreate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "java.lang.Number",
+      "exceptions": [],
+      "name": "nativeCreate()"
+    },
+    "nativeCreateByteArray(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeCreateByteArray(int)"
+    },
+    "nativeCreateByteArray(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeCreateByteArray(long)"
+    },
+    "nativeDataAvail(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeDataAvail(int)"
+    },
+    "nativeDataAvail(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeDataAvail(long)"
+    },
+    "nativeDataCapacity(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeDataCapacity(int)"
+    },
+    "nativeDataCapacity(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeDataCapacity(long)"
+    },
+    "nativeDataPosition(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeDataPosition(int)"
+    },
+    "nativeDataPosition(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeDataPosition(long)"
+    },
+    "nativeDataSize(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeDataSize(int)"
+    },
+    "nativeDataSize(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeDataSize(long)"
+    },
+    "nativeDestroy(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeDestroy(int)"
+    },
+    "nativeDestroy(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeDestroy(long)"
+    },
+    "nativeEnforceInterface(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "interfaceName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeEnforceInterface(int,java.lang.String)"
+    },
+    "nativeEnforceInterface(long,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "interfaceName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeEnforceInterface(long,java.lang.String)"
+    },
+    "nativeFreeBuffer(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeFreeBuffer(int)"
+    },
+    "nativeFreeBuffer(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeFreeBuffer(long)"
+    },
+    "nativeMarshall(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeMarshall(int)"
+    },
+    "nativeMarshall(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeMarshall(long)"
+    },
+    "nativeReadDouble(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "double",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeReadDouble(int)"
+    },
+    "nativeReadDouble(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "double",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeReadDouble(long)"
+    },
+    "nativeReadFloat(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeReadFloat(int)"
+    },
+    "nativeReadFloat(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeReadFloat(long)"
+    },
+    "nativeReadInt(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeReadInt(int)"
+    },
+    "nativeReadInt(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeReadInt(long)"
+    },
+    "nativeReadLong(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeReadLong(int)"
+    },
+    "nativeReadLong(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeReadLong(long)"
+    },
+    "nativeReadString(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeReadString(int)"
+    },
+    "nativeReadString(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeReadString(long)"
+    },
+    "nativeSetDataCapacity(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "size"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeSetDataCapacity(int,int)"
+    },
+    "nativeSetDataCapacity(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "size"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeSetDataCapacity(long,int)"
+    },
+    "nativeSetDataPosition(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "pos"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeSetDataPosition(int,int)"
+    },
+    "nativeSetDataPosition(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "pos"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeSetDataPosition(long,int)"
+    },
+    "nativeSetDataSize(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "size"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeSetDataSize(int,int)"
+    },
+    "nativeSetDataSize(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "size"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeSetDataSize(long,int)"
+    },
+    "nativeUnmarshall(int,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "data",
+        "offset",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeUnmarshall(int,byte[],int,int)"
+    },
+    "nativeUnmarshall(long,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "data",
+        "offset",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeUnmarshall(long,byte[],int,int)"
+    },
+    "nativeWriteByteArray(int,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "b",
+        "offset",
+        "len"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeWriteByteArray(int,byte[],int,int)"
+    },
+    "nativeWriteByteArray(long,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "b",
+        "offset",
+        "len"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWriteByteArray(long,byte[],int,int)"
+    },
+    "nativeWriteDouble(int,double)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeWriteDouble(int,double)"
+    },
+    "nativeWriteDouble(long,double)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWriteDouble(long,double)"
+    },
+    "nativeWriteFloat(int,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeWriteFloat(int,float)"
+    },
+    "nativeWriteFloat(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWriteFloat(long,float)"
+    },
+    "nativeWriteInt(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeWriteInt(int,int)"
+    },
+    "nativeWriteInt(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWriteInt(long,int)"
+    },
+    "nativeWriteInterfaceToken(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "interfaceName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeWriteInterfaceToken(int,java.lang.String)"
+    },
+    "nativeWriteInterfaceToken(long,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "interfaceName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWriteInterfaceToken(long,java.lang.String)"
+    },
+    "nativeWriteLong(int,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeWriteLong(int,long)"
+    },
+    "nativeWriteLong(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWriteLong(long,long)"
+    },
+    "nativeWriteString(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeWriteString(int,java.lang.String)"
+    },
+    "nativeWriteString(long,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWriteString(long,java.lang.String)"
+    },
+    "writeByteArray(byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "b",
+        "offset",
+        "len"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writeByteArray(byte[],int,int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.Parcel}.\n",
+  "name": "org.robolectric.shadows.ShadowParcel"
+}

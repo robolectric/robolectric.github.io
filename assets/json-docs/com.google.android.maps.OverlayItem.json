@@ -1,0 +1,72 @@
+{
+  "methods": {
+    "__constructor__(com.google.android.maps.GeoPoint,java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "geoPoint",
+        "title",
+        "snippet"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(com.google.android.maps.GeoPoint,java.lang.String,java.lang.String)"
+    },
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)"
+    },
+    "getPoint()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "com.google.android.maps.GeoPoint",
+      "exceptions": [],
+      "name": "getPoint()"
+    },
+    "getSnippet()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSnippet()"
+    },
+    "getTitle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getTitle()"
+    },
+    "hashCode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "hashCode()"
+    }
+  },
+  "documentation": " Shadow for {@link com.google.android.maps.OverlayItem}.\n",
+  "name": "org.robolectric.shadows.maps.ShadowOverlayItem"
+}

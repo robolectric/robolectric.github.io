@@ -1,0 +1,130 @@
+{
+  "methods": {
+    "getFrameInterval()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Return the current inter-frame interval.\n\n@return  Inter-frame interval.",
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getFrameInterval()"
+    },
+    "getFrameTimeNanos()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getFrameTimeNanos()"
+    },
+    "getInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.view.Choreographer",
+      "exceptions": [],
+      "name": "getInstance()"
+    },
+    "makeThreadLocal()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.util.SoftThreadLocal\u003candroid.view.Choreographer\u003e",
+      "exceptions": [],
+      "name": "makeThreadLocal()"
+    },
+    "postCallbackDelayed(int,java.lang.Runnable,java.lang.Object,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callbackType",
+        "action",
+        "token",
+        "delayMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postCallbackDelayed(int,java.lang.Runnable,java.lang.Object,long)"
+    },
+    "postFrameCallbackDelayed(android.view.Choreographer.FrameCallback,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callback",
+        "delayMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postFrameCallbackDelayed(android.view.Choreographer.FrameCallback,long)"
+    },
+    "removeCallbacks(int,java.lang.Runnable,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callbackType",
+        "action",
+        "token"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeCallbacks(int,java.lang.Runnable,java.lang.Object)"
+    },
+    "removeFrameCallback(android.view.Choreographer.FrameCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeFrameCallback(android.view.Choreographer.FrameCallback)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setFrameInterval(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Set the inter-frame interval used to advance the clock. By default, this is set to 1ms.\n\n@param frameInterval  Inter-frame interval.",
+      "params": [
+        "frameInterval"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFrameInterval(long)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.Choreographer}.\n\n \u003cp\u003eThis class maintains its own concept of the current time aimed at making animations\n work correctly. Time starts out at 0 and advances by \"frameInterval\" every time\n {@link android.view.Choreographer#getFrameTimeNanos} is called.\u003c/p\u003e\n",
+  "name": "org.robolectric.shadows.ShadowChoreographer"
+}

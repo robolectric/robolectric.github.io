@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.media.ExifInterface}.\n",
+  "name": "org.robolectric.shadows.ShadowExifInterface"
+}

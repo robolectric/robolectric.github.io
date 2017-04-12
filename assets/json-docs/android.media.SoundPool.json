@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "__constructor__(int,android.media.AudioAttributes)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "maxStreams",
+        "attributes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "__constructor__(int,android.media.AudioAttributes)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowSoundPool"
+}

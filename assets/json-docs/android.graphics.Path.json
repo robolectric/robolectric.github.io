@@ -1,0 +1,113 @@
+{
+  "methods": {
+    "__constructor__(android.graphics.Path)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.graphics.Path)"
+    },
+    "approximate(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "acceptableError"
+      ],
+      "returnType": "float[]",
+      "exceptions": [],
+      "name": "approximate(float)"
+    },
+    "getPoints()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return all the points that have been added to the {@code Path}",
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowPath.Point\u003e",
+      "exceptions": [],
+      "name": "getPoints()"
+    },
+    "getQuadDescription()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getQuadDescription()"
+    },
+    "getWasMovedTo()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return whether the {@link #moveTo(float, float)} method was called",
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowPath.Point",
+      "exceptions": [],
+      "name": "getWasMovedTo()"
+    },
+    "lineTo(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "lineTo(float,float)"
+    },
+    "moveTo(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "moveTo(float,float)"
+    },
+    "quadTo(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "x1",
+        "y1",
+        "x2",
+        "y2"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "quadTo(float,float,float,float)"
+    },
+    "reset()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    }
+  },
+  "documentation": " Shadow for {@code android.graphics.Path}.\n\n \u003cp\u003eThe shadow only supports straight-line paths.\u003c/p\u003e\n",
+  "name": "org.robolectric.shadows.ShadowPath"
+}

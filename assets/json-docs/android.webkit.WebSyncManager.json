@@ -1,0 +1,36 @@
+{
+  "methods": {
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "sync()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sync()"
+    },
+    "synced()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "synced()"
+    }
+  },
+  "documentation": " Shadow for {@code android.webkit.WebSyncManager}.\n",
+  "name": "org.robolectric.shadows.ShadowWebSyncManager"
+}

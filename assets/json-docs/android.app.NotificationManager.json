@@ -1,0 +1,124 @@
+{
+  "methods": {
+    "cancel(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel(int)"
+    },
+    "cancel(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "tag",
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel(java.lang.String,int)"
+    },
+    "cancelAll()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancelAll()"
+    },
+    "getActiveNotifications()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.service.notification.StatusBarNotification[]",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getActiveNotifications()"
+    },
+    "getAllNotifications()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.app.Notification\u003e",
+      "exceptions": [],
+      "name": "getAllNotifications()"
+    },
+    "getNotification(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.app.Notification",
+      "exceptions": [],
+      "name": "getNotification(int)"
+    },
+    "getNotification(java.lang.String,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "tag",
+        "id"
+      ],
+      "returnType": "android.app.Notification",
+      "exceptions": [],
+      "name": "getNotification(java.lang.String,int)"
+    },
+    "notify(int,android.app.Notification)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id",
+        "notification"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notify(int,android.app.Notification)"
+    },
+    "notify(java.lang.String,int,android.app.Notification)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "tag",
+        "id",
+        "notification"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notify(java.lang.String,int,android.app.Notification)"
+    },
+    "size()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "size()"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.NotificationManager}.\n",
+  "name": "org.robolectric.shadows.ShadowNotificationManager"
+}

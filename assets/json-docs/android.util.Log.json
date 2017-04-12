@@ -1,0 +1,319 @@
+{
+  "methods": {
+    "addLog(int,java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "level",
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addLog(int,java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "d(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "d(java.lang.String,java.lang.String)"
+    },
+    "d(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "d(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "e(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "e(java.lang.String,java.lang.String)"
+    },
+    "e(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "e(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "getLogs()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android accessor.  Returns ordered list of all log entries.\n@return List of log items",
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
+      "exceptions": [],
+      "name": "getLogs()"
+    },
+    "getLogsForTag(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android accessor.  Returns ordered list of all log items for a specific tag.\n\n@param tag The tag to get logs for\n@return The list of log items for the tag",
+      "params": [
+        "tag"
+      ],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
+      "exceptions": [],
+      "name": "getLogsForTag(java.lang.String)"
+    },
+    "i(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "i(java.lang.String,java.lang.String)"
+    },
+    "i(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "i(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "isLoggable(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "level"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLoggable(java.lang.String,int)"
+    },
+    "logToStream(java.io.PrintStream,int,java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "ps",
+        "level",
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "logToStream(java.io.PrintStream,int,java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "println(int,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "priority",
+        "tag",
+        "msg"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "println(int,java.lang.String,java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setLoggable(java.lang.String,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Sets the log level of a given tag, that {@link #isLoggable} will follow.\n@param tag A log tag\n@param level A log level, from {@link android.util.Log}",
+      "params": [
+        "tag",
+        "level"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLoggable(java.lang.String,int)"
+    },
+    "setupLogging()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setupLogging()"
+    },
+    "v(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "v(java.lang.String,java.lang.String)"
+    },
+    "v(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "v(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "w(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "w(java.lang.String,java.lang.String)"
+    },
+    "w(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "w(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "w(java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "w(java.lang.String,java.lang.Throwable)"
+    },
+    "wtf(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "wtf(java.lang.String,java.lang.String)"
+    },
+    "wtf(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "wtf(java.lang.String,java.lang.String,java.lang.Throwable)"
+    }
+  },
+  "documentation": " Shadow for {@link android.util.Log}.\n",
+  "name": "org.robolectric.shadows.ShadowLog"
+}

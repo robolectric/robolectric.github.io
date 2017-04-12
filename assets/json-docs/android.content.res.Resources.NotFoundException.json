@@ -1,0 +1,37 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "__constructor__(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(java.lang.String)"
+    },
+    "toString()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "toString()"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowResources.ShadowNotFoundException"
+}

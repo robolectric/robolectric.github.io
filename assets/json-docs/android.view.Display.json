@@ -1,0 +1,421 @@
+{
+  "methods": {
+    "getCurrentSizeRange(android.graphics.Point,android.graphics.Point)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outSmallestSize",
+        "outLargestSize"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getCurrentSizeRange(android.graphics.Point,android.graphics.Point)"
+    },
+    "getDensity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getDensity()"
+    },
+    "getDensityDpi()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDensityDpi()"
+    },
+    "getDisplayAdjustments()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getDisplayAdjustments()"
+    },
+    "getDisplayId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDisplayId()"
+    },
+    "getFlags()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFlags()"
+    },
+    "getHeight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHeight()"
+    },
+    "getMetrics(android.util.DisplayMetrics)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outMetrics"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getMetrics(android.util.DisplayMetrics)"
+    },
+    "getName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getName()"
+    },
+    "getOrientation()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getOrientation()"
+    },
+    "getPixelFormat()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPixelFormat()"
+    },
+    "getRealMetrics(android.util.DisplayMetrics)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outMetrics"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getRealMetrics(android.util.DisplayMetrics)"
+    },
+    "getRealSize(android.graphics.Point)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outSize"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getRealSize(android.graphics.Point)"
+    },
+    "getRectSize(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outSize"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getRectSize(android.graphics.Rect)"
+    },
+    "getRefreshRate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getRefreshRate()"
+    },
+    "getRotation()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRotation()"
+    },
+    "getScaledDensity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getScaledDensity()"
+    },
+    "getSize(android.graphics.Point)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outSize"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getSize(android.graphics.Point)"
+    },
+    "getState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getState()"
+    },
+    "getWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWidth()"
+    },
+    "getXdpi()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getXdpi()"
+    },
+    "getYdpi()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getYdpi()"
+    },
+    "setDensity(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "density"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDensity(float)"
+    },
+    "setDensityDpi(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "densityDpi"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDensityDpi(int)"
+    },
+    "setDisplayId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "displayId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDisplayId(int)"
+    },
+    "setFlags(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFlags(int)"
+    },
+    "setHeight(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHeight(int)"
+    },
+    "setName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setName(java.lang.String)"
+    },
+    "setPixelFormat(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pixelFormat"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPixelFormat(int)"
+    },
+    "setRealHeight(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "realHeight"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRealHeight(int)"
+    },
+    "setRealWidth(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "realWidth"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRealWidth(int)"
+    },
+    "setRefreshRate(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "refreshRate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRefreshRate(float)"
+    },
+    "setRotation(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "rotation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRotation(int)"
+    },
+    "setScaledDensity(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "scaledDensity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScaledDensity(float)"
+    },
+    "setWidth(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "width"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWidth(int)"
+    },
+    "setXdpi(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "xdpi"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setXdpi(float)"
+    },
+    "setYdpi(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "ydpi"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setYdpi(float)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.Display}.\n",
+  "name": "org.robolectric.shadows.ShadowDisplay"
+}

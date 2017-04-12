@@ -1,0 +1,207 @@
+{
+  "methods": {
+    "callOnCreate(android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bundle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callOnCreate(android.os.Bundle)"
+    },
+    "clickOn(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "viewId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clickOn(int)"
+    },
+    "clickOnText(android.view.View,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "view",
+        "text"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "clickOnText(android.view.View,java.lang.String)"
+    },
+    "clickOnText(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "textId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clickOnText(int)"
+    },
+    "clickOnText(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "text"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clickOnText(java.lang.String)"
+    },
+    "dismiss()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dismiss()"
+    },
+    "getLatestDialog()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.app.Dialog",
+      "exceptions": [],
+      "name": "getLatestDialog()"
+    },
+    "getOnCancelListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.DialogInterface.OnCancelListener",
+      "exceptions": [],
+      "name": "getOnCancelListener()"
+    },
+    "getShownDialogs()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.app.Dialog\u003e",
+      "exceptions": [],
+      "name": "getShownDialogs()"
+    },
+    "getTitle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getTitle()"
+    },
+    "hasBeenDismissed()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasBeenDismissed()"
+    },
+    "isCancelable()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isCancelable()"
+    },
+    "isCancelableOnTouchOutside()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isCancelableOnTouchOutside()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setCanceledOnTouchOutside(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCanceledOnTouchOutside(boolean)"
+    },
+    "setLatestDialog(org.robolectric.shadows.ShadowDialog)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "latestDialog"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLatestDialog(org.robolectric.shadows.ShadowDialog)"
+    },
+    "setOnCancelListener(android.content.DialogInterface.OnCancelListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnCancelListener(android.content.DialogInterface.OnCancelListener)"
+    },
+    "show()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "show()"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.Dialog}.\n",
+  "name": "org.robolectric.shadows.ShadowDialog"
+}

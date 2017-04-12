@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.widget.AbsoluteLayout}.\n",
+  "name": "org.robolectric.shadows.ShadowAbsoluteLayout"
+}

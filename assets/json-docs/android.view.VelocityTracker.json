@@ -1,0 +1,120 @@
+{
+  "methods": {
+    "addMovement(android.view.MotionEvent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "event"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addMovement(android.view.MotionEvent)"
+    },
+    "clear()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clear()"
+    },
+    "computeCurrentVelocity(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "units"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "computeCurrentVelocity(int)"
+    },
+    "computeCurrentVelocity(int,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "units",
+        "maxVelocity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "computeCurrentVelocity(int,float)"
+    },
+    "getXVelocity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getXVelocity()"
+    },
+    "getXVelocity(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getXVelocity(int)"
+    },
+    "getYVelocity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getYVelocity()"
+    },
+    "getYVelocity(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getYVelocity(int)"
+    },
+    "maybeInitialize()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "maybeInitialize()"
+    },
+    "windowed(float,float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "value",
+        "max"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "windowed(float,float)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.VelocityTracker}.\n",
+  "name": "org.robolectric.shadows.ShadowVelocityTracker"
+}

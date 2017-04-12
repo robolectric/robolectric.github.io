@@ -1,0 +1,729 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "clickMenuItem(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Perform a click on a menu item.\n\n@param menuItemResId Menu item resource ID.\n@return True if the click was handled, false otherwise.",
+      "params": [
+        "menuItemResId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "clickMenuItem(int)"
+    },
+    "dismissDialog(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dismissDialog(int)"
+    },
+    "findViewById(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Checks to ensure that the{@code contentView} has been set\n\n@param id ID of the view to find\n@return the view\n@throws RuntimeException if the {@code contentView} has not been called first",
+      "params": [
+        "id"
+      ],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "findViewById(int)"
+    },
+    "finish()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "finish()"
+    },
+    "finishAndRemoveTask()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "finishAndRemoveTask()"
+    },
+    "getCallingActivity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.ComponentName",
+      "exceptions": [],
+      "name": "getCallingActivity()"
+    },
+    "getContentView()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the {@code contentView} set by one of the {@code setContentView()} methods",
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getContentView()"
+    },
+    "getCurrentFocus()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getCurrentFocus()"
+    },
+    "getDefaultKeymode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDefaultKeymode()"
+    },
+    "getDialogById(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dialogId"
+      ],
+      "returnType": "android.app.Dialog",
+      "exceptions": [],
+      "name": "getDialogById(int)"
+    },
+    "getLastNonConfigurationInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getLastNonConfigurationInstance()"
+    },
+    "getLastShownDialogId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor\n\n@return the dialog resource id passed into\n        {@code Activity.showDialog(int, Bundle)} or {@code Activity.showDialog(int)}",
+      "params": [],
+      "returnType": "java.lang.Integer",
+      "exceptions": [],
+      "name": "getLastShownDialogId()"
+    },
+    "getLayoutInflater()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.LayoutInflater",
+      "exceptions": [],
+      "name": "getLayoutInflater()"
+    },
+    "getManagedCursors()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.database.Cursor\u003e",
+      "exceptions": [],
+      "name": "getManagedCursors()"
+    },
+    "getMenuInflater()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.MenuInflater",
+      "exceptions": [],
+      "name": "getMenuInflater()"
+    },
+    "getNextStartedActivityForResult()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor consumes and returns the next {@code Intent} on the\nstarted activities for results stack.\n\n@return the next started {@code Intent} for an activity, wrapped in\n        an {@link ShadowActivity.IntentForResult} object",
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
+      "exceptions": [],
+      "name": "getNextStartedActivityForResult()"
+    },
+    "getOptionsMenu()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Return the options menu.\n\n@return  Options menu.",
+      "params": [],
+      "returnType": "android.view.Menu",
+      "exceptions": [],
+      "name": "getOptionsMenu()"
+    },
+    "getParent()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "android.app.Activity",
+      "exceptions": [],
+      "name": "getParent()"
+    },
+    "getPendingTransitionEnterAnimationResourceId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPendingTransitionEnterAnimationResourceId()"
+    },
+    "getPendingTransitionExitAnimationResourceId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPendingTransitionExitAnimationResourceId()"
+    },
+    "getRequestedOrientation()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRequestedOrientation()"
+    },
+    "getResultCode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the {@code resultCode} set by one of the {@code setResult()} methods",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getResultCode()"
+    },
+    "getResultIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)}",
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getResultIntent()"
+    },
+    "getTaskId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTaskId()"
+    },
+    "getVolumeControlStream()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getVolumeControlStream()"
+    },
+    "getWindow()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Constructs a new Window (a {@link com.android.internal.policy.impl.PhoneWindow}) if no window has previously been\nset.\n\n@return the window associated with this Activity",
+      "params": [],
+      "returnType": "android.view.Window",
+      "exceptions": [],
+      "name": "getWindow()"
+    },
+    "hasCancelledPendingTransitions()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasCancelledPendingTransitions()"
+    },
+    "isFinishing()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "@return whether {@link #finish()} was called",
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isFinishing()"
+    },
+    "isTaskRoot()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isTaskRoot()"
+    },
+    "onBackPressed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onBackPressed()"
+    },
+    "onCreateOptionsMenu(android.view.Menu)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "menu"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "onCreateOptionsMenu(android.view.Menu)"
+    },
+    "overridePendingTransition(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enterAnim",
+        "exitAnim"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "overridePendingTransition(int,int)"
+    },
+    "peekNextStartedActivityForResult()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor returns the most recent {@code Intent} started by\n{@link #[[#]]#startActivityForResult(android.content.Intent, int)} without\nconsuming it.\n\n@return the most recently started {@code Intent}, wrapped in\n        an {@link ShadowActivity.IntentForResult} object",
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
+      "exceptions": [],
+      "name": "peekNextStartedActivityForResult()"
+    },
+    "receiveResult(android.content.Intent,int,android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "requestIntent",
+        "resultCode",
+        "resultIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "receiveResult(android.content.Intent,int,android.content.Intent)"
+    },
+    "recreate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "recreate()"
+    },
+    "removeDialog(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeDialog(int)"
+    },
+    "requestPermissions(java.lang.String[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "permissions",
+        "requestCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "requestPermissions(java.lang.String[],int)"
+    },
+    "resetIsFinishing()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetIsFinishing()"
+    },
+    "runOnUiThread(java.lang.Runnable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "runOnUiThread(java.lang.Runnable)"
+    },
+    "setApplication(android.app.Application)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "application"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setApplication(android.app.Application)"
+    },
+    "setCallingActivity(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "activityName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCallingActivity(android.content.ComponentName)"
+    },
+    "setCurrentFocus(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@param view View to focus.",
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCurrentFocus(android.view.View)"
+    },
+    "setDefaultKeyMode(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "keyMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultKeyMode(int)"
+    },
+    "setIsTaskRoot(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isRoot"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsTaskRoot(boolean)"
+    },
+    "setLastNonConfigurationInstance(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lastNonConfigurationInstance"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLastNonConfigurationInstance(java.lang.Object)"
+    },
+    "setParent(android.app.Activity)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Allow setting of Parent fragmentActivity (for unit testing purposes only)\n\n@param parent Parent fragmentActivity to set on this fragmentActivity",
+      "params": [
+        "parent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setParent(android.app.Activity)"
+    },
+    "setRequestedOrientation(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "requestedOrientation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRequestedOrientation(int)"
+    },
+    "setResult(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "resultCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setResult(int)"
+    },
+    "setResult(int,android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "resultCode",
+        "data"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setResult(int,android.content.Intent)"
+    },
+    "setThemeFromManifest()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setThemeFromManifest()"
+    },
+    "setVolumeControlStream(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "streamType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVolumeControlStream(int)"
+    },
+    "setWindow(android.view.Window)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "window"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWindow(android.view.Window)"
+    },
+    "showDialog(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "showDialog(int)"
+    },
+    "showDialog(int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "id",
+        "bundle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "showDialog(int,android.os.Bundle)"
+    },
+    "startActivities(android.content.Intent[],android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intents",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startActivities(android.content.Intent[],android.os.Bundle)"
+    },
+    "startActivityForResult(android.content.Intent,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "requestCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startActivityForResult(android.content.Intent,int)"
+    },
+    "startActivityForResult(android.content.Intent,int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "requestCode",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startActivityForResult(android.content.Intent,int,android.os.Bundle)"
+    },
+    "startActivityFromFragment(android.app.Fragment,android.content.Intent,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "fragment",
+        "intent",
+        "requestCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startActivityFromFragment(android.app.Fragment,android.content.Intent,int)"
+    },
+    "startActivityFromFragment(android.app.Fragment,android.content.Intent,int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "fragment",
+        "intent",
+        "requestCode",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startActivityFromFragment(android.app.Fragment,android.content.Intent,int,android.os.Bundle)"
+    },
+    "startManagingCursor(android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "c"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startManagingCursor(android.database.Cursor)"
+    },
+    "stopManagingCursor(android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "c"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopManagingCursor(android.database.Cursor)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.Activity}.\n",
+  "name": "org.robolectric.shadows.ShadowActivity"
+}

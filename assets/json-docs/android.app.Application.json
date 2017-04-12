@@ -1,0 +1,949 @@
+{
+  "methods": {
+    "\u003cT\u003egetSingleton(java.lang.Class\u003cT\u003e,org.robolectric.shadows.Provider\u003cT\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "clazz",
+        "provider"
+      ],
+      "returnType": "T",
+      "exceptions": [],
+      "name": "\u003cT\u003egetSingleton(java.lang.Class\u003cT\u003e,org.robolectric.shadows.Provider\u003cT\u003e)"
+    },
+    "addWakeLock(android.os.PowerManager.WakeLock)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "wl"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addWakeLock(android.os.PowerManager.WakeLock)"
+    },
+    "assertNoBroadcastListenersOfActionRegistered(android.content.ContextWrapper,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "action"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "assertNoBroadcastListenersOfActionRegistered(android.content.ContextWrapper,java.lang.String)"
+    },
+    "bind(org.robolectric.manifest.AndroidManifest)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appManifest"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "bind(org.robolectric.manifest.AndroidManifest)"
+    },
+    "bindService(android.content.Intent,android.content.ServiceConnection,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "serviceConnection",
+        "i"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "bindService(android.content.Intent,android.content.ServiceConnection,int)"
+    },
+    "checkActivities(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Set to true if you\u0027d like Robolectric to strictly simulate the real Android behavior when\ncalling {@link Context#startActivity(android.content.Intent)}. Real Android throws a\n{@link android.content.ActivityNotFoundException} if given\nan {@link Intent} that is not known to the {@link android.content.pm.PackageManager}\n\nBy default, this behavior is off (false).\n\n@param checkActivities True to validate activities.",
+      "params": [
+        "checkActivities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkActivities(boolean)"
+    },
+    "checkPermission(java.lang.String,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "permission",
+        "pid",
+        "uid"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "checkPermission(java.lang.String,int,int)"
+    },
+    "clearStartedServices()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Clears all {@code Intent} started by {@link #startService(android.content.Intent)}",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearStartedServices()"
+    },
+    "clearWakeLocks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearWakeLocks()"
+    },
+    "declareActionUnbindable(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "declareActionUnbindable(java.lang.String)"
+    },
+    "denyPermissions(java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "permissionNames"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "denyPermissions(java.lang.String...)"
+    },
+    "getAppManifest()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.manifest.AndroidManifest",
+      "exceptions": [],
+      "name": "getAppManifest()"
+    },
+    "getAppWidgetManager()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the app widget manager used by this {@code Application}",
+      "params": [],
+      "returnType": "android.appwidget.AppWidgetManager",
+      "exceptions": [],
+      "name": "getAppWidgetManager()"
+    },
+    "getApplicationContext()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getApplicationContext()"
+    },
+    "getAppropriateWrappers(android.content.Intent,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "intent",
+        "receiverPermission"
+      ],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
+      "exceptions": [],
+      "name": "getAppropriateWrappers(android.content.Intent,java.lang.String)"
+    },
+    "getBackgroundThreadScheduler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Return the background scheduler.\n\n@return  Background scheduler.",
+      "params": [],
+      "returnType": "org.robolectric.util.Scheduler",
+      "exceptions": [],
+      "name": "getBackgroundThreadScheduler()"
+    },
+    "getBluetoothAdapter()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getBluetoothAdapter()"
+    },
+    "getBoundServiceConnections()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.ServiceConnection\u003e",
+      "exceptions": [],
+      "name": "getBoundServiceConnections()"
+    },
+    "getBroadcastIntents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.Intent\u003e",
+      "exceptions": [],
+      "name": "getBroadcastIntents()"
+    },
+    "getForegroundThreadScheduler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Return the foreground scheduler.\n\n@return  Foreground scheduler.",
+      "params": [],
+      "returnType": "org.robolectric.util.Scheduler",
+      "exceptions": [],
+      "name": "getForegroundThreadScheduler()"
+    },
+    "getInstance()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowApplication",
+      "exceptions": [],
+      "name": "getInstance()"
+    },
+    "getLatestAlertDialog()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowAlertDialog",
+      "exceptions": [],
+      "name": "getLatestAlertDialog()"
+    },
+    "getLatestDialog()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowDialog",
+      "exceptions": [],
+      "name": "getLatestDialog()"
+    },
+    "getLatestListPopupWindow()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.ListPopupWindow",
+      "exceptions": [],
+      "name": "getLatestListPopupWindow()"
+    },
+    "getLatestPopupMenu()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowPopupMenu",
+      "exceptions": [],
+      "name": "getLatestPopupMenu()"
+    },
+    "getLatestPopupWindow()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.PopupWindow",
+      "exceptions": [],
+      "name": "getLatestPopupWindow()"
+    },
+    "getLatestWakeLock()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.PowerManager.WakeLock",
+      "exceptions": [],
+      "name": "getLatestWakeLock()"
+    },
+    "getLayoutInflater()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the layout inflater used by this {@code Application}",
+      "params": [],
+      "returnType": "android.view.LayoutInflater",
+      "exceptions": [],
+      "name": "getLayoutInflater()"
+    },
+    "getMainHandler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.os.Handler",
+      "exceptions": [],
+      "name": "getMainHandler()"
+    },
+    "getNextStartedActivity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Consumes the most recent {@code Intent} started by {@link #startActivity(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}",
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getNextStartedActivity()"
+    },
+    "getNextStartedService()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Consumes the most recent {@code Intent} started by {@link #startService(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}",
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getNextStartedService()"
+    },
+    "getNextStoppedService()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Consumes the {@code Intent} requested to stop a service by {@link #stopService(android.content.Intent)}\nfrom the bottom of the stack of stop requests.",
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getNextStoppedService()"
+    },
+    "getReceiversForIntent(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "java.util.List\u003candroid.content.BroadcastReceiver\u003e",
+      "exceptions": [],
+      "name": "getReceiversForIntent(android.content.Intent)"
+    },
+    "getRegisteredReceivers()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return list of {@link Wrapper}s for registered receivers",
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
+      "exceptions": [],
+      "name": "getRegisteredReceivers()"
+    },
+    "getShownToasts()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.widget.Toast\u003e",
+      "exceptions": [],
+      "name": "getShownToasts()"
+    },
+    "getUnboundServiceConnections()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.ServiceConnection\u003e",
+      "exceptions": [],
+      "name": "getUnboundServiceConnections()"
+    },
+    "grantPermissions(java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "permissionNames"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "grantPermissions(java.lang.String...)"
+    },
+    "hasMatchingPermission(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "permission1",
+        "permission2"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasMatchingPermission(java.lang.String,java.lang.String)"
+    },
+    "hasReceiverForIntent(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasReceiverForIntent(android.content.Intent)"
+    },
+    "peekNextStartedActivity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Returns the most recent {@code Intent} started by {@link #startActivity(android.content.Intent)} without\nconsuming it.\n\n@return the most recently started {@code Intent}",
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "peekNextStartedActivity()"
+    },
+    "peekNextStartedService()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Returns the most recent {@code Intent} started by {@link #startService(android.content.Intent)} without\nconsuming it.\n\n@return the most recently started {@code Intent}",
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "peekNextStartedService()"
+    },
+    "postIntent(android.content.Intent,org.robolectric.shadows.ShadowApplication.Wrapper,java.util.concurrent.atomic.AtomicBoolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "intent",
+        "wrapper",
+        "abort"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postIntent(android.content.Intent,org.robolectric.shadows.ShadowApplication.Wrapper,java.util.concurrent.atomic.AtomicBoolean)"
+    },
+    "postIntent(org.robolectric.shadows.ShadowApplication.Wrapper,android.content.Intent,com.google.common.util.concurrent.ListenableFuture\u003corg.robolectric.shadows.ShadowApplication.BroadcastResultHolder\u003e,java.util.concurrent.atomic.AtomicBoolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "documentation": "Enforces that BroadcastReceivers invoked during an ordered broadcast run serially, passing along their results.",
+      "params": [
+        "wrapper",
+        "intent",
+        "oldResult",
+        "abort"
+      ],
+      "returnType": "com.google.common.util.concurrent.ListenableFuture\u003corg.robolectric.shadows.ShadowApplication.BroadcastResultHolder\u003e",
+      "exceptions": [],
+      "name": "postIntent(org.robolectric.shadows.ShadowApplication.Wrapper,android.content.Intent,com.google.common.util.concurrent.ListenableFuture\u003corg.robolectric.shadows.ShadowApplication.BroadcastResultHolder\u003e,java.util.concurrent.atomic.AtomicBoolean)"
+    },
+    "postOrderedToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent,int,java.lang.String,android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "wrappers",
+        "intent",
+        "initialCode",
+        "data",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postOrderedToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent,int,java.lang.String,android.os.Bundle)"
+    },
+    "postToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "wrappers",
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent)"
+    },
+    "processStickyIntents(android.content.IntentFilter,android.content.BroadcastReceiver,android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "filter",
+        "receiver",
+        "context"
+      ],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "processStickyIntents(android.content.IntentFilter,android.content.BroadcastReceiver,android.content.Context)"
+    },
+    "registerBroadcastReceivers(org.robolectric.manifest.AndroidManifest)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "androidManifest"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerBroadcastReceivers(org.robolectric.manifest.AndroidManifest)"
+    },
+    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Always returns {@code null}\n\n@return {@code null}",
+      "params": [
+        "receiver",
+        "filter"
+      ],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)"
+    },
+    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "receiver",
+        "filter",
+        "broadcastPermission",
+        "scheduler"
+      ],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)"
+    },
+    "registerReceiverWithContext(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "receiver",
+        "filter",
+        "broadcastPermission",
+        "scheduler",
+        "context"
+      ],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "registerReceiverWithContext(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,android.content.Context)"
+    },
+    "replaceLastDotWith$IfInnerStaticClass(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "receiverClassName"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "replaceLastDotWith$IfInnerStaticClass(java.lang.String)"
+    },
+    "runBackgroundTasks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Runs any background tasks previously queued by {@link android.os.AsyncTask#execute(Object[])}.\n\n\u003cp\u003e\nNote: calling this method does not pause or un-pause the scheduler.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "runBackgroundTasks()"
+    },
+    "sendBroadcast(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendBroadcast(android.content.Intent)"
+    },
+    "sendBroadcast(android.content.Intent,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "receiverPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendBroadcast(android.content.Intent,java.lang.String)"
+    },
+    "sendBroadcastWithPermission(android.content.Intent,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "documentation": "Broadcasts the {@code Intent} by iterating through the registered receivers, invoking their filters including\npermissions, and calling {@code onReceive(Application, Intent)} as appropriate. Does not enqueue the\n{@code Intent} for later inspection.\n\n@param intent the {@code Intent} to broadcast\n              todo: enqueue the Intent for later inspection",
+      "params": [
+        "intent",
+        "receiverPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendBroadcastWithPermission(android.content.Intent,java.lang.String)"
+    },
+    "sendOrderedBroadcast(android.content.Intent,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "receiverPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendOrderedBroadcast(android.content.Intent,java.lang.String)"
+    },
+    "sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "receiverPermission",
+        "resultReceiver",
+        "scheduler",
+        "initialCode",
+        "initialData",
+        "initialExtras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)"
+    },
+    "sendOrderedBroadcastWithPermission(android.content.Intent,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "intent",
+        "receiverPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendOrderedBroadcastWithPermission(android.content.Intent,java.lang.String)"
+    },
+    "sendStickyBroadcast(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendStickyBroadcast(android.content.Intent)"
+    },
+    "setComponentNameAndServiceForBindService(android.content.ComponentName,android.os.IBinder)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name",
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setComponentNameAndServiceForBindService(android.content.ComponentName,android.os.IBinder)"
+    },
+    "setComponentNameAndServiceForBindServiceForIntent(android.content.Intent,android.content.ComponentName,android.os.IBinder)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "name",
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setComponentNameAndServiceForBindServiceForIntent(android.content.Intent,android.content.ComponentName,android.os.IBinder)"
+    },
+    "setDefaultDisplay(android.view.Display)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "display"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultDisplay(android.view.Display)"
+    },
+    "setDisplayMetricsDensity(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "densityMultiplier"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDisplayMetricsDensity(float)"
+    },
+    "setLatestAlertDialog(org.robolectric.shadows.ShadowAlertDialog)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "latestAlertDialog"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLatestAlertDialog(org.robolectric.shadows.ShadowAlertDialog)"
+    },
+    "setLatestDialog(org.robolectric.shadows.ShadowDialog)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "latestDialog"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLatestDialog(org.robolectric.shadows.ShadowDialog)"
+    },
+    "setLatestListPopupWindow(android.widget.ListPopupWindow)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "latestListPopupWindow"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLatestListPopupWindow(android.widget.ListPopupWindow)"
+    },
+    "setLatestPopupMenu(org.robolectric.shadows.ShadowPopupMenu)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "latestPopupMenu"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLatestPopupMenu(org.robolectric.shadows.ShadowPopupMenu)"
+    },
+    "setLatestPopupWindow(android.widget.PopupWindow)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "latestPopupWindow"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLatestPopupWindow(android.widget.PopupWindow)"
+    },
+    "setSystemService(java.lang.String,java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "@deprecated Do not depend on this method to override services as it will be removed in a future update.\nThe preferered method is use the shadow of the corresponding service.",
+      "params": [
+        "key",
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSystemService(java.lang.String,java.lang.Object)"
+    },
+    "setUnbindServiceShouldThrowIllegalArgument(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUnbindServiceShouldThrowIllegalArgument(boolean)"
+    },
+    "sortByPriority(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "wrappers"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sortByPriority(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e)"
+    },
+    "startActivity(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startActivity(android.content.Intent)"
+    },
+    "startActivity(android.content.Intent,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startActivity(android.content.Intent,android.os.Bundle)"
+    },
+    "startService(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "android.content.ComponentName",
+      "exceptions": [],
+      "name": "startService(android.content.Intent)"
+    },
+    "stopService(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "stopService(android.content.Intent)"
+    },
+    "unbindService(android.content.ServiceConnection)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "serviceConnection"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unbindService(android.content.ServiceConnection)"
+    },
+    "unregisterReceiver(android.content.BroadcastReceiver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "broadcastReceiver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterReceiver(android.content.BroadcastReceiver)"
+    },
+    "verifyActivityInManifest(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "verifyActivityInManifest(android.content.Intent)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.Application}.\n",
+  "name": "org.robolectric.shadows.ShadowApplication"
+}

@@ -1,0 +1,78 @@
+{
+  "methods": {
+    "get(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "keyCode",
+        "metaState"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "get(int,int)"
+    },
+    "getDownEvent(char)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "a"
+      ],
+      "returnType": "android.view.KeyEvent",
+      "exceptions": [],
+      "name": "getDownEvent(char)"
+    },
+    "getEvents(char[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "charArray"
+      ],
+      "returnType": "android.view.KeyEvent[]",
+      "exceptions": [],
+      "name": "getEvents(char[])"
+    },
+    "getKeyboardType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getKeyboardType()"
+    },
+    "getUpEvent(char)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "a"
+      ],
+      "returnType": "android.view.KeyEvent",
+      "exceptions": [],
+      "name": "getUpEvent(char)"
+    },
+    "load(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "deviceId"
+      ],
+      "returnType": "android.view.KeyCharacterMap",
+      "exceptions": [],
+      "name": "load(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.KeyCharacterMap}.\n",
+  "name": "org.robolectric.shadows.ShadowKeyCharacterMap"
+}

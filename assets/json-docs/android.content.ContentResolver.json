@@ -1,0 +1,852 @@
+{
+  "methods": {
+    "acquireContentProviderClient(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "android.content.ContentProviderClient",
+      "exceptions": [],
+      "name": "acquireContentProviderClient(android.net.Uri)"
+    },
+    "acquireContentProviderClient(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "android.content.ContentProviderClient",
+      "exceptions": [],
+      "name": "acquireContentProviderClient(java.lang.String)"
+    },
+    "acquireProvider(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "android.content.IContentProvider",
+      "exceptions": [],
+      "name": "acquireProvider(android.net.Uri)"
+    },
+    "acquireProvider(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "android.content.IContentProvider",
+      "exceptions": [],
+      "name": "acquireProvider(java.lang.String)"
+    },
+    "acquireUnstableContentProviderClient(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "android.content.ContentProviderClient",
+      "exceptions": [],
+      "name": "acquireUnstableContentProviderClient(android.net.Uri)"
+    },
+    "acquireUnstableContentProviderClient(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "android.content.ContentProviderClient",
+      "exceptions": [],
+      "name": "acquireUnstableContentProviderClient(java.lang.String)"
+    },
+    "acquireUnstableProvider(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "android.content.IContentProvider",
+      "exceptions": [],
+      "name": "acquireUnstableProvider(android.net.Uri)"
+    },
+    "acquireUnstableProvider(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "android.content.IContentProvider",
+      "exceptions": [],
+      "name": "acquireUnstableProvider(java.lang.String)"
+    },
+    "addPeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority",
+        "extras",
+        "pollFrequency"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle,long)"
+    },
+    "applyBatch(java.lang.String,java.util.ArrayList\u003candroid.content.ContentProviderOperation\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "authority",
+        "operations"
+      ],
+      "returnType": "android.content.ContentProviderResult[]",
+      "exceptions": [
+        "android.content.OperationApplicationException"
+      ],
+      "name": "applyBatch(java.lang.String,java.util.ArrayList\u003candroid.content.ContentProviderOperation\u003e)"
+    },
+    "bulkInsert(android.net.Uri,android.content.ContentValues[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "url",
+        "values"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "bulkInsert(android.net.Uri,android.content.ContentValues[])"
+    },
+    "call(android.net.Uri,java.lang.String,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "method",
+        "arg",
+        "extras"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "call(android.net.Uri,java.lang.String,java.lang.String,android.os.Bundle)"
+    },
+    "cancelSync(android.accounts.Account,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancelSync(android.accounts.Account,java.lang.String)"
+    },
+    "clearContentObservers()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "documentation": "Clears the list of registered content observers.\n\nCommonly used in test case setup.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearContentObservers()"
+    },
+    "createAndInitialize(org.robolectric.manifest.ContentProviderData)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "providerData"
+      ],
+      "returnType": "android.content.ContentProvider",
+      "exceptions": [],
+      "name": "createAndInitialize(org.robolectric.manifest.ContentProviderData)"
+    },
+    "delete(android.net.Uri,java.lang.String,java.lang.String[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "documentation": "Tests can verify that this method was called using {@link #getDeleteStatements()}.",
+      "params": [
+        "url",
+        "where",
+        "selectionArgs"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "delete(android.net.Uri,java.lang.String,java.lang.String[])"
+    },
+    "getContentObservers(android.net.Uri)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "documentation": "Returns the content observers registered with the given URI.\n\nWill be empty if no observer is registered.\n\n@param uri Given URI\n@return The content observers, or null.",
+      "params": [
+        "uri"
+      ],
+      "returnType": "java.util.Collection\u003candroid.database.ContentObserver\u003e",
+      "exceptions": [],
+      "name": "getContentObservers(android.net.Uri)"
+    },
+    "getContentProviderClient(android.content.ContentProvider,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "provider",
+        "stable"
+      ],
+      "returnType": "android.content.ContentProviderClient",
+      "exceptions": [],
+      "name": "getContentProviderClient(android.content.ContentProvider,boolean)"
+    },
+    "getContentProviderOperations(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "authority"
+      ],
+      "returnType": "java.util.List\u003candroid.content.ContentProviderOperation\u003e",
+      "exceptions": [],
+      "name": "getContentProviderOperations(java.lang.String)"
+    },
+    "getCursor(android.net.Uri)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "org.robolectric.fakes.BaseCursor",
+      "exceptions": [],
+      "name": "getCursor(android.net.Uri)"
+    },
+    "getDeleteStatements()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.DeleteStatement\u003e",
+      "exceptions": [],
+      "name": "getDeleteStatements()"
+    },
+    "getDeletedUris()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.net.Uri\u003e",
+      "exceptions": [],
+      "name": "getDeletedUris()"
+    },
+    "getInsertStatements()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.InsertStatement\u003e",
+      "exceptions": [],
+      "name": "getInsertStatements()"
+    },
+    "getIsSyncable(android.accounts.Account,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getIsSyncable(android.accounts.Account,java.lang.String)"
+    },
+    "getMasterSyncAutomatically()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getMasterSyncAutomatically()"
+    },
+    "getNotifiedUris()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.NotifiedUri\u003e",
+      "exceptions": [],
+      "name": "getNotifiedUris()"
+    },
+    "getPeriodicSyncs(android.accounts.Account,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority"
+      ],
+      "returnType": "java.util.List\u003candroid.content.PeriodicSync\u003e",
+      "exceptions": [],
+      "name": "getPeriodicSyncs(android.accounts.Account,java.lang.String)"
+    },
+    "getProvider(android.net.Uri)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "android.content.ContentProvider",
+      "exceptions": [],
+      "name": "getProvider(android.net.Uri)"
+    },
+    "getProvider(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "authority"
+      ],
+      "returnType": "android.content.ContentProvider",
+      "exceptions": [],
+      "name": "getProvider(java.lang.String)"
+    },
+    "getStatus(android.accounts.Account,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowContentResolver.Status",
+      "exceptions": [],
+      "name": "getStatus(android.accounts.Account,java.lang.String)"
+    },
+    "getStatus(android.accounts.Account,java.lang.String,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority",
+        "create"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowContentResolver.Status",
+      "exceptions": [],
+      "name": "getStatus(android.accounts.Account,java.lang.String,boolean)"
+    },
+    "getSyncAutomatically(android.accounts.Account,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getSyncAutomatically(android.accounts.Account,java.lang.String)"
+    },
+    "getType(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getType(android.net.Uri)"
+    },
+    "getUpdateStatements()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.UpdateStatement\u003e",
+      "exceptions": [],
+      "name": "getUpdateStatements()"
+    },
+    "initialize(android.content.ContentProvider,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "provider",
+        "authorities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "initialize(android.content.ContentProvider,java.lang.String)"
+    },
+    "insert(android.net.Uri,android.content.ContentValues)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "url",
+        "values"
+      ],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "insert(android.net.Uri,android.content.ContentValues)"
+    },
+    "isBundleEqual(android.os.Bundle,android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "bundle1",
+        "bundle2"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isBundleEqual(android.os.Bundle,android.os.Bundle)"
+    },
+    "isSyncActive(android.accounts.Account,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isSyncActive(android.accounts.Account,java.lang.String)"
+    },
+    "notifyChange(android.net.Uri,android.database.ContentObserver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "observer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyChange(android.net.Uri,android.database.ContentObserver)"
+    },
+    "notifyChange(android.net.Uri,android.database.ContentObserver,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "observer",
+        "syncToNetwork"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyChange(android.net.Uri,android.database.ContentObserver,boolean)"
+    },
+    "openInputStream(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "java.io.InputStream",
+      "exceptions": [],
+      "name": "openInputStream(android.net.Uri)"
+    },
+    "openOutputStream(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "java.io.OutputStream",
+      "exceptions": [],
+      "name": "openOutputStream(android.net.Uri)"
+    },
+    "openTypedAssetFileDescriptor(android.net.Uri,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "uri",
+        "mimeType",
+        "opts"
+      ],
+      "returnType": "android.content.res.AssetFileDescriptor",
+      "exceptions": [
+        "java.io.FileNotFoundException"
+      ],
+      "name": "openTypedAssetFileDescriptor(android.net.Uri,java.lang.String,android.os.Bundle)"
+    },
+    "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "uri",
+        "projection",
+        "selection",
+        "selectionArgs",
+        "sortOrder"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "name": "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)"
+    },
+    "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "projection",
+        "selection",
+        "selectionArgs",
+        "sortOrder",
+        "cancellationSignal"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "name": "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)"
+    },
+    "registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [
+        "uri",
+        "notifyForDescendents",
+        "observer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver)"
+    },
+    "registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "notifyForDescendents",
+        "observer",
+        "userHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver,int)"
+    },
+    "registerInputStream(android.net.Uri,java.io.InputStream)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "inputStream"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerInputStream(android.net.Uri,java.io.InputStream)"
+    },
+    "registerProviderInternal(java.lang.String,android.content.ContentProvider)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "documentation": "Internal-only method, do not use!\n\nInstead, use\n\u003cpre\u003e\n{@code\nProviderInfo info \u003d new ProviderInfo();\ninfo.authority \u003d authority;\nRobolectric.buildContentProvider(ContentProvider.class).create(info);\n}\u003c/pre\u003e",
+      "params": [
+        "authority",
+        "provider"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerProviderInternal(java.lang.String,android.content.ContentProvider)"
+    },
+    "removePeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removePeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle)"
+    },
+    "requestSync(android.accounts.Account,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "requestSync(android.accounts.Account,java.lang.String,android.os.Bundle)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setContentProviderResult(android.content.ContentProviderResult[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "contentProviderResults"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setContentProviderResult(android.content.ContentProviderResult[])"
+    },
+    "setCursor(android.net.Uri,org.robolectric.fakes.BaseCursor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "cursorForUri"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCursor(android.net.Uri,org.robolectric.fakes.BaseCursor)"
+    },
+    "setCursor(org.robolectric.fakes.BaseCursor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cursor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCursor(org.robolectric.fakes.BaseCursor)"
+    },
+    "setIsSyncable(android.accounts.Account,java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority",
+        "syncable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsSyncable(android.accounts.Account,java.lang.String,int)"
+    },
+    "setMasterSyncAutomatically(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "sync"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMasterSyncAutomatically(boolean)"
+    },
+    "setNextDatabaseIdForInserts(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "nextId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNextDatabaseIdForInserts(int)"
+    },
+    "setNextDatabaseIdForUpdates(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "nextId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNextDatabaseIdForUpdates(int)"
+    },
+    "setSyncAutomatically(android.accounts.Account,java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "account",
+        "authority",
+        "sync"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSyncAutomatically(android.accounts.Account,java.lang.String,boolean)"
+    },
+    "unregisterContentObserver(android.database.ContentObserver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "observer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterContentObserver(android.database.ContentObserver)"
+    },
+    "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "values",
+        "where",
+        "selectionArgs"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])"
+    },
+    "validateSyncExtrasBundle(android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "validateSyncExtrasBundle(android.os.Bundle)"
+    }
+  },
+  "documentation": " Shadow for {@link android.content.ContentResolver}.\n",
+  "name": "org.robolectric.shadows.ShadowContentResolver"
+}

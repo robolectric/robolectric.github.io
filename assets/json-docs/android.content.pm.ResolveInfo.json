@@ -1,0 +1,62 @@
+{
+  "methods": {
+    "loadLabel(android.content.pm.PackageManager)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "mgr"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "loadLabel(android.content.pm.PackageManager)"
+    },
+    "newResolveInfo(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android accessor used for creating ResolveInfo objects.\n\n@param displayName Display name.\n@param packageName Package name.\n@return Resolve info instance.",
+      "params": [
+        "displayName",
+        "packageName"
+      ],
+      "returnType": "android.content.pm.ResolveInfo",
+      "exceptions": [],
+      "name": "newResolveInfo(java.lang.String,java.lang.String)"
+    },
+    "newResolveInfo(java.lang.String,java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android accessor used for creating ResolveInfo objects\n\n@param displayName Display name.\n@param packageName Package name.\n@param activityName Activity name.\n@return Resolve info instance.",
+      "params": [
+        "displayName",
+        "packageName",
+        "activityName"
+      ],
+      "returnType": "android.content.pm.ResolveInfo",
+      "exceptions": [],
+      "name": "newResolveInfo(java.lang.String,java.lang.String,java.lang.String)"
+    },
+    "setLabel(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor used to set the value returned by {@link #loadLabel}.\n\n@param l Label.",
+      "params": [
+        "l"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLabel(java.lang.String)"
+    }
+  },
+  "documentation": " Shadow for {@link android.content.pm.ResolveInfo}.\n",
+  "name": "org.robolectric.shadows.ShadowResolveInfo"
+}

@@ -1,0 +1,329 @@
+{
+  "methods": {
+    "clearToken(android.content.Context,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "token"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "com.google.android.gms.auth.GooglePlayServicesAvailabilityException",
+        "com.google.android.gms.auth.GoogleAuthException",
+        "java.io.IOException"
+      ],
+      "name": "clearToken(android.content.Context,java.lang.String)"
+    },
+    "getAccountChangeEvents(android.content.Context,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "eventIndex",
+        "accountName"
+      ],
+      "returnType": "java.util.List\u003ccom.google.android.gms.auth.AccountChangeEvent\u003e",
+      "exceptions": [
+        "com.google.android.gms.auth.GoogleAuthException",
+        "java.io.IOException"
+      ],
+      "name": "getAccountChangeEvents(android.content.Context,int,java.lang.String)"
+    },
+    "getAccountId(android.content.Context,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "ctx",
+        "accountName"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "com.google.android.gms.auth.GoogleAuthException",
+        "java.io.IOException"
+      ],
+      "name": "getAccountId(android.content.Context,java.lang.String)"
+    },
+    "getImpl()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.gms.ShadowGoogleAuthUtil.GoogleAuthUtilImpl",
+      "exceptions": [],
+      "name": "getImpl()"
+    },
+    "getToken(android.content.Context,android.accounts.Account,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "account",
+        "scope"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableAuthException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getToken(android.content.Context,android.accounts.Account,java.lang.String)"
+    },
+    "getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "account",
+        "scope",
+        "extras"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableAuthException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getToken(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)"
+    },
+    "getToken(android.content.Context,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "accountName",
+        "scope"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableAuthException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getToken(android.content.Context,java.lang.String,java.lang.String)"
+    },
+    "getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "accountName",
+        "scope",
+        "extras"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableAuthException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getToken(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)"
+    },
+    "getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "account",
+        "scope",
+        "extras"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableNotifiedException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle)"
+    },
+    "getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "account",
+        "scope",
+        "extras",
+        "callback"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableNotifiedException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,android.content.Intent)"
+    },
+    "getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "account",
+        "scope",
+        "extras",
+        "authority",
+        "syncBundle"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableNotifiedException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getTokenWithNotification(android.content.Context,android.accounts.Account,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)"
+    },
+    "getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "accountName",
+        "scope",
+        "extras"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableNotifiedException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle)"
+    },
+    "getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "accountName",
+        "scope",
+        "extras",
+        "callback"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableNotifiedException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,android.content.Intent)"
+    },
+    "getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "accountName",
+        "scope",
+        "extras",
+        "authority",
+        "syncBundle"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.io.IOException",
+        "com.google.android.gms.auth.UserRecoverableNotifiedException",
+        "com.google.android.gms.auth.GoogleAuthException"
+      ],
+      "name": "getTokenWithNotification(android.content.Context,java.lang.String,java.lang.String,android.os.Bundle,java.lang.String,android.os.Bundle)"
+    },
+    "invalidateToken(android.content.Context,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "context",
+        "token"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "invalidateToken(android.content.Context,java.lang.String)"
+    },
+    "provideImpl(org.robolectric.shadows.gms.ShadowGoogleAuthUtil.GoogleAuthUtilImpl)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "impl"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "provideImpl(org.robolectric.shadows.gms.ShadowGoogleAuthUtil.GoogleAuthUtilImpl)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    }
+  },
+  "documentation": " Shadow for {@link GoogleAuthUtil} that allows providing a\n {@link GoogleAuthUtilImpl}.\n Calls to static method of {@link GoogleAuthUtil} will be redirected to the provided\n {@link GoogleAuthUtilImpl} implementation. Use {@link #provideImpl(GoogleAuthUtilImpl)}\n to set the implementation instance. By default, a {@link GoogleAuthUtilImpl} is used in call\n redirection. Use mocks or subclassing {@link GoogleAuthUtilImpl} to achieve desired behaviors.\n",
+  "name": "org.robolectric.shadows.gms.ShadowGoogleAuthUtil"
+}

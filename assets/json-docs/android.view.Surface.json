@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "__constructor__(android.graphics.SurfaceTexture)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "surfaceTexture"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.graphics.SurfaceTexture)"
+    },
+    "getSurfaceTexture()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.SurfaceTexture",
+      "exceptions": [],
+      "name": "getSurfaceTexture()"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.Surface}.\n",
+  "name": "org.robolectric.shadows.ShadowSurface"
+}

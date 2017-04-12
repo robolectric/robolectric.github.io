@@ -1,0 +1,36 @@
+{
+  "methods": {
+    "clearWasDataSetChangedCalledFlag()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearWasDataSetChangedCalledFlag()"
+    },
+    "notifyDataSetChanged()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyDataSetChanged()"
+    },
+    "wasNotifyDataSetChangedCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasNotifyDataSetChangedCalled()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.BaseAdapter}.\n",
+  "name": "org.robolectric.shadows.ShadowBaseAdapter"
+}

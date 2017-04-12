@@ -1,0 +1,43 @@
+{
+  "methods": {
+    "__constructor__(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "netId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(int)"
+    },
+    "getNetId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Allows to get the stored netId.\n\n@return The netId.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNetId()"
+    },
+    "newInstance(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Creates new instance of {@link Network}, because its constructor is hidden.\n\n@param netId The netId.\n@return The Network instance.",
+      "params": [
+        "netId"
+      ],
+      "returnType": "android.net.Network",
+      "exceptions": [],
+      "name": "newInstance(int)"
+    }
+  },
+  "documentation": " Shadow for {@code android.net.Network}.\n",
+  "name": "org.robolectric.shadows.ShadowNetwork"
+}

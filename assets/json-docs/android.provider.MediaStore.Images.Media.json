@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "getBitmap(android.content.ContentResolver,android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "url"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "getBitmap(android.content.ContentResolver,android.net.Uri)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowMediaStore.ShadowImages.ShadowMedia"
+}

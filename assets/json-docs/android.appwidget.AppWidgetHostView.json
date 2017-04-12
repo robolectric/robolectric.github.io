@@ -1,0 +1,61 @@
+{
+  "methods": {
+    "getAppWidgetId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAppWidgetId()"
+    },
+    "getAppWidgetInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.appwidget.AppWidgetProviderInfo",
+      "exceptions": [],
+      "name": "getAppWidgetInfo()"
+    },
+    "getHost()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.appwidget.AppWidgetHost",
+      "exceptions": [],
+      "name": "getHost()"
+    },
+    "setAppWidget(int,android.appwidget.AppWidgetProviderInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appWidgetId",
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAppWidget(int,android.appwidget.AppWidgetProviderInfo)"
+    },
+    "setHost(android.appwidget.AppWidgetHost)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "host"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHost(android.appwidget.AppWidgetHost)"
+    }
+  },
+  "documentation": " Shadow for {@link android.appwidget.AppWidgetHost}.\n",
+  "name": "org.robolectric.shadows.ShadowAppWidgetHostView"
+}

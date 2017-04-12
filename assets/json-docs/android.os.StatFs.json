@@ -1,0 +1,146 @@
+{
+  "methods": {
+    "__constructor__(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(java.lang.String)"
+    },
+    "getAvailableBlocks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAvailableBlocks()"
+    },
+    "getAvailableBlocksLong()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getAvailableBlocksLong()"
+    },
+    "getBlockCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBlockCount()"
+    },
+    "getBlockCountLong()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getBlockCountLong()"
+    },
+    "getBlockSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBlockSize()"
+    },
+    "getBlockSizeLong()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getBlockSizeLong()"
+    },
+    "getFreeBlocks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFreeBlocks()"
+    },
+    "registerStats(java.io.File,int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "path",
+        "blockCount",
+        "freeBlocks",
+        "availableBlocks"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerStats(java.io.File,int,int,int)"
+    },
+    "registerStats(java.lang.String,int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "path",
+        "blockCount",
+        "freeBlocks",
+        "availableBlocks"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerStats(java.lang.String,int,int,int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "restat(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "restat(java.lang.String)"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.StatFs}.\n",
+  "name": "org.robolectric.shadows.ShadowStatFs"
+}

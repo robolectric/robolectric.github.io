@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.app.LocalActivityManager}.\n",
+  "name": "org.robolectric.shadows.ShadowLocalActivityManager"
+}

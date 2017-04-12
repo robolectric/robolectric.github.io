@@ -1,0 +1,73 @@
+{
+  "methods": {
+    "getParcelableData()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.Parcelable",
+      "exceptions": [],
+      "name": "getParcelableData()"
+    },
+    "getSourceRoot()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getSourceRoot()"
+    },
+    "getVirtualDescendantId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getVirtualDescendantId()"
+    },
+    "setParcelableData(android.os.Parcelable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "data"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setParcelableData(android.os.Parcelable)"
+    },
+    "setSource(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "root"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSource(android.view.View)"
+    },
+    "setSource(android.view.View,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "root",
+        "virtualDescendantId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSource(android.view.View,int)"
+    }
+  },
+  "documentation": " Shadow of {@link android.view.accessibility.AccessibilityRecord}.\n",
+  "name": "org.robolectric.shadows.ShadowAccessibilityRecord"
+}

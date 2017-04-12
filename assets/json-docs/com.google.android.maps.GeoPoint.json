@@ -1,0 +1,93 @@
+{
+  "methods": {
+    "__constructor__(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lat",
+        "lng"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(int,int)"
+    },
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)"
+    },
+    "getLat()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "@deprecated Use {@link #getLatitudeE6()}\n\n@return The latitude.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLat()"
+    },
+    "getLatitudeE6()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLatitudeE6()"
+    },
+    "getLng()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "@deprecated Use {@link #getLongitudeE6()}.\n\n@return The longitude.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLng()"
+    },
+    "getLongitudeE6()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLongitudeE6()"
+    },
+    "hashCode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "hashCode()"
+    },
+    "toString()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "toString()"
+    }
+  },
+  "documentation": " Shadow for {@link com.google.android.maps.GeoPoint}.\n",
+  "name": "org.robolectric.shadows.maps.ShadowGeoPoint"
+}

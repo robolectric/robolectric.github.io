@@ -1,0 +1,103 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener)"
+    },
+    "clearLastSpokenText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLastSpokenText()"
+    },
+    "getContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getContext()"
+    },
+    "getLastSpokenText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLastSpokenText()"
+    },
+    "getOnInitListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.speech.tts.TextToSpeech.OnInitListener",
+      "exceptions": [],
+      "name": "getOnInitListener()"
+    },
+    "getQueueMode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getQueueMode()"
+    },
+    "isShutdown()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isShutdown()"
+    },
+    "shutdown()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "shutdown()"
+    },
+    "speak(java.lang.String,int,java.util.HashMap\u003cjava.lang.String,java.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "text",
+        "queueMode",
+        "params"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "speak(java.lang.String,int,java.util.HashMap\u003cjava.lang.String,java.lang.String\u003e)"
+    }
+  },
+  "documentation": " Shadow for {@link android.speech.tts.TextToSpeech}.\n",
+  "name": "org.robolectric.shadows.ShadowTextToSpeech"
+}

@@ -1,0 +1,332 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "__constructor__()"
+    },
+    "__constructor__(android.text.format.Time)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "other"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "__constructor__(android.text.format.Time)"
+    },
+    "__constructor__(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "timezone"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "__constructor__(java.lang.String)"
+    },
+    "after(android.text.format.Time)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "other"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "after(android.text.format.Time)"
+    },
+    "before(android.text.format.Time)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "other"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "before(android.text.format.Time)"
+    },
+    "clear(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "timezone"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "clear(java.lang.String)"
+    },
+    "compare(android.text.format.Time,android.text.format.Time)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "a",
+        "b"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "compare(android.text.format.Time,android.text.format.Time)"
+    },
+    "format(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "format"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "format(java.lang.String)"
+    },
+    "format2445()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "format2445()"
+    },
+    "format3339(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "allDay"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "format3339(boolean)"
+    },
+    "getCalendar()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.util.Calendar",
+      "exceptions": [],
+      "name": "getCalendar()"
+    },
+    "getCurrentTimezone()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "getCurrentTimezone()"
+    },
+    "getJulianDay(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "millis",
+        "gmtoff"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "getJulianDay(long,long)"
+    },
+    "isEpoch(android.text.format.Time)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "time"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "isEpoch(android.text.format.Time)"
+    },
+    "parse(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "timeString"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "parse(java.lang.String)"
+    },
+    "parse3339(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "rfc3339String"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "parse3339(java.lang.String)"
+    },
+    "set(android.text.format.Time)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "other"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "set(android.text.format.Time)"
+    },
+    "set(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "monthDay",
+        "month",
+        "year"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "set(int,int,int)"
+    },
+    "set(int,int,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "second",
+        "minute",
+        "hour",
+        "monthDay",
+        "month",
+        "year"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "set(int,int,int,int,int,int)"
+    },
+    "set(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "millis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "set(long)"
+    },
+    "setJulianDay(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "julianDay"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "setJulianDay(int)"
+    },
+    "setToNow()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "setToNow()"
+    },
+    "switchTimezone(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "timezone"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "switchTimezone(java.lang.String)"
+    },
+    "throwTimeFormatException(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "optionalMessage"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "throwTimeFormatException(java.lang.String)"
+    },
+    "toMillis(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "ignoreDst"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "toMillis(boolean)"
+    }
+  },
+  "documentation": " Shadow for {@link android.text.format.Time}.\n",
+  "name": "org.robolectric.shadows.ShadowTime"
+}

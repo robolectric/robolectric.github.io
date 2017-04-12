@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "getDrawerListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.support.v4.widget.DrawerLayout.DrawerListener",
+      "exceptions": [],
+      "name": "getDrawerListener()"
+    },
+    "setDrawerListener(android.support.v4.widget.DrawerLayout.DrawerListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "drawerListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDrawerListener(android.support.v4.widget.DrawerLayout.DrawerListener)"
+    }
+  },
+  "documentation": " Shadow for {@link android.support.v4.widget.DrawerLayout}.\n",
+  "name": "org.robolectric.shadows.support.v4.ShadowDrawerLayout"
+}

@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context)"
+    },
+    "onForceLoad()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onForceLoad()"
+    }
+  },
+  "documentation": " Shadow for {@link android.support.v4.content.AsyncTaskLoader}.\n",
+  "name": "org.robolectric.shadows.support.v4.ShadowAsyncTaskLoader"
+}

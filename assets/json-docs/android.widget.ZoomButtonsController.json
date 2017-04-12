@@ -1,0 +1,50 @@
+{
+  "methods": {
+    "__constructor__(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "ownerView"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.view.View)"
+    },
+    "setOnZoomListener(android.widget.ZoomButtonsController.OnZoomListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnZoomListener(android.widget.ZoomButtonsController.OnZoomListener)"
+    },
+    "simulateZoomInButtonClick()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "simulateZoomInButtonClick()"
+    },
+    "simulateZoomOutButtonClick()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "simulateZoomOutButtonClick()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.ZoomButtonsController}.\n",
+  "name": "org.robolectric.shadows.ShadowZoomButtonsController"
+}

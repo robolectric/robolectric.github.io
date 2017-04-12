@@ -1,0 +1,50 @@
+{
+  "methods": {
+    "acquire()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "acquire()"
+    },
+    "isHeld()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isHeld()"
+    },
+    "release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "release()"
+    },
+    "setReferenceCounted(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "refCounted"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setReferenceCounted(boolean)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock"
+}

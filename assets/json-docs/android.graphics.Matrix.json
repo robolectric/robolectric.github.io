@@ -1,0 +1,596 @@
+{
+  "methods": {
+    "__constructor__(android.graphics.Matrix)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "src"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.graphics.Matrix)"
+    },
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "obj"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)"
+    },
+    "getDescription()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getDescription()"
+    },
+    "getPostOperations()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "A list of all \u0027post\u0027 operations performed on this Matrix. The last operation performed will\nbe last in the list.\n@return A list of all \u0027post\u0027 operations performed on this Matrix.",
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getPostOperations()"
+    },
+    "getPreOperations()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "A list of all \u0027pre\u0027 operations performed on this Matrix. The last operation performed will\nbe first in the list.\n@return A list of all \u0027pre\u0027 operations performed on this Matrix.",
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getPreOperations()"
+    },
+    "getSetOperations()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "A map of all \u0027set\u0027 operations performed on this Matrix.\n@return A map of all \u0027set\u0027 operations performed on this Matrix.",
+      "params": [],
+      "returnType": "java.util.Map\u003cjava.lang.String,java.lang.String\u003e",
+      "exceptions": [],
+      "name": "getSetOperations()"
+    },
+    "getSimpleMatrix(android.graphics.Matrix)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "matrix"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowMatrix.SimpleMatrix",
+      "exceptions": [],
+      "name": "getSimpleMatrix(android.graphics.Matrix)"
+    },
+    "getValues(float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "values"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getValues(float[])"
+    },
+    "hashCode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "hashCode()"
+    },
+    "invert(android.graphics.Matrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "inverse"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "invert(android.graphics.Matrix)"
+    },
+    "isAffine()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAffine()"
+    },
+    "isIdentity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isIdentity()"
+    },
+    "mapPoint(android.graphics.PointF)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "point"
+      ],
+      "returnType": "android.graphics.PointF",
+      "exceptions": [],
+      "name": "mapPoint(android.graphics.PointF)"
+    },
+    "mapPoint(float,float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "android.graphics.PointF",
+      "exceptions": [],
+      "name": "mapPoint(float,float)"
+    },
+    "mapRect(android.graphics.RectF,android.graphics.RectF)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "destination",
+        "source"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "mapRect(android.graphics.RectF,android.graphics.RectF)"
+    },
+    "postConcat(android.graphics.Matrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "other"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postConcat(android.graphics.Matrix)"
+    },
+    "postConcat(org.robolectric.shadows.ShadowMatrix.SimpleMatrix)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "matrix"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postConcat(org.robolectric.shadows.ShadowMatrix.SimpleMatrix)"
+    },
+    "postRotate(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "degrees"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postRotate(float)"
+    },
+    "postRotate(float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "degrees",
+        "px",
+        "py"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postRotate(float,float,float)"
+    },
+    "postScale(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sx",
+        "sy"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postScale(float,float)"
+    },
+    "postScale(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sx",
+        "sy",
+        "px",
+        "py"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postScale(float,float,float,float)"
+    },
+    "postSkew(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "kx",
+        "ky"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postSkew(float,float)"
+    },
+    "postSkew(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "kx",
+        "ky",
+        "px",
+        "py"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postSkew(float,float,float,float)"
+    },
+    "postTranslate(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dx",
+        "dy"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postTranslate(float,float)"
+    },
+    "preConcat(android.graphics.Matrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "other"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "preConcat(android.graphics.Matrix)"
+    },
+    "preConcat(org.robolectric.shadows.ShadowMatrix.SimpleMatrix)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "matrix"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "preConcat(org.robolectric.shadows.ShadowMatrix.SimpleMatrix)"
+    },
+    "preRotate(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "degrees"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "preRotate(float)"
+    },
+    "preRotate(float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "degrees",
+        "px",
+        "py"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "preRotate(float,float,float)"
+    },
+    "preScale(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sx",
+        "sy"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "preScale(float,float)"
+    },
+    "preScale(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sx",
+        "sy",
+        "px",
+        "py"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "preScale(float,float,float,float)"
+    },
+    "preSkew(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "kx",
+        "ky"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "preSkew(float,float)"
+    },
+    "preSkew(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "kx",
+        "ky",
+        "px",
+        "py"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "preSkew(float,float,float,float)"
+    },
+    "preTranslate(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dx",
+        "dy"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "preTranslate(float,float)"
+    },
+    "rectStaysRect()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "rectStaysRect()"
+    },
+    "reset()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "set(android.graphics.Matrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "src"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "set(android.graphics.Matrix)"
+    },
+    "setConcat(android.graphics.Matrix,android.graphics.Matrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "a",
+        "b"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setConcat(android.graphics.Matrix,android.graphics.Matrix)"
+    },
+    "setRotate(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "degrees"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRotate(float)"
+    },
+    "setRotate(float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "degrees",
+        "px",
+        "py"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRotate(float,float,float)"
+    },
+    "setScale(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sx",
+        "sy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScale(float,float)"
+    },
+    "setScale(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sx",
+        "sy",
+        "px",
+        "py"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScale(float,float,float,float)"
+    },
+    "setSinCos(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sinValue",
+        "cosValue"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSinCos(float,float)"
+    },
+    "setSinCos(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sinValue",
+        "cosValue",
+        "px",
+        "py"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSinCos(float,float,float,float)"
+    },
+    "setSkew(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "kx",
+        "ky"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSkew(float,float)"
+    },
+    "setSkew(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "kx",
+        "ky",
+        "px",
+        "py"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSkew(float,float,float,float)"
+    },
+    "setTranslate(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dx",
+        "dy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTranslate(float,float)"
+    },
+    "setValues(float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "values"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setValues(float[])"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.Matrix}.\n",
+  "name": "org.robolectric.shadows.ShadowMatrix"
+}

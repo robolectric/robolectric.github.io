@@ -1,0 +1,137 @@
+{
+  "methods": {
+    "getAllowedNetworkTypes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAllowedNetworkTypes()"
+    },
+    "getAllowedOverMetered()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getAllowedOverMetered()"
+    },
+    "getAllowedOverRoaming()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getAllowedOverRoaming()"
+    },
+    "getDescription()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getDescription()"
+    },
+    "getDestination()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "getDestination()"
+    },
+    "getMimeType()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getMimeType()"
+    },
+    "getNotificationVisibility()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNotificationVisibility()"
+    },
+    "getRequestHeaders()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.util.Pair\u003cjava.lang.String,java.lang.String\u003e\u003e",
+      "exceptions": [],
+      "name": "getRequestHeaders()"
+    },
+    "getStatus()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStatus()"
+    },
+    "getTitle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getTitle()"
+    },
+    "getUri()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "getUri()"
+    },
+    "getVisibleInDownloadsUi()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getVisibleInDownloadsUi()"
+    },
+    "setStatus(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "status"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStatus(int)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowDownloadManager.ShadowRequest"
+}

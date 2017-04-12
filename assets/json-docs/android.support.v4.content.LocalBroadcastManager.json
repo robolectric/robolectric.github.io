@@ -1,0 +1,76 @@
+{
+  "methods": {
+    "getInstance(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.support.v4.content.LocalBroadcastManager",
+      "exceptions": [],
+      "name": "getInstance(android.content.Context)"
+    },
+    "getRegisteredBroadcastReceivers()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.support.v4.ShadowLocalBroadcastManager.Wrapper\u003e",
+      "exceptions": [],
+      "name": "getRegisteredBroadcastReceivers()"
+    },
+    "getSentBroadcastIntents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.Intent\u003e",
+      "exceptions": [],
+      "name": "getSentBroadcastIntents()"
+    },
+    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "receiver",
+        "filter"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)"
+    },
+    "sendBroadcast(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "sendBroadcast(android.content.Intent)"
+    },
+    "unregisterReceiver(android.content.BroadcastReceiver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "receiver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterReceiver(android.content.BroadcastReceiver)"
+    }
+  },
+  "documentation": " Shadow for {@link android.support.v4.content.LocalBroadcastManager}.\n",
+  "name": "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager"
+}

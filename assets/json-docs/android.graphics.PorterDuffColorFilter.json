@@ -1,0 +1,75 @@
+{
+  "methods": {
+    "__constructor__(int,android.graphics.PorterDuff.Mode)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "color",
+        "mode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(int,android.graphics.PorterDuff.Mode)"
+    },
+    "getColor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Returns the ARGB color used to tint the source pixels when this filter\nis applied.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getColor()"
+    },
+    "getMode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Returns the Porter-Duff mode used to composite this color filter\u0027s\ncolor with the source pixel when this filter is applied.",
+      "params": [],
+      "returnType": "android.graphics.PorterDuff.Mode",
+      "exceptions": [],
+      "name": "getMode()"
+    },
+    "hashCode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "hashCode()"
+    },
+    "setColor(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "color"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setColor(int)"
+    },
+    "setMode(android.graphics.PorterDuff.Mode)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "mode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMode(android.graphics.PorterDuff.Mode)"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.PorterDuffColorFilter}.\n",
+  "name": "org.robolectric.shadows.ShadowPorterDuffColorFilter"
+}

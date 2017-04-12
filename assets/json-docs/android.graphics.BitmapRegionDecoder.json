@@ -1,0 +1,130 @@
+{
+  "methods": {
+    "decodeRegion(android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "rect",
+        "options"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeRegion(android.graphics.Rect,android.graphics.BitmapFactory.Options)"
+    },
+    "fillWidthAndHeight(android.graphics.BitmapRegionDecoder,java.io.InputStream)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "bitmapRegionDecoder",
+        "is"
+      ],
+      "returnType": "android.graphics.BitmapRegionDecoder",
+      "exceptions": [],
+      "name": "fillWidthAndHeight(android.graphics.BitmapRegionDecoder,java.io.InputStream)"
+    },
+    "getHeight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHeight()"
+    },
+    "getWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWidth()"
+    },
+    "newInstance()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.graphics.BitmapRegionDecoder",
+      "exceptions": [],
+      "name": "newInstance()"
+    },
+    "newInstance(byte[],int,int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "data",
+        "offset",
+        "length",
+        "isShareable"
+      ],
+      "returnType": "android.graphics.BitmapRegionDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "newInstance(byte[],int,int,boolean)"
+    },
+    "newInstance(java.io.FileDescriptor,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "fd",
+        "isShareable"
+      ],
+      "returnType": "android.graphics.BitmapRegionDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "newInstance(java.io.FileDescriptor,boolean)"
+    },
+    "newInstance(java.io.InputStream,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "is",
+        "isShareable"
+      ],
+      "returnType": "android.graphics.BitmapRegionDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "newInstance(java.io.InputStream,boolean)"
+    },
+    "newInstance(java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "pathName",
+        "isShareable"
+      ],
+      "returnType": "android.graphics.BitmapRegionDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "newInstance(java.lang.String,boolean)"
+    }
+  },
+  "documentation": " Shadow for {@code android.graphics.BitmapRegionDecoder}.\n",
+  "name": "org.robolectric.shadows.ShadowBitmapRegionDecoder"
+}

@@ -1,0 +1,373 @@
+{
+  "methods": {
+    "checkReadPhoneStatePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkReadPhoneStatePermission()"
+    },
+    "getAllCellInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.telephony.CellInfo\u003e",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "getAllCellInfo()"
+    },
+    "getCellLocation()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.telephony.CellLocation",
+      "exceptions": [],
+      "name": "getCellLocation()"
+    },
+    "getDeviceId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getDeviceId()"
+    },
+    "getEventFlags()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.  Returns the most recent flags passed to #listen().\n\n@return Event flags.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getEventFlags()"
+    },
+    "getGroupIdLevel1()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getGroupIdLevel1()"
+    },
+    "getLine1Number()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLine1Number()"
+    },
+    "getListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.  Returns the most recent listener passed to #listen().\n\n@return Phone state listener.",
+      "params": [],
+      "returnType": "android.telephony.PhoneStateListener",
+      "exceptions": [],
+      "name": "getListener()"
+    },
+    "getNetworkCountryIso()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getNetworkCountryIso()"
+    },
+    "getNetworkOperator()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getNetworkOperator()"
+    },
+    "getNetworkOperatorName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getNetworkOperatorName()"
+    },
+    "getNetworkType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNetworkType()"
+    },
+    "getPhoneType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPhoneType()"
+    },
+    "getSimCountryIso()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSimCountryIso()"
+    },
+    "getSimOperator()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSimOperator()"
+    },
+    "getSimOperatorName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSimOperatorName()"
+    },
+    "getSimState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getSimState()"
+    },
+    "listen(android.telephony.PhoneStateListener,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener",
+        "events"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "listen(android.telephony.PhoneStateListener,int)"
+    },
+    "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "allCellInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)"
+    },
+    "setCellLocation(android.telephony.CellLocation)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cellLocation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCellLocation(android.telephony.CellLocation)"
+    },
+    "setDeviceId(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "newDeviceId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDeviceId(java.lang.String)"
+    },
+    "setGroupIdLevel1(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "groupIdLevel1"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGroupIdLevel1(java.lang.String)"
+    },
+    "setLine1Number(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "line1Number"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLine1Number(java.lang.String)"
+    },
+    "setNetworkCountryIso(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkCountryIso"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkCountryIso(java.lang.String)"
+    },
+    "setNetworkOperator(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkOperator"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkOperator(java.lang.String)"
+    },
+    "setNetworkOperatorName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkOperatorName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkOperatorName(java.lang.String)"
+    },
+    "setNetworkType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkType(int)"
+    },
+    "setPhoneType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPhoneType(int)"
+    },
+    "setReadPhoneStatePermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "readPhoneStatePermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setReadPhoneStatePermission(boolean)"
+    },
+    "setSimCountryIso(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "simCountryIso"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimCountryIso(java.lang.String)"
+    },
+    "setSimOperator(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "simOperator"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimOperator(java.lang.String)"
+    },
+    "setSimOperatorName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "simOperatorName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimOperatorName(java.lang.String)"
+    },
+    "setSimState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "simState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimState(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.telephony.TelephonyManager}.\n",
+  "name": "org.robolectric.shadows.ShadowTelephonyManager"
+}

@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "setVmPolicy(android.os.StrictMode.VmPolicy)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "p"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVmPolicy(android.os.StrictMode.VmPolicy)"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.StrictMode}.\n",
+  "name": "org.robolectric.shadows.ShadowStrictMode"
+}

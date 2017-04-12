@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "newInstance()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.webkit.JsPromptResult",
+      "exceptions": [],
+      "name": "newInstance()"
+    }
+  },
+  "documentation": " Shadow for {@link android.webkit.JsPromptResult}.\n",
+  "name": "org.robolectric.shadows.ShadowJsPromptResult"
+}

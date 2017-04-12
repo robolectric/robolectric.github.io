@@ -1,0 +1,17 @@
+{
+  "methods": {
+    "getInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.text.method.MovementMethod",
+      "exceptions": [],
+      "name": "getInstance()"
+    }
+  },
+  "documentation": " Shadow for {@link android.text.method.LinkMovementMethod}.\n",
+  "name": "org.robolectric.shadows.ShadowLinkMovementMethod"
+}

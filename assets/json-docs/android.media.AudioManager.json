@@ -1,0 +1,271 @@
+{
+  "methods": {
+    "abandonAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "l"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "abandonAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener)"
+    },
+    "getLastAbandonedAudioFocusListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.media.AudioManager.OnAudioFocusChangeListener",
+      "exceptions": [],
+      "name": "getLastAbandonedAudioFocusListener()"
+    },
+    "getLastAudioFocusRequest()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowAudioManager.AudioFocusRequest",
+      "exceptions": [],
+      "name": "getLastAudioFocusRequest()"
+    },
+    "getMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMode()"
+    },
+    "getRingerMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRingerMode()"
+    },
+    "getStreamMaxVolume(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "streamType"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStreamMaxVolume(int)"
+    },
+    "getStreamVolume(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "streamType"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStreamVolume(int)"
+    },
+    "isBluetoothA2dpOn()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isBluetoothA2dpOn()"
+    },
+    "isMicrophoneMute()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isMicrophoneMute()"
+    },
+    "isSpeakerphoneOn()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isSpeakerphoneOn()"
+    },
+    "isValidRingerMode(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "ringerMode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isValidRingerMode(int)"
+    },
+    "isWiredHeadsetOn()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isWiredHeadsetOn()"
+    },
+    "requestAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "l",
+        "streamType",
+        "durationHint"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "requestAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener,int,int)"
+    },
+    "setBluetoothA2dpOn(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "on"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBluetoothA2dpOn(boolean)"
+    },
+    "setMicrophoneMute(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "on"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMicrophoneMute(boolean)"
+    },
+    "setMode(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "mode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMode(int)"
+    },
+    "setNextFocusRequestResponse(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "nextResponseValue"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNextFocusRequestResponse(int)"
+    },
+    "setRingerMode(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "ringerMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRingerMode(int)"
+    },
+    "setSpeakerphoneOn(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "on"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSpeakerphoneOn(boolean)"
+    },
+    "setStreamMaxVolume(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "streamMaxVolume"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStreamMaxVolume(int)"
+    },
+    "setStreamVolume(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "streamVolume"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStreamVolume(int)"
+    },
+    "setStreamVolume(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "streamType",
+        "index",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStreamVolume(int,int,int)"
+    },
+    "setWiredHeadsetOn(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "on"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWiredHeadsetOn(boolean)"
+    }
+  },
+  "documentation": " Shadow for {@link android.media.AudioManager}.\n",
+  "name": "org.robolectric.shadows.ShadowAudioManager"
+}

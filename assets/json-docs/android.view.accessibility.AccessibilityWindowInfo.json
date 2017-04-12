@@ -1,0 +1,330 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "addChild(android.view.accessibility.AccessibilityWindowInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "child"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addChild(android.view.accessibility.AccessibilityWindowInfo)"
+    },
+    "areThereUnrecycledWindows(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Check for leaked objects that were {@code obtain}ed but never\n{@code recycle}d.\n\n@param printUnrecycledWindowsToSystemErr - if true, stack traces of calls\n       to {@code obtain} that lack matching calls to {@code recycle} are\n       dumped to System.err.\n@return {@code true} if there are unrecycled windows",
+      "params": [
+        "printUnrecycledWindowsToSystemErr"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "areThereUnrecycledWindows(boolean)"
+    },
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "object"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)"
+    },
+    "getBoundsInScreen(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outBounds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getBoundsInScreen(android.graphics.Rect)"
+    },
+    "getChild(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "android.view.accessibility.AccessibilityWindowInfo",
+      "exceptions": [],
+      "name": "getChild(int)"
+    },
+    "getChildCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getChildCount()"
+    },
+    "getClone()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityWindowInfo",
+      "exceptions": [],
+      "name": "getClone()"
+    },
+    "getId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getId()"
+    },
+    "getLayer()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLayer()"
+    },
+    "getParent()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityWindowInfo",
+      "exceptions": [],
+      "name": "getParent()"
+    },
+    "getRoot()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "name": "getRoot()"
+    },
+    "getType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getType()"
+    },
+    "hashCode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "hashCode()"
+    },
+    "isAccessibilityFocused()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAccessibilityFocused()"
+    },
+    "isActive()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isActive()"
+    },
+    "isFocused()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isFocused()"
+    },
+    "obtain()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityWindowInfo",
+      "exceptions": [],
+      "name": "obtain()"
+    },
+    "obtain(android.view.accessibility.AccessibilityWindowInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "window"
+      ],
+      "returnType": "android.view.accessibility.AccessibilityWindowInfo",
+      "exceptions": [],
+      "name": "obtain(android.view.accessibility.AccessibilityWindowInfo)"
+    },
+    "recycle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "recycle()"
+    },
+    "resetObtainedInstances()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledWindows} will always\nreturn false if called immediately afterwards.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetObtainedInstances()"
+    },
+    "setAccessibilityFocused(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccessibilityFocused(boolean)"
+    },
+    "setActive(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActive(boolean)"
+    },
+    "setBoundsInScreen(android.graphics.Rect)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bounds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBoundsInScreen(android.graphics.Rect)"
+    },
+    "setFocused(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "focused"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFocused(boolean)"
+    },
+    "setId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setId(int)"
+    },
+    "setLayer(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLayer(int)"
+    },
+    "setRoot(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "root"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRoot(android.view.accessibility.AccessibilityNodeInfo)"
+    },
+    "setType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setType(int)"
+    }
+  },
+  "documentation": " Shadow of {@link android.view.accessibility.AccessibilityWindowInfo} that allows a test to set\n properties that are locked in the original class.\n",
+  "name": "org.robolectric.shadows.ShadowAccessibilityWindowInfo"
+}

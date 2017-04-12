@@ -1,0 +1,93 @@
+{
+  "methods": {
+    "addSensor(int,android.hardware.Sensor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Provide a Sensor for the indicated sensor type.\n@param sensorType from Sensor constants\n@param sensor Sensor instance",
+      "params": [
+        "sensorType",
+        "sensor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addSensor(int,android.hardware.Sensor)"
+    },
+    "createSensorEvent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.hardware.SensorEvent",
+      "exceptions": [],
+      "name": "createSensorEvent()"
+    },
+    "getDefaultSensor(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "android.hardware.Sensor",
+      "exceptions": [],
+      "name": "getDefaultSensor(int)"
+    },
+    "hasListener(android.hardware.SensorEventListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasListener(android.hardware.SensorEventListener)"
+    },
+    "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener",
+        "sensor",
+        "rate"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int)"
+    },
+    "unregisterListener(android.hardware.SensorEventListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterListener(android.hardware.SensorEventListener)"
+    },
+    "unregisterListener(android.hardware.SensorEventListener,android.hardware.Sensor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener",
+        "sensor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterListener(android.hardware.SensorEventListener,android.hardware.Sensor)"
+    }
+  },
+  "documentation": " Shadow for {@link android.hardware.SensorManager}.\n",
+  "name": "org.robolectric.shadows.ShadowSensorManager"
+}

@@ -1,0 +1,40 @@
+{
+  "methods": {
+    "getActualRepeatCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Returns the value that was set as the repeat count. This is otherwise the same\nas getRepeatCount(), except when the count was set to infinite.\n\n@return Repeat count.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getActualRepeatCount()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setRepeatCount(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "count"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRepeatCount(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.animation.ValueAnimator}.\n",
+  "name": "org.robolectric.shadows.ShadowValueAnimator"
+}

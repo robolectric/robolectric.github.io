@@ -1,0 +1,18 @@
+{
+  "methods": {
+    "setConvexPath(android.graphics.Path)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "convexPath"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConvexPath(android.graphics.Path)"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.Outline}.\n",
+  "name": "org.robolectric.shadows.ShadowOutline"
+}

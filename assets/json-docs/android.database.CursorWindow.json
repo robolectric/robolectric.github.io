@@ -1,0 +1,549 @@
+{
+  "methods": {
+    "nativeAllocRow(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeAllocRow(int)"
+    },
+    "nativeAllocRow(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeAllocRow(long)"
+    },
+    "nativeClear(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeClear(int)"
+    },
+    "nativeClear(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeClear(long)"
+    },
+    "nativeCreate(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "name",
+        "cursorWindowSize"
+      ],
+      "returnType": "java.lang.Number",
+      "exceptions": [],
+      "name": "nativeCreate(java.lang.String,int)"
+    },
+    "nativeDispose(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeDispose(int)"
+    },
+    "nativeDispose(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeDispose(long)"
+    },
+    "nativeGetBlob(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeGetBlob(int,int,int)"
+    },
+    "nativeGetBlob(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeGetBlob(long,int,int)"
+    },
+    "nativeGetDouble(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "double",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeGetDouble(int,int,int)"
+    },
+    "nativeGetDouble(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "double",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeGetDouble(long,int,int)"
+    },
+    "nativeGetLong(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeGetLong(int,int,int)"
+    },
+    "nativeGetLong(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeGetLong(long,int,int)"
+    },
+    "nativeGetName(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeGetName(int)"
+    },
+    "nativeGetName(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeGetName(long)"
+    },
+    "nativeGetNumRows(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeGetNumRows(int)"
+    },
+    "nativeGetNumRows(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeGetNumRows(long)"
+    },
+    "nativeGetNumber(long,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "java.lang.Number",
+      "exceptions": [],
+      "name": "nativeGetNumber(long,int,int)"
+    },
+    "nativeGetString(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeGetString(int,int,int)"
+    },
+    "nativeGetString(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeGetString(long,int,int)"
+    },
+    "nativeGetType(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeGetType(int,int,int)"
+    },
+    "nativeGetType(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeGetType(long,int,int)"
+    },
+    "nativePutBlob(int,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "value",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativePutBlob(int,byte[],int,int)"
+    },
+    "nativePutBlob(long,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "value",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativePutBlob(long,byte[],int,int)"
+    },
+    "nativePutDouble(int,double,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "value",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativePutDouble(int,double,int,int)"
+    },
+    "nativePutDouble(long,double,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "value",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativePutDouble(long,double,int,int)"
+    },
+    "nativePutLong(int,long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "value",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativePutLong(int,long,int,int)"
+    },
+    "nativePutLong(long,long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "value",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativePutLong(long,long,int,int)"
+    },
+    "nativePutNull(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativePutNull(int,int,int)"
+    },
+    "nativePutNull(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativePutNull(long,int,int)"
+    },
+    "nativePutString(int,java.lang.String,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "value",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativePutString(int,java.lang.String,int,int)"
+    },
+    "nativePutString(long,java.lang.String,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "value",
+        "row",
+        "column"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativePutString(long,java.lang.String,int,int)"
+    },
+    "nativeSetNumColumns(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "columnNum"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeSetNumColumns(int,int)"
+    },
+    "nativeSetNumColumns(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "columnNum"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeSetNumColumns(long,int)"
+    },
+    "setData(long,com.almworks.sqlite4java.SQLiteStatement)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "windowPtr",
+        "stmt"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "com.almworks.sqlite4java.SQLiteException"
+      ],
+      "name": "setData(long,com.almworks.sqlite4java.SQLiteStatement)"
+    }
+  },
+  "documentation": " Shadow for {@link android.database.CursorWindow}.\n",
+  "name": "org.robolectric.shadows.ShadowCursorWindow"
+}

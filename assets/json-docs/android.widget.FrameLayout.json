@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.widget.FrameLayout}.\n",
+  "name": "org.robolectric.shadows.ShadowFrameLayout"
+}

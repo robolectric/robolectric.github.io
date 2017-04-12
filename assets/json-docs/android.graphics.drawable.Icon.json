@@ -1,0 +1,76 @@
+{
+  "methods": {
+    "getBitmap()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "getBitmap()"
+    },
+    "getDataBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "name": "getDataBytes()"
+    },
+    "getDataLength()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDataLength()"
+    },
+    "getDataOffset()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDataOffset()"
+    },
+    "getResId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getResId()"
+    },
+    "getType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getType()"
+    },
+    "getUri()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "getUri()"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.drawable.Icon}.\n",
+  "name": "org.robolectric.shadows.ShadowIcon"
+}

@@ -1,0 +1,182 @@
+{
+  "methods": {
+    "getBackgroundPackage()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Get the package name of the last background processes killed.",
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getBackgroundPackage()"
+    },
+    "getDeviceConfigurationInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.pm.ConfigurationInfo",
+      "exceptions": [],
+      "name": "getDeviceConfigurationInfo()"
+    },
+    "getMemoryClass()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMemoryClass()"
+    },
+    "getMemoryInfo(android.app.ActivityManager.MemoryInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getMemoryInfo(android.app.ActivityManager.MemoryInfo)"
+    },
+    "getRunningAppProcesses()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e",
+      "exceptions": [],
+      "name": "getRunningAppProcesses()"
+    },
+    "getRunningServices(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "maxNum"
+      ],
+      "returnType": "java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e",
+      "exceptions": [],
+      "name": "getRunningServices(int)"
+    },
+    "getRunningTasks(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "maxNum"
+      ],
+      "returnType": "java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e",
+      "exceptions": [],
+      "name": "getRunningTasks(int)"
+    },
+    "getService()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.app.IActivityManager",
+      "exceptions": [],
+      "name": "getService()"
+    },
+    "isUserAMonkey()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isUserAMonkey()"
+    },
+    "killBackgroundProcesses(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "killBackgroundProcesses(java.lang.String)"
+    },
+    "setMemoryClass(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@param memoryClass Set the application\u0027s memory class.",
+      "params": [
+        "memoryClass"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMemoryClass(int)"
+    },
+    "setMemoryInfo(android.app.ActivityManager.MemoryInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@param memoryInfo Set the application\u0027s memory info.",
+      "params": [
+        "memoryInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMemoryInfo(android.app.ActivityManager.MemoryInfo)"
+    },
+    "setProcesses(java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@param processes List of running processes.",
+      "params": [
+        "processes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProcesses(java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e)"
+    },
+    "setServices(java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@param services List of running services.",
+      "params": [
+        "services"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setServices(java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e)"
+    },
+    "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@param tasks List of running tasks.",
+      "params": [
+        "tasks"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.ActivityManager}.\n",
+  "name": "org.robolectric.shadows.ShadowActivityManager"
+}

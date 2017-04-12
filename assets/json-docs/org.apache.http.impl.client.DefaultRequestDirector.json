@@ -1,0 +1,272 @@
+{
+  "methods": {
+    "__constructor__(org.apache.commons.logging.Log,org.apache.http.protocol.HttpRequestExecutor,org.apache.http.conn.ClientConnectionManager,org.apache.http.ConnectionReuseStrategy,org.apache.http.conn.ConnectionKeepAliveStrategy,org.apache.http.conn.routing.HttpRoutePlanner,org.apache.http.protocol.HttpProcessor,org.apache.http.client.HttpRequestRetryHandler,org.apache.http.client.RedirectHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.UserTokenHandler,org.apache.http.params.HttpParams)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "log",
+        "requestExec",
+        "conman",
+        "reustrat",
+        "kastrat",
+        "rouplan",
+        "httpProcessor",
+        "retryHandler",
+        "redirectHandler",
+        "targetAuthHandler",
+        "proxyAuthHandler",
+        "userTokenHandler",
+        "params"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(org.apache.commons.logging.Log,org.apache.http.protocol.HttpRequestExecutor,org.apache.http.conn.ClientConnectionManager,org.apache.http.ConnectionReuseStrategy,org.apache.http.conn.ConnectionKeepAliveStrategy,org.apache.http.conn.routing.HttpRoutePlanner,org.apache.http.protocol.HttpProcessor,org.apache.http.client.HttpRequestRetryHandler,org.apache.http.client.RedirectHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.UserTokenHandler,org.apache.http.params.HttpParams)"
+    },
+    "__constructor__(org.apache.http.protocol.HttpRequestExecutor,org.apache.http.conn.ClientConnectionManager,org.apache.http.ConnectionReuseStrategy,org.apache.http.conn.ConnectionKeepAliveStrategy,org.apache.http.conn.routing.HttpRoutePlanner,org.apache.http.protocol.HttpProcessor,org.apache.http.client.HttpRequestRetryHandler,org.apache.http.client.RedirectHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.UserTokenHandler,org.apache.http.params.HttpParams)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "requestExec",
+        "conman",
+        "reustrat",
+        "kastrat",
+        "rouplan",
+        "httpProcessor",
+        "retryHandler",
+        "redirectHandler",
+        "targetAuthHandler",
+        "proxyAuthHandler",
+        "userTokenHandler",
+        "params"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(org.apache.http.protocol.HttpRequestExecutor,org.apache.http.conn.ClientConnectionManager,org.apache.http.ConnectionReuseStrategy,org.apache.http.conn.ConnectionKeepAliveStrategy,org.apache.http.conn.routing.HttpRoutePlanner,org.apache.http.protocol.HttpProcessor,org.apache.http.client.HttpRequestRetryHandler,org.apache.http.client.RedirectHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.UserTokenHandler,org.apache.http.params.HttpParams)"
+    },
+    "execute(org.apache.http.HttpHost,org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "httpHost",
+        "httpRequest",
+        "httpContext"
+      ],
+      "returnType": "org.apache.http.HttpResponse",
+      "exceptions": [
+        "org.apache.http.HttpException",
+        "java.io.IOException"
+      ],
+      "name": "execute(org.apache.http.HttpHost,org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext)"
+    },
+    "getConnectionKeepAliveStrategy()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.conn.ConnectionKeepAliveStrategy",
+      "exceptions": [],
+      "name": "getConnectionKeepAliveStrategy()"
+    },
+    "getConnectionManager()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.conn.ClientConnectionManager",
+      "exceptions": [],
+      "name": "getConnectionManager()"
+    },
+    "getConnectionReuseStrategy()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.ConnectionReuseStrategy",
+      "exceptions": [],
+      "name": "getConnectionReuseStrategy()"
+    },
+    "getHttpParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.params.HttpParams",
+      "exceptions": [],
+      "name": "getHttpParams()"
+    },
+    "getHttpProcessor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.protocol.HttpProcessor",
+      "exceptions": [],
+      "name": "getHttpProcessor()"
+    },
+    "getHttpRequestExecutor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.protocol.HttpRequestExecutor",
+      "exceptions": [],
+      "name": "getHttpRequestExecutor()"
+    },
+    "getHttpRequestRetryHandler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.client.HttpRequestRetryHandler",
+      "exceptions": [],
+      "name": "getHttpRequestRetryHandler()"
+    },
+    "getHttpRoutePlanner()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.conn.routing.HttpRoutePlanner",
+      "exceptions": [],
+      "name": "getHttpRoutePlanner()"
+    },
+    "getLatestSentHttpRequest()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.HttpRequest",
+      "exceptions": [],
+      "name": "getLatestSentHttpRequest()"
+    },
+    "getLatestSentHttpRequestInfo()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.httpclient.HttpRequestInfo",
+      "exceptions": [],
+      "name": "getLatestSentHttpRequestInfo()"
+    },
+    "getLog()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.commons.logging.Log",
+      "exceptions": [],
+      "name": "getLog()"
+    },
+    "getProxyAuthenticationHandler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.client.AuthenticationHandler",
+      "exceptions": [],
+      "name": "getProxyAuthenticationHandler()"
+    },
+    "getRedirectHandler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.client.RedirectHandler",
+      "exceptions": [],
+      "name": "getRedirectHandler()"
+    },
+    "getSentHttpRequest(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequestInfo(int)} instead.)\n@return HttpRequest",
+      "params": [
+        "index"
+      ],
+      "returnType": "org.apache.http.HttpRequest",
+      "exceptions": [],
+      "name": "getSentHttpRequest(int)"
+    },
+    "getSentHttpRequestInfo(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequest(int)} instead.)\n@return HttpRequestInfo",
+      "params": [
+        "index"
+      ],
+      "returnType": "org.robolectric.shadows.httpclient.HttpRequestInfo",
+      "exceptions": [],
+      "name": "getSentHttpRequestInfo(int)"
+    },
+    "getTargetAuthenticationHandler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.client.AuthenticationHandler",
+      "exceptions": [],
+      "name": "getTargetAuthenticationHandler()"
+    },
+    "getUserTokenHandler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.apache.http.client.UserTokenHandler",
+      "exceptions": [],
+      "name": "getUserTokenHandler()"
+    },
+    "interceptResponseContent(org.apache.http.HttpResponse)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "response"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "interceptResponseContent(org.apache.http.HttpResponse)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    }
+  },
+  "name": "org.robolectric.shadows.httpclient.ShadowDefaultRequestDirector"
+}

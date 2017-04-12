@@ -1,0 +1,43 @@
+{
+  "methods": {
+    "abortBroadcast()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "abortBroadcast()"
+    },
+    "onReceive(android.content.Context,android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onReceive(android.content.Context,android.content.Intent)"
+    },
+    "onReceive(android.content.Context,android.content.Intent,java.util.concurrent.atomic.AtomicBoolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "intent",
+        "abort"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onReceive(android.content.Context,android.content.Intent,java.util.concurrent.atomic.AtomicBoolean)"
+    }
+  },
+  "documentation": " Shadow for {@link android.content.BroadcastReceiver}.\n",
+  "name": "org.robolectric.shadows.ShadowBroadcastReceiver"
+}

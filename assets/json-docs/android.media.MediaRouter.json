@@ -1,0 +1,16 @@
+{
+  "methods": {
+    "getRouteCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRouteCount()"
+    }
+  },
+  "documentation": " Shadow for {@link android.media.MediaRouter}.\n",
+  "name": "org.robolectric.shadows.ShadowMediaRouter"
+}

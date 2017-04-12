@@ -1,0 +1,16 @@
+{
+  "methods": {
+    "getAdapter()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothAdapter",
+      "exceptions": [],
+      "name": "getAdapter()"
+    }
+  },
+  "documentation": " Shadow for {@link android.bluetooth.BluetoothManager}.\n",
+  "name": "org.robolectric.shadows.ShadowBluetoothManager"
+}

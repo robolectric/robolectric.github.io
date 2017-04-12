@@ -1,0 +1,134 @@
+{
+  "methods": {
+    "currentThreadTimeMicro()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "currentThreadTimeMicro()"
+    },
+    "currentThreadTimeMillis()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "currentThreadTimeMillis()"
+    },
+    "currentTimeMicro()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "currentTimeMicro()"
+    },
+    "currentTimeMillis()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Implements {@link System#currentTimeMillis} through ShadowWrangler.\n\n@return Current time in millis.",
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "currentTimeMillis()"
+    },
+    "elapsedRealtime()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "elapsedRealtime()"
+    },
+    "nanoTime()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Implements {@link System#nanoTime} through ShadowWrangler.\n\n@return Current time with nanos.",
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nanoTime()"
+    },
+    "now()": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "now()"
+    },
+    "setCurrentTimeMillis(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "millis"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setCurrentTimeMillis(long)"
+    },
+    "setNanoTime(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nanoTime"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNanoTime(long)"
+    },
+    "sleep(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "millis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sleep(long)"
+    },
+    "uptimeMillis()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "uptimeMillis()"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.SystemClock}.\n\n \u003cp\u003eThe concept of current time is base on the current time of the UI Scheduler for\n consistency with previous implementations. This is not ideal, since both schedulers\n (background and foreground), can see different values for the current time.\u003c/p\u003e\n",
+  "name": "org.robolectric.shadows.ShadowSystemClock"
+}

@@ -1,0 +1,292 @@
+{
+  "methods": {
+    "create(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "create(java.lang.String)"
+    },
+    "create(java.lang.String,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "name",
+        "options"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options)"
+    },
+    "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "name",
+        "options",
+        "widthAndHeight"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)"
+    },
+    "decodeByteArray(byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "data",
+        "offset",
+        "length"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeByteArray(byte[],int,int)"
+    },
+    "decodeByteArray(byte[],int,int,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "data",
+        "offset",
+        "length",
+        "opts"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeByteArray(byte[],int,int,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeFile(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "pathName"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeFile(java.lang.String)"
+    },
+    "decodeFile(java.lang.String,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "pathName",
+        "options"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeFile(java.lang.String,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeFileDescriptor(java.io.FileDescriptor,android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "fd",
+        "outPadding",
+        "opts"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeFileDescriptor(java.io.FileDescriptor,android.graphics.Rect,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeResource(android.content.res.Resources,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "res",
+        "id"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeResource(android.content.res.Resources,int)"
+    },
+    "decodeResource(android.content.res.Resources,int,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "res",
+        "id",
+        "options"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeResource(android.content.res.Resources,int,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "res",
+        "value",
+        "is",
+        "pad",
+        "opts"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeStream(java.io.InputStream)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "is"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeStream(java.io.InputStream)"
+    },
+    "decodeStream(java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "is",
+        "outPadding",
+        "opts"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeStream(java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)"
+    },
+    "provideWidthAndHeightHints(android.net.Uri,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "uri",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "provideWidthAndHeightHints(android.net.Uri,int,int)"
+    },
+    "provideWidthAndHeightHints(int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "resourceId",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "provideWidthAndHeightHints(int,int,int)"
+    },
+    "provideWidthAndHeightHints(java.io.FileDescriptor,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "fd",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "provideWidthAndHeightHints(java.io.FileDescriptor,int,int)"
+    },
+    "provideWidthAndHeightHints(java.lang.String,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "file",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "provideWidthAndHeightHints(java.lang.String,int,int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "selectWidthAndHeight(java.lang.String,android.graphics.Point)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "name",
+        "widthAndHeight"
+      ],
+      "returnType": "android.graphics.Point",
+      "exceptions": [],
+      "name": "selectWidthAndHeight(java.lang.String,android.graphics.Point)"
+    },
+    "stringify(android.graphics.BitmapFactory.Options)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "options"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "stringify(android.graphics.BitmapFactory.Options)"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.BitmapFactory}.\n",
+  "name": "org.robolectric.shadows.ShadowBitmapFactory"
+}

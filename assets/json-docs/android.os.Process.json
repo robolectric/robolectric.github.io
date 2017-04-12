@@ -1,0 +1,42 @@
+{
+  "methods": {
+    "myPid()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "myPid()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setPid(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "pid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPid(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.Process}.\n",
+  "name": "org.robolectric.shadows.ShadowProcess"
+}

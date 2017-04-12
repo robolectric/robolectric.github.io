@@ -1,0 +1,250 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,int,android.database.Cursor,java.lang.String[],int[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Constructor.\n\n@param context The context where the ListView associated with this\n           SimpleListItemFactory is running\n@param layout resource identifier of a layout file that defines the views\n           for this list item. The layout file should include at least\n           those named views defined in \"to\"\n@param c The database cursor.  Can be null if the cursor is not available yet.\n@param from A list of column names representing the data to bind to the UI.  Can be null\n           if the cursor is not available yet.\n@param to The views that should display column in the \"from\" parameter.\n           These should all be TextViews. The first N views in this list\n           are given the values of the first N columns in the from\n           parameter.  Can be null if the cursor is not available yet.",
+      "params": [
+        "context",
+        "layout",
+        "c",
+        "from",
+        "to"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,int,android.database.Cursor,java.lang.String[],int[])"
+    },
+    "__constructor__(android.content.Context,int,android.database.Cursor,java.lang.String[],int[],int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context",
+        "layout",
+        "c",
+        "from",
+        "to",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,int,android.database.Cursor,java.lang.String[],int[],int)"
+    },
+    "bindView(android.view.View,android.content.Context,android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "view",
+        "context",
+        "cursor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "bindView(android.view.View,android.content.Context,android.database.Cursor)"
+    },
+    "changeCursor(android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "c"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "changeCursor(android.database.Cursor)"
+    },
+    "changeCursorAndColumns(android.database.Cursor,java.lang.String[],int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "c",
+        "from",
+        "to"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "changeCursorAndColumns(android.database.Cursor,java.lang.String[],int[])"
+    },
+    "convertToString(android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cursor"
+      ],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "convertToString(android.database.Cursor)"
+    },
+    "findColumns(java.lang.String[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "documentation": "Create a map from an array of strings to an array of column-id integers in mCursor.\nIf mCursor is null, the array will be discarded.\n\n@param from the Strings naming the columns of interest",
+      "params": [
+        "from"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "findColumns(java.lang.String[])"
+    },
+    "findColumnsFromCursor(android.database.Cursor,java.lang.String[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "c",
+        "from"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "findColumnsFromCursor(android.database.Cursor,java.lang.String[])"
+    },
+    "getCursorToStringConverter()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.SimpleCursorAdapter.CursorToStringConverter",
+      "exceptions": [],
+      "name": "getCursorToStringConverter()"
+    },
+    "getDropDownView(int,android.view.View,android.view.ViewGroup)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "position",
+        "convertView",
+        "parent"
+      ],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getDropDownView(int,android.view.View,android.view.ViewGroup)"
+    },
+    "getStringConversionColumn()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStringConversionColumn()"
+    },
+    "getView(int,android.view.View,android.view.ViewGroup)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "position",
+        "convertView",
+        "parent"
+      ],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getView(int,android.view.View,android.view.ViewGroup)"
+    },
+    "getViewBinder()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.SimpleCursorAdapter.ViewBinder",
+      "exceptions": [],
+      "name": "getViewBinder()"
+    },
+    "setCursorToStringConverter(android.widget.SimpleCursorAdapter.CursorToStringConverter)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cursorToStringConverter"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCursorToStringConverter(android.widget.SimpleCursorAdapter.CursorToStringConverter)"
+    },
+    "setStringConversionColumn(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "stringConversionColumn"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStringConversionColumn(int)"
+    },
+    "setViewBinder(android.widget.SimpleCursorAdapter.ViewBinder)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "viewBinder"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setViewBinder(android.widget.SimpleCursorAdapter.ViewBinder)"
+    },
+    "setViewImage(android.widget.ImageView,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "v",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setViewImage(android.widget.ImageView,java.lang.String)"
+    },
+    "setViewText(android.widget.TextView,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "v",
+        "text"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setViewText(android.widget.TextView,java.lang.String)"
+    },
+    "swapCursor(android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "c"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "name": "swapCursor(android.database.Cursor)"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.SimpleCursorAdapter}.\n",
+  "name": "org.robolectric.shadows.ShadowSimpleCursorAdapter"
+}

@@ -1,0 +1,50 @@
+{
+  "methods": {
+    "getButtonDrawable()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "getButtonDrawable()"
+    },
+    "getButtonDrawableId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getButtonDrawableId()"
+    },
+    "setButtonDrawable(android.graphics.drawable.Drawable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "buttonDrawable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setButtonDrawable(android.graphics.drawable.Drawable)"
+    },
+    "setButtonDrawable(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "buttonDrawableId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setButtonDrawable(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.CompoundButton}.\n",
+  "name": "org.robolectric.shadows.ShadowCompoundButton"
+}

@@ -1,0 +1,46 @@
+{
+  "methods": {
+    "cancel()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel()"
+    },
+    "proceed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "proceed()"
+    },
+    "wasCancelCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasCancelCalled()"
+    },
+    "wasProceedCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasProceedCalled()"
+    }
+  },
+  "documentation": " Shadow for {@link android.webkit.SslErrorHandler}.\n",
+  "name": "org.robolectric.shadows.ShadowSslErrorHandler"
+}

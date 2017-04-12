@@ -1,0 +1,66 @@
+{
+  "methods": {
+    "flush()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "@deprecated use {@link ShadowLooper#idleMainLooper()} instead",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "flush()"
+    },
+    "idleMainLooper()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "@deprecated\n@see org.robolectric.shadows.ShadowLooper#idleMainLooper()",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "idleMainLooper()"
+    },
+    "runMainLooperOneTask()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "@deprecated\n@see ShadowLooper#runMainLooperOneTask() ()",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "runMainLooperOneTask()"
+    },
+    "runMainLooperToEndOfTasks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "@deprecated\n@see ShadowLooper#runUiThreadTasksIncludingDelayedTasks()",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "runMainLooperToEndOfTasks()"
+    },
+    "runMainLooperToNextTask()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "@deprecated\n@see ShadowLooper#runMainLooperToNextTask() ()",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "runMainLooperToNextTask()"
+    }
+  },
+  "documentation": " Shadow for Handler that puts posted {@link Runnable}s into a queue instead of sending them to be handled on a\n separate thread.{@link Runnable}s that are scheduled to be executed immediately can be triggered by calling\n {@link #idleMainLooper()}.\n todo: add utility method to advance time and trigger execution of Runnables scheduled for a time in the future\n \n @deprecated There is no special shadow implementation for the {@link android.os.Handler} class. The special\n handling is all done by {@link ShadowLooper} and {@link ShadowMessageQueue}. This class has been retained\n for backward compatibility with the various static method implementations.\n",
+  "name": "org.robolectric.shadows.ShadowHandler"
+}

@@ -1,0 +1,137 @@
+{
+  "methods": {
+    "clickOnItem(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Simulates a click on the {@code Dialog} item indicated by {@code index}. Handles both multi- and single-choice dialogs, tracks which items are currently\nchecked and calls listeners appropriately.\n\n@param index the index of the item to click on",
+      "params": [
+        "index"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clickOnItem(int)"
+    },
+    "getAdapter()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.Adapter",
+      "exceptions": [],
+      "name": "getAdapter()"
+    },
+    "getCustomTitleView()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return return the view set with {@link AlertDialog.Builder#setCustomTitle(View)}",
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getCustomTitleView()"
+    },
+    "getCustomView()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.FrameLayout",
+      "exceptions": [],
+      "name": "getCustomView()"
+    },
+    "getItems()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the items that are available to be clicked on",
+      "params": [],
+      "returnType": "java.lang.CharSequence[]",
+      "exceptions": [],
+      "name": "getItems()"
+    },
+    "getLatestAlertDialog()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the most recently created {@code AlertDialog}, or null if none has been created during this test run",
+      "params": [],
+      "returnType": "android.app.AlertDialog",
+      "exceptions": [],
+      "name": "getLatestAlertDialog()"
+    },
+    "getMessage()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return the message displayed in the dialog",
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getMessage()"
+    },
+    "getShadowAlertController()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowAlertController",
+      "exceptions": [],
+      "name": "getShadowAlertController()"
+    },
+    "getTitle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getTitle()"
+    },
+    "getView()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return return the view set with {@link AlertDialog.Builder#setView(View)}",
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getView()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Resets the tracking of the most recently created {@code AlertDialog}",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "show()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "show()"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.AlertDialog}.\n",
+  "name": "org.robolectric.shadows.ShadowAlertDialog"
+}

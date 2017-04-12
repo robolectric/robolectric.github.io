@@ -1,0 +1,35 @@
+{
+  "methods": {
+    "disableKeyguard()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "disableKeyguard()"
+    },
+    "isEnabled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isEnabled()"
+    },
+    "reenableKeyguard()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reenableKeyguard()"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock"
+}

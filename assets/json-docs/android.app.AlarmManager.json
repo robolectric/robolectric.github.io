@@ -1,0 +1,170 @@
+{
+  "methods": {
+    "cancel(android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pendingIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel(android.app.PendingIntent)"
+    },
+    "getNextScheduledAlarm()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor consumes and returns the next scheduled alarm on the\nAlarmManager\u0027s stack.\n\n@return the next scheduled alarm, wrapped in a\n        {@link ShadowAlarmManager.ScheduledAlarm} object",
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm",
+      "exceptions": [],
+      "name": "getNextScheduledAlarm()"
+    },
+    "getScheduledAlarms()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm\u003e",
+      "exceptions": [],
+      "name": "getScheduledAlarms()"
+    },
+    "internalSet(int,long,long,android.app.PendingIntent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "interval",
+        "operation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "internalSet(int,long,long,android.app.PendingIntent)"
+    },
+    "peekNextScheduledAlarm()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor returns the most recent scheduled alarm without\nconsuming it.\n\n@return the most recently scheduled alarm, wrapped in a\n        {@link ShadowAlarmManager.ScheduledAlarm} object",
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm",
+      "exceptions": [],
+      "name": "peekNextScheduledAlarm()"
+    },
+    "set(int,long,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "operation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "set(int,long,android.app.PendingIntent)"
+    },
+    "setAndAllowWhileIdle(int,long,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "operation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setAndAllowWhileIdle(int,long,android.app.PendingIntent)"
+    },
+    "setExact(int,long,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "operation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "setExact(int,long,android.app.PendingIntent)"
+    },
+    "setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "operation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)"
+    },
+    "setInexactRepeating(int,long,long,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type",
+        "triggerAtMillis",
+        "intervalMillis",
+        "operation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInexactRepeating(int,long,long,android.app.PendingIntent)"
+    },
+    "setRepeating(int,long,long,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "interval",
+        "operation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRepeating(int,long,long,android.app.PendingIntent)"
+    },
+    "setWindow(int,long,long,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type",
+        "windowStartMillis",
+        "windowLengthMillis",
+        "operation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "setWindow(int,long,long,android.app.PendingIntent)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.AlarmManager}.\n",
+  "name": "org.robolectric.shadows.ShadowAlarmManager"
+}

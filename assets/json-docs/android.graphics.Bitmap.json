@@ -1,0 +1,747 @@
+{
+  "methods": {
+    "appendDescription(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "s"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "appendDescription(java.lang.String)"
+    },
+    "compress(android.graphics.Bitmap.CompressFormat,int,java.io.OutputStream)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "format",
+        "quality",
+        "stream"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "compress(android.graphics.Bitmap.CompressFormat,int,java.io.OutputStream)"
+    },
+    "copy(android.graphics.Bitmap.Config,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "config",
+        "isMutable"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "copy(android.graphics.Bitmap.Config,boolean)"
+    },
+    "copyPixelsFromBuffer(java.nio.Buffer)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dst"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "copyPixelsFromBuffer(java.nio.Buffer)"
+    },
+    "copyPixelsToBuffer(java.nio.Buffer)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dst"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "copyPixelsToBuffer(java.nio.Buffer)"
+    },
+    "createAshmemBitmap()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createAshmemBitmap()"
+    },
+    "createBitmap(android.graphics.Bitmap)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "src"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createBitmap(android.graphics.Bitmap)"
+    },
+    "createBitmap(android.graphics.Bitmap,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "src",
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createBitmap(android.graphics.Bitmap,int,int,int,int)"
+    },
+    "createBitmap(android.graphics.Bitmap,int,int,int,int,android.graphics.Matrix,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "src",
+        "x",
+        "y",
+        "width",
+        "height",
+        "matrix",
+        "filter"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createBitmap(android.graphics.Bitmap,int,int,int,int,android.graphics.Matrix,boolean)"
+    },
+    "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "displayMetrics",
+        "width",
+        "height",
+        "config"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config)"
+    },
+    "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "displayMetrics",
+        "width",
+        "height",
+        "config",
+        "hasAlpha"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config,boolean)"
+    },
+    "createBitmap(int,int,android.graphics.Bitmap.Config)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "width",
+        "height",
+        "config"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createBitmap(int,int,android.graphics.Bitmap.Config)"
+    },
+    "createBitmap(int[],int,int,android.graphics.Bitmap.Config)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "colors",
+        "width",
+        "height",
+        "config"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createBitmap(int[],int,int,android.graphics.Bitmap.Config)"
+    },
+    "createScaledBitmap(android.graphics.Bitmap,int,int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "src",
+        "dstWidth",
+        "dstHeight",
+        "filter"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createScaledBitmap(android.graphics.Bitmap,int,int,boolean)"
+    },
+    "eraseColor(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "c"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "eraseColor(int)"
+    },
+    "getByteCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getByteCount()"
+    },
+    "getBytesPerPixel(android.graphics.Bitmap.Config)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "config"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBytesPerPixel(android.graphics.Bitmap.Config)"
+    },
+    "getConfig()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Bitmap.Config",
+      "exceptions": [],
+      "name": "getConfig()"
+    },
+    "getCreatedFromBitmap()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Reference to original Bitmap from which this Bitmap was created. {@code null} if this Bitmap\nwas not copied from another instance.\n\n@return Original Bitmap from which this Bitmap was created.",
+      "params": [],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "getCreatedFromBitmap()"
+    },
+    "getCreatedFromBytes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Bytes from which this Bitmap was created. {@code null} if this Bitmap was not created from\nbytes.\n\n@return Bytes from which this Bitmap was created.",
+      "params": [],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "name": "getCreatedFromBytes()"
+    },
+    "getCreatedFromColors()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Color array from which this Bitmap was created. {@code null} if this Bitmap was not created\nfrom a color array.\n@return Color array from which this Bitmap was created.",
+      "params": [],
+      "returnType": "int[]",
+      "exceptions": [],
+      "name": "getCreatedFromColors()"
+    },
+    "getCreatedFromFilter()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "{@code true} if this Bitmap was created with filtering.\n@return {@code true} if this Bitmap was created with filtering.",
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getCreatedFromFilter()"
+    },
+    "getCreatedFromHeight()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n@return Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCreatedFromHeight()"
+    },
+    "getCreatedFromMatrix()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.\n@return Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.",
+      "params": [],
+      "returnType": "android.graphics.Matrix",
+      "exceptions": [],
+      "name": "getCreatedFromMatrix()"
+    },
+    "getCreatedFromPath()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Path from which this Bitmap was created. {@code null} if this Bitmap was not create from a\npath.\n\n@return Path from which this Bitmap was created.",
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getCreatedFromPath()"
+    },
+    "getCreatedFromResId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Resource ID from which this Bitmap was created. {@code 0} if this Bitmap was not created\nfrom a resource.\n\n@return Resource ID from which this Bitmap was created.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCreatedFromResId()"
+    },
+    "getCreatedFromStream()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "{@link InputStream} from which this Bitmap was created. {@code null} if this Bitmap was not\ncreated from a stream.\n\n@return InputStream from which this Bitmap was created.",
+      "params": [],
+      "returnType": "java.io.InputStream",
+      "exceptions": [],
+      "name": "getCreatedFromStream()"
+    },
+    "getCreatedFromWidth()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n\n@return Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCreatedFromWidth()"
+    },
+    "getCreatedFromX()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Horizontal offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.\n\n@return Horizontal offset within {@link #getCreatedFromBitmap()}.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCreatedFromX()"
+    },
+    "getCreatedFromY()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Vertical offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.\n\n@return Vertical offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCreatedFromY()"
+    },
+    "getDensity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDensity()"
+    },
+    "getDescription()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getDescription()"
+    },
+    "getGenerationId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getGenerationId()"
+    },
+    "getHeight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHeight()"
+    },
+    "getPixel(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPixel(int,int)"
+    },
+    "getPixels(int[],int,int,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Note that this method will return a RuntimeException unless:\n- {@code pixels} has the same length as the number of pixels of the bitmap.\n- {@code x \u003d 0}\n- {@code y \u003d 0}\n- {@code width} and {@code height} height match the current bitmap\u0027s dimensions.",
+      "params": [
+        "pixels",
+        "offset",
+        "stride",
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getPixels(int[],int,int,int,int,int,int)"
+    },
+    "getRealBitmap()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "getRealBitmap()"
+    },
+    "getRowBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRowBytes()"
+    },
+    "getWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWidth()"
+    },
+    "hasAlpha()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasAlpha()"
+    },
+    "hasMipMap()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasMipMap()"
+    },
+    "internalCheckPixelAccess(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "internalCheckPixelAccess(int,int)"
+    },
+    "isMutable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isMutable()"
+    },
+    "isRecycled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isRecycled()"
+    },
+    "nativeCreateFromParcel(android.os.Parcel)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "p"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "nativeCreateFromParcel(android.os.Parcel)"
+    },
+    "recycle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "recycle()"
+    },
+    "setConfig(android.graphics.Bitmap.Config)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "config"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConfig(android.graphics.Bitmap.Config)"
+    },
+    "setCreatedFromResId(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "resId",
+        "description"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCreatedFromResId(int,java.lang.String)"
+    },
+    "setDensity(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "density"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDensity(int)"
+    },
+    "setDescription(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "s"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDescription(java.lang.String)"
+    },
+    "setHasAlpha(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "hasAlpha"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHasAlpha(boolean)"
+    },
+    "setHasMipMap(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "hasMipMap"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHasMipMap(boolean)"
+    },
+    "setHeight(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHeight(int)"
+    },
+    "setMutable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "mutable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMutable(boolean)"
+    },
+    "setPixel(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "x",
+        "y",
+        "color"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPixel(int,int,int)"
+    },
+    "setPixels(int[],int,int,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pixels",
+        "offset",
+        "stride",
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPixels(int[],int,int,int,int,int,int)"
+    },
+    "setWidth(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "width"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWidth(int)"
+    },
+    "toString()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "toString()"
+    },
+    "visualize(android.graphics.Bitmap)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param bitmap the bitmap to visualize\n@return Textual representation of the appearance of the object.",
+      "params": [
+        "bitmap"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "visualize(android.graphics.Bitmap)"
+    },
+    "writeToParcel(android.os.Parcel,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "p",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writeToParcel(android.os.Parcel,int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.Bitmap}.\n",
+  "name": "org.robolectric.shadows.ShadowBitmap"
+}

@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "callOnAttachedToHierarchy(android.preference.PreferenceManager)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "preferenceManager"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callOnAttachedToHierarchy(android.preference.PreferenceManager)"
+    },
+    "click()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "click()"
+    }
+  },
+  "documentation": " Shadow for {@link android.preference.Preference}.\n",
+  "name": "org.robolectric.shadows.ShadowPreference"
+}

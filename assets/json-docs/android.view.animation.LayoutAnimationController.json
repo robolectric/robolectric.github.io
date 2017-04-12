@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "getLoadedFromResourceId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLoadedFromResourceId()"
+    },
+    "setLoadedFromResourceId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "loadedFromResourceId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLoadedFromResourceId(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.animation.LayoutAnimationController}.\n",
+  "name": "org.robolectric.shadows.ShadowLayoutAnimationController"
+}

@@ -1,0 +1,58 @@
+{
+  "methods": {
+    "I(int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "i",
+        "j",
+        "offset"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "I(int,int,int)"
+    },
+    "multiplyMM(float[],int,float[],int,float[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Multiplies two 4x4 matrices together and stores the result in a third 4x4\nmatrix. In matrix notation: result \u003d lhs x rhs. Due to the way\nmatrix multiplication works, the result matrix will have the same\neffect as first multiplying by the rhs matrix, then multiplying by\nthe lhs matrix. This is the opposite of what you might expect.\n\u003cp\u003e\nThe same float array may be passed for result, lhs, and/or rhs. However,\nthe result element values are undefined if the result elements overlap\neither the lhs or rhs elements.\n\n@param result       The float array that holds the result.\n@param resultOffset The offset into the result array where the result is\n                    stored.\n@param lhs          The float array that holds the left-hand-side matrix.\n@param lhsOffset    The offset into the lhs array where the lhs is stored\n@param rhs          The float array that holds the right-hand-side matrix.\n@param rhsOffset    The offset into the rhs array where the rhs is stored.\n@throws IllegalArgumentException if result, lhs, or rhs are null, or if\n                                 resultOffset + 16 \u003e result.length or lhsOffset + 16 \u003e lhs.length or\n                                 rhsOffset + 16 \u003e rhs.length.",
+      "params": [
+        "result",
+        "resultOffset",
+        "lhs",
+        "lhsOffset",
+        "rhs",
+        "rhsOffset"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "multiplyMM(float[],int,float[],int,float[],int)"
+    },
+    "multiplyMV(float[],int,float[],int,float[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "documentation": "Multiplies a 4 element vector by a 4x4 matrix and stores the result in a\n4-element column vector. In matrix notation: result \u003d lhs x rhs\n\u003cp\u003e\nThe same float array may be passed for resultVec, lhsMat, and/or rhsVec.\nHowever, the resultVec element values are undefined if the resultVec\nelements overlap either the lhsMat or rhsVec elements.\n\n@param resultVec       The float array that holds the result vector.\n@param resultVecOffset The offset into the result array where the result\n                       vector is stored.\n@param lhsMat          The float array that holds the left-hand-side matrix.\n@param lhsMatOffset    The offset into the lhs array where the lhs is stored\n@param rhsVec          The float array that holds the right-hand-side vector.\n@param rhsVecOffset    The offset into the rhs vector where the rhs vector\n                       is stored.\n@throws IllegalArgumentException if resultVec, lhsMat,\n                                 or rhsVec are null, or if resultVecOffset + 4 \u003e resultVec.length\n                                 or lhsMatOffset + 16 \u003e lhsMat.length or\n                                 rhsVecOffset + 4 \u003e rhsVec.length.",
+      "params": [
+        "resultVec",
+        "resultVecOffset",
+        "lhsMat",
+        "lhsMatOffset",
+        "rhsVec",
+        "rhsVecOffset"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "multiplyMV(float[],int,float[],int,float[],int)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowOpenGLMatrix"
+}

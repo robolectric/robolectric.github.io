@@ -1,0 +1,157 @@
+{
+  "methods": {
+    "addAccessibilityStateChangeListener(android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "addAccessibilityStateChangeListener(android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener)"
+    },
+    "getAccessibilityServiceList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.pm.ServiceInfo\u003e",
+      "exceptions": [],
+      "name": "getAccessibilityServiceList()"
+    },
+    "getEnabledAccessibilityServiceList(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "feedbackTypeFlags"
+      ],
+      "returnType": "java.util.List\u003candroid.accessibilityservice.AccessibilityServiceInfo\u003e",
+      "exceptions": [],
+      "name": "getEnabledAccessibilityServiceList(int)"
+    },
+    "getInstalledAccessibilityServiceList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.accessibilityservice.AccessibilityServiceInfo\u003e",
+      "exceptions": [],
+      "name": "getInstalledAccessibilityServiceList()"
+    },
+    "getInstance(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.view.accessibility.AccessibilityManager",
+      "exceptions": [
+        "java.lang.Exception"
+      ],
+      "name": "getInstance(android.content.Context)"
+    },
+    "isEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isEnabled()"
+    },
+    "isTouchExplorationEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isTouchExplorationEnabled()"
+    },
+    "removeAccessibilityStateChangeListener(android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "removeAccessibilityStateChangeListener(android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener)"
+    },
+    "setAccessibilityServiceList(java.util.List\u003candroid.content.pm.ServiceInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accessibilityServiceList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccessibilityServiceList(java.util.List\u003candroid.content.pm.ServiceInfo\u003e)"
+    },
+    "setEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEnabled(boolean)"
+    },
+    "setEnabledAccessibilityServiceList(java.util.List\u003candroid.accessibilityservice.AccessibilityServiceInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enabledAccessibilityServiceList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEnabledAccessibilityServiceList(java.util.List\u003candroid.accessibilityservice.AccessibilityServiceInfo\u003e)"
+    },
+    "setInstalledAccessibilityServiceList(java.util.List\u003candroid.accessibilityservice.AccessibilityServiceInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "installedAccessibilityServiceList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInstalledAccessibilityServiceList(java.util.List\u003candroid.accessibilityservice.AccessibilityServiceInfo\u003e)"
+    },
+    "setTouchExplorationEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "touchExplorationEnabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTouchExplorationEnabled(boolean)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.accessibility.AccessibilityManager}.\n",
+  "name": "org.robolectric.shadows.ShadowAccessibilityManager"
+}

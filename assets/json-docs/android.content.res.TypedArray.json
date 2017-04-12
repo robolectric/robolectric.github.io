@@ -1,0 +1,59 @@
+{
+  "methods": {
+    "create(android.content.res.Resources,int[],int[],int[],int,java.lang.CharSequence[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "realResources",
+        "attrs",
+        "data",
+        "indices",
+        "len",
+        "stringData"
+      ],
+      "returnType": "android.content.res.TypedArray",
+      "exceptions": [],
+      "name": "create(android.content.res.Resources,int[],int[],int[],int,java.lang.CharSequence[])"
+    },
+    "dump(android.content.res.TypedArray)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "typedArray"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dump(android.content.res.TypedArray)"
+    },
+    "getPositionDescription()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getPositionDescription()"
+    },
+    "loadStringValueAt(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "loadStringValueAt(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.content.res.TypedArray}.\n",
+  "name": "org.robolectric.shadows.ShadowTypedArray"
+}

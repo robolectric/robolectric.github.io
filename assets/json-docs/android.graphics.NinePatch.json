@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "isNinePatchChunk(byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "chunk"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isNinePatchChunk(byte[])"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.NinePatch}.\n",
+  "name": "org.robolectric.shadows.ShadowNinePatch"
+}

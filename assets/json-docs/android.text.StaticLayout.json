@@ -1,0 +1,43 @@
+{
+  "methods": {
+    "nComputeLineBreaks(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "recycle",
+        "recycleBreaks",
+        "recycleWidths",
+        "recycleFlags",
+        "recycleLength"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "nComputeLineBreaks(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
+    "nLineBreakOpportunities(java.lang.String,char[],int,int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "locale",
+        "text",
+        "length",
+        "recycle"
+      ],
+      "returnType": "int[]",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 22,
+      "name": "nLineBreakOpportunities(java.lang.String,char[],int,int[])"
+    }
+  },
+  "documentation": " Shadow for {@link android.text.StaticLayout}.\n",
+  "name": "org.robolectric.shadows.ShadowStaticLayout"
+}

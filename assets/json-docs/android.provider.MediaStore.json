@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.provider.MediaStore}.\n",
+  "name": "org.robolectric.shadows.ShadowMediaStore"
+}

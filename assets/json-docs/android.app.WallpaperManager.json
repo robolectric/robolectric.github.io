@@ -1,0 +1,36 @@
+{
+  "methods": {
+    "getInstance(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.app.WallpaperManager",
+      "exceptions": [],
+      "name": "getInstance(android.content.Context)"
+    },
+    "sendWallpaperCommand(android.os.IBinder,java.lang.String,int,int,int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "windowToken",
+        "action",
+        "x",
+        "y",
+        "z",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendWallpaperCommand(android.os.IBinder,java.lang.String,int,int,int,android.os.Bundle)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.WallpaperManager}.\n",
+  "name": "org.robolectric.shadows.ShadowWallpaperManager"
+}

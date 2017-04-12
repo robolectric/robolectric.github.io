@@ -1,0 +1,132 @@
+{
+  "methods": {
+    "clearLastSentDataMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendDataMessage}.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLastSentDataMessageParams()"
+    },
+    "clearLastSentMultipartTextMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendMultipartTextMessage}.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLastSentMultipartTextMessageParams()"
+    },
+    "clearLastSentTextMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendTextMessage}.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLastSentTextMessageParams()"
+    },
+    "getDefault()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.telephony.SmsManager",
+      "exceptions": [],
+      "name": "getDefault()"
+    },
+    "getLastSentDataMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendDataMessage}.",
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowSmsManager.DataMessageParams",
+      "exceptions": [],
+      "name": "getLastSentDataMessageParams()"
+    },
+    "getLastSentMultipartTextMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendMultipartTextMessage}.",
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowSmsManager.TextMultipartParams",
+      "exceptions": [],
+      "name": "getLastSentMultipartTextMessageParams()"
+    },
+    "getLastSentTextMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendTextMessage}.",
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowSmsManager.TextSmsParams",
+      "exceptions": [],
+      "name": "getLastSentTextMessageParams()"
+    },
+    "sendDataMessage(java.lang.String,java.lang.String,short,byte[],android.app.PendingIntent,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "destinationAddress",
+        "scAddress",
+        "destinationPort",
+        "data",
+        "sentIntent",
+        "deliveryIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendDataMessage(java.lang.String,java.lang.String,short,byte[],android.app.PendingIntent,android.app.PendingIntent)"
+    },
+    "sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.ArrayList\u003cjava.lang.String\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "destinationAddress",
+        "scAddress",
+        "parts",
+        "sentIntents",
+        "deliveryIntents"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.ArrayList\u003cjava.lang.String\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e)"
+    },
+    "sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "destinationAddress",
+        "scAddress",
+        "text",
+        "sentIntent",
+        "deliveryIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)"
+    }
+  },
+  "documentation": " Shadow for {@link android.telephony.SmsManager}.\n",
+  "name": "org.robolectric.shadows.ShadowSmsManager"
+}

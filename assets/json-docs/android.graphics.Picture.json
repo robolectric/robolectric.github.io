@@ -1,0 +1,86 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "__constructor__(android.graphics.Picture)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "src"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.graphics.Picture)"
+    },
+    "__constructor__(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "nativePicture",
+        "fromStream"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(int,boolean)"
+    },
+    "__constructor__(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "nativePicture"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(long)"
+    },
+    "beginRecording(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "width",
+        "height"
+      ],
+      "returnType": "android.graphics.Canvas",
+      "exceptions": [],
+      "name": "beginRecording(int,int)"
+    },
+    "getHeight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHeight()"
+    },
+    "getWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWidth()"
+    }
+  },
+  "documentation": " Shadow for {@link Picture}.\n",
+  "name": "org.robolectric.shadows.ShadowPicture"
+}

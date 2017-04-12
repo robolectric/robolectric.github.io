@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "__constructor__(android.view.ViewGroup.LayoutParams)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "source"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.view.ViewGroup.LayoutParams)"
+    },
+    "__constructor__(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "w",
+        "h"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(int,int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.view.ViewGroup.LayoutParams}.\n",
+  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowLayoutParams"
+}

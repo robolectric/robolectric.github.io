@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "smoothScrollTo(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "smoothScrollTo(int,int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.ScrollView}.\n",
+  "name": "org.robolectric.shadows.ShadowScrollView"
+}

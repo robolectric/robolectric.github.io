@@ -1,0 +1,26 @@
+{
+  "methods": {
+    "getMatrix()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "float[]",
+      "exceptions": [],
+      "name": "getMatrix()"
+    },
+    "toString()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "toString()"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.ColorMatrix}.\n",
+  "name": "org.robolectric.shadows.ShadowColorMatrix"
+}

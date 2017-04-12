@@ -1,0 +1,5 @@
+{
+  "methods": {},
+  "documentation": " Shadow for {@link android.widget.EdgeEffect}.\n",
+  "name": "org.robolectric.shadows.ShadowEdgeEffect"
+}

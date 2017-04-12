@@ -1,0 +1,269 @@
+{
+  "methods": {
+    "canPause()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "canPause()"
+    },
+    "getCurrentPosition()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCurrentPosition()"
+    },
+    "getCurrentVideoState()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Current video state.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCurrentVideoState()"
+    },
+    "getDuration()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDuration()"
+    },
+    "getOnCompletionListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return On completion listener.",
+      "params": [],
+      "returnType": "android.media.MediaPlayer.OnCompletionListener",
+      "exceptions": [],
+      "name": "getOnCompletionListener()"
+    },
+    "getOnErrorListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return On error listener.",
+      "params": [],
+      "returnType": "android.media.MediaPlayer.OnErrorListener",
+      "exceptions": [],
+      "name": "getOnErrorListener()"
+    },
+    "getOnPreparedListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return On prepared listener.",
+      "params": [],
+      "returnType": "android.media.MediaPlayer.OnPreparedListener",
+      "exceptions": [],
+      "name": "getOnPreparedListener()"
+    },
+    "getPrevVideoState()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Previous video state.",
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPrevVideoState()"
+    },
+    "getVideoPath()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Video path.",
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getVideoPath()"
+    },
+    "getVideoURIString()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.\n\n@return Video URI.",
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getVideoURIString()"
+    },
+    "isPlaying()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isPlaying()"
+    },
+    "pause()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "pause()"
+    },
+    "resume()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resume()"
+    },
+    "savePrevState()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "documentation": "Non-Android accessor.",
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "savePrevState()"
+    },
+    "seekTo(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "msec"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "seekTo(int)"
+    },
+    "setDuration(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor.",
+      "params": [
+        "duration"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDuration(int)"
+    },
+    "setOnCompletionListener(android.media.MediaPlayer.OnCompletionListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "l"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnCompletionListener(android.media.MediaPlayer.OnCompletionListener)"
+    },
+    "setOnErrorListener(android.media.MediaPlayer.OnErrorListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "l"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnErrorListener(android.media.MediaPlayer.OnErrorListener)"
+    },
+    "setOnPreparedListener(android.media.MediaPlayer.OnPreparedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "l"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnPreparedListener(android.media.MediaPlayer.OnPreparedListener)"
+    },
+    "setVideoPath(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVideoPath(java.lang.String)"
+    },
+    "setVideoURI(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVideoURI(android.net.Uri)"
+    },
+    "start()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "start()"
+    },
+    "stopPlayback()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopPlayback()"
+    },
+    "suspend()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "suspend()"
+    }
+  },
+  "documentation": " Shadow for {@link android.widget.VideoView}.\n",
+  "name": "org.robolectric.shadows.ShadowVideoView"
+}

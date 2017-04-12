@@ -1,0 +1,41 @@
+{
+  "methods": {
+    "setInterface(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intf"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInterface(java.lang.String)"
+    },
+    "setNetworkName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkName(java.lang.String)"
+    },
+    "setPassphrase(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "passphrase"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPassphrase(java.lang.String)"
+    }
+  },
+  "name": "org.robolectric.shadows.ShadowWifiP2pGroup"
+}

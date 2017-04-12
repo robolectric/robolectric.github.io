@@ -1,0 +1,19 @@
+{
+  "methods": {
+    "send(int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "resultCode",
+        "resultData"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "send(int,android.os.Bundle)"
+    }
+  },
+  "documentation": " Shadow for {@link android.os.ResultReceiver}.\n",
+  "name": "org.robolectric.shadows.ShadowResultReceiver"
+}

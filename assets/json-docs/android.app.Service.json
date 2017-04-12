@@ -1,0 +1,125 @@
+{
+  "methods": {
+    "getLastForegroundNotification()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.app.Notification",
+      "exceptions": [],
+      "name": "getLastForegroundNotification()"
+    },
+    "getLastForegroundNotificationId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLastForegroundNotificationId()"
+    },
+    "getNotificationShouldRemoved()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getNotificationShouldRemoved()"
+    },
+    "isForegroundStopped()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isForegroundStopped()"
+    },
+    "isStoppedBySelf()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Non-Android accessor, to use in assertions.\n@return Is this service stopped by self.",
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isStoppedBySelf()"
+    },
+    "onDestroy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onDestroy()"
+    },
+    "removeForegroundNotification()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeForegroundNotification()"
+    },
+    "startForeground(int,android.app.Notification)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "id",
+        "notification"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startForeground(int,android.app.Notification)"
+    },
+    "stopForeground(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "removeNotification"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopForeground(boolean)"
+    },
+    "stopSelf()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopSelf()"
+    },
+    "stopSelf(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopSelf(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.app.Service}.\n",
+  "name": "org.robolectric.shadows.ShadowService"
+}

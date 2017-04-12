@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "getColor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getColor()"
+    },
+    "setColor(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "color"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setColor(int)"
+    }
+  },
+  "documentation": " Shadow for {@link android.graphics.drawable.GradientDrawable}.\n",
+  "name": "org.robolectric.shadows.ShadowGradientDrawable"
+}
