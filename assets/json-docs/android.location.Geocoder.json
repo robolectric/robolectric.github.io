@@ -163,5 +163,18 @@
     }
   },
   "documentation": " Shadow for {@link android.location.Geocoder}.\n",
+  "imports": [
+    "android.location.Address",
+    "android.location.Geocoder",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.io.IOException",
+    "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.List",
+    "java.util.Locale"
+  ],
   "name": "org.robolectric.shadows.maps.ShadowGeocoder"
 }

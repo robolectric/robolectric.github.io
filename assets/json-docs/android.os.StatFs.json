@@ -142,5 +142,16 @@
     }
   },
   "documentation": " Shadow for {@link android.os.StatFs}.\n",
+  "imports": [
+    "android.os.StatFs",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "java.io.File",
+    "java.util.HashMap",
+    "java.util.Map",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
+  ],
   "name": "org.robolectric.shadows.ShadowStatFs"
 }

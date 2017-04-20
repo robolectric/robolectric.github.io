@@ -89,5 +89,17 @@
     }
   },
   "documentation": " Shadow for {@link android.app.DatePickerDialog}.\n",
+  "imports": [
+    "android.app.DatePickerDialog",
+    "android.content.Context",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "java.util.Calendar",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor"
+  ],
   "name": "org.robolectric.shadows.ShadowDatePickerDialog"
 }

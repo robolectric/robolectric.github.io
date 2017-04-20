@@ -127,5 +127,16 @@
     }
   },
   "documentation": " Shadow for {@link GoogleApiAvailability}.\n",
+  "imports": [
+    "android.app.Activity",
+    "android.app.Dialog",
+    "android.content.Context",
+    "android.content.DialogInterface",
+    "com.google.android.gms.common.ConnectionResult",
+    "com.google.android.gms.common.GoogleApiAvailability",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
   "name": "org.robolectric.shadows.gms.common.ShadowGoogleApiAvailability"
 }

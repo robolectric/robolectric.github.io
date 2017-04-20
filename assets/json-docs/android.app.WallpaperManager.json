@@ -32,5 +32,14 @@
     }
   },
   "documentation": " Shadow for {@link android.app.WallpaperManager}.\n",
+  "imports": [
+    "android.app.WallpaperManager",
+    "android.content.Context",
+    "android.os.Bundle",
+    "android.os.IBinder",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
   "name": "org.robolectric.shadows.ShadowWallpaperManager"
 }

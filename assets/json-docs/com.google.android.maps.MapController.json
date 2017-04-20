@@ -117,5 +117,11 @@
     }
   },
   "documentation": " Shadow for {@link com.google.android.maps.MapController}.\n",
+  "imports": [
+    "com.google.android.maps.GeoPoint",
+    "com.google.android.maps.MapController",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.maps.ShadowMapController"
 }

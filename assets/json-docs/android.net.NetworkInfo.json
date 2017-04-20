@@ -116,7 +116,7 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n\u003cp\u003e\nSets up the return value of {@link #isConnectedOrConnecting()} and {@link #isConnected()}.\n\n@param isConnected the value that {@link #isConnectedOrConnecting()} and {@link #isConnected()} will return.",
+      "documentation": "Non-Android accessor.\n\nSets up the return value of {@link #isConnectedOrConnecting()} and {@link #isConnected()}.\n\n@param isConnected the value that {@link #isConnectedOrConnecting()} and {@link #isConnected()} will return.",
       "params": [
         "isConnected"
       ],
@@ -163,5 +163,12 @@
     }
   },
   "documentation": " Shadow for {@code android.net.NetworkInfo}.\n",
+  "imports": [
+    "android.net.NetworkInfo",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
   "name": "org.robolectric.shadows.ShadowNetworkInfo"
 }

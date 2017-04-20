@@ -13,5 +13,12 @@
     }
   },
   "documentation": " Shadow for {@link android.database.AbstractCursor}.\n",
+  "imports": [
+    "android.database.AbstractCursor",
+    "android.net.Uri",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
   "name": "org.robolectric.shadows.ShadowAbstractCursor"
 }

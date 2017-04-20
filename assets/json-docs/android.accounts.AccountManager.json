@@ -462,5 +462,25 @@
     }
   },
   "documentation": " Shadow for {@link android.accounts.AccountManager}.\n",
+  "imports": [
+    "android.accounts.*",
+    "android.app.Activity",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.os.Bundle",
+    "android.os.Handler",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.internal.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.io.IOException",
+    "java.util.*",
+    "java.util.Map.Entry",
+    "java.util.concurrent.TimeUnit",
+    "org.robolectric.util.Scheduler.IdleState",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1"
+  ],
   "name": "org.robolectric.shadows.ShadowAccountManager"
 }

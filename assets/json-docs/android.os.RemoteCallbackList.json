@@ -118,5 +118,14 @@
     }
   },
   "documentation": " Shadow for {@link android.os.RemoteCallbackList}.\n",
+  "imports": [
+    "android.os.IBinder",
+    "android.os.IInterface",
+    "android.os.RemoteCallbackList",
+    "android.os.RemoteException",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.HashMap"
+  ],
   "name": "org.robolectric.shadows.ShadowRemoteCallbackList"
 }

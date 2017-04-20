@@ -15,5 +15,14 @@
     }
   },
   "documentation": " Shadow for {@link android.os.ResultReceiver}.\n",
+  "imports": [
+    "android.os.Bundle",
+    "android.os.ResultReceiver",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
   "name": "org.robolectric.shadows.ShadowResultReceiver"
 }

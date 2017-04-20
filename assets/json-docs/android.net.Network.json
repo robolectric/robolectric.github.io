@@ -39,5 +39,11 @@
     }
   },
   "documentation": " Shadow for {@code android.net.Network}.\n",
+  "imports": [
+    "android.net.Network",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "android.os.Build.VERSION_CODES.LOLLIPOP"
+  ],
   "name": "org.robolectric.shadows.ShadowNetwork"
 }

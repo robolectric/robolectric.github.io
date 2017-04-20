@@ -58,5 +58,14 @@
     }
   },
   "documentation": " Shadow for {@link android.content.pm.ResolveInfo}.\n",
+  "imports": [
+    "android.content.pm.ActivityInfo",
+    "android.content.pm.ApplicationInfo",
+    "android.content.pm.PackageManager",
+    "android.content.pm.ResolveInfo",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowResolveInfo"
 }

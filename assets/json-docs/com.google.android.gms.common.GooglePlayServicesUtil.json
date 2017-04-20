@@ -211,5 +211,22 @@
     }
   },
   "documentation": " Shadow for {@link GooglePlayServicesUtil} that allows providing a\n {@link GooglePlayServicesUtilImpl}.\n Calls to static method of {@link GooglePlayServicesUtil} will be redirected to the provided\n {@link GooglePlayServicesUtilImpl} implementation. Use\n {@link #provideImpl(GooglePlayServicesUtilImpl)} to\n set the implementation instance. By default, a {@link GooglePlayServicesUtilImpl} is used in call\n redirection. Use mocks or subclassing {@link GooglePlayServicesUtilImpl} to achieve desired\n behaviors.\n",
+  "imports": [
+    "com.google.android.gms.common.ConnectionResult",
+    "com.google.android.gms.common.GooglePlayServicesUtil",
+    "com.google.common.base.Preconditions",
+    "android.app.Activity",
+    "android.app.Dialog",
+    "android.app.PendingIntent",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.content.DialogInterface.OnCancelListener",
+    "android.content.res.Resources",
+    "android.support.v4.app.Fragment",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
   "name": "org.robolectric.shadows.gms.ShadowGooglePlayServicesUtil"
 }

@@ -417,5 +417,19 @@
     }
   },
   "documentation": " Shadow for {@link android.view.Display}.\n",
+  "imports": [
+    "android.graphics.PixelFormat",
+    "android.graphics.Point",
+    "android.graphics.Rect",
+    "android.util.DisplayMetrics",
+    "android.view.Display",
+    "android.view.DisplayAdjustments",
+    "android.view.Surface",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP"
+  ],
   "name": "org.robolectric.shadows.ShadowDisplay"
 }

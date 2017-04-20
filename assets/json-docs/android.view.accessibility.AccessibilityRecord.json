@@ -69,5 +69,15 @@
     }
   },
   "documentation": " Shadow of {@link android.view.accessibility.AccessibilityRecord}.\n",
+  "imports": [
+    "android.os.Parcelable",
+    "android.view.View",
+    "android.view.accessibility.AccessibilityRecord",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
   "name": "org.robolectric.shadows.ShadowAccessibilityRecord"
 }

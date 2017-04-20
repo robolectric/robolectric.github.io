@@ -338,5 +338,10 @@
     }
   },
   "documentation": " Shadow for {@link android.net.TrafficStats}.\n",
+  "imports": [
+    "android.net.TrafficStats",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowTrafficStats"
 }

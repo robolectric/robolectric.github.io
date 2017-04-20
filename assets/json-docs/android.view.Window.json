@@ -104,5 +104,19 @@
     }
   },
   "documentation": " Shadow for {@link android.view.Window}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.graphics.drawable.Drawable",
+    "android.view.Window",
+    "android.widget.ProgressBar",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowWindow"
 }

@@ -27,5 +27,20 @@
     }
   },
   "documentation": " Shadow for {@link android.view.ViewGroup.LayoutParams}.\n",
+  "imports": [
+    "android.os.Looper",
+    "android.view.MotionEvent",
+    "android.view.View",
+    "android.view.ViewGroup",
+    "android.view.animation.Animation.AnimationListener",
+    "android.view.animation.LayoutAnimationController",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "java.io.PrintStream",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowViewGroup.ShadowLayoutParams"
 }

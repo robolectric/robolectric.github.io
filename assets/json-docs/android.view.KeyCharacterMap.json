@@ -74,5 +74,14 @@
     }
   },
   "documentation": " Shadow for {@link android.view.KeyCharacterMap}.\n",
+  "imports": [
+    "android.view.KeyCharacterMap",
+    "android.view.KeyEvent",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.HashMap",
+    "java.util.Map"
+  ],
   "name": "org.robolectric.shadows.ShadowKeyCharacterMap"
 }

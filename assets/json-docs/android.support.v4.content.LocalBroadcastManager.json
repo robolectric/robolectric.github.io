@@ -72,5 +72,23 @@
     }
   },
   "documentation": " Shadow for {@link android.support.v4.content.LocalBroadcastManager}.\n",
+  "imports": [
+    "android.content.BroadcastReceiver",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.content.IntentFilter",
+    "android.support.v4.content.LocalBroadcastManager",
+    "org.robolectric.Robolectric",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.Provider",
+    "org.robolectric.shadows.ShadowApplication",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "java.util.ArrayList",
+    "java.util.Iterator",
+    "java.util.List"
+  ],
   "name": "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager"
 }

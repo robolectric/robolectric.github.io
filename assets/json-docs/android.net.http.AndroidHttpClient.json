@@ -181,5 +181,25 @@
     }
   },
   "documentation": " Shadow for {@link android.net.http.AndroidHttpClient}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.net.http.AndroidHttpClient",
+    "org.apache.http.HttpHost",
+    "org.apache.http.HttpRequest",
+    "org.apache.http.HttpResponse",
+    "org.apache.http.client.ClientProtocolException",
+    "org.apache.http.client.HttpClient",
+    "org.apache.http.client.ResponseHandler",
+    "org.apache.http.client.methods.HttpUriRequest",
+    "org.apache.http.conn.ClientConnectionManager",
+    "org.apache.http.impl.client.DefaultHttpClient",
+    "org.apache.http.params.HttpParams",
+    "org.apache.http.protocol.HttpContext",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.io.IOException"
+  ],
   "name": "org.robolectric.shadows.ShadowAndroidHttpClient"
 }

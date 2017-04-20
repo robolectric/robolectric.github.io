@@ -98,5 +98,15 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.ResourceCursorAdapter}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.database.Cursor",
+    "android.view.LayoutInflater",
+    "android.view.View",
+    "android.view.ViewGroup",
+    "android.widget.ResourceCursorAdapter",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowResourceCursorAdapter"
 }

@@ -27,5 +27,12 @@
     }
   },
   "documentation": " Shadow for {@link android.database.ContentObserver}.\n",
+  "imports": [
+    "android.database.ContentObserver",
+    "android.net.Uri",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
   "name": "org.robolectric.shadows.ShadowContentObserver"
 }

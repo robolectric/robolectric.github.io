@@ -743,5 +743,23 @@
     }
   },
   "documentation": " Shadow for {@link android.graphics.Bitmap}.\n",
+  "imports": [
+    "android.graphics.Bitmap",
+    "android.graphics.Matrix",
+    "android.graphics.RectF",
+    "android.os.Parcel",
+    "android.util.DisplayMetrics",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.io.FileDescriptor",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.io.OutputStream",
+    "java.nio.Buffer",
+    "java.nio.ByteBuffer",
+    "org.robolectric.Shadows.shadowOf"
+  ],
   "name": "org.robolectric.shadows.ShadowBitmap"
 }

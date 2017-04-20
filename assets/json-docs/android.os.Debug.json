@@ -36,5 +36,14 @@
     }
   },
   "documentation": " Shadow for {@link android.os.Debug}.\n",
+  "imports": [
+    "android.os.Debug",
+    "com.google.common.collect.ImmutableMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.Map",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Build.VERSION_CODES.M"
+  ],
   "name": "org.robolectric.shadows.ShadowDebug"
 }

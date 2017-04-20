@@ -246,5 +246,20 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.SimpleCursorAdapter}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.database.Cursor",
+    "android.net.Uri",
+    "android.view.View",
+    "android.view.ViewGroup",
+    "android.widget.ImageView",
+    "android.widget.SimpleCursorAdapter",
+    "android.widget.SimpleCursorAdapter.CursorToStringConverter",
+    "android.widget.SimpleCursorAdapter.ViewBinder",
+    "android.widget.TextView",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
   "name": "org.robolectric.shadows.ShadowSimpleCursorAdapter"
 }

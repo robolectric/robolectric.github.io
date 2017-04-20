@@ -469,5 +469,25 @@
     }
   },
   "documentation": " Shadow for {@link android.webkit.WebView}.\n",
+  "imports": [
+    "android.view.ViewGroup.LayoutParams",
+    "android.webkit.WebChromeClient",
+    "android.webkit.WebSettings",
+    "android.webkit.WebView",
+    "android.webkit.WebViewClient",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.fakes.RoboWebSettings",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.lang.reflect.Field",
+    "java.lang.reflect.InvocationHandler",
+    "java.lang.reflect.Method",
+    "java.lang.reflect.Proxy",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.Map"
+  ],
   "name": "org.robolectric.shadows.ShadowWebView"
 }

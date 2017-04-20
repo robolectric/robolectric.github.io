@@ -133,5 +133,19 @@
     }
   },
   "documentation": " Shadow for {@link android.os.PowerManager}.\n",
+  "imports": [
+    "android.os.PowerManager",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "java.util.HashMap",
+    "java.util.Map",
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadows.ShadowApplication.getInstance"
+  ],
   "name": "org.robolectric.shadows.ShadowPowerManager"
 }

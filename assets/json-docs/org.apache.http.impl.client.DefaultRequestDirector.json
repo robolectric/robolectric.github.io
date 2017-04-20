@@ -268,5 +268,38 @@
       "name": "reset()"
     }
   },
+  "imports": [
+    "org.apache.commons.logging.Log",
+    "org.apache.commons.logging.LogFactory",
+    "org.apache.http.ConnectionReuseStrategy",
+    "org.apache.http.HttpEntity",
+    "org.apache.http.HttpException",
+    "org.apache.http.HttpHost",
+    "org.apache.http.HttpRequest",
+    "org.apache.http.HttpResponse",
+    "org.apache.http.client.AuthenticationHandler",
+    "org.apache.http.client.HttpRequestRetryHandler",
+    "org.apache.http.client.RedirectHandler",
+    "org.apache.http.client.UserTokenHandler",
+    "org.apache.http.conn.ClientConnectionManager",
+    "org.apache.http.conn.ConnectionKeepAliveStrategy",
+    "org.apache.http.conn.routing.HttpRoutePlanner",
+    "org.apache.http.entity.BasicHttpEntity",
+    "org.apache.http.entity.HttpEntityWrapper",
+    "org.apache.http.impl.client.DefaultRequestDirector",
+    "org.apache.http.params.HttpParams",
+    "org.apache.http.protocol.HttpContext",
+    "org.apache.http.protocol.HttpProcessor",
+    "org.apache.http.protocol.HttpRequestExecutor",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.Util",
+    "java.io.ByteArrayInputStream",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.lang.reflect.Field"
+  ],
   "name": "org.robolectric.shadows.httpclient.ShadowDefaultRequestDirector"
 }

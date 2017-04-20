@@ -490,5 +490,12 @@
     }
   },
   "documentation": " Shadow for {@link android.media.MediaRecorder}.\n",
+  "imports": [
+    "android.hardware.Camera",
+    "android.media.MediaRecorder",
+    "android.view.Surface",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowMediaRecorder"
 }

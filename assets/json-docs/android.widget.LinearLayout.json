@@ -12,5 +12,11 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.LinearLayout}.\n",
+  "imports": [
+    "android.widget.LinearLayout",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
   "name": "org.robolectric.shadows.ShadowLinearLayout"
 }

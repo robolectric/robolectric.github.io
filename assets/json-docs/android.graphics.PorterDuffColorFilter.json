@@ -71,5 +71,11 @@
     }
   },
   "documentation": " Shadow for {@link android.graphics.PorterDuffColorFilter}.\n",
+  "imports": [
+    "android.graphics.PorterDuff",
+    "android.graphics.PorterDuffColorFilter",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowPorterDuffColorFilter"
 }

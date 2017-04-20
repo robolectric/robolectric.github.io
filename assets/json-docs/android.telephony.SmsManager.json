@@ -128,5 +128,16 @@
     }
   },
   "documentation": " Shadow for {@link android.telephony.SmsManager}.\n",
+  "imports": [
+    "java.util.ArrayList",
+    "java.util.List",
+    "android.app.PendingIntent",
+    "android.telephony.SmsManager",
+    "android.text.TextUtils",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
+  ],
   "name": "org.robolectric.shadows.ShadowSmsManager"
 }

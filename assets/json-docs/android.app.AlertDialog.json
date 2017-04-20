@@ -133,5 +133,21 @@
     }
   },
   "documentation": " Shadow for {@link android.app.AlertDialog}.\n",
+  "imports": [
+    "android.app.AlertDialog",
+    "android.content.DialogInterface",
+    "android.view.View",
+    "android.widget.Adapter",
+    "android.widget.FrameLayout",
+    "com.android.internal.app.AlertController",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.internal.ShadowExtractor",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.Shadows.shadowOf"
+  ],
   "name": "org.robolectric.shadows.ShadowAlertDialog"
 }

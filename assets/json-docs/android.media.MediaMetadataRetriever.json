@@ -247,5 +247,19 @@
     }
   },
   "documentation": " Shadow for {@link android.media.MediaMetadataRetriever}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.graphics.Bitmap",
+    "android.media.MediaMetadataRetriever",
+    "android.net.Uri",
+    "java.io.FileDescriptor",
+    "java.util.HashMap",
+    "java.util.Map",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadows.util.DataSource",
+    "org.robolectric.shadows.util.DataSource.toDataSource"
+  ],
   "name": "org.robolectric.shadows.ShadowMediaMetadataRetriever"
 }

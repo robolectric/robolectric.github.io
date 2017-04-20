@@ -197,5 +197,27 @@
     }
   },
   "documentation": " Shadow for {@link android.graphics.Typeface}.\n",
+  "imports": [
+    "android.content.res.AssetManager",
+    "android.graphics.Typeface",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.manifest.AndroidManifest",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "java.io.File",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.Shadows.shadowOf"
+  ],
   "name": "org.robolectric.shadows.ShadowTypeface"
 }

@@ -80,5 +80,14 @@
     }
   },
   "documentation": " Shadow for {@link android.os.Binder}.\n",
+  "imports": [
+    "android.os.Binder",
+    "android.os.Parcel",
+    "android.os.RemoteException",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter"
+  ],
   "name": "org.robolectric.shadows.ShadowBinder"
 }

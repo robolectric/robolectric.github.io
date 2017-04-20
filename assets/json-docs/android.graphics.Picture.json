@@ -82,5 +82,12 @@
     }
   },
   "documentation": " Shadow for {@link Picture}.\n",
+  "imports": [
+    "android.graphics.Bitmap",
+    "android.graphics.Canvas",
+    "android.graphics.Picture",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowPicture"
 }

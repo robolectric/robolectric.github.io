@@ -120,5 +120,18 @@
     }
   },
   "documentation": " Shadow for {@link android.app.NotificationManager}.\n",
+  "imports": [
+    "android.app.Notification",
+    "android.app.NotificationManager",
+    "android.os.Build",
+    "android.service.notification.StatusBarNotification",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.RuntimeEnvironment",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map"
+  ],
   "name": "org.robolectric.shadows.ShadowNotificationManager"
 }

@@ -484,5 +484,20 @@
     }
   },
   "documentation": " Shadow for {@link android.database.CursorWrapper}.\n",
+  "imports": [
+    "android.content.ContentResolver",
+    "android.database.CharArrayBuffer",
+    "android.database.ContentObserver",
+    "android.database.Cursor",
+    "android.database.CursorWrapper",
+    "android.database.DataSetObserver",
+    "android.net.Uri",
+    "android.os.Bundle",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.M"
+  ],
   "name": "org.robolectric.shadows.ShadowCursorWrapper"
 }

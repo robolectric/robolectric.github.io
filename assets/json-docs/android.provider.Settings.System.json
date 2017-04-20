@@ -197,5 +197,16 @@
       "name": "putString(android.content.ContentResolver,java.lang.String,java.lang.String)"
     }
   },
+  "imports": [
+    "android.content.ContentResolver",
+    "android.provider.Settings",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.HashMap",
+    "java.util.Map",
+    "java.util.WeakHashMap",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1"
+  ],
   "name": "org.robolectric.shadows.ShadowSettings.ShadowSystem"
 }

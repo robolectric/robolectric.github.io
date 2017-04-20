@@ -36,5 +36,12 @@
     }
   },
   "documentation": " Shadow for {@link android.content.ContentProviderResult}.\n",
+  "imports": [
+    "android.content.ContentProviderResult",
+    "android.net.Uri",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "java.lang.reflect.Field"
+  ],
   "name": "org.robolectric.shadows.ShadowContentProviderResult"
 }

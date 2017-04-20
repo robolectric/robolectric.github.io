@@ -68,5 +68,13 @@
     }
   },
   "documentation": " Shadow for {@link com.google.android.maps.OverlayItem}.\n",
+  "imports": [
+    "com.google.android.maps.GeoPoint",
+    "com.google.android.maps.OverlayItem",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.internal.ShadowExtractor",
+    "org.robolectric.util.Strings"
+  ],
   "name": "org.robolectric.shadows.maps.ShadowOverlayItem"
 }

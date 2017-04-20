@@ -77,5 +77,14 @@
     }
   },
   "documentation": " Shadow for {@link android.os.BatteryManager}.\n",
+  "imports": [
+    "android.os.BatteryManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.HashMap",
+    "java.util.Map",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M"
+  ],
   "name": "org.robolectric.shadows.ShadowBatteryManager"
 }

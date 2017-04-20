@@ -15,5 +15,10 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.ScrollView}.\n",
+  "imports": [
+    "android.widget.ScrollView",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowScrollView"
 }

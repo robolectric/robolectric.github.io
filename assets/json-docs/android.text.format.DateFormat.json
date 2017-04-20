@@ -41,5 +41,12 @@
     }
   },
   "documentation": " Shadow for {@link android.text.format.DateFormat}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.text.format.DateFormat",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.Locale"
+  ],
   "name": "org.robolectric.shadows.ShadowDateFormat"
 }

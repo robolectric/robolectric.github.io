@@ -71,5 +71,15 @@
     }
   },
   "documentation": " Shadow for {@link android.appwidget.AppWidgetHost}.\n",
+  "imports": [
+    "android.appwidget.AppWidgetHost",
+    "android.appwidget.AppWidgetHostView",
+    "android.appwidget.AppWidgetProviderInfo",
+    "android.content.Context",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
   "name": "org.robolectric.shadows.ShadowAppWidgetHost"
 }

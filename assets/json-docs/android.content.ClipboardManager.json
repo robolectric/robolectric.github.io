@@ -90,5 +90,21 @@
     }
   },
   "documentation": " Shadow for {@link android.content.ClipboardManager}.\n",
+  "imports": [
+    "android.content.ClipData",
+    "android.content.ClipDescription",
+    "android.content.ClipboardManager",
+    "android.content.ClipboardManager.OnPrimaryClipChangedListener",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.Collection",
+    "java.util.concurrent.CopyOnWriteArrayList",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowClipboardManager"
 }

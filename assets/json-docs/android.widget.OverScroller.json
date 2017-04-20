@@ -193,5 +193,13 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.OverScroller}.\n",
+  "imports": [
+    "android.os.Looper",
+    "android.widget.OverScroller",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.Scheduler"
+  ],
   "name": "org.robolectric.shadows.ShadowOverScroller"
 }

@@ -117,7 +117,7 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n\u003cp\u003e\nGets the criteria value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}\n\n@return the criteria used to find the best provider",
+      "documentation": "Gets the criteria value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}.\n\n@return the criteria used to find the best provider",
       "params": [],
       "returnType": "android.location.Criteria",
       "exceptions": [],
@@ -128,7 +128,7 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n\u003cp\u003e\nGets the enabled value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}\n\n@return the enabled value used to find the best provider",
+      "documentation": "Non-Android accessor.\n\nGets the enabled value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}\n\n@return the enabled value used to find the best provider",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
@@ -423,5 +423,28 @@
     }
   },
   "documentation": " Shadow for {@link android.location.LocationManager}.\n",
+  "imports": [
+    "android.app.PendingIntent",
+    "android.app.PendingIntent.CanceledException",
+    "android.content.Intent",
+    "android.location.Criteria",
+    "android.location.GpsStatus.Listener",
+    "android.location.Location",
+    "android.location.LocationListener",
+    "android.location.LocationManager",
+    "android.os.Looper",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.ArrayList",
+    "java.util.Collection",
+    "java.util.HashMap",
+    "java.util.HashSet",
+    "java.util.Iterator",
+    "java.util.LinkedHashMap",
+    "java.util.LinkedHashSet",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.Set"
+  ],
   "name": "org.robolectric.shadows.ShadowLocationManager"
 }

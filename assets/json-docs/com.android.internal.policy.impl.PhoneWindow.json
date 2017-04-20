@@ -27,5 +27,13 @@
       "name": "setTitle(java.lang.CharSequence)"
     }
   },
+  "imports": [
+    "android.graphics.drawable.Drawable",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowPhoneWindowFor22"
 }

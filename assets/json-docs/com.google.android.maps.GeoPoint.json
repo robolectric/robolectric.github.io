@@ -89,5 +89,11 @@
     }
   },
   "documentation": " Shadow for {@link com.google.android.maps.GeoPoint}.\n",
+  "imports": [
+    "com.google.android.maps.GeoPoint",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.internal.ShadowExtractor"
+  ],
   "name": "org.robolectric.shadows.maps.ShadowGeoPoint"
 }

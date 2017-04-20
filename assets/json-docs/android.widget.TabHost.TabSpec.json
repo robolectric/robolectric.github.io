@@ -170,5 +170,23 @@
       "name": "setTag(java.lang.String)"
     }
   },
+  "imports": [
+    "android.R",
+    "android.app.Activity",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.graphics.drawable.Drawable",
+    "android.view.View",
+    "android.widget.TabHost",
+    "android.widget.TabHost.TabSpec",
+    "android.widget.TabWidget",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "java.util.ArrayList",
+    "java.util.List"
+  ],
   "name": "org.robolectric.shadows.ShadowTabHost.ShadowTabSpec"
 }

@@ -17,5 +17,10 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.AbsoluteLayout.LayoutParams}.\n",
+  "imports": [
+    "android.widget.AbsoluteLayout",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
   "name": "org.robolectric.shadows.ShadowAbsoluteLayout.ShadowLayoutParams"
 }

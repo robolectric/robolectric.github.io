@@ -90,5 +90,11 @@
     }
   },
   "documentation": " Shadow for {@link android.os.CountDownTimer}.\n",
+  "imports": [
+    "android.os.CountDownTimer",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
   "name": "org.robolectric.shadows.ShadowCountDownTimer"
 }

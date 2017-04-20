@@ -372,5 +372,31 @@
     }
   },
   "documentation": " Shadow for {@link com.google.android.maps.MapView}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.graphics.Point",
+    "android.util.AttributeSet",
+    "android.view.MotionEvent",
+    "android.view.View",
+    "android.view.ViewGroup",
+    "android.widget.ZoomButtonsController",
+    "com.google.android.maps.GeoPoint",
+    "com.google.android.maps.MapController",
+    "com.google.android.maps.MapView",
+    "com.google.android.maps.Overlay",
+    "com.google.android.maps.Projection",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowViewGroup",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.shadows.maps.Shadows.shadowOf",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
   "name": "org.robolectric.shadows.maps.ShadowMapView"
 }

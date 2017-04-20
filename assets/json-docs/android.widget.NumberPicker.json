@@ -134,5 +134,12 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.NumberPicker}.\n",
+  "imports": [
+    "android.widget.NumberPicker",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowNumberPicker"
 }

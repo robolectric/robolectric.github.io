@@ -24,6 +24,45 @@
       "minSdk": 21,
       "name": "getUserProfiles()"
     },
+    "getUserRestrictions(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getUserRestrictions(android.os.UserHandle)"
+    },
+    "getUserRestrictionsForUser(android.os.UserHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getUserRestrictionsForUser(android.os.UserHandle)"
+    },
+    "hasUserRestriction(java.lang.String,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "restrictionKey",
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "hasUserRestriction(java.lang.String,android.os.UserHandle)"
+    },
     "isUserUnlocked()": {
       "isImplementation": true,
       "modifiers": [
@@ -34,6 +73,20 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "isUserUnlocked()"
+    },
+    "setUserRestriction(android.os.UserHandle,java.lang.String,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "restrictionKey",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUserRestriction(android.os.UserHandle,java.lang.String,boolean)"
     },
     "setUserUnlocked(boolean)": {
       "isImplementation": false,
@@ -49,5 +102,18 @@
       "name": "setUserUnlocked(boolean)"
     }
   },
+  "imports": [
+    "android.os.Bundle",
+    "android.os.UserHandle",
+    "android.os.UserManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Build.VERSION_CODES.*"
+  ],
   "name": "org.robolectric.shadows.ShadowUserManager"
 }

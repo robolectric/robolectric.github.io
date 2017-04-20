@@ -153,5 +153,26 @@
     }
   },
   "documentation": " Shadow for {@link android.view.accessibility.AccessibilityManager}.\n",
+  "imports": [
+    "android.accessibilityservice.AccessibilityServiceInfo",
+    "android.content.Context",
+    "android.content.pm.ServiceInfo",
+    "android.os.Handler",
+    "android.os.Looper",
+    "android.os.Message",
+    "android.util.Log",
+    "android.view.accessibility.AccessibilityManager",
+    "android.view.accessibility.IAccessibilityManager",
+    "com.android.server.accessibility.AccessibilityManagerService",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "java.util.List",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "org.robolectric.RuntimeEnvironment.getApiLevel"
+  ],
   "name": "org.robolectric.shadows.ShadowAccessibilityManager"
 }

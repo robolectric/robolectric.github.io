@@ -24,5 +24,12 @@
     }
   },
   "documentation": " Shadow for {@code android.webkit.CookieManager}.\n",
+  "imports": [
+    "android.webkit.CookieManager",
+    "android.webkit.RoboCookieManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
   "name": "org.robolectric.shadows.ShadowCookieManager"
 }

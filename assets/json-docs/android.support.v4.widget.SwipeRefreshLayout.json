@@ -25,5 +25,14 @@
     }
   },
   "documentation": " Shadow for {@link android.support.v4.widget.SwipeRefreshLayout}\n",
+  "imports": [
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.shadows.ShadowViewGroup",
+    "android.support.v4.widget.SwipeRefreshLayout",
+    "android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener"
+  ],
   "name": "org.robolectric.shadows.support.v4.ShadowSwipeRefreshLayout"
 }

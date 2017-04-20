@@ -35,5 +35,12 @@
     }
   },
   "documentation": " Shadow for {@link android.view.TouchDelegate}.\n",
+  "imports": [
+    "android.graphics.Rect",
+    "android.view.TouchDelegate",
+    "android.view.View",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
   "name": "org.robolectric.shadows.ShadowTouchDelegate"
 }

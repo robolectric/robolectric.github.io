@@ -36,5 +36,11 @@
     }
   },
   "documentation": " Shadow for {@link android.graphics.ColorMatrixColorFilter}.\n",
+  "imports": [
+    "android.graphics.ColorMatrix",
+    "android.graphics.ColorMatrixColorFilter",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowColorMatrixColorFilter"
 }

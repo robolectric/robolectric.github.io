@@ -50,5 +50,17 @@
     }
   },
   "documentation": " Shadow for {@link android.os.ParcelFileDescriptor}.\n",
+  "imports": [
+    "android.os.ParcelFileDescriptor",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.io.File",
+    "java.io.FileDescriptor",
+    "java.io.FileNotFoundException",
+    "java.io.IOException",
+    "java.io.RandomAccessFile",
+    "java.lang.reflect.Constructor"
+  ],
   "name": "org.robolectric.shadows.ShadowParcelFileDescriptor"
 }

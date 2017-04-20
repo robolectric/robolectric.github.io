@@ -112,5 +112,12 @@
     }
   },
   "documentation": " Shadow for {@link android.view.ScaleGestureDetector}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.view.MotionEvent",
+    "android.view.ScaleGestureDetector",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowScaleGestureDetector"
 }

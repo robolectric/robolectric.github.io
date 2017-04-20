@@ -39,5 +39,15 @@
     }
   },
   "documentation": " Shadow for {@link android.text.StaticLayout}.\n",
+  "imports": [
+    "android.text.StaticLayout",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.M"
+  ],
   "name": "org.robolectric.shadows.ShadowStaticLayout"
 }

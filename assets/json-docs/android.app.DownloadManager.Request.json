@@ -133,5 +133,21 @@
       "name": "setStatus(int)"
     }
   },
+  "imports": [
+    "android.app.DownloadManager",
+    "android.database.Cursor",
+    "android.net.Uri",
+    "android.util.Pair",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.fakes.BaseCursor",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map"
+  ],
   "name": "org.robolectric.shadows.ShadowDownloadManager.ShadowRequest"
 }

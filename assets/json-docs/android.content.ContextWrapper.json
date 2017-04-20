@@ -102,5 +102,11 @@
     }
   },
   "documentation": " Shadow for {@link android.content.ContextWrapper}.\n",
+  "imports": [
+    "android.content.ContextWrapper",
+    "android.content.Intent",
+    "org.robolectric.annotation.Implements",
+    "java.util.List"
+  ],
   "name": "org.robolectric.shadows.ShadowContextWrapper"
 }

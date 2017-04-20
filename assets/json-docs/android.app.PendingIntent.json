@@ -283,5 +283,24 @@
     }
   },
   "documentation": " Shadow for {@code android.app.PendingIntent}.\n",
+  "imports": [
+    "android.app.PendingIntent",
+    "android.app.PendingIntent.CanceledException",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.content.IntentSender",
+    "android.os.Bundle",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.fakes.RoboIntentSender",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.List",
+    "org.robolectric.Shadows.shadowOf"
+  ],
   "name": "org.robolectric.shadows.ShadowPendingIntent"
 }

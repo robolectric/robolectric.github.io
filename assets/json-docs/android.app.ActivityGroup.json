@@ -25,5 +25,11 @@
     }
   },
   "documentation": " Shadow for {@link android.app.ActivityGroup}.\n",
+  "imports": [
+    "android.app.Activity",
+    "android.app.ActivityGroup",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowActivityGroup"
 }

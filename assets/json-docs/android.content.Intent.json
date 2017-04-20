@@ -13,5 +13,10 @@
     }
   },
   "documentation": " Shadow for {@link android.content.Intent}.\n",
+  "imports": [
+    "android.content.Intent",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
   "name": "org.robolectric.shadows.ShadowIntent"
 }

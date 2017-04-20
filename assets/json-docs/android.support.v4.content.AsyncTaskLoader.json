@@ -24,5 +24,15 @@
     }
   },
   "documentation": " Shadow for {@link android.support.v4.content.AsyncTaskLoader}.\n",
+  "imports": [
+    "android.content.Context",
+    "org.robolectric.Robolectric",
+    "org.robolectric.util.SimpleFuture",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Implementation",
+    "android.support.v4.content.AsyncTaskLoader",
+    "java.util.concurrent.Callable"
+  ],
   "name": "org.robolectric.shadows.support.v4.ShadowAsyncTaskLoader"
 }

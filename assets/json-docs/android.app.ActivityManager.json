@@ -178,5 +178,15 @@
     }
   },
   "documentation": " Shadow for {@link android.app.ActivityManager}.\n",
+  "imports": [
+    "android.app.ActivityManager",
+    "android.app.IActivityManager",
+    "android.content.pm.ConfigurationInfo",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
   "name": "org.robolectric.shadows.ShadowActivityManager"
 }

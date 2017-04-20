@@ -23,5 +23,9 @@
       "name": "getRadius()"
     }
   },
+  "imports": [
+    "android.graphics.CornerPathEffect",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowCornerPathEffect"
 }

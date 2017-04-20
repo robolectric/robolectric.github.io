@@ -296,5 +296,27 @@
     }
   },
   "documentation": " Shadow for {@link android.appwidget.AppWidgetManager}.\n",
+  "imports": [
+    "android.app.Application",
+    "android.appwidget.AppWidgetManager",
+    "android.appwidget.AppWidgetProvider",
+    "android.appwidget.AppWidgetProviderInfo",
+    "android.content.ComponentName",
+    "android.content.Context",
+    "android.view.View",
+    "android.widget.RemoteViews",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.shadows.util.AppSingletonizer",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map"
+  ],
   "name": "org.robolectric.shadows.ShadowAppWidgetManager"
 }

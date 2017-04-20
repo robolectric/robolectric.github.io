@@ -67,5 +67,10 @@
     }
   },
   "documentation": " Shadow for {@link android.util.FloatMath}.\n",
+  "imports": [
+    "android.util.FloatMath",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowFloatMath"
 }

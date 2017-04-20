@@ -138,5 +138,16 @@
     }
   },
   "documentation": " Shadow for {@link android.nfc.NfcAdapter}.\n",
+  "imports": [
+    "android.app.Activity",
+    "android.app.PendingIntent",
+    "android.content.Context",
+    "android.content.IntentFilter",
+    "android.nfc.NfcAdapter",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
   "name": "org.robolectric.shadows.ShadowNfcAdapter"
 }

@@ -64,5 +64,16 @@
     }
   },
   "documentation": " Shadow for {@link com.google.android.maps.MapActivity}.\n",
+  "imports": [
+    "android.content.BroadcastReceiver",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.content.IntentFilter",
+    "android.os.Bundle",
+    "com.google.android.maps.MapActivity",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowActivity"
+  ],
   "name": "org.robolectric.shadows.maps.ShadowMapActivity"
 }

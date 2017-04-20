@@ -12,5 +12,12 @@
     }
   },
   "documentation": " Shadow for {@link android.bluetooth.BluetoothManager}.\n",
+  "imports": [
+    "android.bluetooth.BluetoothAdapter",
+    "android.bluetooth.BluetoothManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
+  ],
   "name": "org.robolectric.shadows.ShadowBluetoothManager"
 }

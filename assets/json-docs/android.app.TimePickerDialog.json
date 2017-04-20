@@ -39,5 +39,13 @@
     }
   },
   "documentation": " Shadow for {@link android.app.TimePickerDialog}.\n",
+  "imports": [
+    "android.app.TimePickerDialog",
+    "android.content.Context",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
   "name": "org.robolectric.shadows.ShadowTimePickerDialog"
 }

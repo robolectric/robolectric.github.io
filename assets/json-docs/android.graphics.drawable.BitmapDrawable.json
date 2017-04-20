@@ -68,5 +68,20 @@
     }
   },
   "documentation": " Shadow for {@link android.graphics.drawable.BitmapDrawable}.\n",
+  "imports": [
+    "android.graphics.Bitmap",
+    "android.graphics.Canvas",
+    "android.graphics.ColorFilter",
+    "android.graphics.Paint",
+    "android.graphics.drawable.BitmapDrawable",
+    "android.graphics.drawable.Drawable",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowBitmapDrawable"
 }

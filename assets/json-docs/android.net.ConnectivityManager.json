@@ -224,5 +224,22 @@
     }
   },
   "documentation": " Shadow for {@link android.net.ConnectivityManager}.\n",
+  "imports": [
+    "android.net.ConnectivityManager",
+    "android.net.NetworkInfo",
+    "android.net.NetworkRequest",
+    "android.net.Network",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.HiddenApi",
+    "java.util.HashMap",
+    "java.util.HashSet",
+    "java.util.Map",
+    "java.util.Set",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.RuntimeEnvironment.getApiLevel"
+  ],
   "name": "org.robolectric.shadows.ShadowConnectivityManager"
 }

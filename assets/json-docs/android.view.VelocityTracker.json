@@ -116,5 +116,12 @@
     }
   },
   "documentation": " Shadow for {@link android.view.VelocityTracker}.\n",
+  "imports": [
+    "android.util.SparseArray",
+    "android.view.MotionEvent",
+    "android.view.VelocityTracker",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowVelocityTracker"
 }

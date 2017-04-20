@@ -326,5 +326,20 @@
     }
   },
   "documentation": " Shadow of {@link android.view.accessibility.AccessibilityWindowInfo} that allows a test to set\n properties that are locked in the original class.\n",
+  "imports": [
+    "android.graphics.Rect",
+    "android.view.accessibility.AccessibilityNodeInfo",
+    "android.view.accessibility.AccessibilityWindowInfo",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.internal.ShadowExtractor",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.HashMap",
+    "java.util.LinkedList",
+    "java.util.List",
+    "java.util.Map",
+    "android.os.Build.VERSION_CODES.LOLLIPOP"
+  ],
   "name": "org.robolectric.shadows.ShadowAccessibilityWindowInfo"
 }

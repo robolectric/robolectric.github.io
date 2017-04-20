@@ -14,5 +14,12 @@
     }
   },
   "documentation": " Shadow for {@link android.graphics.Outline}.\n",
+  "imports": [
+    "android.graphics.Path",
+    "android.graphics.Outline",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Implementation",
+    "android.os.Build.VERSION_CODES.LOLLIPOP"
+  ],
   "name": "org.robolectric.shadows.ShadowOutline"
 }

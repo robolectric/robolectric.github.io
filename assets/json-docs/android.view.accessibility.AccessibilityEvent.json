@@ -251,5 +251,19 @@
     }
   },
   "documentation": " Shadow of {@link android.view.accessibility.AccessibilityEvent}.\n",
+  "imports": [
+    "android.os.Parcel",
+    "android.os.Parcelable",
+    "android.text.TextUtils",
+    "android.util.SparseArray",
+    "android.view.accessibility.AccessibilityEvent",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.internal.ShadowExtractor",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.HashMap",
+    "java.util.Map"
+  ],
   "name": "org.robolectric.shadows.ShadowAccessibilityEvent"
 }

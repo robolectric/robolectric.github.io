@@ -99,5 +99,12 @@
     }
   },
   "documentation": " Shadow for {@link android.speech.tts.TextToSpeech}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.speech.tts.TextToSpeech",
+    "java.util.HashMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowTextToSpeech"
 }

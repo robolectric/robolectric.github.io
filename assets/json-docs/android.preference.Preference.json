@@ -24,5 +24,13 @@
     }
   },
   "documentation": " Shadow for {@link android.preference.Preference}.\n",
+  "imports": [
+    "android.preference.Preference",
+    "android.preference.PreferenceManager",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
   "name": "org.robolectric.shadows.ShadowPreference"
 }

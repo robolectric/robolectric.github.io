@@ -360,5 +360,21 @@
     }
   },
   "documentation": " Shadow for {@link android.hardware.Camera}.\n",
+  "imports": [
+    "android.graphics.ImageFormat",
+    "android.hardware.Camera",
+    "android.view.SurfaceHolder",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.shadow.api.Shadow.*"
+  ],
   "name": "org.robolectric.shadows.ShadowCamera"
 }

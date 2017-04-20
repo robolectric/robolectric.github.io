@@ -27,5 +27,12 @@
     }
   },
   "documentation": " Shadow for {@code android.webkit.CookieSyncManager}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.webkit.CookieSyncManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
   "name": "org.robolectric.shadows.ShadowCookieSyncManager"
 }

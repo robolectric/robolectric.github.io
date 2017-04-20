@@ -774,5 +774,36 @@
       "name": "setSystemFeature(java.lang.String,boolean)"
     }
   },
+  "imports": [
+    "android.annotation.UserIdInt",
+    "android.content.ComponentName",
+    "android.content.Intent",
+    "android.content.IntentFilter",
+    "android.content.IntentSender",
+    "android.content.pm.ActivityInfo",
+    "android.content.pm.ApplicationInfo",
+    "android.content.pm.FeatureInfo",
+    "android.content.pm.IPackageDataObserver",
+    "android.content.pm.IPackageStatsObserver",
+    "android.content.pm.PackageInfo",
+    "android.content.pm.PackageManager",
+    "android.content.pm.PackageManager.NameNotFoundException",
+    "android.content.pm.PackageStats",
+    "android.content.pm.PermissionInfo",
+    "android.content.pm.ResolveInfo",
+    "android.content.pm.ServiceInfo",
+    "android.graphics.drawable.Drawable",
+    "android.os.UserHandle",
+    "java.util.HashMap",
+    "java.util.LinkedList",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.android.StubPackageManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.manifest.AndroidManifest",
+    "org.robolectric.res.builder.RobolectricPackageManager"
+  ],
   "name": "org.robolectric.shadows.ShadowPackageManager"
 }

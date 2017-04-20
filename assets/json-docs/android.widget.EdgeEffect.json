@@ -1,5 +1,8 @@
 {
   "methods": {},
   "documentation": " Shadow for {@link android.widget.EdgeEffect}.\n",
+  "imports": [
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowEdgeEffect"
 }

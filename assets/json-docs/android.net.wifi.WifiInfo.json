@@ -169,5 +169,13 @@
     }
   },
   "documentation": " Shadow for {@link android.net.wifi.WifiInfo}.\n",
+  "imports": [
+    "android.net.wifi.WifiInfo",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.HiddenApi",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Build.VERSION_CODES.LOLLIPOP"
+  ],
   "name": "org.robolectric.shadows.ShadowWifiInfo"
 }

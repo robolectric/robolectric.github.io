@@ -545,5 +545,22 @@
     }
   },
   "documentation": " Shadow for {@link android.database.CursorWindow}.\n",
+  "imports": [
+    "java.util.concurrent.atomic.AtomicLong",
+    "android.database.Cursor",
+    "android.database.CursorWindow",
+    "com.almworks.sqlite4java.SQLiteConstants",
+    "com.almworks.sqlite4java.SQLiteException",
+    "com.almworks.sqlite4java.SQLiteStatement",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.concurrent.ConcurrentHashMap",
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.RuntimeEnvironment.castNativePtr"
+  ],
   "name": "org.robolectric.shadows.ShadowCursorWindow"
 }

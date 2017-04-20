@@ -420,7 +420,7 @@
         "public",
         "static"
       ],
-      "documentation": "Runs any immediately runnable tasks previously queued on the UI thread,\ne.g. by {@link android.app.Activity#runOnUiThread(Runnable)} or {@link android.os.AsyncTask#onPostExecute(Object)}.\n\n\u003cp\u003eNote: calling this method does not pause or un-pause the scheduler.\u003c/p\u003e\n  \n@see #runUiThreadTasksIncludingDelayedTasks",
+      "documentation": "Runs any immediately runnable tasks previously queued on the UI thread,\ne.g. by {@link android.app.Activity#runOnUiThread(Runnable)} or {@link android.os.AsyncTask#onPostExecute(Object)}.\n\n**Note:** calling this method does not pause or un-pause the scheduler.\n\n@see #runUiThreadTasksIncludingDelayedTasks",
       "params": [],
       "returnType": "void",
       "exceptions": [],
@@ -432,7 +432,7 @@
         "public",
         "static"
       ],
-      "documentation": "Runs all runnable tasks (pending and future) that have been queued on the UI thread. Such tasks may be queued by\ne.g. {@link android.app.Activity#runOnUiThread(Runnable)} or {@link android.os.AsyncTask#onPostExecute(Object)}.\n\n\u003cp\u003eNote: calling this method does not pause or un-pause the scheduler, however the clock is advanced as\nfuture tasks are run.\u003c/p\u003e\n\n@see #runUiThreadTasks",
+      "documentation": "Runs all runnable tasks (pending and future) that have been queued on the UI thread. Such tasks may be queued by\ne.g. {@link android.app.Activity#runOnUiThread(Runnable)} or {@link android.os.AsyncTask#onPostExecute(Object)}.\n\n**Note:** calling this method does not pause or un-pause the scheduler, however the clock is advanced as\nfuture tasks are run.\n\n@see #runUiThreadTasks",
       "params": [],
       "returnType": "void",
       "exceptions": [],
@@ -486,5 +486,25 @@
     }
   },
   "documentation": " Shadow for {@link android.os.Looper} that enqueues posted {@link Runnable}s to be run\n (on this thread) later. {@code Runnable}s that are scheduled to run immediately can be\n triggered by calling {@link #idle()}.\n\n @see ShadowMessageQueue\n",
+  "imports": [
+    "android.os.Looper",
+    "java.util.Collections",
+    "java.util.Map",
+    "java.util.WeakHashMap",
+    "java.util.concurrent.TimeUnit",
+    "org.robolectric.RoboSettings",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.Scheduler",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "org.robolectric.RuntimeEnvironment.isMainThread",
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.*",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
+  ],
   "name": "org.robolectric.shadows.ShadowLooper"
 }

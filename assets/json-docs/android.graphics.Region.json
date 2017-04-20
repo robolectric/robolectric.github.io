@@ -13,5 +13,11 @@
     }
   },
   "documentation": " Shadow for {@link android.graphics.Region}.\n",
+  "imports": [
+    "android.graphics.Region",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.HiddenApi"
+  ],
   "name": "org.robolectric.shadows.ShadowRegion"
 }

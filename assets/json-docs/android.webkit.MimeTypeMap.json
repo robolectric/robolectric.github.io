@@ -95,5 +95,15 @@
     }
   },
   "documentation": " Shadow for {@link android.webkit.MimeTypeMap}.\n",
+  "imports": [
+    "android.webkit.MimeTypeMap",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "java.util.HashMap",
+    "java.util.Map"
+  ],
   "name": "org.robolectric.shadows.ShadowMimeTypeMap"
 }

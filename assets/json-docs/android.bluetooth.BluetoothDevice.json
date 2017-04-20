@@ -24,5 +24,10 @@
     }
   },
   "documentation": " Shadow for {@link android.bluetooth.BluetoothDevice}.\n",
+  "imports": [
+    "android.bluetooth.BluetoothDevice",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowBluetoothDevice"
 }

@@ -325,5 +325,24 @@
     }
   },
   "documentation": " Shadow for {@link GoogleAuthUtil} that allows providing a\n {@link GoogleAuthUtilImpl}.\n Calls to static method of {@link GoogleAuthUtil} will be redirected to the provided\n {@link GoogleAuthUtilImpl} implementation. Use {@link #provideImpl(GoogleAuthUtilImpl)}\n to set the implementation instance. By default, a {@link GoogleAuthUtilImpl} is used in call\n redirection. Use mocks or subclassing {@link GoogleAuthUtilImpl} to achieve desired behaviors.\n",
+  "imports": [
+    "com.google.android.gms.auth.AccountChangeEvent",
+    "com.google.android.gms.auth.GoogleAuthException",
+    "com.google.android.gms.auth.GoogleAuthUtil",
+    "com.google.android.gms.auth.GooglePlayServicesAvailabilityException",
+    "com.google.android.gms.auth.UserRecoverableAuthException",
+    "com.google.android.gms.auth.UserRecoverableNotifiedException",
+    "com.google.common.base.Preconditions",
+    "android.accounts.Account",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.os.Bundle",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "java.io.IOException",
+    "java.util.ArrayList",
+    "java.util.List"
+  ],
   "name": "org.robolectric.shadows.gms.ShadowGoogleAuthUtil"
 }

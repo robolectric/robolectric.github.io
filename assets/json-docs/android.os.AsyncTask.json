@@ -112,5 +112,18 @@
     }
   },
   "documentation": " Shadow for {@link android.os.AsyncTask}.\n",
+  "imports": [
+    "android.os.AsyncTask",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.SimpleFuture",
+    "java.util.concurrent.Callable",
+    "java.util.concurrent.CancellationException",
+    "java.util.concurrent.ExecutionException",
+    "java.util.concurrent.Executor",
+    "java.util.concurrent.TimeUnit",
+    "java.util.concurrent.TimeoutException"
+  ],
   "name": "org.robolectric.shadows.ShadowAsyncTask"
 }

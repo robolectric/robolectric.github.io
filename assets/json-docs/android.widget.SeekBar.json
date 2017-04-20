@@ -24,5 +24,12 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.SeekBar}.\n",
+  "imports": [
+    "android.widget.SeekBar",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow"
+  ],
   "name": "org.robolectric.shadows.ShadowSeekBar"
 }

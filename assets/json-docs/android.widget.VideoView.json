@@ -265,5 +265,12 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.VideoView}.\n",
+  "imports": [
+    "android.media.MediaPlayer",
+    "android.net.Uri",
+    "android.widget.VideoView",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowVideoView"
 }

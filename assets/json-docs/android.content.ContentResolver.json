@@ -141,6 +141,7 @@
         "public",
         "final"
       ],
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#bulkInsert(Uri, ContentValues[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe number of rows in {@code values} will be returned.",
       "params": [
         "url",
         "values"
@@ -184,7 +185,7 @@
         "public",
         "synchronized"
       ],
-      "documentation": "Clears the list of registered content observers.\n\nCommonly used in test case setup.",
+      "documentation": "Clears the list of registered {@link ContentObserver}s.\n\nSince a new {@link ContentResolver} is created for each test case,\nthis method generally need not be called explicitly.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
@@ -209,7 +210,7 @@
         "public",
         "final"
       ],
-      "documentation": "Tests can verify that this method was called using {@link #getDeleteStatements()}.",
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#delete(Uri, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getDeleteStatements()}\nor {@link #getDeletedUris()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\n{@code 1} will be returned.",
       "params": [
         "url",
         "where",
@@ -275,6 +276,7 @@
       "modifiers": [
         "public"
       ],
+      "documentation": "Returns the list of {@link DeleteStatement}s for corresponding calls to\n{@link ContentResolver#delete(Uri, String, String[])}.\n\n@return a list of delete statements",
       "params": [],
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.DeleteStatement\u003e",
       "exceptions": [],
@@ -295,6 +297,7 @@
       "modifiers": [
         "public"
       ],
+      "documentation": "Returns the list of {@link InsertStatement}s for corresponding calls to\n{@link ContentResolver#insert(Uri, ContentValues)} or\n{@link ContentResolver#bulkInsert(Uri, ContentValues[])}.\n\n@return a list of insert statements",
       "params": [],
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.InsertStatement\u003e",
       "exceptions": [],
@@ -376,6 +379,17 @@
       "exceptions": [],
       "name": "getProvider(java.lang.String)"
     },
+    "getStatements()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "documentation": "Returns the list of {@link InsertStatement}s, {@link UpdateStatement}s, and\n{@link DeleteStatement}s invoked on this {@link ContentResolver}.\n\n@return a list of statements",
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.Statement\u003e",
+      "exceptions": [],
+      "name": "getStatements()"
+    },
     "getStatus(android.accounts.Account,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -436,6 +450,7 @@
       "modifiers": [
         "public"
       ],
+      "documentation": "Returns the list of {@link UpdateStatement}s for corresponding calls to\n{@link ContentResolver#update(Uri, ContentValues, String, String[])}.\n\n@return a list of update statements",
       "params": [],
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.UpdateStatement\u003e",
       "exceptions": [],
@@ -461,6 +476,7 @@
         "public",
         "final"
       ],
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#insert(Uri, ContentValues)} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\na {@link Uri} including the incremented value set with {@link #setNextDatabaseIdForInserts(int)} will returned.",
       "params": [
         "url",
         "values"
@@ -515,6 +531,7 @@
       "modifiers": [
         "public"
       ],
+      "documentation": "@param uri\n@param observer\n@param syncToNetwork",
       "params": [
         "uri",
         "observer",
@@ -784,6 +801,7 @@
       "modifiers": [
         "public"
       ],
+      "documentation": "Set the value to be returned by {@link ContentResolver#update(Uri, ContentValues, String, String[])}\nwhen no appropriate {@link ContentProvider} can be found.\n\n@deprecated This method will be removed in Robolectric 3.5. Instead, {@code 1} will be returned.\n\n@param nextId the number of rows to return",
       "params": [
         "nextId"
       ],
@@ -823,6 +841,7 @@
       "modifiers": [
         "public"
       ],
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe value set with {@link #setNextDatabaseIdForUpdates(int)} will be incremented and returned.\n*Note:* the return value in this case will be changed to 1 in a future release of Robolectric.",
       "params": [
         "uri",
         "values",
@@ -848,5 +867,46 @@
     }
   },
   "documentation": " Shadow for {@link android.content.ContentResolver}.\n",
+  "imports": [
+    "android.accounts.Account",
+    "android.content.ContentProvider",
+    "android.content.ContentProviderClient",
+    "android.content.ContentProviderOperation",
+    "android.content.ContentProviderResult",
+    "android.content.ContentResolver",
+    "android.content.ContentValues",
+    "android.content.IContentProvider",
+    "android.content.OperationApplicationException",
+    "android.content.PeriodicSync",
+    "android.content.pm.ProviderInfo",
+    "android.content.res.AssetFileDescriptor",
+    "android.database.ContentObserver",
+    "android.database.Cursor",
+    "android.net.Uri",
+    "android.os.Bundle",
+    "android.os.CancellationSignal",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.fakes.BaseCursor",
+    "org.robolectric.manifest.AndroidManifest",
+    "org.robolectric.manifest.ContentProviderData",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.NamedStream",
+    "java.io.FileNotFoundException",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.io.OutputStream",
+    "java.util.ArrayList",
+    "java.util.Collection",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.concurrent.CopyOnWriteArraySet",
+    "org.robolectric.Shadows.shadowOf"
+  ],
   "name": "org.robolectric.shadows.ShadowContentResolver"
 }

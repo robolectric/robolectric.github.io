@@ -124,5 +124,18 @@
     }
   },
   "documentation": " Shadow for {@link android.net.http.HttpResponseCache}.\n",
+  "imports": [
+    "android.net.http.HttpResponseCache",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.io.File",
+    "java.net.CacheResponse",
+    "java.net.URI",
+    "java.net.URLConnection",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.shadow.api.Shadow.newInstanceOf"
+  ],
   "name": "org.robolectric.shadows.ShadowHttpResponseCache"
 }

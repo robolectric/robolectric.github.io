@@ -31,5 +31,13 @@
       "name": "reenableKeyguard()"
     }
   },
+  "imports": [
+    "android.app.KeyguardManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "android.os.Build.VERSION_CODES.M"
+  ],
   "name": "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock"
 }

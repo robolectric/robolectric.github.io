@@ -37,5 +37,19 @@
       "name": "getFuture()"
     }
   },
+  "imports": [
+    "android.content.BroadcastReceiver",
+    "android.os.Bundle",
+    "android.os.IBinder",
+    "com.google.common.base.Preconditions",
+    "com.google.common.util.concurrent.ListenableFuture",
+    "com.google.common.util.concurrent.SettableFuture",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "org.robolectric.RuntimeEnvironment.getApiLevel"
+  ],
   "name": "org.robolectric.shadows.ShadowBroadcastPendingResult"
 }

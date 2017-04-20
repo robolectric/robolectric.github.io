@@ -197,5 +197,21 @@
     }
   },
   "documentation": " Shadow for {@link android.os.Environment}.\n",
+  "imports": [
+    "java.io.File",
+    "java.io.IOException",
+    "java.nio.file.Files",
+    "java.nio.file.Path",
+    "java.util.Map",
+    "java.util.HashMap",
+    "android.os.Environment",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.util.TempDirectory",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP"
+  ],
   "name": "org.robolectric.shadows.ShadowEnvironment"
 }

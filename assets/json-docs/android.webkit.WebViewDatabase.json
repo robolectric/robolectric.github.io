@@ -15,5 +15,12 @@
     }
   },
   "documentation": " Shadow for {@link android.webkit.WebViewDatabase}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.webkit.WebViewDatabase",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
   "name": "org.robolectric.shadows.ShadowWebViewDatabase"
 }

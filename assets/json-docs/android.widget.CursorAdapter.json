@@ -218,5 +218,25 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.CursorAdapter}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.database.ContentObserver",
+    "android.database.Cursor",
+    "android.database.DataSetObserver",
+    "android.os.Handler",
+    "android.util.Config",
+    "android.util.Log",
+    "android.view.View",
+    "android.view.ViewGroup",
+    "android.widget.CursorAdapter",
+    "android.widget.FilterQueryProvider",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "java.util.ArrayList",
+    "java.util.List",
+    "android.widget.CursorAdapter.FLAG_AUTO_REQUERY",
+    "android.widget.CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER"
+  ],
   "name": "org.robolectric.shadows.ShadowCursorAdapter"
 }

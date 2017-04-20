@@ -15,5 +15,10 @@
     }
   },
   "documentation": " Shadow for {@link android.os.StrictMode}.\n",
+  "imports": [
+    "android.os.StrictMode",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowStrictMode"
 }

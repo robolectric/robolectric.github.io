@@ -46,5 +46,11 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.ZoomButtonsController}.\n",
+  "imports": [
+    "android.view.View",
+    "android.widget.ZoomButtonsController",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowZoomButtonsController"
 }

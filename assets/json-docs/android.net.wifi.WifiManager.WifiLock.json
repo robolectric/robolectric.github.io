@@ -46,5 +46,21 @@
       "name": "setReferenceCounted(boolean)"
     }
   },
+  "imports": [
+    "android.net.DhcpInfo",
+    "android.net.wifi.ScanResult",
+    "android.net.wifi.WifiConfiguration",
+    "android.net.wifi.WifiInfo",
+    "android.net.wifi.WifiManager",
+    "android.util.Pair",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.ArrayList",
+    "java.util.LinkedHashMap",
+    "java.util.List",
+    "java.util.Map"
+  ],
   "name": "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock"
 }

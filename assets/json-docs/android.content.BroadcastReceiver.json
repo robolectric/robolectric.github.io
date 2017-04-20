@@ -39,5 +39,14 @@
     }
   },
   "documentation": " Shadow for {@link android.content.BroadcastReceiver}.\n",
+  "imports": [
+    "android.content.BroadcastReceiver",
+    "android.content.Context",
+    "android.content.Intent",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "java.util.concurrent.atomic.AtomicBoolean"
+  ],
   "name": "org.robolectric.shadows.ShadowBroadcastReceiver"
 }

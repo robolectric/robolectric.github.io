@@ -32,5 +32,16 @@
     }
   },
   "documentation": " Shadow for {@link android.view.SurfaceView}.\n",
+  "imports": [
+    "android.graphics.Canvas",
+    "android.graphics.Rect",
+    "android.view.Surface",
+    "android.view.SurfaceHolder",
+    "android.view.SurfaceView",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.util.HashSet",
+    "java.util.Set"
+  ],
   "name": "org.robolectric.shadows.ShadowSurfaceView"
 }

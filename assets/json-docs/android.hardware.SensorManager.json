@@ -89,5 +89,17 @@
     }
   },
   "documentation": " Shadow for {@link android.hardware.SensorManager}.\n",
+  "imports": [
+    "android.hardware.Sensor",
+    "android.hardware.SensorEvent",
+    "android.hardware.SensorEventListener",
+    "android.hardware.SensorManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.Map"
+  ],
   "name": "org.robolectric.shadows.ShadowSensorManager"
 }

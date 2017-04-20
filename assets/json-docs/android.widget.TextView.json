@@ -144,7 +144,7 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Returns the text string of this {@code TextView}.\n\n\u003cp\u003e\nRobolectric extension.",
+      "documentation": "Returns the text string of this {@code TextView}.\n\nRobolectric extension.",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
@@ -242,5 +242,27 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.TextView}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.graphics.Typeface",
+    "android.text.InputFilter",
+    "android.text.TextPaint",
+    "android.text.TextWatcher",
+    "android.text.method.MovementMethod",
+    "android.text.method.TransformationMethod",
+    "android.view.KeyEvent",
+    "android.view.View",
+    "android.view.inputmethod.EditorInfo",
+    "android.widget.TextView",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "java.io.PrintStream",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Locale",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowTextView"
 }

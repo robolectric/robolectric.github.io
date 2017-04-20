@@ -369,5 +369,17 @@
     }
   },
   "documentation": " Shadow for {@link android.telephony.TelephonyManager}.\n",
+  "imports": [
+    "android.telephony.CellInfo",
+    "android.telephony.CellLocation",
+    "android.telephony.PhoneStateListener",
+    "android.telephony.TelephonyManager",
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
+  ],
   "name": "org.robolectric.shadows.ShadowTelephonyManager"
 }

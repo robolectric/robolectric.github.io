@@ -74,5 +74,38 @@
       "name": "obtainStyledAttributes(int[])"
     }
   },
+  "imports": [
+    "android.content.res.*",
+    "android.graphics.Bitmap",
+    "android.graphics.drawable.BitmapDrawable",
+    "android.graphics.drawable.Drawable",
+    "android.os.ParcelFileDescriptor",
+    "android.util.AttributeSet",
+    "android.util.DisplayMetrics",
+    "android.util.LongSparseArray",
+    "android.util.TypedValue",
+    "android.view.Display",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.internal.ShadowExtractor",
+    "org.robolectric.res.*",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "java.io.FileInputStream",
+    "java.io.InputStream",
+    "java.lang.reflect.Field",
+    "java.lang.reflect.Modifier",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Locale",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowResources.ShadowTheme"
 }

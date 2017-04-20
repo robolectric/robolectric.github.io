@@ -1,5 +1,13 @@
 {
   "methods": {},
   "documentation": " Shadow for {@link android.provider.MediaStore}.\n",
+  "imports": [
+    "android.content.ContentResolver",
+    "android.graphics.Bitmap",
+    "android.net.Uri",
+    "android.provider.MediaStore",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowMediaStore"
 }

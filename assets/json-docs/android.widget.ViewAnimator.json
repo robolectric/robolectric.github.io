@@ -54,5 +54,12 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.ViewAnimator}.\n",
+  "imports": [
+    "android.view.View",
+    "android.view.ViewGroup",
+    "android.widget.ViewAnimator",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowViewAnimator"
 }

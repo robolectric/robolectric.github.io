@@ -121,5 +121,15 @@
     }
   },
   "documentation": " Shadow for {@link android.app.Service}.\n",
+  "imports": [
+    "android.app.Notification",
+    "android.app.NotificationManager",
+    "android.app.Service",
+    "android.content.Context",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
   "name": "org.robolectric.shadows.ShadowService"
 }

@@ -24,5 +24,14 @@
     }
   },
   "documentation": " Shadow for {@link android.content.AsyncTaskLoader}\n\n @param \u003cD\u003e Return data type.\n",
+  "imports": [
+    "android.content.Context",
+    "android.content.AsyncTaskLoader",
+    "org.robolectric.util.SimpleFuture",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Implementation",
+    "java.util.concurrent.Callable"
+  ],
   "name": "org.robolectric.shadows.ShadowAsyncTaskLoader"
 }

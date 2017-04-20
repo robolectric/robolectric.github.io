@@ -30,5 +30,17 @@
     }
   },
   "documentation": " Shadow for {@link android.view.animation.AnimationUtils}.\n",
+  "imports": [
+    "android.content.Context",
+    "android.view.animation.Animation",
+    "android.view.animation.AnimationUtils",
+    "android.view.animation.Interpolator",
+    "android.view.animation.LayoutAnimationController",
+    "android.view.animation.LinearInterpolator",
+    "android.view.animation.TranslateAnimation",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowAnimationUtils"
 }

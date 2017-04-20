@@ -126,5 +126,15 @@
     }
   },
   "documentation": " Shadow for {@code android.graphics.BitmapRegionDecoder}.\n",
+  "imports": [
+    "android.graphics.*",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.io.*",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.Shadows.shadowOf"
+  ],
   "name": "org.robolectric.shadows.ShadowBitmapRegionDecoder"
 }

@@ -22,5 +22,14 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.ListView}.\n",
+  "imports": [
+    "android.view.View",
+    "android.widget.HeaderViewListAdapter",
+    "android.widget.ListView",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "java.util.ArrayList",
+    "java.util.List"
+  ],
   "name": "org.robolectric.shadows.ShadowListView"
 }

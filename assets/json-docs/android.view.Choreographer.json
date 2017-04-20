@@ -125,6 +125,18 @@
       "name": "setFrameInterval(long)"
     }
   },
-  "documentation": " Shadow for {@link android.view.Choreographer}.\n\n \u003cp\u003eThis class maintains its own concept of the current time aimed at making animations\n work correctly. Time starts out at 0 and advances by \"frameInterval\" every time\n {@link android.view.Choreographer#getFrameTimeNanos} is called.\u003c/p\u003e\n",
+  "documentation": " Shadow for {@link android.view.Choreographer}.\n\n This class maintains its own concept of the current time aimed at making animations\n work correctly. Time starts out at 0 and advances by \"frameInterval\" every time\n {@link android.view.Choreographer#getFrameTimeNanos} is called.\n",
+  "imports": [
+    "android.os.Handler",
+    "android.os.Looper",
+    "android.os.SystemClock",
+    "android.view.Choreographer",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.SoftThreadLocal",
+    "org.robolectric.util.TimeUtils"
+  ],
   "name": "org.robolectric.shadows.ShadowChoreographer"
 }

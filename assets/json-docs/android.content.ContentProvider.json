@@ -24,5 +24,12 @@
     }
   },
   "documentation": " Shadow for {@link ContentProvider}.\n",
+  "imports": [
+    "android.content.ContentProvider",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowContentProvider"
 }

@@ -315,5 +315,16 @@
     }
   },
   "documentation": " Shadow for {@link android.util.Log}.\n",
+  "imports": [
+    "android.util.Log",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "java.io.FileOutputStream",
+    "java.io.IOException",
+    "java.io.PrintStream",
+    "java.util.*",
+    "java.util.concurrent.ConcurrentLinkedQueue"
+  ],
   "name": "org.robolectric.shadows.ShadowLog"
 }

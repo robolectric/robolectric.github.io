@@ -247,5 +247,28 @@
     }
   },
   "documentation": " Shadow for {@link android.graphics.drawable.Drawable}.\n",
+  "imports": [
+    "android.content.res.Resources",
+    "android.graphics.Bitmap",
+    "android.graphics.BitmapFactory",
+    "android.graphics.NinePatch",
+    "android.graphics.Rect",
+    "android.graphics.drawable.BitmapDrawable",
+    "android.graphics.drawable.Drawable",
+    "android.graphics.drawable.NinePatchDrawable",
+    "android.util.DisplayMetrics",
+    "android.util.TypedValue",
+    "java.io.InputStream",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.Shadows.shadowOf"
+  ],
   "name": "org.robolectric.shadows.ShadowDrawable"
 }

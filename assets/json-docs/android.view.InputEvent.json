@@ -24,5 +24,11 @@
     }
   },
   "documentation": " Shadow for {@link android.view.InputEvent}.\n",
+  "imports": [
+    "android.view.InputDevice",
+    "android.view.InputEvent",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowInputEvent"
 }

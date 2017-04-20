@@ -36,5 +36,17 @@
     }
   },
   "documentation": " Shadow for {@link android.animation.ValueAnimator}.\n",
+  "imports": [
+    "android.animation.AnimationHandler",
+    "android.animation.ValueAnimator",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.shadow.api.Shadow.directlyOn"
+  ],
   "name": "org.robolectric.shadows.ShadowValueAnimator"
 }

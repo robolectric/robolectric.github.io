@@ -274,5 +274,26 @@
     }
   },
   "documentation": " Shadow for {@link android.content.ContentProviderClient}.\n",
+  "imports": [
+    "android.content.ContentProvider",
+    "android.content.ContentProviderClient",
+    "android.content.ContentProviderOperation",
+    "android.content.ContentProviderResult",
+    "android.content.ContentResolver",
+    "android.content.ContentValues",
+    "android.content.IContentProvider",
+    "android.content.OperationApplicationException",
+    "android.content.res.AssetFileDescriptor",
+    "android.database.Cursor",
+    "android.net.Uri",
+    "android.os.Bundle",
+    "android.os.CancellationSignal",
+    "android.os.ParcelFileDescriptor",
+    "android.os.RemoteException",
+    "java.io.FileNotFoundException",
+    "java.util.ArrayList",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowContentProviderClient"
 }

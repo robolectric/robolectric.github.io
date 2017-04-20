@@ -129,6 +129,12 @@
       "name": "uptimeMillis()"
     }
   },
-  "documentation": " Shadow for {@link android.os.SystemClock}.\n\n \u003cp\u003eThe concept of current time is base on the current time of the UI Scheduler for\n consistency with previous implementations. This is not ideal, since both schedulers\n (background and foreground), can see different values for the current time.\u003c/p\u003e\n",
+  "documentation": " Shadow for {@link android.os.SystemClock}.\n\n The concept of current time is base on the current time of the UI Scheduler for\n consistency with previous implementations. This is not ideal, since both schedulers\n (background and foreground), can see different values for the current time.\n",
+  "imports": [
+    "android.os.SystemClock",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.HiddenApi"
+  ],
   "name": "org.robolectric.shadows.ShadowSystemClock"
 }

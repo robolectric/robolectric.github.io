@@ -572,6 +572,24 @@
       "name": "visualize(android.graphics.Canvas)"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.Canvas}.\n\n \u003cp\u003e Broken. This implementation is very specific to the application for which it was developed.\n Todo: Reimplement. Consider using the same strategy of collecting a history of draw events\n and providing methods for writing queries based on type, number, and order of events.\u003c/p\u003e\n",
+  "documentation": " Shadow for {@link android.graphics.Canvas}.\n\n Broken. This implementation is very specific to the application for which it was developed.\n Todo: Reimplement. Consider using the same strategy of collecting a history of draw events\n and providing methods for writing queries based on type, number, and order of events.\n",
+  "imports": [
+    "android.graphics.Bitmap",
+    "android.graphics.Canvas",
+    "android.graphics.ColorFilter",
+    "android.graphics.Matrix",
+    "android.graphics.Paint",
+    "android.graphics.Path",
+    "android.graphics.Rect",
+    "android.graphics.RectF",
+    "javax.annotation.Nonnull",
+    "javax.annotation.Nullable",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.Shadows.shadowOf"
+  ],
   "name": "org.robolectric.shadows.ShadowCanvas"
 }

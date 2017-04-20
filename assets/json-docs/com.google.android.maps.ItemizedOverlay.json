@@ -122,5 +122,15 @@
     }
   },
   "documentation": " Shadow for {@link com.google.android.maps.ItemizedOverlay}.\n",
+  "imports": [
+    "android.graphics.drawable.Drawable",
+    "com.google.android.maps.ItemizedOverlay",
+    "com.google.android.maps.OverlayItem",
+    "com.google.android.maps.ShadowItemizedOverlayBridge",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "java.util.ArrayList"
+  ],
   "name": "org.robolectric.shadows.maps.ShadowItemizedOverlay"
 }

@@ -90,5 +90,15 @@
     }
   },
   "documentation": " Shadow for {@link android.view.inputmethod.InputMethodManager}.\n",
+  "imports": [
+    "android.os.IBinder",
+    "android.os.ResultReceiver",
+    "android.view.View",
+    "android.view.inputmethod.InputMethodManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.shadow.api.Shadow"
+  ],
   "name": "org.robolectric.shadows.ShadowInputMethodManager"
 }

@@ -94,5 +94,17 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.AdapterView}.\n",
+  "imports": [
+    "android.view.View",
+    "android.widget.Adapter",
+    "android.widget.AdapterView",
+    "android.widget.FrameLayout",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.Shadows.shadowOf"
+  ],
   "name": "org.robolectric.shadows.ShadowAdapterView"
 }

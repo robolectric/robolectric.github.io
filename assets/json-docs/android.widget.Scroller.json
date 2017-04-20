@@ -148,5 +148,10 @@
     }
   },
   "documentation": " Shadow for {@link android.widget.Scroller}.\n",
+  "imports": [
+    "android.widget.Scroller",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
   "name": "org.robolectric.shadows.ShadowScroller"
 }

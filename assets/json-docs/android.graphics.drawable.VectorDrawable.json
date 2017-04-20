@@ -150,5 +150,15 @@
       "name": "nUpdateGroupProperties(long,float,float,float,float,float,float,float)"
     }
   },
+  "imports": [
+    "android.graphics.drawable.VectorDrawable",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "java.nio.ByteBuffer",
+    "java.nio.ByteOrder",
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.shadows.ShadowVirtualRefBasePtr.get",
+    "org.robolectric.shadows.ShadowVirtualRefBasePtr.put"
+  ],
   "name": "org.robolectric.shadows.ShadowVectorDrawable"
 }
