@@ -410,6 +410,7 @@
         "public",
         "static"
       ],
+      "documentation": "Retrieve information on the status of the given account.\n\n@param account the account\n@param authority the authority\n@param create whether to create if no such account is found\n@return the account\u0027s status",
       "params": [
         "account",
         "authority",
@@ -668,7 +669,7 @@
         "static",
         "synchronized"
       ],
-      "documentation": "Internal-only method, do not use!\n\nInstead, use\n\u003cpre\u003e\n{@code\nProviderInfo info \u003d new ProviderInfo();\ninfo.authority \u003d authority;\nRobolectric.buildContentProvider(ContentProvider.class).create(info);\n}\u003c/pre\u003e",
+      "documentation": "Internal-only method, do not use!\n\nInstead, use\n```java\nProviderInfo info \u003d new ProviderInfo();\ninfo.authority \u003d authority;\nRobolectric.buildContentProvider(ContentProvider.class).create(info);\n```",
       "params": [
         "authority",
         "provider"
@@ -841,7 +842,7 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe value set with {@link #setNextDatabaseIdForUpdates(int)} will be incremented and returned.\n*Note:* the return value in this case will be changed to 1 in a future release of Robolectric.",
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe value set with {@link #setNextDatabaseIdForUpdates(int)} will be incremented and returned.\n\n *Note:* the return value in this case will be changed to {@code 1} in a future release of Robolectric.",
       "params": [
         "uri",
         "values",

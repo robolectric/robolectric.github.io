@@ -690,7 +690,7 @@
         "public",
         "static"
       ],
-      "documentation": "Sets a listener that is invoked whenever a new shadowed {@link MediaPlayer}\nobject is constructed. Registering a listener gives you a chance to\ncustomize the shadowed object appropriately without needing to modify the\napplication-under-test to provide access to the instance at the appropriate\npoint in its life cycle. This is useful because normally a new\n{@link MediaPlayer} is created and {@link #setDataSource setDataSource()}\nis invoked soon after, without a break in the code. Using this callback\nmeans you don\u0027t have to change this common pattern just so that you can\ncustomize the shadow for testing.\n\n@param createListener\n         the listener to be invoked",
+      "documentation": "Sets a listener that is invoked whenever a new shadowed {@link MediaPlayer}\nobject is constructed.\n\nRegistering a listener gives you a chance to\ncustomize the shadowed object appropriately without needing to modify the\napplication-under-test to provide access to the instance at the appropriate\npoint in its life cycle. This is useful because normally a new\n{@link MediaPlayer} is created and {@link #setDataSource setDataSource()}\nis invoked soon after, without a break in the code. Using this callback\nmeans you don\u0027t have to change this common pattern just so that you can\ncustomize the shadow for testing.\n\n@param createListener\n         the listener to be invoked",
       "params": [
         "createListener"
       ],
