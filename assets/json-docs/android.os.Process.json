@@ -42,6 +42,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter"
   ],
-  "name": "org.robolectric.shadows.ShadowProcess",
-  "documentation": "Shadow for {@link android.os.Process}.\n"
+  "name": "org.robolectric.shadows.ShadowProcess"
 }

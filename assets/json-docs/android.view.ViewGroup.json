@@ -26,7 +26,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "dump(java.io.PrintStream,int)",
-      "documentation": "Non-Android method that dumps the state of this {@code ViewGroup} to {@code System.out}\n"
+      "documentation": "Dumps the state of this {@code ViewGroup} to {@code System.out}.\n"
     },
     "getDisallowInterceptTouchEvent()": {
       "isImplementation": false,
@@ -155,6 +155,5 @@
     "java.io.PrintStream",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowViewGroup",
-  "documentation": "Shadow for {@link android.view.ViewGroup}.\n"
+  "name": "org.robolectric.shadows.ShadowViewGroup"
 }

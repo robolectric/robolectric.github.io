@@ -42,6 +42,5 @@
     "java.util.HashSet",
     "java.util.Set"
   ],
-  "name": "org.robolectric.shadows.ShadowSurfaceView",
-  "documentation": "Shadow for {@link android.view.SurfaceView}.\n"
+  "name": "org.robolectric.shadows.ShadowSurfaceView"
 }

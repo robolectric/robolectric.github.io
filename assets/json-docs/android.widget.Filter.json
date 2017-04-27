@@ -22,6 +22,5 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowFilter",
-  "documentation": "Shadow for {@link android.widget.Filter}.\n"
+  "name": "org.robolectric.shadows.ShadowFilter"
 }

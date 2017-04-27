@@ -46,6 +46,5 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowTimePickerDialog",
-  "documentation": "Shadow for {@link android.app.TimePickerDialog}.\n"
+  "name": "org.robolectric.shadows.ShadowTimePickerDialog"
 }

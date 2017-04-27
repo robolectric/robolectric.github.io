@@ -26,6 +26,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowJsResult",
-  "documentation": "Shadow for {@link android.webkit.JsResult}.\n"
+  "name": "org.robolectric.shadows.ShadowJsResult"
 }

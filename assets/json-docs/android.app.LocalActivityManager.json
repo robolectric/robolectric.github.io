@@ -4,6 +4,5 @@
     "android.app.LocalActivityManager",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowLocalActivityManager",
-  "documentation": "Shadow for {@link android.app.LocalActivityManager}.\n"
+  "name": "org.robolectric.shadows.ShadowLocalActivityManager"
 }

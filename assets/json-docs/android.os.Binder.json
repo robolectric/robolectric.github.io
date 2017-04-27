@@ -88,6 +88,5 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter"
   ],
-  "name": "org.robolectric.shadows.ShadowBinder",
-  "documentation": "Shadow for {@link android.os.Binder}.\n"
+  "name": "org.robolectric.shadows.ShadowBinder"
 }

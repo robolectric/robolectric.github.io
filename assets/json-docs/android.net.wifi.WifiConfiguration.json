@@ -27,6 +27,5 @@
     "org.robolectric.annotation.RealObject",
     "java.util.BitSet"
   ],
-  "name": "org.robolectric.shadows.ShadowWifiConfiguration",
-  "documentation": "Shadow for {@link android.net.wifi.WifiConfiguration}.\n"
+  "name": "org.robolectric.shadows.ShadowWifiConfiguration"
 }

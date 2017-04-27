@@ -85,6 +85,5 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowBatteryManager",
-  "documentation": "Shadow for {@link android.os.BatteryManager}.\n"
+  "name": "org.robolectric.shadows.ShadowBatteryManager"
 }

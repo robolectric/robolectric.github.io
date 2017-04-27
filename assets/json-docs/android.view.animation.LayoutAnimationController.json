@@ -28,6 +28,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowLayoutAnimationController",
-  "documentation": "Shadow for {@link android.view.animation.LayoutAnimationController}.\n"
+  "name": "org.robolectric.shadows.ShadowLayoutAnimationController"
 }

@@ -28,6 +28,5 @@
     "android.graphics.SurfaceTexture",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowSurface",
-  "documentation": "Shadow for {@link android.view.Surface}.\n"
+  "name": "org.robolectric.shadows.ShadowSurface"
 }

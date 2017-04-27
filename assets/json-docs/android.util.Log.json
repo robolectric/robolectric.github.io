@@ -84,7 +84,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
       "exceptions": [],
       "name": "getLogs()",
-      "documentation": "Non-Android accessor.  Returns ordered list of all log entries.\n@return List of log items\n"
+      "documentation": "Returns ordered list of all log entries.\n@return List of log items\n"
     },
     "getLogsForTag(java.lang.String)": {
       "isImplementation": false,
@@ -98,7 +98,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
       "exceptions": [],
       "name": "getLogsForTag(java.lang.String)",
-      "documentation": "Non-Android accessor.  Returns ordered list of all log items for a specific tag.\n\n@param tag The tag to get logs for\n@return The list of log items for the tag\n"
+      "documentation": "Returns ordered list of all log items for a specific tag.\n\n@param tag The tag to get logs for\n@return The list of log items for the tag\n"
     },
     "i(java.lang.String,java.lang.String)": {
       "isImplementation": true,
@@ -325,6 +325,5 @@
     "java.util.*",
     "java.util.concurrent.ConcurrentLinkedQueue"
   ],
-  "name": "org.robolectric.shadows.ShadowLog",
-  "documentation": "Shadow for {@link android.util.Log}.\n"
+  "name": "org.robolectric.shadows.ShadowLog"
 }

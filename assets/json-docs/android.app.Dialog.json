@@ -223,6 +223,5 @@
     "java.util.List",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowDialog",
-  "documentation": "Shadow for {@link android.app.Dialog}.\n"
+  "name": "org.robolectric.shadows.ShadowDialog"
 }

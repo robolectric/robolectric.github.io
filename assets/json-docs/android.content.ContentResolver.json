@@ -148,7 +148,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "bulkInsert(android.net.Uri,android.content.ContentValues[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#bulkInsert(Uri, ContentValues[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe number of rows in \u003ccode\u003evalues\u003c/code\u003e will be returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#bulkInsert(Uri, ContentValues[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe number of rows in {@code values} will be returned.\n"
     },
     "call(android.net.Uri,java.lang.String,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
@@ -218,7 +218,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "delete(android.net.Uri,java.lang.String,java.lang.String[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#delete(Uri, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getDeleteStatements()}\nor {@link #getDeletedUris()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\n\u003ccode\u003e1\u003c/code\u003e will be returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#delete(Uri, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getDeleteStatements()}\nor {@link #getDeletedUris()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\n{@code 1} will be returned.\n"
     },
     "getContentObservers(android.net.Uri)": {
       "isImplementation": false,
@@ -417,7 +417,8 @@
       ],
       "returnType": "org.robolectric.shadows.ShadowContentResolver.Status",
       "exceptions": [],
-      "name": "getStatus(android.accounts.Account,java.lang.String,boolean)"
+      "name": "getStatus(android.accounts.Account,java.lang.String,boolean)",
+      "documentation": "Retrieve information on the status of the given account.\n\n@param account the account\n@param authority the authority\n@param create whether to create if no such account is found\n@return the account\u0027s status\n"
     },
     "getSyncAutomatically(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
@@ -675,7 +676,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "registerProviderInternal(java.lang.String,android.content.ContentProvider)",
-      "documentation": "Internal-only method, do not use!\n\nInstead, use\n\u003cpre\u003e\n{@code\nProviderInfo info \u003d new ProviderInfo();\ninfo.authority \u003d authority;\nRobolectric.buildContentProvider(ContentProvider.class).create(info);\n}\u003c/pre\u003e\n"
+      "documentation": "Internal-only method, do not use!\n\nInstead, use\n```java\nProviderInfo info \u003d new ProviderInfo();\ninfo.authority \u003d authority;\nRobolectric.buildContentProvider(ContentProvider.class).create(info);\n```\n"
     },
     "removePeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
@@ -807,7 +808,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNextDatabaseIdForUpdates(int)",
-      "documentation": "Set the value to be returned by {@link ContentResolver#update(Uri, ContentValues, String, String[])}\nwhen no appropriate {@link ContentProvider} can be found.\n\n@deprecated This method will be removed in Robolectric 3.5. Instead, \u003ccode\u003e1\u003c/code\u003e will be returned.\n\n@param nextId the number of rows to return\n"
+      "documentation": "Set the value to be returned by {@link ContentResolver#update(Uri, ContentValues, String, String[])}\nwhen no appropriate {@link ContentProvider} can be found.\n\n@deprecated This method will be removed in Robolectric 3.5. Instead, {@code 1} will be returned.\n\n@param nextId the number of rows to return\n"
     },
     "setSyncAutomatically(android.accounts.Account,java.lang.String,boolean)": {
       "isImplementation": true,
@@ -850,7 +851,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe value set with {@link #setNextDatabaseIdForUpdates(int)} will be incremented and returned.\n*Note:* the return value in this case will be changed to 1 in a future release of Robolectric.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe value set with {@link #setNextDatabaseIdForUpdates(int)} will be incremented and returned.\n\n*Note:* the return value in this case will be changed to {@code 1} in a future release of Robolectric.\n"
     },
     "validateSyncExtrasBundle(android.os.Bundle)": {
       "isImplementation": true,
@@ -907,6 +908,5 @@
     "java.util.concurrent.CopyOnWriteArraySet",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowContentResolver",
-  "documentation": "Shadow for {@link android.content.ContentResolver}.\n"
+  "name": "org.robolectric.shadows.ShadowContentResolver"
 }

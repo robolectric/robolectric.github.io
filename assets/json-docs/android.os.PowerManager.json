@@ -10,7 +10,7 @@
       "returnType": "android.os.PowerManager.WakeLock",
       "exceptions": [],
       "name": "getLatestWakeLock()",
-      "documentation": "Non-Android accessor retrieves the most recent wakelock registered\nby the application\n\n@return Most recent wake lock.\n"
+      "documentation": "Retrieves the most recent wakelock registered by the application\n\n@return Most recent wake lock.\n"
     },
     "isInteractive()": {
       "isImplementation": true,
@@ -80,7 +80,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()",
-      "documentation": "Non-Android accessor that discards the most recent {@code PowerManager.WakeLock}s\n"
+      "documentation": "Discards the most recent {@code PowerManager.WakeLock}s\n"
     },
     "setIsInteractive(boolean)": {
       "isImplementation": false,
@@ -146,6 +146,5 @@
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadows.ShadowApplication.getInstance"
   ],
-  "name": "org.robolectric.shadows.ShadowPowerManager",
-  "documentation": "Shadow for {@link android.os.PowerManager}.\n"
+  "name": "org.robolectric.shadows.ShadowPowerManager"
 }

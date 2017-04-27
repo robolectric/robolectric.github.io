@@ -173,6 +173,5 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "org.robolectric.RuntimeEnvironment.getApiLevel"
   ],
-  "name": "org.robolectric.shadows.ShadowAccessibilityManager",
-  "documentation": "Shadow for {@link android.view.accessibility.AccessibilityManager}.\n"
+  "name": "org.robolectric.shadows.ShadowAccessibilityManager"
 }

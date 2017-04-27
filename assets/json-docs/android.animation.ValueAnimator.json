@@ -47,6 +47,5 @@
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowValueAnimator",
-  "documentation": "Shadow for {@link android.animation.ValueAnimator}.\n"
+  "name": "org.robolectric.shadows.ShadowValueAnimator"
 }

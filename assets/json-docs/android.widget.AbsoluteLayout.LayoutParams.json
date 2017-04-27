@@ -21,6 +21,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowAbsoluteLayout.ShadowLayoutParams",
-  "documentation": "Shadow for {@link android.widget.AbsoluteLayout.LayoutParams}.\n"
+  "name": "org.robolectric.shadows.ShadowAbsoluteLayout.ShadowLayoutParams"
 }

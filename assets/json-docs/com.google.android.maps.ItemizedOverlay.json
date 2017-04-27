@@ -70,7 +70,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "lastFocusedIndexWasReset()",
-      "documentation": "Non-Android accessor that indicates whether {@link #setLastFocusedIndex(int)} has been called with a value other\nthan -1.\n\n@return whether {@link #setLastFocusedIndex(int)} has been called with a value other\n        than -1\n"
+      "documentation": "Indicates whether {@link #setLastFocusedIndex(int)} has been called with a value other\nthan -1.\n\n@return whether {@link #setLastFocusedIndex(int)} has been called with a value other\n        than -1\n"
     },
     "populate()": {
       "isImplementation": true,
@@ -131,6 +131,5 @@
     "org.robolectric.annotation.RealObject",
     "java.util.ArrayList"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowItemizedOverlay",
-  "documentation": "Shadow for {@link com.google.android.maps.ItemizedOverlay}.\n"
+  "name": "org.robolectric.shadows.maps.ShadowItemizedOverlay"
 }

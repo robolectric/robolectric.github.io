@@ -94,6 +94,5 @@
     "android.graphics.Shader",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowLinearGradient",
-  "documentation": "Shadow for {@link android.graphics.LinearGradient}.\n"
+  "name": "org.robolectric.shadows.ShadowLinearGradient"
 }

@@ -345,6 +345,5 @@
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
   ],
-  "name": "org.robolectric.shadows.ShadowTime",
-  "documentation": "Shadow for {@link android.text.format.Time}.\n"
+  "name": "org.robolectric.shadows.ShadowTime"
 }

@@ -228,5 +228,5 @@
     "org.robolectric.annotation.Resetter"
   ],
   "name": "org.robolectric.shadows.gms.ShadowGooglePlayServicesUtil",
-  "documentation": "Shadow for {@link GooglePlayServicesUtil} that allows providing a\n{@link GooglePlayServicesUtilImpl}.\nCalls to static method of {@link GooglePlayServicesUtil} will be redirected to the provided\n{@link GooglePlayServicesUtilImpl} implementation. Use\n{@link #provideImpl(GooglePlayServicesUtilImpl)} to\nset the implementation instance. By default, a {@link GooglePlayServicesUtilImpl} is used in call\nredirection. Use mocks or subclassing {@link GooglePlayServicesUtilImpl} to achieve desired\nbehaviors.\n"
+  "documentation": "Calls to static method of {@link GooglePlayServicesUtil} will be redirected to the provided\n{@link GooglePlayServicesUtilImpl} implementation. Use\n{@link #provideImpl(GooglePlayServicesUtilImpl)} to\nset the implementation instance. By default, a {@link GooglePlayServicesUtilImpl} is used in call\nredirection. Use mocks or subclassing {@link GooglePlayServicesUtilImpl} to achieve desired\nbehaviors.\n"
 }

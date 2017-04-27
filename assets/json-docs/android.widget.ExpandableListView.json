@@ -4,6 +4,5 @@
     "android.widget.ExpandableListView",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowExpandableListView",
-  "documentation": "Shadow for {@link android.widget.ExpandableListView}.\n"
+  "name": "org.robolectric.shadows.ShadowExpandableListView"
 }

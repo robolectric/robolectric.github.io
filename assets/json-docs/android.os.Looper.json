@@ -424,7 +424,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "runUiThreadTasks()",
-      "documentation": "Runs any immediately runnable tasks previously queued on the UI thread,\ne.g. by {@link android.app.Activity#runOnUiThread(Runnable)} or {@link android.os.AsyncTask#onPostExecute(Object)}.\n\n\u003cp\u003eNote: calling this method does not pause or un-pause the scheduler.\u003c/p\u003e\n  \n@see #runUiThreadTasksIncludingDelayedTasks\n"
+      "documentation": "Runs any immediately runnable tasks previously queued on the UI thread,\ne.g. by {@link android.app.Activity#runOnUiThread(Runnable)} or {@link android.os.AsyncTask#onPostExecute(Object)}.\n\n**Note:** calling this method does not pause or un-pause the scheduler.\n\n@see #runUiThreadTasksIncludingDelayedTasks\n"
     },
     "runUiThreadTasksIncludingDelayedTasks()": {
       "isImplementation": false,
@@ -436,7 +436,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "runUiThreadTasksIncludingDelayedTasks()",
-      "documentation": "Runs all runnable tasks (pending and future) that have been queued on the UI thread. Such tasks may be queued by\ne.g. {@link android.app.Activity#runOnUiThread(Runnable)} or {@link android.os.AsyncTask#onPostExecute(Object)}.\n\n\u003cp\u003eNote: calling this method does not pause or un-pause the scheduler, however the clock is advanced as\nfuture tasks are run.\u003c/p\u003e\n\n@see #runUiThreadTasks\n"
+      "documentation": "Runs all runnable tasks (pending and future) that have been queued on the UI thread. Such tasks may be queued by\ne.g. {@link android.app.Activity#runOnUiThread(Runnable)} or {@link android.os.AsyncTask#onPostExecute(Object)}.\n\n**Note:** calling this method does not pause or un-pause the scheduler, however the clock is advanced as\nfuture tasks are run.\n\n@see #runUiThreadTasks\n"
     },
     "setPaused(boolean)": {
       "isImplementation": false,
@@ -506,5 +506,5 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
   ],
   "name": "org.robolectric.shadows.ShadowLooper",
-  "documentation": "Shadow for {@link android.os.Looper} that enqueues posted {@link Runnable}s to be run\n(on this thread) later. {@code Runnable}s that are scheduled to run immediately can be\ntriggered by calling {@link #idle()}.\n\n@see ShadowMessageQueue\n"
+  "documentation": "Robolectric enqueues posted {@link Runnable}s to be run\n(on this thread) later. {@code Runnable}s that are scheduled to run immediately can be\ntriggered by calling {@link #idle()}.\n\n@see ShadowMessageQueue\n"
 }

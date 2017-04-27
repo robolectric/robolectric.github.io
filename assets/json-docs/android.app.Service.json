@@ -49,7 +49,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isStoppedBySelf()",
-      "documentation": "Non-Android accessor, to use in assertions.\n@return Is this service stopped by self.\n"
+      "documentation": "@return Is this service stopped by self.\n"
     },
     "onDestroy()": {
       "isImplementation": true,
@@ -130,6 +130,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowService",
-  "documentation": "Shadow for {@link android.app.Service}.\n"
+  "name": "org.robolectric.shadows.ShadowService"
 }

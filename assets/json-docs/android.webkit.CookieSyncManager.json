@@ -33,6 +33,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowCookieSyncManager",
-  "documentation": "Shadow for {@code android.webkit.CookieSyncManager}.\n"
+  "name": "org.robolectric.shadows.ShadowCookieSyncManager"
 }

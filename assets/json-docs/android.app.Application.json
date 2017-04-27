@@ -155,7 +155,7 @@
       "returnType": "android.appwidget.AppWidgetManager",
       "exceptions": [],
       "name": "getAppWidgetManager()",
-      "documentation": "Non-Android accessor.\n\n@return the app widget manager used by this {@code Application}\n"
+      "documentation": "@return the app widget manager used by this {@code Application}\n"
     },
     "getApplicationContext()": {
       "isImplementation": true,
@@ -312,7 +312,7 @@
       "returnType": "android.view.LayoutInflater",
       "exceptions": [],
       "name": "getLayoutInflater()",
-      "documentation": "Non-Android accessor.\n\n@return the layout inflater used by this {@code Application}\n"
+      "documentation": "@return the layout inflater used by this {@code Application}\n"
     },
     "getMainHandler()": {
       "isImplementation": false,
@@ -378,7 +378,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
       "exceptions": [],
       "name": "getRegisteredReceivers()",
-      "documentation": "Non-Android accessor.\n\n@return list of {@link Wrapper}s for registered receivers\n"
+      "documentation": "@return list of {@link Wrapper}s for registered receivers\n"
     },
     "getShownToasts()": {
       "isImplementation": false,
@@ -610,7 +610,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "runBackgroundTasks()",
-      "documentation": "Runs any background tasks previously queued by {@link android.os.AsyncTask#execute(Object[])}.\n\n\u003cp\u003e\nNote: calling this method does not pause or un-pause the scheduler.\n"
+      "documentation": "Runs any background tasks previously queued by {@link android.os.AsyncTask#execute(Object[])}.\n\nNote: calling this method does not pause or un-pause the scheduler.\n"
     },
     "sendBroadcast(android.content.Intent)": {
       "isImplementation": true,
@@ -998,6 +998,5 @@
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.newInstanceOf"
   ],
-  "name": "org.robolectric.shadows.ShadowApplication",
-  "documentation": "Shadow for {@link android.app.Application}.\n"
+  "name": "org.robolectric.shadows.ShadowApplication"
 }

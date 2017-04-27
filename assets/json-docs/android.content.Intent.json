@@ -9,7 +9,7 @@
       "returnType": "java.lang.Class\u003c?\u003e",
       "exceptions": [],
       "name": "getIntentClass()",
-      "documentation": "Non-Android accessor that returns the {@code Class} object set by\n{@link Intent#setClass(android.content.Context, Class)}\n\n@return the {@code Class} object set by\n        {@link Intent#setClass(android.content.Context, Class)}\n"
+      "documentation": "Returns the {@code Class} object set by\n{@link Intent#setClass(android.content.Context, Class)}\n\n@return the {@code Class} object set by\n        {@link Intent#setClass(android.content.Context, Class)}\n"
     }
   },
   "imports": [
@@ -17,6 +17,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowIntent",
-  "documentation": "Shadow for {@link android.content.Intent}.\n"
+  "name": "org.robolectric.shadows.ShadowIntent"
 }

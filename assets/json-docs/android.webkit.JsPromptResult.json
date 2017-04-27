@@ -17,6 +17,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow.newInstanceOf"
   ],
-  "name": "org.robolectric.shadows.ShadowJsPromptResult",
-  "documentation": "Shadow for {@link android.webkit.JsPromptResult}.\n"
+  "name": "org.robolectric.shadows.ShadowJsPromptResult"
 }

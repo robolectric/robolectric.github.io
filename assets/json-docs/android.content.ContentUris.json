@@ -34,6 +34,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowContentUris",
-  "documentation": "Shadow for {@link android.content.ContentUris}.\n"
+  "name": "org.robolectric.shadows.ShadowContentUris"
 }

@@ -52,7 +52,7 @@
       "returnType": "android.widget.Toast",
       "exceptions": [],
       "name": "getLatestToast()",
-      "documentation": "Non-Android accessor that returns the most recently shown {@code Toast}\n\n@return the most recently shown {@code Toast}\n"
+      "documentation": "Returns the most recently shown {@code Toast}.\n\n@return the most recently shown {@code Toast}\n"
     },
     "getTextOfLatestToast()": {
       "isImplementation": false,
@@ -64,7 +64,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getTextOfLatestToast()",
-      "documentation": "Non-Android accessor that returns the text of the most recently shown {@code Toast}\n\n@return the text of the most recently shown {@code Toast}\n"
+      "documentation": "Returns the text of the most recently shown {@code Toast}.\n\n@return the text of the most recently shown {@code Toast}\n"
     },
     "getView()": {
       "isImplementation": true,
@@ -136,7 +136,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()",
-      "documentation": "Non-Android accessor that discards the recorded {@code Toast}s. Shown toasts are automatically cleared between\ntests. This method allows the user to discard recorded toasts during the test in order to make assertions clearer\ne.g:\n\n\u003cpre\u003e\n\n  // Show a single toast\n  myClass.showToast();\n\n  assertThat(ShadowToast.shownToastCount()).isEqualTo(1);\n  ShadowToast.reset();\n\n   // Show another toast\n  myClass.showToast();\n\n  assertThat(ShadowToast.shownToastCount()).isEqualTo(1);\n\n\u003c/pre\u003e\n"
+      "documentation": "Discards the recorded {@code Toast}s. Shown toasts are automatically cleared between\ntests. This method allows the user to discard recorded toasts during the test in order to make assertions clearer\ne.g:\n\n\u003cpre\u003e\n\n  // Show a single toast\n  myClass.showToast();\n\n  assertThat(ShadowToast.shownToastCount()).isEqualTo(1);\n  ShadowToast.reset();\n\n   // Show another toast\n  myClass.showToast();\n\n  assertThat(ShadowToast.shownToastCount()).isEqualTo(1);\n\n\u003c/pre\u003e\n"
     },
     "setDuration(int)": {
       "isImplementation": true,
@@ -223,7 +223,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "showedCustomToast(java.lang.CharSequence,int)",
-      "documentation": "Non-Android query method that returns whether or not a particular custom {@code Toast} has been shown.\n\n@param message the message to search for\n@param layoutResourceIdToCheckForMessage\n               the id of the resource that contains the toast messages\n@return whether the {@code Toast} was requested\n"
+      "documentation": "Returns whether or not a particular custom {@code Toast} has been shown.\n\n@param message the message to search for\n@param layoutResourceIdToCheckForMessage\n               the id of the resource that contains the toast messages\n@return whether the {@code Toast} was requested\n"
     },
     "showedToast(java.lang.CharSequence)": {
       "isImplementation": false,
@@ -249,7 +249,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "shownToastCount()",
-      "documentation": "Non-Android accessor that returns the number of {@code Toast} requests that have been made during this test run\nor since {@link #reset()} has been called.\n\n@return the number of {@code Toast} requests that have been made during this test run\n        or since {@link #reset()} has been called.\n"
+      "documentation": "Returns the number of {@code Toast} requests that have been made during this test run\nor since {@link #reset()} has been called.\n\n@return the number of {@code Toast} requests that have been made during this test run\n        or since {@link #reset()} has been called.\n"
     }
   },
   "imports": [
@@ -264,6 +264,5 @@
     "java.util.List",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowToast",
-  "documentation": "Shadow for {@link android.widget.Toast}.\n"
+  "name": "org.robolectric.shadows.ShadowToast"
 }

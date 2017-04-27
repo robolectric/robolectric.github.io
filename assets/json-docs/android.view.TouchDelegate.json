@@ -41,6 +41,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowTouchDelegate",
-  "documentation": "Shadow for {@link android.view.TouchDelegate}.\n"
+  "name": "org.robolectric.shadows.ShadowTouchDelegate"
 }

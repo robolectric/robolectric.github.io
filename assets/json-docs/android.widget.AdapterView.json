@@ -105,6 +105,5 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowAdapterView",
-  "documentation": "Shadow for {@link android.widget.AdapterView}.\n"
+  "name": "org.robolectric.shadows.ShadowAdapterView"
 }

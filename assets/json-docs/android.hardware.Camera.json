@@ -375,6 +375,5 @@
     "java.util.Map",
     "org.robolectric.shadow.api.Shadow.*"
   ],
-  "name": "org.robolectric.shadows.ShadowCamera",
-  "documentation": "Shadow for {@link android.hardware.Camera}.\n"
+  "name": "org.robolectric.shadows.ShadowCamera"
 }

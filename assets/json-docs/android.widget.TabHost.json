@@ -141,6 +141,5 @@
     "java.util.ArrayList",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.ShadowTabHost",
-  "documentation": "Shadow for {@link android.widget.TabHost}.\n"
+  "name": "org.robolectric.shadows.ShadowTabHost"
 }

@@ -44,6 +44,5 @@
     "org.robolectric.shadow.api.Shadow",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowNetwork",
-  "documentation": "Shadow for {@code android.net.Network}.\n"
+  "name": "org.robolectric.shadows.ShadowNetwork"
 }

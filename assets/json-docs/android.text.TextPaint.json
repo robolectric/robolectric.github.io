@@ -4,6 +4,5 @@
     "android.text.TextPaint",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowTextPaint",
-  "documentation": "Shadow for {@link android.text.TextPaint}.\n"
+  "name": "org.robolectric.shadows.ShadowTextPaint"
 }

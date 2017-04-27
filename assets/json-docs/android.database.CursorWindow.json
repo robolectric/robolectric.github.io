@@ -561,6 +561,5 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.castNativePtr"
   ],
-  "name": "org.robolectric.shadows.ShadowCursorWindow",
-  "documentation": "Shadow for {@link android.database.CursorWindow}.\n"
+  "name": "org.robolectric.shadows.ShadowCursorWindow"
 }

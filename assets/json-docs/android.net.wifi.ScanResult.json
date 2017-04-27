@@ -47,6 +47,5 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowScanResult",
-  "documentation": "Shadow for {@link android.net.wifi.ScanResult}.\n"
+  "name": "org.robolectric.shadows.ShadowScanResult"
 }

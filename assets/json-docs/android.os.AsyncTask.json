@@ -124,6 +124,5 @@
     "java.util.concurrent.TimeUnit",
     "java.util.concurrent.TimeoutException"
   ],
-  "name": "org.robolectric.shadows.ShadowAsyncTask",
-  "documentation": "Shadow for {@link android.os.AsyncTask}.\n"
+  "name": "org.robolectric.shadows.ShadowAsyncTask"
 }

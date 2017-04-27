@@ -82,6 +82,5 @@
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowIcon",
-  "documentation": "Shadow for {@link android.graphics.drawable.Icon}.\n"
+  "name": "org.robolectric.shadows.ShadowIcon"
 }

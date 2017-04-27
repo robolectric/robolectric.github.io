@@ -4,6 +4,5 @@
     "android.graphics.BitmapShader",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowBitmapShader",
-  "documentation": "Shadow for {@link android.graphics.BitmapShader}.\n"
+  "name": "org.robolectric.shadows.ShadowBitmapShader"
 }

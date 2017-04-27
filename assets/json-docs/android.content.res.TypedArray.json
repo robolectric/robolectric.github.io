@@ -72,6 +72,5 @@
     "java.util.Map",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowTypedArray",
-  "documentation": "Shadow for {@link android.content.res.TypedArray}.\n"
+  "name": "org.robolectric.shadows.ShadowTypedArray"
 }

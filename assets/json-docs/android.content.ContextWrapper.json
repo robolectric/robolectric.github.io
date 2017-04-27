@@ -9,7 +9,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearStartedServices()",
-      "documentation": "Non-android accessor that delefates to the application to clear the stack of started\nservice intents.\n"
+      "documentation": "Delegates to the application to clear the stack of started service intents.\n"
     },
     "denyPermissions(java.lang.String...)": {
       "isImplementation": false,
@@ -42,7 +42,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getNextStartedActivity()",
-      "documentation": "Non-Android accessor that delegates to the application to consume and return the next {@code Intent} on the\nstarted activities stack.\n\n@return the next started {@code Intent} for an activity\n"
+      "documentation": "Delegates to the application to consume and return the next {@code Intent} on the\nstarted activities stack.\n\n@return the next started {@code Intent} for an activity\n"
     },
     "getNextStartedService()": {
       "isImplementation": false,
@@ -53,7 +53,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getNextStartedService()",
-      "documentation": "Non-Android accessor that delegates to the application to consume and return the next {@code Intent} on the\nstarted services stack.\n\n@return the next started {@code Intent} for a service\n"
+      "documentation": "Delegates to the application to consume and return the next {@code Intent} on the\nstarted services stack.\n\n@return the next started {@code Intent} for a service\n"
     },
     "getNextStoppedService()": {
       "isImplementation": false,
@@ -64,7 +64,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getNextStoppedService()",
-      "documentation": "Non-Android accessor that delegates to the application to return the next {@code Intent} to stop\na service (irrespective of if the service was running)\n\n@return {@code Intent} for the next service requested to be stopped\n"
+      "documentation": "Delegates to the application to return the next {@code Intent} to stop\na service (irrespective of if the service was running)\n\n@return {@code Intent} for the next service requested to be stopped\n"
     },
     "grantPermissions(java.lang.String...)": {
       "isImplementation": false,
@@ -87,7 +87,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "peekNextStartedActivity()",
-      "documentation": "Non-Android accessor that delegates to the application to return (without consuming) the next {@code Intent} on\nthe started activities stack.\n\n@return the next started {@code Intent} for an activity\n"
+      "documentation": "Delegates to the application to return (without consuming) the next {@code Intent} on\nthe started activities stack.\n\n@return the next started {@code Intent} for an activity\n"
     },
     "peekNextStartedService()": {
       "isImplementation": false,
@@ -107,6 +107,5 @@
     "org.robolectric.annotation.Implements",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.ShadowContextWrapper",
-  "documentation": "Shadow for {@link android.content.ContextWrapper}.\n"
+  "name": "org.robolectric.shadows.ShadowContextWrapper"
 }

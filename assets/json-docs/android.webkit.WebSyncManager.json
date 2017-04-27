@@ -35,6 +35,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowWebSyncManager",
-  "documentation": "Shadow for {@code android.webkit.WebSyncManager}.\n"
+  "name": "org.robolectric.shadows.ShadowWebSyncManager"
 }

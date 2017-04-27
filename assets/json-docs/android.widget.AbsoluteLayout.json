@@ -5,6 +5,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowAbsoluteLayout",
-  "documentation": "Shadow for {@link android.widget.AbsoluteLayout}.\n"
+  "name": "org.robolectric.shadows.ShadowAbsoluteLayout"
 }

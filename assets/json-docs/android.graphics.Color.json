@@ -29,7 +29,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "RGBToHSV(int,int,int,float[])",
-      "documentation": "This is implemented in native code in the Android SDK.\n\n\u003cp\u003eSince HSV \u003d\u003d HSB then the implementation from {@link java.awt.Color} can be used,\nwith a small adjustment to the representation of the hue.\u003c/p\u003e\n\n\u003cp\u003e{@link java.awt.Color} represents hue as 0..1 (where 1 \u003d\u003d 100% \u003d\u003d 360 degrees),\nwhile {@link android.graphics.Color} represents hue as 0..360 degrees. The correct hue\ncan be calculated by multiplying with 360.\u003c/p\u003e\n\n@param red Red component\n@param green Green component\n@param blue Blue component\n@param hsv Array to store HSV components\n"
+      "documentation": "This is implemented in native code in the Android SDK.\n\nSince HSV \u003d\u003d HSB then the implementation from {@link java.awt.Color} can be used,\nwith a small adjustment to the representation of the hue.\n\n{@link java.awt.Color} represents hue as 0..1 (where 1 \u003d\u003d 100% \u003d\u003d 360 degrees),\nwhile {@link android.graphics.Color} represents hue as 0..360 degrees. The correct hue\ncan be calculated by multiplying with 360.\n\n@param red Red component\n@param green Green component\n@param blue Blue component\n@param hsv Array to store HSV components\n"
     }
   },
   "imports": [
@@ -37,6 +37,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Implementation"
   ],
-  "name": "org.robolectric.shadows.ShadowColor",
-  "documentation": "Shadow for {@link android.graphics.Color}.\n"
+  "name": "org.robolectric.shadows.ShadowColor"
 }

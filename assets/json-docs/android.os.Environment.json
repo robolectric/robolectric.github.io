@@ -150,7 +150,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setExternalStorageEmulated(java.io.File,boolean)",
-      "documentation": "Non-Android accessor. Sets the \"isEmulated\" flag of a particular file.\n\n@param file Target file.\n@param isEmulated True if the filesystem is emulated.\n"
+      "documentation": "Sets the \"isEmulated\" flag of a particular file.\n\n@param file Target file.\n@param isEmulated True if the filesystem is emulated.\n"
     },
     "setExternalStorageRemovable(java.io.File,boolean)": {
       "isImplementation": false,
@@ -165,7 +165,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setExternalStorageRemovable(java.io.File,boolean)",
-      "documentation": "Non-Android accessor. Sets the \"isRemovable\" flag of a particular file.\n\n@param file Target file.\n@param isRemovable True if the filesystem is removable.\n"
+      "documentation": "Sets the \"isRemovable\" flag of a particular file.\n\n@param file Target file.\n@param isRemovable True if the filesystem is removable.\n"
     },
     "setExternalStorageState(java.lang.String)": {
       "isImplementation": false,
@@ -179,7 +179,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setExternalStorageState(java.lang.String)",
-      "documentation": "Non-Android accessor. Sets the return value of {@link #getExternalStorageState()}.\n\n@param externalStorageState Value to return from {@link #getExternalStorageState()}.\n"
+      "documentation": "Sets the return value of {@link #getExternalStorageState()}.\n\n@param externalStorageState Value to return from {@link #getExternalStorageState()}.\n"
     },
     "setIsExternalStorageEmulated(boolean)": {
       "isImplementation": false,
@@ -193,7 +193,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setIsExternalStorageEmulated(boolean)",
-      "documentation": "Non-Android accessor. Sets the return value of {@link #isExternalStorageEmulated()}.\n\n@param emulated Value to return from {@link #isExternalStorageEmulated()}.\n"
+      "documentation": "Sets the return value of {@link #isExternalStorageEmulated()}.\n\n@param emulated Value to return from {@link #isExternalStorageEmulated()}.\n"
     }
   },
   "imports": [
@@ -212,6 +212,5 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowEnvironment",
-  "documentation": "Shadow for {@link android.os.Environment}.\n"
+  "name": "org.robolectric.shadows.ShadowEnvironment"
 }

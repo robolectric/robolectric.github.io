@@ -4,6 +4,5 @@
     "android.media.MediaScannerConnection",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowMediaScannerConnection",
-  "documentation": "Shadow for {@link android.media.MediaScannerConnection}.\n"
+  "name": "org.robolectric.shadows.ShadowMediaScannerConnection"
 }

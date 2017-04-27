@@ -17,6 +17,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowTabWidget",
-  "documentation": "Shadow for {@link android.widget.TabWidget}.\n"
+  "name": "org.robolectric.shadows.ShadowTabWidget"
 }

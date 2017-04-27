@@ -48,6 +48,5 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowStaticLayout",
-  "documentation": "Shadow for {@link android.text.StaticLayout}.\n"
+  "name": "org.robolectric.shadows.ShadowStaticLayout"
 }

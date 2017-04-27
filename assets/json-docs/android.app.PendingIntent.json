@@ -301,6 +301,5 @@
     "java.util.List",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowPendingIntent",
-  "documentation": "Shadow for {@code android.app.PendingIntent}.\n"
+  "name": "org.robolectric.shadows.ShadowPendingIntent"
 }

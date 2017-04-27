@@ -531,6 +531,5 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowTelecomManager",
-  "documentation": "Shadow for {@link android.telecom.TelecomManager}.\n"
+  "name": "org.robolectric.shadows.ShadowTelecomManager"
 }

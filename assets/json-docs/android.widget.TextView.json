@@ -148,7 +148,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "innerText()",
-      "documentation": "Returns the text string of this {@code TextView}.\n\n\u003cp\u003e\nRobolectric extension.\n"
+      "documentation": "Returns the text string of this {@code TextView}.\n\nRobolectric extension.\n"
     },
     "onKeyDown(int,android.view.KeyEvent)": {
       "isImplementation": true,
@@ -263,6 +263,5 @@
     "java.util.Locale",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowTextView",
-  "documentation": "Shadow for {@link android.widget.TextView}.\n"
+  "name": "org.robolectric.shadows.ShadowTextView"
 }

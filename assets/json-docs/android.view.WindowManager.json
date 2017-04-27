@@ -4,6 +4,5 @@
     "android.view.WindowManager",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowWindowManager",
-  "documentation": "Shadow for {@link android.view.WindowManager}.\n"
+  "name": "org.robolectric.shadows.ShadowWindowManager"
 }

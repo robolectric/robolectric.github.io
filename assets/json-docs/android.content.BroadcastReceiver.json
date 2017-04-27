@@ -47,6 +47,5 @@
     "org.robolectric.annotation.RealObject",
     "java.util.concurrent.atomic.AtomicBoolean"
   ],
-  "name": "org.robolectric.shadows.ShadowBroadcastReceiver",
-  "documentation": "Shadow for {@link android.content.BroadcastReceiver}.\n"
+  "name": "org.robolectric.shadows.ShadowBroadcastReceiver"
 }

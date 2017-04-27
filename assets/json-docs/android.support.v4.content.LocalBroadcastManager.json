@@ -89,6 +89,5 @@
     "java.util.Iterator",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager",
-  "documentation": "Shadow for {@link android.support.v4.content.LocalBroadcastManager}.\n"
+  "name": "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager"
 }

@@ -260,6 +260,5 @@
     "org.robolectric.shadows.util.DataSource",
     "org.robolectric.shadows.util.DataSource.toDataSource"
   ],
-  "name": "org.robolectric.shadows.ShadowMediaMetadataRetriever",
-  "documentation": "Shadow for {@link android.media.MediaMetadataRetriever}.\n"
+  "name": "org.robolectric.shadows.ShadowMediaMetadataRetriever"
 }

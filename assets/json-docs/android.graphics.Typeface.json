@@ -171,7 +171,7 @@
       "returnType": "org.robolectric.shadows.ShadowTypeface.FontDesc",
       "exceptions": [],
       "name": "getFontDescription()",
-      "documentation": "Non-Android accessor. Return the font description.\n\n@return Font description.\n"
+      "documentation": "Returns the font description.\n\n@return Font description.\n"
     },
     "getStyle()": {
       "isImplementation": true,
@@ -218,6 +218,5 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowTypeface",
-  "documentation": "Shadow for {@link android.graphics.Typeface}.\n"
+  "name": "org.robolectric.shadows.ShadowTypeface"
 }

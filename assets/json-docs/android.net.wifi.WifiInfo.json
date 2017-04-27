@@ -176,6 +176,5 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowWifiInfo",
-  "documentation": "Shadow for {@link android.net.wifi.WifiInfo}.\n"
+  "name": "org.robolectric.shadows.ShadowWifiInfo"
 }

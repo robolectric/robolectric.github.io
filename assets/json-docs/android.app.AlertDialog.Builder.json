@@ -16,6 +16,5 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowAlertDialog.ShadowBuilder",
-  "documentation": "Shadow for {@code android.app.AlertDialog.Builder}.\n"
+  "name": "org.robolectric.shadows.ShadowAlertDialog.ShadowBuilder"
 }

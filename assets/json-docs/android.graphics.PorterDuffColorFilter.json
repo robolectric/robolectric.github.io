@@ -22,7 +22,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getColor()",
-      "documentation": "Non-Android accessor.\n\n@return Returns the ARGB color used to tint the source pixels when this filter\nis applied.\n"
+      "documentation": "@return Returns the ARGB color used to tint the source pixels when this filter\nis applied.\n"
     },
     "getMode()": {
       "isImplementation": false,
@@ -33,7 +33,7 @@
       "returnType": "android.graphics.PorterDuff.Mode",
       "exceptions": [],
       "name": "getMode()",
-      "documentation": "Non-Android accessor.\n\n@return Returns the Porter-Duff mode used to composite this color filter\u0027s\ncolor with the source pixel when this filter is applied.\n"
+      "documentation": "@return Returns the Porter-Duff mode used to composite this color filter\u0027s\ncolor with the source pixel when this filter is applied.\n"
     },
     "hashCode()": {
       "isImplementation": true,
@@ -76,6 +76,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowPorterDuffColorFilter",
-  "documentation": "Shadow for {@link android.graphics.PorterDuffColorFilter}.\n"
+  "name": "org.robolectric.shadows.ShadowPorterDuffColorFilter"
 }

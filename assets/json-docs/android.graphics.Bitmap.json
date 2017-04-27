@@ -760,6 +760,5 @@
     "java.nio.ByteBuffer",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowBitmap",
-  "documentation": "Shadow for {@link android.graphics.Bitmap}.\n"
+  "name": "org.robolectric.shadows.ShadowBitmap"
 }

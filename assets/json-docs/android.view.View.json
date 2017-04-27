@@ -235,7 +235,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getBackgroundColor()",
-      "documentation": "Non-Android accessor.\n\n@return the color of this view\u0027s background, or 0 if it\u0027s not a solid color\n@deprecated Use FEST assertions instead.\n"
+      "documentation": "@return the color of this view\u0027s background, or 0 if it\u0027s not a solid color\n@deprecated Use FEST assertions instead.\n"
     },
     "getBackgroundResourceId()": {
       "isImplementation": false,
@@ -246,7 +246,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getBackgroundResourceId()",
-      "documentation": "Non-Android accessor.\n\n@return the resource ID of this view\u0027s background\n@deprecated Use FEST assertions instead.\n"
+      "documentation": "@return the resource ID of this view\u0027s background\n@deprecated Use FEST assertions instead.\n"
     },
     "getDrawingCache()": {
       "isImplementation": true,
@@ -290,7 +290,7 @@
       "returnType": "android.view.View.OnClickListener",
       "exceptions": [],
       "name": "getOnClickListener()",
-      "documentation": "Non-android accessor.\n\n@return Returns click listener, if set.\n"
+      "documentation": "@return Returns click listener, if set.\n"
     },
     "getOnCreateContextMenuListener()": {
       "isImplementation": false,
@@ -301,7 +301,7 @@
       "returnType": "android.view.View.OnCreateContextMenuListener",
       "exceptions": [],
       "name": "getOnCreateContextMenuListener()",
-      "documentation": "Non-android accessor.\n\n@return Returns create ContextMenu listener, if set.\n"
+      "documentation": "@return Returns create ContextMenu listener, if set.\n"
     },
     "getOnLongClickListener()": {
       "isImplementation": false,
@@ -312,7 +312,7 @@
       "returnType": "android.view.View.OnLongClickListener",
       "exceptions": [],
       "name": "getOnLongClickListener()",
-      "documentation": "Non-android accessor.\n\n@return Returns long click listener, if set.\n"
+      "documentation": "@return Returns long click listener, if set.\n"
     },
     "getOnSystemUiVisibilityChangeListener()": {
       "isImplementation": false,
@@ -323,7 +323,7 @@
       "returnType": "android.view.View.OnSystemUiVisibilityChangeListener",
       "exceptions": [],
       "name": "getOnSystemUiVisibilityChangeListener()",
-      "documentation": "Non-android accessor.\n\n@return Returns system ui visibility change listener.\n"
+      "documentation": "@return Returns system ui visibility change listener.\n"
     },
     "getOnTouchListener()": {
       "isImplementation": false,
@@ -334,7 +334,7 @@
       "returnType": "android.view.View.OnTouchListener",
       "exceptions": [],
       "name": "getOnTouchListener()",
-      "documentation": "Non-android accessor.\n\n@return Touch listener, if set.\n"
+      "documentation": "@return Touch listener, if set.\n"
     },
     "getQualifiers()": {
       "isImplementation": false,
@@ -387,7 +387,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "innerText()",
-      "documentation": "Returns a string representation of this {@code View}. Unless overridden, it will be an empty string.\n\n\u003cp\u003e\nRobolectric extension.\n@return String representation of this view.\n"
+      "documentation": "Returns a string representation of this {@code View}. Unless overridden, it will be an empty string.\n\nRobolectric extension.\n@return String representation of this view.\n"
     },
     "innerText(android.view.View)": {
       "isImplementation": false,
@@ -746,7 +746,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "wasInvalidated()",
-      "documentation": "Non-Android accessor.\n\n@return whether or not {@link #invalidate()} has been called\n"
+      "documentation": "@return whether or not {@link #invalidate()} has been called\n"
     }
   },
   "imports": [
@@ -788,6 +788,5 @@
     "org.robolectric.util.ReflectionHelpers.getField",
     "org.robolectric.util.ReflectionHelpers.setField"
   ],
-  "name": "org.robolectric.shadows.ShadowView",
-  "documentation": "Shadow for {@link android.view.View}.\n"
+  "name": "org.robolectric.shadows.ShadowView"
 }

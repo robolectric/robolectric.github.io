@@ -122,6 +122,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowVelocityTracker",
-  "documentation": "Shadow for {@link android.view.VelocityTracker}.\n"
+  "name": "org.robolectric.shadows.ShadowVelocityTracker"
 }

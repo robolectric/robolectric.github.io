@@ -9,7 +9,7 @@
       "returnType": "android.os.Message",
       "exceptions": [],
       "name": "getNext()",
-      "documentation": "Convenience method to provide getter access to the private field\n\u003ccode\u003eMessage.next\u003c/code\u003e.\n\n@return The next message in the current message chain.\n@see #setNext(Message) \n"
+      "documentation": "Convenience method to provide getter access to the private field\n{@code Message.next}.\n\n@return The next message in the current message chain.\n@see #setNext(Message) \n"
     },
     "isInUse()": {
       "isImplementation": true,
@@ -19,7 +19,8 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isInUse()"
+      "name": "isInUse()",
+      "documentation": "Convenience method to provide access to the private {@code Message.isInUse()}\nmethod. Note that the definition of \"in use\" changed with API 21:\n\nIn API 19, a message was only considered \"in use\" during its dispatch. In API 21, the\nmessage is considered \"in use\" from the time it is enqueued until the time that\nit is freshly obtained via a call to {@link Message#obtain()}. This means that\nin API 21 messages that are in the recycled pool will still be marked as \"in use\". \n\n@return {@code true} if the message is currently \"in use\", {@code false} otherwise.\n"
     },
     "recycle()": {
       "isImplementation": true,
@@ -30,7 +31,8 @@
       "returnType": "void",
       "exceptions": [],
       "maxSdk": 20,
-      "name": "recycle()"
+      "name": "recycle()",
+      "documentation": "Hook to unscheduled the callback when the message is recycled.\nInvokes {@link #unschedule()} and then calls through to\n{@link Message#recycle()} on the real object.\n"
     },
     "recycleUnchecked()": {
       "isImplementation": true,
@@ -41,7 +43,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "recycleUnchecked()",
-      "documentation": "Hook to unscheduled the callback when the message is recycled.\nInvokes {@link #unschedule()} and then calls through to the\npackage private method {@link Message}\u003ccode\u003e.recycleUnchecked()\non the real object.\n"
+      "documentation": "Hook to unscheduled the callback when the message is recycled.\nInvokes {@link #unschedule()} and then calls through to the\npackage private method {@link Message#recycleUnchecked()}\non the real object.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -66,7 +68,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNext(android.os.Message)",
-      "documentation": "Convenience method to provide setter access to the private field\n\u003ccode\u003eMessage.next\u003c/code\u003e.\n\n@param next the new next message for the current message.\n@see #getNext() \n"
+      "documentation": "Convenience method to provide setter access to the private field\n{@code Message.next}.\n\n@param next the new next message for the current message.\n@see #getNext() \n"
     },
     "setScheduledRunnable(java.lang.Runnable)": {
       "isImplementation": false,
@@ -79,7 +81,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setScheduledRunnable(java.lang.Runnable)",
-      "documentation": "Stores the \u003ccode\u003eRunnable\u003c/code\u003e instance that has been scheduled\nto invoke this message. This is called when the message is\nenqueued by {@link ShadowMessageQueue#enqueueMessage} and is used when\nthe message is recycled to ensure that the correct\n{@link Runnable} instance is removed from the associated scheduler.\n\n@param r the \u003ccode\u003eRunnable\u003c/code\u003e instance that is scheduled to\ntrigger this message.\n\n#if ($api \u003e\u003d 21)   * @see #recycleUnchecked()\n#else   * @see #recycle()\n#end\n"
+      "documentation": "Stores the {@link Runnable} instance that has been scheduled\nto invoke this message. This is called when the message is\nenqueued by {@link ShadowMessageQueue#enqueueMessage} and is used when\nthe message is recycled to ensure that the correct\n{@link Runnable} instance is removed from the associated scheduler.\n\n@param r the {@link Runnable} instance that is scheduled to\ntrigger this message.\n\n#if ($api \u003e\u003d 21)   * @see #recycleUnchecked()\n#else   * @see #recycle()\n#end\n"
     },
     "unschedule()": {
       "isImplementation": false,
@@ -106,6 +108,5 @@
     "org.robolectric.shadow.api.Shadow.*",
     "org.robolectric.util.ReflectionHelpers.*"
   ],
-  "name": "org.robolectric.shadows.ShadowMessage",
-  "documentation": "Shadow for {@link android.os.Message}.\n"
+  "name": "org.robolectric.shadows.ShadowMessage"
 }

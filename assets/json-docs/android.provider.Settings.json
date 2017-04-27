@@ -12,7 +12,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "set24HourTimeFormat(boolean)",
-      "documentation": "Non-Android accessor thatallows the value of the TIME_12_24 setting to be set.\n\n@param use24HourTimeFormat new status for the time setting\n"
+      "documentation": "Sets the value of the {@link Settings.System#TIME_12_24} setting.\n\n@param use24HourTimeFormat new status for the time setting\n"
     },
     "setAirplaneMode(boolean)": {
       "isImplementation": false,
@@ -26,7 +26,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setAirplaneMode(boolean)",
-      "documentation": "Non-Android accessor that allows the value of the AIRPLANE_MODE_ON setting to be set.\n\n@param isAirplaneMode new status for airplane mode\n"
+      "documentation": "Sets the value of the {@link Settings.System#AIRPLANE_MODE_ON} setting.\n\n@param isAirplaneMode new status for airplane mode\n"
     },
     "setWifiOn(boolean)": {
       "isImplementation": false,
@@ -54,6 +54,5 @@
     "java.util.WeakHashMap",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1"
   ],
-  "name": "org.robolectric.shadows.ShadowSettings",
-  "documentation": "Shadow for {@link android.provider.Settings}.\n"
+  "name": "org.robolectric.shadows.ShadowSettings"
 }

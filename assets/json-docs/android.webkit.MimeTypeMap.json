@@ -104,6 +104,5 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowMimeTypeMap",
-  "documentation": "Shadow for {@link android.webkit.MimeTypeMap}.\n"
+  "name": "org.robolectric.shadows.ShadowMimeTypeMap"
 }

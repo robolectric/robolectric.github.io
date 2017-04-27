@@ -309,6 +309,5 @@
     "org.robolectric.annotation.RealObject",
     "java.lang.reflect.Constructor"
   ],
-  "name": "org.robolectric.shadows.ShadowMotionEvent",
-  "documentation": "Shadow for {@link android.view.MotionEvent}.\n"
+  "name": "org.robolectric.shadows.ShadowMotionEvent"
 }

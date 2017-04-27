@@ -76,6 +76,5 @@
     "java.util.Set",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowJobScheduler",
-  "documentation": "Shadow for {@link android.app.job.JobScheduler}.\n"
+  "name": "org.robolectric.shadows.ShadowJobScheduler"
 }

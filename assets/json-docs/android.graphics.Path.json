@@ -33,7 +33,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowPath.Point\u003e",
       "exceptions": [],
       "name": "getPoints()",
-      "documentation": "Non-Android accessor.\n\n@return all the points that have been added to the {@code Path}\n"
+      "documentation": "@return all the points that have been added to the {@code Path}\n"
     },
     "getQuadDescription()": {
       "isImplementation": false,
@@ -54,7 +54,7 @@
       "returnType": "org.robolectric.shadows.ShadowPath.Point",
       "exceptions": [],
       "name": "getWasMovedTo()",
-      "documentation": "Non-Android accessor.\n\n@return whether the {@link #moveTo(float, float)} method was called\n"
+      "documentation": "@return whether the {@link #moveTo(float, float)} method was called\n"
     },
     "lineTo(float,float)": {
       "isImplementation": true,
@@ -119,5 +119,5 @@
     "org.robolectric.shadows.ShadowPath.Point.Type.MOVE_TO"
   ],
   "name": "org.robolectric.shadows.ShadowPath",
-  "documentation": "Shadow for {@code android.graphics.Path}.\n\n\u003cp\u003eThe shadow only supports straight-line paths.\u003c/p\u003e\n"
+  "documentation": "The shadow only supports straight-line paths.\n"
 }

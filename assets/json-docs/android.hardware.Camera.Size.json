@@ -31,6 +31,5 @@
     "java.util.Map",
     "org.robolectric.shadow.api.Shadow.*"
   ],
-  "name": "org.robolectric.shadows.ShadowCamera.ShadowSize",
-  "documentation": "Shadow for the Android {@code Camera.Size} value object.\n"
+  "name": "org.robolectric.shadows.ShadowCamera.ShadowSize"
 }

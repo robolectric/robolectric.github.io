@@ -100,6 +100,5 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowSensorManager",
-  "documentation": "Shadow for {@link android.hardware.SensorManager}.\n"
+  "name": "org.robolectric.shadows.ShadowSensorManager"
 }

@@ -136,5 +136,5 @@
     "org.robolectric.annotation.HiddenApi"
   ],
   "name": "org.robolectric.shadows.ShadowSystemClock",
-  "documentation": "Shadow for {@link android.os.SystemClock}.\n\n\u003cp\u003eThe concept of current time is base on the current time of the UI Scheduler for\nconsistency with previous implementations. This is not ideal, since both schedulers\n(background and foreground), can see different values for the current time.\u003c/p\u003e\n"
+  "documentation": "Robolectric\u0027s concept of current time is base on the current time of the UI Scheduler for\nconsistency with previous implementations. This is not ideal, since both schedulers\n(background and foreground), can see different values for the current time.\n"
 }

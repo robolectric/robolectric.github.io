@@ -5,6 +5,5 @@
     "android.support.v4.content.CursorLoader",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.support.v4.ShadowCursorLoader",
-  "documentation": "Shadow for {@link android.support.v4.content.CursorLoader}.\n"
+  "name": "org.robolectric.shadows.support.v4.ShadowCursorLoader"
 }

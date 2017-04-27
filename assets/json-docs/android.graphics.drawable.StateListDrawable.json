@@ -97,6 +97,5 @@
     "java.util.List",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowStateListDrawable",
-  "documentation": "Shadow for {@link android.graphics.drawable.StateListDrawable}.\n"
+  "name": "org.robolectric.shadows.ShadowStateListDrawable"
 }

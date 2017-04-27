@@ -74,6 +74,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadows.ShadowActivity"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowMapActivity",
-  "documentation": "Shadow for {@link com.google.android.maps.MapActivity}.\n"
+  "name": "org.robolectric.shadows.maps.ShadowMapActivity"
 }

@@ -21,7 +21,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCurrentActivity(android.app.Activity)",
-      "documentation": "Non-Android accessor.\n\n@param activity Current activity.\n"
+      "documentation": "@param activity Current activity.\n"
     }
   },
   "imports": [
@@ -30,6 +30,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowActivityGroup",
-  "documentation": "Shadow for {@link android.app.ActivityGroup}.\n"
+  "name": "org.robolectric.shadows.ShadowActivityGroup"
 }

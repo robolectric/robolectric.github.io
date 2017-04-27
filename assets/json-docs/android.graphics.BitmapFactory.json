@@ -316,6 +316,5 @@
     "java.util.zip.Checksum",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowBitmapFactory",
-  "documentation": "Shadow for {@link android.graphics.BitmapFactory}.\n"
+  "name": "org.robolectric.shadows.ShadowBitmapFactory"
 }

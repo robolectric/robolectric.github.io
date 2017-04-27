@@ -20,6 +20,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Implementation"
   ],
-  "name": "org.robolectric.shadows.multidex.ShadowMultiDex",
-  "documentation": "Shadow for {@link android.support.multidex.MultiDex}.\n"
+  "name": "org.robolectric.shadows.multidex.ShadowMultiDex"
 }

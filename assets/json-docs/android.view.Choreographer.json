@@ -138,5 +138,5 @@
     "org.robolectric.util.TimeUtils"
   ],
   "name": "org.robolectric.shadows.ShadowChoreographer",
-  "documentation": "Shadow for {@link android.view.Choreographer}.\n\n\u003cp\u003eThis class maintains its own concept of the current time aimed at making animations\nwork correctly. Time starts out at 0 and advances by \"frameInterval\" every time\n{@link android.view.Choreographer#getFrameTimeNanos} is called.\u003c/p\u003e\n"
+  "documentation": "Robolectric maintains its own concept of the current time from the Choreographer\u0027s\npoint of view, aimed at making animations work correctly. Time starts out at {@code 0}\nand advances by {@code frameInterval} every time\n{@link Choreographer#getFrameTimeNanos()} is called.\n"
 }

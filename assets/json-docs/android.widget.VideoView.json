@@ -29,7 +29,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getCurrentVideoState()",
-      "documentation": "Non-Android accessor.\n\n@return Current video state.\n"
+      "documentation": "@return Current video state.\n"
     },
     "getDuration()": {
       "isImplementation": true,
@@ -50,7 +50,7 @@
       "returnType": "android.media.MediaPlayer.OnCompletionListener",
       "exceptions": [],
       "name": "getOnCompletionListener()",
-      "documentation": "Non-Android accessor.\n\n@return On completion listener.\n"
+      "documentation": "@return On completion listener.\n"
     },
     "getOnErrorListener()": {
       "isImplementation": false,
@@ -61,7 +61,7 @@
       "returnType": "android.media.MediaPlayer.OnErrorListener",
       "exceptions": [],
       "name": "getOnErrorListener()",
-      "documentation": "Non-Android accessor.\n\n@return On error listener.\n"
+      "documentation": "@return On error listener.\n"
     },
     "getOnPreparedListener()": {
       "isImplementation": false,
@@ -72,7 +72,7 @@
       "returnType": "android.media.MediaPlayer.OnPreparedListener",
       "exceptions": [],
       "name": "getOnPreparedListener()",
-      "documentation": "Non-Android accessor.\n\n@return On prepared listener.\n"
+      "documentation": "@return On prepared listener.\n"
     },
     "getPrevVideoState()": {
       "isImplementation": false,
@@ -83,7 +83,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getPrevVideoState()",
-      "documentation": "Non-Android accessor.\n\n@return Previous video state.\n"
+      "documentation": "@return Previous video state.\n"
     },
     "getVideoPath()": {
       "isImplementation": false,
@@ -94,7 +94,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getVideoPath()",
-      "documentation": "Non-Android accessor.\n\n@return Video path.\n"
+      "documentation": "@return Video path.\n"
     },
     "getVideoURIString()": {
       "isImplementation": false,
@@ -105,7 +105,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getVideoURIString()",
-      "documentation": "Non-Android accessor.\n\n@return Video URI.\n"
+      "documentation": "@return Video URI.\n"
     },
     "isPlaying()": {
       "isImplementation": true,
@@ -145,8 +145,7 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "savePrevState()",
-      "documentation": "Non-Android accessor.\n"
+      "name": "savePrevState()"
     },
     "seekTo(int)": {
       "isImplementation": true,
@@ -170,8 +169,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setDuration(int)",
-      "documentation": "Non-Android accessor.\n"
+      "name": "setDuration(int)"
     },
     "setOnCompletionListener(android.media.MediaPlayer.OnCompletionListener)": {
       "isImplementation": true,
@@ -271,6 +269,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowVideoView",
-  "documentation": "Shadow for {@link android.widget.VideoView}.\n"
+  "name": "org.robolectric.shadows.ShadowVideoView"
 }

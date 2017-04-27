@@ -30,6 +30,5 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowSeekBar",
-  "documentation": "Shadow for {@link android.widget.SeekBar}.\n"
+  "name": "org.robolectric.shadows.ShadowSeekBar"
 }

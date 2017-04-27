@@ -430,6 +430,5 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowDisplay",
-  "documentation": "Shadow for {@link android.view.Display}.\n"
+  "name": "org.robolectric.shadows.ShadowDisplay"
 }

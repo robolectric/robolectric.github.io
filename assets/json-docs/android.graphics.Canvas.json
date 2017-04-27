@@ -591,5 +591,5 @@
     "org.robolectric.Shadows.shadowOf"
   ],
   "name": "org.robolectric.shadows.ShadowCanvas",
-  "documentation": "Shadow for {@link android.graphics.Canvas}.\n\n\u003cp\u003e Broken. This implementation is very specific to the application for which it was developed.\nTodo: Reimplement. Consider using the same strategy of collecting a history of draw events\nand providing methods for writing queries based on type, number, and order of events.\u003c/p\u003e\n"
+  "documentation": "Broken. This implementation is very specific to the application for which it was developed.\nTodo: Reimplement. Consider using the same strategy of collecting a history of draw events\nand providing methods for writing queries based on type, number, and order of events.\n"
 }

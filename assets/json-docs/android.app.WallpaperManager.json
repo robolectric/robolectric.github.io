@@ -40,6 +40,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowWallpaperManager",
-  "documentation": "Shadow for {@link android.app.WallpaperManager}.\n"
+  "name": "org.robolectric.shadows.ShadowWallpaperManager"
 }

@@ -94,6 +94,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.internal.ShadowExtractor"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowGeoPoint",
-  "documentation": "Shadow for {@link com.google.android.maps.GeoPoint}.\n"
+  "name": "org.robolectric.shadows.maps.ShadowGeoPoint"
 }

@@ -816,6 +816,5 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.castNativePtr"
   ],
-  "name": "org.robolectric.shadows.ShadowParcel",
-  "documentation": "Shadow for {@link android.os.Parcel}.\n"
+  "name": "org.robolectric.shadows.ShadowParcel"
 }

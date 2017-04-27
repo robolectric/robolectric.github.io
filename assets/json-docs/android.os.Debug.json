@@ -44,6 +44,5 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowDebug",
-  "documentation": "Shadow for {@link android.os.Debug}.\n"
+  "name": "org.robolectric.shadows.ShadowDebug"
 }

@@ -200,6 +200,5 @@
     "org.robolectric.util.ReflectionHelpers",
     "java.io.IOException"
   ],
-  "name": "org.robolectric.shadows.ShadowAndroidHttpClient",
-  "documentation": "Shadow for {@link android.net.http.AndroidHttpClient}.\n"
+  "name": "org.robolectric.shadows.ShadowAndroidHttpClient"
 }

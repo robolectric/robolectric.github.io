@@ -43,7 +43,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isReferenceCounted()",
-      "documentation": "Non-Android accessor retrieves if the wake lock is reference counted or not\n\n@return Is the wake lock reference counted?\n"
+      "documentation": "Retrieves if the wake lock is reference counted or not\n\n@return Is the wake lock reference counted?\n"
     },
     "release()": {
       "isImplementation": true,

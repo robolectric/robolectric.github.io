@@ -47,6 +47,5 @@
     "org.robolectric.annotation.Implements",
     "java.util.Locale"
   ],
-  "name": "org.robolectric.shadows.ShadowDateFormat",
-  "documentation": "Shadow for {@link android.text.format.DateFormat}.\n"
+  "name": "org.robolectric.shadows.ShadowDateFormat"
 }

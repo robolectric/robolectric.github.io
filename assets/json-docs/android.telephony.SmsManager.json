@@ -9,7 +9,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearLastSentDataMessageParams()",
-      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendDataMessage}.\n"
+      "documentation": "Clear last recorded parameters for {@code sendDataMessage}.\n"
     },
     "clearLastSentMultipartTextMessageParams()": {
       "isImplementation": false,
@@ -20,7 +20,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearLastSentMultipartTextMessageParams()",
-      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendMultipartTextMessage}.\n"
+      "documentation": "Clear last recorded parameters for {@code sendMultipartTextMessage}.\n"
     },
     "clearLastSentTextMessageParams()": {
       "isImplementation": false,
@@ -31,7 +31,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearLastSentTextMessageParams()",
-      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendTextMessage}.\n"
+      "documentation": "Clear last recorded parameters for {@code sendTextMessage}.\n"
     },
     "getDefault()": {
       "isImplementation": true,
@@ -53,7 +53,7 @@
       "returnType": "org.robolectric.shadows.ShadowSmsManager.DataMessageParams",
       "exceptions": [],
       "name": "getLastSentDataMessageParams()",
-      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendDataMessage}.\n"
+      "documentation": "@return Parameters for last call to {@code sendDataMessage}.\n"
     },
     "getLastSentMultipartTextMessageParams()": {
       "isImplementation": false,
@@ -64,7 +64,7 @@
       "returnType": "org.robolectric.shadows.ShadowSmsManager.TextMultipartParams",
       "exceptions": [],
       "name": "getLastSentMultipartTextMessageParams()",
-      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendMultipartTextMessage}.\n"
+      "documentation": "@return Parameters for last call to {@code sendMultipartTextMessage}.\n"
     },
     "getLastSentTextMessageParams()": {
       "isImplementation": false,
@@ -75,7 +75,7 @@
       "returnType": "org.robolectric.shadows.ShadowSmsManager.TextSmsParams",
       "exceptions": [],
       "name": "getLastSentTextMessageParams()",
-      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendTextMessage}.\n"
+      "documentation": "@return Parameters for last call to {@code sendTextMessage}.\n"
     },
     "sendDataMessage(java.lang.String,java.lang.String,short,byte[],android.app.PendingIntent,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -138,6 +138,5 @@
     "org.robolectric.shadow.api.Shadow",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
   ],
-  "name": "org.robolectric.shadows.ShadowSmsManager",
-  "documentation": "Shadow for {@link android.telephony.SmsManager}.\n"
+  "name": "org.robolectric.shadows.ShadowSmsManager"
 }

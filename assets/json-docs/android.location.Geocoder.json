@@ -159,7 +159,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "wasGetFromLocationCalled()",
-      "documentation": "Non-Android accessor that indicates whether {@link #getFromLocation(double, double, int)} was called.\n\n@return whether {@link #getFromLocation(double, double, int)} was called.\n"
+      "documentation": "Indicates whether {@link #getFromLocation(double, double, int)} was called.\n\n@return whether {@link #getFromLocation(double, double, int)} was called.\n"
     }
   },
   "imports": [
@@ -175,6 +175,5 @@
     "java.util.List",
     "java.util.Locale"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowGeocoder",
-  "documentation": "Shadow for {@link android.location.Geocoder}.\n"
+  "name": "org.robolectric.shadows.maps.ShadowGeocoder"
 }

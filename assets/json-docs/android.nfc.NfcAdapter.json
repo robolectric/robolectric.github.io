@@ -148,6 +148,5 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowNfcAdapter",
-  "documentation": "Shadow for {@link android.nfc.NfcAdapter}.\n"
+  "name": "org.robolectric.shadows.ShadowNfcAdapter"
 }

@@ -121,7 +121,7 @@
       "returnType": "android.location.Criteria",
       "exceptions": [],
       "name": "getLastBestProviderCriteria()",
-      "documentation": "Non-Android accessor.\n\n\u003cp\u003e\nGets the criteria value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}\n\n@return the criteria used to find the best provider\n"
+      "documentation": "Gets the criteria value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}.\n\n@return the criteria used to find the best provider\n"
     },
     "getLastBestProviderEnabledOnly()": {
       "isImplementation": false,
@@ -132,7 +132,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "getLastBestProviderEnabledOnly()",
-      "documentation": "Non-Android accessor.\n\n\u003cp\u003e\nGets the enabled value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}\n\n@return the enabled value used to find the best provider\n"
+      "documentation": "Gets the enabled value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}\n\n@return the enabled value used to find the best provider\n"
     },
     "getLastKnownLocation(java.lang.String)": {
       "isImplementation": true,
@@ -199,7 +199,7 @@
       "returnType": "java.util.List\u003candroid.location.LocationListener\u003e",
       "exceptions": [],
       "name": "getRequestLocationUpdateListeners()",
-      "documentation": "Non-Android accessor.\n\n@return lastRequestedLocationUpdatesLocationListener\n"
+      "documentation": "@return lastRequestedLocationUpdatesLocationListener\n"
     },
     "hasGpsStatusListener(android.location.GpsStatus.Listener)": {
       "isImplementation": false,
@@ -445,6 +445,5 @@
     "java.util.Map",
     "java.util.Set"
   ],
-  "name": "org.robolectric.shadows.ShadowLocationManager",
-  "documentation": "Shadow for {@link android.location.LocationManager}.\n"
+  "name": "org.robolectric.shadows.ShadowLocationManager"
 }

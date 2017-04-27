@@ -75,6 +75,5 @@
     "org.robolectric.internal.ShadowExtractor",
     "org.robolectric.util.Strings"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowOverlayItem",
-  "documentation": "Shadow for {@link com.google.android.maps.OverlayItem}.\n"
+  "name": "org.robolectric.shadows.maps.ShadowOverlayItem"
 }

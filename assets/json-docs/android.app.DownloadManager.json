@@ -90,6 +90,5 @@
     "java.util.List",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowDownloadManager",
-  "documentation": "Shadow for {@link android.app.DownloadManager}.\n"
+  "name": "org.robolectric.shadows.ShadowDownloadManager"
 }

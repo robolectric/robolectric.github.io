@@ -498,6 +498,5 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowCursorWrapper",
-  "documentation": "Shadow for {@link android.database.CursorWrapper}.\n"
+  "name": "org.robolectric.shadows.ShadowCursorWrapper"
 }

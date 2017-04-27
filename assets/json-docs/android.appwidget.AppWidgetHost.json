@@ -80,6 +80,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowAppWidgetHost",
-  "documentation": "Shadow for {@link android.appwidget.AppWidgetHost}.\n"
+  "name": "org.robolectric.shadows.ShadowAppWidgetHost"
 }

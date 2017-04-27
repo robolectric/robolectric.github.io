@@ -30,6 +30,5 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowContentProvider",
-  "documentation": "Shadow for {@link ContentProvider}.\n"
+  "name": "org.robolectric.shadows.ShadowContentProvider"
 }

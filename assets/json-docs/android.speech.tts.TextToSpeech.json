@@ -105,6 +105,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowTextToSpeech",
-  "documentation": "Shadow for {@link android.speech.tts.TextToSpeech}.\n"
+  "name": "org.robolectric.shadows.ShadowTextToSpeech"
 }

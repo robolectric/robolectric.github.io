@@ -152,6 +152,5 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
   ],
-  "name": "org.robolectric.shadows.ShadowStatFs",
-  "documentation": "Shadow for {@link android.os.StatFs}.\n"
+  "name": "org.robolectric.shadows.ShadowStatFs"
 }

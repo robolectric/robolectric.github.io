@@ -129,7 +129,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getGoBackInvocations()",
-      "documentation": "Non-Android accessor.\n\n@return goBackInvocations the number of times {@code android.webkit.WebView#goBack()}\nwas invoked\n"
+      "documentation": "@return goBackInvocations the number of times {@code android.webkit.WebView#goBack()}\nwas invoked\n"
     },
     "getJavascriptInterface(java.lang.String)": {
       "isImplementation": false,
@@ -152,7 +152,7 @@
       "returnType": "java.util.Map\u003cjava.lang.String,java.lang.String\u003e",
       "exceptions": [],
       "name": "getLastAdditionalHttpHeaders()",
-      "documentation": "Non-Android accessor.\n\n@return the additional Http headers that in the same request with last loaded url\n"
+      "documentation": "@return the additional Http headers that in the same request with last loaded url\n"
     },
     "getLastLoadData()": {
       "isImplementation": false,
@@ -183,7 +183,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getLastLoadedUrl()",
-      "documentation": "Non-Android accessor.\n\n@return the last loaded url\n"
+      "documentation": "@return the last loaded url\n"
     },
     "getRunFlag()": {
       "isImplementation": false,
@@ -214,7 +214,7 @@
       "returnType": "android.webkit.WebChromeClient",
       "exceptions": [],
       "name": "getWebChromeClient()",
-      "documentation": "Non-Android accessor.\n\n@return webChromeClient\n"
+      "documentation": "@return webChromeClient\n"
     },
     "getWebViewClient()": {
       "isImplementation": false,
@@ -346,7 +346,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCanGoBack(boolean)",
-      "documentation": "Non-Android setter.\n\nSets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}\n"
+      "documentation": "Sets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}\n"
     },
     "setLayoutParams(android.view.ViewGroup.LayoutParams)": {
       "isImplementation": true,
@@ -488,6 +488,5 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowWebView",
-  "documentation": "Shadow for {@link android.webkit.WebView}.\n"
+  "name": "org.robolectric.shadows.ShadowWebView"
 }

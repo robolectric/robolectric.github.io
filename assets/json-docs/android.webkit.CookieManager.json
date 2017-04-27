@@ -30,6 +30,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter"
   ],
-  "name": "org.robolectric.shadows.ShadowCookieManager",
-  "documentation": "Shadow for {@code android.webkit.CookieManager}.\n"
+  "name": "org.robolectric.shadows.ShadowCookieManager"
 }

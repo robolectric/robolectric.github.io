@@ -89,7 +89,7 @@
       "returnType": "android.view.View",
       "exceptions": [],
       "name": "getContentView()",
-      "documentation": "Non-Android accessor.\n\n@return the {@code contentView} set by one of the {@code setContentView()} methods\n"
+      "documentation": "@return the {@code contentView} set by one of the {@code setContentView()} methods\n"
     },
     "getCurrentFocus()": {
       "isImplementation": true,
@@ -142,7 +142,7 @@
       "returnType": "java.lang.Integer",
       "exceptions": [],
       "name": "getLastShownDialogId()",
-      "documentation": "Non-Android accessor\n\n@return the dialog resource id passed into\n        {@code Activity.showDialog(int, Bundle)} or {@code Activity.showDialog(int)}\n"
+      "documentation": "@return the dialog resource id passed into\n        {@code Activity.showDialog(int, Bundle)} or {@code Activity.showDialog(int)}\n"
     },
     "getLayoutInflater()": {
       "isImplementation": true,
@@ -183,7 +183,7 @@
       "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
       "exceptions": [],
       "name": "getNextStartedActivityForResult()",
-      "documentation": "Non-Android accessor consumes and returns the next {@code Intent} on the\nstarted activities for results stack.\n\n@return the next started {@code Intent} for an activity, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
+      "documentation": "Consumes and returns the next {@code Intent} on the\nstarted activities for results stack.\n\n@return the next started {@code Intent} for an activity, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
     },
     "getOptionsMenu()": {
       "isImplementation": false,
@@ -246,7 +246,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getResultCode()",
-      "documentation": "Non-Android accessor.\n\n@return the {@code resultCode} set by one of the {@code setResult()} methods\n"
+      "documentation": "@return the {@code resultCode} set by one of the {@code setResult()} methods\n"
     },
     "getResultIntent()": {
       "isImplementation": false,
@@ -257,7 +257,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getResultIntent()",
-      "documentation": "Non-Android accessor.\n\n@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)}\n"
+      "documentation": "@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)}\n"
     },
     "getTaskId()": {
       "isImplementation": true,
@@ -367,7 +367,7 @@
       "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
       "exceptions": [],
       "name": "peekNextStartedActivityForResult()",
-      "documentation": "Non-Android accessor returns the most recent {@code Intent} started by\n{@link #[[#]]#startActivityForResult(android.content.Intent, int)} without\nconsuming it.\n\n@return the most recently started {@code Intent}, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
+      "documentation": "Returns the most recent {@code Intent} started by\n{@link #startActivityForResult(Intent, int)} without consuming it.\n\n@return the most recently started {@code Intent}, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
     },
     "receiveResult(android.content.Intent,int,android.content.Intent)": {
       "isImplementation": false,
@@ -478,7 +478,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCurrentFocus(android.view.View)",
-      "documentation": "Non-Android accessor.\n\n@param view View to focus.\n"
+      "documentation": "@param view View to focus.\n"
     },
     "setDefaultKeyMode(int)": {
       "isImplementation": true,
@@ -761,6 +761,5 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor"
   ],
-  "name": "org.robolectric.shadows.ShadowActivity",
-  "documentation": "Shadow for {@link android.app.Activity}.\n"
+  "name": "org.robolectric.shadows.ShadowActivity"
 }

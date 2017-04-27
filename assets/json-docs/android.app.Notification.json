@@ -207,6 +207,5 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadows.ResourceHelper.getInternalResourceId"
   ],
-  "name": "org.robolectric.shadows.ShadowNotification",
-  "documentation": "Shadow for {@link android.app.Notification}.\n"
+  "name": "org.robolectric.shadows.ShadowNotification"
 }

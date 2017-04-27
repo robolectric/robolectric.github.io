@@ -9,7 +9,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getContentAsIntent()",
-      "documentation": "Non-Android accessor\n\n@return the intent object set in a call to {@code TabSpec#setContent(Intent)}\n"
+      "documentation": "@return the intent object set in a call to {@code TabSpec#setContent(Intent)}\n"
     },
     "getContentView()": {
       "isImplementation": false,
@@ -40,7 +40,7 @@
       "returnType": "android.view.View",
       "exceptions": [],
       "name": "getIndicatorAsView()",
-      "documentation": "Non-Android accessor.\n\n@return the view object set in a call to {@code TabSpec#setIndicator(View)}\n"
+      "documentation": "@return the view object set in a call to {@code TabSpec#setIndicator(View)}\n"
     },
     "getIndicatorIcon()": {
       "isImplementation": false,
@@ -167,7 +167,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setTag(java.lang.String)",
-      "documentation": "Non-Android accessor, sets the tag on the TabSpec.\n\n@param tag The tag.\n"
+      "documentation": "Sets the tag on the TabSpec.\n\n@param tag The tag.\n"
     }
   },
   "imports": [

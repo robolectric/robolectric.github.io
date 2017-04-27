@@ -41,6 +41,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowColorMatrixColorFilter",
-  "documentation": "Shadow for {@link android.graphics.ColorMatrixColorFilter}.\n"
+  "name": "org.robolectric.shadows.ShadowColorMatrixColorFilter"
 }

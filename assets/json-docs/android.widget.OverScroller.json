@@ -200,6 +200,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.Scheduler"
   ],
-  "name": "org.robolectric.shadows.ShadowOverScroller",
-  "documentation": "Shadow for {@link android.widget.OverScroller}.\n"
+  "name": "org.robolectric.shadows.ShadowOverScroller"
 }

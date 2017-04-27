@@ -22,7 +22,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getCreatedFromResId()",
-      "documentation": "Non-Android accessor that tells you the resource id that this {@code BitmapDrawable} was loaded from. This lets\nyour tests assert that the bitmap is correct without having to actually load the bitmap.\n\n@return resource id from which this {@code BitmapDrawable} was loaded\n@deprecated use ShadowBitmap#getCreatedFromResId() instead.\n"
+      "documentation": "Returns the resource id that this {@code BitmapDrawable} was loaded from. This lets\nyour tests assert that the bitmap is correct without having to actually load the bitmap.\n\n@return resource id from which this {@code BitmapDrawable} was loaded\n@deprecated use ShadowBitmap#getCreatedFromResId() instead.\n"
     },
     "getPath()": {
       "isImplementation": false,
@@ -82,6 +82,5 @@
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowBitmapDrawable",
-  "documentation": "Shadow for {@link android.graphics.drawable.BitmapDrawable}.\n"
+  "name": "org.robolectric.shadows.ShadowBitmapDrawable"
 }

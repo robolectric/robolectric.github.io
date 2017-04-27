@@ -274,6 +274,5 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowAudioManager",
-  "documentation": "Shadow for {@link android.media.AudioManager}.\n"
+  "name": "org.robolectric.shadows.ShadowAudioManager"
 }

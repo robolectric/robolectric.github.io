@@ -51,6 +51,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowZoomButtonsController",
-  "documentation": "Shadow for {@link android.widget.ZoomButtonsController}.\n"
+  "name": "org.robolectric.shadows.ShadowZoomButtonsController"
 }

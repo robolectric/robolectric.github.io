@@ -240,6 +240,5 @@
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.RuntimeEnvironment.getApiLevel"
   ],
-  "name": "org.robolectric.shadows.ShadowConnectivityManager",
-  "documentation": "Shadow for {@link android.net.ConnectivityManager}.\n"
+  "name": "org.robolectric.shadows.ShadowConnectivityManager"
 }

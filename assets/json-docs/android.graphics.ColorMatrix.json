@@ -31,6 +31,5 @@
     "java.util.ArrayList",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.ShadowColorMatrix",
-  "documentation": "Shadow for {@link android.graphics.ColorMatrix}.\n"
+  "name": "org.robolectric.shadows.ShadowColorMatrix"
 }

@@ -103,6 +103,5 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
   ],
-  "name": "org.robolectric.shadows.ShadowGestureDetector",
-  "documentation": "Shadow for {@link android.view.GestureDetector}.\n"
+  "name": "org.robolectric.shadows.ShadowGestureDetector"
 }

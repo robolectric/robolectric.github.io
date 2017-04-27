@@ -31,6 +31,5 @@
     "java.io.PrintStream",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowMarginLayoutParams",
-  "documentation": "Shadow for {@link android.view.ViewGroup.MarginLayoutParams}.\n"
+  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowMarginLayoutParams"
 }

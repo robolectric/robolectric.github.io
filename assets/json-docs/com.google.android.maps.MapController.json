@@ -34,7 +34,7 @@
       "returnType": "com.google.android.maps.GeoPoint",
       "exceptions": [],
       "name": "getGeoPointAnimatedTo()",
-      "documentation": "Non-Android accessor that returns the most recent value set by a call to either version of {@code animateTo()}\n\n@return the most recent value set by a call to either version of {@code animateTo()}\n"
+      "documentation": "Returns the most recent value set by a call to either version of {@code animateTo()}\n\n@return the most recent value set by a call to either version of {@code animateTo()}\n"
     },
     "getShadowMapView()": {
       "isImplementation": false,
@@ -45,7 +45,7 @@
       "returnType": "org.robolectric.shadows.maps.ShadowMapView",
       "exceptions": [],
       "name": "getShadowMapView()",
-      "documentation": "Non-Android accessor that returns the {@code MapView} that is being controlled\n\n@return the {@code MapView} that is being controlled\n"
+      "documentation": "Returns the {@code MapView} that is being controlled\n\n@return the {@code MapView} that is being controlled\n"
     },
     "setCenter(com.google.android.maps.GeoPoint)": {
       "isImplementation": true,
@@ -68,7 +68,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setShadowMapView(org.robolectric.shadows.maps.ShadowMapView)",
-      "documentation": "Non-Android accessor that allows the {@code MapView} being controlled to be set explicitly.\n\n@param shadowMapView the {@link ShadowMapView} to be controlled (either created explicitly or obtained via a call\n                     to {@link org.robolectric.RobolectricForMaps.shadowOf(com.google.android.maps.MapView)})\n"
+      "documentation": "Allows the {@code MapView} being controlled to be set explicitly.\n\n@param shadowMapView the {@link ShadowMapView} to be controlled (either created explicitly or obtained via a call\n                     to {@link org.robolectric.RobolectricForMaps.shadowOf(com.google.android.maps.MapView)})\n"
     },
     "setZoom(int)": {
       "isImplementation": true,
@@ -122,6 +122,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowMapController",
-  "documentation": "Shadow for {@link com.google.android.maps.MapController}.\n"
+  "name": "org.robolectric.shadows.maps.ShadowMapController"
 }

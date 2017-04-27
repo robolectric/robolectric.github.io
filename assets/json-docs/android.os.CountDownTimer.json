@@ -95,6 +95,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowCountDownTimer",
-  "documentation": "Shadow for {@link android.os.CountDownTimer}.\n"
+  "name": "org.robolectric.shadows.ShadowCountDownTimer"
 }

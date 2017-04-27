@@ -42,8 +42,7 @@
       "params": [],
       "returnType": "android.graphics.Paint.Cap",
       "exceptions": [],
-      "name": "getCap()",
-      "documentation": "Non-Android accessor.\n\n@return cap\n"
+      "name": "getCap()"
     },
     "getColor()": {
       "isImplementation": true,
@@ -83,8 +82,7 @@
       "params": [],
       "returnType": "android.graphics.Paint.Join",
       "exceptions": [],
-      "name": "getJoin()",
-      "documentation": "Non-Android accessor.\n\n@return join\n"
+      "name": "getJoin()"
     },
     "getPathEffect()": {
       "isImplementation": true,
@@ -115,7 +113,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getShadowColor()",
-      "documentation": "Non-Android accessor.\n\n@return shadow color (Paint related shadow, not Robolectric Shadow)\n"
+      "documentation": "@return shadow color (Paint related shadow, not Robolectric Shadow)\n"
     },
     "getShadowDx()": {
       "isImplementation": false,
@@ -126,7 +124,7 @@
       "returnType": "float",
       "exceptions": [],
       "name": "getShadowDx()",
-      "documentation": "Non-Android accessor.\n\n@return shadow Dx (Paint related shadow, not Robolectric Shadow)\n"
+      "documentation": "@return shadow Dx (Paint related shadow, not Robolectric Shadow)\n"
     },
     "getShadowDy()": {
       "isImplementation": false,
@@ -137,7 +135,7 @@
       "returnType": "float",
       "exceptions": [],
       "name": "getShadowDy()",
-      "documentation": "Non-Android accessor.\n\n@return shadow Dx (Paint related shadow, not Robolectric Shadow)\n"
+      "documentation": "@return shadow Dx (Paint related shadow, not Robolectric Shadow)\n"
     },
     "getShadowRadius()": {
       "isImplementation": false,
@@ -148,7 +146,7 @@
       "returnType": "float",
       "exceptions": [],
       "name": "getShadowRadius()",
-      "documentation": "Non-Android accessor.\n\n@return shadow radius (Paint related shadow, not Robolectric Shadow)\n"
+      "documentation": "@return shadow radius (Paint related shadow, not Robolectric Shadow)\n"
     },
     "getStrokeCap()": {
       "isImplementation": true,
@@ -228,8 +226,7 @@
       "params": [],
       "returnType": "float",
       "exceptions": [],
-      "name": "getWidth()",
-      "documentation": "Non-Android accessor.\n\n@return width\n"
+      "name": "getWidth()"
     },
     "isAntiAlias()": {
       "isImplementation": true,
@@ -529,6 +526,5 @@
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowPaint",
-  "documentation": "Shadow for {@link android.graphics.Paint}.\n"
+  "name": "org.robolectric.shadows.ShadowPaint"
 }

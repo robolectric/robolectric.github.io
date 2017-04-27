@@ -32,7 +32,7 @@
       "returnType": "android.view.View",
       "exceptions": [],
       "name": "getCustomTitleView()",
-      "documentation": "Non-Android accessor.\n\n@return return the view set with {@link AlertDialog.Builder#setCustomTitle(View)}\n"
+      "documentation": "@return return the view set with {@link AlertDialog.Builder#setCustomTitle(View)}\n"
     },
     "getCustomView()": {
       "isImplementation": false,
@@ -53,7 +53,7 @@
       "returnType": "java.lang.CharSequence[]",
       "exceptions": [],
       "name": "getItems()",
-      "documentation": "Non-Android accessor.\n\n@return the items that are available to be clicked on\n"
+      "documentation": "@return the items that are available to be clicked on\n"
     },
     "getLatestAlertDialog()": {
       "isImplementation": false,
@@ -65,7 +65,7 @@
       "returnType": "android.app.AlertDialog",
       "exceptions": [],
       "name": "getLatestAlertDialog()",
-      "documentation": "Non-Android accessor.\n\n@return the most recently created {@code AlertDialog}, or null if none has been created during this test run\n"
+      "documentation": "@return the most recently created {@code AlertDialog}, or null if none has been created during this test run\n"
     },
     "getMessage()": {
       "isImplementation": false,
@@ -76,7 +76,7 @@
       "returnType": "java.lang.CharSequence",
       "exceptions": [],
       "name": "getMessage()",
-      "documentation": "Non-Android accessor.\n\n@return the message displayed in the dialog\n"
+      "documentation": "@return the message displayed in the dialog\n"
     },
     "getShadowAlertController()": {
       "isImplementation": false,
@@ -107,7 +107,7 @@
       "returnType": "android.view.View",
       "exceptions": [],
       "name": "getView()",
-      "documentation": "Non-Android accessor.\n\n@return return the view set with {@link AlertDialog.Builder#setView(View)}\n"
+      "documentation": "@return return the view set with {@link AlertDialog.Builder#setView(View)}\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -148,6 +148,5 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowAlertDialog",
-  "documentation": "Shadow for {@link android.app.AlertDialog}.\n"
+  "name": "org.robolectric.shadows.ShadowAlertDialog"
 }

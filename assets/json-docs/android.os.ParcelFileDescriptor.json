@@ -61,6 +61,5 @@
     "java.io.RandomAccessFile",
     "java.lang.reflect.Constructor"
   ],
-  "name": "org.robolectric.shadows.ShadowParcelFileDescriptor",
-  "documentation": "Shadow for {@link android.os.ParcelFileDescriptor}.\n"
+  "name": "org.robolectric.shadows.ShadowParcelFileDescriptor"
 }

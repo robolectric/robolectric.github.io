@@ -82,6 +82,5 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowKeyCharacterMap",
-  "documentation": "Shadow for {@link android.view.KeyCharacterMap}.\n"
+  "name": "org.robolectric.shadows.ShadowKeyCharacterMap"
 }

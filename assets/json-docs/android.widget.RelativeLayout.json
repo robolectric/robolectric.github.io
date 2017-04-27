@@ -4,6 +4,5 @@
     "android.widget.RelativeLayout",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowRelativeLayout",
-  "documentation": "Shadow for {@link android.widget.RelativeLayout}.\n"
+  "name": "org.robolectric.shadows.ShadowRelativeLayout"
 }

@@ -41,6 +41,5 @@
     "java.io.PrintStream",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowLayoutParams",
-  "documentation": "Shadow for {@link android.view.ViewGroup.LayoutParams}.\n"
+  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowLayoutParams"
 }

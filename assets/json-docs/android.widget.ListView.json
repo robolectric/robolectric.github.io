@@ -30,6 +30,5 @@
     "java.util.ArrayList",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.ShadowListView",
-  "documentation": "Shadow for {@link android.widget.ListView}.\n"
+  "name": "org.robolectric.shadows.ShadowListView"
 }

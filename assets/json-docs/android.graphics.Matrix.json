@@ -609,6 +609,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.internal.ShadowExtractor"
   ],
-  "name": "org.robolectric.shadows.ShadowMatrix",
-  "documentation": "Shadow for {@link android.graphics.Matrix}.\n"
+  "name": "org.robolectric.shadows.ShadowMatrix"
 }

@@ -100,6 +100,5 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadow.api.Shadow.invokeConstructor"
   ],
-  "name": "org.robolectric.shadows.ShadowDatePickerDialog",
-  "documentation": "Shadow for {@link android.app.DatePickerDialog}.\n"
+  "name": "org.robolectric.shadows.ShadowDatePickerDialog"
 }

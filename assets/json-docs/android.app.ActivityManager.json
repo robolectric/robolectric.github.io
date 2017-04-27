@@ -9,7 +9,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getBackgroundPackage()",
-      "documentation": "Non-Android accessor.\n\n@return Get the package name of the last background processes killed.\n"
+      "documentation": "@return Get the package name of the last background processes killed.\n"
     },
     "getDeviceConfigurationInfo()": {
       "isImplementation": true,
@@ -122,7 +122,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setMemoryClass(int)",
-      "documentation": "Non-Android accessor.\n\n@param memoryClass Set the application\u0027s memory class.\n"
+      "documentation": "@param memoryClass Set the application\u0027s memory class.\n"
     },
     "setMemoryInfo(android.app.ActivityManager.MemoryInfo)": {
       "isImplementation": false,
@@ -135,7 +135,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setMemoryInfo(android.app.ActivityManager.MemoryInfo)",
-      "documentation": "Non-Android accessor.\n\n@param memoryInfo Set the application\u0027s memory info.\n"
+      "documentation": "@param memoryInfo Set the application\u0027s memory info.\n"
     },
     "setProcesses(java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e)": {
       "isImplementation": false,
@@ -148,7 +148,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setProcesses(java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e)",
-      "documentation": "Non-Android accessor.\n\n@param processes List of running processes.\n"
+      "documentation": "@param processes List of running processes.\n"
     },
     "setServices(java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e)": {
       "isImplementation": false,
@@ -161,7 +161,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setServices(java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e)",
-      "documentation": "Non-Android accessor.\n\n@param services List of running services.\n"
+      "documentation": "@param services List of running services.\n"
     },
     "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)": {
       "isImplementation": false,
@@ -174,7 +174,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)",
-      "documentation": "Non-Android accessor.\n\n@param tasks List of running tasks.\n"
+      "documentation": "@param tasks List of running tasks.\n"
     }
   },
   "imports": [
@@ -187,6 +187,5 @@
     "java.util.List",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowActivityManager",
-  "documentation": "Shadow for {@link android.app.ActivityManager}.\n"
+  "name": "org.robolectric.shadows.ShadowActivityManager"
 }

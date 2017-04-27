@@ -33,6 +33,5 @@
     "android.support.v4.content.AsyncTaskLoader",
     "java.util.concurrent.Callable"
   ],
-  "name": "org.robolectric.shadows.support.v4.ShadowAsyncTaskLoader",
-  "documentation": "Shadow for {@link android.support.v4.content.AsyncTaskLoader}.\n"
+  "name": "org.robolectric.shadows.support.v4.ShadowAsyncTaskLoader"
 }

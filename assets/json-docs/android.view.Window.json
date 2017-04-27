@@ -117,6 +117,5 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowWindow",
-  "documentation": "Shadow for {@link android.view.Window}.\n"
+  "name": "org.robolectric.shadows.ShadowWindow"
 }

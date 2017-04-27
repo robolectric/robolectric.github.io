@@ -4,6 +4,5 @@
     "android.widget.ProgressBar",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowProgressBar",
-  "documentation": "Shadow for {@link android.widget.ProgressBar}.\n"
+  "name": "org.robolectric.shadows.ShadowProgressBar"
 }

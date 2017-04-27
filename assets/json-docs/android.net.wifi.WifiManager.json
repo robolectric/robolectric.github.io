@@ -279,6 +279,5 @@
     "java.util.List",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowWifiManager",
-  "documentation": "Shadow for {@link android.net.wifi.WifiManager}.\n"
+  "name": "org.robolectric.shadows.ShadowWifiManager"
 }

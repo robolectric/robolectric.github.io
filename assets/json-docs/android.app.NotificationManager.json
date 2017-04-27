@@ -132,6 +132,5 @@
     "java.util.List",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowNotificationManager",
-  "documentation": "Shadow for {@link android.app.NotificationManager}.\n"
+  "name": "org.robolectric.shadows.ShadowNotificationManager"
 }

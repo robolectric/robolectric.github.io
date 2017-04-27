@@ -19,6 +19,5 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowAbstractCursor",
-  "documentation": "Shadow for {@link android.database.AbstractCursor}.\n"
+  "name": "org.robolectric.shadows.ShadowAbstractCursor"
 }

@@ -135,6 +135,5 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowBitmapRegionDecoder",
-  "documentation": "Shadow for {@code android.graphics.BitmapRegionDecoder}.\n"
+  "name": "org.robolectric.shadows.ShadowBitmapRegionDecoder"
 }

@@ -346,6 +346,5 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowViewConfiguration",
-  "documentation": "Shadow for {@link android.view.ViewConfiguration}.\n"
+  "name": "org.robolectric.shadows.ShadowViewConfiguration"
 }

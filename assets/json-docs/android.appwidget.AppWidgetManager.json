@@ -128,7 +128,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "getAlwaysRecreateViewsDuringUpdate()",
-      "documentation": "Non-Android accessor.\n\n@return the state of the{@code alwaysRecreateViewsDuringUpdate} flag\n"
+      "documentation": "@return the state of the{@code alwaysRecreateViewsDuringUpdate} flag\n"
     },
     "getAppWidgetIds(android.content.ComponentName)": {
       "isImplementation": true,
@@ -165,7 +165,7 @@
       "returnType": "android.appwidget.AppWidgetProvider",
       "exceptions": [],
       "name": "getAppWidgetProviderFor(int)",
-      "documentation": "Non-Android accessor.\n\n@param widgetId id of the widget whose provider is to be returned\n@return the {@code AppWidgetProvider} associated with {@code widgetId}\n"
+      "documentation": "@param widgetId id of the widget whose provider is to be returned\n@return the {@code AppWidgetProvider} associated with {@code widgetId}\n"
     },
     "getInstalledProviders()": {
       "isImplementation": true,
@@ -202,7 +202,7 @@
       "returnType": "android.view.View",
       "exceptions": [],
       "name": "getViewFor(int)",
-      "documentation": "Non-Android accessor.\n\n@param widgetId id of the desired widget\n@return the widget associated with {@code widgetId}\n"
+      "documentation": "@param widgetId id of the desired widget\n@return the widget associated with {@code widgetId}\n"
     },
     "putWidgetInfo(int,android.appwidget.AppWidgetProviderInfo)": {
       "isImplementation": false,
@@ -253,7 +253,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setAlwaysRecreateViewsDuringUpdate(boolean)",
-      "documentation": "Non-Android mechanism that enables testing of widget behavior when all of the views are recreated on every\nupdate. This is useful for ensuring that your widget will behave correctly even if it is restarted by the OS\nbetween events.\n\n@param alwaysRecreate whether or not to always recreate the views\n"
+      "documentation": "Enables testing of widget behavior when all of the views are recreated on every\nupdate. This is useful for ensuring that your widget will behave correctly even\nif it is restarted by the OS between events.\n\n@param alwaysRecreate whether or not to always recreate the views\n"
     },
     "setValidWidgetProviderComponentName(boolean)": {
       "isImplementation": false,
@@ -317,6 +317,5 @@
     "java.util.List",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowAppWidgetManager",
-  "documentation": "Shadow for {@link android.appwidget.AppWidgetManager}.\n"
+  "name": "org.robolectric.shadows.ShadowAppWidgetManager"
 }
