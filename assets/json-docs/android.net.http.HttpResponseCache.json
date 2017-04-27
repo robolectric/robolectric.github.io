@@ -123,7 +123,6 @@
       "name": "size()"
     }
   },
-  "documentation": " Shadow for {@link android.net.http.HttpResponseCache}.\n",
   "imports": [
     "android.net.http.HttpResponseCache",
     "org.robolectric.Shadows",
@@ -137,5 +136,6 @@
     "java.util.Map",
     "org.robolectric.shadow.api.Shadow.newInstanceOf"
   ],
-  "name": "org.robolectric.shadows.ShadowHttpResponseCache"
+  "name": "org.robolectric.shadows.ShadowHttpResponseCache",
+  "documentation": "Shadow for {@link android.net.http.HttpResponseCache}.\n"
 }

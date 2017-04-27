@@ -45,7 +45,6 @@
       "name": "setButtonDrawable(int)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.CompoundButton}.\n",
   "imports": [
     "android.graphics.drawable.Drawable",
     "android.widget.CompoundButton",
@@ -55,5 +54,6 @@
     "org.robolectric.shadow.api.Shadow.*",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.*"
   ],
-  "name": "org.robolectric.shadows.ShadowCompoundButton"
+  "name": "org.robolectric.shadows.ShadowCompoundButton",
+  "documentation": "Shadow for {@link android.widget.CompoundButton}.\n"
 }

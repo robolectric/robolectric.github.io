@@ -16,13 +16,13 @@
         "public",
         "static"
       ],
-      "documentation": "Check for leaked objects that were {@code obtain}ed but never {@code recycle}d.\n@param printUnrecycledEventsToSystemErr - if true, stack traces of calls to {@code obtain}\nthat lack matching calls to {@code recycle} are dumped to System.err.\n@return {@code true} if there are unrecycled events",
       "params": [
         "printUnrecycledEventsToSystemErr"
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "areThereUnrecycledEvents(boolean)"
+      "name": "areThereUnrecycledEvents(boolean)",
+      "documentation": "Check for leaked objects that were {@code obtain}ed but never {@code recycle}d.\n@param printUnrecycledEventsToSystemErr - if true, stack traces of calls to {@code obtain}\nthat lack matching calls to {@code recycle} are dumped to System.err.\n@return {@code true} if there are unrecycled events\n"
     },
     "describeContents()": {
       "isImplementation": true,
@@ -61,11 +61,11 @@
       "modifiers": [
         "private"
       ],
-      "documentation": "@return A shallow copy.",
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityEvent",
       "exceptions": [],
-      "name": "getClone()"
+      "name": "getClone()",
+      "documentation": "@return A shallow copy.\n"
     },
     "getContentDescription()": {
       "isImplementation": true,
@@ -170,11 +170,11 @@
         "public",
         "static"
       ],
-      "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledNodes} will always\nreturn false if called immediately afterwards.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "resetObtainedInstances()"
+      "name": "resetObtainedInstances()",
+      "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledNodes} will always\nreturn false if called immediately afterwards.\n"
     },
     "setClassName(java.lang.CharSequence)": {
       "isImplementation": true,
@@ -250,7 +250,6 @@
       "name": "writeToParcel(android.os.Parcel,int)"
     }
   },
-  "documentation": " Shadow of {@link android.view.accessibility.AccessibilityEvent}.\n",
   "imports": [
     "android.os.Parcel",
     "android.os.Parcelable",
@@ -265,5 +264,6 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowAccessibilityEvent"
+  "name": "org.robolectric.shadows.ShadowAccessibilityEvent",
+  "documentation": "Shadow of {@link android.view.accessibility.AccessibilityEvent}.\n"
 }

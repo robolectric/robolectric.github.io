@@ -253,132 +253,132 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Reference to original Bitmap from which this Bitmap was created. {@code null} if this Bitmap\nwas not copied from another instance.\n\n@return Original Bitmap from which this Bitmap was created.",
       "params": [],
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
-      "name": "getCreatedFromBitmap()"
+      "name": "getCreatedFromBitmap()",
+      "documentation": "Reference to original Bitmap from which this Bitmap was created. {@code null} if this Bitmap\nwas not copied from another instance.\n\n@return Original Bitmap from which this Bitmap was created.\n"
     },
     "getCreatedFromBytes()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Bytes from which this Bitmap was created. {@code null} if this Bitmap was not created from\nbytes.\n\n@return Bytes from which this Bitmap was created.",
       "params": [],
       "returnType": "byte[]",
       "exceptions": [],
-      "name": "getCreatedFromBytes()"
+      "name": "getCreatedFromBytes()",
+      "documentation": "Bytes from which this Bitmap was created. {@code null} if this Bitmap was not created from\nbytes.\n\n@return Bytes from which this Bitmap was created.\n"
     },
     "getCreatedFromColors()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Color array from which this Bitmap was created. {@code null} if this Bitmap was not created\nfrom a color array.\n@return Color array from which this Bitmap was created.",
       "params": [],
       "returnType": "int[]",
       "exceptions": [],
-      "name": "getCreatedFromColors()"
+      "name": "getCreatedFromColors()",
+      "documentation": "Color array from which this Bitmap was created. {@code null} if this Bitmap was not created\nfrom a color array.\n@return Color array from which this Bitmap was created.\n"
     },
     "getCreatedFromFilter()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "{@code true} if this Bitmap was created with filtering.\n@return {@code true} if this Bitmap was created with filtering.",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "getCreatedFromFilter()"
+      "name": "getCreatedFromFilter()",
+      "documentation": "{@code true} if this Bitmap was created with filtering.\n@return {@code true} if this Bitmap was created with filtering.\n"
     },
     "getCreatedFromHeight()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n@return Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getCreatedFromHeight()"
+      "name": "getCreatedFromHeight()",
+      "documentation": "Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n@return Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n"
     },
     "getCreatedFromMatrix()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.\n@return Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.",
       "params": [],
       "returnType": "android.graphics.Matrix",
       "exceptions": [],
-      "name": "getCreatedFromMatrix()"
+      "name": "getCreatedFromMatrix()",
+      "documentation": "Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.\n@return Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.\n"
     },
     "getCreatedFromPath()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Path from which this Bitmap was created. {@code null} if this Bitmap was not create from a\npath.\n\n@return Path from which this Bitmap was created.",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "getCreatedFromPath()"
+      "name": "getCreatedFromPath()",
+      "documentation": "Path from which this Bitmap was created. {@code null} if this Bitmap was not create from a\npath.\n\n@return Path from which this Bitmap was created.\n"
     },
     "getCreatedFromResId()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Resource ID from which this Bitmap was created. {@code 0} if this Bitmap was not created\nfrom a resource.\n\n@return Resource ID from which this Bitmap was created.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getCreatedFromResId()"
+      "name": "getCreatedFromResId()",
+      "documentation": "Resource ID from which this Bitmap was created. {@code 0} if this Bitmap was not created\nfrom a resource.\n\n@return Resource ID from which this Bitmap was created.\n"
     },
     "getCreatedFromStream()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "{@link InputStream} from which this Bitmap was created. {@code null} if this Bitmap was not\ncreated from a stream.\n\n@return InputStream from which this Bitmap was created.",
       "params": [],
       "returnType": "java.io.InputStream",
       "exceptions": [],
-      "name": "getCreatedFromStream()"
+      "name": "getCreatedFromStream()",
+      "documentation": "{@link InputStream} from which this Bitmap was created. {@code null} if this Bitmap was not\ncreated from a stream.\n\n@return InputStream from which this Bitmap was created.\n"
     },
     "getCreatedFromWidth()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n\n@return Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getCreatedFromWidth()"
+      "name": "getCreatedFromWidth()",
+      "documentation": "Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n\n@return Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n"
     },
     "getCreatedFromX()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Horizontal offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.\n\n@return Horizontal offset within {@link #getCreatedFromBitmap()}.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getCreatedFromX()"
+      "name": "getCreatedFromX()",
+      "documentation": "Horizontal offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.\n\n@return Horizontal offset within {@link #getCreatedFromBitmap()}.\n"
     },
     "getCreatedFromY()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Vertical offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.\n\n@return Vertical offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getCreatedFromY()"
+      "name": "getCreatedFromY()",
+      "documentation": "Vertical offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.\n\n@return Vertical offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.\n"
     },
     "getDensity()": {
       "isImplementation": true,
@@ -438,7 +438,6 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Note that this method will return a RuntimeException unless:\n- {@code pixels} has the same length as the number of pixels of the bitmap.\n- {@code x \u003d 0}\n- {@code y \u003d 0}\n- {@code width} and {@code height} height match the current bitmap\u0027s dimensions.",
       "params": [
         "pixels",
         "offset",
@@ -450,7 +449,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "getPixels(int[],int,int,int,int,int,int)"
+      "name": "getPixels(int[],int,int,int,int,int,int)",
+      "documentation": "Note that this method will return a RuntimeException unless:\n- {@code pixels} has the same length as the number of pixels of the bitmap.\n- {@code x \u003d 0}\n- {@code y \u003d 0}\n- {@code width} and {@code height} height match the current bitmap\u0027s dimensions.\n"
     },
     "getRealBitmap()": {
       "isImplementation": false,
@@ -720,13 +720,13 @@
         "public",
         "static"
       ],
-      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param bitmap the bitmap to visualize\n@return Textual representation of the appearance of the object.",
       "params": [
         "bitmap"
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "visualize(android.graphics.Bitmap)"
+      "name": "visualize(android.graphics.Bitmap)",
+      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param bitmap the bitmap to visualize\n@return Textual representation of the appearance of the object.\n"
     },
     "writeToParcel(android.os.Parcel,int)": {
       "isImplementation": true,
@@ -742,7 +742,6 @@
       "name": "writeToParcel(android.os.Parcel,int)"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.Bitmap}.\n",
   "imports": [
     "android.graphics.Bitmap",
     "android.graphics.Matrix",
@@ -761,5 +760,6 @@
     "java.nio.ByteBuffer",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowBitmap"
+  "name": "org.robolectric.shadows.ShadowBitmap",
+  "documentation": "Shadow for {@link android.graphics.Bitmap}.\n"
 }

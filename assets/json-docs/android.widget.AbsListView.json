@@ -5,44 +5,44 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Robolectric accessor for the last smoothScrollBy distance\n\n@return int distance",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getLastSmoothScrollByDistance()"
+      "name": "getLastSmoothScrollByDistance()",
+      "documentation": "Robolectric accessor for the last smoothScrollBy distance\n\n@return int distance\n"
     },
     "getLastSmoothScrollByDuration()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Robolectric accessor for the last smoothScrollBy duration\n\n@return int duration",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getLastSmoothScrollByDuration()"
+      "name": "getLastSmoothScrollByDuration()",
+      "documentation": "Robolectric accessor for the last smoothScrollBy duration\n\n@return int duration\n"
     },
     "getOnScrollListener()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Robolectric accessor for the onScrollListener\n\n@return AbsListView.OnScrollListener",
       "params": [],
       "returnType": "android.widget.AbsListView.OnScrollListener",
       "exceptions": [],
-      "name": "getOnScrollListener()"
+      "name": "getOnScrollListener()",
+      "documentation": "Robolectric accessor for the onScrollListener\n\n@return AbsListView.OnScrollListener\n"
     },
     "getSmoothScrolledPosition()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Robolectric accessor for the last smoothScrolledPosition\n\n@return int position",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getSmoothScrolledPosition()"
+      "name": "getSmoothScrolledPosition()",
+      "documentation": "Robolectric accessor for the last smoothScrolledPosition\n\n@return int position\n"
     },
     "setOnScrollListener(android.widget.AbsListView.OnScrollListener)": {
       "isImplementation": true,
@@ -82,11 +82,11 @@
       "name": "smoothScrollToPosition(int)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.AbsListView}.\n",
   "imports": [
     "android.widget.AbsListView",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowAbsListView"
+  "name": "org.robolectric.shadows.ShadowAbsListView",
+  "documentation": "Shadow for {@link android.widget.AbsListView}.\n"
 }

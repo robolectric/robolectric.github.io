@@ -5,33 +5,33 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendDataMessage}.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "clearLastSentDataMessageParams()"
+      "name": "clearLastSentDataMessageParams()",
+      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendDataMessage}.\n"
     },
     "clearLastSentMultipartTextMessageParams()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendMultipartTextMessage}.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "clearLastSentMultipartTextMessageParams()"
+      "name": "clearLastSentMultipartTextMessageParams()",
+      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendMultipartTextMessage}.\n"
     },
     "clearLastSentTextMessageParams()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendTextMessage}.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "clearLastSentTextMessageParams()"
+      "name": "clearLastSentTextMessageParams()",
+      "documentation": "Non-Android accessor.\n\nClear last recorded parameters for {@code sendTextMessage}.\n"
     },
     "getDefault()": {
       "isImplementation": true,
@@ -49,33 +49,33 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendDataMessage}.",
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowSmsManager.DataMessageParams",
       "exceptions": [],
-      "name": "getLastSentDataMessageParams()"
+      "name": "getLastSentDataMessageParams()",
+      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendDataMessage}.\n"
     },
     "getLastSentMultipartTextMessageParams()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendMultipartTextMessage}.",
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowSmsManager.TextMultipartParams",
       "exceptions": [],
-      "name": "getLastSentMultipartTextMessageParams()"
+      "name": "getLastSentMultipartTextMessageParams()",
+      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendMultipartTextMessage}.\n"
     },
     "getLastSentTextMessageParams()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendTextMessage}.",
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowSmsManager.TextSmsParams",
       "exceptions": [],
-      "name": "getLastSentTextMessageParams()"
+      "name": "getLastSentTextMessageParams()",
+      "documentation": "Non-Android accessor.\n\n@return Parameters for last call to {@code sendTextMessage}.\n"
     },
     "sendDataMessage(java.lang.String,java.lang.String,short,byte[],android.app.PendingIntent,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -127,7 +127,6 @@
       "name": "sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)"
     }
   },
-  "documentation": " Shadow for {@link android.telephony.SmsManager}.\n",
   "imports": [
     "java.util.ArrayList",
     "java.util.List",
@@ -139,5 +138,6 @@
     "org.robolectric.shadow.api.Shadow",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
   ],
-  "name": "org.robolectric.shadows.ShadowSmsManager"
+  "name": "org.robolectric.shadows.ShadowSmsManager",
+  "documentation": "Shadow for {@link android.telephony.SmsManager}.\n"
 }

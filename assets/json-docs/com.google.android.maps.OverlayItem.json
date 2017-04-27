@@ -67,7 +67,6 @@
       "name": "hashCode()"
     }
   },
-  "documentation": " Shadow for {@link com.google.android.maps.OverlayItem}.\n",
   "imports": [
     "com.google.android.maps.GeoPoint",
     "com.google.android.maps.OverlayItem",
@@ -76,5 +75,6 @@
     "org.robolectric.internal.ShadowExtractor",
     "org.robolectric.util.Strings"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowOverlayItem"
+  "name": "org.robolectric.shadows.maps.ShadowOverlayItem",
+  "documentation": "Shadow for {@link com.google.android.maps.OverlayItem}.\n"
 }

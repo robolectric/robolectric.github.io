@@ -1,9 +1,9 @@
 {
   "methods": {},
-  "documentation": " Shadow for {@link android.media.ExifInterface}.\n",
   "imports": [
     "android.media.ExifInterface",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowExifInterface"
+  "name": "org.robolectric.shadows.ShadowExifInterface",
+  "documentation": "Shadow for {@link android.media.ExifInterface}.\n"
 }

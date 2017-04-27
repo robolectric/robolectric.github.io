@@ -46,11 +46,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.  Returns the most recent flags passed to #listen().\n\n@return Event flags.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getEventFlags()"
+      "name": "getEventFlags()",
+      "documentation": "Non-Android accessor.  Returns the most recent flags passed to #listen().\n\n@return Event flags.\n"
     },
     "getGroupIdLevel1()": {
       "isImplementation": true,
@@ -78,11 +78,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.  Returns the most recent listener passed to #listen().\n\n@return Phone state listener.",
       "params": [],
       "returnType": "android.telephony.PhoneStateListener",
       "exceptions": [],
-      "name": "getListener()"
+      "name": "getListener()",
+      "documentation": "Non-Android accessor.  Returns the most recent listener passed to #listen().\n\n@return Phone state listener.\n"
     },
     "getNetworkCountryIso()": {
       "isImplementation": true,
@@ -368,7 +368,6 @@
       "name": "setSimState(int)"
     }
   },
-  "documentation": " Shadow for {@link android.telephony.TelephonyManager}.\n",
   "imports": [
     "android.telephony.CellInfo",
     "android.telephony.CellLocation",
@@ -381,5 +380,6 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
   ],
-  "name": "org.robolectric.shadows.ShadowTelephonyManager"
+  "name": "org.robolectric.shadows.ShadowTelephonyManager",
+  "documentation": "Shadow for {@link android.telephony.TelephonyManager}.\n"
 }

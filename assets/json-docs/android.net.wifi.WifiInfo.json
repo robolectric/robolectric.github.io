@@ -168,7 +168,6 @@
       "name": "setSSID(java.lang.String)"
     }
   },
-  "documentation": " Shadow for {@link android.net.wifi.WifiInfo}.\n",
   "imports": [
     "android.net.wifi.WifiInfo",
     "org.robolectric.annotation.Implementation",
@@ -177,5 +176,6 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowWifiInfo"
+  "name": "org.robolectric.shadows.ShadowWifiInfo",
+  "documentation": "Shadow for {@link android.net.wifi.WifiInfo}.\n"
 }

@@ -210,7 +210,6 @@
       "name": "showErrorNotification(int,android.content.Context)"
     }
   },
-  "documentation": " Shadow for {@link GooglePlayServicesUtil} that allows providing a\n {@link GooglePlayServicesUtilImpl}.\n Calls to static method of {@link GooglePlayServicesUtil} will be redirected to the provided\n {@link GooglePlayServicesUtilImpl} implementation. Use\n {@link #provideImpl(GooglePlayServicesUtilImpl)} to\n set the implementation instance. By default, a {@link GooglePlayServicesUtilImpl} is used in call\n redirection. Use mocks or subclassing {@link GooglePlayServicesUtilImpl} to achieve desired\n behaviors.\n",
   "imports": [
     "com.google.android.gms.common.ConnectionResult",
     "com.google.android.gms.common.GooglePlayServicesUtil",
@@ -228,5 +227,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter"
   ],
-  "name": "org.robolectric.shadows.gms.ShadowGooglePlayServicesUtil"
+  "name": "org.robolectric.shadows.gms.ShadowGooglePlayServicesUtil",
+  "documentation": "Shadow for {@link GooglePlayServicesUtil} that allows providing a\n{@link GooglePlayServicesUtilImpl}.\nCalls to static method of {@link GooglePlayServicesUtil} will be redirected to the provided\n{@link GooglePlayServicesUtilImpl} implementation. Use\n{@link #provideImpl(GooglePlayServicesUtilImpl)} to\nset the implementation instance. By default, a {@link GooglePlayServicesUtilImpl} is used in call\nredirection. Use mocks or subclassing {@link GooglePlayServicesUtilImpl} to achieve desired\nbehaviors.\n"
 }

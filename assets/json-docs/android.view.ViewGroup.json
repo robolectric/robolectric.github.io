@@ -19,14 +19,14 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android method that dumps the state of this {@code ViewGroup} to {@code System.out}",
       "params": [
         "out",
         "indent"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "dump(java.io.PrintStream,int)"
+      "name": "dump(java.io.PrintStream,int)",
+      "documentation": "Non-Android method that dumps the state of this {@code ViewGroup} to {@code System.out}\n"
     },
     "getDisallowInterceptTouchEvent()": {
       "isImplementation": false,
@@ -73,11 +73,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Returns a string representation of this {@code ViewGroup} by concatenating all of the\nstrings contained in all of the descendants of this {@code ViewGroup}.",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "innerText()"
+      "name": "innerText()",
+      "documentation": "Returns a string representation of this {@code ViewGroup} by concatenating all of the\nstrings contained in all of the descendants of this {@code ViewGroup}.\n"
     },
     "onInterceptTouchEvent(android.view.MotionEvent)": {
       "isImplementation": true,
@@ -140,7 +140,6 @@
       "name": "setLayoutAnimationListener(android.view.animation.Animation.AnimationListener)"
     }
   },
-  "documentation": " Shadow for {@link android.view.ViewGroup}.\n",
   "imports": [
     "android.os.Looper",
     "android.view.MotionEvent",
@@ -156,5 +155,6 @@
     "java.io.PrintStream",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowViewGroup"
+  "name": "org.robolectric.shadows.ShadowViewGroup",
+  "documentation": "Shadow for {@link android.view.ViewGroup}.\n"
 }

@@ -125,7 +125,6 @@
       "name": "newInstance(java.lang.String,boolean)"
     }
   },
-  "documentation": " Shadow for {@code android.graphics.BitmapRegionDecoder}.\n",
   "imports": [
     "android.graphics.*",
     "org.robolectric.annotation.Implementation",
@@ -136,5 +135,6 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowBitmapRegionDecoder"
+  "name": "org.robolectric.shadows.ShadowBitmapRegionDecoder",
+  "documentation": "Shadow for {@code android.graphics.BitmapRegionDecoder}.\n"
 }

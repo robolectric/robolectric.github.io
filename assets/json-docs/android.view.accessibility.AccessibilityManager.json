@@ -152,7 +152,6 @@
       "name": "setTouchExplorationEnabled(boolean)"
     }
   },
-  "documentation": " Shadow for {@link android.view.accessibility.AccessibilityManager}.\n",
   "imports": [
     "android.accessibilityservice.AccessibilityServiceInfo",
     "android.content.Context",
@@ -174,5 +173,6 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "org.robolectric.RuntimeEnvironment.getApiLevel"
   ],
-  "name": "org.robolectric.shadows.ShadowAccessibilityManager"
+  "name": "org.robolectric.shadows.ShadowAccessibilityManager",
+  "documentation": "Shadow for {@link android.view.accessibility.AccessibilityManager}.\n"
 }

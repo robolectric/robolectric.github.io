@@ -241,7 +241,6 @@
       "name": "setScaledDensity(float)"
     }
   },
-  "documentation": " Shadow for {@link android.content.res.Resources}.\n",
   "imports": [
     "android.content.res.*",
     "android.graphics.Bitmap",
@@ -275,5 +274,6 @@
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowResources"
+  "name": "org.robolectric.shadows.ShadowResources",
+  "documentation": "Shadow for {@link android.content.res.Resources}.\n"
 }

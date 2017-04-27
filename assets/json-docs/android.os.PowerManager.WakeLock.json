@@ -39,11 +39,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor retrieves if the wake lock is reference counted or not\n\n@return Is the wake lock reference counted?",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isReferenceCounted()"
+      "name": "isReferenceCounted()",
+      "documentation": "Non-Android accessor retrieves if the wake lock is reference counted or not\n\n@return Is the wake lock reference counted?\n"
     },
     "release()": {
       "isImplementation": true,

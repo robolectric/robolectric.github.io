@@ -83,7 +83,6 @@
       "name": "getValuesBackReferences()"
     }
   },
-  "documentation": " Shadow for {@link android.content.ContentProviderOperation}.\n",
   "imports": [
     "android.content.ContentProviderOperation",
     "android.content.ContentValues",
@@ -94,5 +93,6 @@
     "org.robolectric.util.ReflectionHelpers",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowContentProviderOperation"
+  "name": "org.robolectric.shadows.ShadowContentProviderOperation",
+  "documentation": "Shadow for {@link android.content.ContentProviderOperation}.\n"
 }

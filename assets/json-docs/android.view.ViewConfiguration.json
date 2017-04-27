@@ -336,7 +336,6 @@
       "name": "setup(android.content.Context)"
     }
   },
-  "documentation": " Shadow for {@link android.view.ViewConfiguration}.\n",
   "imports": [
     "android.content.Context",
     "android.util.DisplayMetrics",
@@ -347,5 +346,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowViewConfiguration"
+  "name": "org.robolectric.shadows.ShadowViewConfiguration",
+  "documentation": "Shadow for {@link android.view.ViewConfiguration}.\n"
 }

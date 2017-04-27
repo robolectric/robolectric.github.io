@@ -6,13 +6,13 @@
         "public",
         "static"
       ],
-      "documentation": "Non-Android accessor thatallows the value of the TIME_12_24 setting to be set.\n\n@param use24HourTimeFormat new status for the time setting",
       "params": [
         "use24HourTimeFormat"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "set24HourTimeFormat(boolean)"
+      "name": "set24HourTimeFormat(boolean)",
+      "documentation": "Non-Android accessor thatallows the value of the TIME_12_24 setting to be set.\n\n@param use24HourTimeFormat new status for the time setting\n"
     },
     "setAirplaneMode(boolean)": {
       "isImplementation": false,
@@ -20,13 +20,13 @@
         "public",
         "static"
       ],
-      "documentation": "Non-Android accessor that allows the value of the AIRPLANE_MODE_ON setting to be set.\n\n@param isAirplaneMode new status for airplane mode",
       "params": [
         "isAirplaneMode"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setAirplaneMode(boolean)"
+      "name": "setAirplaneMode(boolean)",
+      "documentation": "Non-Android accessor that allows the value of the AIRPLANE_MODE_ON setting to be set.\n\n@param isAirplaneMode new status for airplane mode\n"
     },
     "setWifiOn(boolean)": {
       "isImplementation": false,
@@ -34,16 +34,15 @@
         "public",
         "static"
       ],
-      "documentation": "Non-Android accessor that allows the value of the WIFI_ON setting to be set.\n\n@param isOn new status for wifi mode",
       "params": [
         "isOn"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setWifiOn(boolean)"
+      "name": "setWifiOn(boolean)",
+      "documentation": "Non-Android accessor that allows the value of the WIFI_ON setting to be set.\n\n@param isOn new status for wifi mode\n"
     }
   },
-  "documentation": " Shadow for {@link android.provider.Settings}.\n",
   "imports": [
     "android.content.ContentResolver",
     "android.provider.Settings",
@@ -55,5 +54,6 @@
     "java.util.WeakHashMap",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1"
   ],
-  "name": "org.robolectric.shadows.ShadowSettings"
+  "name": "org.robolectric.shadows.ShadowSettings",
+  "documentation": "Shadow for {@link android.provider.Settings}.\n"
 }

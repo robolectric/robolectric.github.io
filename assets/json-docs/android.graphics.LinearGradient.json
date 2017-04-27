@@ -89,11 +89,11 @@
       "name": "getY1()"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.LinearGradient}.\n",
   "imports": [
     "android.graphics.LinearGradient",
     "android.graphics.Shader",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowLinearGradient"
+  "name": "org.robolectric.shadows.ShadowLinearGradient",
+  "documentation": "Shadow for {@link android.graphics.LinearGradient}.\n"
 }

@@ -23,7 +23,6 @@
       "name": "setDrawerListener(android.support.v4.widget.DrawerLayout.DrawerListener)"
     }
   },
-  "documentation": " Shadow for {@link android.support.v4.widget.DrawerLayout}.\n",
   "imports": [
     "android.support.v4.widget.DrawerLayout",
     "org.robolectric.annotation.Implements",
@@ -32,5 +31,6 @@
     "org.robolectric.shadows.ShadowViewGroup",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.support.v4.ShadowDrawerLayout"
+  "name": "org.robolectric.shadows.support.v4.ShadowDrawerLayout",
+  "documentation": "Shadow for {@link android.support.v4.widget.DrawerLayout}.\n"
 }

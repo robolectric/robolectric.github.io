@@ -39,33 +39,33 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "A list of all \u0027post\u0027 operations performed on this Matrix. The last operation performed will\nbe last in the list.\n@return A list of all \u0027post\u0027 operations performed on this Matrix.",
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.String\u003e",
       "exceptions": [],
-      "name": "getPostOperations()"
+      "name": "getPostOperations()",
+      "documentation": "A list of all \u0027post\u0027 operations performed on this Matrix. The last operation performed will\nbe last in the list.\n@return A list of all \u0027post\u0027 operations performed on this Matrix.\n"
     },
     "getPreOperations()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "A list of all \u0027pre\u0027 operations performed on this Matrix. The last operation performed will\nbe first in the list.\n@return A list of all \u0027pre\u0027 operations performed on this Matrix.",
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.String\u003e",
       "exceptions": [],
-      "name": "getPreOperations()"
+      "name": "getPreOperations()",
+      "documentation": "A list of all \u0027pre\u0027 operations performed on this Matrix. The last operation performed will\nbe first in the list.\n@return A list of all \u0027pre\u0027 operations performed on this Matrix.\n"
     },
     "getSetOperations()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "A map of all \u0027set\u0027 operations performed on this Matrix.\n@return A map of all \u0027set\u0027 operations performed on this Matrix.",
       "params": [],
       "returnType": "java.util.Map\u003cjava.lang.String,java.lang.String\u003e",
       "exceptions": [],
-      "name": "getSetOperations()"
+      "name": "getSetOperations()",
+      "documentation": "A map of all \u0027set\u0027 operations performed on this Matrix.\n@return A map of all \u0027set\u0027 operations performed on this Matrix.\n"
     },
     "getSimpleMatrix(android.graphics.Matrix)": {
       "isImplementation": false,
@@ -591,7 +591,6 @@
       "name": "setValues(float[])"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.Matrix}.\n",
   "imports": [
     "android.graphics.Matrix",
     "android.graphics.PointF",
@@ -610,5 +609,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.internal.ShadowExtractor"
   ],
-  "name": "org.robolectric.shadows.ShadowMatrix"
+  "name": "org.robolectric.shadows.ShadowMatrix",
+  "documentation": "Shadow for {@link android.graphics.Matrix}.\n"
 }

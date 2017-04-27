@@ -202,13 +202,13 @@
         "public",
         "static"
       ],
-      "documentation": "@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequestInfo(int)} instead.)\n@return HttpRequest",
       "params": [
         "index"
       ],
       "returnType": "org.apache.http.HttpRequest",
       "exceptions": [],
-      "name": "getSentHttpRequest(int)"
+      "name": "getSentHttpRequest(int)",
+      "documentation": "@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequestInfo(int)} instead.)\n@return HttpRequest\n"
     },
     "getSentHttpRequestInfo(int)": {
       "isImplementation": false,
@@ -216,13 +216,13 @@
         "public",
         "static"
       ],
-      "documentation": "@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequest(int)} instead.)\n@return HttpRequestInfo",
       "params": [
         "index"
       ],
       "returnType": "org.robolectric.shadows.httpclient.HttpRequestInfo",
       "exceptions": [],
-      "name": "getSentHttpRequestInfo(int)"
+      "name": "getSentHttpRequestInfo(int)",
+      "documentation": "@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequest(int)} instead.)\n@return HttpRequestInfo\n"
     },
     "getTargetAuthenticationHandler()": {
       "isImplementation": false,

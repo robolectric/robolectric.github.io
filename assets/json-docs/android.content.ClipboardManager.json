@@ -89,7 +89,6 @@
       "name": "setText(java.lang.CharSequence)"
     }
   },
-  "documentation": " Shadow for {@link android.content.ClipboardManager}.\n",
   "imports": [
     "android.content.ClipData",
     "android.content.ClipDescription",
@@ -106,5 +105,6 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowClipboardManager"
+  "name": "org.robolectric.shadows.ShadowClipboardManager",
+  "documentation": "Shadow for {@link android.content.ClipboardManager}.\n"
 }

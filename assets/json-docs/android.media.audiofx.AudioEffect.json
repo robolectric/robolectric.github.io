@@ -36,7 +36,6 @@
       "name": "reset()"
     }
   },
-  "documentation": " Shadow for {@link android.media.audiofx.AudioEffect}.\n",
   "imports": [
     "android.media.audiofx.AudioEffect",
     "org.robolectric.annotation.Implementation",
@@ -45,5 +44,6 @@
     "java.util.LinkedList",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.ShadowAudioEffect"
+  "name": "org.robolectric.shadows.ShadowAudioEffect",
+  "documentation": "Shadow for {@link android.media.audiofx.AudioEffect}.\n"
 }

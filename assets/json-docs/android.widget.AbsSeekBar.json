@@ -1,9 +1,9 @@
 {
   "methods": {},
-  "documentation": " Shadow for {@link android.widget.AbsSeekBar}.\n",
   "imports": [
     "android.widget.AbsSeekBar",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowAbsSeekBar"
+  "name": "org.robolectric.shadows.ShadowAbsSeekBar",
+  "documentation": "Shadow for {@link android.widget.AbsSeekBar}.\n"
 }

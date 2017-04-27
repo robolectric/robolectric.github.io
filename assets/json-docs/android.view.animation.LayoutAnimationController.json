@@ -23,11 +23,11 @@
       "name": "setLoadedFromResourceId(int)"
     }
   },
-  "documentation": " Shadow for {@link android.view.animation.LayoutAnimationController}.\n",
   "imports": [
     "android.view.animation.LayoutAnimationController",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowLayoutAnimationController"
+  "name": "org.robolectric.shadows.ShadowLayoutAnimationController",
+  "documentation": "Shadow for {@link android.view.animation.LayoutAnimationController}.\n"
 }

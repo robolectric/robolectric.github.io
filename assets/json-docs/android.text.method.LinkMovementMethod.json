@@ -12,12 +12,12 @@
       "name": "getInstance()"
     }
   },
-  "documentation": " Shadow for {@link android.text.method.LinkMovementMethod}.\n",
   "imports": [
     "android.text.method.LinkMovementMethod",
     "android.text.method.MovementMethod",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowLinkMovementMethod"
+  "name": "org.robolectric.shadows.ShadowLinkMovementMethod",
+  "documentation": "Shadow for {@link android.text.method.LinkMovementMethod}.\n"
 }

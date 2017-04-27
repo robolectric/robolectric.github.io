@@ -21,7 +21,6 @@
       "name": "toString()"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.ColorMatrix}.\n",
   "imports": [
     "android.graphics.ColorMatrix",
     "org.robolectric.annotation.Implementation",
@@ -32,5 +31,6 @@
     "java.util.ArrayList",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.ShadowColorMatrix"
+  "name": "org.robolectric.shadows.ShadowColorMatrix",
+  "documentation": "Shadow for {@link android.graphics.ColorMatrix}.\n"
 }

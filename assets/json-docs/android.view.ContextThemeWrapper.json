@@ -11,12 +11,12 @@
       "name": "callGetThemeResId()"
     }
   },
-  "documentation": " Shadow for {@link android.view.ContextThemeWrapper}.\n",
   "imports": [
     "android.view.ContextThemeWrapper",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowContextThemeWrapper"
+  "name": "org.robolectric.shadows.ShadowContextThemeWrapper",
+  "documentation": "Shadow for {@link android.view.ContextThemeWrapper}.\n"
 }

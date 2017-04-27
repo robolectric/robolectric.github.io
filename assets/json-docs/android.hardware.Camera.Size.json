@@ -15,7 +15,6 @@
       "name": "__constructor__(android.hardware.Camera,int,int)"
     }
   },
-  "documentation": " Shadow for the Android {@code Camera.Size} value object.\n",
   "imports": [
     "android.graphics.ImageFormat",
     "android.hardware.Camera",
@@ -32,5 +31,6 @@
     "java.util.Map",
     "org.robolectric.shadow.api.Shadow.*"
   ],
-  "name": "org.robolectric.shadows.ShadowCamera.ShadowSize"
+  "name": "org.robolectric.shadows.ShadowCamera.ShadowSize",
+  "documentation": "Shadow for the Android {@code Camera.Size} value object.\n"
 }

@@ -65,13 +65,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Add a child node to this one. Also initializes the parent field of the\nchild.\n\n@param child The node to be added as a child.",
       "params": [
         "child"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addChild(android.view.accessibility.AccessibilityNodeInfo)"
+      "name": "addChild(android.view.accessibility.AccessibilityNodeInfo)",
+      "documentation": "Add a child node to this one. Also initializes the parent field of the\nchild.\n\n@param child The node to be added as a child.\n"
     },
     "areThereUnrecycledNodes(boolean)": {
       "isImplementation": false,
@@ -79,13 +79,13 @@
         "public",
         "static"
       ],
-      "documentation": "Check for leaked objects that were {@code obtain}ed but never\n{@code recycle}d.\n\n@param printUnrecycledNodesToSystemErr - if true, stack traces of calls\n       to {@code obtain} that lack matching calls to {@code recycle} are\n       dumped to System.err.\n@return {@code true} if there are unrecycled nodes",
       "params": [
         "printUnrecycledNodesToSystemErr"
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "areThereUnrecycledNodes(boolean)"
+      "name": "areThereUnrecycledNodes(boolean)",
+      "documentation": "Check for leaked objects that were {@code obtain}ed but never\n{@code recycle}d.\n\n@param printUnrecycledNodesToSystemErr - if true, stack traces of calls\n       to {@code obtain} that lack matching calls to {@code recycle} are\n       dumped to System.err.\n@return {@code true} if there are unrecycled nodes\n"
     },
     "canOpenPopup()": {
       "isImplementation": true,
@@ -126,13 +126,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Equality check based on reference equality for mParent and mView and\nvalue equality for other fields.",
       "params": [
         "object"
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "equals(java.lang.Object)"
+      "name": "equals(java.lang.Object)",
+      "documentation": "Equality check based on reference equality for mParent and mView and\nvalue equality for other fields.\n"
     },
     "getActionFromIdFromFrameWork(int)": {
       "isImplementation": false,
@@ -174,11 +174,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Obtain flags for actions supported. Currently only supports\n{@link AccessibilityNodeInfo#ACTION_CLICK},\n{@link AccessibilityNodeInfo#ACTION_LONG_CLICK},\n{@link AccessibilityNodeInfo#ACTION_SCROLL_FORWARD},\n{@link AccessibilityNodeInfo#ACTION_PASTE},\n{@link AccessibilityNodeInfo#ACTION_FOCUS},\n{@link AccessibilityNodeInfo#ACTION_SET_SELECTION},\n{@link AccessibilityNodeInfo#ACTION_SCROLL_BACKWARD}\nReturned value is derived from the getters.\n\n@return Action mask. 0 if no actions supported.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getActions()"
+      "name": "getActions()",
+      "documentation": "Obtain flags for actions supported. Currently only supports\n{@link AccessibilityNodeInfo#ACTION_CLICK},\n{@link AccessibilityNodeInfo#ACTION_LONG_CLICK},\n{@link AccessibilityNodeInfo#ACTION_SCROLL_FORWARD},\n{@link AccessibilityNodeInfo#ACTION_PASTE},\n{@link AccessibilityNodeInfo#ACTION_FOCUS},\n{@link AccessibilityNodeInfo#ACTION_SET_SELECTION},\n{@link AccessibilityNodeInfo#ACTION_SCROLL_BACKWARD}\nReturned value is derived from the getters.\n\n@return Action mask. 0 if no actions supported.\n"
     },
     "getBoundsInParent(android.graphics.Rect)": {
       "isImplementation": true,
@@ -241,11 +241,11 @@
       "modifiers": [
         "private"
       ],
-      "documentation": "@return A shallow copy.",
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo",
       "exceptions": [],
-      "name": "getClone()"
+      "name": "getClone()",
+      "documentation": "@return A shallow copy.\n"
     },
     "getCollectionInfo()": {
       "isImplementation": true,
@@ -389,22 +389,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@return The list of arguments for the various calls to performAction. Unmodifiable.",
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
       "exceptions": [],
-      "name": "getPerformedActions()"
+      "name": "getPerformedActions()",
+      "documentation": "@return The list of arguments for the various calls to performAction. Unmodifiable.\n"
     },
     "getPerformedActionsWithArgs()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "@return The list of arguments for the various calls to performAction. Unmodifiable.",
       "params": [],
       "returnType": "java.util.List\u003candroid.util.Pair\u003cjava.lang.Integer,android.os.Bundle\u003e\u003e",
       "exceptions": [],
-      "name": "getPerformedActionsWithArgs()"
+      "name": "getPerformedActionsWithArgs()",
+      "documentation": "@return The list of arguments for the various calls to performAction. Unmodifiable.\n"
     },
     "getRangeInfo()": {
       "isImplementation": true,
@@ -432,22 +432,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Gets the text selection end.\n\n@return The text selection end if there is selection or UNDEFINED_SELECTION_INDEX.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getTextSelectionEnd()"
+      "name": "getTextSelectionEnd()",
+      "documentation": "Gets the text selection end.\n\n@return The text selection end if there is selection or UNDEFINED_SELECTION_INDEX.\n"
     },
     "getTextSelectionStart()": {
       "isImplementation": true,
       "modifiers": [
         "public"
       ],
-      "documentation": "Gets the text selection start.\n\n@return The text selection start if there is selection or UNDEFINED_SELECTION_INDEX.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getTextSelectionStart()"
+      "name": "getTextSelectionStart()",
+      "documentation": "Gets the text selection start.\n\n@return The text selection start if there is selection or UNDEFINED_SELECTION_INDEX.\n"
     },
     "getTraversalAfter()": {
       "isImplementation": true,
@@ -814,11 +814,11 @@
         "public",
         "static"
       ],
-      "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledNodes}\nwill always return false if called immediately afterwards.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "resetObtainedInstances()"
+      "name": "resetObtainedInstances()",
+      "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledNodes}\nwill always return false if called immediately afterwards.\n"
     },
     "setAccessibilityFocused(boolean)": {
       "isImplementation": true,
@@ -1159,13 +1159,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Configure the return result of an action if it is performed\n\n@param listener The listener.",
       "params": [
         "listener"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setOnPerformActionListener(org.robolectric.shadows.ShadowAccessibilityNodeInfo.OnPerformActionListener)"
+      "name": "setOnPerformActionListener(org.robolectric.shadows.ShadowAccessibilityNodeInfo.OnPerformActionListener)",
+      "documentation": "Configure the return result of an action if it is performed\n\n@param listener The listener.\n"
     },
     "setPackageName(java.lang.CharSequence)": {
       "isImplementation": true,
@@ -1379,7 +1379,6 @@
       "name": "writeToParcel(android.os.Parcel,int)"
     }
   },
-  "documentation": " Shadow of {@link android.view.accessibility.AccessibilityNodeInfo} that allows a test to set\n properties that are locked in the original class. It also keeps track of calls to\n {@code obtain()} and {@code recycle()} to look for bugs that mismatches.\n",
   "imports": [
     "android.graphics.Rect",
     "android.os.Bundle",
@@ -1416,5 +1415,6 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo"
+  "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo",
+  "documentation": "Shadow of {@link android.view.accessibility.AccessibilityNodeInfo} that allows a test to set\nproperties that are locked in the original class. It also keeps track of calls to\n{@code obtain()} and {@code recycle()} to look for bugs that mismatches.\n"
 }

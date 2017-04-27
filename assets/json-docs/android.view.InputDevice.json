@@ -36,7 +36,6 @@
       "name": "setDeviceName(java.lang.String)"
     }
   },
-  "documentation": " Shadow for {@link android.view.InputDevice}.\n",
   "imports": [
     "android.view.InputDevice",
     "org.robolectric.Shadows",
@@ -44,5 +43,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowInputDevice"
+  "name": "org.robolectric.shadows.ShadowInputDevice",
+  "documentation": "Shadow for {@link android.view.InputDevice}.\n"
 }

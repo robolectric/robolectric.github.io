@@ -38,7 +38,6 @@
       "name": "nLineBreakOpportunities(java.lang.String,char[],int,int[])"
     }
   },
-  "documentation": " Shadow for {@link android.text.StaticLayout}.\n",
   "imports": [
     "android.text.StaticLayout",
     "org.robolectric.annotation.HiddenApi",
@@ -49,5 +48,6 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowStaticLayout"
+  "name": "org.robolectric.shadows.ShadowStaticLayout",
+  "documentation": "Shadow for {@link android.text.StaticLayout}.\n"
 }

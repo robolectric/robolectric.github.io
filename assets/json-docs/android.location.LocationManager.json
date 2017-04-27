@@ -55,14 +55,14 @@
         "private",
         "static"
       ],
-      "documentation": "Returns the distance between the two locations in meters.\nAdapted from: http://stackoverflow.com/questions/837872/calculate-distance-in-meters-when-you-know-longitude-and-latitude-in-java",
       "params": [
         "location1",
         "location2"
       ],
       "returnType": "float",
       "exceptions": [],
-      "name": "distanceBetween(android.location.Location,android.location.Location)"
+      "name": "distanceBetween(android.location.Location,android.location.Location)",
+      "documentation": "Returns the distance between the two locations in meters.\nAdapted from: http://stackoverflow.com/questions/837872/calculate-distance-in-meters-when-you-know-longitude-and-latitude-in-java\n"
     },
     "getAllProviders()": {
       "isImplementation": true,
@@ -117,22 +117,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Gets the criteria value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}.\n\n@return the criteria used to find the best provider",
       "params": [],
       "returnType": "android.location.Criteria",
       "exceptions": [],
-      "name": "getLastBestProviderCriteria()"
+      "name": "getLastBestProviderCriteria()",
+      "documentation": "Non-Android accessor.\n\n\u003cp\u003e\nGets the criteria value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}\n\n@return the criteria used to find the best provider\n"
     },
     "getLastBestProviderEnabledOnly()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\nGets the enabled value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}\n\n@return the enabled value used to find the best provider",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "getLastBestProviderEnabledOnly()"
+      "name": "getLastBestProviderEnabledOnly()",
+      "documentation": "Non-Android accessor.\n\n\u003cp\u003e\nGets the enabled value used in the last call to {@link #getBestProvider(android.location.Criteria, boolean)}\n\n@return the enabled value used to find the best provider\n"
     },
     "getLastKnownLocation(java.lang.String)": {
       "isImplementation": true,
@@ -195,11 +195,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return lastRequestedLocationUpdatesLocationListener",
       "params": [],
       "returnType": "java.util.List\u003candroid.location.LocationListener\u003e",
       "exceptions": [],
-      "name": "getRequestLocationUpdateListeners()"
+      "name": "getRequestLocationUpdateListeners()",
+      "documentation": "Non-Android accessor.\n\n@return lastRequestedLocationUpdatesLocationListener\n"
     },
     "hasGpsStatusListener(android.location.GpsStatus.Listener)": {
       "isImplementation": false,
@@ -355,7 +355,6 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Sets the value to return from {@link #getBestProvider(android.location.Criteria, boolean)} for the given\n{@code provider}\n\n@param provider name of the provider who should be considered best\n@param enabled Enabled\n@param criteria List of criteria\n@throws Exception if provider is not known\n@return false If provider is not enabled but it is supposed to be set as the best enabled provider don\u0027t set it, otherwise true",
       "params": [
         "provider",
         "enabled",
@@ -365,35 +364,36 @@
       "exceptions": [
         "java.lang.Exception"
       ],
-      "name": "setBestProvider(java.lang.String,boolean,java.util.List\u003candroid.location.Criteria\u003e)"
+      "name": "setBestProvider(java.lang.String,boolean,java.util.List\u003candroid.location.Criteria\u003e)",
+      "documentation": "Sets the value to return from {@link #getBestProvider(android.location.Criteria, boolean)} for the given\n{@code provider}\n\n@param provider name of the provider who should be considered best\n@param enabled Enabled\n@param criteria List of criteria\n@throws Exception if provider is not known\n@return false If provider is not enabled but it is supposed to be set as the best enabled provider don\u0027t set it, otherwise true\n"
     },
     "setLastKnownLocation(java.lang.String,android.location.Location)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Sets the value to return from {@link #getLastKnownLocation(String)} for the given {@code provider}\n\n@param provider\n           name of the provider whose location to set\n@param location\n           the last known location for the provider",
       "params": [
         "provider",
         "location"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setLastKnownLocation(java.lang.String,android.location.Location)"
+      "name": "setLastKnownLocation(java.lang.String,android.location.Location)",
+      "documentation": "Sets the value to return from {@link #getLastKnownLocation(String)} for the given {@code provider}\n\n@param provider\n           name of the provider whose location to set\n@param location\n           the last known location for the provider\n"
     },
     "setProviderEnabled(java.lang.String,boolean)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Sets the value to return from {@link #isProviderEnabled(String)} for the given {@code provider}\n\n@param provider\n           name of the provider whose status to set\n@param isEnabled\n           whether that provider should appear enabled",
       "params": [
         "provider",
         "isEnabled"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setProviderEnabled(java.lang.String,boolean)"
+      "name": "setProviderEnabled(java.lang.String,boolean)",
+      "documentation": "Sets the value to return from {@link #isProviderEnabled(String)} for the given {@code provider}\n\n@param provider\n           name of the provider whose status to set\n@param isEnabled\n           whether that provider should appear enabled\n"
     },
     "setProviderEnabled(java.lang.String,boolean,java.util.List\u003candroid.location.Criteria\u003e)": {
       "isImplementation": false,
@@ -422,7 +422,6 @@
       "name": "simulateLocation(android.location.Location)"
     }
   },
-  "documentation": " Shadow for {@link android.location.LocationManager}.\n",
   "imports": [
     "android.app.PendingIntent",
     "android.app.PendingIntent.CanceledException",
@@ -446,5 +445,6 @@
     "java.util.Map",
     "java.util.Set"
   ],
-  "name": "org.robolectric.shadows.ShadowLocationManager"
+  "name": "org.robolectric.shadows.ShadowLocationManager",
+  "documentation": "Shadow for {@link android.location.LocationManager}.\n"
 }

@@ -119,7 +119,6 @@
       "name": "size()"
     }
   },
-  "documentation": " Shadow for {@link android.app.NotificationManager}.\n",
   "imports": [
     "android.app.Notification",
     "android.app.NotificationManager",
@@ -133,5 +132,6 @@
     "java.util.List",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowNotificationManager"
+  "name": "org.robolectric.shadows.ShadowNotificationManager",
+  "documentation": "Shadow for {@link android.app.NotificationManager}.\n"
 }

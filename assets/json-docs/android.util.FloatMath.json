@@ -66,11 +66,11 @@
       "name": "sqrt(float)"
     }
   },
-  "documentation": " Shadow for {@link android.util.FloatMath}.\n",
   "imports": [
     "android.util.FloatMath",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowFloatMath"
+  "name": "org.robolectric.shadows.ShadowFloatMath",
+  "documentation": "Shadow for {@link android.util.FloatMath}.\n"
 }

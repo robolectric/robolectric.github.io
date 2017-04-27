@@ -22,7 +22,6 @@
       "name": "show()"
     }
   },
-  "documentation": " Shadow for {@link android.widget.ListPopupWindow}.\n",
   "imports": [
     "android.widget.ListPopupWindow",
     "org.robolectric.RuntimeEnvironment",
@@ -32,5 +31,6 @@
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowListPopupWindow"
+  "name": "org.robolectric.shadows.ShadowListPopupWindow",
+  "documentation": "Shadow for {@link android.widget.ListPopupWindow}.\n"
 }

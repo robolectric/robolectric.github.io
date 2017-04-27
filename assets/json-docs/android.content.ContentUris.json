@@ -28,12 +28,12 @@
       "name": "withAppendedId(android.net.Uri,long)"
     }
   },
-  "documentation": " Shadow for {@link android.content.ContentUris}.\n",
   "imports": [
     "android.content.ContentUris",
     "android.net.Uri",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowContentUris"
+  "name": "org.robolectric.shadows.ShadowContentUris",
+  "documentation": "Shadow for {@link android.content.ContentUris}.\n"
 }

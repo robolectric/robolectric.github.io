@@ -189,14 +189,14 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#checkPermission(String, String)} instead.",
       "params": [
         "permName",
         "pkgName"
       ],
       "returnType": "int",
       "exceptions": [],
-      "name": "checkPermission(java.lang.String,java.lang.String)"
+      "name": "checkPermission(java.lang.String,java.lang.String)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#checkPermission(String, String)} instead.\n"
     },
     "clearSystemAvailableFeatures()": {
       "isImplementation": false,
@@ -267,7 +267,6 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getActivityInfo(ComponentName, int)} instead.",
       "params": [
         "className",
         "flags"
@@ -276,14 +275,14 @@
       "exceptions": [
         "android.content.pm.PackageManager.NameNotFoundException"
       ],
-      "name": "getActivityInfo(android.content.ComponentName,int)"
+      "name": "getActivityInfo(android.content.ComponentName,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getActivityInfo(ComponentName, int)} instead.\n"
     },
     "getApplicationIcon(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getApplicationIcon(String)} instead.",
       "params": [
         "packageName"
       ],
@@ -291,14 +290,14 @@
       "exceptions": [
         "android.content.pm.PackageManager.NameNotFoundException"
       ],
-      "name": "getApplicationIcon(java.lang.String)"
+      "name": "getApplicationIcon(java.lang.String)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getApplicationIcon(String)} instead.\n"
     },
     "getApplicationInfo(java.lang.String,int)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getApplicationInfo(String, int)} instead.",
       "params": [
         "packageName",
         "flags"
@@ -307,20 +306,21 @@
       "exceptions": [
         "android.content.pm.PackageManager.NameNotFoundException"
       ],
-      "name": "getApplicationInfo(java.lang.String,int)"
+      "name": "getApplicationInfo(java.lang.String,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getApplicationInfo(String, int)} instead.\n"
     },
     "getApplicationLabel(android.content.pm.ApplicationInfo)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getApplicationLabel(ApplicationInfo)} instead.",
       "params": [
         "info"
       ],
       "returnType": "java.lang.CharSequence",
       "exceptions": [],
-      "name": "getApplicationLabel(android.content.pm.ApplicationInfo)"
+      "name": "getApplicationLabel(android.content.pm.ApplicationInfo)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getApplicationLabel(ApplicationInfo)} instead.\n"
     },
     "getComponentState(android.content.ComponentName)": {
       "isImplementation": false,
@@ -363,26 +363,26 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getInstalledPackages(int)} instead.",
       "params": [
         "flags"
       ],
       "returnType": "java.util.List\u003candroid.content.pm.PackageInfo\u003e",
       "exceptions": [],
-      "name": "getInstalledPackages(int)"
+      "name": "getInstalledPackages(int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getInstalledPackages(int)} instead.\n"
     },
     "getLaunchIntentForPackage(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getLaunchIntentForPackage(String)} instead.",
       "params": [
         "packageName"
       ],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "getLaunchIntentForPackage(java.lang.String)"
+      "name": "getLaunchIntentForPackage(java.lang.String)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getLaunchIntentForPackage(String)} instead.\n"
     },
     "getPackageArchiveInfo(java.lang.String,int)": {
       "isImplementation": true,
@@ -402,7 +402,6 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getPackageInfo(String, int)} instead.",
       "params": [
         "packageName",
         "flags"
@@ -411,7 +410,8 @@
       "exceptions": [
         "android.content.pm.PackageManager.NameNotFoundException"
       ],
-      "name": "getPackageInfo(java.lang.String,int)"
+      "name": "getPackageInfo(java.lang.String,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getPackageInfo(String, int)} instead.\n"
     },
     "getPackageSizeInfo(java.lang.String,android.content.pm.IPackageStatsObserver)": {
       "isImplementation": true,
@@ -445,7 +445,6 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getReceiverInfo(ComponentName, int)} instead.",
       "params": [
         "className",
         "flags"
@@ -454,14 +453,14 @@
       "exceptions": [
         "android.content.pm.PackageManager.NameNotFoundException"
       ],
-      "name": "getReceiverInfo(android.content.ComponentName,int)"
+      "name": "getReceiverInfo(android.content.ComponentName,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getReceiverInfo(ComponentName, int)} instead.\n"
     },
     "getServiceInfo(android.content.ComponentName,int)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getServiceInfo(ComponentName, int)} instead.",
       "params": [
         "className",
         "flags"
@@ -470,7 +469,8 @@
       "exceptions": [
         "android.content.pm.PackageManager.NameNotFoundException"
       ],
-      "name": "getServiceInfo(android.content.ComponentName,int)"
+      "name": "getServiceInfo(android.content.ComponentName,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#getServiceInfo(ComponentName, int)} instead.\n"
     },
     "getVerificationResult(int)": {
       "isImplementation": false,
@@ -489,13 +489,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#hasSystemFeature(String)} instead.",
       "params": [
         "name"
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "hasSystemFeature(java.lang.String)"
+      "name": "hasSystemFeature(java.lang.String)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#hasSystemFeature(String)} instead.\n"
     },
     "isQueryIntentImplicitly()": {
       "isImplementation": false,
@@ -512,14 +512,14 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#queryBroadcastReceivers(Intent, int)} instead.",
       "params": [
         "intent",
         "flags"
       ],
       "returnType": "java.util.List\u003candroid.content.pm.ResolveInfo\u003e",
       "exceptions": [],
-      "name": "queryBroadcastReceivers(android.content.Intent,int)"
+      "name": "queryBroadcastReceivers(android.content.Intent,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#queryBroadcastReceivers(Intent, int)} instead.\n"
     },
     "queryBroadcastReceivers(android.content.Intent,int,int)": {
       "isImplementation": true,
@@ -554,28 +554,28 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#queryIntentActivities(Intent, int)} instead.",
       "params": [
         "intent",
         "flags"
       ],
       "returnType": "java.util.List\u003candroid.content.pm.ResolveInfo\u003e",
       "exceptions": [],
-      "name": "queryIntentActivities(android.content.Intent,int)"
+      "name": "queryIntentActivities(android.content.Intent,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#queryIntentActivities(Intent, int)} instead.\n"
     },
     "queryIntentServices(android.content.Intent,int)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#queryIntentServices(Intent, int)}  instead.",
       "params": [
         "intent",
         "flags"
       ],
       "returnType": "java.util.List\u003candroid.content.pm.ResolveInfo\u003e",
       "exceptions": [],
-      "name": "queryIntentServices(android.content.Intent,int)"
+      "name": "queryIntentServices(android.content.Intent,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#queryIntentServices(Intent, int)}  instead.\n"
     },
     "removePackage(java.lang.String)": {
       "isImplementation": false,
@@ -633,28 +633,28 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#resolveActivity(Intent, int)} instead.",
       "params": [
         "intent",
         "flags"
       ],
       "returnType": "android.content.pm.ResolveInfo",
       "exceptions": [],
-      "name": "resolveActivity(android.content.Intent,int)"
+      "name": "resolveActivity(android.content.Intent,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#resolveActivity(Intent, int)} instead.\n"
     },
     "resolveService(android.content.Intent,int)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#resolveService(Intent, int)} instead.",
       "params": [
         "intent",
         "flags"
       ],
       "returnType": "android.content.pm.ResolveInfo",
       "exceptions": [],
-      "name": "resolveService(android.content.Intent,int)"
+      "name": "resolveService(android.content.Intent,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#resolveService(Intent, int)} instead.\n"
     },
     "setApplicationIcon(java.lang.String,android.graphics.drawable.Drawable)": {
       "isImplementation": false,
@@ -674,7 +674,6 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#setComponentEnabledSetting(ComponentName, int, int)} instead.",
       "params": [
         "componentName",
         "newState",
@@ -682,7 +681,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setComponentEnabledSetting(android.content.ComponentName,int,int)"
+      "name": "setComponentEnabledSetting(android.content.ComponentName,int,int)",
+      "documentation": "@deprecated We\u0027re forced to implement this because we\u0027re implementing {@link RobolectricPackageManager} which will\nbe removed in the next release. Prefer {@link PackageManager#setComponentEnabledSetting(ComponentName, int, int)} instead.\n"
     },
     "setNameForUid(int,java.lang.String)": {
       "isImplementation": false,

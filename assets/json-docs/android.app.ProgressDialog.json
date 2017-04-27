@@ -5,22 +5,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the message displayed in the dialog",
       "params": [],
       "returnType": "java.lang.CharSequence",
       "exceptions": [],
-      "name": "getMessage()"
+      "name": "getMessage()",
+      "documentation": "Non-Android accessor.\n\n@return the message displayed in the dialog\n"
     },
     "getProgressStyle()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the style of the progress dialog",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getProgressStyle()"
+      "name": "getProgressStyle()",
+      "documentation": "Non-Android accessor.\n\n@return the style of the progress dialog\n"
     },
     "setProgressStyle(int)": {
       "isImplementation": true,
@@ -35,7 +35,6 @@
       "name": "setProgressStyle(int)"
     }
   },
-  "documentation": " Shadow for {@link android.app.ProgressDialog}.\n",
   "imports": [
     "android.app.ProgressDialog",
     "android.widget.TextView",
@@ -45,5 +44,6 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowProgressDialog"
+  "name": "org.robolectric.shadows.ShadowProgressDialog",
+  "documentation": "Shadow for {@link android.app.ProgressDialog}.\n"
 }

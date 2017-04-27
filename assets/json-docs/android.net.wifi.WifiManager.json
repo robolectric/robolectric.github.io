@@ -263,7 +263,6 @@
       "name": "wasConfigurationSaved()"
     }
   },
-  "documentation": " Shadow for {@link android.net.wifi.WifiManager}.\n",
   "imports": [
     "android.net.DhcpInfo",
     "android.net.wifi.ScanResult",
@@ -280,5 +279,6 @@
     "java.util.List",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowWifiManager"
+  "name": "org.robolectric.shadows.ShadowWifiManager",
+  "documentation": "Shadow for {@link android.net.wifi.WifiManager}.\n"
 }

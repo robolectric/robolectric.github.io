@@ -137,7 +137,6 @@
       "name": "setNdefPushMessageCallback(android.nfc.NfcAdapter.CreateNdefMessageCallback,android.app.Activity,android.app.Activity...)"
     }
   },
-  "documentation": " Shadow for {@link android.nfc.NfcAdapter}.\n",
   "imports": [
     "android.app.Activity",
     "android.app.PendingIntent",
@@ -149,5 +148,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowNfcAdapter"
+  "name": "org.robolectric.shadows.ShadowNfcAdapter",
+  "documentation": "Shadow for {@link android.nfc.NfcAdapter}.\n"
 }

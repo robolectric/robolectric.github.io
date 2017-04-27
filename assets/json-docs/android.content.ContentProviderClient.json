@@ -273,7 +273,6 @@
       "name": "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])"
     }
   },
-  "documentation": " Shadow for {@link android.content.ContentProviderClient}.\n",
   "imports": [
     "android.content.ContentProvider",
     "android.content.ContentProviderClient",
@@ -295,5 +294,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowContentProviderClient"
+  "name": "org.robolectric.shadows.ShadowContentProviderClient",
+  "documentation": "Shadow for {@link android.content.ContentProviderClient}.\n"
 }

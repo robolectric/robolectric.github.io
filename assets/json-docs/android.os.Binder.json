@@ -79,7 +79,6 @@
       "name": "transact(int,android.os.Parcel,android.os.Parcel,int)"
     }
   },
-  "documentation": " Shadow for {@link android.os.Binder}.\n",
   "imports": [
     "android.os.Binder",
     "android.os.Parcel",
@@ -89,5 +88,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter"
   ],
-  "name": "org.robolectric.shadows.ShadowBinder"
+  "name": "org.robolectric.shadows.ShadowBinder",
+  "documentation": "Shadow for {@link android.os.Binder}.\n"
 }

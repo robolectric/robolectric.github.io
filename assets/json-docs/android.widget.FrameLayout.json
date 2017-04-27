@@ -1,9 +1,9 @@
 {
   "methods": {},
-  "documentation": " Shadow for {@link android.widget.FrameLayout}.\n",
   "imports": [
     "android.widget.FrameLayout",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowFrameLayout"
+  "name": "org.robolectric.shadows.ShadowFrameLayout",
+  "documentation": "Shadow for {@link android.widget.FrameLayout}.\n"
 }

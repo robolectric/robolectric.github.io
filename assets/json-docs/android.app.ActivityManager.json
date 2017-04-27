@@ -5,11 +5,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Get the package name of the last background processes killed.",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "getBackgroundPackage()"
+      "name": "getBackgroundPackage()",
+      "documentation": "Non-Android accessor.\n\n@return Get the package name of the last background processes killed.\n"
     },
     "getDeviceConfigurationInfo()": {
       "isImplementation": true,
@@ -116,68 +116,67 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@param memoryClass Set the application\u0027s memory class.",
       "params": [
         "memoryClass"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setMemoryClass(int)"
+      "name": "setMemoryClass(int)",
+      "documentation": "Non-Android accessor.\n\n@param memoryClass Set the application\u0027s memory class.\n"
     },
     "setMemoryInfo(android.app.ActivityManager.MemoryInfo)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@param memoryInfo Set the application\u0027s memory info.",
       "params": [
         "memoryInfo"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setMemoryInfo(android.app.ActivityManager.MemoryInfo)"
+      "name": "setMemoryInfo(android.app.ActivityManager.MemoryInfo)",
+      "documentation": "Non-Android accessor.\n\n@param memoryInfo Set the application\u0027s memory info.\n"
     },
     "setProcesses(java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@param processes List of running processes.",
       "params": [
         "processes"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setProcesses(java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e)"
+      "name": "setProcesses(java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e)",
+      "documentation": "Non-Android accessor.\n\n@param processes List of running processes.\n"
     },
     "setServices(java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@param services List of running services.",
       "params": [
         "services"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setServices(java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e)"
+      "name": "setServices(java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e)",
+      "documentation": "Non-Android accessor.\n\n@param services List of running services.\n"
     },
     "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@param tasks List of running tasks.",
       "params": [
         "tasks"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)"
+      "name": "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)",
+      "documentation": "Non-Android accessor.\n\n@param tasks List of running tasks.\n"
     }
   },
-  "documentation": " Shadow for {@link android.app.ActivityManager}.\n",
   "imports": [
     "android.app.ActivityManager",
     "android.app.IActivityManager",
@@ -188,5 +187,6 @@
     "java.util.List",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowActivityManager"
+  "name": "org.robolectric.shadows.ShadowActivityManager",
+  "documentation": "Shadow for {@link android.app.ActivityManager}.\n"
 }

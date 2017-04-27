@@ -30,11 +30,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated Use {@link #getLatitudeE6()}\n\n@return The latitude.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getLat()"
+      "name": "getLat()",
+      "documentation": "@deprecated Use {@link #getLatitudeE6()}\n\n@return The latitude.\n"
     },
     "getLatitudeE6()": {
       "isImplementation": true,
@@ -51,11 +51,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated Use {@link #getLongitudeE6()}.\n\n@return The longitude.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getLng()"
+      "name": "getLng()",
+      "documentation": "@deprecated Use {@link #getLongitudeE6()}.\n\n@return The longitude.\n"
     },
     "getLongitudeE6()": {
       "isImplementation": true,
@@ -88,12 +88,12 @@
       "name": "toString()"
     }
   },
-  "documentation": " Shadow for {@link com.google.android.maps.GeoPoint}.\n",
   "imports": [
     "com.google.android.maps.GeoPoint",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.internal.ShadowExtractor"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowGeoPoint"
+  "name": "org.robolectric.shadows.maps.ShadowGeoPoint",
+  "documentation": "Shadow for {@link com.google.android.maps.GeoPoint}.\n"
 }

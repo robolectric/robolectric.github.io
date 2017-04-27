@@ -24,7 +24,6 @@
       "name": "performGlobalAction(int)"
     }
   },
-  "documentation": " Shadow of AccessibilityService that saves global actions to a list.\n",
   "imports": [
     "android.accessibilityservice.AccessibilityService",
     "org.robolectric.annotation.Implementation",
@@ -33,5 +32,6 @@
     "java.util.ArrayList",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.ShadowAccessibilityService"
+  "name": "org.robolectric.shadows.ShadowAccessibilityService",
+  "documentation": "Shadow of AccessibilityService that saves global actions to a list.\n"
 }

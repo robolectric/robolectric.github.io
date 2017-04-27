@@ -127,11 +127,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return whether to use built in zoom map controls",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "getUseBuiltInZoomMapControls()"
+      "name": "getUseBuiltInZoomMapControls()",
+      "documentation": "Non-Android accessor.\n\n@return whether to use built in zoom map controls\n"
     },
     "getZoomButtonsController()": {
       "isImplementation": true,
@@ -244,11 +244,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return whether {@link #preLoad()} has been called on this {@code MapView}",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "preLoadWasCalled()"
+      "name": "preLoadWasCalled()",
+      "documentation": "Non-Android accessor.\n\n@return whether {@link #preLoad()} has been called on this {@code MapView}\n"
     },
     "scaleDegree(int,int,int,int,int)": {
       "isImplementation": false,
@@ -299,13 +299,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor that controls the value to be returned by {@link #canCoverCenter()}\n\n@param canCoverCenter the value to be returned by {@link #canCoverCenter()}",
       "params": [
         "canCoverCenter"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setCanCoverCenter(boolean)"
+      "name": "setCanCoverCenter(boolean)",
+      "documentation": "Non-Android accessor that controls the value to be returned by {@link #canCoverCenter()}\n\n@param canCoverCenter the value to be returned by {@link #canCoverCenter()}\n"
     },
     "setContextOnRealView(android.content.Context)": {
       "isImplementation": false,
@@ -324,26 +324,26 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor to set the latitude span (the absolute value of the difference between the Northernmost and\nSouthernmost latitudes visible on the map) of this {@code MapView}\n\n@param latitudeSpan the new latitude span for this {@code MapView}",
       "params": [
         "latitudeSpan"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setLatitudeSpan(int)"
+      "name": "setLatitudeSpan(int)",
+      "documentation": "Non-Android accessor to set the latitude span (the absolute value of the difference between the Northernmost and\nSouthernmost latitudes visible on the map) of this {@code MapView}\n\n@param latitudeSpan the new latitude span for this {@code MapView}\n"
     },
     "setLongitudeSpan(int)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor to set the longitude span (the absolute value of the difference between the Easternmost and\nWesternmost longitude visible on the map) of this {@code MapView}\n\n@param longitudeSpan the new latitude span for this {@code MapView}",
       "params": [
         "longitudeSpan"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setLongitudeSpan(int)"
+      "name": "setLongitudeSpan(int)",
+      "documentation": "Non-Android accessor to set the longitude span (the absolute value of the difference between the Easternmost and\nWesternmost longitude visible on the map) of this {@code MapView}\n\n@param longitudeSpan the new latitude span for this {@code MapView}\n"
     },
     "setSatellite(boolean)": {
       "isImplementation": true,
@@ -371,7 +371,6 @@
       "name": "toE6(double)"
     }
   },
-  "documentation": " Shadow for {@link com.google.android.maps.MapView}.\n",
   "imports": [
     "android.content.Context",
     "android.graphics.Point",
@@ -398,5 +397,6 @@
     "org.robolectric.shadows.maps.Shadows.shadowOf",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowMapView"
+  "name": "org.robolectric.shadows.maps.ShadowMapView",
+  "documentation": "Shadow for {@link com.google.android.maps.MapView}.\n"
 }

@@ -11,11 +11,11 @@
       "name": "getRouteCount()"
     }
   },
-  "documentation": " Shadow for {@link android.media.MediaRouter}.\n",
   "imports": [
     "android.media.MediaRouter",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowMediaRouter"
+  "name": "org.robolectric.shadows.ShadowMediaRouter",
+  "documentation": "Shadow for {@link android.media.MediaRouter}.\n"
 }

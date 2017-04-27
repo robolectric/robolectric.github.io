@@ -5,11 +5,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return OnRefreshListener that was previously set.",
       "params": [],
       "returnType": "android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener",
       "exceptions": [],
-      "name": "getOnRefreshListener()"
+      "name": "getOnRefreshListener()",
+      "documentation": "Non-Android accessor.\n\n@return OnRefreshListener that was previously set.\n"
     },
     "setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener)": {
       "isImplementation": true,
@@ -24,7 +24,6 @@
       "name": "setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener)"
     }
   },
-  "documentation": " Shadow for {@link android.support.v4.widget.SwipeRefreshLayout}\n",
   "imports": [
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.annotation.RealObject",
@@ -34,5 +33,6 @@
     "android.support.v4.widget.SwipeRefreshLayout",
     "android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener"
   ],
-  "name": "org.robolectric.shadows.support.v4.ShadowSwipeRefreshLayout"
+  "name": "org.robolectric.shadows.support.v4.ShadowSwipeRefreshLayout",
+  "documentation": "Shadow for {@link android.support.v4.widget.SwipeRefreshLayout}\n"
 }

@@ -266,7 +266,6 @@
       "name": "setWiredHeadsetOn(boolean)"
     }
   },
-  "documentation": " Shadow for {@link android.media.AudioManager}.\n",
   "imports": [
     "android.media.AudioManager",
     "org.robolectric.annotation.Implementation",
@@ -275,5 +274,6 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowAudioManager"
+  "name": "org.robolectric.shadows.ShadowAudioManager",
+  "documentation": "Shadow for {@link android.media.AudioManager}.\n"
 }

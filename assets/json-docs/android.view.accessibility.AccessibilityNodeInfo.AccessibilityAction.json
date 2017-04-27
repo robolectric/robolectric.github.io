@@ -56,7 +56,6 @@
       "name": "toString()"
     }
   },
-  "documentation": " Shadow of AccessibilityAction.\n",
   "imports": [
     "android.graphics.Rect",
     "android.os.Bundle",
@@ -93,5 +92,6 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo.ShadowAccessibilityAction"
+  "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo.ShadowAccessibilityAction",
+  "documentation": "Shadow of AccessibilityAction.\n"
 }

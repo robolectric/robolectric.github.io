@@ -544,7 +544,6 @@
       "name": "setData(long,com.almworks.sqlite4java.SQLiteStatement)"
     }
   },
-  "documentation": " Shadow for {@link android.database.CursorWindow}.\n",
   "imports": [
     "java.util.concurrent.atomic.AtomicLong",
     "android.database.Cursor",
@@ -562,5 +561,6 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.castNativePtr"
   ],
-  "name": "org.robolectric.shadows.ShadowCursorWindow"
+  "name": "org.robolectric.shadows.ShadowCursorWindow",
+  "documentation": "Shadow for {@link android.database.CursorWindow}.\n"
 }

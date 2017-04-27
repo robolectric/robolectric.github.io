@@ -30,22 +30,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor that returns the most recent value set by a call to either version of {@code animateTo()}\n\n@return the most recent value set by a call to either version of {@code animateTo()}",
       "params": [],
       "returnType": "com.google.android.maps.GeoPoint",
       "exceptions": [],
-      "name": "getGeoPointAnimatedTo()"
+      "name": "getGeoPointAnimatedTo()",
+      "documentation": "Non-Android accessor that returns the most recent value set by a call to either version of {@code animateTo()}\n\n@return the most recent value set by a call to either version of {@code animateTo()}\n"
     },
     "getShadowMapView()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor that returns the {@code MapView} that is being controlled\n\n@return the {@code MapView} that is being controlled",
       "params": [],
       "returnType": "org.robolectric.shadows.maps.ShadowMapView",
       "exceptions": [],
-      "name": "getShadowMapView()"
+      "name": "getShadowMapView()",
+      "documentation": "Non-Android accessor that returns the {@code MapView} that is being controlled\n\n@return the {@code MapView} that is being controlled\n"
     },
     "setCenter(com.google.android.maps.GeoPoint)": {
       "isImplementation": true,
@@ -62,13 +62,13 @@
     "setShadowMapView(org.robolectric.shadows.maps.ShadowMapView)": {
       "isImplementation": false,
       "modifiers": [],
-      "documentation": "Non-Android accessor that allows the {@code MapView} being controlled to be set explicitly.\n\n@param shadowMapView the {@link ShadowMapView} to be controlled (either created explicitly or obtained via a call\n                     to {@link org.robolectric.RobolectricForMaps.shadowOf(com.google.android.maps.MapView)})",
       "params": [
         "shadowMapView"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setShadowMapView(org.robolectric.shadows.maps.ShadowMapView)"
+      "name": "setShadowMapView(org.robolectric.shadows.maps.ShadowMapView)",
+      "documentation": "Non-Android accessor that allows the {@code MapView} being controlled to be set explicitly.\n\n@param shadowMapView the {@link ShadowMapView} to be controlled (either created explicitly or obtained via a call\n                     to {@link org.robolectric.RobolectricForMaps.shadowOf(com.google.android.maps.MapView)})\n"
     },
     "setZoom(int)": {
       "isImplementation": true,
@@ -116,12 +116,12 @@
       "name": "zoomToSpan(int,int)"
     }
   },
-  "documentation": " Shadow for {@link com.google.android.maps.MapController}.\n",
   "imports": [
     "com.google.android.maps.GeoPoint",
     "com.google.android.maps.MapController",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowMapController"
+  "name": "org.robolectric.shadows.maps.ShadowMapController",
+  "documentation": "Shadow for {@link com.google.android.maps.MapController}.\n"
 }

@@ -483,7 +483,6 @@
       "name": "unregisterDataSetObserver(android.database.DataSetObserver)"
     }
   },
-  "documentation": " Shadow for {@link android.database.CursorWrapper}.\n",
   "imports": [
     "android.content.ContentResolver",
     "android.database.CharArrayBuffer",
@@ -499,5 +498,6 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowCursorWrapper"
+  "name": "org.robolectric.shadows.ShadowCursorWrapper",
+  "documentation": "Shadow for {@link android.database.CursorWrapper}.\n"
 }

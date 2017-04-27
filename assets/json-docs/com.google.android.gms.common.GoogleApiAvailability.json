@@ -126,7 +126,6 @@
       "name": "setOpenSourceSoftwareLicenseInfo(java.lang.String)"
     }
   },
-  "documentation": " Shadow for {@link GoogleApiAvailability}.\n",
   "imports": [
     "android.app.Activity",
     "android.app.Dialog",
@@ -138,5 +137,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.gms.common.ShadowGoogleApiAvailability"
+  "name": "org.robolectric.shadows.gms.common.ShadowGoogleApiAvailability",
+  "documentation": "Shadow for {@link GoogleApiAvailability}.\n"
 }

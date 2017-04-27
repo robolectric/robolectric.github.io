@@ -133,7 +133,6 @@
       "name": "setWrapSelectorWheel(boolean)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.NumberPicker}.\n",
   "imports": [
     "android.widget.NumberPicker",
     "org.robolectric.annotation.Implementation",
@@ -141,5 +140,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowNumberPicker"
+  "name": "org.robolectric.shadows.ShadowNumberPicker",
+  "documentation": "Shadow for {@link android.widget.NumberPicker}.\n"
 }

@@ -23,7 +23,6 @@
       "name": "onForceLoad()"
     }
   },
-  "documentation": " Shadow for {@link android.content.AsyncTaskLoader}\n\n @param \u003cD\u003e Return data type.\n",
   "imports": [
     "android.content.Context",
     "android.content.AsyncTaskLoader",
@@ -33,5 +32,6 @@
     "org.robolectric.annotation.Implementation",
     "java.util.concurrent.Callable"
   ],
-  "name": "org.robolectric.shadows.ShadowAsyncTaskLoader"
+  "name": "org.robolectric.shadows.ShadowAsyncTaskLoader",
+  "documentation": "Shadow for {@link android.content.AsyncTaskLoader}\n\n@param \u003cD\u003e Return data type.\n"
 }

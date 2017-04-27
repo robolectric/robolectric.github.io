@@ -53,7 +53,6 @@
       "name": "showPrevious()"
     }
   },
-  "documentation": " Shadow for {@link android.widget.ViewAnimator}.\n",
   "imports": [
     "android.view.View",
     "android.view.ViewGroup",
@@ -61,5 +60,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowViewAnimator"
+  "name": "org.robolectric.shadows.ShadowViewAnimator",
+  "documentation": "Shadow for {@link android.widget.ViewAnimator}.\n"
 }

@@ -5,14 +5,14 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Provide a Sensor for the indicated sensor type.\n@param sensorType from Sensor constants\n@param sensor Sensor instance",
       "params": [
         "sensorType",
         "sensor"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addSensor(int,android.hardware.Sensor)"
+      "name": "addSensor(int,android.hardware.Sensor)",
+      "documentation": "Provide a Sensor for the indicated sensor type.\n@param sensorType from Sensor constants\n@param sensor Sensor instance\n"
     },
     "createSensorEvent()": {
       "isImplementation": false,
@@ -88,7 +88,6 @@
       "name": "unregisterListener(android.hardware.SensorEventListener,android.hardware.Sensor)"
     }
   },
-  "documentation": " Shadow for {@link android.hardware.SensorManager}.\n",
   "imports": [
     "android.hardware.Sensor",
     "android.hardware.SensorEvent",
@@ -101,5 +100,6 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowSensorManager"
+  "name": "org.robolectric.shadows.ShadowSensorManager",
+  "documentation": "Shadow for {@link android.hardware.SensorManager}.\n"
 }

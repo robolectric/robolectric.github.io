@@ -62,7 +62,6 @@
       "name": "schedule(android.app.job.JobInfo)"
     }
   },
-  "documentation": " Shadow for {@link android.app.job.JobScheduler}.\n",
   "imports": [
     "android.app.JobSchedulerImpl",
     "android.app.job.JobInfo",
@@ -77,5 +76,6 @@
     "java.util.Set",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowJobScheduler"
+  "name": "org.robolectric.shadows.ShadowJobScheduler",
+  "documentation": "Shadow for {@link android.app.job.JobScheduler}.\n"
 }

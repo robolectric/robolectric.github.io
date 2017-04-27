@@ -23,7 +23,6 @@
       "name": "setIntentRedelivery(boolean)"
     }
   },
-  "documentation": " Shadow for {@link android.app.IntentService}.\n",
   "imports": [
     "android.app.IntentService",
     "org.robolectric.annotation.Implementation",
@@ -32,5 +31,6 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowIntentService"
+  "name": "org.robolectric.shadows.ShadowIntentService",
+  "documentation": "Shadow for {@link android.app.IntentService}.\n"
 }

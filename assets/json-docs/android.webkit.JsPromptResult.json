@@ -12,11 +12,11 @@
       "name": "newInstance()"
     }
   },
-  "documentation": " Shadow for {@link android.webkit.JsPromptResult}.\n",
   "imports": [
     "android.webkit.JsPromptResult",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow.newInstanceOf"
   ],
-  "name": "org.robolectric.shadows.ShadowJsPromptResult"
+  "name": "org.robolectric.shadows.ShadowJsPromptResult",
+  "documentation": "Shadow for {@link android.webkit.JsPromptResult}.\n"
 }

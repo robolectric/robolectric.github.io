@@ -77,7 +77,6 @@
       "name": "show()"
     }
   },
-  "documentation": " Shadow for {@link android.widget.PopupMenu}.\n",
   "imports": [
     "android.widget.PopupMenu",
     "org.robolectric.RuntimeEnvironment",
@@ -87,5 +86,6 @@
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowPopupMenu"
+  "name": "org.robolectric.shadows.ShadowPopupMenu",
+  "documentation": "Shadow for {@link android.widget.PopupMenu}.\n"
 }

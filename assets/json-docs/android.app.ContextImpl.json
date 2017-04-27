@@ -386,7 +386,6 @@
       "name": "unregisterReceiver(android.content.BroadcastReceiver)"
     }
   },
-  "documentation": " Shadow for {@code android.content.ContextImpl}.\n",
   "imports": [
     "android.accounts.IAccountManager",
     "android.app.admin.IDevicePolicyManager",
@@ -422,5 +421,6 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadow.api.Shadow.newInstanceOf"
   ],
-  "name": "org.robolectric.shadows.ShadowContextImpl"
+  "name": "org.robolectric.shadows.ShadowContextImpl",
+  "documentation": "Shadow for {@code android.content.ContextImpl}.\n"
 }

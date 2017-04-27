@@ -6,14 +6,14 @@
         "public",
         "static"
       ],
-      "documentation": "Configures an exception to be thrown when {@link #setDataSource}\nis called for the given data source.\n\n@param ds the data source that will trigger an exception\n@param e the exception to trigger, or \u003ctt\u003enull\u003c/tt\u003e to\navoid throwing an exception.",
       "params": [
         "ds",
         "e"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addException(org.robolectric.shadows.util.DataSource,java.lang.RuntimeException)"
+      "name": "addException(org.robolectric.shadows.util.DataSource,java.lang.RuntimeException)",
+      "documentation": "Configures an exception to be thrown when {@link #setDataSource}\nis called for the given data source.\n\n@param ds the data source that will trigger an exception\n@param e the exception to trigger, or \u003ctt\u003enull\u003c/tt\u003e to\navoid throwing an exception.\n"
     },
     "addFrame(android.content.Context,android.net.Uri,long,android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -21,7 +21,6 @@
         "public",
         "static"
       ],
-      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(Context, Uri)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param context the Context object to match on the data source.\n@param uri the Uri of the data source.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.",
       "params": [
         "context",
         "uri",
@@ -30,7 +29,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addFrame(android.content.Context,android.net.Uri,long,android.graphics.Bitmap)"
+      "name": "addFrame(android.content.Context,android.net.Uri,long,android.graphics.Bitmap)",
+      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(Context, Uri)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param context the Context object to match on the data source.\n@param uri the Uri of the data source.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.\n"
     },
     "addFrame(java.io.FileDescriptor,long,android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -38,7 +38,6 @@
         "public",
         "static"
       ],
-      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(FileDescriptor)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param fd file descriptor of the data source.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.",
       "params": [
         "fd",
         "time",
@@ -46,7 +45,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addFrame(java.io.FileDescriptor,long,android.graphics.Bitmap)"
+      "name": "addFrame(java.io.FileDescriptor,long,android.graphics.Bitmap)",
+      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(FileDescriptor)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param fd file descriptor of the data source.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.\n"
     },
     "addFrame(java.io.FileDescriptor,long,long,long,android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -54,7 +54,6 @@
         "public",
         "static"
       ],
-      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(FileDescriptor, long, long)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param fd file descriptor of the data source.\n@param offset the byte offset within the specified file from which to start reading the data.\n@param length the number of bytes to read from the file.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.",
       "params": [
         "fd",
         "offset",
@@ -64,7 +63,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addFrame(java.io.FileDescriptor,long,long,long,android.graphics.Bitmap)"
+      "name": "addFrame(java.io.FileDescriptor,long,long,long,android.graphics.Bitmap)",
+      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(FileDescriptor, long, long)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param fd file descriptor of the data source.\n@param offset the byte offset within the specified file from which to start reading the data.\n@param length the number of bytes to read from the file.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.\n"
     },
     "addFrame(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e,long,android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -72,7 +72,6 @@
         "public",
         "static"
       ],
-      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(String, Map)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param uri the Uri of the data source.\n@param headers the headers to use when requesting the specified uri.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.",
       "params": [
         "uri",
         "headers",
@@ -81,7 +80,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addFrame(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e,long,android.graphics.Bitmap)"
+      "name": "addFrame(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e,long,android.graphics.Bitmap)",
+      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(String, Map)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param uri the Uri of the data source.\n@param headers the headers to use when requesting the specified uri.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.\n"
     },
     "addFrame(java.lang.String,long,android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -89,7 +89,6 @@
         "public",
         "static"
       ],
-      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(String)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param path the path to the data source.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.",
       "params": [
         "path",
         "time",
@@ -97,7 +96,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addFrame(java.lang.String,long,android.graphics.Bitmap)"
+      "name": "addFrame(java.lang.String,long,android.graphics.Bitmap)",
+      "documentation": "Adds the given bitmap at the given time for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(String)} and\nthen calls {@link #addFrame(DataSource, long, Bitmap)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addFrame(DataSource, long, Bitmap)} directly.\n\n@param path the path to the data source.\n@param time the playback time at which the specified bitmap\nshould be retrieved.\n@param bitmap the bitmap to retrieve.\n"
     },
     "addFrame(org.robolectric.shadows.util.DataSource,long,android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -120,7 +120,6 @@
         "public",
         "static"
       ],
-      "documentation": "Adds the given keyCode/value pair for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(String)} and\nthen calls {@link #addMetadata(DataSource, int, String)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addMetadata(DataSource, int, String)} directly.\n\n@param path the path to the data source whose metadata is being set.\n@param keyCode the keyCode for the metadata being set, as used by {@link MediaMetadataRetriever#extractMetadata(int)}.\n@param value the value for the specified metadata.",
       "params": [
         "path",
         "keyCode",
@@ -128,7 +127,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addMetadata(java.lang.String,int,java.lang.String)"
+      "name": "addMetadata(java.lang.String,int,java.lang.String)",
+      "documentation": "Adds the given keyCode/value pair for the given data source.\nUses \u003ctt\u003epath\u003c/tt\u003e to call {@link org.robolectric.shadows.util.DataSource#toDataSource(String)} and\nthen calls {@link #addMetadata(DataSource, int, String)}. This\nmethod is retained mostly for backwards compatibility;\nyou can call {@link #addMetadata(DataSource, int, String)} directly.\n\n@param path the path to the data source whose metadata is being set.\n@param keyCode the keyCode for the metadata being set, as used by {@link MediaMetadataRetriever#extractMetadata(int)}.\n@param value the value for the specified metadata.\n"
     },
     "addMetadata(org.robolectric.shadows.util.DataSource,int,java.lang.String)": {
       "isImplementation": false,
@@ -246,7 +246,6 @@
       "name": "setDataSource(org.robolectric.shadows.util.DataSource)"
     }
   },
-  "documentation": " Shadow for {@link android.media.MediaMetadataRetriever}.\n",
   "imports": [
     "android.content.Context",
     "android.graphics.Bitmap",
@@ -261,5 +260,6 @@
     "org.robolectric.shadows.util.DataSource",
     "org.robolectric.shadows.util.DataSource.toDataSource"
   ],
-  "name": "org.robolectric.shadows.ShadowMediaMetadataRetriever"
+  "name": "org.robolectric.shadows.ShadowMediaMetadataRetriever",
+  "documentation": "Shadow for {@link android.media.MediaMetadataRetriever}.\n"
 }

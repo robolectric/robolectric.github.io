@@ -1,6 +1,5 @@
 {
   "methods": {},
-  "documentation": " Shadow for {@code android.app.AlertDialog.Builder}.\n",
   "imports": [
     "android.app.AlertDialog",
     "android.content.DialogInterface",
@@ -17,5 +16,6 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowAlertDialog.ShadowBuilder"
+  "name": "org.robolectric.shadows.ShadowAlertDialog.ShadowBuilder",
+  "documentation": "Shadow for {@code android.app.AlertDialog.Builder}.\n"
 }

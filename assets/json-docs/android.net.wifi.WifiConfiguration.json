@@ -21,12 +21,12 @@
       "name": "copy()"
     }
   },
-  "documentation": " Shadow for {@link android.net.wifi.WifiConfiguration}.\n",
   "imports": [
     "android.net.wifi.WifiConfiguration",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "java.util.BitSet"
   ],
-  "name": "org.robolectric.shadows.ShadowWifiConfiguration"
+  "name": "org.robolectric.shadows.ShadowWifiConfiguration",
+  "documentation": "Shadow for {@link android.net.wifi.WifiConfiguration}.\n"
 }

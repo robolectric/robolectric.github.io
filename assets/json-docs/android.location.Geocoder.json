@@ -98,13 +98,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Sets a flag to indicate whether or not {@link #getFromLocationName(String, int)} should throw an exception to\nsimulate a failure.\n\n@param shouldSimulateException whether or not an exception should be thrown from {@link #getFromLocationName(String, int)}",
       "params": [
         "shouldSimulateException"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setShouldSimulateGeocodeException(boolean)"
+      "name": "setShouldSimulateGeocodeException(boolean)",
+      "documentation": "Sets a flag to indicate whether or not {@link #getFromLocationName(String, int)} should throw an exception to\nsimulate a failure.\n\n@param shouldSimulateException whether or not an exception should be thrown from {@link #getFromLocationName(String, int)}\n"
     },
     "setSimulatedHasLatLong(boolean,boolean)": {
       "isImplementation": false,
@@ -124,21 +124,20 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Sets up a simulated response for {@link #getFromLocationName(String, int)}}\n\n@param lat latitude for simulated response\n@param lng longitude for simulated response",
       "params": [
         "lat",
         "lng"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setSimulatedLatLong(double,double)"
+      "name": "setSimulatedLatLong(double,double)",
+      "documentation": "Sets up a simulated response for {@link #getFromLocationName(String, int)}}\n\n@param lat latitude for simulated response\n@param lng longitude for simulated response\n"
     },
     "setSimulatedResponse(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Sets up a simulated response for {@link #getFromLocation(double, double, int)}\n\n@param address     the address for the response\n@param city        the city for the response\n@param state       the state for the response\n@param zip         the zip code for the response\n@param countryCode the country code for the response",
       "params": [
         "address",
         "city",
@@ -148,21 +147,21 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setSimulatedResponse(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+      "name": "setSimulatedResponse(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)",
+      "documentation": "Sets up a simulated response for {@link #getFromLocation(double, double, int)}\n\n@param address     the address for the response\n@param city        the city for the response\n@param state       the state for the response\n@param zip         the zip code for the response\n@param countryCode the country code for the response\n"
     },
     "wasGetFromLocationCalled()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor that indicates whether {@link #getFromLocation(double, double, int)} was called.\n\n@return whether {@link #getFromLocation(double, double, int)} was called.",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "wasGetFromLocationCalled()"
+      "name": "wasGetFromLocationCalled()",
+      "documentation": "Non-Android accessor that indicates whether {@link #getFromLocation(double, double, int)} was called.\n\n@return whether {@link #getFromLocation(double, double, int)} was called.\n"
     }
   },
-  "documentation": " Shadow for {@link android.location.Geocoder}.\n",
   "imports": [
     "android.location.Address",
     "android.location.Geocoder",
@@ -176,5 +175,6 @@
     "java.util.List",
     "java.util.Locale"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowGeocoder"
+  "name": "org.robolectric.shadows.maps.ShadowGeocoder",
+  "documentation": "Shadow for {@link android.location.Geocoder}.\n"
 }

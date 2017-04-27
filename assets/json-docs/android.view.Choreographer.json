@@ -6,11 +6,11 @@
         "public",
         "static"
       ],
-      "documentation": "Return the current inter-frame interval.\n\n@return  Inter-frame interval.",
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "name": "getFrameInterval()"
+      "name": "getFrameInterval()",
+      "documentation": "Return the current inter-frame interval.\n\n@return  Inter-frame interval.\n"
     },
     "getFrameTimeNanos()": {
       "isImplementation": true,
@@ -116,16 +116,15 @@
         "public",
         "static"
       ],
-      "documentation": "Set the inter-frame interval used to advance the clock. By default, this is set to 1ms.\n\n@param frameInterval  Inter-frame interval.",
       "params": [
         "frameInterval"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setFrameInterval(long)"
+      "name": "setFrameInterval(long)",
+      "documentation": "Set the inter-frame interval used to advance the clock. By default, this is set to 1ms.\n\n@param frameInterval  Inter-frame interval.\n"
     }
   },
-  "documentation": " Shadow for {@link android.view.Choreographer}.\n\n This class maintains its own concept of the current time aimed at making animations\n work correctly. Time starts out at 0 and advances by \"frameInterval\" every time\n {@link android.view.Choreographer#getFrameTimeNanos} is called.\n",
   "imports": [
     "android.os.Handler",
     "android.os.Looper",
@@ -138,5 +137,6 @@
     "org.robolectric.util.SoftThreadLocal",
     "org.robolectric.util.TimeUtils"
   ],
-  "name": "org.robolectric.shadows.ShadowChoreographer"
+  "name": "org.robolectric.shadows.ShadowChoreographer",
+  "documentation": "Shadow for {@link android.view.Choreographer}.\n\n\u003cp\u003eThis class maintains its own concept of the current time aimed at making animations\nwork correctly. Time starts out at 0 and advances by \"frameInterval\" every time\n{@link android.view.Choreographer#getFrameTimeNanos} is called.\u003c/p\u003e\n"
 }

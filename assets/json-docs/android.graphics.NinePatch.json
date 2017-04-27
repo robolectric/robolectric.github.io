@@ -14,11 +14,11 @@
       "name": "isNinePatchChunk(byte[])"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.NinePatch}.\n",
   "imports": [
     "android.graphics.NinePatch",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowNinePatch"
+  "name": "org.robolectric.shadows.ShadowNinePatch",
+  "documentation": "Shadow for {@link android.graphics.NinePatch}.\n"
 }

@@ -301,7 +301,6 @@
       "name": "setSource(int)"
     }
   },
-  "documentation": " Shadow for {@link android.view.MotionEvent}.\n",
   "imports": [
     "android.view.MotionEvent",
     "org.robolectric.Shadows",
@@ -310,5 +309,6 @@
     "org.robolectric.annotation.RealObject",
     "java.lang.reflect.Constructor"
   ],
-  "name": "org.robolectric.shadows.ShadowMotionEvent"
+  "name": "org.robolectric.shadows.ShadowMotionEvent",
+  "documentation": "Shadow for {@link android.view.MotionEvent}.\n"
 }

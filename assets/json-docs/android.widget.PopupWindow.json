@@ -13,7 +13,6 @@
       "name": "invokePopup(android.view.WindowManager.LayoutParams)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.PopupWindow}.\n",
   "imports": [
     "android.view.WindowManager",
     "android.widget.PopupWindow",
@@ -23,5 +22,6 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowPopupWindow"
+  "name": "org.robolectric.shadows.ShadowPopupWindow",
+  "documentation": "Shadow for {@link android.widget.PopupWindow}.\n"
 }

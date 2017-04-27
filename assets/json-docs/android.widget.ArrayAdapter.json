@@ -21,12 +21,12 @@
       "name": "getTextViewResourceId()"
     }
   },
-  "documentation": " Shadow for {@link android.widget.ArrayAdapter}.\n",
   "imports": [
     "android.widget.ArrayAdapter",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowArrayAdapter"
+  "name": "org.robolectric.shadows.ShadowArrayAdapter",
+  "documentation": "Shadow for {@link android.widget.ArrayAdapter}.\n"
 }

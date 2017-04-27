@@ -180,7 +180,6 @@
       "name": "newInstance(java.lang.String,android.content.Context)"
     }
   },
-  "documentation": " Shadow for {@link android.net.http.AndroidHttpClient}.\n",
   "imports": [
     "android.content.Context",
     "android.net.http.AndroidHttpClient",
@@ -201,5 +200,6 @@
     "org.robolectric.util.ReflectionHelpers",
     "java.io.IOException"
   ],
-  "name": "org.robolectric.shadows.ShadowAndroidHttpClient"
+  "name": "org.robolectric.shadows.ShadowAndroidHttpClient",
+  "documentation": "Shadow for {@link android.net.http.AndroidHttpClient}.\n"
 }

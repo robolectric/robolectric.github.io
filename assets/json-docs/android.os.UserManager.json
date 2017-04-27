@@ -93,13 +93,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Setter for {@link UserManager#isUserUnlocked()}",
       "params": [
         "userUnlocked"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setUserUnlocked(boolean)"
+      "name": "setUserUnlocked(boolean)",
+      "documentation": "Setter for {@link UserManager#isUserUnlocked()}\n"
     }
   },
   "imports": [

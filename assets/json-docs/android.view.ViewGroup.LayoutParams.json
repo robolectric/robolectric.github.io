@@ -26,7 +26,6 @@
       "name": "__constructor__(int,int)"
     }
   },
-  "documentation": " Shadow for {@link android.view.ViewGroup.LayoutParams}.\n",
   "imports": [
     "android.os.Looper",
     "android.view.MotionEvent",
@@ -42,5 +41,6 @@
     "java.io.PrintStream",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowLayoutParams"
+  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowLayoutParams",
+  "documentation": "Shadow for {@link android.view.ViewGroup.LayoutParams}.\n"
 }

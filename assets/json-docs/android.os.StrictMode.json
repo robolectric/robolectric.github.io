@@ -14,11 +14,11 @@
       "name": "setVmPolicy(android.os.StrictMode.VmPolicy)"
     }
   },
-  "documentation": " Shadow for {@link android.os.StrictMode}.\n",
   "imports": [
     "android.os.StrictMode",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowStrictMode"
+  "name": "org.robolectric.shadows.ShadowStrictMode",
+  "documentation": "Shadow for {@link android.os.StrictMode}.\n"
 }

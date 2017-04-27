@@ -66,11 +66,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor that indicates whether {@link #setLastFocusedIndex(int)} has been called with a value other\nthan -1.\n\n@return whether {@link #setLastFocusedIndex(int)} has been called with a value other\n        than -1",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "lastFocusedIndexWasReset()"
+      "name": "lastFocusedIndexWasReset()",
+      "documentation": "Non-Android accessor that indicates whether {@link #setLastFocusedIndex(int)} has been called with a value other\nthan -1.\n\n@return whether {@link #setLastFocusedIndex(int)} has been called with a value other\n        than -1\n"
     },
     "populate()": {
       "isImplementation": true,
@@ -112,16 +112,15 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Sets up the return value for\n{@link #hitTest(com.google.android.maps.OverlayItem, android.graphics.drawable.Drawable, int, int)}\n\n@param shouldHit the value that\n                 {@link #hitTest(com.google.android.maps.OverlayItem, android.graphics.drawable.Drawable, int, int)}\n                 should return",
       "params": [
         "shouldHit"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setShouldHit(boolean)"
+      "name": "setShouldHit(boolean)",
+      "documentation": "Sets up the return value for\n{@link #hitTest(com.google.android.maps.OverlayItem, android.graphics.drawable.Drawable, int, int)}\n\n@param shouldHit the value that\n                 {@link #hitTest(com.google.android.maps.OverlayItem, android.graphics.drawable.Drawable, int, int)}\n                 should return\n"
     }
   },
-  "documentation": " Shadow for {@link com.google.android.maps.ItemizedOverlay}.\n",
   "imports": [
     "android.graphics.drawable.Drawable",
     "com.google.android.maps.ItemizedOverlay",
@@ -132,5 +131,6 @@
     "org.robolectric.annotation.RealObject",
     "java.util.ArrayList"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowItemizedOverlay"
+  "name": "org.robolectric.shadows.maps.ShadowItemizedOverlay",
+  "documentation": "Shadow for {@link com.google.android.maps.ItemizedOverlay}.\n"
 }

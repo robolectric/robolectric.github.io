@@ -327,7 +327,6 @@
       "name": "toMillis(boolean)"
     }
   },
-  "documentation": " Shadow for {@link android.text.format.Time}.\n",
   "imports": [
     "android.os.Build",
     "android.text.format.Time",
@@ -346,5 +345,6 @@
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
   ],
-  "name": "org.robolectric.shadows.ShadowTime"
+  "name": "org.robolectric.shadows.ShadowTime",
+  "documentation": "Shadow for {@link android.text.format.Time}.\n"
 }

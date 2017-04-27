@@ -71,7 +71,6 @@
       "name": "unregisterReceiver(android.content.BroadcastReceiver)"
     }
   },
-  "documentation": " Shadow for {@link android.support.v4.content.LocalBroadcastManager}.\n",
   "imports": [
     "android.content.BroadcastReceiver",
     "android.content.Context",
@@ -90,5 +89,6 @@
     "java.util.Iterator",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager"
+  "name": "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager",
+  "documentation": "Shadow for {@link android.support.v4.content.LocalBroadcastManager}.\n"
 }

@@ -16,7 +16,6 @@
       "name": "setMargins(int,int,int,int)"
     }
   },
-  "documentation": " Shadow for {@link android.view.ViewGroup.MarginLayoutParams}.\n",
   "imports": [
     "android.os.Looper",
     "android.view.MotionEvent",
@@ -32,5 +31,6 @@
     "java.io.PrintStream",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowMarginLayoutParams"
+  "name": "org.robolectric.shadows.ShadowViewGroup.ShadowMarginLayoutParams",
+  "documentation": "Shadow for {@link android.view.ViewGroup.MarginLayoutParams}.\n"
 }

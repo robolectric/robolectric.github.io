@@ -30,27 +30,27 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-android accessor.\n\n@param account User account.",
       "params": [
         "account"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addAccount(android.accounts.Account)"
+      "name": "addAccount(android.accounts.Account)",
+      "documentation": "Non-android accessor.\n\n@param account User account.\n"
     },
     "addAccount(android.accounts.Account,java.lang.String...)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-android accessor.\n\nAdds an account to the AccountManager but when {@link AccountManager#getAccountsByTypeForPackage(String, String)}\nis called will be included if is in one of the #visibileToPackages\n\n@param account User account.",
       "params": [
         "account",
         "visibileToPackages"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addAccount(android.accounts.Account,java.lang.String...)"
+      "name": "addAccount(android.accounts.Account,java.lang.String...)",
+      "documentation": "Non-android accessor.\n\nAdds an account to the AccountManager but when {@link AccountManager#getAccountsByTypeForPackage(String, String)}\nis called will be included if is in one of the #visibileToPackages\n\n@param account User account.\n"
     },
     "addAccount(java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)": {
       "isImplementation": true,
@@ -89,13 +89,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-android accessor.\n\n@param authenticator System authenticator.",
       "params": [
         "authenticator"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addAuthenticator(android.accounts.AuthenticatorDescription)"
+      "name": "addAuthenticator(android.accounts.AuthenticatorDescription)",
+      "documentation": "Non-android accessor.\n\n@param authenticator System authenticator.\n"
     },
     "addAuthenticator(java.lang.String)": {
       "isImplementation": false,
@@ -143,13 +143,13 @@
         "public",
         "static"
       ],
-      "documentation": "@deprecated This method will be removed in Robolectric 3.4 Use {@link AccountManager#get(Context)} instead.",
       "params": [
         "context"
       ],
       "returnType": "android.accounts.AccountManager",
       "exceptions": [],
-      "name": "get(android.content.Context)"
+      "name": "get(android.content.Context)",
+      "documentation": "@deprecated This method will be removed in Robolectric 3.4 Use {@link AccountManager#get(Context)} instead.\n"
     },
     "getAccounts()": {
       "isImplementation": true,
@@ -234,11 +234,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor consumes and returns the next {@code addAccountOptions} passed to addAccount.\n\n@return the next {@code addAccountOptions}",
       "params": [],
       "returnType": "android.os.Bundle",
       "exceptions": [],
-      "name": "getNextAddAccountOptions()"
+      "name": "getNextAddAccountOptions()",
+      "documentation": "Non-Android accessor consumes and returns the next {@code addAccountOptions} passed to addAccount.\n\n@return the next {@code addAccountOptions}\n"
     },
     "getPassword(android.accounts.Account)": {
       "isImplementation": true,
@@ -334,18 +334,17 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor returns the next {@code addAccountOptions} passed to addAccount without consuming it.\n\n@return the next {@code addAccountOptions}",
       "params": [],
       "returnType": "android.os.Bundle",
       "exceptions": [],
-      "name": "peekNextAddAccountOptions()"
+      "name": "peekNextAddAccountOptions()",
+      "documentation": "Non-Android accessor returns the next {@code addAccountOptions} passed to addAccount without consuming it.\n\n@return the next {@code addAccountOptions}\n"
     },
     "removeAccount(android.accounts.Account,android.accounts.AccountManagerCallback\u003cjava.lang.Boolean\u003e,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
         "public"
       ],
-      "documentation": "The remove operation is posted to the given {@code handler}, and will be\nexecuted according to the {@link IdleState} of the corresponding {@link org.robolectric.util.Scheduler}.",
       "params": [
         "account",
         "callback",
@@ -353,7 +352,8 @@
       ],
       "returnType": "android.accounts.AccountManagerFuture\u003cjava.lang.Boolean\u003e",
       "exceptions": [],
-      "name": "removeAccount(android.accounts.Account,android.accounts.AccountManagerCallback\u003cjava.lang.Boolean\u003e,android.os.Handler)"
+      "name": "removeAccount(android.accounts.Account,android.accounts.AccountManagerCallback\u003cjava.lang.Boolean\u003e,android.os.Handler)",
+      "documentation": "The remove operation is posted to the given {@code handler}, and will be\nexecuted according to the {@link IdleState} of the corresponding {@link org.robolectric.util.Scheduler}.\n"
     },
     "removeAccountExplicitly(android.accounts.Account)": {
       "isImplementation": true,
@@ -373,11 +373,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Removes all accounts that have been added.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "removeAllAccounts()"
+      "name": "removeAllAccounts()",
+      "documentation": "Removes all accounts that have been added.\n"
     },
     "removeOnAccountsUpdatedListener(android.accounts.OnAccountsUpdateListener)": {
       "isImplementation": true,
@@ -437,14 +437,14 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-android accessor.\n\n@param account User account.\n@param previousName Previous account name.",
       "params": [
         "account",
         "previousName"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setPreviousAccountName(android.accounts.Account,java.lang.String)"
+      "name": "setPreviousAccountName(android.accounts.Account,java.lang.String)",
+      "documentation": "Non-android accessor.\n\n@param account User account.\n@param previousName Previous account name.\n"
     },
     "setUserData(android.accounts.Account,java.lang.String,java.lang.String)": {
       "isImplementation": true,
@@ -461,7 +461,6 @@
       "name": "setUserData(android.accounts.Account,java.lang.String,java.lang.String)"
     }
   },
-  "documentation": " Shadow for {@link android.accounts.AccountManager}.\n",
   "imports": [
     "android.accounts.*",
     "android.app.Activity",
@@ -482,5 +481,6 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1"
   ],
-  "name": "org.robolectric.shadows.ShadowAccountManager"
+  "name": "org.robolectric.shadows.ShadowAccountManager",
+  "documentation": "Shadow for {@link android.accounts.AccountManager}.\n"
 }

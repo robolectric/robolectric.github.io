@@ -15,21 +15,21 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@param activity Current activity.",
       "params": [
         "activity"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setCurrentActivity(android.app.Activity)"
+      "name": "setCurrentActivity(android.app.Activity)",
+      "documentation": "Non-Android accessor.\n\n@param activity Current activity.\n"
     }
   },
-  "documentation": " Shadow for {@link android.app.ActivityGroup}.\n",
   "imports": [
     "android.app.Activity",
     "android.app.ActivityGroup",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowActivityGroup"
+  "name": "org.robolectric.shadows.ShadowActivityGroup",
+  "documentation": "Shadow for {@link android.app.ActivityGroup}.\n"
 }

@@ -111,7 +111,6 @@
       "name": "setScaleFactor(float)"
     }
   },
-  "documentation": " Shadow for {@link android.view.ScaleGestureDetector}.\n",
   "imports": [
     "android.content.Context",
     "android.view.MotionEvent",
@@ -119,5 +118,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowScaleGestureDetector"
+  "name": "org.robolectric.shadows.ShadowScaleGestureDetector",
+  "documentation": "Shadow for {@link android.view.ScaleGestureDetector}.\n"
 }

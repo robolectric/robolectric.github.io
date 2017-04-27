@@ -88,7 +88,6 @@
       "name": "getYear()"
     }
   },
-  "documentation": " Shadow for {@link android.app.DatePickerDialog}.\n",
   "imports": [
     "android.app.DatePickerDialog",
     "android.content.Context",
@@ -101,5 +100,6 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadow.api.Shadow.invokeConstructor"
   ],
-  "name": "org.robolectric.shadows.ShadowDatePickerDialog"
+  "name": "org.robolectric.shadows.ShadowDatePickerDialog",
+  "documentation": "Shadow for {@link android.app.DatePickerDialog}.\n"
 }

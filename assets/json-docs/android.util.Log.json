@@ -80,11 +80,11 @@
         "public",
         "static"
       ],
-      "documentation": "Non-Android accessor.  Returns ordered list of all log entries.\n@return List of log items",
       "params": [],
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
       "exceptions": [],
-      "name": "getLogs()"
+      "name": "getLogs()",
+      "documentation": "Non-Android accessor.  Returns ordered list of all log entries.\n@return List of log items\n"
     },
     "getLogsForTag(java.lang.String)": {
       "isImplementation": false,
@@ -92,13 +92,13 @@
         "public",
         "static"
       ],
-      "documentation": "Non-Android accessor.  Returns ordered list of all log items for a specific tag.\n\n@param tag The tag to get logs for\n@return The list of log items for the tag",
       "params": [
         "tag"
       ],
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
       "exceptions": [],
-      "name": "getLogsForTag(java.lang.String)"
+      "name": "getLogsForTag(java.lang.String)",
+      "documentation": "Non-Android accessor.  Returns ordered list of all log items for a specific tag.\n\n@param tag The tag to get logs for\n@return The list of log items for the tag\n"
     },
     "i(java.lang.String,java.lang.String)": {
       "isImplementation": true,
@@ -192,14 +192,14 @@
         "public",
         "static"
       ],
-      "documentation": "Sets the log level of a given tag, that {@link #isLoggable} will follow.\n@param tag A log tag\n@param level A log level, from {@link android.util.Log}",
       "params": [
         "tag",
         "level"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setLoggable(java.lang.String,int)"
+      "name": "setLoggable(java.lang.String,int)",
+      "documentation": "Sets the log level of a given tag, that {@link #isLoggable} will follow.\n@param tag A log tag\n@param level A log level, from {@link android.util.Log}\n"
     },
     "setupLogging()": {
       "isImplementation": false,
@@ -314,7 +314,6 @@
       "name": "wtf(java.lang.String,java.lang.String,java.lang.Throwable)"
     }
   },
-  "documentation": " Shadow for {@link android.util.Log}.\n",
   "imports": [
     "android.util.Log",
     "org.robolectric.annotation.Implementation",
@@ -326,5 +325,6 @@
     "java.util.*",
     "java.util.concurrent.ConcurrentLinkedQueue"
   ],
-  "name": "org.robolectric.shadows.ShadowLog"
+  "name": "org.robolectric.shadows.ShadowLog",
+  "documentation": "Shadow for {@link android.util.Log}.\n"
 }

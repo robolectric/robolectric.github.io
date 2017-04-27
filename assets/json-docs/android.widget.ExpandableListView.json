@@ -1,9 +1,9 @@
 {
   "methods": {},
-  "documentation": " Shadow for {@link android.widget.ExpandableListView}.\n",
   "imports": [
     "android.widget.ExpandableListView",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowExpandableListView"
+  "name": "org.robolectric.shadows.ShadowExpandableListView",
+  "documentation": "Shadow for {@link android.widget.ExpandableListView}.\n"
 }

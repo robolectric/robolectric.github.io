@@ -13,7 +13,6 @@
       "name": "getSearchableInfo(android.content.ComponentName)"
     }
   },
-  "documentation": " Shadow for {@link android.app.SearchManager}.\n",
   "imports": [
     "android.app.SearchManager",
     "android.app.SearchableInfo",
@@ -21,5 +20,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowSearchManager"
+  "name": "org.robolectric.shadows.ShadowSearchManager",
+  "documentation": "Shadow for {@link android.app.SearchManager}.\n"
 }

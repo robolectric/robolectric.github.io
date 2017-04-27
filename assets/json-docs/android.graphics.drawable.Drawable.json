@@ -246,7 +246,6 @@
       "name": "wasInvalidated()"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.drawable.Drawable}.\n",
   "imports": [
     "android.content.res.Resources",
     "android.graphics.Bitmap",
@@ -270,5 +269,6 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowDrawable"
+  "name": "org.robolectric.shadows.ShadowDrawable",
+  "documentation": "Shadow for {@link android.graphics.drawable.Drawable}.\n"
 }

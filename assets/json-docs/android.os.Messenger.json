@@ -27,7 +27,6 @@
       "name": "send(android.os.Message)"
     }
   },
-  "documentation": " Shadow for {@link android.os.Messenger}.\n",
   "imports": [
     "android.os.Handler",
     "android.os.Message",
@@ -36,5 +35,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowMessenger"
+  "name": "org.robolectric.shadows.ShadowMessenger",
+  "documentation": "Shadow for {@link android.os.Messenger}.\n"
 }

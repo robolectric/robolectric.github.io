@@ -14,7 +14,6 @@
       "name": "filter(java.lang.CharSequence,android.widget.Filter.FilterListener)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.Filter}.\n",
   "imports": [
     "android.widget.Filter",
     "org.robolectric.annotation.Implementation",
@@ -23,5 +22,6 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowFilter"
+  "name": "org.robolectric.shadows.ShadowFilter",
+  "documentation": "Shadow for {@link android.widget.Filter}.\n"
 }

@@ -19,13 +19,13 @@
       "modifiers": [
         "protected"
       ],
-      "documentation": "Build drawable, either LayerDrawable or BitmapDrawable.\n\n@param resourceId Resource id\n@return Drawable",
       "params": [
         "resourceId"
       ],
       "returnType": "android.graphics.drawable.Drawable",
       "exceptions": [],
-      "name": "buildDrawable(int)"
+      "name": "buildDrawable(int)",
+      "documentation": "Build drawable, either LayerDrawable or BitmapDrawable.\n\n@param resourceId Resource id\n@return Drawable\n"
     },
     "callOnAttachedToWindow()": {
       "isImplementation": false,
@@ -52,22 +52,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "checkedPerformClick()"
+      "name": "checkedPerformClick()",
+      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.\n"
     },
     "clearWasInvalidated()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Clears the wasInvalidated flag",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "clearWasInvalidated()"
+      "name": "clearWasInvalidated()",
+      "documentation": "Clears the wasInvalidated flag\n"
     },
     "clickOn(android.view.View)": {
       "isImplementation": false,
@@ -75,13 +75,13 @@
         "public",
         "static"
       ],
-      "documentation": "Calls {@code performClick()} on a {@code View} after ensuring that it and its ancestors are visible and that it\nis enabled.\n\n@param view the view to click on\n@return true if {@code View.OnClickListener}s were found and fired, false otherwise.\n@throws RuntimeException if the preconditions are not met.",
       "params": [
         "view"
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "clickOn(android.view.View)"
+      "name": "clickOn(android.view.View)",
+      "documentation": "Calls {@code performClick()} on a {@code View} after ensuring that it and its ancestors are visible and that it\nis enabled.\n\n@param view the view to click on\n@return true if {@code View.OnClickListener}s were found and fired, false otherwise.\n@throws RuntimeException if the preconditions are not met.\n"
     },
     "computeOpaqueFlags()": {
       "isImplementation": true,
@@ -130,11 +130,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Dumps the status of this {@code View} to {@code System.out}",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "dump()"
+      "name": "dump()",
+      "documentation": "Dumps the status of this {@code View} to {@code System.out}\n"
     },
     "dump(android.view.View)": {
       "isImplementation": false,
@@ -142,27 +142,27 @@
         "public",
         "static"
       ],
-      "documentation": "Emits an xml-like representation of the view to System.out.\n\n@param view the view to dump",
       "params": [
         "view"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "dump(android.view.View)"
+      "name": "dump(android.view.View)",
+      "documentation": "Emits an xml-like representation of the view to System.out.\n\n@param view the view to dump\n"
     },
     "dump(java.io.PrintStream,int)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Dumps the status of this {@code View} to {@code System.out} at the given indentation level\n@param out Output stream.\n@param indent Indentation level.",
       "params": [
         "out",
         "indent"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "dump(java.io.PrintStream,int)"
+      "name": "dump(java.io.PrintStream,int)",
+      "documentation": "Dumps the status of this {@code View} to {@code System.out} at the given indentation level\n@param out Output stream.\n@param indent Indentation level.\n"
     },
     "dumpAttribute(java.io.PrintStream,java.lang.String,java.lang.String)": {
       "isImplementation": false,
@@ -231,22 +231,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the color of this view\u0027s background, or 0 if it\u0027s not a solid color\n@deprecated Use FEST assertions instead.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getBackgroundColor()"
+      "name": "getBackgroundColor()",
+      "documentation": "Non-Android accessor.\n\n@return the color of this view\u0027s background, or 0 if it\u0027s not a solid color\n@deprecated Use FEST assertions instead.\n"
     },
     "getBackgroundResourceId()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the resource ID of this view\u0027s background\n@deprecated Use FEST assertions instead.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getBackgroundResourceId()"
+      "name": "getBackgroundResourceId()",
+      "documentation": "Non-Android accessor.\n\n@return the resource ID of this view\u0027s background\n@deprecated Use FEST assertions instead.\n"
     },
     "getDrawingCache()": {
       "isImplementation": true,
@@ -286,66 +286,66 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-android accessor.\n\n@return Returns click listener, if set.",
       "params": [],
       "returnType": "android.view.View.OnClickListener",
       "exceptions": [],
-      "name": "getOnClickListener()"
+      "name": "getOnClickListener()",
+      "documentation": "Non-android accessor.\n\n@return Returns click listener, if set.\n"
     },
     "getOnCreateContextMenuListener()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-android accessor.\n\n@return Returns create ContextMenu listener, if set.",
       "params": [],
       "returnType": "android.view.View.OnCreateContextMenuListener",
       "exceptions": [],
-      "name": "getOnCreateContextMenuListener()"
+      "name": "getOnCreateContextMenuListener()",
+      "documentation": "Non-android accessor.\n\n@return Returns create ContextMenu listener, if set.\n"
     },
     "getOnLongClickListener()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-android accessor.\n\n@return Returns long click listener, if set.",
       "params": [],
       "returnType": "android.view.View.OnLongClickListener",
       "exceptions": [],
-      "name": "getOnLongClickListener()"
+      "name": "getOnLongClickListener()",
+      "documentation": "Non-android accessor.\n\n@return Returns long click listener, if set.\n"
     },
     "getOnSystemUiVisibilityChangeListener()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-android accessor.\n\n@return Returns system ui visibility change listener.",
       "params": [],
       "returnType": "android.view.View.OnSystemUiVisibilityChangeListener",
       "exceptions": [],
-      "name": "getOnSystemUiVisibilityChangeListener()"
+      "name": "getOnSystemUiVisibilityChangeListener()",
+      "documentation": "Non-android accessor.\n\n@return Returns system ui visibility change listener.\n"
     },
     "getOnTouchListener()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-android accessor.\n\n@return Touch listener, if set.",
       "params": [],
       "returnType": "android.view.View.OnTouchListener",
       "exceptions": [],
-      "name": "getOnTouchListener()"
+      "name": "getOnTouchListener()",
+      "documentation": "Non-android accessor.\n\n@return Touch listener, if set.\n"
     },
     "getQualifiers()": {
       "isImplementation": false,
       "modifiers": [
         "protected"
       ],
-      "documentation": "This will be removed in Robolectric 3.4 use {@link RuntimeEnvironment#getQualifiers()} instead, however\nthe correct way to configure qualifiers is using {@link Config#qualifiers()} so a constant can be used if this\nis important to your tests. However, qualifier strings are typically just used to initialize the test environment\nin a certain configuration. {@link android.content.res.Configuration} changes should be managed through\n{@link org.robolectric.android.controller.ActivityController#configurationChange(android.content.res.Configuration)}\n@deprecated",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "getQualifiers()"
+      "name": "getQualifiers()",
+      "documentation": "This will be removed in Robolectric 3.4 use {@link RuntimeEnvironment#getQualifiers()} instead, however\nthe correct way to configure qualifiers is using {@link Config#qualifiers()} so a constant can be used if this\nis important to your tests. However, qualifier strings are typically just used to initialize the test environment\nin a certain configuration. {@link android.content.res.Configuration} changes should be managed through\n{@link org.robolectric.android.controller.ActivityController#configurationChange(android.content.res.Configuration)}\n@deprecated\n"
     },
     "getScrollX()": {
       "isImplementation": true,
@@ -383,11 +383,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Returns a string representation of this {@code View}. Unless overridden, it will be an empty string.\n\nRobolectric extension.\n@return String representation of this view.",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "innerText()"
+      "name": "innerText()",
+      "documentation": "Returns a string representation of this {@code View}. Unless overridden, it will be an empty string.\n\n\u003cp\u003e\nRobolectric extension.\n@return String representation of this view.\n"
     },
     "innerText(android.view.View)": {
       "isImplementation": false,
@@ -395,13 +395,13 @@
         "public",
         "static"
       ],
-      "documentation": "Returns the text contained within this view.\n\n@param view the view to scan for text\n@return Text contained within this view.",
       "params": [
         "view"
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "innerText(android.view.View)"
+      "name": "innerText(android.view.View)",
+      "documentation": "Returns the text contained within this view.\n\n@param view the view to scan for text\n@return Text contained within this view.\n"
     },
     "invalidate()": {
       "isImplementation": true,
@@ -729,27 +729,26 @@
         "public",
         "static"
       ],
-      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param view the view to visualize\n@return Textual representation of the appearance of the object.",
       "params": [
         "view"
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "visualize(android.view.View)"
+      "name": "visualize(android.view.View)",
+      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param view the view to visualize\n@return Textual representation of the appearance of the object.\n"
     },
     "wasInvalidated()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return whether or not {@link #invalidate()} has been called",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "wasInvalidated()"
+      "name": "wasInvalidated()",
+      "documentation": "Non-Android accessor.\n\n@return whether or not {@link #invalidate()} has been called\n"
     }
   },
-  "documentation": " Shadow for {@link android.view.View}.\n",
   "imports": [
     "android.content.Context",
     "android.graphics.Bitmap",
@@ -789,5 +788,6 @@
     "org.robolectric.util.ReflectionHelpers.getField",
     "org.robolectric.util.ReflectionHelpers.setField"
   ],
-  "name": "org.robolectric.shadows.ShadowView"
+  "name": "org.robolectric.shadows.ShadowView",
+  "documentation": "Shadow for {@link android.view.View}.\n"
 }

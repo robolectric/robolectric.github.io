@@ -40,7 +40,6 @@
       "name": "valueOrNone(java.lang.String)"
     }
   },
-  "documentation": " Shadow for {@link android.net.wifi.ScanResult}.\n",
   "imports": [
     "android.net.wifi.ScanResult",
     "org.robolectric.annotation.Implementation",
@@ -48,5 +47,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowScanResult"
+  "name": "org.robolectric.shadows.ShadowScanResult",
+  "documentation": "Shadow for {@link android.net.wifi.ScanResult}.\n"
 }

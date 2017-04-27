@@ -5,25 +5,25 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Adds new {@code network} to the list of all {@link android.net.Network}s.\n\n@param network The network.\n@param networkInfo The network info paired with the {@link android.net.Network}.",
       "params": [
         "network",
         "networkInfo"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addNetwork(android.net.Network,android.net.NetworkInfo)"
+      "name": "addNetwork(android.net.Network,android.net.NetworkInfo)",
+      "documentation": "Adds new {@code network} to the list of all {@link android.net.Network}s.\n\n@param network The network.\n@param networkInfo The network info paired with the {@link android.net.Network}.\n"
     },
     "clearAllNetworks()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Clears the list of all {@link android.net.Network}s.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "clearAllNetworks()"
+      "name": "clearAllNetworks()",
+      "documentation": "Clears the list of all {@link android.net.Network}s.\n"
     },
     "getActiveNetwork()": {
       "isImplementation": true,
@@ -127,11 +127,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Count {@link ConnectivityManager#TYPE_MOBILE} networks as metered.\nOther types will be considered unmetered.\n\n@return True if the active network is metered.",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isActiveNetworkMetered()"
+      "name": "isActiveNetworkMetered()",
+      "documentation": "Count {@link ConnectivityManager#TYPE_MOBILE} networks as metered.\nOther types will be considered unmetered.\n\n@return True if the active network is metered.\n"
     },
     "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
@@ -152,13 +152,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Removes the {@code network} from the list of all {@link android.net.Network}s.\n@param network The network.",
       "params": [
         "network"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "removeNetwork(android.net.Network)"
+      "name": "removeNetwork(android.net.Network)",
+      "documentation": "Removes the {@code network} from the list of all {@link android.net.Network}s.\n@param network The network.\n"
     },
     "setActiveNetworkInfo(android.net.NetworkInfo)": {
       "isImplementation": false,
@@ -223,7 +223,6 @@
       "name": "unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)"
     }
   },
-  "documentation": " Shadow for {@link android.net.ConnectivityManager}.\n",
   "imports": [
     "android.net.ConnectivityManager",
     "android.net.NetworkInfo",
@@ -241,5 +240,6 @@
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.RuntimeEnvironment.getApiLevel"
   ],
-  "name": "org.robolectric.shadows.ShadowConnectivityManager"
+  "name": "org.robolectric.shadows.ShadowConnectivityManager",
+  "documentation": "Shadow for {@link android.net.ConnectivityManager}.\n"
 }

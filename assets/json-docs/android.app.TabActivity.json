@@ -21,7 +21,6 @@
       "name": "getTabWidget()"
     }
   },
-  "documentation": " Shadow for {@link android.app.TabActivity}.\n",
   "imports": [
     "android.app.TabActivity",
     "android.widget.TabHost",
@@ -30,5 +29,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowTabActivity"
+  "name": "org.robolectric.shadows.ShadowTabActivity",
+  "documentation": "Shadow for {@link android.app.TabActivity}.\n"
 }

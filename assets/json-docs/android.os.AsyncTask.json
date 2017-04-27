@@ -102,16 +102,15 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Enqueue a call to {@link AsyncTask#onProgressUpdate(Object[])} on UI looper (or run it immediately\nif the looper it is not paused).\n\n@param values The progress values to update the UI with.\n@see AsyncTask#publishProgress(Object[])",
       "params": [
         "values"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "publishProgress(Progress...)"
+      "name": "publishProgress(Progress...)",
+      "documentation": "Enqueue a call to {@link AsyncTask#onProgressUpdate(Object[])} on UI looper (or run it immediately\nif the looper it is not paused).\n\n@param values The progress values to update the UI with.\n@see AsyncTask#publishProgress(Object[])\n"
     }
   },
-  "documentation": " Shadow for {@link android.os.AsyncTask}.\n",
   "imports": [
     "android.os.AsyncTask",
     "org.robolectric.annotation.Implementation",
@@ -125,5 +124,6 @@
     "java.util.concurrent.TimeUnit",
     "java.util.concurrent.TimeoutException"
   ],
-  "name": "org.robolectric.shadows.ShadowAsyncTask"
+  "name": "org.robolectric.shadows.ShadowAsyncTask",
+  "documentation": "Shadow for {@link android.os.AsyncTask}.\n"
 }

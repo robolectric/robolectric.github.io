@@ -125,11 +125,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return goBackInvocations the number of times {@code android.webkit.WebView#goBack()}\nwas invoked",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getGoBackInvocations()"
+      "name": "getGoBackInvocations()",
+      "documentation": "Non-Android accessor.\n\n@return goBackInvocations the number of times {@code android.webkit.WebView#goBack()}\nwas invoked\n"
     },
     "getJavascriptInterface(java.lang.String)": {
       "isImplementation": false,
@@ -148,11 +148,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the additional Http headers that in the same request with last loaded url",
       "params": [],
       "returnType": "java.util.Map\u003cjava.lang.String,java.lang.String\u003e",
       "exceptions": [],
-      "name": "getLastAdditionalHttpHeaders()"
+      "name": "getLastAdditionalHttpHeaders()",
+      "documentation": "Non-Android accessor.\n\n@return the additional Http headers that in the same request with last loaded url\n"
     },
     "getLastLoadData()": {
       "isImplementation": false,
@@ -179,11 +179,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the last loaded url",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "getLastLoadedUrl()"
+      "name": "getLastLoadedUrl()",
+      "documentation": "Non-Android accessor.\n\n@return the last loaded url\n"
     },
     "getRunFlag()": {
       "isImplementation": false,
@@ -210,11 +210,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return webChromeClient",
       "params": [],
       "returnType": "android.webkit.WebChromeClient",
       "exceptions": [],
-      "name": "getWebChromeClient()"
+      "name": "getWebChromeClient()",
+      "documentation": "Non-Android accessor.\n\n@return webChromeClient\n"
     },
     "getWebViewClient()": {
       "isImplementation": false,
@@ -340,13 +340,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android setter.\n\nSets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}",
       "params": [
         "canGoBack"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setCanGoBack(boolean)"
+      "name": "setCanGoBack(boolean)",
+      "documentation": "Non-Android setter.\n\nSets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}\n"
     },
     "setLayoutParams(android.view.ViewGroup.LayoutParams)": {
       "isImplementation": true,
@@ -468,7 +468,6 @@
       "name": "wasOnResumeCalled()"
     }
   },
-  "documentation": " Shadow for {@link android.webkit.WebView}.\n",
   "imports": [
     "android.view.ViewGroup.LayoutParams",
     "android.webkit.WebChromeClient",
@@ -489,5 +488,6 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowWebView"
+  "name": "org.robolectric.shadows.ShadowWebView",
+  "documentation": "Shadow for {@link android.webkit.WebView}.\n"
 }

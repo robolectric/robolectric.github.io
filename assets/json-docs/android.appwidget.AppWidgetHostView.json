@@ -56,7 +56,6 @@
       "name": "setHost(android.appwidget.AppWidgetHost)"
     }
   },
-  "documentation": " Shadow for {@link android.appwidget.AppWidgetHost}.\n",
   "imports": [
     "android.appwidget.AppWidgetHost",
     "android.appwidget.AppWidgetHostView",
@@ -64,5 +63,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowAppWidgetHostView"
+  "name": "org.robolectric.shadows.ShadowAppWidgetHostView",
+  "documentation": "Shadow for {@link android.appwidget.AppWidgetHost}.\n"
 }

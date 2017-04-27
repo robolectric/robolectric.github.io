@@ -31,7 +31,6 @@
       "name": "wasNotifyDataSetChangedCalled()"
     }
   },
-  "documentation": " Shadow for {@link android.widget.BaseAdapter}.\n",
   "imports": [
     "android.widget.BaseAdapter",
     "org.robolectric.annotation.Implementation",
@@ -39,5 +38,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowBaseAdapter"
+  "name": "org.robolectric.shadows.ShadowBaseAdapter",
+  "documentation": "Shadow for {@link android.widget.BaseAdapter}.\n"
 }

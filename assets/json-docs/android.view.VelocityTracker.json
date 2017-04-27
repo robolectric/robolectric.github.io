@@ -115,7 +115,6 @@
       "name": "windowed(float,float)"
     }
   },
-  "documentation": " Shadow for {@link android.view.VelocityTracker}.\n",
   "imports": [
     "android.util.SparseArray",
     "android.view.MotionEvent",
@@ -123,5 +122,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowVelocityTracker"
+  "name": "org.robolectric.shadows.ShadowVelocityTracker",
+  "documentation": "Shadow for {@link android.view.VelocityTracker}.\n"
 }

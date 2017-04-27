@@ -103,7 +103,6 @@
       "name": "setSoftInputMode(int)"
     }
   },
-  "documentation": " Shadow for {@link android.view.Window}.\n",
   "imports": [
     "android.content.Context",
     "android.graphics.drawable.Drawable",
@@ -118,5 +117,6 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowWindow"
+  "name": "org.robolectric.shadows.ShadowWindow",
+  "documentation": "Shadow for {@link android.view.Window}.\n"
 }

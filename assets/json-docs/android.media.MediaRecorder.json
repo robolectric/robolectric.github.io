@@ -489,7 +489,6 @@
       "name": "stop()"
     }
   },
-  "documentation": " Shadow for {@link android.media.MediaRecorder}.\n",
   "imports": [
     "android.hardware.Camera",
     "android.media.MediaRecorder",
@@ -497,5 +496,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowMediaRecorder"
+  "name": "org.robolectric.shadows.ShadowMediaRecorder",
+  "documentation": "Shadow for {@link android.media.MediaRecorder}.\n"
 }

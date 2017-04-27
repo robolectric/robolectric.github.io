@@ -5,14 +5,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Returns the Uri set by {@code setNotificationUri()}.\n\n@return Notification URI.",
       "params": [],
       "returnType": "android.net.Uri",
       "exceptions": [],
-      "name": "getNotificationUri_Compatibility()"
+      "name": "getNotificationUri_Compatibility()",
+      "documentation": "Returns the Uri set by {@code setNotificationUri()}.\n\n@return Notification URI.\n"
     }
   },
-  "documentation": " Shadow for {@link android.database.AbstractCursor}.\n",
   "imports": [
     "android.database.AbstractCursor",
     "android.net.Uri",
@@ -20,5 +19,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowAbstractCursor"
+  "name": "org.robolectric.shadows.ShadowAbstractCursor",
+  "documentation": "Shadow for {@link android.database.AbstractCursor}.\n"
 }

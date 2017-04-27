@@ -340,7 +340,6 @@
       "name": "setSupportedFocusModes(java.lang.String...)"
     }
   },
-  "documentation": " Shadows the Android {@code Camera.Parameters} class.\n",
   "imports": [
     "android.graphics.ImageFormat",
     "android.hardware.Camera",
@@ -357,5 +356,6 @@
     "java.util.Map",
     "org.robolectric.shadow.api.Shadow.*"
   ],
-  "name": "org.robolectric.shadows.ShadowCamera.ShadowParameters"
+  "name": "org.robolectric.shadows.ShadowCamera.ShadowParameters",
+  "documentation": "Shadows the Android {@code Camera.Parameters} class.\n"
 }

@@ -416,7 +416,6 @@
       "name": "setYdpi(float)"
     }
   },
-  "documentation": " Shadow for {@link android.view.Display}.\n",
   "imports": [
     "android.graphics.PixelFormat",
     "android.graphics.Point",
@@ -431,5 +430,6 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowDisplay"
+  "name": "org.robolectric.shadows.ShadowDisplay",
+  "documentation": "Shadow for {@link android.view.Display}.\n"
 }

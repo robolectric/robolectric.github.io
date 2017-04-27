@@ -16,13 +16,13 @@
         "public",
         "static"
       ],
-      "documentation": "Validate a Bluetooth address, such as \"00:43:A8:23:10:F0\"\nAlphabetic characters must be uppercase to be valid.\n\n@param address\n        Bluetooth address as string\n@return true if the address is valid, false otherwise",
       "params": [
         "address"
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "checkBluetoothAddress(java.lang.String)"
+      "name": "checkBluetoothAddress(java.lang.String)",
+      "documentation": "Validate a Bluetooth address, such as \"00:43:A8:23:10:F0\"\n\u003cp\u003eAlphabetic characters must be uppercase to be valid.\n\n@param address\n        Bluetooth address as string\n@return true if the address is valid, false otherwise\n"
     },
     "disable()": {
       "isImplementation": true,
@@ -224,7 +224,6 @@
       "name": "stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)"
     }
   },
-  "documentation": " Shadow for {@link android.bluetooth.BluetoothAdapter}.\n",
   "imports": [
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothAdapter.LeScanCallback",
@@ -238,5 +237,6 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
   ],
-  "name": "org.robolectric.shadows.ShadowBluetoothAdapter"
+  "name": "org.robolectric.shadows.ShadowBluetoothAdapter",
+  "documentation": "Shadow for {@link android.bluetooth.BluetoothAdapter}.\n"
 }

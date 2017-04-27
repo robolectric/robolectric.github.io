@@ -5,7 +5,6 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Constructor.\n\n@param context The context where the ListView associated with this\n           SimpleListItemFactory is running\n@param layout resource identifier of a layout file that defines the views\n           for this list item. The layout file should include at least\n           those named views defined in \"to\"\n@param c The database cursor.  Can be null if the cursor is not available yet.\n@param from A list of column names representing the data to bind to the UI.  Can be null\n           if the cursor is not available yet.\n@param to The views that should display column in the \"from\" parameter.\n           These should all be TextViews. The first N views in this list\n           are given the values of the first N columns in the from\n           parameter.  Can be null if the cursor is not available yet.",
       "params": [
         "context",
         "layout",
@@ -15,7 +14,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "__constructor__(android.content.Context,int,android.database.Cursor,java.lang.String[],int[])"
+      "name": "__constructor__(android.content.Context,int,android.database.Cursor,java.lang.String[],int[])",
+      "documentation": "Constructor.\n\n@param context The context where the ListView associated with this\n           SimpleListItemFactory is running\n@param layout resource identifier of a layout file that defines the views\n           for this list item. The layout file should include at least\n           those named views defined in \"to\"\n@param c The database cursor.  Can be null if the cursor is not available yet.\n@param from A list of column names representing the data to bind to the UI.  Can be null\n           if the cursor is not available yet.\n@param to The views that should display column in the \"from\" parameter.\n           These should all be TextViews. The first N views in this list\n           are given the values of the first N columns in the from\n           parameter.  Can be null if the cursor is not available yet.\n"
     },
     "__constructor__(android.content.Context,int,android.database.Cursor,java.lang.String[],int[],int)": {
       "isImplementation": false,
@@ -91,13 +91,13 @@
       "modifiers": [
         "private"
       ],
-      "documentation": "Create a map from an array of strings to an array of column-id integers in mCursor.\nIf mCursor is null, the array will be discarded.\n\n@param from the Strings naming the columns of interest",
       "params": [
         "from"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "findColumns(java.lang.String[])"
+      "name": "findColumns(java.lang.String[])",
+      "documentation": "Create a map from an array of strings to an array of column-id integers in mCursor.\nIf mCursor is null, the array will be discarded.\n\n@param from the Strings naming the columns of interest\n"
     },
     "findColumnsFromCursor(android.database.Cursor,java.lang.String[])": {
       "isImplementation": false,
@@ -245,7 +245,6 @@
       "name": "swapCursor(android.database.Cursor)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.SimpleCursorAdapter}.\n",
   "imports": [
     "android.content.Context",
     "android.database.Cursor",
@@ -261,5 +260,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowSimpleCursorAdapter"
+  "name": "org.robolectric.shadows.ShadowSimpleCursorAdapter",
+  "documentation": "Shadow for {@link android.widget.SimpleCursorAdapter}.\n"
 }

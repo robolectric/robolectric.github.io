@@ -35,7 +35,6 @@
       "name": "__constructor__(int)"
     }
   },
-  "documentation": " Shadow for {@link android.content.ContentProviderResult}.\n",
   "imports": [
     "android.content.ContentProviderResult",
     "android.net.Uri",
@@ -43,5 +42,6 @@
     "org.robolectric.annotation.RealObject",
     "java.lang.reflect.Field"
   ],
-  "name": "org.robolectric.shadows.ShadowContentProviderResult"
+  "name": "org.robolectric.shadows.ShadowContentProviderResult",
+  "documentation": "Shadow for {@link android.content.ContentProviderResult}.\n"
 }

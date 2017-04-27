@@ -123,7 +123,6 @@
       "name": "setOnTabChangedListener(android.widget.TabHost.OnTabChangeListener)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.TabHost}.\n",
   "imports": [
     "android.R",
     "android.app.Activity",
@@ -142,5 +141,6 @@
     "java.util.ArrayList",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.ShadowTabHost"
+  "name": "org.robolectric.shadows.ShadowTabHost",
+  "documentation": "Shadow for {@link android.widget.TabHost}.\n"
 }

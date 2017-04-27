@@ -103,39 +103,39 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor\nSets up the return value of {@link #isAvailable()}.\n\n@param isAvailable the value that {@link #isAvailable()} will return.",
       "params": [
         "isAvailable"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setAvailableStatus(boolean)"
+      "name": "setAvailableStatus(boolean)",
+      "documentation": "Non-Android accessor\nSets up the return value of {@link #isAvailable()}.\n\n@param isAvailable the value that {@link #isAvailable()} will return.\n"
     },
     "setConnectionStatus(boolean)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\nSets up the return value of {@link #isConnectedOrConnecting()} and {@link #isConnected()}.\n\n@param isConnected the value that {@link #isConnectedOrConnecting()} and {@link #isConnected()} will return.",
       "params": [
         "isConnected"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setConnectionStatus(boolean)"
+      "name": "setConnectionStatus(boolean)",
+      "documentation": "Non-Android accessor.\n\n\u003cp\u003e\nSets up the return value of {@link #isConnectedOrConnecting()} and {@link #isConnected()}.\n\n@param isConnected the value that {@link #isConnectedOrConnecting()} and {@link #isConnected()} will return.\n"
     },
     "setConnectionType(int)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor\nSets up the return value of {@link #getType()}.\n\n@param connectionType the value that {@link #getType()} will return.",
       "params": [
         "connectionType"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setConnectionType(int)"
+      "name": "setConnectionType(int)",
+      "documentation": "Non-Android accessor\nSets up the return value of {@link #getType()}.\n\n@param connectionType the value that {@link #getType()} will return.\n"
     },
     "setDetailedState(android.net.NetworkInfo.DetailedState)": {
       "isImplementation": false,
@@ -162,7 +162,6 @@
       "name": "setSubType(int)"
     }
   },
-  "documentation": " Shadow for {@code android.net.NetworkInfo}.\n",
   "imports": [
     "android.net.NetworkInfo",
     "org.robolectric.Shadows",
@@ -170,5 +169,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowNetworkInfo"
+  "name": "org.robolectric.shadows.ShadowNetworkInfo",
+  "documentation": "Shadow for {@code android.net.NetworkInfo}.\n"
 }

@@ -94,7 +94,6 @@
       "name": "reset()"
     }
   },
-  "documentation": " Shadow for {@link android.webkit.MimeTypeMap}.\n",
   "imports": [
     "android.webkit.MimeTypeMap",
     "org.robolectric.Shadows",
@@ -105,5 +104,6 @@
     "java.util.HashMap",
     "java.util.Map"
   ],
-  "name": "org.robolectric.shadows.ShadowMimeTypeMap"
+  "name": "org.robolectric.shadows.ShadowMimeTypeMap",
+  "documentation": "Shadow for {@link android.webkit.MimeTypeMap}.\n"
 }

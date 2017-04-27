@@ -21,11 +21,11 @@
       "name": "wasCancelled()"
     }
   },
-  "documentation": " Shadow for {@link android.webkit.JsResult}.\n",
   "imports": [
     "android.webkit.JsResult",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowJsResult"
+  "name": "org.robolectric.shadows.ShadowJsResult",
+  "documentation": "Shadow for {@link android.webkit.JsResult}.\n"
 }

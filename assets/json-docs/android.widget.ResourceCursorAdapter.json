@@ -97,7 +97,6 @@
       "name": "setViewResource(int)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.ResourceCursorAdapter}.\n",
   "imports": [
     "android.content.Context",
     "android.database.Cursor",
@@ -108,5 +107,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowResourceCursorAdapter"
+  "name": "org.robolectric.shadows.ShadowResourceCursorAdapter",
+  "documentation": "Shadow for {@link android.widget.ResourceCursorAdapter}.\n"
 }

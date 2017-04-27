@@ -31,7 +31,6 @@
       "name": "onAttachedToWindow()"
     }
   },
-  "documentation": " Shadow for {@link android.view.SurfaceView}.\n",
   "imports": [
     "android.graphics.Canvas",
     "android.graphics.Rect",
@@ -43,5 +42,6 @@
     "java.util.HashSet",
     "java.util.Set"
   ],
-  "name": "org.robolectric.shadows.ShadowSurfaceView"
+  "name": "org.robolectric.shadows.ShadowSurfaceView",
+  "documentation": "Shadow for {@link android.view.SurfaceView}.\n"
 }

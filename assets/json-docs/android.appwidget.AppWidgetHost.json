@@ -70,7 +70,6 @@
       "name": "setAppWidgetIdToAllocate(int)"
     }
   },
-  "documentation": " Shadow for {@link android.appwidget.AppWidgetHost}.\n",
   "imports": [
     "android.appwidget.AppWidgetHost",
     "android.appwidget.AppWidgetHostView",
@@ -81,5 +80,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowAppWidgetHost"
+  "name": "org.robolectric.shadows.ShadowAppWidgetHost",
+  "documentation": "Shadow for {@link android.appwidget.AppWidgetHost}.\n"
 }

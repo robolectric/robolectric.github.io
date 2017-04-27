@@ -63,7 +63,6 @@
       "name": "onResume()"
     }
   },
-  "documentation": " Shadow for {@link com.google.android.maps.MapActivity}.\n",
   "imports": [
     "android.content.BroadcastReceiver",
     "android.content.Context",
@@ -75,5 +74,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadows.ShadowActivity"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowMapActivity"
+  "name": "org.robolectric.shadows.maps.ShadowMapActivity",
+  "documentation": "Shadow for {@link com.google.android.maps.MapActivity}.\n"
 }

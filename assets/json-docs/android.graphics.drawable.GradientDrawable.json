@@ -23,7 +23,6 @@
       "name": "setColor(int)"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.drawable.GradientDrawable}.\n",
   "imports": [
     "android.graphics.drawable.GradientDrawable",
     "org.robolectric.annotation.Implementation",
@@ -31,5 +30,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowGradientDrawable"
+  "name": "org.robolectric.shadows.ShadowGradientDrawable",
+  "documentation": "Shadow for {@link android.graphics.drawable.GradientDrawable}.\n"
 }

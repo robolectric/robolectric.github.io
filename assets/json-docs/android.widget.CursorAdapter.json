@@ -196,13 +196,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android API.  Set a list of views to be returned for successive\ncalls to getView().\n\n@param views The list of views",
       "params": [
         "views"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setViews(java.util.List\u003candroid.view.View\u003e)"
+      "name": "setViews(java.util.List\u003candroid.view.View\u003e)",
+      "documentation": "Non-Android API.  Set a list of views to be returned for successive\ncalls to getView().\n\n@param views The list of views\n"
     },
     "swapCursor(android.database.Cursor)": {
       "isImplementation": true,
@@ -217,7 +217,6 @@
       "name": "swapCursor(android.database.Cursor)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.CursorAdapter}.\n",
   "imports": [
     "android.content.Context",
     "android.database.ContentObserver",
@@ -238,5 +237,6 @@
     "android.widget.CursorAdapter.FLAG_AUTO_REQUERY",
     "android.widget.CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER"
   ],
-  "name": "org.robolectric.shadows.ShadowCursorAdapter"
+  "name": "org.robolectric.shadows.ShadowCursorAdapter",
+  "documentation": "Shadow for {@link android.widget.CursorAdapter}.\n"
 }

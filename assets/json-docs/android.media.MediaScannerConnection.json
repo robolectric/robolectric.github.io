@@ -1,9 +1,9 @@
 {
   "methods": {},
-  "documentation": " Shadow for {@link android.media.MediaScannerConnection}.\n",
   "imports": [
     "android.media.MediaScannerConnection",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowMediaScannerConnection"
+  "name": "org.robolectric.shadows.ShadowMediaScannerConnection",
+  "documentation": "Shadow for {@link android.media.MediaScannerConnection}.\n"
 }

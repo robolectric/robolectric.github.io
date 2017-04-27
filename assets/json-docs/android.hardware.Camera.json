@@ -28,14 +28,14 @@
         "public",
         "static"
       ],
-      "documentation": "Add a mock {@code Camera.CameraInfo} object to simulate\nthe existence of one or more cameras.  By default, no\ncameras are defined.\n\n@param id The camera id\n@param camInfo The CameraInfo",
       "params": [
         "id",
         "camInfo"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addCameraInfo(int,android.hardware.Camera.CameraInfo)"
+      "name": "addCameraInfo(int,android.hardware.Camera.CameraInfo)",
+      "documentation": "Add a mock {@code Camera.CameraInfo} object to simulate\nthe existence of one or more cameras.  By default, no\ncameras are defined.\n\n@param id The camera id\n@param camInfo The CameraInfo\n"
     },
     "autoFocus(android.hardware.Camera.AutoFocusCallback)": {
       "isImplementation": true,
@@ -174,13 +174,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Allows test cases to invoke the preview callback, to simulate a frame of camera data.\n\n@param data byte buffer of simulated camera data",
       "params": [
         "data"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "invokePreviewCallback(byte[])"
+      "name": "invokePreviewCallback(byte[])",
+      "documentation": "Allows test cases to invoke the preview callback, to simulate a frame of camera data.\n\n@param data byte buffer of simulated camera data\n"
     },
     "isLocked()": {
       "isImplementation": false,
@@ -359,7 +359,6 @@
       "name": "unlock()"
     }
   },
-  "documentation": " Shadow for {@link android.hardware.Camera}.\n",
   "imports": [
     "android.graphics.ImageFormat",
     "android.hardware.Camera",
@@ -376,5 +375,6 @@
     "java.util.Map",
     "org.robolectric.shadow.api.Shadow.*"
   ],
-  "name": "org.robolectric.shadows.ShadowCamera"
+  "name": "org.robolectric.shadows.ShadowCamera",
+  "documentation": "Shadow for {@link android.hardware.Camera}.\n"
 }

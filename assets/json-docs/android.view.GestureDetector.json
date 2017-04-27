@@ -90,7 +90,6 @@
       "name": "setOnDoubleTapListener(android.view.GestureDetector.OnDoubleTapListener)"
     }
   },
-  "documentation": " Shadow for {@link android.view.GestureDetector}.\n",
   "imports": [
     "android.content.Context",
     "android.os.Handler",
@@ -104,5 +103,6 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
   ],
-  "name": "org.robolectric.shadows.ShadowGestureDetector"
+  "name": "org.robolectric.shadows.ShadowGestureDetector",
+  "documentation": "Shadow for {@link android.view.GestureDetector}.\n"
 }

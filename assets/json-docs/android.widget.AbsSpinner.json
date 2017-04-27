@@ -36,7 +36,6 @@
       "name": "setSelection(int,boolean)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.AbsSpinner}.\n",
   "imports": [
     "android.widget.AbsSpinner",
     "android.widget.SpinnerAdapter",
@@ -46,5 +45,6 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowAbsSpinner"
+  "name": "org.robolectric.shadows.ShadowAbsSpinner",
+  "documentation": "Shadow for {@link android.widget.AbsSpinner}.\n"
 }

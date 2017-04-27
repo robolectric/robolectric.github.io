@@ -6,11 +6,11 @@
         "public",
         "static"
       ],
-      "documentation": "@deprecated use {@link ShadowLooper#idleMainLooper()} instead",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "flush()"
+      "name": "flush()",
+      "documentation": "@deprecated use {@link ShadowLooper#idleMainLooper()} instead\n"
     },
     "idleMainLooper()": {
       "isImplementation": false,
@@ -18,11 +18,11 @@
         "public",
         "static"
       ],
-      "documentation": "@deprecated\n@see org.robolectric.shadows.ShadowLooper#idleMainLooper()",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "idleMainLooper()"
+      "name": "idleMainLooper()",
+      "documentation": "@deprecated\n@see org.robolectric.shadows.ShadowLooper#idleMainLooper()\n"
     },
     "runMainLooperOneTask()": {
       "isImplementation": false,
@@ -30,11 +30,11 @@
         "public",
         "static"
       ],
-      "documentation": "@deprecated\n@see ShadowLooper#runMainLooperOneTask() ()",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "runMainLooperOneTask()"
+      "name": "runMainLooperOneTask()",
+      "documentation": "@deprecated\n@see ShadowLooper#runMainLooperOneTask() ()\n"
     },
     "runMainLooperToEndOfTasks()": {
       "isImplementation": false,
@@ -42,11 +42,11 @@
         "public",
         "static"
       ],
-      "documentation": "@deprecated\n@see ShadowLooper#runUiThreadTasksIncludingDelayedTasks()",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "runMainLooperToEndOfTasks()"
+      "name": "runMainLooperToEndOfTasks()",
+      "documentation": "@deprecated\n@see ShadowLooper#runUiThreadTasksIncludingDelayedTasks()\n"
     },
     "runMainLooperToNextTask()": {
       "isImplementation": false,
@@ -54,19 +54,19 @@
         "public",
         "static"
       ],
-      "documentation": "@deprecated\n@see ShadowLooper#runMainLooperToNextTask() ()",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "runMainLooperToNextTask()"
+      "name": "runMainLooperToNextTask()",
+      "documentation": "@deprecated\n@see ShadowLooper#runMainLooperToNextTask() ()\n"
     }
   },
-  "documentation": " Shadow for Handler that puts posted {@link Runnable}s into a queue instead of sending them to be handled on a\n separate thread.{@link Runnable}s that are scheduled to be executed immediately can be triggered by calling\n {@link #idleMainLooper()}.\n todo: add utility method to advance time and trigger execution of Runnables scheduled for a time in the future\n \n @deprecated There is no special shadow implementation for the {@link android.os.Handler} class. The special\n handling is all done by {@link ShadowLooper} and {@link ShadowMessageQueue}. This class has been retained\n for backward compatibility with the various static method implementations.\n",
   "imports": [
     "android.os.Handler",
     "android.os.Looper",
     "org.robolectric.annotation.Implements",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowHandler"
+  "name": "org.robolectric.shadows.ShadowHandler",
+  "documentation": "Shadow for Handler that puts posted {@link Runnable}s into a queue instead of sending them to be handled on a\nseparate thread.{@link Runnable}s that are scheduled to be executed immediately can be triggered by calling\n{@link #idleMainLooper()}.\ntodo: add utility method to advance time and trigger execution of Runnables scheduled for a time in the future\n\n@deprecated There is no special shadow implementation for the {@link android.os.Handler} class. The special\nhandling is all done by {@link ShadowLooper} and {@link ShadowMessageQueue}. This class has been retained\nfor backward compatibility with the various static method implementations.\n"
 }

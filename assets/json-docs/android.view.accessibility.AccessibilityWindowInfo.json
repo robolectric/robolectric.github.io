@@ -28,13 +28,13 @@
         "public",
         "static"
       ],
-      "documentation": "Check for leaked objects that were {@code obtain}ed but never\n{@code recycle}d.\n\n@param printUnrecycledWindowsToSystemErr - if true, stack traces of calls\n       to {@code obtain} that lack matching calls to {@code recycle} are\n       dumped to System.err.\n@return {@code true} if there are unrecycled windows",
       "params": [
         "printUnrecycledWindowsToSystemErr"
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "areThereUnrecycledWindows(boolean)"
+      "name": "areThereUnrecycledWindows(boolean)",
+      "documentation": "Check for leaked objects that were {@code obtain}ed but never\n{@code recycle}d.\n\n@param printUnrecycledWindowsToSystemErr - if true, stack traces of calls\n       to {@code obtain} that lack matching calls to {@code recycle} are\n       dumped to System.err.\n@return {@code true} if there are unrecycled windows\n"
     },
     "equals(java.lang.Object)": {
       "isImplementation": true,
@@ -222,11 +222,11 @@
         "public",
         "static"
       ],
-      "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledWindows} will always\nreturn false if called immediately afterwards.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "resetObtainedInstances()"
+      "name": "resetObtainedInstances()",
+      "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledWindows} will always\nreturn false if called immediately afterwards.\n"
     },
     "setAccessibilityFocused(boolean)": {
       "isImplementation": false,
@@ -325,7 +325,6 @@
       "name": "setType(int)"
     }
   },
-  "documentation": " Shadow of {@link android.view.accessibility.AccessibilityWindowInfo} that allows a test to set\n properties that are locked in the original class.\n",
   "imports": [
     "android.graphics.Rect",
     "android.view.accessibility.AccessibilityNodeInfo",
@@ -341,5 +340,6 @@
     "java.util.Map",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowAccessibilityWindowInfo"
+  "name": "org.robolectric.shadows.ShadowAccessibilityWindowInfo",
+  "documentation": "Shadow of {@link android.view.accessibility.AccessibilityWindowInfo} that allows a test to set\nproperties that are locked in the original class.\n"
 }

@@ -68,7 +68,6 @@
       "name": "setSource(android.view.View,int)"
     }
   },
-  "documentation": " Shadow of {@link android.view.accessibility.AccessibilityRecord}.\n",
   "imports": [
     "android.os.Parcelable",
     "android.view.View",
@@ -79,5 +78,6 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowAccessibilityRecord"
+  "name": "org.robolectric.shadows.ShadowAccessibilityRecord",
+  "documentation": "Shadow of {@link android.view.accessibility.AccessibilityRecord}.\n"
 }

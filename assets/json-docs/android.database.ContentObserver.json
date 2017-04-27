@@ -26,7 +26,6 @@
       "name": "dispatchChange(boolean,android.net.Uri)"
     }
   },
-  "documentation": " Shadow for {@link android.database.ContentObserver}.\n",
   "imports": [
     "android.database.ContentObserver",
     "android.net.Uri",
@@ -34,5 +33,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowContentObserver"
+  "name": "org.robolectric.shadows.ShadowContentObserver",
+  "documentation": "Shadow for {@link android.database.ContentObserver}.\n"
 }

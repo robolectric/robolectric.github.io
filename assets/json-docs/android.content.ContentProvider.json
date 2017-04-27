@@ -23,7 +23,6 @@
       "name": "setCallingPackage(java.lang.String)"
     }
   },
-  "documentation": " Shadow for {@link ContentProvider}.\n",
   "imports": [
     "android.content.ContentProvider",
     "org.robolectric.annotation.Implementation",
@@ -31,5 +30,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowContentProvider"
+  "name": "org.robolectric.shadows.ShadowContentProvider",
+  "documentation": "Shadow for {@link ContentProvider}.\n"
 }

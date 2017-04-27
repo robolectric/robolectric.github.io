@@ -5,13 +5,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Simulates a click on the {@code Dialog} item indicated by {@code index}. Handles both multi- and single-choice dialogs, tracks which items are currently\nchecked and calls listeners appropriately.\n\n@param index the index of the item to click on",
       "params": [
         "index"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "clickOnItem(int)"
+      "name": "clickOnItem(int)",
+      "documentation": "Simulates a click on the {@code Dialog} item indicated by {@code index}. Handles both multi- and single-choice dialogs, tracks which items are currently\nchecked and calls listeners appropriately.\n\n@param index the index of the item to click on\n"
     },
     "getAdapter()": {
       "isImplementation": false,
@@ -28,11 +28,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return return the view set with {@link AlertDialog.Builder#setCustomTitle(View)}",
       "params": [],
       "returnType": "android.view.View",
       "exceptions": [],
-      "name": "getCustomTitleView()"
+      "name": "getCustomTitleView()",
+      "documentation": "Non-Android accessor.\n\n@return return the view set with {@link AlertDialog.Builder#setCustomTitle(View)}\n"
     },
     "getCustomView()": {
       "isImplementation": false,
@@ -49,11 +49,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the items that are available to be clicked on",
       "params": [],
       "returnType": "java.lang.CharSequence[]",
       "exceptions": [],
-      "name": "getItems()"
+      "name": "getItems()",
+      "documentation": "Non-Android accessor.\n\n@return the items that are available to be clicked on\n"
     },
     "getLatestAlertDialog()": {
       "isImplementation": false,
@@ -61,22 +61,22 @@
         "public",
         "static"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the most recently created {@code AlertDialog}, or null if none has been created during this test run",
       "params": [],
       "returnType": "android.app.AlertDialog",
       "exceptions": [],
-      "name": "getLatestAlertDialog()"
+      "name": "getLatestAlertDialog()",
+      "documentation": "Non-Android accessor.\n\n@return the most recently created {@code AlertDialog}, or null if none has been created during this test run\n"
     },
     "getMessage()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the message displayed in the dialog",
       "params": [],
       "returnType": "java.lang.CharSequence",
       "exceptions": [],
-      "name": "getMessage()"
+      "name": "getMessage()",
+      "documentation": "Non-Android accessor.\n\n@return the message displayed in the dialog\n"
     },
     "getShadowAlertController()": {
       "isImplementation": false,
@@ -103,11 +103,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return return the view set with {@link AlertDialog.Builder#setView(View)}",
       "params": [],
       "returnType": "android.view.View",
       "exceptions": [],
-      "name": "getView()"
+      "name": "getView()",
+      "documentation": "Non-Android accessor.\n\n@return return the view set with {@link AlertDialog.Builder#setView(View)}\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -115,11 +115,11 @@
         "public",
         "static"
       ],
-      "documentation": "Resets the tracking of the most recently created {@code AlertDialog}",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "reset()"
+      "name": "reset()",
+      "documentation": "Resets the tracking of the most recently created {@code AlertDialog}\n"
     },
     "show()": {
       "isImplementation": true,
@@ -132,7 +132,6 @@
       "name": "show()"
     }
   },
-  "documentation": " Shadow for {@link android.app.AlertDialog}.\n",
   "imports": [
     "android.app.AlertDialog",
     "android.content.DialogInterface",
@@ -149,5 +148,6 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowAlertDialog"
+  "name": "org.robolectric.shadows.ShadowAlertDialog",
+  "documentation": "Shadow for {@link android.app.AlertDialog}.\n"
 }

@@ -81,7 +81,6 @@
       "name": "getWidth()"
     }
   },
-  "documentation": " Shadow for {@link Picture}.\n",
   "imports": [
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
@@ -89,5 +88,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowPicture"
+  "name": "org.robolectric.shadows.ShadowPicture",
+  "documentation": "Shadow for {@link Picture}.\n"
 }

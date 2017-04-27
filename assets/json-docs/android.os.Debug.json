@@ -35,7 +35,6 @@
       "name": "getRuntimeStats()"
     }
   },
-  "documentation": " Shadow for {@link android.os.Debug}.\n",
   "imports": [
     "android.os.Debug",
     "com.google.common.collect.ImmutableMap",
@@ -45,5 +44,6 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowDebug"
+  "name": "org.robolectric.shadows.ShadowDebug",
+  "documentation": "Shadow for {@link android.os.Debug}.\n"
 }

@@ -69,13 +69,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Set to true if you\u0027d like Robolectric to strictly simulate the real Android behavior when\ncalling {@link Context#startActivity(android.content.Intent)}. Real Android throws a\n{@link android.content.ActivityNotFoundException} if given\nan {@link Intent} that is not known to the {@link android.content.pm.PackageManager}\n\nBy default, this behavior is off (false).\n\n@param checkActivities True to validate activities.",
       "params": [
         "checkActivities"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "checkActivities(boolean)"
+      "name": "checkActivities(boolean)",
+      "documentation": "Set to true if you\u0027d like Robolectric to strictly simulate the real Android behavior when\ncalling {@link Context#startActivity(android.content.Intent)}. Real Android throws a\n{@link android.content.ActivityNotFoundException} if given\nan {@link Intent} that is not known to the {@link android.content.pm.PackageManager}\n\nBy default, this behavior is off (false).\n\n@param checkActivities True to validate activities.\n"
     },
     "checkPermission(java.lang.String,int,int)": {
       "isImplementation": true,
@@ -96,11 +96,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Clears all {@code Intent} started by {@link #startService(android.content.Intent)}",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "clearStartedServices()"
+      "name": "clearStartedServices()",
+      "documentation": "Clears all {@code Intent} started by {@link #startService(android.content.Intent)}\n"
     },
     "clearWakeLocks()": {
       "isImplementation": false,
@@ -151,11 +151,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the app widget manager used by this {@code Application}",
       "params": [],
       "returnType": "android.appwidget.AppWidgetManager",
       "exceptions": [],
-      "name": "getAppWidgetManager()"
+      "name": "getAppWidgetManager()",
+      "documentation": "Non-Android accessor.\n\n@return the app widget manager used by this {@code Application}\n"
     },
     "getApplicationContext()": {
       "isImplementation": true,
@@ -185,11 +185,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Return the background scheduler.\n\n@return  Background scheduler.",
       "params": [],
       "returnType": "org.robolectric.util.Scheduler",
       "exceptions": [],
-      "name": "getBackgroundThreadScheduler()"
+      "name": "getBackgroundThreadScheduler()",
+      "documentation": "Return the background scheduler.\n\n@return  Background scheduler.\n"
     },
     "getBluetoothAdapter()": {
       "isImplementation": false,
@@ -226,11 +226,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Return the foreground scheduler.\n\n@return  Foreground scheduler.",
       "params": [],
       "returnType": "org.robolectric.util.Scheduler",
       "exceptions": [],
-      "name": "getForegroundThreadScheduler()"
+      "name": "getForegroundThreadScheduler()",
+      "documentation": "Return the foreground scheduler.\n\n@return  Foreground scheduler.\n"
     },
     "getInstance()": {
       "isImplementation": false,
@@ -308,11 +308,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the layout inflater used by this {@code Application}",
       "params": [],
       "returnType": "android.view.LayoutInflater",
       "exceptions": [],
-      "name": "getLayoutInflater()"
+      "name": "getLayoutInflater()",
+      "documentation": "Non-Android accessor.\n\n@return the layout inflater used by this {@code Application}\n"
     },
     "getMainHandler()": {
       "isImplementation": false,
@@ -329,33 +329,33 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Consumes the most recent {@code Intent} started by {@link #startActivity(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}",
       "params": [],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "getNextStartedActivity()"
+      "name": "getNextStartedActivity()",
+      "documentation": "Consumes the most recent {@code Intent} started by {@link #startActivity(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}\n"
     },
     "getNextStartedService()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Consumes the most recent {@code Intent} started by {@link #startService(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}",
       "params": [],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "getNextStartedService()"
+      "name": "getNextStartedService()",
+      "documentation": "Consumes the most recent {@code Intent} started by {@link #startService(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}\n"
     },
     "getNextStoppedService()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Consumes the {@code Intent} requested to stop a service by {@link #stopService(android.content.Intent)}\nfrom the bottom of the stack of stop requests.",
       "params": [],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "getNextStoppedService()"
+      "name": "getNextStoppedService()",
+      "documentation": "Consumes the {@code Intent} requested to stop a service by {@link #stopService(android.content.Intent)}\nfrom the bottom of the stack of stop requests.\n"
     },
     "getReceiversForIntent(android.content.Intent)": {
       "isImplementation": false,
@@ -374,11 +374,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return list of {@link Wrapper}s for registered receivers",
       "params": [],
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
       "exceptions": [],
-      "name": "getRegisteredReceivers()"
+      "name": "getRegisteredReceivers()",
+      "documentation": "Non-Android accessor.\n\n@return list of {@link Wrapper}s for registered receivers\n"
     },
     "getShownToasts()": {
       "isImplementation": false,
@@ -442,22 +442,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Returns the most recent {@code Intent} started by {@link #startActivity(android.content.Intent)} without\nconsuming it.\n\n@return the most recently started {@code Intent}",
       "params": [],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "peekNextStartedActivity()"
+      "name": "peekNextStartedActivity()",
+      "documentation": "Returns the most recent {@code Intent} started by {@link #startActivity(android.content.Intent)} without\nconsuming it.\n\n@return the most recently started {@code Intent}\n"
     },
     "peekNextStartedService()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Returns the most recent {@code Intent} started by {@link #startService(android.content.Intent)} without\nconsuming it.\n\n@return the most recently started {@code Intent}",
       "params": [],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "peekNextStartedService()"
+      "name": "peekNextStartedService()",
+      "documentation": "Returns the most recent {@code Intent} started by {@link #startService(android.content.Intent)} without\nconsuming it.\n\n@return the most recently started {@code Intent}\n"
     },
     "postIntent(android.content.Intent,org.robolectric.shadows.ShadowApplication.Wrapper,java.util.concurrent.atomic.AtomicBoolean)": {
       "isImplementation": false,
@@ -478,7 +478,6 @@
       "modifiers": [
         "private"
       ],
-      "documentation": "Enforces that BroadcastReceivers invoked during an ordered broadcast run serially, passing along their results.",
       "params": [
         "wrapper",
         "intent",
@@ -487,7 +486,8 @@
       ],
       "returnType": "com.google.common.util.concurrent.ListenableFuture\u003corg.robolectric.shadows.ShadowApplication.BroadcastResultHolder\u003e",
       "exceptions": [],
-      "name": "postIntent(org.robolectric.shadows.ShadowApplication.Wrapper,android.content.Intent,com.google.common.util.concurrent.ListenableFuture\u003corg.robolectric.shadows.ShadowApplication.BroadcastResultHolder\u003e,java.util.concurrent.atomic.AtomicBoolean)"
+      "name": "postIntent(org.robolectric.shadows.ShadowApplication.Wrapper,android.content.Intent,com.google.common.util.concurrent.ListenableFuture\u003corg.robolectric.shadows.ShadowApplication.BroadcastResultHolder\u003e,java.util.concurrent.atomic.AtomicBoolean)",
+      "documentation": "Enforces that BroadcastReceivers invoked during an ordered broadcast run serially, passing along their results."
     },
     "postOrderedToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent,int,java.lang.String,android.os.Bundle)": {
       "isImplementation": false,
@@ -549,14 +549,14 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Always returns {@code null}\n\n@return {@code null}",
       "params": [
         "receiver",
         "filter"
       ],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)"
+      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)",
+      "documentation": "Always returns {@code null}\n\n@return {@code null}\n"
     },
     "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)": {
       "isImplementation": true,
@@ -606,11 +606,11 @@
         "public",
         "static"
       ],
-      "documentation": "Runs any background tasks previously queued by {@link android.os.AsyncTask#execute(Object[])}.\n\nNote: calling this method does not pause or un-pause the scheduler.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "runBackgroundTasks()"
+      "name": "runBackgroundTasks()",
+      "documentation": "Runs any background tasks previously queued by {@link android.os.AsyncTask#execute(Object[])}.\n\n\u003cp\u003e\nNote: calling this method does not pause or un-pause the scheduler.\n"
     },
     "sendBroadcast(android.content.Intent)": {
       "isImplementation": true,
@@ -642,14 +642,14 @@
       "modifiers": [
         "private"
       ],
-      "documentation": "Broadcasts the {@code Intent} by iterating through the registered receivers, invoking their filters including\npermissions, and calling {@code onReceive(Application, Intent)} as appropriate. Does not enqueue the\n{@code Intent} for later inspection.\n\n@param intent the {@code Intent} to broadcast\n              todo: enqueue the Intent for later inspection",
       "params": [
         "intent",
         "receiverPermission"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "sendBroadcastWithPermission(android.content.Intent,java.lang.String)"
+      "name": "sendBroadcastWithPermission(android.content.Intent,java.lang.String)",
+      "documentation": "Broadcasts the {@code Intent} by iterating through the registered receivers, invoking their filters including\npermissions, and calling {@code onReceive(Application, Intent)} as appropriate. Does not enqueue the\n{@code Intent} for later inspection.\n\n@param intent the {@code Intent} to broadcast\n              todo: enqueue the Intent for later inspection\n"
     },
     "sendOrderedBroadcast(android.content.Intent,java.lang.String)": {
       "isImplementation": true,
@@ -825,14 +825,14 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated Do not depend on this method to override services as it will be removed in a future update.\nThe preferered method is use the shadow of the corresponding service.",
       "params": [
         "key",
         "service"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setSystemService(java.lang.String,java.lang.Object)"
+      "name": "setSystemService(java.lang.String,java.lang.Object)",
+      "documentation": "@deprecated Do not depend on this method to override services as it will be removed in a future update.\nThe preferered method is use the shadow of the corresponding service.\n"
     },
     "setUnbindServiceShouldThrowIllegalArgument(boolean)": {
       "isImplementation": false,
@@ -944,7 +944,6 @@
       "name": "verifyActivityInManifest(android.content.Intent)"
     }
   },
-  "documentation": " Shadow for {@link android.app.Application}.\n",
   "imports": [
     "android.app.Application",
     "android.appwidget.AppWidgetManager",
@@ -999,5 +998,6 @@
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.newInstanceOf"
   ],
-  "name": "org.robolectric.shadows.ShadowApplication"
+  "name": "org.robolectric.shadows.ShadowApplication",
+  "documentation": "Shadow for {@link android.app.Application}.\n"
 }

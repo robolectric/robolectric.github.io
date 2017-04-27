@@ -15,13 +15,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Perform a click on a menu item.\n\n@param menuItemResId Menu item resource ID.\n@return True if the click was handled, false otherwise.",
       "params": [
         "menuItemResId"
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "clickMenuItem(int)"
+      "name": "clickMenuItem(int)",
+      "documentation": "Perform a click on a menu item.\n\n@param menuItemResId Menu item resource ID.\n@return True if the click was handled, false otherwise.\n"
     },
     "dismissDialog(int)": {
       "isImplementation": true,
@@ -41,13 +41,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Checks to ensure that the{@code contentView} has been set\n\n@param id ID of the view to find\n@return the view\n@throws RuntimeException if the {@code contentView} has not been called first",
       "params": [
         "id"
       ],
       "returnType": "android.view.View",
       "exceptions": [],
-      "name": "findViewById(int)"
+      "name": "findViewById(int)",
+      "documentation": "Checks to ensure that the{@code contentView} has been set\n\n@param id ID of the view to find\n@return the view\n@throws RuntimeException if the {@code contentView} has not been called first\n"
     },
     "finish()": {
       "isImplementation": true,
@@ -85,11 +85,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the {@code contentView} set by one of the {@code setContentView()} methods",
       "params": [],
       "returnType": "android.view.View",
       "exceptions": [],
-      "name": "getContentView()"
+      "name": "getContentView()",
+      "documentation": "Non-Android accessor.\n\n@return the {@code contentView} set by one of the {@code setContentView()} methods\n"
     },
     "getCurrentFocus()": {
       "isImplementation": true,
@@ -138,11 +138,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor\n\n@return the dialog resource id passed into\n        {@code Activity.showDialog(int, Bundle)} or {@code Activity.showDialog(int)}",
       "params": [],
       "returnType": "java.lang.Integer",
       "exceptions": [],
-      "name": "getLastShownDialogId()"
+      "name": "getLastShownDialogId()",
+      "documentation": "Non-Android accessor\n\n@return the dialog resource id passed into\n        {@code Activity.showDialog(int, Bundle)} or {@code Activity.showDialog(int)}\n"
     },
     "getLayoutInflater()": {
       "isImplementation": true,
@@ -179,22 +179,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor consumes and returns the next {@code Intent} on the\nstarted activities for results stack.\n\n@return the next started {@code Intent} for an activity, wrapped in\n        an {@link ShadowActivity.IntentForResult} object",
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
       "exceptions": [],
-      "name": "getNextStartedActivityForResult()"
+      "name": "getNextStartedActivityForResult()",
+      "documentation": "Non-Android accessor consumes and returns the next {@code Intent} on the\nstarted activities for results stack.\n\n@return the next started {@code Intent} for an activity, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
     },
     "getOptionsMenu()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Return the options menu.\n\n@return  Options menu.",
       "params": [],
       "returnType": "android.view.Menu",
       "exceptions": [],
-      "name": "getOptionsMenu()"
+      "name": "getOptionsMenu()",
+      "documentation": "Return the options menu.\n\n@return  Options menu.\n"
     },
     "getParent()": {
       "isImplementation": true,
@@ -242,22 +242,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the {@code resultCode} set by one of the {@code setResult()} methods",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getResultCode()"
+      "name": "getResultCode()",
+      "documentation": "Non-Android accessor.\n\n@return the {@code resultCode} set by one of the {@code setResult()} methods\n"
     },
     "getResultIntent()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)}",
       "params": [],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "getResultIntent()"
+      "name": "getResultIntent()",
+      "documentation": "Non-Android accessor.\n\n@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)}\n"
     },
     "getTaskId()": {
       "isImplementation": true,
@@ -285,11 +285,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Constructs a new Window (a {@link com.android.internal.policy.impl.PhoneWindow}) if no window has previously been\nset.\n\n@return the window associated with this Activity",
       "params": [],
       "returnType": "android.view.Window",
       "exceptions": [],
-      "name": "getWindow()"
+      "name": "getWindow()",
+      "documentation": "Constructs a new Window (a {@link com.android.internal.policy.impl.PhoneWindow}) if no window has previously been\nset.\n\n@return the window associated with this Activity\n"
     },
     "hasCancelledPendingTransitions()": {
       "isImplementation": false,
@@ -306,11 +306,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@return whether {@link #finish()} was called",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isFinishing()"
+      "name": "isFinishing()",
+      "documentation": "@return whether {@link #finish()} was called\n"
     },
     "isTaskRoot()": {
       "isImplementation": true,
@@ -363,11 +363,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor returns the most recent {@code Intent} started by\n{@link #[[#]]#startActivityForResult(android.content.Intent, int)} without\nconsuming it.\n\n@return the most recently started {@code Intent}, wrapped in\n        an {@link ShadowActivity.IntentForResult} object",
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
       "exceptions": [],
-      "name": "peekNextStartedActivityForResult()"
+      "name": "peekNextStartedActivityForResult()",
+      "documentation": "Non-Android accessor returns the most recent {@code Intent} started by\n{@link #[[#]]#startActivityForResult(android.content.Intent, int)} without\nconsuming it.\n\n@return the most recently started {@code Intent}, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
     },
     "receiveResult(android.content.Intent,int,android.content.Intent)": {
       "isImplementation": false,
@@ -472,13 +472,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@param view View to focus.",
       "params": [
         "view"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setCurrentFocus(android.view.View)"
+      "name": "setCurrentFocus(android.view.View)",
+      "documentation": "Non-Android accessor.\n\n@param view View to focus.\n"
     },
     "setDefaultKeyMode(int)": {
       "isImplementation": true,
@@ -521,13 +521,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Allow setting of Parent fragmentActivity (for unit testing purposes only)\n\n@param parent Parent fragmentActivity to set on this fragmentActivity",
       "params": [
         "parent"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setParent(android.app.Activity)"
+      "name": "setParent(android.app.Activity)",
+      "documentation": "Allow setting of Parent fragmentActivity (for unit testing purposes only)\n\n@param parent Parent fragmentActivity to set on this fragmentActivity\n"
     },
     "setRequestedOrientation(int)": {
       "isImplementation": true,
@@ -724,7 +724,6 @@
       "name": "stopManagingCursor(android.database.Cursor)"
     }
   },
-  "documentation": " Shadow for {@link android.app.Activity}.\n",
   "imports": [
     "android.R",
     "android.app.Activity",
@@ -762,5 +761,6 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor"
   ],
-  "name": "org.robolectric.shadows.ShadowActivity"
+  "name": "org.robolectric.shadows.ShadowActivity",
+  "documentation": "Shadow for {@link android.app.Activity}.\n"
 }

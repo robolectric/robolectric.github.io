@@ -54,7 +54,6 @@
       "name": "loadStringValueAt(int)"
     }
   },
-  "documentation": " Shadow for {@link android.content.res.TypedArray}.\n",
   "imports": [
     "android.content.res.Resources",
     "android.content.res.TypedArray",
@@ -73,5 +72,6 @@
     "java.util.Map",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowTypedArray"
+  "name": "org.robolectric.shadows.ShadowTypedArray",
+  "documentation": "Shadow for {@link android.content.res.TypedArray}.\n"
 }

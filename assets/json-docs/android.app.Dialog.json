@@ -202,7 +202,6 @@
       "name": "show()"
     }
   },
-  "documentation": " Shadow for {@link android.app.Dialog}.\n",
   "imports": [
     "android.app.Activity",
     "android.app.Dialog",
@@ -224,5 +223,6 @@
     "java.util.List",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowDialog"
+  "name": "org.robolectric.shadows.ShadowDialog",
+  "documentation": "Shadow for {@link android.app.Dialog}.\n"
 }

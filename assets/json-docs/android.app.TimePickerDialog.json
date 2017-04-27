@@ -38,7 +38,6 @@
       "name": "getMinute()"
     }
   },
-  "documentation": " Shadow for {@link android.app.TimePickerDialog}.\n",
   "imports": [
     "android.app.TimePickerDialog",
     "android.content.Context",
@@ -47,5 +46,6 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowTimePickerDialog"
+  "name": "org.robolectric.shadows.ShadowTimePickerDialog",
+  "documentation": "Shadow for {@link android.app.TimePickerDialog}.\n"
 }

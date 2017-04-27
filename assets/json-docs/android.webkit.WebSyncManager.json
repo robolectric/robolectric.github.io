@@ -31,10 +31,10 @@
       "name": "synced()"
     }
   },
-  "documentation": " Shadow for {@code android.webkit.WebSyncManager}.\n",
   "imports": [
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowWebSyncManager"
+  "name": "org.robolectric.shadows.ShadowWebSyncManager",
+  "documentation": "Shadow for {@code android.webkit.WebSyncManager}.\n"
 }

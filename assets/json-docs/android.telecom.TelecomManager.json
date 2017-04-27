@@ -51,11 +51,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "clearAccounts()"
+      "name": "clearAccounts()",
+      "documentation": "@deprecated "
     },
     "clearAccountsForPackage(java.lang.String)": {
       "isImplementation": true,
@@ -237,11 +237,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "@deprecated",
       "params": [],
       "returnType": "android.content.ComponentName",
       "exceptions": [],
-      "name": "getDefaultPhoneApp()"
+      "name": "getDefaultPhoneApp()",
+      "documentation": "@deprecated "
     },
     "getLine1Number(android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
@@ -508,7 +508,6 @@
       "name": "unregisterPhoneAccount(android.telecom.PhoneAccountHandle)"
     }
   },
-  "documentation": " Shadow for {@link android.telecom.TelecomManager}.\n",
   "imports": [
     "android.content.ComponentName",
     "android.content.Context",
@@ -532,5 +531,6 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowTelecomManager"
+  "name": "org.robolectric.shadows.ShadowTelecomManager",
+  "documentation": "Shadow for {@link android.telecom.TelecomManager}.\n"
 }

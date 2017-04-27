@@ -38,7 +38,6 @@
       "name": "onReceive(android.content.Context,android.content.Intent,java.util.concurrent.atomic.AtomicBoolean)"
     }
   },
-  "documentation": " Shadow for {@link android.content.BroadcastReceiver}.\n",
   "imports": [
     "android.content.BroadcastReceiver",
     "android.content.Context",
@@ -48,5 +47,6 @@
     "org.robolectric.annotation.RealObject",
     "java.util.concurrent.atomic.AtomicBoolean"
   ],
-  "name": "org.robolectric.shadows.ShadowBroadcastReceiver"
+  "name": "org.robolectric.shadows.ShadowBroadcastReceiver",
+  "documentation": "Shadow for {@link android.content.BroadcastReceiver}.\n"
 }

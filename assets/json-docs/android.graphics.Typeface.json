@@ -167,11 +167,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor. Return the font description.\n\n@return Font description.",
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowTypeface.FontDesc",
       "exceptions": [],
-      "name": "getFontDescription()"
+      "name": "getFontDescription()",
+      "documentation": "Non-Android accessor. Return the font description.\n\n@return Font description.\n"
     },
     "getStyle()": {
       "isImplementation": true,
@@ -196,7 +196,6 @@
       "name": "reset()"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.Typeface}.\n",
   "imports": [
     "android.content.res.AssetManager",
     "android.graphics.Typeface",
@@ -219,5 +218,6 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowTypeface"
+  "name": "org.robolectric.shadows.ShadowTypeface",
+  "documentation": "Shadow for {@link android.graphics.Typeface}.\n"
 }

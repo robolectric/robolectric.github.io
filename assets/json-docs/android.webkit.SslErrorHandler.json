@@ -41,11 +41,11 @@
       "name": "wasProceedCalled()"
     }
   },
-  "documentation": " Shadow for {@link android.webkit.SslErrorHandler}.\n",
   "imports": [
     "android.webkit.SslErrorHandler",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowSslErrorHandler"
+  "name": "org.robolectric.shadows.ShadowSslErrorHandler",
+  "documentation": "Shadow for {@link android.webkit.SslErrorHandler}.\n"
 }

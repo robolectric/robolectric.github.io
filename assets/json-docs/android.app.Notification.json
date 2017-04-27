@@ -187,7 +187,6 @@
       "name": "usesChronometer()"
     }
   },
-  "documentation": " Shadow for {@link android.app.Notification}.\n",
   "imports": [
     "android.app.Notification",
     "android.graphics.Bitmap",
@@ -208,5 +207,6 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadows.ResourceHelper.getInternalResourceId"
   ],
-  "name": "org.robolectric.shadows.ShadowNotification"
+  "name": "org.robolectric.shadows.ShadowNotification",
+  "documentation": "Shadow for {@link android.app.Notification}.\n"
 }

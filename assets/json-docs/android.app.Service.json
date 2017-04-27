@@ -45,11 +45,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor, to use in assertions.\n@return Is this service stopped by self.",
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isStoppedBySelf()"
+      "name": "isStoppedBySelf()",
+      "documentation": "Non-Android accessor, to use in assertions.\n@return Is this service stopped by self.\n"
     },
     "onDestroy()": {
       "isImplementation": true,
@@ -120,7 +120,6 @@
       "name": "stopSelf(int)"
     }
   },
-  "documentation": " Shadow for {@link android.app.Service}.\n",
   "imports": [
     "android.app.Notification",
     "android.app.NotificationManager",
@@ -131,5 +130,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
-  "name": "org.robolectric.shadows.ShadowService"
+  "name": "org.robolectric.shadows.ShadowService",
+  "documentation": "Shadow for {@link android.app.Service}.\n"
 }

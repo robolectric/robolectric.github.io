@@ -826,7 +826,6 @@
       "name": "strictError(java.lang.String,java.lang.Object...)"
     }
   },
-  "documentation": " Shadow for {@link android.content.res.AssetManager}.\n",
   "imports": [
     "android.content.res.AssetFileDescriptor",
     "android.content.res.AssetManager",
@@ -876,5 +875,6 @@
     "org.robolectric.RuntimeEnvironment.castNativePtr",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowAssetManager"
+  "name": "org.robolectric.shadows.ShadowAssetManager",
+  "documentation": "Shadow for {@link android.content.res.AssetManager}.\n"
 }

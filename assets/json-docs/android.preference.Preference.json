@@ -23,7 +23,6 @@
       "name": "click()"
     }
   },
-  "documentation": " Shadow for {@link android.preference.Preference}.\n",
   "imports": [
     "android.preference.Preference",
     "android.preference.PreferenceManager",
@@ -32,5 +31,6 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowPreference"
+  "name": "org.robolectric.shadows.ShadowPreference",
+  "documentation": "Shadow for {@link android.preference.Preference}.\n"
 }

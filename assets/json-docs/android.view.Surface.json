@@ -23,11 +23,11 @@
       "name": "getSurfaceTexture()"
     }
   },
-  "documentation": " Shadow for {@link android.view.Surface}.\n",
   "imports": [
     "android.view.Surface",
     "android.graphics.SurfaceTexture",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowSurface"
+  "name": "org.robolectric.shadows.ShadowSurface",
+  "documentation": "Shadow for {@link android.view.Surface}.\n"
 }

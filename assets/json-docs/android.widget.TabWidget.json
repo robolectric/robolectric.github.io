@@ -11,12 +11,12 @@
       "name": "initTabWidget()"
     }
   },
-  "documentation": " Shadow for {@link android.widget.TabWidget}.\n",
   "imports": [
     "android.widget.TabWidget",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowTabWidget"
+  "name": "org.robolectric.shadows.ShadowTabWidget",
+  "documentation": "Shadow for {@link android.widget.TabWidget}.\n"
 }

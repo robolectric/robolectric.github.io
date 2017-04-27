@@ -25,11 +25,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Current video state.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getCurrentVideoState()"
+      "name": "getCurrentVideoState()",
+      "documentation": "Non-Android accessor.\n\n@return Current video state.\n"
     },
     "getDuration()": {
       "isImplementation": true,
@@ -46,66 +46,66 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return On completion listener.",
       "params": [],
       "returnType": "android.media.MediaPlayer.OnCompletionListener",
       "exceptions": [],
-      "name": "getOnCompletionListener()"
+      "name": "getOnCompletionListener()",
+      "documentation": "Non-Android accessor.\n\n@return On completion listener.\n"
     },
     "getOnErrorListener()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return On error listener.",
       "params": [],
       "returnType": "android.media.MediaPlayer.OnErrorListener",
       "exceptions": [],
-      "name": "getOnErrorListener()"
+      "name": "getOnErrorListener()",
+      "documentation": "Non-Android accessor.\n\n@return On error listener.\n"
     },
     "getOnPreparedListener()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return On prepared listener.",
       "params": [],
       "returnType": "android.media.MediaPlayer.OnPreparedListener",
       "exceptions": [],
-      "name": "getOnPreparedListener()"
+      "name": "getOnPreparedListener()",
+      "documentation": "Non-Android accessor.\n\n@return On prepared listener.\n"
     },
     "getPrevVideoState()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Previous video state.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getPrevVideoState()"
+      "name": "getPrevVideoState()",
+      "documentation": "Non-Android accessor.\n\n@return Previous video state.\n"
     },
     "getVideoPath()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Video path.",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "getVideoPath()"
+      "name": "getVideoPath()",
+      "documentation": "Non-Android accessor.\n\n@return Video path.\n"
     },
     "getVideoURIString()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Video URI.",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "getVideoURIString()"
+      "name": "getVideoURIString()",
+      "documentation": "Non-Android accessor.\n\n@return Video URI.\n"
     },
     "isPlaying()": {
       "isImplementation": true,
@@ -142,11 +142,11 @@
       "modifiers": [
         "private"
       ],
-      "documentation": "Non-Android accessor.",
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "savePrevState()"
+      "name": "savePrevState()",
+      "documentation": "Non-Android accessor.\n"
     },
     "seekTo(int)": {
       "isImplementation": true,
@@ -165,13 +165,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.",
       "params": [
         "duration"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setDuration(int)"
+      "name": "setDuration(int)",
+      "documentation": "Non-Android accessor.\n"
     },
     "setOnCompletionListener(android.media.MediaPlayer.OnCompletionListener)": {
       "isImplementation": true,
@@ -264,7 +264,6 @@
       "name": "suspend()"
     }
   },
-  "documentation": " Shadow for {@link android.widget.VideoView}.\n",
   "imports": [
     "android.media.MediaPlayer",
     "android.net.Uri",
@@ -272,5 +271,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowVideoView"
+  "name": "org.robolectric.shadows.ShadowVideoView",
+  "documentation": "Shadow for {@link android.widget.VideoView}.\n"
 }

@@ -17,11 +17,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor consumes and returns the next scheduled alarm on the\nAlarmManager\u0027s stack.\n\n@return the next scheduled alarm, wrapped in a\n        {@link ShadowAlarmManager.ScheduledAlarm} object",
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm",
       "exceptions": [],
-      "name": "getNextScheduledAlarm()"
+      "name": "getNextScheduledAlarm()",
+      "documentation": "Non-Android accessor consumes and returns the next scheduled alarm on the\nAlarmManager\u0027s stack.\n\n@return the next scheduled alarm, wrapped in a\n        {@link ShadowAlarmManager.ScheduledAlarm} object\n"
     },
     "getScheduledAlarms()": {
       "isImplementation": false,
@@ -53,11 +53,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor returns the most recent scheduled alarm without\nconsuming it.\n\n@return the most recently scheduled alarm, wrapped in a\n        {@link ShadowAlarmManager.ScheduledAlarm} object",
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm",
       "exceptions": [],
-      "name": "peekNextScheduledAlarm()"
+      "name": "peekNextScheduledAlarm()",
+      "documentation": "Non-Android accessor returns the most recent scheduled alarm without\nconsuming it.\n\n@return the most recently scheduled alarm, wrapped in a\n        {@link ShadowAlarmManager.ScheduledAlarm} object\n"
     },
     "set(int,long,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -165,7 +165,6 @@
       "name": "setWindow(int,long,long,android.app.PendingIntent)"
     }
   },
-  "documentation": " Shadow for {@link android.app.AlarmManager}.\n",
   "imports": [
     "android.app.AlarmManager",
     "android.app.PendingIntent",
@@ -178,5 +177,6 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowAlarmManager"
+  "name": "org.robolectric.shadows.ShadowAlarmManager",
+  "documentation": "Shadow for {@link android.app.AlarmManager}.\n"
 }

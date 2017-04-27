@@ -37,11 +37,11 @@
       "name": "setPid(int)"
     }
   },
-  "documentation": " Shadow for {@link android.os.Process}.\n",
   "imports": [
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter"
   ],
-  "name": "org.robolectric.shadows.ShadowProcess"
+  "name": "org.robolectric.shadows.ShadowProcess",
+  "documentation": "Shadow for {@link android.os.Process}.\n"
 }

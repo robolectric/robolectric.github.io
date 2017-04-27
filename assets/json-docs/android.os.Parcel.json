@@ -793,7 +793,6 @@
       "name": "writeByteArray(byte[],int,int)"
     }
   },
-  "documentation": " Shadow for {@link android.os.Parcel}.\n",
   "imports": [
     "android.os.Parcel",
     "android.text.TextUtils",
@@ -817,5 +816,6 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.castNativePtr"
   ],
-  "name": "org.robolectric.shadows.ShadowParcel"
+  "name": "org.robolectric.shadows.ShadowParcel",
+  "documentation": "Shadow for {@link android.os.Parcel}.\n"
 }

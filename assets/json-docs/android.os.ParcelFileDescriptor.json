@@ -49,7 +49,6 @@
       "name": "open(java.io.File,int)"
     }
   },
-  "documentation": " Shadow for {@link android.os.ParcelFileDescriptor}.\n",
   "imports": [
     "android.os.ParcelFileDescriptor",
     "org.robolectric.Shadows",
@@ -62,5 +61,6 @@
     "java.io.RandomAccessFile",
     "java.lang.reflect.Constructor"
   ],
-  "name": "org.robolectric.shadows.ShadowParcelFileDescriptor"
+  "name": "org.robolectric.shadows.ShadowParcelFileDescriptor",
+  "documentation": "Shadow for {@link android.os.ParcelFileDescriptor}.\n"
 }

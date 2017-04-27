@@ -29,7 +29,6 @@
       "name": "loadLayoutAnimation(android.content.Context,int)"
     }
   },
-  "documentation": " Shadow for {@link android.view.animation.AnimationUtils}.\n",
   "imports": [
     "android.content.Context",
     "android.view.animation.Animation",
@@ -42,5 +41,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowAnimationUtils"
+  "name": "org.robolectric.shadows.ShadowAnimationUtils",
+  "documentation": "Shadow for {@link android.view.animation.AnimationUtils}.\n"
 }

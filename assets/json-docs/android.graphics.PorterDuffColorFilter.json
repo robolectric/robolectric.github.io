@@ -18,22 +18,22 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Returns the ARGB color used to tint the source pixels when this filter\nis applied.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getColor()"
+      "name": "getColor()",
+      "documentation": "Non-Android accessor.\n\n@return Returns the ARGB color used to tint the source pixels when this filter\nis applied.\n"
     },
     "getMode()": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return Returns the Porter-Duff mode used to composite this color filter\u0027s\ncolor with the source pixel when this filter is applied.",
       "params": [],
       "returnType": "android.graphics.PorterDuff.Mode",
       "exceptions": [],
-      "name": "getMode()"
+      "name": "getMode()",
+      "documentation": "Non-Android accessor.\n\n@return Returns the Porter-Duff mode used to composite this color filter\u0027s\ncolor with the source pixel when this filter is applied.\n"
     },
     "hashCode()": {
       "isImplementation": true,
@@ -70,12 +70,12 @@
       "name": "setMode(android.graphics.PorterDuff.Mode)"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.PorterDuffColorFilter}.\n",
   "imports": [
     "android.graphics.PorterDuff",
     "android.graphics.PorterDuffColorFilter",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowPorterDuffColorFilter"
+  "name": "org.robolectric.shadows.ShadowPorterDuffColorFilter",
+  "documentation": "Shadow for {@link android.graphics.PorterDuffColorFilter}.\n"
 }

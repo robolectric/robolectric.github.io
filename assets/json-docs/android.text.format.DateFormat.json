@@ -40,7 +40,6 @@
       "name": "getTimeFormat(android.content.Context)"
     }
   },
-  "documentation": " Shadow for {@link android.text.format.DateFormat}.\n",
   "imports": [
     "android.content.Context",
     "android.text.format.DateFormat",
@@ -48,5 +47,6 @@
     "org.robolectric.annotation.Implements",
     "java.util.Locale"
   ],
-  "name": "org.robolectric.shadows.ShadowDateFormat"
+  "name": "org.robolectric.shadows.ShadowDateFormat",
+  "documentation": "Shadow for {@link android.text.format.DateFormat}.\n"
 }

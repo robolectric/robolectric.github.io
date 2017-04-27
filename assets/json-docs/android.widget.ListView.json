@@ -21,7 +21,6 @@
       "name": "getHeaderViews()"
     }
   },
-  "documentation": " Shadow for {@link android.widget.ListView}.\n",
   "imports": [
     "android.view.View",
     "android.widget.HeaderViewListAdapter",
@@ -31,5 +30,6 @@
     "java.util.ArrayList",
     "java.util.List"
   ],
-  "name": "org.robolectric.shadows.ShadowListView"
+  "name": "org.robolectric.shadows.ShadowListView",
+  "documentation": "Shadow for {@link android.widget.ListView}.\n"
 }

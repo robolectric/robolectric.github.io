@@ -14,12 +14,12 @@
       "name": "install(android.content.Context)"
     }
   },
-  "documentation": " Shadow for {@link android.support.multidex.MultiDex}.\n",
   "imports": [
     "android.content.Context",
     "android.support.multidex.MultiDex",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Implementation"
   ],
-  "name": "org.robolectric.shadows.multidex.ShadowMultiDex"
+  "name": "org.robolectric.shadows.multidex.ShadowMultiDex",
+  "documentation": "Shadow for {@link android.support.multidex.MultiDex}.\n"
 }

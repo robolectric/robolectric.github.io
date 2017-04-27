@@ -563,16 +563,15 @@
         "public",
         "static"
       ],
-      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param canvas the canvas to visualize\n@return The textual representation of the appearance of the object.",
       "params": [
         "canvas"
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "visualize(android.graphics.Canvas)"
+      "name": "visualize(android.graphics.Canvas)",
+      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param canvas the canvas to visualize\n@return The textual representation of the appearance of the object.\n"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.Canvas}.\n\n Broken. This implementation is very specific to the application for which it was developed.\n Todo: Reimplement. Consider using the same strategy of collecting a history of draw events\n and providing methods for writing queries based on type, number, and order of events.\n",
   "imports": [
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
@@ -591,5 +590,6 @@
     "java.util.List",
     "org.robolectric.Shadows.shadowOf"
   ],
-  "name": "org.robolectric.shadows.ShadowCanvas"
+  "name": "org.robolectric.shadows.ShadowCanvas",
+  "documentation": "Shadow for {@link android.graphics.Canvas}.\n\n\u003cp\u003e Broken. This implementation is very specific to the application for which it was developed.\nTodo: Reimplement. Consider using the same strategy of collecting a history of draw events\nand providing methods for writing queries based on type, number, and order of events.\u003c/p\u003e\n"
 }

@@ -18,14 +18,14 @@
         "public",
         "static"
       ],
-      "documentation": "Non-Android accessor used for creating ResolveInfo objects.\n\n@param displayName Display name.\n@param packageName Package name.\n@return Resolve info instance.",
       "params": [
         "displayName",
         "packageName"
       ],
       "returnType": "android.content.pm.ResolveInfo",
       "exceptions": [],
-      "name": "newResolveInfo(java.lang.String,java.lang.String)"
+      "name": "newResolveInfo(java.lang.String,java.lang.String)",
+      "documentation": "Non-Android accessor used for creating ResolveInfo objects.\n\n@param displayName Display name.\n@param packageName Package name.\n@return Resolve info instance.\n"
     },
     "newResolveInfo(java.lang.String,java.lang.String,java.lang.String)": {
       "isImplementation": false,
@@ -33,7 +33,6 @@
         "public",
         "static"
       ],
-      "documentation": "Non-Android accessor used for creating ResolveInfo objects\n\n@param displayName Display name.\n@param packageName Package name.\n@param activityName Activity name.\n@return Resolve info instance.",
       "params": [
         "displayName",
         "packageName",
@@ -41,23 +40,23 @@
       ],
       "returnType": "android.content.pm.ResolveInfo",
       "exceptions": [],
-      "name": "newResolveInfo(java.lang.String,java.lang.String,java.lang.String)"
+      "name": "newResolveInfo(java.lang.String,java.lang.String,java.lang.String)",
+      "documentation": "Non-Android accessor used for creating ResolveInfo objects\n\n@param displayName Display name.\n@param packageName Package name.\n@param activityName Activity name.\n@return Resolve info instance.\n"
     },
     "setLabel(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor used to set the value returned by {@link #loadLabel}.\n\n@param l Label.",
       "params": [
         "l"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setLabel(java.lang.String)"
+      "name": "setLabel(java.lang.String)",
+      "documentation": "Non-Android accessor used to set the value returned by {@link #loadLabel}.\n\n@param l Label.\n"
     }
   },
-  "documentation": " Shadow for {@link android.content.pm.ResolveInfo}.\n",
   "imports": [
     "android.content.pm.ActivityInfo",
     "android.content.pm.ApplicationInfo",
@@ -67,5 +66,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowResolveInfo"
+  "name": "org.robolectric.shadows.ShadowResolveInfo",
+  "documentation": "Shadow for {@link android.content.pm.ResolveInfo}.\n"
 }

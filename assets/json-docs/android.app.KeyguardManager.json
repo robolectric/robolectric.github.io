@@ -81,7 +81,6 @@
       "name": "setinRestrictedInputMode(boolean)"
     }
   },
-  "documentation": " Shadow for {@link android.app.KeyguardManager}.\n",
   "imports": [
     "android.app.KeyguardManager",
     "org.robolectric.annotation.Implementation",
@@ -90,5 +89,6 @@
     "org.robolectric.shadow.api.Shadow",
     "android.os.Build.VERSION_CODES.M"
   ],
-  "name": "org.robolectric.shadows.ShadowKeyguardManager"
+  "name": "org.robolectric.shadows.ShadowKeyguardManager",
+  "documentation": "Shadow for {@link android.app.KeyguardManager}.\n"
 }

@@ -17,11 +17,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Allows to get the stored netId.\n\n@return The netId.",
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getNetId()"
+      "name": "getNetId()",
+      "documentation": "Allows to get the stored netId.\n\n@return The netId.\n"
     },
     "newInstance(int)": {
       "isImplementation": false,
@@ -29,21 +29,21 @@
         "public",
         "static"
       ],
-      "documentation": "Creates new instance of {@link Network}, because its constructor is hidden.\n\n@param netId The netId.\n@return The Network instance.",
       "params": [
         "netId"
       ],
       "returnType": "android.net.Network",
       "exceptions": [],
-      "name": "newInstance(int)"
+      "name": "newInstance(int)",
+      "documentation": "Creates new instance of {@link Network}, because its constructor is hidden.\n\n@param netId The netId.\n@return The Network instance.\n"
     }
   },
-  "documentation": " Shadow for {@code android.net.Network}.\n",
   "imports": [
     "android.net.Network",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow",
     "android.os.Build.VERSION_CODES.LOLLIPOP"
   ],
-  "name": "org.robolectric.shadows.ShadowNetwork"
+  "name": "org.robolectric.shadows.ShadowNetwork",
+  "documentation": "Shadow for {@code android.net.Network}.\n"
 }

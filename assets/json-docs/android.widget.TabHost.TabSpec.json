@@ -5,11 +5,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor\n\n@return the intent object set in a call to {@code TabSpec#setContent(Intent)}",
       "params": [],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "getContentAsIntent()"
+      "name": "getContentAsIntent()",
+      "documentation": "Non-Android accessor\n\n@return the intent object set in a call to {@code TabSpec#setContent(Intent)}\n"
     },
     "getContentView()": {
       "isImplementation": false,
@@ -36,11 +36,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor.\n\n@return the view object set in a call to {@code TabSpec#setIndicator(View)}",
       "params": [],
       "returnType": "android.view.View",
       "exceptions": [],
-      "name": "getIndicatorAsView()"
+      "name": "getIndicatorAsView()",
+      "documentation": "Non-Android accessor.\n\n@return the view object set in a call to {@code TabSpec#setIndicator(View)}\n"
     },
     "getIndicatorIcon()": {
       "isImplementation": false,
@@ -77,11 +77,11 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Same as GetIndicatorLabel()\n\n@return Tab text.",
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "getText()"
+      "name": "getText()",
+      "documentation": "Same as GetIndicatorLabel()\n\n@return Tab text.\n"
     },
     "setContent(android.content.Intent)": {
       "isImplementation": true,
@@ -161,13 +161,13 @@
       "modifiers": [
         "public"
       ],
-      "documentation": "Non-Android accessor, sets the tag on the TabSpec.\n\n@param tag The tag.",
       "params": [
         "tag"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setTag(java.lang.String)"
+      "name": "setTag(java.lang.String)",
+      "documentation": "Non-Android accessor, sets the tag on the TabSpec.\n\n@param tag The tag.\n"
     }
   },
   "imports": [

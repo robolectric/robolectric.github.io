@@ -287,7 +287,6 @@
       "name": "stringify(android.graphics.BitmapFactory.Options)"
     }
   },
-  "documentation": " Shadow for {@link android.graphics.BitmapFactory}.\n",
   "imports": [
     "android.content.res.Resources",
     "android.graphics.Bitmap",
@@ -317,5 +316,6 @@
     "java.util.zip.Checksum",
     "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
-  "name": "org.robolectric.shadows.ShadowBitmapFactory"
+  "name": "org.robolectric.shadows.ShadowBitmapFactory",
+  "documentation": "Shadow for {@link android.graphics.BitmapFactory}.\n"
 }

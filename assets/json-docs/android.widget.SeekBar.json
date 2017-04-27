@@ -23,7 +23,6 @@
       "name": "setOnSeekBarChangeListener(android.widget.SeekBar.OnSeekBarChangeListener)"
     }
   },
-  "documentation": " Shadow for {@link android.widget.SeekBar}.\n",
   "imports": [
     "android.widget.SeekBar",
     "org.robolectric.annotation.Implementation",
@@ -31,5 +30,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowSeekBar"
+  "name": "org.robolectric.shadows.ShadowSeekBar",
+  "documentation": "Shadow for {@link android.widget.SeekBar}.\n"
 }
