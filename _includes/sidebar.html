@@ -68,21 +68,21 @@
             </ul>
         </section>
 
-        <section id="chrome-robolectric-extension-sidebar" style="display: none;">
+        <section id="chrome-robolectric-extension-sidebar">
             <header class="major">
                 <h2>Chrome Extension</h2>
             </header>
-            <button onclick="chrome.webstore.install('https://chrome.google.com/webstore/detail/pjepcinimnfnaoopahdkpkefnefdkdgh')">Add to Chrome</button>
-            <script>
-                if (window.chrome) {
-                    var chromeRobolectricExtensionSidebar = document.getElementById('chrome-robolectric-extension-sidebar');
-                    chromeRobolectricExtensionSidebar.style.display = 'block';
-                    if (chrome.app.isInstalled) {
-                        chromeRobolectricExtensionSidebar.style.display = 'none';
-                    }
-                }
-            </script>
+            <article class="mini-post">
+                See Robolectric documentation inline with Android Developer Documentation.
+                <button onclick="chrome.webstore.install('https://chrome.google.com/webstore/detail/pjepcinimnfnaoopahdkpkefnefdkdgh')">Add to Chrome</button>
+            </article>
         </section>
+        <script>
+            if (!window.chrome) {
+                var extSidebar = document.getElementById('chrome-robolectric-extension-sidebar');
+                extSidebar.parentNode.removeChild(extSidebar);
+            }
+        </script>
 
         <!-- Section -->
         <section>
