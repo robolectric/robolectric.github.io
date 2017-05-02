@@ -6,7 +6,8 @@
     "android.net.Uri",
     "android.provider.MediaStore",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowMediaStore.ShadowImages"
   ],
   "name": "org.robolectric.shadows.ShadowMediaStore"
 }

@@ -341,7 +341,8 @@
     "org.robolectric.annotation.Resetter",
     "java.io.IOException",
     "java.util.ArrayList",
-    "java.util.List"
+    "java.util.List",
+    "org.robolectric.shadows.gms.ShadowGoogleAuthUtil.GoogleAuthUtilImpl"
   ],
   "name": "org.robolectric.shadows.gms.ShadowGoogleAuthUtil",
   "documentation": "Calls to static method of {@link GoogleAuthUtil} will be redirected to the provided\n{@link GoogleAuthUtilImpl} implementation. Use {@link #provideImpl(GoogleAuthUtilImpl)}\nto set the implementation instance. By default, a {@link GoogleAuthUtilImpl} is used in call\nredirection. Use mocks or subclassing {@link GoogleAuthUtilImpl} to achieve desired behaviors.\n"

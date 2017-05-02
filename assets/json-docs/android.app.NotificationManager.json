@@ -130,7 +130,8 @@
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
-    "java.util.Map"
+    "java.util.Map",
+    "org.robolectric.shadows.ShadowNotificationManager.Key"
   ],
   "name": "org.robolectric.shadows.ShadowNotificationManager"
 }

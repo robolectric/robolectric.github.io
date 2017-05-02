@@ -151,7 +151,9 @@
     "java.io.OutputStream",
     "java.util.*",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadows.ShadowPackageInstaller.CallbackInfo",
+    "org.robolectric.shadows.ShadowPackageInstaller.ShadowSession"
   ],
   "name": "org.robolectric.shadows.ShadowPackageInstaller"
 }

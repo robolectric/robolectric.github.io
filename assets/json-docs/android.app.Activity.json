@@ -759,7 +759,9 @@
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.shadow.api.Shadow.invokeConstructor"
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.shadows.ShadowActivity.IntentForResult",
+    "org.robolectric.shadows.ShadowActivity.ActivityInvoker"
   ],
   "name": "org.robolectric.shadows.ShadowActivity"
 }

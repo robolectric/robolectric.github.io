@@ -74,7 +74,8 @@
     "java.util.List",
     "java.util.Map",
     "java.util.Set",
-    "android.os.Build.VERSION_CODES.LOLLIPOP"
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.shadows.ShadowJobScheduler.ShadowJobSchedulerImpl"
   ],
   "name": "org.robolectric.shadows.ShadowJobScheduler"
 }

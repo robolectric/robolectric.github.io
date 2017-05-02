@@ -996,7 +996,10 @@
     "com.google.common.util.concurrent.Futures.immediateFuture",
     "com.google.common.util.concurrent.MoreExecutors.directExecutor",
     "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadow.api.Shadow.newInstanceOf"
+    "org.robolectric.shadow.api.Shadow.newInstanceOf",
+    "org.robolectric.shadows.ShadowApplication.BroadcastResultHolder",
+    "org.robolectric.shadows.ShadowApplication.Wrapper",
+    "org.robolectric.shadows.ShadowApplication.ServiceConnectionDataWrapper"
   ],
   "name": "org.robolectric.shadows.ShadowApplication"
 }

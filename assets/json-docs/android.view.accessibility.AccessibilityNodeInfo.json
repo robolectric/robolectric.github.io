@@ -1413,7 +1413,10 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadows.ShadowAccessibilityNodeInfo.StrictEqualityNodeWrapper",
+    "org.robolectric.shadows.ShadowAccessibilityNodeInfo.ShadowAccessibilityAction",
+    "org.robolectric.shadows.ShadowAccessibilityNodeInfo.OnPerformActionListener"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo",
   "documentation": "Shadow of {@link android.view.accessibility.AccessibilityNodeInfo} that allows a test to set\nproperties that are locked in the original class. It also keeps track of calls to\n{@code obtain()} and {@code recycle()} to look for bugs that mismatches.\n"

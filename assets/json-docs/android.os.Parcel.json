@@ -814,7 +814,8 @@
     "java.util.Map",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.RuntimeEnvironment.castNativePtr"
+    "org.robolectric.RuntimeEnvironment.castNativePtr",
+    "org.robolectric.shadows.ShadowParcel.ByteBuffer"
   ],
   "name": "org.robolectric.shadows.ShadowParcel"
 }

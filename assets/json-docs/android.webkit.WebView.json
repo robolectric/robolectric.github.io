@@ -486,7 +486,9 @@
     "java.lang.reflect.Proxy",
     "java.util.Collections",
     "java.util.HashMap",
-    "java.util.Map"
+    "java.util.Map",
+    "org.robolectric.shadows.ShadowWebView.LoadDataWithBaseURL",
+    "org.robolectric.shadows.ShadowWebView.LoadData"
   ],
   "name": "org.robolectric.shadows.ShadowWebView"
 }

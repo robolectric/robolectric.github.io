@@ -122,7 +122,9 @@
     "java.util.concurrent.ExecutionException",
     "java.util.concurrent.Executor",
     "java.util.concurrent.TimeUnit",
-    "java.util.concurrent.TimeoutException"
+    "java.util.concurrent.TimeoutException",
+    "org.robolectric.shadows.ShadowAsyncTask.BackgroundWorker",
+    "org.robolectric.shadows.ShadowAsyncTask.OnPostExecuteException"
   ],
   "name": "org.robolectric.shadows.ShadowAsyncTask"
 }

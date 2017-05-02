@@ -144,7 +144,8 @@
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadows.ShadowApplication.getInstance"
+    "org.robolectric.shadows.ShadowApplication.getInstance",
+    "org.robolectric.shadows.ShadowPowerManager.ShadowWakeLock"
   ],
   "name": "org.robolectric.shadows.ShadowPowerManager"
 }

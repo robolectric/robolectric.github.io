@@ -873,7 +873,8 @@
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.castNativePtr",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadows.ShadowAssetManager.NativeTheme"
   ],
   "name": "org.robolectric.shadows.ShadowAssetManager"
 }

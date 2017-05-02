@@ -139,7 +139,8 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "java.util.ArrayList",
-    "java.util.List"
+    "java.util.List",
+    "org.robolectric.shadows.ShadowTabHost.ShadowTabSpec"
   ],
   "name": "org.robolectric.shadows.ShadowTabHost"
 }

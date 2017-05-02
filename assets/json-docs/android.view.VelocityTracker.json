@@ -120,7 +120,8 @@
     "android.view.MotionEvent",
     "android.view.VelocityTracker",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowVelocityTracker.Movement"
   ],
   "name": "org.robolectric.shadows.ShadowVelocityTracker"
 }

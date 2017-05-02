@@ -906,7 +906,14 @@
     "java.util.List",
     "java.util.Map",
     "java.util.concurrent.CopyOnWriteArraySet",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadows.ShadowContentResolver.NotifiedUri",
+    "org.robolectric.shadows.ShadowContentResolver.Status",
+    "org.robolectric.shadows.ShadowContentResolver.Statement",
+    "org.robolectric.shadows.ShadowContentResolver.InsertStatement",
+    "org.robolectric.shadows.ShadowContentResolver.UpdateStatement",
+    "org.robolectric.shadows.ShadowContentResolver.DeleteStatement",
+    "org.robolectric.shadows.ShadowContentResolver.UnregisteredInputStream"
   ],
   "name": "org.robolectric.shadows.ShadowContentResolver"
 }

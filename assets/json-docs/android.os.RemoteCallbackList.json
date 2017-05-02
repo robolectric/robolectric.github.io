@@ -124,7 +124,8 @@
     "android.os.RemoteException",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "java.util.HashMap"
+    "java.util.HashMap",
+    "org.robolectric.shadows.ShadowRemoteCallbackList.Callback"
   ],
   "name": "org.robolectric.shadows.ShadowRemoteCallbackList"
 }

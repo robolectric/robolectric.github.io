@@ -272,7 +272,9 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers",
     "java.util.HashMap",
-    "java.util.Map"
+    "java.util.Map",
+    "org.robolectric.shadows.ShadowAudioManager.AudioFocusRequest",
+    "org.robolectric.shadows.ShadowAudioManager.AudioStream"
   ],
   "name": "org.robolectric.shadows.ShadowAudioManager"
 }

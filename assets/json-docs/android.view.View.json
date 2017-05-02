@@ -786,7 +786,9 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.getField",
-    "org.robolectric.util.ReflectionHelpers.setField"
+    "org.robolectric.util.ReflectionHelpers.setField",
+    "org.robolectric.shadows.ShadowView.AnimationRunner",
+    "org.robolectric.shadows.ShadowView.WindowIdHelper"
   ],
   "name": "org.robolectric.shadows.ShadowView"
 }

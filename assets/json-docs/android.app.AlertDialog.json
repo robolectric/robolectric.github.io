@@ -146,7 +146,8 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.internal.ShadowExtractor",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadows.ShadowAlertDialog.ShadowBuilder"
   ],
   "name": "org.robolectric.shadows.ShadowAlertDialog"
 }

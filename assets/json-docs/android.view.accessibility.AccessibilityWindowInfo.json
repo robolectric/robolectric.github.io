@@ -338,7 +338,8 @@
     "java.util.LinkedList",
     "java.util.List",
     "java.util.Map",
-    "android.os.Build.VERSION_CODES.LOLLIPOP"
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.shadows.ShadowAccessibilityWindowInfo.StrictEqualityWindowWrapper"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityWindowInfo",
   "documentation": "Shadow of {@link android.view.accessibility.AccessibilityWindowInfo} that allows a test to set\nproperties that are locked in the original class.\n"

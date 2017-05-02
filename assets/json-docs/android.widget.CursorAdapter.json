@@ -235,7 +235,9 @@
     "java.util.ArrayList",
     "java.util.List",
     "android.widget.CursorAdapter.FLAG_AUTO_REQUERY",
-    "android.widget.CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER"
+    "android.widget.CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER",
+    "org.robolectric.shadows.ShadowCursorAdapter.ChangeObserver",
+    "org.robolectric.shadows.ShadowCursorAdapter.MyDataSetObserver"
   ],
   "name": "org.robolectric.shadows.ShadowCursorAdapter"
 }

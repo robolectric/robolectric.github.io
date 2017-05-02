@@ -88,7 +88,10 @@
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
-    "java.util.Map"
+    "java.util.Map",
+    "org.robolectric.shadows.ShadowDownloadManager.ShadowRequest",
+    "org.robolectric.shadows.ShadowDownloadManager.ShadowQuery",
+    "org.robolectric.shadows.ShadowDownloadManager.ResultCursor"
   ],
   "name": "org.robolectric.shadows.ShadowDownloadManager"
 }

@@ -136,7 +136,10 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "org.robolectric.shadows.ShadowSmsManager.DataMessageParams",
+    "org.robolectric.shadows.ShadowSmsManager.TextSmsParams",
+    "org.robolectric.shadows.ShadowSmsManager.TextMultipartParams"
   ],
   "name": "org.robolectric.shadows.ShadowSmsManager"
 }

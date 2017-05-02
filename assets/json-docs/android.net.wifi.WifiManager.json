@@ -277,7 +277,8 @@
     "java.util.ArrayList",
     "java.util.LinkedHashMap",
     "java.util.List",
-    "java.util.Map"
+    "java.util.Map",
+    "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock"
   ],
   "name": "org.robolectric.shadows.ShadowWifiManager"
 }

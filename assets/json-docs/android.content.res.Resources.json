@@ -272,7 +272,9 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadows.ShadowResources.ShadowTheme",
+    "org.robolectric.shadows.ShadowResources.ShadowNotFoundException"
   ],
   "name": "org.robolectric.shadows.ShadowResources"
 }

@@ -529,7 +529,8 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
-    "android.os.Build.VERSION_CODES.M"
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.shadows.ShadowTelecomManager.CallRecord"
   ],
   "name": "org.robolectric.shadows.ShadowTelecomManager"
 }

@@ -588,7 +588,14 @@
     "org.robolectric.util.ReflectionHelpers",
     "java.util.ArrayList",
     "java.util.List",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadows.ShadowCanvas.LinePaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.OvalPaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.RectPaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.PathPaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.CirclePaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.ArcPaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.TextHistoryEvent"
   ],
   "name": "org.robolectric.shadows.ShadowCanvas",
   "documentation": "Broken. This implementation is very specific to the application for which it was developed.\nTodo: Reimplement. Consider using the same strategy of collecting a history of draw events\nand providing methods for writing queries based on type, number, and order of events.\n"

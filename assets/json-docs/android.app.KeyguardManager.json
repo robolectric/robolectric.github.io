@@ -87,7 +87,8 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "android.os.Build.VERSION_CODES.M"
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock"
   ],
   "name": "org.robolectric.shadows.ShadowKeyguardManager"
 }

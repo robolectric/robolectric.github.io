@@ -607,7 +607,8 @@
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.internal.ShadowExtractor"
+    "org.robolectric.internal.ShadowExtractor",
+    "org.robolectric.shadows.ShadowMatrix.SimpleMatrix"
   ],
   "name": "org.robolectric.shadows.ShadowMatrix"
 }

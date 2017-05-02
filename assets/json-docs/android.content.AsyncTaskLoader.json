@@ -30,7 +30,8 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Implementation",
-    "java.util.concurrent.Callable"
+    "java.util.concurrent.Callable",
+    "org.robolectric.shadows.ShadowAsyncTaskLoader.BackgroundWorker"
   ],
   "name": "org.robolectric.shadows.ShadowAsyncTaskLoader"
 }

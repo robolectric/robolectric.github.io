@@ -150,7 +150,8 @@
     "java.util.HashMap",
     "java.util.Map",
     "android.os.Build.VERSION_CODES",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "org.robolectric.shadows.ShadowStatFs.Stats"
   ],
   "name": "org.robolectric.shadows.ShadowStatFs"
 }

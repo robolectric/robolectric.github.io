@@ -158,7 +158,9 @@
     "java.nio.ByteOrder",
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.shadows.ShadowVirtualRefBasePtr.get",
-    "org.robolectric.shadows.ShadowVirtualRefBasePtr.put"
+    "org.robolectric.shadows.ShadowVirtualRefBasePtr.put",
+    "org.robolectric.shadows.ShadowVectorDrawable.Path",
+    "org.robolectric.shadows.ShadowVectorDrawable.Group"
   ],
   "name": "org.robolectric.shadows.ShadowVectorDrawable"
 }

@@ -559,7 +559,11 @@
     "java.util.concurrent.ConcurrentHashMap",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.RuntimeEnvironment.castNativePtr"
+    "org.robolectric.RuntimeEnvironment.castNativePtr",
+    "org.robolectric.shadows.ShadowCursorWindow.Data",
+    "org.robolectric.shadows.ShadowCursorWindow.Row",
+    "org.robolectric.shadows.ShadowCursorWindow.Value",
+    "org.robolectric.shadows.ShadowCursorWindow.WindowData"
   ],
   "name": "org.robolectric.shadows.ShadowCursorWindow"
 }

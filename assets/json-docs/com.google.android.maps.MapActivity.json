@@ -72,7 +72,8 @@
     "com.google.android.maps.MapActivity",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadows.ShadowActivity"
+    "org.robolectric.shadows.ShadowActivity",
+    "org.robolectric.shadows.maps.ShadowMapActivity.ConnectivityBroadcastReceiver"
   ],
   "name": "org.robolectric.shadows.maps.ShadowMapActivity"
 }

@@ -480,7 +480,9 @@
     "org.robolectric.util.Scheduler.IdleState",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1"
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "org.robolectric.shadows.ShadowAccountManager.RoboAccountManagerFuture",
+    "org.robolectric.shadows.ShadowAccountManager.BaseRoboAccountManagerFuture"
   ],
   "name": "org.robolectric.shadows.ShadowAccountManager"
 }

@@ -171,7 +171,8 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.util.List",
     "android.os.Build.VERSION_CODES.KITKAT",
-    "org.robolectric.RuntimeEnvironment.getApiLevel"
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.shadows.ShadowAccessibilityManager.MyHandler"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityManager"
 }

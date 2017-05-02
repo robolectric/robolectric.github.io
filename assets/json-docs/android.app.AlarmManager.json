@@ -175,7 +175,8 @@
     "java.util.ArrayList",
     "java.util.List",
     "android.os.Build.VERSION_CODES.KITKAT",
-    "android.os.Build.VERSION_CODES.M"
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm"
   ],
   "name": "org.robolectric.shadows.ShadowAlarmManager"
 }

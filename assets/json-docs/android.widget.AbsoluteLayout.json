@@ -3,7 +3,8 @@
   "imports": [
     "android.widget.AbsoluteLayout",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadows.ShadowAbsoluteLayout.ShadowLayoutParams"
   ],
   "name": "org.robolectric.shadows.ShadowAbsoluteLayout"
 }

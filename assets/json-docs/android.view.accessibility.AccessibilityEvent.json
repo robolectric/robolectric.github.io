@@ -262,7 +262,8 @@
     "org.robolectric.internal.ShadowExtractor",
     "org.robolectric.util.ReflectionHelpers",
     "java.util.HashMap",
-    "java.util.Map"
+    "java.util.Map",
+    "org.robolectric.shadows.ShadowAccessibilityEvent.StrictEqualityEventWrapper"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityEvent",
   "documentation": "Shadow of {@link android.view.accessibility.AccessibilityEvent}.\n"

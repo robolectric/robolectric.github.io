@@ -40,7 +40,8 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "java.util.HashSet",
-    "java.util.Set"
+    "java.util.Set",
+    "org.robolectric.shadows.ShadowSurfaceView.FakeSurfaceHolder"
   ],
   "name": "org.robolectric.shadows.ShadowSurfaceView"
 }

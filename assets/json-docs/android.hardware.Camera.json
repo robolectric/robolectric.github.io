@@ -373,7 +373,9 @@
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
-    "org.robolectric.shadow.api.Shadow.*"
+    "org.robolectric.shadow.api.Shadow.*",
+    "org.robolectric.shadows.ShadowCamera.ShadowParameters",
+    "org.robolectric.shadows.ShadowCamera.ShadowSize"
   ],
   "name": "org.robolectric.shadows.ShadowCamera"
 }

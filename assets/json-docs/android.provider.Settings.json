@@ -52,7 +52,10 @@
     "java.util.HashMap",
     "java.util.Map",
     "java.util.WeakHashMap",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1"
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "org.robolectric.shadows.ShadowSettings.ShadowSystem",
+    "org.robolectric.shadows.ShadowSettings.ShadowSecure",
+    "org.robolectric.shadows.ShadowSettings.ShadowGlobal"
   ],
   "name": "org.robolectric.shadows.ShadowSettings"
 }

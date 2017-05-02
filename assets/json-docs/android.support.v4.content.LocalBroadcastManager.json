@@ -87,7 +87,8 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.util.ArrayList",
     "java.util.Iterator",
-    "java.util.List"
+    "java.util.List",
+    "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager.Wrapper"
   ],
   "name": "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager"
 }

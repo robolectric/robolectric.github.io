@@ -216,7 +216,8 @@
     "java.util.Map",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadows.ShadowTypeface.FontDesc"
   ],
   "name": "org.robolectric.shadows.ShadowTypeface"
 }
