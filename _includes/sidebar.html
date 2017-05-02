@@ -68,6 +68,22 @@
             </ul>
         </section>
 
+        <section id="chrome-robolectric-extension-sidebar" style="display: none;">
+            <header class="major">
+                <h2>Chrome Extension</h2>
+            </header>
+            <button onclick="chrome.webstore.install()">Add to Chrome</button>
+            <script>
+                if (window.chrome) {
+                    var chromeRobolectricExtensionSidebar = document.getElementById('chrome-robolectric-extension-sidebar');
+                    chromeRobolectricExtensionSidebar.style.display = 'block';
+                    if (chrome.app.isInstalled) {
+                        chromeRobolectricExtensionSidebar.style.display = 'none';
+                    }
+                }
+            </script>
+        </section>
+
         <!-- Section -->
         <section>
             <header class="major">
