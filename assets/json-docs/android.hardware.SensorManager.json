@@ -14,6 +14,19 @@
       "name": "addSensor(int,android.hardware.Sensor)",
       "documentation": "Provide a Sensor for the indicated sensor type.\n@param sensorType from Sensor constants\n@param sensor Sensor instance\n"
     },
+    "createDirectChannel(android.os.MemoryFile)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "mem"
+      ],
+      "returnType": "android.hardware.SensorDirectChannel",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "createDirectChannel(android.os.MemoryFile)"
+    },
     "createSensorEvent()": {
       "isImplementation": false,
       "modifiers": [
@@ -89,16 +102,17 @@
     }
   },
   "imports": [
-    "android.hardware.Sensor",
-    "android.hardware.SensorEvent",
-    "android.hardware.SensorEventListener",
-    "android.hardware.SensorManager",
+    "android.hardware.*",
+    "android.os.MemoryFile",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.util.ArrayList",
     "java.util.HashMap",
-    "java.util.Map"
+    "java.util.Map",
+    "android.os.Build.VERSION_CODES.O"
   ],
   "name": "org.robolectric.shadows.ShadowSensorManager"
 }

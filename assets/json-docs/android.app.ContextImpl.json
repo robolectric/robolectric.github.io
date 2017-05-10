@@ -108,19 +108,6 @@
       "minSdk": 19,
       "name": "getExternalFilesDirs(java.lang.String)"
     },
-    "getSharedPreferences(java.lang.String,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "name",
-        "mode"
-      ],
-      "returnType": "android.content.SharedPreferences",
-      "exceptions": [],
-      "name": "getSharedPreferences(java.lang.String,int)"
-    },
     "getSystemService(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -186,6 +173,17 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "registerReceiverAsUser(android.content.BroadcastReceiver,android.os.UserHandle,android.content.IntentFilter,java.lang.String,android.os.Handler)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "sendBroadcast(android.content.Intent)": {
       "isImplementation": true,
@@ -398,12 +396,13 @@
     "android.content.IntentFilter",
     "android.content.IntentSender",
     "android.content.ServiceConnection",
-    "android.content.SharedPreferences",
+    "android.hardware.SystemSensorManager",
     "android.net.wifi.p2p.IWifiP2pManager",
     "android.net.wifi.p2p.WifiP2pManager",
     "android.os.Bundle",
     "android.os.Environment",
     "android.os.Handler",
+    "android.os.Looper",
     "android.os.UserHandle",
     "android.view.Display",
     "android.view.accessibility.AccessibilityManager",
@@ -411,7 +410,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.fakes.RoboSharedPreferences",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.io.File",
