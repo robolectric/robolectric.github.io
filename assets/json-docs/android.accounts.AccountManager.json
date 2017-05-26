@@ -13,7 +13,7 @@
       "name": "\u003cT\u003estart(T)"
     },
     "__constructor__(android.content.Context,android.accounts.IAccountManager)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],

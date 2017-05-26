@@ -23,6 +23,17 @@
       "exceptions": [],
       "name": "acquire(long)"
     },
+    "getWorkSource()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "android.os.WorkSource",
+      "exceptions": [],
+      "name": "getWorkSource()"
+    },
     "isHeld()": {
       "isImplementation": true,
       "modifiers": [
@@ -67,10 +78,24 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setReferenceCounted(boolean)"
+    },
+    "setWorkSource(android.os.WorkSource)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [
+        "ws"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWorkSource(android.os.WorkSource)"
     }
   },
   "imports": [
     "android.os.PowerManager",
+    "android.os.WorkSource",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -11,7 +11,7 @@
       "name": "__constructor__()"
     },
     "__constructor__(java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -55,6 +55,7 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.io.FileInputStream",
+    "java.io.IOException",
     "java.io.InputStream",
     "java.lang.reflect.Field",
     "java.lang.reflect.Modifier",

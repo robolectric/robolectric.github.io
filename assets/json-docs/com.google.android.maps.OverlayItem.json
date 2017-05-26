@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(com.google.android.maps.GeoPoint,java.lang.String,java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],

@@ -126,6 +126,16 @@
       "exceptions": [],
       "name": "getCreatedIntentFor(android.content.Intent[])"
     },
+    "getCreatorPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getCreatorPackage()"
+    },
     "getFlags()": {
       "isImplementation": false,
       "modifiers": [
@@ -201,6 +211,16 @@
       "returnType": "android.app.PendingIntent",
       "exceptions": [],
       "name": "getService(android.content.Context,int,android.content.Intent,int)"
+    },
+    "getTargetPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getTargetPackage()"
     },
     "hashCode()": {
       "isImplementation": true,
@@ -280,6 +300,18 @@
         "android.app.PendingIntent.CanceledException"
       ],
       "name": "send(android.content.Context,int,android.content.Intent)"
+    },
+    "setCreatorPackage(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "creatorPackage"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCreatorPackage(java.lang.String)"
     }
   },
   "imports": [
@@ -289,6 +321,7 @@
     "android.content.Intent",
     "android.content.IntentSender",
     "android.os.Bundle",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

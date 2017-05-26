@@ -134,6 +134,7 @@
   },
   "imports": [
     "android.os.PowerManager",
+    "android.os.WorkSource",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

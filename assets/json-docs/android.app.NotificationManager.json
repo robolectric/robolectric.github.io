@@ -35,7 +35,7 @@
       "exceptions": [],
       "name": "cancelAll()"
     },
-    "createNotificationChannel(android.app.NotificationChannel)": {
+    "createNotificationChannel(java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
         "public"
@@ -46,9 +46,9 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 10000,
-      "name": "createNotificationChannel(android.app.NotificationChannel)"
+      "name": "createNotificationChannel(java.lang.Object)"
     },
-    "createNotificationChannelGroup(android.app.NotificationChannelGroup)": {
+    "createNotificationChannelGroup(java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
         "public"
@@ -59,7 +59,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 10000,
-      "name": "createNotificationChannelGroup(android.app.NotificationChannelGroup)"
+      "name": "createNotificationChannelGroup(java.lang.Object)"
     },
     "getActiveNotifications()": {
       "isImplementation": true,
@@ -115,7 +115,7 @@
       "params": [
         "channelId"
       ],
-      "returnType": "android.app.NotificationChannel",
+      "returnType": "java.lang.Object",
       "exceptions": [],
       "minSdk": 10000,
       "name": "getNotificationChannel(java.lang.String)"
@@ -128,7 +128,7 @@
       "params": [
         "id"
       ],
-      "returnType": "android.app.NotificationChannelGroup",
+      "returnType": "java.lang.Object",
       "exceptions": [],
       "name": "getNotificationChannelGroup(java.lang.String)"
     },
@@ -138,7 +138,7 @@
         "public"
       ],
       "params": [],
-      "returnType": "java.util.List\u003candroid.app.NotificationChannelGroup\u003e",
+      "returnType": "java.util.List\u003cjava.lang.Object\u003e",
       "exceptions": [],
       "minSdk": 10000,
       "name": "getNotificationChannelGroups()"
@@ -149,7 +149,7 @@
         "public"
       ],
       "params": [],
-      "returnType": "java.util.List\u003candroid.app.NotificationChannel\u003e",
+      "returnType": "java.util.List\u003cjava.lang.Object\u003e",
       "exceptions": [],
       "minSdk": 10000,
       "name": "getNotificationChannels()"
@@ -194,15 +194,14 @@
   },
   "imports": [
     "android.app.Notification",
-    "android.app.NotificationChannel",
-    "android.app.NotificationChannelGroup",
     "android.app.NotificationManager",
     "android.os.Build",
     "android.service.notification.StatusBarNotification",
     "com.google.common.collect.ImmutableList",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.util.ReflectionHelpers",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",

@@ -113,6 +113,18 @@
       ],
       "name": "loadXmlResourceParser(java.lang.String,int,int,java.lang.String)"
     },
+    "newNotFoundException(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.content.res.Resources.NotFoundException",
+      "exceptions": [],
+      "name": "newNotFoundException(int)"
+    },
     "obtainAttributes(android.util.AttributeSet,int[])": {
       "isImplementation": true,
       "modifiers": [
@@ -177,7 +189,8 @@
       "exceptions": [
         "android.content.res.Resources.NotFoundException"
       ],
-      "name": "openRawResourceFd(int)"
+      "name": "openRawResourceFd(int)",
+      "documentation": "Since {@link AssetFileDescriptor}s are not yet supported by Robolectric, {@code null} will\nbe returned if the resource is found. If the resource cannot be found, {@link Resources.NotFoundException} will\nbe thrown.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -263,6 +276,7 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.io.FileInputStream",
+    "java.io.IOException",
     "java.io.InputStream",
     "java.lang.reflect.Field",
     "java.lang.reflect.Modifier",

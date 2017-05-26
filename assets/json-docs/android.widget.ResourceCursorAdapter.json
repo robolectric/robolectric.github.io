@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(android.content.Context,int,android.database.Cursor)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -15,7 +15,7 @@
       "name": "__constructor__(android.content.Context,int,android.database.Cursor)"
     },
     "__constructor__(android.content.Context,int,android.database.Cursor,boolean)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -30,7 +30,7 @@
       "name": "__constructor__(android.content.Context,int,android.database.Cursor,boolean)"
     },
     "__constructor__(android.content.Context,int,android.database.Cursor,int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],

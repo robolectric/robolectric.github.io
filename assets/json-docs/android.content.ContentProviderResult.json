@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(android.net.Uri)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -18,7 +18,7 @@
       "name": "__constructor__(android.net.Uri)"
     },
     "__constructor__(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -38,6 +38,7 @@
   "imports": [
     "android.content.ContentProviderResult",
     "android.net.Uri",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "java.lang.reflect.Field"

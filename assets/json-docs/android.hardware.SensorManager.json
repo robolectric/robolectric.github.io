@@ -22,7 +22,7 @@
       "params": [
         "mem"
       ],
-      "returnType": "android.hardware.SensorDirectChannel",
+      "returnType": "java.lang.Object",
       "exceptions": [],
       "minSdk": 10000,
       "name": "createDirectChannel(android.os.MemoryFile)"

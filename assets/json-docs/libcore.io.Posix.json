@@ -1,0 +1,46 @@
+{
+  "methods": {
+    "mkdir(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "path",
+        "mode"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.system.ErrnoException"
+      ],
+      "name": "mkdir(java.lang.String,int)"
+    },
+    "stat(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [
+        "android.system.ErrnoException"
+      ],
+      "name": "stat(java.lang.String)"
+    }
+  },
+  "imports": [
+    "android.os.Build",
+    "android.system.ErrnoException",
+    "android.system.StructStat",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "java.io.File"
+  ],
+  "name": "org.robolectric.shadows.ShadowPosix"
+}

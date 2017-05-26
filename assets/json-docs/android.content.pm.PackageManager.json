@@ -799,7 +799,6 @@
     "java.util.List",
     "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.android.StubPackageManager",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.manifest.AndroidManifest",

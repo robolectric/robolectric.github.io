@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(float)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -25,6 +25,7 @@
   },
   "imports": [
     "android.graphics.CornerPathEffect",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowCornerPathEffect"

@@ -1,7 +1,7 @@
 {
   "methods": {
     "__staticInitializer__()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public",
         "static"
