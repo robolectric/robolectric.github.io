@@ -10,17 +10,26 @@ Robolectric works best with Gradle or Maven. If you are starting a new project, 
 
 ## Building with Gradle
 
+Starting with Robolectric 3.3 there is now tighter integration with the tool chain, you'll need Android Studio 3.0 alpha 5.
+
 Add the following to your build.gradle:
 
 ```groovy
 testCompile "org.robolectric:robolectric:{{ site.robolectric.version.current | escape }}"
+
+android {
+  testOptions {
+    unitTests {
+      includeAndroidResources = true
+    }
+  }
+}  
 ```
 
 Annotate your test with the Robolectric test runner:
 
 ```java
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class)
 public class SandwichTest {
 }
 ```
