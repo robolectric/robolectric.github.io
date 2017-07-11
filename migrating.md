@@ -6,6 +6,10 @@ order: 7
 toc: true
 ---
 
+## New Gradle integration
+
+Starting with Robolectric 3.3 + Android Studio 3.0 alpha 5 we've included better integration with the tool chain. Resources, Assets and AndroidManifest are treated as first class citizens and processed by the build system for correctness, performance and stability between releases, read more [here](http://robolectric.org/getting-started/)
+
 ## Migrating from 3.2 to 3.3
 
 ### Moved classes
