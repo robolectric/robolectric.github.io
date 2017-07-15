@@ -5,7 +5,6 @@ org.robolectric.android
 org.robolectric.android.controller
 org.robolectric.android.fakes
 org.robolectric.android.internal
-org.robolectric.android.runtime
 org.robolectric.android.util.concurrent
 org.robolectric.annotation
 org.robolectric.annotation.internal
