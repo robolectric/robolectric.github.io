@@ -288,6 +288,8 @@
     }
   },
   "imports": [
+    "java.nio.charset.StandardCharsets.UTF_8",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
     "android.graphics.BitmapFactory",
@@ -295,16 +297,6 @@
     "android.graphics.Rect",
     "android.net.Uri",
     "android.util.TypedValue",
-    "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.Shadows",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.Join",
-    "org.robolectric.util.NamedStream",
-    "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.io.FileDescriptor",
     "java.io.InputStream",
     "java.nio.charset.Charset",
@@ -314,7 +306,16 @@
     "java.util.Map",
     "java.util.zip.CRC32",
     "java.util.zip.Checksum",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.Join",
+    "org.robolectric.util.NamedStream",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowBitmapFactory"
 }

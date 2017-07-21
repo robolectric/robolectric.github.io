@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(java.lang.String)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -32,6 +32,17 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "getAvailableBlocksLong()"
+    },
+    "getAvailableBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getAvailableBytes()"
     },
     "getBlockCount()": {
       "isImplementation": true,
@@ -73,7 +84,8 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 18,
-      "name": "getBlockSizeLong()"
+      "name": "getBlockSizeLong()",
+      "documentation": "Robolectric always uses a block size of `4096`.\n@return\n"
     },
     "getFreeBlocks()": {
       "isImplementation": true,
@@ -84,6 +96,39 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getFreeBlocks()"
+    },
+    "getFreeBlocksLong()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getFreeBlocksLong()"
+    },
+    "getFreeBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getFreeBytes()"
+    },
+    "getTotalBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getTotalBytes()"
     },
     "registerStats(java.io.File,int,int,int)": {
       "isImplementation": false,
@@ -99,7 +144,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "registerStats(java.io.File,int,int,int)"
+      "name": "registerStats(java.io.File,int,int,int)",
+      "documentation": "Register stats for a path, which will be used when a matching {@link StatFs} instance is created.\n\n@param path path to the file\n@param blockCount number of blocks\n@param freeBlocks number of free blocks\n@param availableBlocks number of available blocks\n"
     },
     "registerStats(java.lang.String,int,int,int)": {
       "isImplementation": false,
@@ -115,7 +161,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "registerStats(java.lang.String,int,int,int)"
+      "name": "registerStats(java.lang.String,int,int,int)",
+      "documentation": "Register stats for a path, which will be used when a matching {@link StatFs} instance is created.\n\n@param path path to the file\n@param blockCount number of blocks\n@param freeBlocks number of free blocks\n@param availableBlocks number of available blocks\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -153,5 +200,6 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "org.robolectric.shadows.ShadowStatFs.Stats"
   ],
-  "name": "org.robolectric.shadows.ShadowStatFs"
+  "name": "org.robolectric.shadows.ShadowStatFs",
+  "documentation": "Robolectic doesn\u0027t provide actual filesystem stats; rather, it provides the ability to specify stats values in advance.\n\n@see #registerStats(File, int, int, int)\n"
 }

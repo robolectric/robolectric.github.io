@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(int,java.lang.CharSequence)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -75,7 +75,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.internal.ShadowExtractor",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.util.ArrayList",

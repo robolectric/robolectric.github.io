@@ -385,6 +385,9 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.*",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.shadow.api.Shadow.newInstanceOf",
     "android.accounts.IAccountManager",
     "android.app.admin.IDevicePolicyManager",
     "android.content.BroadcastReceiver",
@@ -406,19 +409,16 @@
     "android.os.UserHandle",
     "android.view.Display",
     "android.view.accessibility.AccessibilityManager",
+    "java.io.File",
+    "java.util.HashMap",
+    "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "java.io.File",
-    "java.util.HashMap",
-    "java.util.Map",
-    "android.os.Build.VERSION_CODES.*",
-    "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.shadow.api.Shadow.newInstanceOf"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowContextImpl"
 }

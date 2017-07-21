@@ -63,6 +63,17 @@
       "minSdk": 21,
       "name": "hasUserRestriction(java.lang.String,android.os.UserHandle)"
     },
+    "isManagedProfile()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isManagedProfile()"
+    },
     "isUserUnlocked()": {
       "isImplementation": true,
       "modifiers": [
@@ -73,6 +84,19 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "isUserUnlocked()"
+    },
+    "setManagedProfile(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "managedProfile"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setManagedProfile(boolean)",
+      "documentation": "Setter for {@link UserManager#isManagedProfile()}\n"
     },
     "setUserRestriction(android.os.UserHandle,java.lang.String,boolean)": {
       "isImplementation": false,

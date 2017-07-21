@@ -48,6 +48,30 @@
       "exceptions": [],
       "name": "peekInstance()"
     },
+    "setSoftInputVisibility(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "visible"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSoftInputVisibility(boolean)"
+    },
+    "setSoftInputVisibilityHandler(org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "visibilityChangeHandler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSoftInputVisibilityHandler(org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler)"
+    },
     "showSoftInput(android.view.View,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -94,10 +118,12 @@
     "android.os.ResultReceiver",
     "android.view.View",
     "android.view.inputmethod.InputMethodManager",
+    "java.util.Optional",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.HiddenApi",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler"
   ],
   "name": "org.robolectric.shadows.ShadowInputMethodManager"
 }

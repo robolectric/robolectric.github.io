@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(android.content.ContentResolver,android.content.IContentProvider,boolean)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],

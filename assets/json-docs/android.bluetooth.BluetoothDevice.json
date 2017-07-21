@@ -10,6 +10,18 @@
       "exceptions": [],
       "name": "getName()"
     },
+    "getService()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.IBluetooth",
+      "exceptions": [],
+      "name": "getService()",
+      "documentation": "Implements getService() in the same way the original method does, but ignores any Exceptions\nfrom invoking {@link BluetoothAdapter#getBluetoothService}.\n"
+    },
     "setName(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -24,7 +36,9 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.bluetooth.BluetoothDevice",
+    "android.bluetooth.IBluetooth",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

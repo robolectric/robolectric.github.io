@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__()": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -9,6 +9,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "__constructor__()"
+    },
+    "callAttach(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callAttach(android.content.Intent)"
     },
     "clickMenuItem(int)": {
       "isImplementation": false,
@@ -69,6 +81,16 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "finishAndRemoveTask()"
+    },
+    "getActivityTitle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getActivityTitle()"
     },
     "getCallingActivity()": {
       "isImplementation": true,
@@ -184,6 +206,16 @@
       "exceptions": [],
       "name": "getNextStartedActivityForResult()",
       "documentation": "Consumes and returns the next {@code Intent} on the\nstarted activities for results stack.\n\n@return the next started {@code Intent} for an activity, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
+    },
+    "getNonConfigurationClass()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.lang.Class\u003c?\u003e",
+      "exceptions": [],
+      "name": "getNonConfigurationClass()"
     },
     "getOptionsMenu()": {
       "isImplementation": false,
@@ -725,15 +757,29 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "android.R",
     "android.app.Activity",
+    "android.app.ActivityThread",
     "android.app.Application",
     "android.app.Dialog",
     "android.app.Fragment",
+    "android.app.Instrumentation",
     "android.content.ComponentName",
+    "android.content.Context",
     "android.content.Intent",
+    "android.content.pm.ActivityInfo",
+    "android.content.pm.PackageManager",
+    "android.content.pm.PackageManager.NameNotFoundException",
+    "android.content.res.Configuration",
     "android.database.Cursor",
+    "android.os.Build",
     "android.os.Bundle",
+    "android.os.IBinder",
     "android.text.Selection",
     "android.text.SpannableStringBuilder",
     "android.view.LayoutInflater",
@@ -741,7 +787,16 @@
     "android.view.MenuInflater",
     "android.view.View",
     "android.view.ViewGroup",
+    "android.view.ViewRootImpl",
     "android.view.Window",
+    "com.android.internal.app.IVoiceInteractor",
+    "java.lang.reflect.InvocationTargetException",
+    "java.lang.reflect.Method",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
@@ -749,17 +804,6 @@
     "org.robolectric.fakes.RoboMenuItem",
     "org.robolectric.manifest.AndroidManifest",
     "org.robolectric.util.ReflectionHelpers",
-    "java.lang.reflect.InvocationTargetException",
-    "java.lang.reflect.Method",
-    "java.util.ArrayList",
-    "java.util.HashMap",
-    "java.util.List",
-    "java.util.Map",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.M",
-    "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowActivity.ActivityInvoker"
   ],

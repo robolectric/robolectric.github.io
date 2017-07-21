@@ -86,6 +86,16 @@
       "exceptions": [],
       "name": "isBluetoothA2dpOn()"
     },
+    "isBluetoothScoOn()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isBluetoothScoOn()"
+    },
     "isMicrophoneMute()": {
       "isImplementation": true,
       "modifiers": [
@@ -95,6 +105,16 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isMicrophoneMute()"
+    },
+    "isMusicActive()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isMusicActive()"
     },
     "isSpeakerphoneOn()": {
       "isImplementation": true,
@@ -154,6 +174,30 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setBluetoothA2dpOn(boolean)"
+    },
+    "setBluetoothScoOn(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isBluetoothScoOn"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBluetoothScoOn(boolean)"
+    },
+    "setIsMusicActive(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isMusicActive"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsMusicActive(boolean)"
     },
     "setMicrophoneMute(boolean)": {
       "isImplementation": true,
@@ -268,11 +312,11 @@
   },
   "imports": [
     "android.media.AudioManager",
+    "java.util.HashMap",
+    "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers",
-    "java.util.HashMap",
-    "java.util.Map",
     "org.robolectric.shadows.ShadowAudioManager.AudioFocusRequest",
     "org.robolectric.shadows.ShadowAudioManager.AudioStream"
   ],

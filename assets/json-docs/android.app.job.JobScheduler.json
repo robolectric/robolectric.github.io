@@ -48,6 +48,20 @@
       "exceptions": [],
       "name": "getAllPendingJobs()"
     },
+    "getPendingJob(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [
+        "jobId"
+      ],
+      "returnType": "android.app.job.JobInfo",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getPendingJob(int)"
+    },
     "schedule(android.app.job.JobInfo)": {
       "isImplementation": true,
       "modifiers": [
@@ -75,6 +89,7 @@
     "java.util.Map",
     "java.util.Set",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N",
     "org.robolectric.shadows.ShadowJobScheduler.ShadowJobSchedulerImpl"
   ],
   "name": "org.robolectric.shadows.ShadowJobScheduler"

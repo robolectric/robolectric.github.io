@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(android.content.Context,int,android.app.TimePickerDialog.OnTimeSetListener,int,int,boolean)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -41,7 +41,6 @@
   "imports": [
     "android.app.TimePickerDialog",
     "android.content.Context",
-    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",

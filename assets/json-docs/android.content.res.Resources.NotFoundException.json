@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__()": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -11,7 +11,7 @@
       "name": "__constructor__()"
     },
     "__constructor__(java.lang.String)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -50,8 +50,8 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.internal.ShadowExtractor",
     "org.robolectric.res.*",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.io.FileInputStream",

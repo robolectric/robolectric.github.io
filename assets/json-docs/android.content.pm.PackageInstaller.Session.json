@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__()": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -9,6 +9,16 @@
       "returnType": "void",
       "exceptions": [],
       "name": "__constructor__()"
+    },
+    "abandon()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "abandon()"
     },
     "close()": {
       "isImplementation": true,
@@ -61,6 +71,19 @@
         "java.io.IOException"
       ],
       "name": "openWrite(java.lang.String,long,long)"
+    },
+    "setShadowPackageInstaller(int,org.robolectric.shadows.ShadowPackageInstaller)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "sessionId",
+        "shadowPackageInstaller"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setShadowPackageInstaller(int,org.robolectric.shadows.ShadowPackageInstaller)"
     }
   },
   "imports": [
@@ -68,6 +91,7 @@
     "android.annotation.Nullable",
     "android.content.Context",
     "android.content.IntentSender",
+    "android.content.IntentSender.SendIntentException",
     "android.content.pm.IPackageInstaller",
     "android.content.pm.PackageInstaller",
     "android.content.pm.PackageManager",

@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(android.database.Cursor)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],

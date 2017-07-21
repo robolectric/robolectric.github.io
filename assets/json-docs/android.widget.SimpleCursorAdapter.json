@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(android.content.Context,int,android.database.Cursor,java.lang.String[],int[])": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -18,7 +18,7 @@
       "documentation": "Constructor.\n\n@param context The context where the ListView associated with this\n           SimpleListItemFactory is running\n@param layout resource identifier of a layout file that defines the views\n           for this list item. The layout file should include at least\n           those named views defined in \"to\"\n@param c The database cursor.  Can be null if the cursor is not available yet.\n@param from A list of column names representing the data to bind to the UI.  Can be null\n           if the cursor is not available yet.\n@param to The views that should display column in the \"from\" parameter.\n           These should all be TextViews. The first N views in this list\n           are given the values of the first N columns in the from\n           parameter.  Can be null if the cursor is not available yet.\n"
     },
     "__constructor__(android.content.Context,int,android.database.Cursor,java.lang.String[],int[],int)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],

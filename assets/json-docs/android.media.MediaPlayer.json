@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__()": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -11,7 +11,7 @@
       "name": "__constructor__()"
     },
     "__staticInitializer__()": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public",
         "static"

@@ -84,9 +84,7 @@
         "sessionId"
       ],
       "returnType": "void",
-      "exceptions": [
-        "java.lang.Exception"
-      ],
+      "exceptions": [],
       "name": "setSessionFails(int)"
     },
     "setSessionFinishes(int,boolean)": {
@@ -99,9 +97,7 @@
         "success"
       ],
       "returnType": "void",
-      "exceptions": [
-        "java.lang.Exception"
-      ],
+      "exceptions": [],
       "name": "setSessionFinishes(int,boolean)"
     },
     "setSessionProgress(int,float)": {
@@ -126,10 +122,9 @@
         "sessionId"
       ],
       "returnType": "void",
-      "exceptions": [
-        "java.lang.Exception"
-      ],
-      "name": "setSessionSucceeds(int)"
+      "exceptions": [],
+      "name": "setSessionSucceeds(int)",
+      "documentation": "Prefer instead to use the Android APIs to close the session\n{@link android.content.pm.PackageInstaller.Session#commit(IntentSender)}\n"
     }
   },
   "imports": [
@@ -137,6 +132,7 @@
     "android.annotation.Nullable",
     "android.content.Context",
     "android.content.IntentSender",
+    "android.content.IntentSender.SendIntentException",
     "android.content.pm.IPackageInstaller",
     "android.content.pm.PackageInstaller",
     "android.content.pm.PackageManager",

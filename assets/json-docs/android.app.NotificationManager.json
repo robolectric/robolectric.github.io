@@ -1,5 +1,16 @@
 {
   "methods": {
+    "areNotificationsEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "areNotificationsEnabled()"
+    },
     "cancel(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -60,6 +71,19 @@
       "exceptions": [],
       "minSdk": 10000,
       "name": "createNotificationChannelGroup(java.lang.Object)"
+    },
+    "deleteNotificationChannel(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "channelId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "deleteNotificationChannel(java.lang.String)"
     },
     "getActiveNotifications()": {
       "isImplementation": true,
@@ -154,6 +178,19 @@
       "minSdk": 10000,
       "name": "getNotificationChannels()"
     },
+    "isChannelDeleted(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "channelId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isChannelDeleted(java.lang.String)",
+      "documentation": "Checks whether a channel is considered a \"deleted\" channel by Android. This is a channel that\nwas created but later deleted. If a channel is created that was deleted before, it recreates\nthe channel with the old settings.\n"
+    },
     "notify(int,android.app.Notification)": {
       "isImplementation": true,
       "modifiers": [
@@ -181,6 +218,18 @@
       "exceptions": [],
       "name": "notify(java.lang.String,int,android.app.Notification)"
     },
+    "setNotificationsEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "areNotificationsEnabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNotificationsEnabled(boolean)"
+    },
     "size()": {
       "isImplementation": false,
       "modifiers": [
@@ -198,14 +247,14 @@
     "android.os.Build",
     "android.service.notification.StatusBarNotification",
     "com.google.common.collect.ImmutableList",
-    "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.util.ReflectionHelpers",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowNotificationManager.Key"
   ],
   "name": "org.robolectric.shadows.ShadowNotificationManager"

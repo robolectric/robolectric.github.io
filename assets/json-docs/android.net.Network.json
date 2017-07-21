@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(int)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -40,7 +40,6 @@
   },
   "imports": [
     "android.net.Network",
-    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow",
     "android.os.Build.VERSION_CODES.LOLLIPOP"

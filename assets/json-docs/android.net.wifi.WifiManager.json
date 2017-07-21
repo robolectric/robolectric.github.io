@@ -114,6 +114,17 @@
       "exceptions": [],
       "name": "getLastEnabledNetwork()"
     },
+    "getPrivilegedConfiguredNetworks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.net.wifi.WifiConfiguration\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getPrivilegedConfiguredNetworks()"
+    },
     "getScanResults()": {
       "isImplementation": true,
       "modifiers": [
@@ -123,6 +134,27 @@
       "returnType": "java.util.List\u003candroid.net.wifi.ScanResult\u003e",
       "exceptions": [],
       "name": "getScanResults()"
+    },
+    "getWifiState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWifiState()"
+    },
+    "isScanAlwaysAvailable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "isScanAlwaysAvailable()"
     },
     "isWifiEnabled()": {
       "isImplementation": true,
@@ -192,6 +224,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDhcpInfo(android.net.DhcpInfo)"
+    },
+    "setIsScanAlwaysAvailable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isScanAlwaysAvailable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsScanAlwaysAvailable(boolean)"
     },
     "setScanResults(java.util.List\u003candroid.net.wifi.ScanResult\u003e)": {
       "isImplementation": false,
@@ -278,7 +322,9 @@
     "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Map",
+    "android.os.Build.VERSION_CODES.*",
     "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock"
   ],
-  "name": "org.robolectric.shadows.ShadowWifiManager"
+  "name": "org.robolectric.shadows.ShadowWifiManager",
+  "documentation": "Shadow for {@link android.net.wifi.WifiManager}.\n"
 }

@@ -60,7 +60,8 @@
     "java.util.ArrayList",
     "java.util.LinkedHashMap",
     "java.util.List",
-    "java.util.Map"
+    "java.util.Map",
+    "android.os.Build.VERSION_CODES.*"
   ],
   "name": "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock"
 }

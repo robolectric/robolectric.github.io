@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__()": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -332,7 +332,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.internal.ShadowExtractor",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "java.util.HashMap",
     "java.util.LinkedList",

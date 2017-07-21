@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(org.apache.commons.logging.Log,org.apache.http.protocol.HttpRequestExecutor,org.apache.http.conn.ClientConnectionManager,org.apache.http.ConnectionReuseStrategy,org.apache.http.conn.ConnectionKeepAliveStrategy,org.apache.http.conn.routing.HttpRoutePlanner,org.apache.http.protocol.HttpProcessor,org.apache.http.client.HttpRequestRetryHandler,org.apache.http.client.RedirectHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.UserTokenHandler,org.apache.http.params.HttpParams)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -25,7 +25,7 @@
       "name": "__constructor__(org.apache.commons.logging.Log,org.apache.http.protocol.HttpRequestExecutor,org.apache.http.conn.ClientConnectionManager,org.apache.http.ConnectionReuseStrategy,org.apache.http.conn.ConnectionKeepAliveStrategy,org.apache.http.conn.routing.HttpRoutePlanner,org.apache.http.protocol.HttpProcessor,org.apache.http.client.HttpRequestRetryHandler,org.apache.http.client.RedirectHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.UserTokenHandler,org.apache.http.params.HttpParams)"
     },
     "__constructor__(org.apache.http.protocol.HttpRequestExecutor,org.apache.http.conn.ClientConnectionManager,org.apache.http.ConnectionReuseStrategy,org.apache.http.conn.ConnectionKeepAliveStrategy,org.apache.http.conn.routing.HttpRoutePlanner,org.apache.http.protocol.HttpProcessor,org.apache.http.client.HttpRequestRetryHandler,org.apache.http.client.RedirectHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.AuthenticationHandler,org.apache.http.client.UserTokenHandler,org.apache.http.params.HttpParams)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],

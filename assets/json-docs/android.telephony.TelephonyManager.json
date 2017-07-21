@@ -21,6 +21,16 @@
       "minSdk": 17,
       "name": "getAllCellInfo()"
     },
+    "getCallState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCallState()"
+    },
     "getCellLocation()": {
       "isImplementation": true,
       "modifiers": [
@@ -50,7 +60,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getEventFlags()",
-      "documentation": "Returns the most recent flags passed to #listen().\n\n@return Event flags.\n"
+      "documentation": "Returns the most recent flags passed to #listen().\n\n@return Event flags.\n@deprecated Avoid using.\n"
     },
     "getGroupIdLevel1()": {
       "isImplementation": true,
@@ -82,7 +92,19 @@
       "returnType": "android.telephony.PhoneStateListener",
       "exceptions": [],
       "name": "getListener()",
-      "documentation": "Returns the most recent listener passed to #listen().\n\n@return Phone state listener.\n"
+      "documentation": "Returns the most recent listener passed to #listen().\n\n@return Phone state listener.\n@deprecated Avoid using.\n"
+    },
+    "getListenersForFlags(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "java.lang.Iterable\u003candroid.telephony.PhoneStateListener\u003e",
+      "exceptions": [],
+      "name": "getListenersForFlags(int)"
     },
     "getNetworkCountryIso()": {
       "isImplementation": true,
@@ -174,6 +196,19 @@
       "exceptions": [],
       "name": "getSimState()"
     },
+    "initListener(android.telephony.PhoneStateListener,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "listener",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "initListener(android.telephony.PhoneStateListener,int)"
+    },
     "listen(android.telephony.PhoneStateListener,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -181,7 +216,7 @@
       ],
       "params": [
         "listener",
-        "events"
+        "flags"
       ],
       "returnType": "void",
       "exceptions": [],
@@ -198,6 +233,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)"
+    },
+    "setCallState(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callState",
+        "incomingPhoneNumber"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCallState(int,java.lang.String)"
     },
     "setCellLocation(android.telephony.CellLocation)": {
       "isImplementation": false,
@@ -369,16 +417,27 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION",
     "android.telephony.CellInfo",
     "android.telephony.CellLocation",
     "android.telephony.PhoneStateListener",
     "android.telephony.TelephonyManager",
+    "com.google.common.base.Predicate",
+    "com.google.common.collect.Iterables",
+    "java.util.Collections",
+    "java.util.HashMap",
     "java.util.List",
+    "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "android.os.Build.VERSION_CODES",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.telephony.PhoneStateListener.LISTEN_CALL_STATE",
+    "android.telephony.PhoneStateListener.LISTEN_CELL_INFO",
+    "android.telephony.PhoneStateListener.LISTEN_CELL_LOCATION",
+    "android.telephony.PhoneStateListener.LISTEN_NONE",
+    "android.telephony.TelephonyManager.CALL_STATE_IDLE",
+    "android.telephony.TelephonyManager.CALL_STATE_RINGING"
   ],
   "name": "org.robolectric.shadows.ShadowTelephonyManager"
 }

@@ -44,6 +44,20 @@
       "exceptions": [],
       "name": "makeThreadLocal()"
     },
+    "postCallback(int,java.lang.Runnable,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callbackType",
+        "action",
+        "token"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postCallback(int,java.lang.Runnable,java.lang.Object)"
+    },
     "postCallbackDelayed(int,java.lang.Runnable,java.lang.Object,long)": {
       "isImplementation": true,
       "modifiers": [
@@ -58,6 +72,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "postCallbackDelayed(int,java.lang.Runnable,java.lang.Object,long)"
+    },
+    "postFrameCallback(android.view.Choreographer.FrameCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postFrameCallback(android.view.Choreographer.FrameCallback)",
+      "documentation": "The default implementation will call postFrameCallbackDelayed with 0 delay. AnimationHandler\nis calling this method to schedule animation update infinitely. Because during Robolectric\ntest,\nthe system time is paused and execution of event loop is invoked for each test instruction,\nthe behavior of AnimationHandler would result in endless generation of its animation update\ntask\n(the execution of the task results in a new animation task created and scheduled to the front\nof the event loop queue).\n\nSo it makes sense to allow application to specify a small amount of delay during animation\nschedule in Robolectric tests to avoid the endless loop.\n"
     },
     "postFrameCallbackDelayed(android.view.Choreographer.FrameCallback,long)": {
       "isImplementation": true,
@@ -123,13 +150,29 @@
       "exceptions": [],
       "name": "setFrameInterval(long)",
       "documentation": "Set the inter-frame interval used to advance the clock. By default, this is set to 1ms.\n\n@param frameInterval  Inter-frame interval.\n"
+    },
+    "setPostCallbackDeley(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "delayMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPostCallbackDeley(int)",
+      "documentation": "Allows application to specify a fixed amount of delay when postFrameCallback or postCallback is\ninvoked. The default delay value is 0. This can be used to avoid infinite animation tasks to be\nspawned when the Robolectric scheduler is in paused mode.\n"
     }
   },
   "imports": [
+    "android.os.Build",
     "android.os.Handler",
     "android.os.Looper",
     "android.os.SystemClock",
     "android.view.Choreographer",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",

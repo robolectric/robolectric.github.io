@@ -1,5 +1,19 @@
 {
   "methods": {
+    "addExternalDir(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "java.io.File",
+      "exceptions": [],
+      "name": "addExternalDir(java.lang.String)",
+      "documentation": "Adds a directory to list returned by {@link ShadowUserEnvironment#getExternalDirs()}.\n\n@param path the external dir to add\n"
+    },
     "exists(java.nio.file.Path)": {
       "isImplementation": false,
       "modifiers": [
@@ -55,7 +69,7 @@
         "static"
       ],
       "params": [
-        "path"
+        "directory"
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
@@ -69,7 +83,7 @@
         "static"
       ],
       "params": [
-        "path"
+        "directory"
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
@@ -167,6 +181,21 @@
       "name": "setExternalStorageRemovable(java.io.File,boolean)",
       "documentation": "Sets the \"isRemovable\" flag of a particular file.\n\n@param file Target file.\n@param isRemovable True if the filesystem is removable.\n"
     },
+    "setExternalStorageState(java.io.File,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "directory",
+        "state"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setExternalStorageState(java.io.File,java.lang.String)",
+      "documentation": "Sets the {@link #getExternalStorageState(File)} for given directory.\n\n@param externalStorageState Value to return from {@link #getExternalStorageState(File)}.\n"
+    },
     "setExternalStorageState(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -197,20 +226,26 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Environment",
     "java.io.File",
     "java.io.IOException",
     "java.nio.file.Files",
     "java.nio.file.Path",
-    "java.util.Map",
     "java.util.HashMap",
-    "android.os.Environment",
-    "org.robolectric.annotation.Resetter",
-    "org.robolectric.annotation.Implements",
+    "java.util.LinkedList",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.TempDirectory",
-    "android.os.Build.VERSION_CODES",
-    "android.os.Build.VERSION_CODES.KITKAT",
-    "android.os.Build.VERSION_CODES.LOLLIPOP"
+    "org.robolectric.shadows.ShadowEnvironment.ShadowUserEnvironment"
   ],
   "name": "org.robolectric.shadows.ShadowEnvironment"
 }

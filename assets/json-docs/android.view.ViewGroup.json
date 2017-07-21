@@ -153,9 +153,7 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "java.io.PrintStream",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.shadows.ShadowViewGroup.ShadowLayoutParams",
-    "org.robolectric.shadows.ShadowViewGroup.ShadowMarginLayoutParams"
+    "org.robolectric.shadow.api.Shadow.directlyOn"
   ],
   "name": "org.robolectric.shadows.ShadowViewGroup"
 }

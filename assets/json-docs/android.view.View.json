@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(android.content.Context,android.util.AttributeSet,int)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],

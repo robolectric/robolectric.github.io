@@ -54,6 +54,7 @@
     "java.util.List",
     "java.util.Locale",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from"

@@ -13,7 +13,7 @@
       "name": "\u003cT\u003estart(T)"
     },
     "__constructor__(android.content.Context,android.accounts.IAccountManager)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -463,24 +463,22 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.accounts.*",
     "android.app.Activity",
     "android.content.Context",
     "android.content.Intent",
     "android.os.Bundle",
     "android.os.Handler",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.internal.Shadow",
-    "org.robolectric.util.ReflectionHelpers",
     "java.io.IOException",
     "java.util.*",
     "java.util.Map.Entry",
     "java.util.concurrent.TimeUnit",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
     "org.robolectric.util.Scheduler.IdleState",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "org.robolectric.shadows.ShadowAccountManager.RoboAccountManagerFuture",
     "org.robolectric.shadows.ShadowAccountManager.BaseRoboAccountManagerFuture"
   ],
