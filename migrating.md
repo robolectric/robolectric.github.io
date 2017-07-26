@@ -6,6 +6,13 @@ order: 7
 toc: true
 ---
 
+## Migrating from 3.3 to 3.4
+
+### Removed deprecated methods
+
+The deprecated and redundant `ComponentController.attach()` has been removed in
+3.4. To migrate, you can simply remove references to this API. 
+
 ## New Gradle integration
 
 Starting with Robolectric 3.3 + Android Studio 3.0 alpha 5 we've included better integration with the tool chain. Resources, Assets and AndroidManifest are treated as first class citizens and processed by the build system for correctness, performance and stability between releases, read more [here](http://robolectric.org/getting-started/)
