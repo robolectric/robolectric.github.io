@@ -6,9 +6,25 @@ order: 7
 toc: true
 ---
 
-## New Gradle integration
+## Migrating from 3.3 to 3.4
 
-Starting with Robolectric 3.3 + Android Studio 3.0 alpha 5 we've included better integration with the tool chain. Resources, Assets and AndroidManifest are treated as first class citizens and processed by the build system for correctness, performance and stability between releases, read more [here](http://robolectric.org/getting-started/)
+### Dependencies
+Robolectric tests should now be compiled with Java 8 and Android API 26.
+
+### PackageManager
+We've change `PackageManager` simulation to follow the standard Shadow pattern as with other framework classes. You can use `ShadowPackageManager` where you previously used `RobolectricPackageManager`.
+
+| 3.2 (now `@Deprecated`)                                 | 3.3                                                            |
+| ------------------------------------------------------- | -------------------------------------------------------------- |
+| `org.robolectric.res.builder.RobolectricPackageManager` | `org.robolectric.shadows.ShadowPackageManager`                 |
+| `RuntimeEnvironment.getRobolectricPackageManager()   `  | `shadowOf(RuntimeEnvironment.application.getPackageManager())` |
+
+If you were using `RuntimeEnvironment.setRobolectricPackageManager()` to install a custom `PackageManager`, you should move your custom behavior to a subclass of `ShadowApplicationPackageManager` and install it as a shadow (using `@Config()` and possibly `@Implements(inheritImplementationMethods=true)`) instead.
+
+### ActivityController.attach()
+The deprecated and redundant `attach()` method has been removed from `ActivityController`, `FragmentController`, and `ServiceController`. To migrate, simpily remove calls to this method.
+
+---
 
 ## Migrating from 3.2 to 3.3
 
@@ -72,6 +88,11 @@ DefaultPackageManager
 StubPackageManager
 RobolectricPackageManager
 ```
+
+### New Gradle integration
+
+Starting with Robolectric 3.3 + Android Studio 3.0 alpha 5 we've included better integration with the tool chain. Resources, assets and `AndroidManifest.xml` are treated as first class citizens and processed by the build system for correctness, performance and stability between releases. Read more [here](http://robolectric.org/getting-started/).
+
 
 ---
 
