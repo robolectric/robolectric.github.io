@@ -14,7 +14,7 @@ Robolectric tests should now be compiled with Java 8 and Android API 26.
 ### PackageManager
 We've change `PackageManager` simulation to follow the standard Shadow pattern as with other framework classes. You can use `ShadowPackageManager` where you previously used `RobolectricPackageManager`.
 
-| 3.2 (now `@Deprecated`)                                 | 3.3                                                            |
+| 3.3 (was `@Deprecated`)                                 | 3.4                                                            |
 | ------------------------------------------------------- | -------------------------------------------------------------- |
 | `org.robolectric.res.builder.RobolectricPackageManager` | `org.robolectric.shadows.ShadowPackageManager`                 |
 | `RuntimeEnvironment.getRobolectricPackageManager()   `  | `shadowOf(RuntimeEnvironment.application.getPackageManager())` |
@@ -23,6 +23,10 @@ If you were using `RuntimeEnvironment.setRobolectricPackageManager()` to install
 
 ### ActivityController.attach()
 The deprecated and redundant `attach()` method has been removed from `ActivityController`, `FragmentController`, and `ServiceController`. To migrate, simpily remove calls to this method.
+
+### Other Stuff
+
+* Because `SharedPreferences` now uses real Android framework code, Mockito mocks and spies can lead to tests hanging. Rather than spying on `SharedPreferences`, just assert against its state.
 
 ---
 
@@ -77,6 +81,14 @@ class MyCustomPackageManager extends ShadowApplicationPackageManager {
 ```
 
 If you are using a custom subclass of `DefaultPackageManager` to implement functionality missing in Robolectric, check again as part of this work we've added support for a bunch more widely-used `PackageManager` features and it might be now possible to completely remove your custom subclass.
+
+### Deprecated Classes & Methods
+| 3.2 (now `@Deprecated`)                                     | 3.3                                                            |
+| ----------------------------------------------------------- | -------------------------------------------------------------- |
+| `org.robolectric.res.builder.RobolectricPackageManager`     | `org.robolectric.shadows.ShadowPackageManager`                 |
+| `RuntimeEnvironment.getRobolectricPackageManager()`         | `shadowOf(RuntimeEnvironment.application.getPackageManager())` |
+| `shadowOf(imageView).getImageResourceId()`                  | `shadowOf(imageView.getDrawable).getCreatedFromResId()`        |
+| `shadowOf(notification).getProgressBar().isIndeterminate()` | `shadowOf(notification).isIndeterminate()`                     |
 
 
 The following methods and classes are deprecated will be removed in 3.4:
