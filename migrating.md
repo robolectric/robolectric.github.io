@@ -1,7 +1,7 @@
 ---
 title: Migration Guide
 page_title: Robolectric Migration Guide
-group: User Guide
+group: [hide]
 order: 7
 toc: true
 ---

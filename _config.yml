@@ -42,6 +42,8 @@ menu:
       url: https://github.com/robolectric/robolectric/
     - title: Release Notes
       url: https://github.com/robolectric/robolectric/releases/
+    - title: Migration Guide
+      url: /migrating
     - title: Javadoc
       url: /javadoc/latest/
     - title: Issues
