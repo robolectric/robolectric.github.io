@@ -1,7 +1,7 @@
 ---
 title: Using Qualified Resources
 group: User Guide
-order: 6
+order: 3
 ---
 
 # Using Qualified Resources
