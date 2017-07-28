@@ -56,7 +56,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "postCallback(int,java.lang.Runnable,java.lang.Object)"
+      "name": "postCallback(int,java.lang.Runnable,java.lang.Object)",
+      "documentation": "The default implementation will call {@link #postCallbackDelayed(int, Runnable, Object, long)}\nwith no delay. {@link android.animation.AnimationHandler} calls this method to schedule\nanimation updates infinitely. Because during a Robolectric test the system time is paused and\nexecution of the event loop is invoked for each test instruction, the behavior of\nAnimationHandler would result in endless looping (the execution of the task results in a new\nanimation task created and scheduled to the front of the event loop queue).\n\nTo prevent endless looping, a test may call {@link #setPostCallbackDelay(int)} to specify a\nsmall delay when animation is scheduled.\n\n@see #setPostCallbackDelay(int)\n"
     },
     "postCallbackDelayed(int,java.lang.Runnable,java.lang.Object,long)": {
       "isImplementation": true,
@@ -84,7 +85,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "postFrameCallback(android.view.Choreographer.FrameCallback)",
-      "documentation": "The default implementation will call postFrameCallbackDelayed with 0 delay. AnimationHandler\nis calling this method to schedule animation update infinitely. Because during Robolectric\ntest,\nthe system time is paused and execution of event loop is invoked for each test instruction,\nthe behavior of AnimationHandler would result in endless generation of its animation update\ntask\n(the execution of the task results in a new animation task created and scheduled to the front\nof the event loop queue).\n\nSo it makes sense to allow application to specify a small amount of delay during animation\nschedule in Robolectric tests to avoid the endless loop.\n"
+      "documentation": "The default implementation will call {@link #postFrameCallbackDelayed(FrameCallback, long)}\nwith no delay. {@link android.animation.AnimationHandler} calls this method to schedule\nanimation updates infinitely. Because during a Robolectric test the system time is paused and\nexecution of the event loop is invoked for each test instruction, the behavior of\nAnimationHandler would result in endless looping (the execution of the task results in a new\nanimation task created and scheduled to the front of the event loop queue).\n\nTo prevent endless looping, a test may call {@link #setPostCallbackDelay(int)} to specify a\nsmall delay when animation is scheduled.\n\n@see #setPostCallbackDelay(int)\n"
     },
     "postFrameCallbackDelayed(android.view.Choreographer.FrameCallback,long)": {
       "isImplementation": true,
@@ -151,7 +152,7 @@
       "name": "setFrameInterval(long)",
       "documentation": "Set the inter-frame interval used to advance the clock. By default, this is set to 1ms.\n\n@param frameInterval  Inter-frame interval.\n"
     },
-    "setPostCallbackDeley(int)": {
+    "setPostCallbackDelay(int)": {
       "isImplementation": false,
       "modifiers": [
         "public",
@@ -162,8 +163,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setPostCallbackDeley(int)",
-      "documentation": "Allows application to specify a fixed amount of delay when postFrameCallback or postCallback is\ninvoked. The default delay value is 0. This can be used to avoid infinite animation tasks to be\nspawned when the Robolectric scheduler is in paused mode.\n"
+      "name": "setPostCallbackDelay(int)",
+      "documentation": "Allows application to specify a fixed amount of delay when\n{@link #postFrameCallback(FrameCallback)} or {@link #postCallback(int, Runnable, Object)} is\ninvoked. The default delay value is `0`. This can be used to avoid infinite animation tasks to\nbe spawned when the Robolectric {@link org.robolectric.util.Scheduler} is in\n{@link org.robolectric.util.Scheduler.IdleState#PAUSED} mode.\n"
     }
   },
   "imports": [
@@ -172,6 +173,7 @@
     "android.os.Looper",
     "android.os.SystemClock",
     "android.view.Choreographer",
+    "android.view.Choreographer.FrameCallback",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

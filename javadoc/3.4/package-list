@@ -28,4 +28,3 @@ org.robolectric.shadows.multidex
 org.robolectric.shadows.support.v4
 org.robolectric.shadows.util
 org.robolectric.util
-org.robolectric.util.concurrent
