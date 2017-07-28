@@ -3,6 +3,7 @@ title: Best Practices
 group: User Guide
 order: 8
 ---
+# Best Practices
 
 **DON'T** mock or spy on Android classes that will be acted on by other Android code (e.g. `Context`, `SharedPreferences`, and many others). Stubbing is very brittle and can lead to breakages on Robolectric or Android Platform upgrades. The small exceptions to this rule are classes with very narrow responsibilities, such as event listeners.
 
