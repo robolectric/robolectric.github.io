@@ -22,7 +22,7 @@ Install all required dependencies:
 
 Perform a full build of all shadows:
 
-    ./gradlew build
+    ./gradlew install
     
 ## Building and Testing
 
