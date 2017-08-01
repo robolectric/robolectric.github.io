@@ -9,18 +9,18 @@ toc: true
 
 ## Getting Started
 
-Fork and clone the repo:
+(Fork)[https://github.com/robolectric/robolectric] and clone the repo:
 
     git clone git@github.com:username/robolectric.git
-    
-Create a feature branch to make your changes:
-
-    git co -b my-feature-name
     
 Install all required dependencies:
 
     ./scripts/install-dependencies.sh
 
+Create a feature branch to make your changes:
+
+    git co -b my-feature-name
+    
 Perform a full build of all shadows:
 
     ./gradlew install
