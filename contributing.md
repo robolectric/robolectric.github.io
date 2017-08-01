@@ -29,19 +29,20 @@ We develop Robolectric on Mac and Linux. You might be able to figure out how to 
 
 ## Contribution Requirements
 
-### Writing Tests
-
-Robolectric is a unit testing framework and it is important that Robolectric itself be very well tested. All classes should have unit test classes. All public methods should have unit tests. Those classes and methods should have their possible states well tested. Pull requests without tests will be sent back to the submitter.
-
 ### Code Style
 
-Essentially the IntelliJ default Java style, but with two-space indents.
+Essentially the IntelliJ default Java style, but with two-space indents and Google-style imports.
 
 1. Spaces, not tabs.
 2. Two space indent.
 3. Curly braces for everything: if, else, etc.
 4. One line of white space between methods.
 5. No `'m'` or `'s'` prefixes before instance or static variables.
+6. Import Google's (java imports style)[https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml].
+
+### Writing Tests
+
+Robolectric is a unit testing framework and it is important that Robolectric itself be very well tested. All classes should have unit test classes. All public methods should have unit tests. Those classes and methods should have their possible states well tested. Pull requests without tests will be sent back to the submitter.
 
 ### Documentation
 
