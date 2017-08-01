@@ -24,7 +24,9 @@ Install all required dependencies:
 Perform a full build of all shadows:
 
     ./gradlew install
-    
+
+We develop Robolectric on Mac and Linux. You might be able to figure out how to get it to work on Windows if you really want to for some reason. Good luck.
+
 ## Contribution Requirements
 
 ### Writing Tests
@@ -53,3 +55,7 @@ On [developer.android.com](https://developer.android.com/reference/packages.html
 All `@Implementation` methods whose behavior varies from the standard Android behavior MUST have Javadoc describing the difference. Use `@see` or `{@link}` to indicate if the method's behavior can be changed or inspected by calling testing API methods.
 
 All non-`@Implementation` methods SHOULD have descriptive Javadoc.
+
+### Deprecations and Backwards Compatibility
+
+To provide an easy upgrade path, we aim to always mark methods or classes `@Deprecated` in at least a patch release before removing them in the next minor release. We realize that's not quite how (semver)[http://semver.org/] is supposed to work, sorry. Be sure to include migration notes in the `/** @deprecated */` javadoc!
