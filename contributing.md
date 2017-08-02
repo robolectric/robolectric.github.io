@@ -9,7 +9,7 @@ toc: true
 
 ## Getting Started
 
-(Fork)[https://github.com/robolectric/robolectric] and clone the repo:
+[Fork](https://github.com/robolectric/robolectric) and clone the repo:
 
     git clone git@github.com:username/robolectric.git
     
@@ -38,7 +38,7 @@ Essentially the IntelliJ default Java style, but with two-space indents and Goog
 3. Curly braces for everything: if, else, etc.
 4. One line of white space between methods.
 5. No `'m'` or `'s'` prefixes before instance or static variables.
-6. Import Google's (java imports style)[https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml].
+6. Import Google's [java imports style](https://google.github.io/styleguide/javaguide.html#s3.3-import-statements) ([IntelliJ style file here](https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml)).
 
 ### Writing Tests
 
