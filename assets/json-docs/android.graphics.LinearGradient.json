@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(float,float,float,float,int,int,android.graphics.Shader.TileMode)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -92,6 +92,7 @@
   "imports": [
     "android.graphics.LinearGradient",
     "android.graphics.Shader",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowLinearGradient"

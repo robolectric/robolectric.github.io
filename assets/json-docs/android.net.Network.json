@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -39,10 +39,11 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.net.Network",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow",
-    "android.os.Build.VERSION_CODES.LOLLIPOP"
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowNetwork"
 }

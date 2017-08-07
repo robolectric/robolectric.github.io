@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -13,7 +13,7 @@
       "name": "__constructor__(int)"
     },
     "__constructor__(long)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],

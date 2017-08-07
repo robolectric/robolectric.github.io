@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(int,java.lang.CharSequence)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],

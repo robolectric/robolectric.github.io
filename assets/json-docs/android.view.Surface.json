@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(android.graphics.SurfaceTexture)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -24,8 +24,9 @@
     }
   },
   "imports": [
-    "android.view.Surface",
     "android.graphics.SurfaceTexture",
+    "android.view.Surface",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowSurface"

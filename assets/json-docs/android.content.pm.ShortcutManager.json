@@ -22,7 +22,7 @@
       ],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "createShortcutResultIntent(android.content.pm.ShortcutInfo)"
     },
     "disableShortcuts(java.util.List\u003cjava.lang.String\u003e)": {
@@ -140,7 +140,7 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "isRequestPinShortcutSupported()"
     },
     "removeAllDynamicShortcuts()": {
@@ -188,7 +188,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "requestPinShortcut(android.content.pm.ShortcutInfo,android.content.IntentSender)"
     },
     "setDynamicShortcuts(java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)": {

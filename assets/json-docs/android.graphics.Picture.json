@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -11,7 +11,7 @@
       "name": "__constructor__()"
     },
     "__constructor__(android.graphics.Picture)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -23,7 +23,7 @@
       "name": "__constructor__(android.graphics.Picture)"
     },
     "__constructor__(int,boolean)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -36,7 +36,7 @@
       "name": "__constructor__(int,boolean)"
     },
     "__constructor__(long)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],

@@ -56,7 +56,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "createNotificationChannel(java.lang.Object)"
     },
     "createNotificationChannelGroup(java.lang.Object)": {
@@ -69,7 +69,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "createNotificationChannelGroup(java.lang.Object)"
     },
     "deleteNotificationChannel(java.lang.String)": {
@@ -82,7 +82,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "deleteNotificationChannel(java.lang.String)"
     },
     "getActiveNotifications()": {
@@ -141,7 +141,7 @@
       ],
       "returnType": "java.lang.Object",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "getNotificationChannel(java.lang.String)"
     },
     "getNotificationChannelGroup(java.lang.String)": {
@@ -164,7 +164,7 @@
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.Object\u003e",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "getNotificationChannelGroups()"
     },
     "getNotificationChannels()": {
@@ -175,7 +175,7 @@
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.Object\u003e",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "getNotificationChannels()"
     },
     "isChannelDeleted(java.lang.String)": {

@@ -24,7 +24,7 @@
       ],
       "returnType": "java.lang.Object",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 26,
       "name": "createDirectChannel(android.os.MemoryFile)"
     },
     "createSensorEvent()": {

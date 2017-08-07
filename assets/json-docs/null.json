@@ -28,7 +28,18 @@
     }
   },
   "imports": [
-    "android.content.res.*",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "android.content.res.AssetFileDescriptor",
+    "android.content.res.AssetManager",
+    "android.content.res.Configuration",
+    "android.content.res.Resources",
+    "android.content.res.ResourcesImpl",
+    "android.content.res.TypedArray",
+    "android.content.res.XmlResourceParser",
     "android.graphics.drawable.Drawable",
     "android.os.ParcelFileDescriptor",
     "android.util.AttributeSet",
@@ -52,12 +63,7 @@
     "java.lang.reflect.Modifier",
     "java.util.ArrayList",
     "java.util.List",
-    "java.util.Locale",
-    "android.os.Build.VERSION_CODES.N",
-    "android.os.Build.VERSION_CODES.O",
-    "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
+    "java.util.Locale"
   ],
   "name": "org.robolectric.shadows.ShadowResourcesImpl.ShadowThemeImpl"
 }

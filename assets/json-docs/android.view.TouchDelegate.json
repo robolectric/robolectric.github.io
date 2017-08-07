@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(android.graphics.Rect,android.view.View)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -38,6 +38,7 @@
     "android.graphics.Rect",
     "android.view.TouchDelegate",
     "android.view.View",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject"
   ],
