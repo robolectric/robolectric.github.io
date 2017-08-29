@@ -12,7 +12,8 @@ Robolectric works best with Gradle or Maven. If you are starting a new project, 
 
 ### Android Studio 3.0+
 
-Starting with Robolectric 3.3 there is now tighter integration with the tool chain, where the build system processes and merges your resources. You'll need Android Studio 3.0 alpha 5.
+Starting with Robolectric 3.3 there is now tighter integration with the tool chain, where the build system processes and merges your resources.
+Android Studio 3.0 beta2 with gradle 'com.android.tools.build:gradle:3.0.0-beta3' is the current recommended version. 
 
 Add the following to your build.gradle:
 
@@ -81,9 +82,9 @@ Robolectric works with Android Studio 1.1.0 or newer. Simply follow the instruct
 
 ![Android Enable Unit Tests](/images/android-studio-enable-unit-tests.png)
 
-### Note for Linux and Mac Users
+### Note for Linux and Mac Users on older Android Studio versions
 
-If you are on Linux or on a Mac, you will probably need to configure the default JUnit test runner configuration in order to work around a bug where Android Studio does not set the working directory to the module being tested. This can be accomplished by editing the run configurations, `Defaults -> JUnit` and changing the working directory value to `$MODULE_DIR$`.
+If you are on Linux or on a Mac and using a pre-3.0 version of Android Studio, you will probably need to configure the default JUnit test runner configuration in order to work around a bug where Android Studio does not set the working directory to the module being tested. This can be accomplished by editing the run configurations, `Defaults -> JUnit` and changing the working directory value to `$MODULE_DIR$`.
 
 ![Android Studio Configure Defaults](/images/android-studio-configure-defaults.png)
 
