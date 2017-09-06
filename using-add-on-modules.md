@@ -10,10 +10,10 @@ In order to reduce the number of external dependencies on the application being 
 
 | SDK Package                          | Robolectric Add-On Package            |
 |--------------------------------------|---------------------------------------|
-| com.android.support.support-v4       | org.robolectric:shadows-support-v4    |
-| com.android.support.multidex         | org.robolectric:shadows-multidex      |
-| com.google.android.gms:play-services | org.robolectric:shadows-play-services |
-| com.google.android.maps:maps         | org.robolectric:shadows-maps          |
-| org.apache.httpcomponents:httpclient | org.robolectric:shadows-httpclient    |
+| com.android.support.support-v4       | org.robolectric:supportv4             |
+| com.android.support.multidex         | org.robolectric:multidex              |
+| com.google.android.gms:play-services | org.robolectric:playservices          |
+| com.google.android.maps:maps         | org.robolectric:maps                  |
+| org.apache.httpcomponents:httpclient | org.robolectric:httpclient            |
 
 Note that the add-on packages need to be specified in your `build.gradle` or `pom.xml` in addition to the Robolectric dependency.
