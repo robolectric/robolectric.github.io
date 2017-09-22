@@ -17,7 +17,7 @@ Starting with Robolectric 3.3 there is now tighter integration with the tool cha
 Add the following to your build.gradle:
 
 ```groovy
-testCompile "org.robolectric:robolectric:{{ site.robolectric.version.current | escape }}"
+testImplementation "org.robolectric:robolectric:{{ site.robolectric.version.current | escape }}"
 
 android {
   testOptions {
