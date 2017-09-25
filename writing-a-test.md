@@ -57,7 +57,8 @@ public class WelcomeActivityTest {
         activity.findViewById(R.id.login).performClick();
 
         Intent expectedIntent = new Intent(activity, LoginActivity.class);
-        assertThat(shadowOf(activity).getNextStartedActivity()).isEqualTo(expectedIntent);
+        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
+        assertEquals(expectedIntent.getComponent(), actual.getComponent());
     }
 }
 ```
