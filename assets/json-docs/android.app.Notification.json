@@ -188,6 +188,9 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.shadows.ResourceHelper.getInternalResourceId",
     "android.app.Notification",
     "android.graphics.Bitmap",
     "android.graphics.drawable.BitmapDrawable",
@@ -197,15 +200,12 @@
     "android.widget.ImageView",
     "android.widget.ProgressBar",
     "android.widget.TextView",
+    "java.io.ByteArrayOutputStream",
+    "java.io.PrintStream",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "java.io.ByteArrayOutputStream",
-    "java.io.PrintStream",
-    "android.os.Build.VERSION_CODES.N",
-    "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.shadows.ResourceHelper.getInternalResourceId"
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowNotification"
 }

@@ -71,6 +71,17 @@
       "exceptions": [],
       "name": "finish()"
     },
+    "finishAffinity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 16,
+      "name": "finishAffinity()"
+    },
     "finishAndRemoveTask()": {
       "isImplementation": true,
       "modifiers": [
@@ -757,6 +768,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.Shadows.shadowOf",

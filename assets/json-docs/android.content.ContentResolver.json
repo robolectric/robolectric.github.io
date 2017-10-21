@@ -120,6 +120,19 @@
       "exceptions": [],
       "name": "addPeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle,long)"
     },
+    "addUriPermission(android.net.Uri,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "uri",
+        "modeFlags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addUriPermission(android.net.Uri,int)"
+    },
     "applyBatch(java.lang.String,java.util.ArrayList\u003candroid.content.ContentProviderOperation\u003e)": {
       "isImplementation": true,
       "modifiers": [
@@ -352,6 +365,17 @@
       "exceptions": [],
       "name": "getPeriodicSyncs(android.accounts.Account,java.lang.String)"
     },
+    "getPersistedUriPermissions()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.UriPermission\u003e",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getPersistedUriPermissions()"
+    },
     "getProvider(android.net.Uri)": {
       "isImplementation": false,
       "modifiers": [
@@ -539,8 +563,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "notifyChange(android.net.Uri,android.database.ContentObserver,boolean)",
-      "documentation": "\n@param uri\n@param observer\n@param syncToNetwork\n"
+      "name": "notifyChange(android.net.Uri,android.database.ContentObserver,boolean)"
     },
     "openInputStream(android.net.Uri)": {
       "isImplementation": true,
@@ -677,6 +700,20 @@
       "exceptions": [],
       "name": "registerProviderInternal(java.lang.String,android.content.ContentProvider)",
       "documentation": "Internal-only method, do not use!\n\nInstead, use\n```java\nProviderInfo info \u003d new ProviderInfo();\ninfo.authority \u003d authority;\nRobolectric.buildContentProvider(ContentProvider.class).create(info);\n```\n"
+    },
+    "releasePersistableUriPermission(android.net.Uri,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "modeFlags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "releasePersistableUriPermission(android.net.Uri,int)"
     },
     "removePeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
@@ -825,6 +862,20 @@
       "exceptions": [],
       "name": "setSyncAutomatically(android.accounts.Account,java.lang.String,boolean)"
     },
+    "takePersistableUriPermission(android.net.Uri,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "modeFlags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "takePersistableUriPermission(android.net.Uri,int)"
+    },
     "unregisterContentObserver(android.database.ContentObserver)": {
       "isImplementation": true,
       "modifiers": [
@@ -868,7 +919,10 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "org.robolectric.Shadows.shadowOf",
     "android.accounts.Account",
+    "android.annotation.NonNull",
     "android.content.ContentProvider",
     "android.content.ContentProviderClient",
     "android.content.ContentProviderOperation",
@@ -876,8 +930,10 @@
     "android.content.ContentResolver",
     "android.content.ContentValues",
     "android.content.IContentProvider",
+    "android.content.Intent",
     "android.content.OperationApplicationException",
     "android.content.PeriodicSync",
+    "android.content.UriPermission",
     "android.content.pm.ProviderInfo",
     "android.content.res.AssetFileDescriptor",
     "android.database.ContentObserver",
@@ -885,6 +941,19 @@
     "android.net.Uri",
     "android.os.Bundle",
     "android.os.CancellationSignal",
+    "java.io.FileNotFoundException",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.io.OutputStream",
+    "java.util.ArrayList",
+    "java.util.Collection",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.Iterator",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.Objects",
+    "java.util.concurrent.CopyOnWriteArraySet",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
@@ -895,18 +964,8 @@
     "org.robolectric.manifest.ContentProviderData",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.NamedStream",
-    "java.io.FileNotFoundException",
-    "java.io.IOException",
-    "java.io.InputStream",
-    "java.io.OutputStream",
-    "java.util.ArrayList",
-    "java.util.Collection",
-    "java.util.Collections",
-    "java.util.HashMap",
-    "java.util.List",
-    "java.util.Map",
-    "java.util.concurrent.CopyOnWriteArraySet",
-    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowContentResolver.NotifiedUri",
     "org.robolectric.shadows.ShadowContentResolver.Status",
     "org.robolectric.shadows.ShadowContentResolver.Statement",

@@ -16,16 +16,16 @@
     "android.database.Cursor",
     "android.net.Uri",
     "android.util.Pair",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.TreeMap",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.fakes.BaseCursor",
-    "org.robolectric.util.ReflectionHelpers",
-    "java.util.ArrayList",
-    "java.util.List",
-    "java.util.Map",
-    "java.util.TreeMap"
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowDownloadManager.ShadowQuery"
 }

@@ -24,13 +24,14 @@
     }
   },
   "imports": [
-    "android.content.Context",
     "android.content.AsyncTaskLoader",
-    "org.robolectric.util.SimpleFuture",
+    "android.content.Context",
+    "java.util.concurrent.Callable",
+    "java.util.concurrent.ExecutionException",
+    "java.util.concurrent.FutureTask",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.Implementation",
-    "java.util.concurrent.Callable",
     "org.robolectric.shadows.ShadowAsyncTaskLoader.BackgroundWorker"
   ],
   "name": "org.robolectric.shadows.ShadowAsyncTaskLoader"

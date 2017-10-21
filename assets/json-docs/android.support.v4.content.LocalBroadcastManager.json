@@ -77,6 +77,9 @@
     "android.content.Intent",
     "android.content.IntentFilter",
     "android.support.v4.content.LocalBroadcastManager",
+    "java.util.ArrayList",
+    "java.util.Iterator",
+    "java.util.List",
     "org.robolectric.Robolectric",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
@@ -85,9 +88,6 @@
     "org.robolectric.shadows.ShadowApplication",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "java.util.ArrayList",
-    "java.util.Iterator",
-    "java.util.List",
     "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager.Wrapper"
   ],
   "name": "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager"

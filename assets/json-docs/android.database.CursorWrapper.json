@@ -484,6 +484,8 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.M",
     "android.content.ContentResolver",
     "android.database.CharArrayBuffer",
     "android.database.ContentObserver",
@@ -493,10 +495,7 @@
     "android.net.Uri",
     "android.os.Bundle",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "android.os.Build.VERSION_CODES",
-    "android.os.Build.VERSION_CODES.KITKAT",
-    "android.os.Build.VERSION_CODES.M"
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowCursorWrapper"
 }

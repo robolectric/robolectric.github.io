@@ -203,6 +203,7 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.app.Activity",
     "android.app.Dialog",
     "android.content.Context",
@@ -212,16 +213,15 @@
     "android.view.View",
     "android.view.ViewGroup",
     "android.view.Window",
+    "java.util.ArrayList",
+    "java.util.List",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "java.util.ArrayList",
-    "java.util.List",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowDialog"
 }

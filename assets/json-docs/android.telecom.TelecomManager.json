@@ -509,6 +509,9 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.M",
     "android.content.ComponentName",
     "android.content.Context",
     "android.net.Uri",
@@ -517,19 +520,15 @@
     "android.telecom.PhoneAccountHandle",
     "android.telecom.TelecomManager",
     "com.google.common.collect.ImmutableList",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.ReflectionHelpers",
     "java.util.HashSet",
     "java.util.LinkedHashMap",
     "java.util.LinkedList",
     "java.util.List",
     "java.util.Set",
-    "android.os.Build.VERSION_CODES",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
-    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowTelecomManager.CallRecord"
   ],
   "name": "org.robolectric.shadows.ShadowTelecomManager"

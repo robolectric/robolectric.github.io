@@ -104,6 +104,9 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.content.Context",
     "android.graphics.drawable.Drawable",
     "android.view.Window",
@@ -112,10 +115,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "android.os.Build.VERSION_CODES.M",
-    "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowWindow"
 }

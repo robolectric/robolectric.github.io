@@ -87,26 +87,25 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.Shadows.shadowOf",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
-    "android.content.Context",
     "android.content.IntentSender",
     "android.content.IntentSender.SendIntentException",
-    "android.content.pm.IPackageInstaller",
     "android.content.pm.PackageInstaller",
-    "android.content.pm.PackageManager",
     "android.os.Handler",
-    "com.google.common.base.Function",
     "com.google.common.collect.ImmutableList",
-    "com.google.common.collect.Iterables",
-    "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
     "java.io.IOException",
     "java.io.OutputStream",
-    "java.util.*",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.Shadows.shadowOf"
+    "java.util.HashMap",
+    "java.util.HashSet",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.Set",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowPackageInstaller.ShadowSession"
 }

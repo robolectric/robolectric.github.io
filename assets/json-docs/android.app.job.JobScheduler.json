@@ -24,6 +24,21 @@
       "exceptions": [],
       "name": "cancelAll()"
     },
+    "enqueue(android.app.job.JobInfo,android.app.job.JobWorkItem)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [
+        "job",
+        "work"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "enqueue(android.app.job.JobInfo,android.app.job.JobWorkItem)"
+    },
     "failOnJob(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -77,19 +92,21 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
     "android.app.JobSchedulerImpl",
     "android.app.job.JobInfo",
     "android.app.job.JobScheduler",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
+    "android.app.job.JobWorkItem",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.List",
     "java.util.Map",
     "java.util.Set",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
     "org.robolectric.shadows.ShadowJobScheduler.ShadowJobSchedulerImpl"
   ],
   "name": "org.robolectric.shadows.ShadowJobScheduler"

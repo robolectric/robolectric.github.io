@@ -43,9 +43,9 @@
   "imports": [
     "android.content.Context",
     "android.text.format.DateFormat",
+    "java.util.Locale",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "java.util.Locale"
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowDateFormat"
 }

@@ -247,6 +247,7 @@
     }
   },
   "imports": [
+    "org.robolectric.shadows.util.DataSource.toDataSource",
     "android.content.Context",
     "android.graphics.Bitmap",
     "android.media.MediaMetadataRetriever",
@@ -257,8 +258,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadows.util.DataSource",
-    "org.robolectric.shadows.util.DataSource.toDataSource"
+    "org.robolectric.shadows.util.DataSource"
   ],
   "name": "org.robolectric.shadows.ShadowMediaMetadataRetriever"
 }

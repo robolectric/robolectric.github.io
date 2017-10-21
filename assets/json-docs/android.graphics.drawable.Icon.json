@@ -72,15 +72,15 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.graphics.Bitmap",
     "android.graphics.drawable.Icon",
     "android.net.Uri",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "android.os.Build.VERSION_CODES.M",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowIcon"
 }

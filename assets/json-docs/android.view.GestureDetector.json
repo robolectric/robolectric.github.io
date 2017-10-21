@@ -91,6 +91,9 @@
     }
   },
   "imports": [
+    "android.view.GestureDetector.OnDoubleTapListener",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.content.Context",
     "android.os.Handler",
     "android.view.GestureDetector",
@@ -98,10 +101,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "android.view.GestureDetector.OnDoubleTapListener",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowGestureDetector"
 }

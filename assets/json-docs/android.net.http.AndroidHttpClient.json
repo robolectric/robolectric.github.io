@@ -183,6 +183,7 @@
   "imports": [
     "android.content.Context",
     "android.net.http.AndroidHttpClient",
+    "java.io.IOException",
     "org.apache.http.HttpHost",
     "org.apache.http.HttpRequest",
     "org.apache.http.HttpResponse",
@@ -197,8 +198,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.ReflectionHelpers",
-    "java.io.IOException"
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowAndroidHttpClient"
 }

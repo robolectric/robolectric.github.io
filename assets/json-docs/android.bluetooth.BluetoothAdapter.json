@@ -225,17 +225,16 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothAdapter.LeScanCallback",
     "android.bluetooth.BluetoothDevice",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
     "java.util.Collections",
     "java.util.HashSet",
     "java.util.Set",
     "java.util.UUID",
-    "android.os.Build.VERSION_CODES",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2"
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothAdapter"
 }

@@ -38,11 +38,11 @@
   },
   "imports": [
     "android.media.audiofx.AudioEffect",
+    "java.util.LinkedList",
+    "java.util.List",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.Resetter",
-    "java.util.LinkedList",
-    "java.util.List"
+    "org.robolectric.annotation.Resetter"
   ],
   "name": "org.robolectric.shadows.ShadowAudioEffect"
 }

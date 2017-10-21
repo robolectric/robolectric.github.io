@@ -16,20 +16,20 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.newInstanceOf",
     "android.graphics.ImageFormat",
     "android.hardware.Camera",
     "android.view.SurfaceHolder",
-    "org.robolectric.Shadows",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.Collections",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
-    "org.robolectric.shadow.api.Shadow.*"
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowCamera.ShadowSize"
 }

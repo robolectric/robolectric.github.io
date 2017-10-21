@@ -14,9 +14,9 @@
   },
   "imports": [
     "android.graphics.Region",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.HiddenApi"
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowRegion"
 }

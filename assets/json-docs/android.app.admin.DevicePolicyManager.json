@@ -1,0 +1,499 @@
+{
+  "methods": {
+    "addUserRestriction(android.content.ComponentName,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "key"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addUserRestriction(android.content.ComponentName,java.lang.String)"
+    },
+    "clearUserRestriction(android.content.ComponentName,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "key"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearUserRestriction(android.content.ComponentName,java.lang.String)"
+    },
+    "enableSystemApp(android.content.ComponentName,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "enableSystemApp(android.content.ComponentName,java.lang.String)"
+    },
+    "enforceActiveAdmin(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enforceActiveAdmin(android.content.ComponentName)"
+    },
+    "enforceDeviceOwner(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enforceDeviceOwner(android.content.ComponentName)"
+    },
+    "enforceDeviceOwnerOrProfileOwner(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enforceDeviceOwnerOrProfileOwner(android.content.ComponentName)"
+    },
+    "enforceProfileOwner(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enforceProfileOwner(android.content.ComponentName)"
+    },
+    "getAccountTypesWithManagementDisabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "name": "getAccountTypesWithManagementDisabled()"
+    },
+    "getActiveAdmins()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.ComponentName\u003e",
+      "exceptions": [],
+      "name": "getActiveAdmins()"
+    },
+    "getApplicationRestrictions(android.content.ComponentName,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "packageName"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getApplicationRestrictions(android.content.ComponentName,java.lang.String)"
+    },
+    "getApplicationRestrictions(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getApplicationRestrictions(java.lang.String)",
+      "documentation": "Returns all application restrictions of the {@code packageName} in a {@link Bundle}. "
+    },
+    "getAutoTimeRequired()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getAutoTimeRequired()"
+    },
+    "getOrganizationColor(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getOrganizationColor(android.content.ComponentName)"
+    },
+    "getOrganizationName(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getOrganizationName(android.content.ComponentName)",
+      "documentation": "Returns organization name.\n\n\u003cp\u003eThe API can only be called by profile owner since Android N.\n\n\u003cp\u003eAndroid framework has a hidden API for getting the organization name for device owner since\nAndroid O. This method, however, is extended to return the organization name for device owners\ntoo to make testing of {@link setOrganizationName} easier for device owner cases.\n"
+    },
+    "getPermittedAccessibilityServices(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getPermittedAccessibilityServices(android.content.ComponentName)"
+    },
+    "getPermittedInputMethods(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getPermittedInputMethods(android.content.ComponentName)"
+    },
+    "getShadowUserManager()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowUserManager",
+      "exceptions": [],
+      "name": "getShadowUserManager()"
+    },
+    "isAdminActive(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "who"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAdminActive(android.content.ComponentName)"
+    },
+    "isApplicationHidden(android.content.ComponentName,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isApplicationHidden(android.content.ComponentName,java.lang.String)"
+    },
+    "isDeviceOwnerApp(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isDeviceOwnerApp(java.lang.String)"
+    },
+    "isProfileOwnerApp(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isProfileOwnerApp(java.lang.String)"
+    },
+    "isUninstallBlocked(android.content.ComponentName,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isUninstallBlocked(android.content.ComponentName,java.lang.String)"
+    },
+    "setAccountManagementDisabled(android.content.ComponentName,java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "accountType",
+        "disabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccountManagementDisabled(android.content.ComponentName,java.lang.String,boolean)"
+    },
+    "setActiveAdmin(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "componentName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActiveAdmin(android.content.ComponentName)",
+      "documentation": "Sets the given {@code componentName} as one of the active admins. "
+    },
+    "setApplicationHidden(android.content.ComponentName,java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "packageName",
+        "hidden"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setApplicationHidden(android.content.ComponentName,java.lang.String,boolean)"
+    },
+    "setApplicationRestrictions(android.content.ComponentName,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "packageName",
+        "applicationRestrictions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setApplicationRestrictions(android.content.ComponentName,java.lang.String,android.os.Bundle)"
+    },
+    "setApplicationRestrictions(java.lang.String,android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName",
+        "applicationRestrictions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setApplicationRestrictions(java.lang.String,android.os.Bundle)",
+      "documentation": "Sets the application restrictions of the {@code packageName}.\n\n\u003cp\u003eThe new {@code applicationRestrictions} always completely overwrites any existing ones.\n"
+    },
+    "setAutoTimeRequired(android.content.ComponentName,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "required"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAutoTimeRequired(android.content.ComponentName,boolean)"
+    },
+    "setDeviceOwner(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDeviceOwner(android.content.ComponentName)",
+      "documentation": "Sets the admin as active admin and device owner. "
+    },
+    "setOrganizationColor(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "color"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setOrganizationColor(android.content.ComponentName,int)"
+    },
+    "setOrganizationName(android.content.ComponentName,java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setOrganizationName(android.content.ComponentName,java.lang.CharSequence)",
+      "documentation": "Sets organization name.\n\n\u003cp\u003eThe API can only be called by profile owner since Android N and can be called by both of\nprofile owner and device owner since Android O.\n"
+    },
+    "setPermittedAccessibilityServices(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "packageNames"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setPermittedAccessibilityServices(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)",
+      "documentation": "Sets permitted accessibility services.\n\n\u003cp\u003eThe API can be called by either a profile or device owner.\n\n\u003cp\u003eThis method does not check already enabled non-system accessibility services, so will always\nset the restriction and return true.\n"
+    },
+    "setPermittedInputMethods(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "packageNames"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setPermittedInputMethods(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)",
+      "documentation": "Sets permitted input methods.\n\n\u003cp\u003eThe API can be called by either a profile or device owner.\n\n\u003cp\u003eThis method does not check already enabled non-system input methods, so will always set the\nrestriction and return true.\n"
+    },
+    "setProfileOwner(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProfileOwner(android.content.ComponentName)",
+      "documentation": "Sets the admin as active admin and profile owner. "
+    },
+    "setUninstallBlocked(android.content.ComponentName,java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "packageName",
+        "uninstallBlocked"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUninstallBlocked(android.content.ComponentName,java.lang.String,boolean)"
+    },
+    "wasPackageEverHidden(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasPackageEverHidden(java.lang.String)",
+      "documentation": "Returns {@code true} if the given {@code packageName} was ever hidden. "
+    },
+    "wasSystemAppEnabled(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasSystemAppEnabled(java.lang.String)",
+      "documentation": "Returns {@code true} if the given {@code packageName} was a system app and was enabled. "
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.Shadows.shadowOf",
+    "android.annotation.Nullable",
+    "android.app.admin.DevicePolicyManager",
+    "android.content.ComponentName",
+    "android.content.Context",
+    "android.os.Build",
+    "android.os.Bundle",
+    "android.os.Process",
+    "android.os.UserManager",
+    "android.text.TextUtils",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.HashSet",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.Set",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowDevicePolicyManager",
+  "documentation": "Shadow for {@link DevicePolicyManager} "
+}

@@ -486,6 +486,11 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "org.robolectric.RuntimeEnvironment.isMainThread",
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.os.Looper",
     "java.util.Collections",
     "java.util.Map",
@@ -498,12 +503,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.util.Scheduler",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "org.robolectric.RuntimeEnvironment.isMainThread",
-    "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadow.api.Shadow.*",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
+    "org.robolectric.util.Scheduler"
   ],
   "name": "org.robolectric.shadows.ShadowLooper",
   "documentation": "Robolectric enqueues posted {@link Runnable}s to be run\n(on this thread) later. {@code Runnable}s that are scheduled to run immediately can be\ntriggered by calling {@link #idle()}.\n\n@see ShadowMessageQueue\n"

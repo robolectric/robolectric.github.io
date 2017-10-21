@@ -29,7 +29,8 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getCallState()"
+      "name": "getCallState()",
+      "documentation": "Call state may be specified via {@link #setCallState(int)}. "
     },
     "getCellLocation()": {
       "isImplementation": true,
@@ -234,6 +235,19 @@
       "exceptions": [],
       "name": "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)"
     },
+    "setCallState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCallState(int)",
+      "documentation": "Sets the current call state to the desired state and updates any listeners. "
+    },
     "setCallState(int,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -245,7 +259,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setCallState(int,java.lang.String)"
+      "name": "setCallState(int,java.lang.String)",
+      "documentation": "Sets the current call state with the option to specify an incoming phone number for the\nCALL_STATE_RINGING state. The incoming phone number will be ignored for all other cases.\n"
     },
     "setCellLocation(android.telephony.CellLocation)": {
       "isImplementation": false,
@@ -417,6 +432,14 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.telephony.PhoneStateListener.LISTEN_CALL_STATE",
+    "android.telephony.PhoneStateListener.LISTEN_CELL_INFO",
+    "android.telephony.PhoneStateListener.LISTEN_CELL_LOCATION",
+    "android.telephony.PhoneStateListener.LISTEN_NONE",
+    "android.telephony.TelephonyManager.CALL_STATE_IDLE",
+    "android.telephony.TelephonyManager.CALL_STATE_RINGING",
     "android.os.Build.VERSION",
     "android.telephony.CellInfo",
     "android.telephony.CellLocation",
@@ -429,15 +452,7 @@
     "java.util.List",
     "java.util.Map",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "android.telephony.PhoneStateListener.LISTEN_CALL_STATE",
-    "android.telephony.PhoneStateListener.LISTEN_CELL_INFO",
-    "android.telephony.PhoneStateListener.LISTEN_CELL_LOCATION",
-    "android.telephony.PhoneStateListener.LISTEN_NONE",
-    "android.telephony.TelephonyManager.CALL_STATE_IDLE",
-    "android.telephony.TelephonyManager.CALL_STATE_RINGING"
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowTelephonyManager"
 }

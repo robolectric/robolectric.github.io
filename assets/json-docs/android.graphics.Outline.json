@@ -14,11 +14,11 @@
     }
   },
   "imports": [
-    "android.graphics.Path",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.graphics.Outline",
-    "org.robolectric.annotation.Implements",
+    "android.graphics.Path",
     "org.robolectric.annotation.Implementation",
-    "android.os.Build.VERSION_CODES.LOLLIPOP"
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowOutline"
 }

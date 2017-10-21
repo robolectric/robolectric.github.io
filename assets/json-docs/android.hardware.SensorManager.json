@@ -102,17 +102,21 @@
     }
   },
   "imports": [
-    "android.hardware.*",
+    "android.os.Build.VERSION_CODES.O",
+    "android.hardware.Sensor",
+    "android.hardware.SensorDirectChannel",
+    "android.hardware.SensorEvent",
+    "android.hardware.SensorEventListener",
+    "android.hardware.SensorManager",
     "android.os.MemoryFile",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "java.util.ArrayList",
-    "java.util.HashMap",
-    "java.util.Map",
-    "android.os.Build.VERSION_CODES.O"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowSensorManager"
 }

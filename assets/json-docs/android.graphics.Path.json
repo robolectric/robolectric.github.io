@@ -109,14 +109,14 @@
     }
   },
   "imports": [
+    "org.robolectric.shadows.ShadowPath.Point.Type.LINE_TO",
+    "org.robolectric.shadows.ShadowPath.Point.Type.MOVE_TO",
     "android.graphics.Path",
+    "java.util.ArrayList",
+    "java.util.List",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "java.util.ArrayList",
-    "java.util.List",
-    "org.robolectric.shadows.ShadowPath.Point.Type.LINE_TO",
-    "org.robolectric.shadows.ShadowPath.Point.Type.MOVE_TO",
     "org.robolectric.shadows.ShadowPath.Point"
   ],
   "name": "org.robolectric.shadows.ShadowPath",

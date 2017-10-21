@@ -12,6 +12,21 @@
       "exceptions": [],
       "name": "addAccessibilityStateChangeListener(android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener)"
     },
+    "createInstance(android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.view.accessibility.AccessibilityManager",
+      "exceptions": [
+        "java.lang.Exception"
+      ],
+      "name": "createInstance(android.content.Context)"
+    },
     "getAccessibilityServiceList()": {
       "isImplementation": true,
       "modifiers": [
@@ -91,6 +106,17 @@
       "exceptions": [],
       "name": "removeAccessibilityStateChangeListener(android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener)"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "setAccessibilityServiceList(java.util.List\u003candroid.content.pm.ServiceInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -153,6 +179,8 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.accessibilityservice.AccessibilityServiceInfo",
     "android.content.Context",
     "android.content.pm.ServiceInfo",
@@ -162,16 +190,15 @@
     "android.util.Log",
     "android.view.accessibility.AccessibilityManager",
     "android.view.accessibility.IAccessibilityManager",
-    "com.android.server.accessibility.AccessibilityManagerService",
+    "java.util.List",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.HiddenApi",
-    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "java.util.List",
-    "android.os.Build.VERSION_CODES.KITKAT",
-    "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadows.ShadowAccessibilityManager.MyHandler"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityManager"

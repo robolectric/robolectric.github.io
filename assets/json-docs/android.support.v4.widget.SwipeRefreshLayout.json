@@ -25,13 +25,13 @@
     }
   },
   "imports": [
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.shadows.ShadowViewGroup",
     "android.support.v4.widget.SwipeRefreshLayout",
-    "android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener"
+    "android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowViewGroup"
   ],
   "name": "org.robolectric.shadows.support.v4.ShadowSwipeRefreshLayout"
 }

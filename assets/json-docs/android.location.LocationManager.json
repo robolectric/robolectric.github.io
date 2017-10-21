@@ -432,8 +432,6 @@
     "android.location.LocationListener",
     "android.location.LocationManager",
     "android.os.Looper",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.HashMap",
@@ -444,6 +442,8 @@
     "java.util.List",
     "java.util.Map",
     "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
     "org.robolectric.shadows.ShadowLocationManager.ListenerRegistration",
     "org.robolectric.shadows.ShadowLocationManager.LocationProviderEntry"
   ],

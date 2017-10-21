@@ -1,15 +1,15 @@
 {
   "methods": {},
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.content.ContentResolver",
     "android.provider.Settings",
-    "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
     "java.util.HashMap",
     "java.util.Map",
     "java.util.WeakHashMap",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1"
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowSettings.ShadowGlobal"
 }

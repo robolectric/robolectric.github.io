@@ -513,6 +513,8 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.Shadows.shadowOf",
     "android.graphics.ColorFilter",
     "android.graphics.Paint",
     "android.graphics.PathEffect",
@@ -522,9 +524,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "android.os.Build.VERSION_CODES.N",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowPaint"
 }

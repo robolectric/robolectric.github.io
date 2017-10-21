@@ -242,6 +242,7 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.content.Context",
     "android.graphics.Typeface",
     "android.text.InputFilter",
@@ -253,15 +254,14 @@
     "android.view.View",
     "android.view.inputmethod.EditorInfo",
     "android.widget.TextView",
-    "org.robolectric.annotation.HiddenApi",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
     "java.io.PrintStream",
     "java.util.ArrayList",
     "java.util.List",
     "java.util.Locale",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowTextView"
 }

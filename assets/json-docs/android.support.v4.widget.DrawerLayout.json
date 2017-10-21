@@ -1,5 +1,19 @@
 {
   "methods": {
+    "closeDrawer(android.view.View,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "drawerView",
+        "animate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "closeDrawer(android.view.View,boolean)",
+      "documentation": "Drawer animations are disabled in unit tests.\n"
+    },
     "getDrawerListener()": {
       "isImplementation": false,
       "modifiers": [
@@ -9,6 +23,20 @@
       "returnType": "android.support.v4.widget.DrawerLayout.DrawerListener",
       "exceptions": [],
       "name": "getDrawerListener()"
+    },
+    "openDrawer(android.view.View,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "drawerView",
+        "animate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "openDrawer(android.view.View,boolean)",
+      "documentation": "Drawer animations are disabled in unit tests.\n"
     },
     "setDrawerListener(android.support.v4.widget.DrawerLayout.DrawerListener)": {
       "isImplementation": true,
@@ -24,12 +52,13 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.support.v4.widget.DrawerLayout",
+    "android.view.View",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.shadows.ShadowViewGroup",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.shadows.ShadowViewGroup"
   ],
   "name": "org.robolectric.shadows.support.v4.ShadowDrawerLayout"
 }

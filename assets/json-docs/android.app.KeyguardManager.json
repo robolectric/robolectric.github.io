@@ -8,7 +8,8 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "inKeyguardRestrictedInputMode()"
+      "name": "inKeyguardRestrictedInputMode()",
+      "documentation": "For tests, returns the value set via {@link #setinRestrictedInputMode(boolean)}, or `false` by\ndefault.\n\n@see #setinRestrictedInputMode(boolean)\n"
     },
     "isDeviceSecure()": {
       "isImplementation": true,
@@ -19,7 +20,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 23,
-      "name": "isDeviceSecure()"
+      "name": "isDeviceSecure()",
+      "documentation": "For tests on Android \u003e\u003dM, returns the value set by {@link #setIsDeviceSecure(boolean)}, or\n`false` by default.\n\n@see #setIsDeviceSecure(boolean)\n"
+    },
+    "isKeyguardLocked()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isKeyguardLocked()",
+      "documentation": "For tests, returns the value set via {@link #setKeyguardLocked(boolean)}, or `false` by\ndefault.\n\n@see #setKeyguardLocked(boolean)\n"
     },
     "isKeyguardSecure()": {
       "isImplementation": true,
@@ -30,7 +43,8 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 23,
-      "name": "isKeyguardSecure()"
+      "name": "isKeyguardSecure()",
+      "documentation": "For tests on Android \u003e\u003dM, returns the value set by {@link #setIsKeyguardSecure(boolean)}, or\n`false` by default.\n\n@see #setIsKeyguardSecure(boolean)\n"
     },
     "newKeyguardLock(java.lang.String)": {
       "isImplementation": true,
@@ -42,7 +56,8 @@
       ],
       "returnType": "android.app.KeyguardManager.KeyguardLock",
       "exceptions": [],
-      "name": "newKeyguardLock(java.lang.String)"
+      "name": "newKeyguardLock(java.lang.String)",
+      "documentation": "For tests, returns a {@link ShadowKeyguardLock}.\n\n@see ShadowKeyguardLock\n"
     },
     "setIsDeviceSecure(boolean)": {
       "isImplementation": false,
@@ -54,7 +69,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setIsDeviceSecure(boolean)"
+      "name": "setIsDeviceSecure(boolean)",
+      "documentation": "For tests on Android \u003e\u003dM, sets the value to be returned by {@link #isDeviceSecure()}.\n\n@see #isDeviceSecure()\n"
     },
     "setIsKeyguardSecure(boolean)": {
       "isImplementation": false,
@@ -66,7 +82,21 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setIsKeyguardSecure(boolean)"
+      "name": "setIsKeyguardSecure(boolean)",
+      "documentation": "For tests on Android \u003e\u003dM, sets the value to be returned by {@link #isKeyguardSecure()}.\n\n@see #isKeyguardSecure()\n"
+    },
+    "setKeyguardLocked(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isKeyguardLocked"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setKeyguardLocked(boolean)",
+      "documentation": "Sets the value to be returned by {@link #isKeyguardLocked()}.\n\n@see #isKeyguardLocked()\n"
     },
     "setinRestrictedInputMode(boolean)": {
       "isImplementation": false,
@@ -78,16 +108,17 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setinRestrictedInputMode(boolean)"
+      "name": "setinRestrictedInputMode(boolean)",
+      "documentation": "Sets the value to be returned by {@link #isKeyguardRestrictedInputMode()}.\n\n@see #isKeyguardRestrictedInputMode()\n"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.M",
     "android.app.KeyguardManager",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "android.os.Build.VERSION_CODES.M",
     "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock"
   ],
   "name": "org.robolectric.shadows.ShadowKeyguardManager"

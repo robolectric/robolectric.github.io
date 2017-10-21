@@ -13,9 +13,9 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.newInstanceOf",
     "android.webkit.JsPromptResult",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow.newInstanceOf"
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowJsPromptResult"
 }

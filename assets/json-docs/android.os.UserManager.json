@@ -1,5 +1,18 @@
 {
   "methods": {
+    "clearUserRestrictions(android.os.UserHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearUserRestrictions(android.os.UserHandle)",
+      "documentation": "Removes all user restrictions set of a user identified by {@code userHandle}.\n"
+    },
     "getApplicationRestrictions(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -12,6 +25,18 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "getApplicationRestrictions(java.lang.String)"
+    },
+    "getSerialNumberForUser(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getSerialNumberForUser(android.os.UserHandle)"
     },
     "getUserProfiles()": {
       "isImplementation": true,
@@ -98,6 +123,19 @@
       "name": "setManagedProfile(boolean)",
       "documentation": "Setter for {@link UserManager#isManagedProfile()}\n"
     },
+    "setSerialNumberForUser(android.os.UserHandle,long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "serialNumber"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSerialNumberForUser(android.os.UserHandle,long)"
+    },
     "setUserRestriction(android.os.UserHandle,java.lang.String,boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -127,17 +165,20 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N",
     "android.os.Bundle",
     "android.os.UserHandle",
     "android.os.UserManager",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
     "java.util.Collections",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
-    "android.os.Build.VERSION_CODES",
-    "android.os.Build.VERSION_CODES.*"
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowUserManager"
+  "name": "org.robolectric.shadows.ShadowUserManager",
+  "documentation": "Robolectric implementation of {@link android.os.UserManager}.\n"
 }

@@ -316,14 +316,19 @@
   },
   "imports": [
     "android.util.Log",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.Resetter",
     "java.io.FileOutputStream",
     "java.io.IOException",
     "java.io.PrintStream",
-    "java.util.*",
+    "java.util.ArrayList",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.Queue",
     "java.util.concurrent.ConcurrentLinkedQueue",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadows.ShadowLog.LogItem"
   ],
   "name": "org.robolectric.shadows.ShadowLog"

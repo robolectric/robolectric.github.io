@@ -303,11 +303,11 @@
   },
   "imports": [
     "android.view.MotionEvent",
+    "java.lang.reflect.Constructor",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "java.lang.reflect.Constructor"
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowMotionEvent"
 }

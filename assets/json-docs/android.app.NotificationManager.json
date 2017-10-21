@@ -72,6 +72,19 @@
       "minSdk": 26,
       "name": "createNotificationChannelGroup(java.lang.Object)"
     },
+    "createNotificationChannels(java.util.List\u003cjava.lang.Object\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "channelList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "createNotificationChannels(java.util.List\u003cjava.lang.Object\u003e)"
+    },
     "deleteNotificationChannel(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -84,6 +97,20 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "deleteNotificationChannel(java.lang.String)"
+    },
+    "deleteNotificationChannelGroup(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "channelGroupId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "deleteNotificationChannelGroup(java.lang.String)",
+      "documentation": "Delete a notification channel group and all notification channels associated with the group.\nThis method will not notify any NotificationListenerService of resulting changes to\nnotification channel groups nor to notification channels.\n"
     },
     "getActiveNotifications()": {
       "isImplementation": true,

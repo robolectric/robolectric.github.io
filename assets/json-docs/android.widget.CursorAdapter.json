@@ -30,14 +30,14 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.view.View",
     "android.view.ViewGroup",
     "android.widget.CursorAdapter",
+    "java.util.List",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "java.util.List",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowCursorAdapter",
   "documentation": "@deprecated This class will be removed in Robolectric 3.5. The real\nAndroid CursorAdapter will be used instead.\n"

@@ -37,10 +37,10 @@
     "android.view.Surface",
     "android.view.SurfaceHolder",
     "android.view.SurfaceView",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
     "java.util.HashSet",
     "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
     "org.robolectric.shadows.ShadowSurfaceView.FakeSurfaceHolder"
   ],
   "name": "org.robolectric.shadows.ShadowSurfaceView"

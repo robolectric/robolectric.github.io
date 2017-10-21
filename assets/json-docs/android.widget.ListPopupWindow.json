@@ -23,13 +23,13 @@
     }
   },
   "imports": [
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.widget.ListPopupWindow",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowListPopupWindow"
 }

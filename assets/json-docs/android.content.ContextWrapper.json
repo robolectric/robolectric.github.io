@@ -104,8 +104,8 @@
   "imports": [
     "android.content.ContextWrapper",
     "android.content.Intent",
-    "org.robolectric.annotation.Implements",
-    "java.util.List"
+    "java.util.List",
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowContextWrapper"
 }

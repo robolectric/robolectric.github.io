@@ -247,6 +247,7 @@
     }
   },
   "imports": [
+    "org.robolectric.Shadows.shadowOf",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
     "android.graphics.BitmapFactory",
@@ -264,10 +265,9 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowDrawable"
 }

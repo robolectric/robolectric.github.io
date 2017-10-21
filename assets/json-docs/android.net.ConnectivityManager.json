@@ -224,21 +224,21 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.net.ConnectivityManager",
+    "android.net.Network",
     "android.net.NetworkInfo",
     "android.net.NetworkRequest",
-    "android.net.Network",
-    "org.robolectric.Shadows",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.HiddenApi",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.Map",
     "java.util.Set",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.M",
-    "org.robolectric.RuntimeEnvironment.getApiLevel"
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowConnectivityManager"
 }

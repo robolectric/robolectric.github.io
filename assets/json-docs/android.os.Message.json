@@ -95,18 +95,22 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.ReflectionHelpers.getField",
+    "org.robolectric.util.ReflectionHelpers.getStaticField",
+    "org.robolectric.util.ReflectionHelpers.setField",
+    "org.robolectric.util.ReflectionHelpers.setStaticField",
     "android.os.Handler",
     "android.os.Message",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.Resetter",
-    "android.os.Build.VERSION_CODES.*",
-    "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadow.api.Shadow.*",
-    "org.robolectric.util.ReflectionHelpers.*"
+    "org.robolectric.annotation.Resetter"
   ],
   "name": "org.robolectric.shadows.ShadowMessage"
 }

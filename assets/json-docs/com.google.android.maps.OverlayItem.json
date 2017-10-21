@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(com.google.android.maps.GeoPoint,java.lang.String,java.lang.String)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -72,7 +72,7 @@
     "com.google.android.maps.OverlayItem",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.internal.ShadowExtractor",
     "org.robolectric.util.Strings"
   ],
   "name": "org.robolectric.shadows.maps.ShadowOverlayItem"

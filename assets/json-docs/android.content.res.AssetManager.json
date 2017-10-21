@@ -205,6 +205,16 @@
       "exceptions": [],
       "name": "getArrayIntResource(int)"
     },
+    "getAssetsDirectory()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.res.FsFile",
+      "exceptions": [],
+      "name": "getAssetsDirectory()"
+    },
     "getAssignedPackageIdentifiers()": {
       "isImplementation": true,
       "modifiers": [
@@ -227,6 +237,20 @@
       "returnType": "org.robolectric.shadows.Converter",
       "exceptions": [],
       "name": "getConverter(org.robolectric.res.TypedResource)"
+    },
+    "getFileFromZip(java.io.File)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "file"
+      ],
+      "returnType": "java.io.File",
+      "exceptions": [],
+      "name": "getFileFromZip(java.io.File)",
+      "documentation": "Extract an asset from a zipped up assets provided by the build system, this is required because there is no\nway to get a FileDescriptor from a zip entry. This is a temporary measure for Bazel which can be removed\nonce binary resources are supported.\n"
     },
     "getLocales()": {
       "isImplementation": true,
@@ -827,6 +851,10 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.RuntimeEnvironment.castNativePtr",
+    "org.robolectric.Shadows.shadowOf",
     "android.content.res.AssetFileDescriptor",
     "android.content.res.AssetManager",
     "android.content.res.Resources",
@@ -836,6 +864,18 @@
     "android.util.AttributeSet",
     "android.util.SparseArray",
     "android.util.TypedValue",
+    "java.io.ByteArrayInputStream",
+    "java.io.File",
+    "java.io.FileInputStream",
+    "java.io.FileOutputStream",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.nio.file.Files",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.zip.ZipEntry",
+    "java.util.zip.ZipInputStream",
     "javax.annotation.Nonnull",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.android.XmlResourceParserImpl",
@@ -863,17 +903,6 @@
     "org.robolectric.res.builder.XmlBlock",
     "org.robolectric.util.Logger",
     "org.robolectric.util.ReflectionHelpers",
-    "java.io.ByteArrayInputStream",
-    "java.io.File",
-    "java.io.IOException",
-    "java.io.InputStream",
-    "java.util.HashMap",
-    "java.util.List",
-    "java.util.Map",
-    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.RuntimeEnvironment.castNativePtr",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadows.ShadowAssetManager.NativeTheme"
   ],
   "name": "org.robolectric.shadows.ShadowAssetManager"

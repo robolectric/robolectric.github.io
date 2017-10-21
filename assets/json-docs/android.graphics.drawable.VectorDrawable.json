@@ -151,14 +151,14 @@
     }
   },
   "imports": [
-    "android.graphics.drawable.VectorDrawable",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "java.nio.ByteBuffer",
-    "java.nio.ByteOrder",
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.shadows.ShadowVirtualRefBasePtr.get",
     "org.robolectric.shadows.ShadowVirtualRefBasePtr.put",
+    "android.graphics.drawable.VectorDrawable",
+    "java.nio.ByteBuffer",
+    "java.nio.ByteOrder",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
     "org.robolectric.shadows.ShadowVectorDrawable.Path",
     "org.robolectric.shadows.ShadowVectorDrawable.Group"
   ],

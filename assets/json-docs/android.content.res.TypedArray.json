@@ -55,22 +55,22 @@
     }
   },
   "imports": [
+    "org.robolectric.Shadows.shadowOf",
     "android.content.res.Resources",
     "android.content.res.TypedArray",
     "android.os.Build",
     "android.util.TypedValue",
     "com.google.common.base.Strings",
     "com.google.common.collect.ImmutableMap",
+    "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.Shadows",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "java.util.Map",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowTypedArray"
 }

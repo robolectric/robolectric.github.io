@@ -12,6 +12,19 @@
       "name": "getLatestWakeLock()",
       "documentation": "Retrieves the most recent wakelock registered by the application\n\n@return Most recent wake lock.\n"
     },
+    "isIgnoringBatteryOptimizations(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isIgnoringBatteryOptimizations(java.lang.String)"
+    },
     "isInteractive()": {
       "isImplementation": true,
       "modifiers": [
@@ -82,6 +95,19 @@
       "name": "reset()",
       "documentation": "Discards the most recent {@code PowerManager.WakeLock}s\n"
     },
+    "setIgnoringBatteryOptimizations(java.lang.String,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIgnoringBatteryOptimizations(java.lang.String,boolean)"
+    },
     "setIsInteractive(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -133,19 +159,20 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadows.ShadowApplication.getInstance",
     "android.os.PowerManager",
     "android.os.WorkSource",
+    "java.util.HashMap",
+    "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
-    "java.util.HashMap",
-    "java.util.Map",
-    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadows.ShadowApplication.getInstance",
     "org.robolectric.shadows.ShadowPowerManager.ShadowWakeLock"
   ],
   "name": "org.robolectric.shadows.ShadowPowerManager"

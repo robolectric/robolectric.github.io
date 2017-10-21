@@ -26,11 +26,10 @@
   },
   "imports": [
     "android.accessibilityservice.AccessibilityService",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.shadows.ShadowService",
     "java.util.ArrayList",
-    "java.util.List"
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityService",
   "documentation": "Shadow of AccessibilityService that saves global actions to a list.\n"

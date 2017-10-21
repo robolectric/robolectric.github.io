@@ -14,13 +14,13 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.view.WindowManager",
     "android.widget.PopupWindow",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadow.api.Shadow.directlyOn"
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowPopupWindow"
 }

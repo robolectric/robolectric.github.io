@@ -126,14 +126,22 @@
     }
   },
   "imports": [
-    "android.graphics.*",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.util.ReflectionHelpers",
-    "java.io.*",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.Shadows.shadowOf",
+    "android.graphics.Bitmap",
+    "android.graphics.BitmapFactory",
+    "android.graphics.BitmapRegionDecoder",
+    "android.graphics.Point",
+    "android.graphics.Rect",
+    "java.io.ByteArrayInputStream",
+    "java.io.FileDescriptor",
+    "java.io.FileInputStream",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowBitmapRegionDecoder"
 }

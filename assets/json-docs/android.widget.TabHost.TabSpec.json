@@ -180,13 +180,13 @@
     "android.widget.TabHost",
     "android.widget.TabHost.TabSpec",
     "android.widget.TabWidget",
+    "java.util.ArrayList",
+    "java.util.List",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "java.util.ArrayList",
-    "java.util.List"
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowTabHost.ShadowTabSpec"
 }

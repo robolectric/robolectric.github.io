@@ -145,11 +145,11 @@
     "android.os.Handler",
     "android.os.Looper",
     "com.google.common.base.Preconditions",
+    "java.util.HashMap",
+    "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.util.ReflectionHelpers",
-    "java.util.HashMap",
-    "java.util.Map"
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowWifiP2pManager"
 }

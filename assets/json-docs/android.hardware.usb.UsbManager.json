@@ -1,0 +1,94 @@
+{
+  "methods": {
+    "addOrUpdateUsbDevice(android.hardware.usb.UsbDevice,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "usbDevice",
+        "hasPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addOrUpdateUsbDevice(android.hardware.usb.UsbDevice,boolean)",
+      "documentation": "Adds a USB device into available USB devices map with permission value. If the USB device\nalready exists, updates the USB device with new permission value.\n"
+    },
+    "getDeviceList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.HashMap\u003cjava.lang.String,android.hardware.usb.UsbDevice\u003e",
+      "exceptions": [],
+      "name": "getDeviceList()",
+      "documentation": "Returns a HashMap containing all USB devices currently attached. USB device name is the key for\nthe returned HashMap. The result will be empty if no devices are attached, or if USB host mode\nis inactive or unsupported.\n"
+    },
+    "hasPermission(android.hardware.usb.UsbDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasPermission(android.hardware.usb.UsbDevice)",
+      "documentation": "Returns true if the caller has permission to access the device. "
+    },
+    "openAccessory(android.hardware.usb.UsbAccessory)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accessory"
+      ],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [],
+      "name": "openAccessory(android.hardware.usb.UsbAccessory)",
+      "documentation": "Opens a file descriptor from a temporary file.\n"
+    },
+    "removeUsbDevice(android.hardware.usb.UsbDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "usbDevice"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeUsbDevice(android.hardware.usb.UsbDevice)",
+      "documentation": "Removes a USB device from available USB devices map. "
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()",
+      "documentation": "Clears all the data of {@link ShadowUsbManager}. "
+    }
+  },
+  "imports": [
+    "android.hardware.usb.UsbAccessory",
+    "android.hardware.usb.UsbDevice",
+    "android.hardware.usb.UsbManager",
+    "android.os.ParcelFileDescriptor",
+    "com.google.common.base.Preconditions",
+    "java.io.File",
+    "java.io.FileNotFoundException",
+    "java.util.HashMap",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowUsbManager",
+  "documentation": "Robolectric implementation of {@link android.hardware.usb.UsbManager}. "
+}

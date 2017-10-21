@@ -197,8 +197,16 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.Shadows.shadowOf",
     "android.content.res.AssetManager",
     "android.graphics.Typeface",
+    "java.io.File",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.HiddenApi",
@@ -207,17 +215,11 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.manifest.AndroidManifest",
+    "org.robolectric.res.FsFile",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "java.io.File",
-    "java.util.ArrayList",
-    "java.util.HashMap",
-    "java.util.List",
-    "java.util.Map",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadows.ShadowTypeface.FontDesc"
+    "org.robolectric.shadows.ShadowTypeface.FontDesc",
+    "org.robolectric.shadows.ShadowTypeface.StartsWith"
   ],
   "name": "org.robolectric.shadows.ShadowTypeface"
 }

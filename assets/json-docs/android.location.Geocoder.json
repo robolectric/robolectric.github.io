@@ -1,179 +1,49 @@
 {
   "methods": {
-    "didResolution()": {
-      "isImplementation": false,
+    "isPresent()": {
+      "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "static"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "didResolution()"
+      "name": "isPresent()",
+      "documentation": "Returns true by default, or the last value set by {@link #setIsPresent(boolean)}. "
     },
-    "getFromLocation(double,double,int)": {
-      "isImplementation": true,
+    "reset()": {
+      "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setIsPresent(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
       ],
       "params": [
-        "latitude",
-        "longitude",
-        "maxResults"
-      ],
-      "returnType": "java.util.List\u003candroid.location.Address\u003e",
-      "exceptions": [
-        "java.io.IOException"
-      ],
-      "name": "getFromLocation(double,double,int)"
-    },
-    "getFromLocationName(java.lang.String,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "locationName",
-        "maxResults"
-      ],
-      "returnType": "java.util.List\u003candroid.location.Address\u003e",
-      "exceptions": [
-        "java.io.IOException"
-      ],
-      "name": "getFromLocationName(java.lang.String,int)"
-    },
-    "getLastLatitude()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "double",
-      "exceptions": [],
-      "name": "getLastLatitude()"
-    },
-    "getLastLocationName()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "getLastLocationName()"
-    },
-    "getLastLongitude()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "double",
-      "exceptions": [],
-      "name": "getLastLongitude()"
-    },
-    "makeAddress()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [],
-      "returnType": "android.location.Address",
-      "exceptions": [],
-      "name": "makeAddress()"
-    },
-    "setReturnNoResults(boolean)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "returnNoResults"
+        "value"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setReturnNoResults(boolean)"
-    },
-    "setShouldSimulateGeocodeException(boolean)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "shouldSimulateException"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setShouldSimulateGeocodeException(boolean)",
-      "documentation": "Sets a flag to indicate whether or not {@link #getFromLocationName(String, int)} should throw an exception to\nsimulate a failure.\n\n@param shouldSimulateException whether or not an exception should be thrown from {@link #getFromLocationName(String, int)}\n"
-    },
-    "setSimulatedHasLatLong(boolean,boolean)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "hasLatitude",
-        "hasLongitude"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setSimulatedHasLatLong(boolean,boolean)"
-    },
-    "setSimulatedLatLong(double,double)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "lat",
-        "lng"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setSimulatedLatLong(double,double)",
-      "documentation": "Sets up a simulated response for {@link #getFromLocationName(String, int)}}\n\n@param lat latitude for simulated response\n@param lng longitude for simulated response\n"
-    },
-    "setSimulatedResponse(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "address",
-        "city",
-        "state",
-        "zip",
-        "countryCode"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setSimulatedResponse(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)",
-      "documentation": "Sets up a simulated response for {@link #getFromLocation(double, double, int)}\n\n@param address     the address for the response\n@param city        the city for the response\n@param state       the state for the response\n@param zip         the zip code for the response\n@param countryCode the country code for the response\n"
-    },
-    "wasGetFromLocationCalled()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "wasGetFromLocationCalled()",
-      "documentation": "Indicates whether {@link #getFromLocation(double, double, int)} was called.\n\n@return whether {@link #getFromLocation(double, double, int)} was called.\n"
+      "name": "setIsPresent(boolean)",
+      "documentation": "Statically sets the value to be returned by {@link #isPresent()}. "
     }
   },
   "imports": [
-    "android.location.Address",
     "android.location.Geocoder",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.util.ReflectionHelpers",
-    "java.io.IOException",
-    "java.util.ArrayList",
-    "java.util.Arrays",
-    "java.util.List",
-    "java.util.Locale"
+    "org.robolectric.annotation.Resetter"
   ],
-  "name": "org.robolectric.shadows.maps.ShadowGeocoder"
+  "name": "org.robolectric.shadows.ShadowGeocoder",
+  "documentation": "Shadow for {@link Geocoder}. "
 }

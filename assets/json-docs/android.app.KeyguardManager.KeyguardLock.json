@@ -8,7 +8,8 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "disableKeyguard()"
+      "name": "disableKeyguard()",
+      "documentation": "Sets the value to be returned by {@link #isEnabled()} to false.\n\n@see #isEnabled()\n"
     },
     "isEnabled()": {
       "isImplementation": false,
@@ -18,7 +19,8 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isEnabled()"
+      "name": "isEnabled()",
+      "documentation": "For tests, returns the value set via {@link #disableKeyguard()} or {@link reenableKeyguard},\nor `true` by default.\n\n@see #setKeyguardLocked(boolean)\n"
     },
     "reenableKeyguard()": {
       "isImplementation": true,
@@ -28,16 +30,18 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "reenableKeyguard()"
+      "name": "reenableKeyguard()",
+      "documentation": "Sets the value to be returned by {@link #isEnabled()} to true.\n\n@see #isEnabled()\n"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.M",
     "android.app.KeyguardManager",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "android.os.Build.VERSION_CODES.M"
+    "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock"
+  "name": "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock",
+  "documentation": "An implementation of {@link KeyguardManager#KeyguardLock}, for use in tests. "
 }

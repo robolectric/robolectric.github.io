@@ -1,5 +1,16 @@
 {
   "methods": {
+    "getRandomApplicationUid()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRandomApplicationUid()"
+    },
     "myPid()": {
       "isImplementation": true,
       "modifiers": [
@@ -11,6 +22,19 @@
       "returnType": "int",
       "exceptions": [],
       "name": "myPid()"
+    },
+    "myUid()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "myUid()",
+      "documentation": "Returns the identifier of this process\u0027s uid. Unlike Android UIDs are randomly initialized to prevent\ntests from depending on any given value. Tests should access the current process UID via\n{@link android.os.Process#myUid()}.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -34,10 +58,12 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setPid(int)"
+      "name": "setPid(int)",
+      "documentation": "Sets the identifier of this process.\n"
     }
   },
   "imports": [
+    "java.util.concurrent.ThreadLocalRandom",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter"

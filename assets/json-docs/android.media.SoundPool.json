@@ -16,16 +16,16 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "android.media.AudioAttributes",
     "android.media.SoundPool",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.ReflectionHelpers",
-    "android.media.AudioAttributes",
-    "android.os.Build.VERSION_CODES.M",
-    "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.shadow.api.Shadow.invokeConstructor",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowSoundPool"
 }

@@ -328,22 +328,21 @@
     }
   },
   "imports": [
-    "android.os.Build",
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.text.format.Time",
     "android.util.TimeFormatException",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.Strftime",
     "java.text.ParseException",
     "java.text.SimpleDateFormat",
     "java.util.Calendar",
     "java.util.Date",
     "java.util.Locale",
     "java.util.TimeZone",
-    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter.from"
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.Strftime"
   ],
   "name": "org.robolectric.shadows.ShadowTime"
 }

@@ -17,8 +17,8 @@
   "imports": [
     "android.content.Context",
     "android.support.multidex.MultiDex",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.Implementation"
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.multidex.ShadowMultiDex"
 }

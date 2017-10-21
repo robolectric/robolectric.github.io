@@ -23,13 +23,13 @@
   },
   "imports": [
     "android.graphics.ColorMatrix",
+    "java.util.ArrayList",
+    "java.util.List",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.Join",
-    "java.util.ArrayList",
-    "java.util.List"
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowColorMatrix"
 }

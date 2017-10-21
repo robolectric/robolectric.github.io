@@ -86,12 +86,12 @@
   "imports": [
     "android.content.ContentProviderOperation",
     "android.content.ContentValues",
+    "java.util.Map",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.HiddenApi",
-    "org.robolectric.util.ReflectionHelpers",
-    "java.util.Map"
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowContentProviderOperation"
 }

@@ -33,10 +33,10 @@
   },
   "imports": [
     "android.net.wifi.WifiConfiguration",
+    "java.util.BitSet",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "java.util.BitSet"
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowWifiConfiguration"
 }

@@ -253,16 +253,16 @@
     }
   },
   "imports": [
+    "org.robolectric.Shadows.shadowOf",
     "android.content.Context",
     "android.view.View",
     "android.widget.TextView",
     "android.widget.Toast",
+    "java.util.List",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "java.util.List",
-    "org.robolectric.Shadows.shadowOf"
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowToast"
 }

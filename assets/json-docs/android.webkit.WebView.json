@@ -95,6 +95,20 @@
       "exceptions": [],
       "name": "ensureProviderCreated()"
     },
+    "evaluateJavascript(java.lang.String,android.webkit.ValueCallback\u003cjava.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "script",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "evaluateJavascript(java.lang.String,android.webkit.ValueCallback\u003cjava.lang.String\u003e)"
+    },
     "findAddress(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -129,7 +143,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getGoBackInvocations()",
-      "documentation": "@return goBackInvocations the number of times {@code android.webkit.WebView#goBack()}\nwas invoked\n"
+      "documentation": "@return goBackInvocations the number of times {@code android.webkit.WebView#goBack()} was\n    invoked\n"
     },
     "getJavascriptInterface(java.lang.String)": {
       "isImplementation": false,
@@ -153,6 +167,16 @@
       "exceptions": [],
       "name": "getLastAdditionalHttpHeaders()",
       "documentation": "@return the additional Http headers that in the same request with last loaded url\n"
+    },
+    "getLastEvaluatedJavascript()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLastEvaluatedJavascript()"
     },
     "getLastLoadData()": {
       "isImplementation": false,
@@ -185,6 +209,16 @@
       "name": "getLastLoadedUrl()",
       "documentation": "@return the last loaded url\n"
     },
+    "getOriginalUrl()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getOriginalUrl()"
+    },
     "getRunFlag()": {
       "isImplementation": false,
       "modifiers": [
@@ -204,6 +238,16 @@
       "returnType": "android.webkit.WebSettings",
       "exceptions": [],
       "name": "getSettings()"
+    },
+    "getUrl()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getUrl()"
     },
     "getWebChromeClient()": {
       "isImplementation": false,
@@ -346,7 +390,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCanGoBack(boolean)",
-      "documentation": "Sets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}\n"
+      "documentation": "Sets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}\n@deprecated Do not depend on this method as it will be removed in a future update. The\n    preferered method is to populate a fake web history to use for going back.\n"
     },
     "setLayoutParams(android.view.ViewGroup.LayoutParams)": {
       "isImplementation": true,
@@ -469,24 +513,28 @@
     }
   },
   "imports": [
+    "android.os.Build",
     "android.view.ViewGroup.LayoutParams",
+    "android.webkit.ValueCallback",
     "android.webkit.WebChromeClient",
     "android.webkit.WebSettings",
     "android.webkit.WebView",
     "android.webkit.WebViewClient",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.HiddenApi",
-    "org.robolectric.fakes.RoboWebSettings",
-    "org.robolectric.util.ReflectionHelpers",
     "java.lang.reflect.Field",
     "java.lang.reflect.InvocationHandler",
     "java.lang.reflect.Method",
     "java.lang.reflect.Proxy",
+    "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
+    "java.util.List",
     "java.util.Map",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.fakes.RoboWebSettings",
+    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowWebView.LoadDataWithBaseURL",
     "org.robolectric.shadows.ShadowWebView.LoadData"
   ],

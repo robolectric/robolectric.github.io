@@ -1,7 +1,7 @@
 {
   "methods": {
     "__constructor__(int,int)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -92,7 +92,7 @@
     "com.google.android.maps.GeoPoint",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.internal.ShadowExtractor"
   ],
   "name": "org.robolectric.shadows.maps.ShadowGeoPoint"
 }
