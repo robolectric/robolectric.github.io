@@ -1,6 +1,6 @@
 ---
-title:  "Upcoming Releases"
-author: Christian Williams & Jonathan Gerrish
+title:  "Keepin' It Real With Resources"
+author: Christian Williams
 ---
 
 Up until now, Robolectric has relied on rough approximations of the Android framework's resource handling logic, backwards-engineered to be 'good enough' for many testing purposes.
@@ -17,11 +17,11 @@ The releases will be:
 
 **3.8:** Resource loading from `aapt`-processed binary resource files.
 
-We'll keep the changes in each release focused and narrow, and provide lots of notes on migration. 
+We'll keep the changes in each release focused and narrow, and provide lots of notes on migration. Stick with us through this, we think you'll be happy with the improvements.
 
 Going forward, we're applying a higher standard for accuracy in Robolectric's implementations of native code. We'll keep you posted as we revamp more parts of Robolectric's framework simulation.
 
-As always, thanks for your pull requests, bug reports, ideas and questions!
+As always, thanks for your pull requests, bug reports, ideas and questions! &#x1f4af;
 
 _Your Robolectric maintainers,_
 <br/>
