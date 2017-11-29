@@ -50,7 +50,7 @@ You can simulate starting the Activity with an intent:
 
 ```java
 Intent intent = new Intent(Intent.ACTION_VIEW);
-Activity activity = Robolectric.buildActivity(MyAwesomeActivity.class).withIntent(intent).create().get();
+Activity activity = Robolectric.buildActivity(MyAwesomeActivity.class, intent).create().get();
 ```
 
 ... or restore saved instance state:
