@@ -59,4 +59,4 @@ All non-`@Implementation` methods SHOULD have descriptive Javadoc.
 
 ### Deprecations and Backwards Compatibility
 
-To provide an easy upgrade path, we aim to always mark methods or classes `@Deprecated` in at least a patch release before removing them in the next minor release. We realize that's not quite how (semver)[http://semver.org/] is supposed to work, sorry. Be sure to include migration notes in the `/** @deprecated */` javadoc!
+To provide an easy upgrade path, we aim to always mark methods or classes `@Deprecated` in at least a patch release before removing them in the next minor release. We realize that's not quite how [Semantic Versioning](http://semver.org/) is supposed to work, sorry. Be sure to include migration notes in the `/** @deprecated */` javadoc!
