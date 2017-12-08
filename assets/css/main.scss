@@ -248,9 +248,10 @@ code {
 
 #toc-container {
 	border: solid 2px _palette(border);
-	padding: 1em;
+	padding: .25em .5em;
 	max-width: 40em;
-	margin-bottom: 2em;
+	float: right;
+	margin: 0 0 1em 1em;
 
 	h2 {
 		margin: 0;

@@ -2,6 +2,7 @@
 title: Device Configuration
 group: User Guide
 order: 3
+toc: true
 hide: true
 ---
 
@@ -9,7 +10,7 @@ hide: true
 
 Robolectric makes it easy to simulate a variety of device configurations. In particular, the properties that make up the `android.content.res.Configuration` class can be specified at the test method, test class, package, or suite level, as described [here](/configuring/).
 
-### Specifying Device Configuration
+## Specifying Device Configuration
 The Android device configuration can be specified using the `qualifiers` config property:
 
 ```java
@@ -47,7 +48,7 @@ For unspecified properties, Robolectric picks consistent values based on the pro
 
 Need not be specified.
 
-### Cumulative qualifiers
+## Cumulative qualifiers
 
 By default, specifying qualifiers causes any less narrowly-scoped qualifiers are ignored. For example, qualifiers at the test method level occlude qualifiers at the test class level. However, if the qualifiers config property starts with a ‘+’ (plus sign), it is interpreted as an overlay to any higher-level qualifiers that have been specified:
 
@@ -66,7 +67,7 @@ class MyTest {
 
 Values for unspecified properties are calculated, and rules are applied, after all configs have been merged.
 
-### Changing Device Configuration
+## Changing Device Configuration
 The device configuration can be changed within a test using `RuntimeEnvironment.setQualifiers()`:
 
 ```java
