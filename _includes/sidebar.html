@@ -34,7 +34,7 @@
                     <ul>
                         {% assign menu_pages_sorted = site.pages | sort: "order" %}
                         {% for menu_page in menu_pages_sorted %}
-                        {% if menu_page.group == menu.title and menu_page.title %}
+                        {% if menu_page.group == menu.title and menu_page.hide != true && menu_page.title %}
                         <li><a href="{{ menu_page.url | relative_url }}">{{ menu_page.title | escape }}</a></li>
                         {% endif %}
                         {% endfor %}
