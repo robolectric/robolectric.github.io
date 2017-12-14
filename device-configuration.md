@@ -41,7 +41,7 @@ For unspecified properties, Robolectric picks consistent values based on the pro
 | Screen pixel density | None. | `mdpi` | |
 | Touchscreen type | None. | `finger` | |
 | Keyboard availability | None. | `keyssoft` | |
-| Primary text input method | None. | `qwerty` | |
+| Primary text input method | None. | `nokeys` | |
 | Navigation key availability | None. | `navhidden` | |
 | Primary non-touch navigation method | None. | `nonav` | |
 | Platform version | | | The SDK level currently active. |
@@ -77,14 +77,17 @@ public void testOrientationChange() {
   controller.setup();
   // assert that activity is in portrait mode
   RuntimeEnvironment.setQualifiers("+land");
-  controller.configurationChanged();
+  controller.configurationChange();
   // assert that activity is in landscape mode
 }
 ```
 
 The string parameter to `setQualifiers()` has the same rules as `Config.qualifiers`.
-Note that `RuntimeEnvironment.setQualifiers()` updates the system and application resources with the new configuration, but does not trigger any action on extant activities or other components. `ActivityController.configurationChanged()` simulates the sequence of events that take place on a device when its configuration changes.
-If the activity is configured to handle the configuration changes, `ActivityController.configurationChanged()` will call the activity’s `onConfigurationChanged()` method. If not, `ActivityController` performs the following steps:
+
+Note that `RuntimeEnvironment.setQualifiers()` updates the system and application resources with the new configuration, but does not trigger any action on extant activities or other components. [`ActivityController.configurationChange()`](http://robolectric.org/javadoc/latest/org/robolectric/android/controller/ActivityController.html#configurationChange-android.content.res.Configuration-) can be used to simulate the sequence of events that take place on a device when its configuration changes.
+
+If the activity is configured to handle the configuration changes, `ActivityController.configurationChange()` will call the activity’s `onConfigurationChanged()` method. If not, `ActivityController` performs the following steps:
+
 ```java
 activity.onPause();
 activity.onStop();
