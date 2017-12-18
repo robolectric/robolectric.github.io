@@ -64,6 +64,19 @@
       "exceptions": [],
       "name": "bindService(android.content.Intent,android.content.ServiceConnection,int)"
     },
+    "callAttach(android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callAttach(android.content.Context)",
+      "documentation": "Attaches an application to a base context.\n\n@param application The application to attach.\n@param context The context with which to initialize the application, whose base context will\n               be attached to the application\n"
+    },
     "checkActivities(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -746,7 +759,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setDefaultDisplay(android.view.Display)"
+      "name": "setDefaultDisplay(android.view.Display)",
+      "documentation": "@deprecated Set up display using {@link Config#qualifiers()} instead.\n"
     },
     "setDisplayMetricsDensity(float)": {
       "isImplementation": false,
@@ -759,7 +773,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setDisplayMetricsDensity(float)"
+      "name": "setDisplayMetricsDensity(float)",
+      "documentation": "@deprecated Set screen density using {@link Config#qualifiers()} instead.\n"
     },
     "setLatestAlertDialog(org.robolectric.shadows.ShadowAlertDialog)": {
       "isImplementation": false,
@@ -962,6 +977,7 @@
     "android.content.Intent",
     "android.content.IntentFilter",
     "android.content.ServiceConnection",
+    "android.content.res.Resources",
     "android.os.Bundle",
     "android.os.Handler",
     "android.os.IBinder",
@@ -991,12 +1007,14 @@
     "org.robolectric.RoboSettings",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.Shadows",
+    "org.robolectric.annotation.Config",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.manifest.AndroidManifest",
     "org.robolectric.manifest.BroadcastReceiverData",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.Scheduler",
     "org.robolectric.shadows.ShadowApplication.BroadcastResultHolder",
     "org.robolectric.shadows.ShadowApplication.Wrapper",

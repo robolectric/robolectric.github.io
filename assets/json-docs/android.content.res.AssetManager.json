@@ -97,7 +97,7 @@
       "exceptions": [],
       "name": "buildTypedValue(android.util.AttributeSet,int,int,org.robolectric.res.Style,int)"
     },
-    "convertAndFill(org.robolectric.res.AttributeResource,android.util.TypedValue,java.lang.String,boolean)": {
+    "convertAndFill(org.robolectric.res.AttributeResource,android.util.TypedValue,org.robolectric.res.android.ResTable_config,boolean)": {
       "isImplementation": false,
       "modifiers": [
         "private"
@@ -105,12 +105,12 @@
       "params": [
         "attribute",
         "outValue",
-        "qualifiers",
+        "config",
         "resolveRefs"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "convertAndFill(org.robolectric.res.AttributeResource,android.util.TypedValue,java.lang.String,boolean)"
+      "name": "convertAndFill(org.robolectric.res.AttributeResource,android.util.TypedValue,org.robolectric.res.android.ResTable_config,boolean)"
     },
     "copyTheme(int,int)": {
       "isImplementation": true,
@@ -162,6 +162,20 @@
       "exceptions": [],
       "name": "ensureStringBlocks()"
     },
+    "findAssetFile(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "fileName"
+      ],
+      "returnType": "org.robolectric.res.FsFile",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "findAssetFile(java.lang.String)"
+    },
     "findAttributeValue(int,android.util.AttributeSet,org.robolectric.res.Style,org.robolectric.res.Style,org.robolectric.res.Style,org.robolectric.res.Style)": {
       "isImplementation": false,
       "modifiers": [
@@ -179,19 +193,29 @@
       "exceptions": [],
       "name": "findAttributeValue(int,android.util.AttributeSet,org.robolectric.res.Style,org.robolectric.res.Style,org.robolectric.res.Style,org.robolectric.res.Style)"
     },
-    "getAndResolve(int,java.lang.String,boolean)": {
+    "getAllAssetsDirectories()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.res.FsFile\u003e",
+      "exceptions": [],
+      "name": "getAllAssetsDirectories()"
+    },
+    "getAndResolve(int,org.robolectric.res.android.ResTable_config,boolean)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
       "params": [
         "resId",
-        "qualifiers",
+        "config",
         "resolveRefs"
       ],
       "returnType": "org.robolectric.res.TypedResource",
       "exceptions": [],
-      "name": "getAndResolve(int,java.lang.String,boolean)"
+      "name": "getAndResolve(int,org.robolectric.res.android.ResTable_config,boolean)"
     },
     "getArrayIntResource(int)": {
       "isImplementation": true,
@@ -251,6 +275,16 @@
       "exceptions": [],
       "name": "getFileFromZip(java.io.File)",
       "documentation": "Extract an asset from a zipped up assets provided by the build system, this is required because there is no\nway to get a FileDescriptor from a zip entry. This is a temporary measure for Bazel which can be removed\nonce binary resources are supported.\n"
+    },
+    "getLibraryAssetsDirectories()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.res.FsFile\u003e",
+      "exceptions": [],
+      "name": "getLibraryAssetsDirectories()"
     },
     "getLocales()": {
       "isImplementation": true,
@@ -705,72 +739,72 @@
       "exceptions": [],
       "name": "reset()"
     },
-    "resolve(org.robolectric.res.TypedResource,java.lang.String,int)": {
+    "resolve(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,int)": {
       "isImplementation": false,
       "modifiers": [],
       "params": [
         "value",
-        "qualifiers",
+        "config",
         "resId"
       ],
       "returnType": "org.robolectric.res.TypedResource",
       "exceptions": [],
-      "name": "resolve(org.robolectric.res.TypedResource,java.lang.String,int)"
+      "name": "resolve(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,int)"
     },
-    "resolveResName(org.robolectric.res.ResName,java.lang.String)": {
+    "resolveResName(org.robolectric.res.ResName,org.robolectric.res.android.ResTable_config)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
       "params": [
         "resName",
-        "qualifiers"
+        "config"
       ],
       "returnType": "org.robolectric.res.ResName",
       "exceptions": [],
-      "name": "resolveResName(org.robolectric.res.ResName,java.lang.String)"
+      "name": "resolveResName(org.robolectric.res.ResName,org.robolectric.res.android.ResTable_config)"
     },
-    "resolveResource(org.robolectric.res.TypedResource,java.lang.String,org.robolectric.res.ResName)": {
+    "resolveResource(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,org.robolectric.res.ResName)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
       "params": [
         "value",
-        "qualifiers",
+        "config",
         "resName"
       ],
       "returnType": "org.robolectric.res.ResName",
       "exceptions": [],
-      "name": "resolveResource(org.robolectric.res.TypedResource,java.lang.String,org.robolectric.res.ResName)"
+      "name": "resolveResource(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,org.robolectric.res.ResName)"
     },
-    "resolveResourceValue(org.robolectric.res.TypedResource,java.lang.String,int)": {
+    "resolveResourceValue(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,int)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
       "params": [
         "value",
-        "qualifiers",
+        "config",
         "resId"
       ],
       "returnType": "org.robolectric.res.TypedResource",
       "exceptions": [],
-      "name": "resolveResourceValue(org.robolectric.res.TypedResource,java.lang.String,int)"
+      "name": "resolveResourceValue(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,int)"
     },
-    "resolveResourceValue(org.robolectric.res.TypedResource,java.lang.String,org.robolectric.res.ResName)": {
+    "resolveResourceValue(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,org.robolectric.res.ResName)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
       "params": [
         "value",
-        "qualifiers",
+        "config",
         "resName"
       ],
       "returnType": "org.robolectric.res.TypedResource",
       "exceptions": [],
-      "name": "resolveResourceValue(org.robolectric.res.TypedResource,java.lang.String,org.robolectric.res.ResName)"
+      "name": "resolveResourceValue(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,org.robolectric.res.ResName)"
     },
     "resolveStyle(int,org.robolectric.res.Style)": {
       "isImplementation": false,
@@ -822,7 +856,38 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 25,
       "name": "setConfiguration(int,int,java.lang.String,int,int,int,int,int,int,int,int,int,int,int,int,int,int)"
+    },
+    "setConfiguration(int,int,java.lang.String,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "mcc",
+        "mnc",
+        "locale",
+        "orientation",
+        "touchscreen",
+        "density",
+        "keyboard",
+        "keyboardHidden",
+        "navigation",
+        "screenWidth",
+        "screenHeight",
+        "smallestScreenWidthDp",
+        "screenWidthDp",
+        "screenHeightDp",
+        "screenLayout",
+        "uiMode",
+        "colorMode",
+        "majorVersion"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setConfiguration(int,int,java.lang.String,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)"
     },
     "setLocale(java.lang.String)": {
       "isImplementation": true,
@@ -860,17 +925,23 @@
     "android.content.res.Resources",
     "android.content.res.TypedArray",
     "android.content.res.XmlResourceParser",
+    "android.os.Build.VERSION_CODES",
     "android.os.ParcelFileDescriptor",
     "android.util.AttributeSet",
     "android.util.SparseArray",
     "android.util.TypedValue",
+    "com.google.common.collect.Ordering",
     "java.io.ByteArrayInputStream",
     "java.io.File",
     "java.io.FileInputStream",
+    "java.io.FileNotFoundException",
     "java.io.FileOutputStream",
     "java.io.IOException",
     "java.io.InputStream",
     "java.nio.file.Files",
+    "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.Collections",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
@@ -884,9 +955,9 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.manifest.AndroidManifest",
     "org.robolectric.res.AttrData",
     "org.robolectric.res.AttributeResource",
-    "org.robolectric.res.DrawableResourceLoader",
     "org.robolectric.res.EmptyStyle",
     "org.robolectric.res.FileTypedResource",
     "org.robolectric.res.Fs",
@@ -900,6 +971,7 @@
     "org.robolectric.res.StyleResolver",
     "org.robolectric.res.ThemeStyleSet",
     "org.robolectric.res.TypedResource",
+    "org.robolectric.res.android.ResTable_config",
     "org.robolectric.res.builder.XmlBlock",
     "org.robolectric.util.Logger",
     "org.robolectric.util.ReflectionHelpers",

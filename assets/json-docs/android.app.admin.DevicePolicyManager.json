@@ -168,7 +168,7 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "getOrganizationName(android.content.ComponentName)",
-      "documentation": "Returns organization name.\n\n\u003cp\u003eThe API can only be called by profile owner since Android N.\n\n\u003cp\u003eAndroid framework has a hidden API for getting the organization name for device owner since\nAndroid O. This method, however, is extended to return the organization name for device owners\ntoo to make testing of {@link setOrganizationName} easier for device owner cases.\n"
+      "documentation": "Returns organization name.\n\nThe API can only be called by profile owner since Android N.\n\nAndroid framework has a hidden API for getting the organization name for device owner since\nAndroid O. This method, however, is extended to return the organization name for device owners\ntoo to make testing of {@link #setOrganizationName(ComponentName, CharSequence)} easier for\ndevice owner cases.\n"
     },
     "getPermittedAccessibilityServices(android.content.ComponentName)": {
       "isImplementation": true,
@@ -333,7 +333,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setApplicationRestrictions(java.lang.String,android.os.Bundle)",
-      "documentation": "Sets the application restrictions of the {@code packageName}.\n\n\u003cp\u003eThe new {@code applicationRestrictions} always completely overwrites any existing ones.\n"
+      "documentation": "Sets the application restrictions of the {@code packageName}.\n\nThe new {@code applicationRestrictions} always completely overwrites any existing ones.\n"
     },
     "setAutoTimeRequired(android.content.ComponentName,boolean)": {
       "isImplementation": true,
@@ -388,7 +388,7 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "setOrganizationName(android.content.ComponentName,java.lang.CharSequence)",
-      "documentation": "Sets organization name.\n\n\u003cp\u003eThe API can only be called by profile owner since Android N and can be called by both of\nprofile owner and device owner since Android O.\n"
+      "documentation": "Sets organization name.\n\nThe API can only be called by profile owner since Android N and can be called by both of\nprofile owner and device owner since Android O.\n"
     },
     "setPermittedAccessibilityServices(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
@@ -402,7 +402,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "setPermittedAccessibilityServices(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)",
-      "documentation": "Sets permitted accessibility services.\n\n\u003cp\u003eThe API can be called by either a profile or device owner.\n\n\u003cp\u003eThis method does not check already enabled non-system accessibility services, so will always\nset the restriction and return true.\n"
+      "documentation": "Sets permitted accessibility services.\n\nThe API can be called by either a profile or device owner.\n\nThis method does not check already enabled non-system accessibility services, so will always\nset the restriction and return true.\n"
     },
     "setPermittedInputMethods(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
@@ -416,7 +416,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "setPermittedInputMethods(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)",
-      "documentation": "Sets permitted input methods.\n\n\u003cp\u003eThe API can be called by either a profile or device owner.\n\n\u003cp\u003eThis method does not check already enabled non-system input methods, so will always set the\nrestriction and return true.\n"
+      "documentation": "Sets permitted input methods.\n\nThe API can be called by either a profile or device owner.\n\nThis method does not check already enabled non-system input methods, so will always set the\nrestriction and return true.\n"
     },
     "setProfileOwner(android.content.ComponentName)": {
       "isImplementation": false,

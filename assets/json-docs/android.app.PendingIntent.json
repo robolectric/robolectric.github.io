@@ -1,6 +1,16 @@
 {
   "methods": {
-    "create(android.content.Context,android.content.Intent[],boolean,boolean,boolean,int,int)": {
+    "cancel()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel()"
+    },
+    "create(android.content.Context,android.content.Intent[],org.robolectric.shadows.ShadowPendingIntent.Type,int,int)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -9,15 +19,13 @@
       "params": [
         "context",
         "intents",
-        "isActivity",
-        "isBroadcast",
-        "isService",
+        "type",
         "requestCode",
         "flags"
       ],
       "returnType": "android.app.PendingIntent",
       "exceptions": [],
-      "name": "create(android.content.Context,android.content.Intent[],boolean,boolean,boolean,int,int)"
+      "name": "create(android.content.Context,android.content.Intent[],org.robolectric.shadows.ShadowPendingIntent.Type,int,int)"
     },
     "equals(java.lang.Object)": {
       "isImplementation": true,
@@ -113,18 +121,21 @@
       "exceptions": [],
       "name": "getBroadcast(android.content.Context,int,android.content.Intent,int)"
     },
-    "getCreatedIntentFor(android.content.Intent[])": {
+    "getCreatedIntentFor(org.robolectric.shadows.ShadowPendingIntent.Type,android.content.Intent[],int,int)": {
       "isImplementation": false,
       "modifiers": [
         "private",
         "static"
       ],
       "params": [
-        "intents"
+        "type",
+        "intents",
+        "requestCode",
+        "flags"
       ],
       "returnType": "android.app.PendingIntent",
       "exceptions": [],
-      "name": "getCreatedIntentFor(android.content.Intent[])"
+      "name": "getCreatedIntentFor(org.robolectric.shadows.ShadowPendingIntent.Type,android.content.Intent[],int,int)"
     },
     "getCreatorPackage()": {
       "isImplementation": true,
@@ -144,7 +155,8 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getFlags()"
+      "name": "getFlags()",
+      "documentation": "@return the flags with which this PendingIntent was created\n"
     },
     "getIntentSender()": {
       "isImplementation": true,
@@ -164,7 +176,8 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getRequestCode()"
+      "name": "getRequestCode()",
+      "documentation": "@return the request code with which this PendingIntent was created\n"
     },
     "getSavedContext()": {
       "isImplementation": false,
@@ -174,7 +187,8 @@
       "params": [],
       "returnType": "android.content.Context",
       "exceptions": [],
-      "name": "getSavedContext()"
+      "name": "getSavedContext()",
+      "documentation": "@return the context in which this PendingIntent was created\n"
     },
     "getSavedIntent()": {
       "isImplementation": false,
@@ -184,7 +198,8 @@
       "params": [],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "getSavedIntent()"
+      "name": "getSavedIntent()",
+      "documentation": "This returns the last Intent in the Intent[] to be delivered when the PendingIntent is sent.\nThis method is particularly useful for PendingIntents created with a single Intent:\n\u003cul\u003e\n  \u003cli\u003e{@link #getActivity(Context, int, Intent, int)}\u003c/li\u003e\n  \u003cli\u003e{@link #getActivity(Context, int, Intent, int, Bundle)}\u003c/li\u003e\n  \u003cli\u003e{@link #getBroadcast(Context, int, Intent, int)}\u003c/li\u003e\n  \u003cli\u003e{@link #getService(Context, int, Intent, int)}\u003c/li\u003e\n\u003c/ul\u003e\n\n@return the final Intent to be delivered when the PendingIntent is sent\n"
     },
     "getSavedIntents()": {
       "isImplementation": false,
@@ -194,7 +209,8 @@
       "params": [],
       "returnType": "android.content.Intent[]",
       "exceptions": [],
-      "name": "getSavedIntents()"
+      "name": "getSavedIntents()",
+      "documentation": "This method is particularly useful for PendingIntents created with multiple Intents:\n\u003cul\u003e\n  \u003cli\u003e{@link #getActivities(Context, int, Intent[], int)}\u003c/li\u003e\n  \u003cli\u003e{@link #getActivities(Context, int, Intent[], int, Bundle)}\u003c/li\u003e\n\u003c/ul\u003e\n\n@return all Intents to be delivered when the PendingIntent is sent\n"
     },
     "getService(android.content.Context,int,android.content.Intent,int)": {
       "isImplementation": true,
@@ -240,7 +256,8 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isActivityIntent()"
+      "name": "isActivityIntent()",
+      "documentation": "@return {@code true} iff sending this PendingIntent will start an activity\n"
     },
     "isBroadcastIntent()": {
       "isImplementation": false,
@@ -250,7 +267,45 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isBroadcastIntent()"
+      "name": "isBroadcastIntent()",
+      "documentation": "@return {@code true} iff sending this PendingIntent will broadcast an Intent\n"
+    },
+    "isCanceled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isCanceled()",
+      "documentation": "@return {@true} iff this PendingIntent has been canceled\n"
+    },
+    "isMutable(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isMutable(int)"
+    },
+    "isOneShot(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isOneShot(int)"
     },
     "isServiceIntent()": {
       "isImplementation": false,
@@ -260,7 +315,8 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isServiceIntent()"
+      "name": "isServiceIntent()",
+      "documentation": "@return {@code true} iff sending this PendingIntent will start a service\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -315,7 +371,13 @@
     }
   },
   "imports": [
+    "android.app.PendingIntent.FLAG_CANCEL_CURRENT",
+    "android.app.PendingIntent.FLAG_IMMUTABLE",
+    "android.app.PendingIntent.FLAG_NO_CREATE",
+    "android.app.PendingIntent.FLAG_ONE_SHOT",
+    "android.app.PendingIntent.FLAG_UPDATE_CURRENT",
     "org.robolectric.Shadows.shadowOf",
+    "android.annotation.NonNull",
     "android.app.PendingIntent",
     "android.app.PendingIntent.CanceledException",
     "android.content.Context",
@@ -324,15 +386,17 @@
     "android.os.Bundle",
     "java.util.ArrayList",
     "java.util.Arrays",
+    "java.util.Iterator",
     "java.util.List",
+    "java.util.Objects",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.fakes.RoboIntentSender",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowPendingIntent.Type"
   ],
   "name": "org.robolectric.shadows.ShadowPendingIntent"
 }

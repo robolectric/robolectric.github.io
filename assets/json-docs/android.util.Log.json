@@ -16,6 +16,18 @@
       "exceptions": [],
       "name": "addLog(int,java.lang.String,java.lang.String,java.lang.Throwable)"
     },
+    "clear()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clear()",
+      "documentation": "Clear all accummulated logs.\n"
+    },
     "d(java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -98,7 +110,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
       "exceptions": [],
       "name": "getLogsForTag(java.lang.String)",
-      "documentation": "Returns ordered list of all log items for a specific tag.\n\n@param tag The tag to get logs for\n@return The list of log items for the tag\n"
+      "documentation": "Returns ordered list of all log items for a specific tag.\n\n@param tag The tag to get logs for\n@return The list of log items for the tag or an empty list if no logs for that tag exist.\n"
     },
     "i(java.lang.String,java.lang.String)": {
       "isImplementation": true,

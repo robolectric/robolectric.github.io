@@ -213,6 +213,19 @@
       "exceptions": [],
       "name": "setAccessWifiStatePermission(boolean)"
     },
+    "setConnectionInfo(android.net.wifi.WifiInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "wifiInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConnectionInfo(android.net.wifi.WifiInfo)",
+      "documentation": "Sets the connection info as the provided {@link WifiInfo}.\n"
+    },
     "setDhcpInfo(android.net.DhcpInfo)": {
       "isImplementation": false,
       "modifiers": [

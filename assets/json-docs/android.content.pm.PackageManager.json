@@ -606,7 +606,8 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isQueryIntentImplicitly()"
+      "name": "isQueryIntentImplicitly()",
+      "documentation": "@deprecated - this will be the default behaviour in Robolectric 3.7 and bring behaviour into line with that of\nother Android components (note this method only affects Activities)\n"
     },
     "matchIntentFilter(android.content.Intent,java.util.List\u003corg.robolectric.manifest.IntentFilterData\u003e)": {
       "isImplementation": false,
@@ -886,7 +887,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setQueryIntentImplicitly(boolean)"
+      "name": "setQueryIntentImplicitly(boolean)",
+      "documentation": "@deprecated - this will be the default behaviour in Robolectric 3.7 and bring behaviour into line with that of\nother Android components (note this method only affects Activities)\n"
     },
     "setShouldShowRequestPermissionRationale(java.lang.String,boolean)": {
       "isImplementation": false,

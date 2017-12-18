@@ -1,15 +1,5 @@
 {
   "methods": {
-    "getDisplayMetrics()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "android.util.DisplayMetrics",
-      "exceptions": [],
-      "name": "getDisplayMetrics()"
-    },
     "getQuantityString(int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -227,7 +217,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setDensity(float)"
+      "name": "setDensity(float)",
+      "documentation": "@deprecated Set screen density using {@link Config#qualifiers()} instead.\n"
     },
     "setDisplay(android.view.Display)": {
       "isImplementation": false,
@@ -239,7 +230,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setDisplay(android.view.Display)"
+      "name": "setDisplay(android.view.Display)",
+      "documentation": "@deprecated Set up display using {@link Config#qualifiers()} instead.\n"
     },
     "setScaledDensity(float)": {
       "isImplementation": false,
@@ -251,7 +243,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setScaledDensity(float)"
+      "name": "setScaledDensity(float)",
+      "documentation": "@deprecated Set screen density using {@link Config#qualifiers()} instead.\n"
     }
   },
   "imports": [
@@ -284,6 +277,7 @@
     "java.util.List",
     "java.util.Locale",
     "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Config",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

@@ -6,11 +6,22 @@
         "public"
       ],
       "params": [
-        "pendingIntent"
+        "operation"
       ],
       "returnType": "void",
       "exceptions": [],
       "name": "cancel(android.app.PendingIntent)"
+    },
+    "getNextAlarmClock()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.app.AlarmManager.AlarmClockInfo",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getNextAlarmClock()"
     },
     "getNextScheduledAlarm()": {
       "isImplementation": false,
@@ -21,7 +32,7 @@
       "returnType": "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm",
       "exceptions": [],
       "name": "getNextScheduledAlarm()",
-      "documentation": "Consumes and returns the next scheduled alarm on the\nAlarmManager\u0027s stack.\n\n@return the next scheduled alarm, wrapped in a\n        {@link ShadowAlarmManager.ScheduledAlarm} object\n"
+      "documentation": "@return the next scheduled alarm after consuming it\n"
     },
     "getScheduledAlarms()": {
       "isImplementation": false,
@@ -31,9 +42,10 @@
       "params": [],
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm\u003e",
       "exceptions": [],
-      "name": "getScheduledAlarms()"
+      "name": "getScheduledAlarms()",
+      "documentation": "@return all scheduled alarms\n"
     },
-    "internalSet(int,long,long,android.app.PendingIntent)": {
+    "internalSet(int,long,long,android.app.PendingIntent,android.app.PendingIntent)": {
       "isImplementation": false,
       "modifiers": [
         "private"
@@ -42,11 +54,12 @@
         "type",
         "triggerAtTime",
         "interval",
-        "operation"
+        "operation",
+        "showIntent"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "internalSet(int,long,long,android.app.PendingIntent)"
+      "name": "internalSet(int,long,long,android.app.PendingIntent,android.app.PendingIntent)"
     },
     "peekNextScheduledAlarm()": {
       "isImplementation": false,
@@ -57,7 +70,7 @@
       "returnType": "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm",
       "exceptions": [],
       "name": "peekNextScheduledAlarm()",
-      "documentation": "Returns the most recent scheduled alarm without consuming it.\n\n@return the most recently scheduled alarm, wrapped in a\n        {@link ShadowAlarmManager.ScheduledAlarm} object\n"
+      "documentation": "@return the most recently scheduled alarm without consuming it\n"
     },
     "set(int,long,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -72,6 +85,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "set(int,long,android.app.PendingIntent)"
+    },
+    "setAlarmClock(android.app.AlarmManager.AlarmClockInfo,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "info",
+        "operation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setAlarmClock(android.app.AlarmManager.AlarmClockInfo,android.app.PendingIntent)"
     },
     "setAndAllowWhileIdle(int,long,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -166,12 +193,17 @@
     }
   },
   "imports": [
+    "android.app.AlarmManager.RTC_WAKEUP",
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.annotation.TargetApi",
     "android.app.AlarmManager",
+    "android.app.AlarmManager.AlarmClockInfo",
     "android.app.PendingIntent",
     "android.content.Intent",
     "java.util.ArrayList",
+    "java.util.Collections",
     "java.util.List",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",

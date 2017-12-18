@@ -88,6 +88,16 @@
       "exceptions": [],
       "name": "getService()"
     },
+    "isLowRamDevice()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLowRamDevice()"
+    },
     "isUserAMonkey()": {
       "isImplementation": true,
       "modifiers": [
@@ -110,6 +120,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "killBackgroundProcesses(java.lang.String)"
+    },
+    "setIsLowRamDevice(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isLowRamDevice"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowActivityManager",
+      "exceptions": [],
+      "name": "setIsLowRamDevice(boolean)",
+      "documentation": "Override the return value of isLowRamDevice().\n"
     },
     "setMemoryClass(int)": {
       "isImplementation": false,
@@ -178,6 +201,7 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.app.ActivityManager",
     "android.app.IActivityManager",
     "android.content.pm.ConfigurationInfo",
@@ -187,6 +211,7 @@
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowActivityManager"

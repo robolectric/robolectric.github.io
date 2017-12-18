@@ -1,0 +1,22 @@
+{
+  "methods": {
+    "loadGlobalKeys(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "loadGlobalKeys(android.content.Context)"
+    }
+  },
+  "imports": [
+    "android.content.Context",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowGlobalKeyManager"
+}

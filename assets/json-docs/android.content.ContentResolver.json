@@ -195,14 +195,13 @@
     "clearContentObservers()": {
       "isImplementation": false,
       "modifiers": [
-        "public",
-        "synchronized"
+        "public"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "name": "clearContentObservers()",
-      "documentation": "Clears the list of registered {@link ContentObserver}s.\n\nSince a new {@link ContentResolver} is created for each test case,\nthis method generally need not be called explicitly.\n"
+      "documentation": "@deprecated Do not use this method. "
     },
     "createAndInitialize(org.robolectric.manifest.ContentProviderData)": {
       "isImplementation": false,
@@ -236,8 +235,7 @@
     "getContentObservers(android.net.Uri)": {
       "isImplementation": false,
       "modifiers": [
-        "public",
-        "synchronized"
+        "public"
       ],
       "params": [
         "uri"
@@ -245,7 +243,7 @@
       "returnType": "java.util.Collection\u003candroid.database.ContentObserver\u003e",
       "exceptions": [],
       "name": "getContentObservers(android.net.Uri)",
-      "documentation": "Returns the content observers registered with the given URI.\n\nWill be empty if no observer is registered.\n\n@param uri Given URI\n@return The content observers, or null.\n"
+      "documentation": "Returns the content observers registered for updates under the given URI.\n\nWill be empty if no observer is registered.\n\n@param uri Given URI\n@return The content observers, or null\n"
     },
     "getContentProviderClient(android.content.ContentProvider,boolean)": {
       "isImplementation": false,
@@ -645,8 +643,7 @@
     "registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
-        "synchronized"
+        "public"
       ],
       "params": [
         "uri",
@@ -947,13 +944,12 @@
     "java.io.OutputStream",
     "java.util.ArrayList",
     "java.util.Collection",
-    "java.util.Collections",
     "java.util.HashMap",
     "java.util.Iterator",
     "java.util.List",
     "java.util.Map",
     "java.util.Objects",
-    "java.util.concurrent.CopyOnWriteArraySet",
+    "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
@@ -966,6 +962,7 @@
     "org.robolectric.util.NamedStream",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadows.ShadowContentResolver.ContentObserverEntry",
     "org.robolectric.shadows.ShadowContentResolver.NotifiedUri",
     "org.robolectric.shadows.ShadowContentResolver.Status",
     "org.robolectric.shadows.ShadowContentResolver.Statement",

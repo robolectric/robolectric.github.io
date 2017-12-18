@@ -1,5 +1,16 @@
 {
   "methods": {
+    "configureForJBOnly(android.content.res.Configuration,android.util.DisplayMetrics)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "configuration",
+        "displayMetrics"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "configureForJBOnly(android.content.res.Configuration,android.util.DisplayMetrics)"
+    },
     "getCurrentSizeRange(android.graphics.Point,android.graphics.Point)": {
       "isImplementation": true,
       "modifiers": [
@@ -11,38 +22,20 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 16,
       "name": "getCurrentSizeRange(android.graphics.Point,android.graphics.Point)"
     },
-    "getDensity()": {
+    "getDefaultDisplay()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "static"
       ],
       "params": [],
-      "returnType": "float",
+      "returnType": "android.view.Display",
       "exceptions": [],
-      "name": "getDensity()"
-    },
-    "getDensityDpi()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getDensityDpi()"
-    },
-    "getDisplayAdjustments()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "java.lang.Object",
-      "exceptions": [],
-      "minSdk": 19,
-      "name": "getDisplayAdjustments()"
+      "name": "getDefaultDisplay()",
+      "documentation": "Returns the default display.\n\n@return the default display\n"
     },
     "getDisplayId()": {
       "isImplementation": true,
@@ -52,27 +45,8 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getDisplayId()"
-    },
-    "getFlags()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getFlags()"
-    },
-    "getHeight()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getHeight()"
+      "name": "getDisplayId()",
+      "documentation": "If {@link #setDisplayId(int)} has been called, this method will return the specified value.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "getMetrics(android.util.DisplayMetrics)": {
       "isImplementation": true,
@@ -84,27 +58,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "getMetrics(android.util.DisplayMetrics)"
-    },
-    "getName()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "getName()"
-    },
-    "getOrientation()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getOrientation()"
+      "name": "getMetrics(android.util.DisplayMetrics)",
+      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity}\nwill be modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "getPixelFormat()": {
       "isImplementation": true,
@@ -114,7 +69,8 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getPixelFormat()"
+      "name": "getPixelFormat()",
+      "documentation": "If {@link #setPixelFormat(int)} has been called, this method will return the specified value.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "getRealMetrics(android.util.DisplayMetrics)": {
       "isImplementation": true,
@@ -126,7 +82,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "getRealMetrics(android.util.DisplayMetrics)"
+      "name": "getRealMetrics(android.util.DisplayMetrics)",
+      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity}\nwill be modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "getRealSize(android.graphics.Point)": {
       "isImplementation": true,
@@ -138,19 +95,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 16,
       "name": "getRealSize(android.graphics.Point)"
-    },
-    "getRectSize(android.graphics.Rect)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "outSize"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "getRectSize(android.graphics.Rect)"
     },
     "getRefreshRate()": {
       "isImplementation": true,
@@ -160,80 +106,32 @@
       "params": [],
       "returnType": "float",
       "exceptions": [],
-      "name": "getRefreshRate()"
+      "name": "getRefreshRate()",
+      "documentation": "If {@link #setRefreshRate(float)} has been called, this method will return the specified value.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
     },
-    "getRotation()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getRotation()"
-    },
-    "getScaledDensity()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "float",
-      "exceptions": [],
-      "name": "getScaledDensity()"
-    },
-    "getSize(android.graphics.Point)": {
+    "getSizeInternal(android.graphics.Point,boolean)": {
       "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [
-        "outSize"
+        "outSize",
+        "doCompat"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "getSize(android.graphics.Point)"
+      "maxSdk": 16,
+      "name": "getSizeInternal(android.graphics.Point,boolean)"
     },
-    "getState()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "minSdk": 21,
-      "name": "getState()"
-    },
-    "getWidth()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getWidth()"
-    },
-    "getXdpi()": {
+    "isJB()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "private"
       ],
       "params": [],
-      "returnType": "float",
+      "returnType": "boolean",
       "exceptions": [],
-      "name": "getXdpi()"
-    },
-    "getYdpi()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "float",
-      "exceptions": [],
-      "name": "getYdpi()"
+      "name": "isJB()"
     },
     "setDensity(float)": {
       "isImplementation": false,
@@ -245,7 +143,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setDensity(float)"
+      "name": "setDensity(float)",
+      "documentation": "Changes the density for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setDensityDpi(int)": {
       "isImplementation": false,
@@ -257,7 +156,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setDensityDpi(int)"
+      "name": "setDensityDpi(int)",
+      "documentation": "Changes the density for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setDisplayId(int)": {
       "isImplementation": false,
@@ -269,7 +169,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setDisplayId(int)"
+      "name": "setDisplayId(int)",
+      "documentation": "Changes the ID for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@deprecated This method is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "setFlags(int)": {
       "isImplementation": false,
@@ -281,7 +182,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setFlags(int)"
+      "name": "setFlags(int)",
+      "documentation": "Changes the flags for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setHeight(int)": {
       "isImplementation": false,
@@ -293,7 +195,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setHeight(int)"
+      "name": "setHeight(int)",
+      "documentation": "Changes the height available to the application for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param height new height in pixels\n"
     },
     "setName(java.lang.String)": {
       "isImplementation": false,
@@ -305,7 +208,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setName(java.lang.String)"
+      "name": "setName(java.lang.String)",
+      "documentation": "Changes the name for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setPixelFormat(int)": {
       "isImplementation": false,
@@ -317,7 +221,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setPixelFormat(int)"
+      "name": "setPixelFormat(int)",
+      "documentation": "Changes the pixel format for this display.\n\n@deprecated This method is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "setRealHeight(int)": {
       "isImplementation": false,
@@ -325,11 +230,12 @@
         "public"
       ],
       "params": [
-        "realHeight"
+        "height"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setRealHeight(int)"
+      "name": "setRealHeight(int)",
+      "documentation": "Changes the simulated physical height for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param height the new height in pixels\n"
     },
     "setRealWidth(int)": {
       "isImplementation": false,
@@ -337,11 +243,12 @@
         "public"
       ],
       "params": [
-        "realWidth"
+        "width"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setRealWidth(int)"
+      "name": "setRealWidth(int)",
+      "documentation": "Changes the simulated physical width for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param width the new width in pixels\n"
     },
     "setRefreshRate(float)": {
       "isImplementation": false,
@@ -353,7 +260,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setRefreshRate(float)"
+      "name": "setRefreshRate(float)",
+      "documentation": "Changes the refresh rate for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setRotation(int)": {
       "isImplementation": false,
@@ -365,7 +273,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setRotation(int)"
+      "name": "setRotation(int)",
+      "documentation": "Changes the rotation for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param rotation one of {@link Surface#ROTATION_0}, {@link Surface#ROTATION_90},\n                {@link Surface#ROTATION_180}, {@link Surface#ROTATION_270}\n\n"
     },
     "setScaledDensity(float)": {
       "isImplementation": false,
@@ -377,7 +286,21 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setScaledDensity(float)"
+      "name": "setScaledDensity(float)",
+      "documentation": "Changes the scaled density for this display.\n\n@deprecated This method is deprecated and will be removed in Robolectric 3.7.\n"
+    },
+    "setState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "state"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setState(int)",
+      "documentation": "Changes the simulated state for this display, such as whether it is on or off\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param state the new state: one of {@link Display#STATE_OFF}, {@link Display#STATE_ON},\n       {@link Display#STATE_DOZE}, {@link Display#STATE_DOZE_SUSPEND}, or\n       {@link Display#STATE_UNKNOWN}.\n"
     },
     "setWidth(int)": {
       "isImplementation": false,
@@ -389,7 +312,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setWidth(int)"
+      "name": "setWidth(int)",
+      "documentation": "Changes the width available to the application for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param width the new width in pixels\n"
     },
     "setXdpi(float)": {
       "isImplementation": false,
@@ -401,7 +325,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setXdpi(float)"
+      "name": "setXdpi(float)",
+      "documentation": "Changes the horizontal DPI for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setYdpi(float)": {
       "isImplementation": false,
@@ -413,22 +338,26 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setYdpi(float)"
+      "name": "setYdpi(float)",
+      "documentation": "Changes the vertical DPI for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.graphics.PixelFormat",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.content.Context",
+    "android.content.res.Configuration",
     "android.graphics.Point",
-    "android.graphics.Rect",
     "android.util.DisplayMetrics",
     "android.view.Display",
-    "android.view.DisplayAdjustments",
     "android.view.Surface",
+    "android.view.WindowManager",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowDisplay"
+  "name": "org.robolectric.shadows.ShadowDisplay",
+  "documentation": "It is possible to override some display properties using setters on {@link ShadowDisplay};\nhowever, this behavior is deprecated as of Robolectric 3.6 and will be removed in 3.7.\n\nUse [device configuration](http://robolectric.org/device-configuration/) to set up your\ndisplay properties instead.\n"
 }

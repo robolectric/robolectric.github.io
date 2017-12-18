@@ -118,7 +118,7 @@
     "android.os.ResultReceiver",
     "android.view.View",
     "android.view.inputmethod.InputMethodManager",
-    "java.util.Optional",
+    "com.google.common.base.Optional",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

@@ -1,0 +1,83 @@
+{
+  "methods": {
+    "getInternalKey(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "uid",
+        "packageName"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getInternalKey(int,java.lang.String)"
+    },
+    "getOpsForPackage(int,java.lang.String,int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uid",
+        "packageName",
+        "ops"
+      ],
+      "returnType": "java.util.List\u003candroid.app.AppOpsManager.PackageOps\u003e",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getOpsForPackage(int,java.lang.String,int[])"
+    },
+    "noteOp(int,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "noteOp(int,int,java.lang.String)"
+    },
+    "toOpEntry(java.lang.Integer)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "op"
+      ],
+      "returnType": "android.app.AppOpsManager.OpEntry",
+      "exceptions": [],
+      "name": "toOpEntry(java.lang.Integer)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.app.AppOpsManager",
+    "android.app.AppOpsManager.OpEntry",
+    "android.app.AppOpsManager.PackageOps",
+    "android.os.Build",
+    "com.google.common.collect.HashMultimap",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.Multimap",
+    "java.util.ArrayList",
+    "java.util.HashSet",
+    "java.util.List",
+    "java.util.Set",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowAppOpsManager",
+  "documentation": "Shadow for the {@link AppOpsManager}.\n"
+}

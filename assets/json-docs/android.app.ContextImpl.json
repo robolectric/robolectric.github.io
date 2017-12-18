@@ -316,6 +316,19 @@
       "exceptions": [],
       "name": "startActivity(android.content.Intent,android.os.Bundle)"
     },
+    "startForegroundService(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "service"
+      ],
+      "returnType": "android.content.ComponentName",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "startForegroundService(android.content.Intent)"
+    },
     "startIntentSender(android.content.IntentSender,android.content.Intent,int,int,int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [

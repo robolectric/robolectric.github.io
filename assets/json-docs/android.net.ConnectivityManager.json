@@ -14,6 +14,19 @@
       "name": "addNetwork(android.net.Network,android.net.NetworkInfo)",
       "documentation": "Adds new {@code network} to the list of all {@link android.net.Network}s.\n\n@param network The network.\n@param networkInfo The network info paired with the {@link android.net.Network}.\n"
     },
+    "bindProcessToNetwork(android.net.Network)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "network"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "bindProcessToNetwork(android.net.Network)"
+    },
     "clearAllNetworks()": {
       "isImplementation": false,
       "modifiers": [
@@ -76,6 +89,17 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "getBackgroundDataSetting()"
+    },
+    "getBoundNetworkForProcess()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Network",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getBoundNetworkForProcess()"
     },
     "getNetworkCallbacks()": {
       "isImplementation": false,

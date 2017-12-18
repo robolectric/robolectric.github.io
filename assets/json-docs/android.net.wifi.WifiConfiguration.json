@@ -33,6 +33,7 @@
   },
   "imports": [
     "android.net.wifi.WifiConfiguration",
+    "android.os.Build",
     "java.util.BitSet",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

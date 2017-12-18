@@ -77,6 +77,20 @@
       "name": "getLastSentTextMessageParams()",
       "documentation": "@return Parameters for last call to {@code sendTextMessage}.\n"
     },
+    "getSmsManagerForSubscriptionId(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "subId"
+      ],
+      "returnType": "android.telephony.SmsManager",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "getSmsManagerForSubscriptionId(int)"
+    },
     "sendDataMessage(java.lang.String,java.lang.String,short,byte[],android.app.PendingIntent,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
@@ -129,9 +143,11 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.app.PendingIntent",
     "android.telephony.SmsManager",
     "android.text.TextUtils",
+    "android.util.SparseArray",
     "java.util.ArrayList",
     "java.util.List",
     "org.robolectric.annotation.Implementation",
