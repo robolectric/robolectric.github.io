@@ -6,6 +6,14 @@ order: 7
 toc: true
 ---
 
+## Migrating from 3.5 to 3.6
+
+Previously Robolectric's Display and DisplayMetrics dimensions defaulted to 480px x 800px, regardless of screen size and density. Now they match the requested configuration, which defaults to 320dp x 470dp mdpi. Tests which rely on the old dimensions for layouts, pixel math, etc. can be modified for new dimensions, or by pinning them to the old size: `@Config(qualifiers = "w480dp-h800dp")`.
+
+| 3.5                                                     | 3.6                                                            |
+| ------------------------------------------------------- | -------------------------------------------------------------- |
+| `Shadow.newInstanceOf(Display.class)`                   | `ShadowDisplay.getDefaultDisplay()`                            |
+
 ## Migrating from 3.3 to 3.4
 
 ### Dependencies

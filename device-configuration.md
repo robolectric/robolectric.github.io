@@ -3,7 +3,6 @@ title: Device Configuration
 group: User Guide
 order: 3
 toc: true
-hide: true
 ---
 
 # Device Configuration
@@ -44,13 +43,11 @@ For unspecified properties, Robolectric picks consistent values based on the pro
 | Primary text input method | None. | `nokeys` | |
 | Navigation key availability | None. | `navhidden` | |
 | Primary non-touch navigation method | None. | `nonav` | |
-| Platform version | | | The SDK level currently active. |
+| Platform version | | | The SDK level currently active. Need not be specified. |
 
-Need not be specified.
+## Cumulative Qualifiers
 
-## Cumulative qualifiers
-
-By default, specifying qualifiers causes any less narrowly-scoped qualifiers are ignored. For example, qualifiers at the test method level occlude qualifiers at the test class level. However, if the qualifiers config property starts with a ‘+’ (plus sign), it is interpreted as an overlay to any higher-level qualifiers that have been specified:
+By default, specifying qualifiers causes any previous specification of qualifiers to be ignored. For example, qualifiers at the test method level occlude qualifiers at the test class level. However, if the qualifiers config property starts with a ‘+’ (plus sign), it is interpreted as an overlay to any higher-level qualifiers that have been specified:
 
 ```java
 @Config(qualifiers = "xlarge-port")
@@ -86,16 +83,8 @@ The string parameter to `setQualifiers()` has the same rules as `Config.qualifie
 
 Note that `RuntimeEnvironment.setQualifiers()` updates the system and application resources with the new configuration, but does not trigger any action on extant activities or other components. [`ActivityController.configurationChange()`](http://robolectric.org/javadoc/latest/org/robolectric/android/controller/ActivityController.html#configurationChange-android.content.res.Configuration-) can be used to simulate the sequence of events that take place on a device when its configuration changes.
 
-If the activity is configured to handle the configuration changes, `ActivityController.configurationChange()` will call the activity’s `onConfigurationChanged()` method. If not, `ActivityController` performs the following steps:
+If the activity is configured to handle the configuration changes, `ActivityController.configurationChange()` will call the activity’s `onConfigurationChanged()` method. If not, `ActivityController` destroys and recreates the activity.
 
-```java
-activity.onPause();
-activity.onStop();
-state = activity.onSaveInstanceState();
-activity.onDestroy();
-newActivity.onCreate(state);
-newActivity.onRestoreInstanceState(state);
-newActivity.onStart();
-newActivity.onResume();
-```
+## Simulating Displays
 
+Robolectric allows display properties to be changed during a test using setters on `ShadowDisplay`. For Jelly Bean MR1 and up, multiple displays can be simulated using APIs on `ShadowDisplayManager`. See their documentation for more details.
