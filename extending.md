@@ -113,5 +113,5 @@ It is important to note that methods called on the real object will still be int
 
 Methods on your shadow class are able to call through to the Android OS code, using <code>Shadow.directlyOn()</code>.
 
+As always we welcome and encourage [contributions](https://github.com/robolectric/robolectric.github.io/blob/master/contributing.md) from the community. 
 
-Robolectric is a work in progress, and we welcome contributions from the community. We encourage developers to [use the standard GitHub workflow](http://help.github.com/fork-a-repo/ "Help.GitHub - Fork A Repo") to fork, enhance, and submit pull requests to us.
