@@ -62,7 +62,7 @@ public class ShadowImageView extends ShadowView {
 }
 ```
 
-Robolectric supports shadowing all methods on the original class, including private, static, final or native.
+Robolectric supports shadowing all methods on the original class, including `private`, `static`, `final` or `native`.
 
 Typically `@Implementation` methods should also have the protected modifier. The intention is to reduce the API surface area of the Shadows and the test author should prefer calling such methods on the Android framework class directly.
 
