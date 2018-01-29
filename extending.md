@@ -177,6 +177,23 @@ dependencies {
     ...
 }
 ```
+## Best practices
 
+### Limit API surface area of shadows.
+Since Robolectric 3.7 `@Implementation` methods including `__constructor__` methods can be made `protected`. This is desirable as test code has no business calling these methods, by making your `@Implementation` methods protected you encourage test writers to call the public Android APIs instead.
 
+### Don't use `useinheritImplementationMethods`
+This is  usually unnecessary and appears to have been cargo-culted. This will be removed in Robolectric 3.8
+
+### Don't override `equals`, `hashCode` and `toString` in shadows.
+Avoid this unless you are mimicing behaviour in the class being shadowed. To test equality for comparisons in tests prefer helpers or assertion library extensions. prefer adding a `describe()` method instead of shadowing `toString()`
+
+### Write high quality shadows that promote testing behavior rather than implementation.
+Rather than using shadows as glorified argument captors prefer writing a shadow that encourages testing behaviour. For example, don't add a method that exposes registered listeners, rather add an @Implementation for a method that would invoke those listeners.
+
+### Use caution when shadowing your own code.
+Robolectric provides a lot of power which requires responsible usage. Shadows are ideal for testing interaction with the Android framework as the framework doesn't support dependency injection and makes liberal use of static code. Before writing custom shadows for your own code, consider if you can't better refactor your code and use a popular mocking library such as Mockito.
+
+### Support the community
+Please please [contribute](https://github.com/robolectric/robolectric.github.io/blob/master/contributing.md) your enhancements for sharing with the community and reducing the bloat in your own codebase.
 
