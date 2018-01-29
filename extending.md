@@ -2,7 +2,8 @@
 title: Shadows
 group: Customizing
 order: 1
-redirect_from: - /custom-shadows/
+redirect_from: 
+  - /custom-shadows/
 ---
 
 # Shadows
