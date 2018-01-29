@@ -1,5 +1,5 @@
 ---
-title: Extending Robolectric
+title: Shadows
 group: Customizing
 order: 1
 ---
