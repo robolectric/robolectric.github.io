@@ -85,7 +85,7 @@ Robolectric would invoke the following  `__constructor__` method that receives a
 public class ShadowTextView {
   ...
   @Implementation
-  public void __constructor__(Context context) {
+  protected void __constructor__(Context context) {
     this.context = context;
   }
   ...
