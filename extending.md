@@ -2,6 +2,7 @@
 title: Shadows
 group: Customizing
 order: 1
+redirect_from: - /custom-shadows/
 ---
 
 # Shadows
@@ -18,10 +19,6 @@ Using byte code instrumentation Robolectric is able to weave in cross platform f
 ### What's in a Name?
 
 Why "Shadow?" Shadow objects are not quite [Proxies](http://en.wikipedia.org/wiki/Proxy_pattern "Proxy pattern - Wikipedia, the free encyclopedia"), not quite [Fakes](http://c2.com/cgi/wiki?FakeObject "Fake Object"), not quite [Mocks or Stubs](http://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs "Mocks Aren't Stubs"). Shadows are sometimes hidden, sometimes seen, and can lead you to the real object. At least we didn't call them "sheep", which we were considering.
-
-### Adding Functionality
-
-If the shadow classes provided with Robolectric don't do what you want, it's possible to change their behavior for a single test, a group of tests, or for your whole suite. Simply declare a class (let's say <code>ShadowFoo</code>) and annotate it <code>@Implements(Foo.class)</code>. Your shadow class may extend one of the stock Robolectric shadows if you like. To let Robolectric know about your shadow, annotate your test method or class with the <code>@Config(shadows=ShadowFoo.class)</code>, or create a file called <code>org.robolectric.Config.properties</code> containing the line <code>shadows=my.package.ShadowFoo</code>.
 
 ### Shadow Classes
 
@@ -113,5 +110,72 @@ It is important to note that methods called on the real object will still be int
 
 Methods on your shadow class are able to call through to the Android OS code, using <code>Shadow.directlyOn()</code>.
 
-As always we welcome and encourage [contributions](https://github.com/robolectric/robolectric.github.io/blob/master/contributing.md) from the community. 
+## Custom Shadows
+
+Robolectric is a work in progress and we rely, welcome and strongly encourage [contributions](https://github.com/robolectric/robolectric.github.io/blob/master/contributing.md) from the community for bug fixes and feature gaps. However, if you wish to modify shadow behaviour in a way that is not appropriate for sharing, or you can't wait for a new release to include a critical fix we do support custom shadows.
+
+### Writing a Custom Shadow
+
+Custom shadows are structured much the same as normal shadow classes.  They must include the `@Implements(AndroidClassName.class)`
+annotation on the class definition.  You can use the normal shadow implementation options, such as shadowing instance
+methods using `@Implementation` or shadowing constructors using `public void __constructor__(...)`. Your shadow class may also extend one of the stock Robolectric shadows if you like.
+
+```java
+@Implements(Bitmap.class)
+public class MyShadowBitmap {
+  @RealObject private Bitmap realBitmap;
+  private int bitmapQuality = -1;
+    
+  @Implementation
+  public boolean compress(Bitmap.CompressFormat format, int quality, OutputStream stream) {
+    bitmapQuality = quality;
+    return realBitmap.compress(format, quality, stream);
+  }
+
+  public int getQuality() {
+    return bitmapQuality;
+  }
+}
+```
+
+### Using a Custom Shadows
+
+Custom Shadows get hooked up to Robolectric using the @Config annotation on the test class or test method, using
+the `shadows` array attribute.  To use the MyShadowBitmap class mentioned in the previous section, you would annotate
+the test in question with `@Config(shadows={MyShadowBitmap.class})`, and to include multiple custom shadows:
+`@Config(shadows={MyShadowBitmap.class, MyOtherCustomShadow.class})`.  This causes Robolectric to recognize and use
+your custom shadow when executing code against the class you shadowed.
+
+If you would like your custom shadows to be applied to all tests in your suite or a certain package you can configure shadows through the [robolectric.properties](https://github.com/robolectric/robolectric.github.io/blob/master/configuring.md) file.
+
+Note, by default `Shadows.shadowOf()` method will not work with custom shadows. You can instead use `Shadow.extract()` and cast the return value to the custom Shadow class you implemented.
+
+### Building a library of Custom Shadows.
+
+If you find yourself building a library of custom shadows you should consider running Robolectric's shadow annoation processor on your library of shadows. This provides a number of benefits such as
+1. Generating `shadowOf` methods for each of your shadows.
+2. Generating a ServiceLoader so your custom shadows are automatically applied if found on the classpath
+3. Invoking any `static` `@Resetter` methods on teardown to enable you to reset static state.
+4. Perform additional validation and checking on your shadows.
+
+```groovy
+android {
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                className 'org.robolectric.annotation.processing.RobolectricProcessor'
+                arguments = [ 'org.robolectric.annotation.processing.shadowPackage' : 'com.example.myshadowpackage' ]
+            }
+        }
+    }
+
+}
+
+dependencies {
+    annotationProcessor project(":processor")
+    ...
+}
+```
+
+
 
