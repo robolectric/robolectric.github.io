@@ -24,7 +24,7 @@ github_username: robolectric
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
 exclude:
