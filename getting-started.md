@@ -6,7 +6,7 @@ order: 1
 
 # Getting Started
 
-Robolectric works best with Gradle or Maven. If you are starting a new project, we would recommend Gradle first (since it is the build system of choice in Android Studio) and Maven second. Regardless, Robolectric should integrate well into whatever build tool you are using.
+Robolectric works best with Gradle, Maven or Bazel. If you are starting a new project, we would recommend Gradle first (since it is the build system of choice in Android Studio) and Maven second. Regardless, Robolectric should integrate well into whatever build tool you are using.
 
 ## Building with Gradle
 
@@ -74,6 +74,42 @@ public class SandwichTest {
 ```
 
 If you reference resources that are outside of your project (i.e. in a aar dependency), you will need to provide Robolectric with a pointer to the exploded aar in your build system. See the section titled "Using Library Resources" for more information.
+
+## Building with Bazel
+Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel integrates with Robolectric through the [android_local_test](**ADD LINK TO BAZEL DOCS**) rule. The Robolectric Java test code is the same for a Bazel project as a new (Robolectric 3.3 or higher) Gradle project.
+
+Robolectric needs to be added as a dependency to your Bazel project. Add the following to your WORKSPACE file:
+```
+http_archive(
+ name = "robolectric",
+ url = "https://github.com/robolectric/robolectric/archive/<COMMIT>.tar.gz",
+ strip_prefix = "robolectric-<COMMIT>"
+)
+load("@robolectric//bazel:setup_robolectric.bzl", "setup_robolectric")
+setup_robolectric()
+```
+
+Add an android_local_test rule to your BUILD file:
+```
+android_local_test(
+  name = "MyTest",
+  srcs = ["MyTest.java"],
+  manifest = "TestManifest.xml",
+  deps = [
+    ":sample_test_lib",
+    "@robolectric//:robolectric"
+  ],
+)
+
+android_library(
+    name = "sample_test_lib",
+    srcs = [
+         "Lib.java",
+    ]
+    resource_files = glob(["res/**"]),
+    manifest = "AndroidManifest.xml",
+)
+```
 
 ## Building with Android Studio
 
