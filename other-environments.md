@@ -1,10 +1,11 @@
 ---
-title: Other development environments
-group: group: Setup
+title: Other Environments
+page_title: Using Robolectric with other build environments.
+group: Setup
 order: 2
-redirect_from: 
-  - /using-libraries/
---- 
+toc: true
+---
+
 
 ### Older versions of Android Studio + Gradle (AGP < 3.0)
 
