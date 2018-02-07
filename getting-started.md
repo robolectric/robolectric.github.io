@@ -45,7 +45,7 @@ http_archive(
  name = "robolectric",
  urls = ["https://github.com/robolectric/robolectric/archive/<COMMIT>.tar.gz"],
  strip_prefix = "robolectric-<COMMIT>",
- sha256 = <HASH>,
+ sha256 = "<HASH>",
 )
 load("@robolectric//bazel:setup_robolectric.bzl", "setup_robolectric")
 setup_robolectric()
@@ -59,15 +59,13 @@ android_local_test(
   manifest = "TestManifest.xml",
   deps = [
     ":sample_test_lib",
-    "@robolectric//bazel:robolectric"
+    "@robolectric//bazel:robolectric",
   ],
 )
 
 android_library(
     name = "sample_test_lib",
-    srcs = [
-         "Lib.java",
-    ]
+    srcs = ["Lib.java"],
     resource_files = glob(["res/**"]),
     manifest = "AndroidManifest.xml",
 )
