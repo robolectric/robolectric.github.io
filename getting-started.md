@@ -25,7 +25,7 @@ android {
       includeAndroidResources = true
     }
   }
-}  
+}
 ```
 
 Annotate your test with the Robolectric test runner:
@@ -34,6 +34,41 @@ Annotate your test with the Robolectric test runner:
 @RunWith(RobolectricTestRunner.class)
 public class SandwichTest {
 }
+```
+
+## Building with Bazel
+Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel integrates with Robolectric through the android_local_test rule. The Robolectric Java test code is the same for a Bazel project as a new Gradle project.
+
+Robolectric needs to be added as a dependency to your Bazel project. Add the following to your WORKSPACE file:
+```python
+http_archive(
+ name = "robolectric",
+ urls = ["https://github.com/robolectric/robolectric/archive/<COMMIT>.tar.gz"],
+ strip_prefix = "robolectric-<COMMIT>",
+ sha256 = "<HASH>",
+)
+load("@robolectric//bazel:setup_robolectric.bzl", "setup_robolectric")
+setup_robolectric()
+```
+
+Add an android_local_test rule to your BUILD file:
+```python
+android_local_test(
+  name = "MyTest",
+  srcs = ["MyTest.java"],
+  manifest = "TestManifest.xml",
+  deps = [
+    ":sample_test_lib",
+    "@robolectric//bazel:robolectric",
+  ],
+)
+
+android_library(
+    name = "sample_test_lib",
+    srcs = ["Lib.java"],
+    resource_files = glob(["res/**"]),
+    manifest = "AndroidManifest.xml",
+)
 ```
 
 ## Sample Projects
