@@ -36,6 +36,38 @@ public class SandwichTest {
 }
 ```
 
+### Using Libraries with Maven
+
+If you use Maven to build your application, you will need to tell Robolectric where the unpacked resources are located for each library you use. This can either be specified in the `@Config` annotation:
+
+```java
+@RunWith(RobolectricTestRunner.class)
+@Config(libraries = {
+    "build/unpacked-libraries/library1",
+    "build/unpacked-libraries/library2"
+})
+public class SandwichTest {
+}
+```
+
+or specified in the `robolectric.properties` file:
+
+```properties
+libraries=build/unpacked-libraries/library1,build/unpacked-libraries/library2
+```
+
+All paths are relative to the root directory of the project.
+
+### Debugging Resource Loading Issues
+
+If you are not sure if resources are being loaded for a particular library, enable debug logging by setting the system property `robolectric.logging.enabled = true` and run your tests. You should see lots of output like:
+
+```
+Loading resources for 'com.foo' from build/unpacked-libraries/library1...
+```
+
+If you don't see a particular library in the list, double-check the configuration.
+
 If you reference resources that are outside of your project (i.e. in a aar dependency), you will need to provide Robolectric with a pointer to the exploded aar in your build system. See the section titled "Using Library Resources" for more information.
 
 ## Building with Android Studio
