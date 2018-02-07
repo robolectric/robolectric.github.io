@@ -1,7 +1,7 @@
 ---
 title: Build System Integration
 group: Customizing
-order: 4
+order: 2
 ---
 
 # Build System Integration
