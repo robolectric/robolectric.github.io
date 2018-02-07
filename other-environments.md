@@ -1,26 +1,10 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @jongerrish
- Sign out
-12
-12 32 robolectric/robolectric.github.io
- Code  Issues 3  Pull requests 1  Projects 0  Insights  Settings
-robolectric.github.io/other-environments
-eb37882  35 minutes ago
-@jongerrish jongerrish Update other-environments
-    
-97 lines (66 sloc)  4.3 KB
+---
 title: Other development environments
 group: group: Setup
 order: 2
 redirect_from: 
   - /using-libraries/
- ---
+--- 
 
 ### Older versions of Android Studio + Gradle (AGP < 3.0)
 
