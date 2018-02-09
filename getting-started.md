@@ -47,8 +47,8 @@ http_archive(
  strip_prefix = "robolectric-<COMMIT>",
  sha256 = "<HASH>",
 )
-load("@robolectric//bazel:setup_robolectric.bzl", "setup_robolectric")
-setup_robolectric()
+load("@robolectric//bazel:robolectric.bzl", "robolectric_repositories")
+robolectric_repositories()
 ```
 
 Add an android_local_test rule to your BUILD file:
