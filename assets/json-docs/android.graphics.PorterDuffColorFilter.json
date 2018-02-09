@@ -13,6 +13,18 @@
       "exceptions": [],
       "name": "__constructor__(int,android.graphics.PorterDuff.Mode)"
     },
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "object"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)"
+    },
     "getColor()": {
       "isImplementation": false,
       "modifiers": [

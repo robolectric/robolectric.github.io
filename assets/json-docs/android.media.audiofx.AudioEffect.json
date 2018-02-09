@@ -38,7 +38,7 @@
   },
   "imports": [
     "android.media.audiofx.AudioEffect",
-    "java.util.LinkedList",
+    "java.util.ArrayList",
     "java.util.List",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

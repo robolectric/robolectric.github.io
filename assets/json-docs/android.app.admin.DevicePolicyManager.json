@@ -143,6 +143,18 @@
       "exceptions": [],
       "name": "getAutoTimeRequired()"
     },
+    "getDeviceOwner()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getDeviceOwner()",
+      "documentation": "@see #setDeviceOwner(ComponentName)\n"
+    },
     "getOrganizationColor(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -193,6 +205,18 @@
       "returnType": "java.util.List\u003cjava.lang.String\u003e",
       "exceptions": [],
       "name": "getPermittedInputMethods(android.content.ComponentName)"
+    },
+    "getProfileOwner()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.content.ComponentName",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getProfileOwner()",
+      "documentation": "@see #setProfileOwner(ComponentName)\n"
     },
     "getShadowUserManager()": {
       "isImplementation": false,
@@ -359,7 +383,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDeviceOwner(android.content.ComponentName)",
-      "documentation": "Sets the admin as active admin and device owner. "
+      "documentation": "Sets the admin as active admin and device owner.\n\n@see DevicePolicyManager#getDeviceOwner()\n"
     },
     "setOrganizationColor(android.content.ComponentName,int)": {
       "isImplementation": true,
@@ -429,7 +453,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setProfileOwner(android.content.ComponentName)",
-      "documentation": "Sets the admin as active admin and profile owner. "
+      "documentation": "Sets the admin as active admin and profile owner.\n\n@see DevicePolicyManager#getProfileOwner()\n"
     },
     "setUninstallBlocked(android.content.ComponentName,java.lang.String,boolean)": {
       "isImplementation": true,
@@ -473,6 +497,8 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.Shadows.shadowOf",
     "android.annotation.Nullable",

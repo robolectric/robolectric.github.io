@@ -1,15 +1,5 @@
 {
   "methods": {
-    "__constructor__()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "__constructor__()"
-    },
     "callAttach(android.content.Intent)": {
       "isImplementation": false,
       "modifiers": [
@@ -92,16 +82,6 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "finishAndRemoveTask()"
-    },
-    "getActivityTitle()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "getActivityTitle()"
     },
     "getCallingActivity()": {
       "isImplementation": true,
@@ -611,16 +591,6 @@
       "exceptions": [],
       "name": "setResult(int,android.content.Intent)"
     },
-    "setThemeFromManifest()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "setThemeFromManifest()"
-    },
     "setVolumeControlStream(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -673,75 +643,6 @@
       "exceptions": [],
       "name": "showDialog(int,android.os.Bundle)"
     },
-    "startActivities(android.content.Intent[],android.os.Bundle)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intents",
-        "options"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivities(android.content.Intent[],android.os.Bundle)"
-    },
-    "startActivityForResult(android.content.Intent,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "requestCode"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivityForResult(android.content.Intent,int)"
-    },
-    "startActivityForResult(android.content.Intent,int,android.os.Bundle)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "requestCode",
-        "options"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivityForResult(android.content.Intent,int,android.os.Bundle)"
-    },
-    "startActivityFromFragment(android.app.Fragment,android.content.Intent,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "fragment",
-        "intent",
-        "requestCode"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivityFromFragment(android.app.Fragment,android.content.Intent,int)"
-    },
-    "startActivityFromFragment(android.app.Fragment,android.content.Intent,int,android.os.Bundle)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "fragment",
-        "intent",
-        "requestCode",
-        "options"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivityFromFragment(android.app.Fragment,android.content.Intent,int,android.os.Bundle)"
-    },
     "startManagingCursor(android.database.Cursor)": {
       "isImplementation": true,
       "modifiers": [
@@ -773,13 +674,11 @@
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "android.R",
     "android.app.Activity",
     "android.app.ActivityThread",
     "android.app.Application",
     "android.app.Dialog",
-    "android.app.Fragment",
     "android.app.Instrumentation",
     "android.content.ComponentName",
     "android.content.Context",
@@ -814,7 +713,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.fakes.RoboMenuItem",
-    "org.robolectric.manifest.AndroidManifest",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowActivity.ActivityInvoker"

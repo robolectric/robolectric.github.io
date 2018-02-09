@@ -266,56 +266,6 @@
       "exceptions": [],
       "name": "setSystemService(java.lang.String,java.lang.Object)"
     },
-    "startActivities(android.content.Intent[])": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intents"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivities(android.content.Intent[])"
-    },
-    "startActivities(android.content.Intent[],android.os.Bundle)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intents",
-        "options"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivities(android.content.Intent[],android.os.Bundle)"
-    },
-    "startActivity(android.content.Intent)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivity(android.content.Intent)"
-    },
-    "startActivity(android.content.Intent,android.os.Bundle)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "options"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivity(android.content.Intent,android.os.Bundle)"
-    },
     "startForegroundService(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
@@ -403,32 +353,39 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.O_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadow.api.Shadow.newInstanceOf",
     "android.accounts.IAccountManager",
+    "android.app.IWallpaperManager",
     "android.app.admin.IDevicePolicyManager",
     "android.content.BroadcastReceiver",
     "android.content.ComponentName",
     "android.content.ContentResolver",
     "android.content.Context",
     "android.content.IContentProvider",
+    "android.content.IRestrictionsManager",
     "android.content.Intent",
     "android.content.IntentFilter",
     "android.content.IntentSender",
     "android.content.ServiceConnection",
     "android.hardware.SystemSensorManager",
+    "android.hardware.fingerprint.IFingerprintService",
     "android.net.wifi.p2p.IWifiP2pManager",
     "android.net.wifi.p2p.WifiP2pManager",
     "android.os.Bundle",
     "android.os.Environment",
     "android.os.Handler",
+    "android.os.IUserManager",
     "android.os.Looper",
     "android.os.UserHandle",
     "android.view.Display",
     "android.view.accessibility.AccessibilityManager",
+    "android.view.autofill.IAutoFillManager",
     "java.io.File",
     "java.util.HashMap",
     "java.util.Map",

@@ -98,19 +98,6 @@
       "minSdk": 21,
       "name": "canOpenPopup()"
     },
-    "childrenEqualityCheck(org.robolectric.shadows.ShadowAccessibilityNodeInfo,java.util.LinkedList\u003corg.robolectric.shadows.ShadowAccessibilityNodeInfo\u003e)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "otherShadow",
-        "visitedNodes"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "childrenEqualityCheck(org.robolectric.shadows.ShadowAccessibilityNodeInfo,java.util.LinkedList\u003corg.robolectric.shadows.ShadowAccessibilityNodeInfo\u003e)"
-    },
     "describeContents()": {
       "isImplementation": true,
       "modifiers": [
@@ -132,7 +119,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "equals(java.lang.Object)",
-      "documentation": "Equality check based on reference equality for mParent and mView and\nvalue equality for other fields.\n"
+      "documentation": "Equality check based on reference equality of the Views from which these instances were\ncreated, or the equality of their assigned IDs.\n"
     },
     "getActionFromIdFromFrameWork(int)": {
       "isImplementation": false,
@@ -1390,7 +1377,6 @@
     "android.os.Bundle",
     "android.os.Parcel",
     "android.os.Parcelable",
-    "android.text.TextUtils",
     "android.util.Pair",
     "android.util.SparseArray",
     "android.view.View",
@@ -1404,7 +1390,6 @@
     "java.util.Collections",
     "java.util.HashMap",
     "java.util.Iterator",
-    "java.util.LinkedList",
     "java.util.List",
     "java.util.Map",
     "org.robolectric.RuntimeEnvironment",

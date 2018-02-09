@@ -470,6 +470,16 @@
       "exceptions": [],
       "name": "resetCanvasHistory()"
     },
+    "restore()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "restore()"
+    },
     "scale(float,float)": {
       "isImplementation": true,
       "modifiers": [

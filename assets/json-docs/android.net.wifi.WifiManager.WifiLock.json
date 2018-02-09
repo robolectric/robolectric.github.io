@@ -54,6 +54,8 @@
     "android.net.wifi.WifiConfiguration",
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiManager",
+    "android.net.wifi.WifiManager.MulticastLock",
+    "android.os.RemoteException",
     "android.util.Pair",
     "java.util.ArrayList",
     "java.util.LinkedHashMap",

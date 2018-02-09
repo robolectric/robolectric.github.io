@@ -159,6 +159,22 @@
       "exceptions": [],
       "name": "mapPoint(float,float)"
     },
+    "mapPoints(float[],int,float[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dst",
+        "dstIndex",
+        "src",
+        "srcIndex",
+        "pointCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "mapPoints(float[],int,float[],int,int)"
+    },
     "mapRect(android.graphics.RectF,android.graphics.RectF)": {
       "isImplementation": true,
       "modifiers": [
@@ -171,6 +187,22 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "mapRect(android.graphics.RectF,android.graphics.RectF)"
+    },
+    "mapVectors(float[],int,float[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dst",
+        "dstIndex",
+        "src",
+        "srcIndex",
+        "vectorCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "mapVectors(float[],int,float[],int,int)"
     },
     "postConcat(android.graphics.Matrix)": {
       "isImplementation": true,

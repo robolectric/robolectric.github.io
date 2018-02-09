@@ -38,18 +38,6 @@
       "exceptions": [],
       "name": "assertNoBroadcastListenersOfActionRegistered(android.content.ContextWrapper,java.lang.String)"
     },
-    "bind(org.robolectric.manifest.AndroidManifest)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "appManifest"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "bind(org.robolectric.manifest.AndroidManifest)"
-    },
     "bindService(android.content.Intent,android.content.ServiceConnection,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -148,17 +136,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "denyPermissions(java.lang.String...)"
-    },
-    "getAppManifest()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "org.robolectric.manifest.AndroidManifest",
-      "exceptions": [],
-      "name": "getAppManifest()",
-      "documentation": "@deprecated Use {@link android.content.Context} or {@link android.content.pm.PackageManager}\n            instead. This method will be removed in a future version of Robolectric.\n"
     },
     "getAppWidgetManager()": {
       "isImplementation": false,
@@ -338,17 +315,6 @@
       "exceptions": [],
       "name": "getMainHandler()"
     },
-    "getNextStartedActivity()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "android.content.Intent",
-      "exceptions": [],
-      "name": "getNextStartedActivity()",
-      "documentation": "Consumes the most recent {@code Intent} started by {@link #startActivity(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}\n"
-    },
     "getNextStartedService()": {
       "isImplementation": false,
       "modifiers": [
@@ -381,7 +347,8 @@
       ],
       "returnType": "java.util.List\u003candroid.content.BroadcastReceiver\u003e",
       "exceptions": [],
-      "name": "getReceiversForIntent(android.content.Intent)"
+      "name": "getReceiversForIntent(android.content.Intent)",
+      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead "
     },
     "getRegisteredReceivers()": {
       "isImplementation": false,
@@ -449,18 +416,8 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "hasReceiverForIntent(android.content.Intent)"
-    },
-    "peekNextStartedActivity()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "android.content.Intent",
-      "exceptions": [],
-      "name": "peekNextStartedActivity()",
-      "documentation": "Returns the most recent {@code Intent} started by {@link #startActivity(android.content.Intent)} without\nconsuming it.\n\n@return the most recently started {@code Intent}\n"
+      "name": "hasReceiverForIntent(android.content.Intent)",
+      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead "
     },
     "peekNextStartedService()": {
       "isImplementation": false,
@@ -546,18 +503,6 @@
       "exceptions": [],
       "name": "processStickyIntents(android.content.IntentFilter,android.content.BroadcastReceiver,android.content.Context)"
     },
-    "registerBroadcastReceivers(org.robolectric.manifest.AndroidManifest)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "androidManifest"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "registerBroadcastReceivers(org.robolectric.manifest.AndroidManifest)"
-    },
     "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)": {
       "isImplementation": true,
       "modifiers": [
@@ -600,19 +545,6 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "registerReceiverWithContext(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,android.content.Context)"
-    },
-    "replaceLastDotWith$IfInnerStaticClass(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "receiverClassName"
-      ],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "replaceLastDotWith$IfInnerStaticClass(java.lang.String)"
     },
     "runBackgroundTasks()": {
       "isImplementation": false,
@@ -874,31 +806,6 @@
       "exceptions": [],
       "name": "sortByPriority(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e)"
     },
-    "startActivity(android.content.Intent)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivity(android.content.Intent)"
-    },
-    "startActivity(android.content.Intent,android.os.Bundle)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "options"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "startActivity(android.content.Intent,android.os.Bundle)"
-    },
     "startService(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
@@ -946,18 +853,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "unregisterReceiver(android.content.BroadcastReceiver)"
-    },
-    "verifyActivityInManifest(android.content.Intent)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "intent"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "verifyActivityInManifest(android.content.Intent)"
     }
   },
   "imports": [
@@ -967,9 +862,9 @@
     "com.google.common.util.concurrent.MoreExecutors.directExecutor",
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.newInstanceOf",
+    "android.app.ActivityThread",
     "android.app.Application",
     "android.appwidget.AppWidgetManager",
-    "android.content.ActivityNotFoundException",
     "android.content.BroadcastReceiver",
     "android.content.ComponentName",
     "android.content.Context",
@@ -1011,8 +906,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.manifest.AndroidManifest",
-    "org.robolectric.manifest.BroadcastReceiverData",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.Scheduler",

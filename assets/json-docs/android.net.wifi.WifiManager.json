@@ -328,6 +328,8 @@
     "android.net.wifi.WifiConfiguration",
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiManager",
+    "android.net.wifi.WifiManager.MulticastLock",
+    "android.os.RemoteException",
     "android.util.Pair",
     "java.util.ArrayList",
     "java.util.LinkedHashMap",
@@ -337,7 +339,8 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock"
+    "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock",
+    "org.robolectric.shadows.ShadowWifiManager.ShadowMulticastLock"
   ],
   "name": "org.robolectric.shadows.ShadowWifiManager",
   "documentation": "Shadow for {@link android.net.wifi.WifiManager}.\n"

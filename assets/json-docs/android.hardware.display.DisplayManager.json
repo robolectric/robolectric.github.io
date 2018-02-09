@@ -29,7 +29,7 @@
       "name": "changeDisplay(int,java.lang.String)",
       "documentation": "Changes properties of a simulated display. If `qualifiersStr` starts with a plus (`+`) sign,\nthe display\u0027s previous configuration is modified with the given qualifiers; otherwise defaults\nare applied as described [here](http://robolectric.org/device-configuration/).\n\n\n@param displayId the display id to change\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display\n"
     },
-    "changeDisplay(int,org.robolectric.util.Consumer\u003candroid.view.DisplayInfo\u003e)": {
+    "changeDisplay(int,org.robolectric.util.Consumer\u003corg.robolectric.android.internal.DisplayConfig\u003e)": {
       "isImplementation": false,
       "modifiers": [
         "static"
@@ -40,7 +40,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "changeDisplay(int,org.robolectric.util.Consumer\u003candroid.view.DisplayInfo\u003e)",
+      "name": "changeDisplay(int,org.robolectric.util.Consumer\u003corg.robolectric.android.internal.DisplayConfig\u003e)",
       "documentation": "Changes properties of a simulated display. The original properties will be passed to the\n`consumer`, which may modify them in place. The display will be updated with the new\nproperties.\n\n@param displayId the display id to change\n@param consumer a function which modifies the display properties\n"
     },
     "configureDefaultDisplay(android.content.res.Configuration,android.util.DisplayMetrics)": {
@@ -137,6 +137,7 @@
     "android.view.Surface",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.android.Bootstrap",
+    "org.robolectric.android.internal.DisplayConfig",
     "org.robolectric.annotation.Implements",
     "org.robolectric.res.Qualifiers",
     "org.robolectric.shadow.api.Shadow",

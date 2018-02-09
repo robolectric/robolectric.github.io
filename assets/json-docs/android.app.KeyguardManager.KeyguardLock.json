@@ -3,7 +3,7 @@
     "disableKeyguard()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -25,7 +25,7 @@
     "reenableKeyguard()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -35,8 +35,12 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.O",
+    "android.app.Activity",
     "android.app.KeyguardManager",
+    "android.app.KeyguardManager.KeyguardDismissCallback",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

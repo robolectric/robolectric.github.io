@@ -133,6 +133,19 @@
       "exceptions": [],
       "name": "getAllNotifications()"
     },
+    "getCurrentInterruptionFilter()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getCurrentInterruptionFilter()",
+      "documentation": "@return {@link NotificationManager#INTERRUPTION_FILTER_ALL} by default, or the value specified\n        via {@link #setInterruptionFilter(int)}\n"
+    },
     "getNotification(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -245,6 +258,21 @@
       "exceptions": [],
       "name": "notify(java.lang.String,int,android.app.Notification)"
     },
+    "setInterruptionFilter(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "interruptionFilter"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setInterruptionFilter(int)",
+      "documentation": "Currently does not support checking for granted policy access.\n\n@see NotificationManager#getCurrentInterruptionFilter()\n"
+    },
     "setNotificationsEnabled(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -269,6 +297,8 @@
     }
   },
   "imports": [
+    "android.app.NotificationManager.INTERRUPTION_FILTER_ALL",
+    "android.os.Build.VERSION_CODES.M",
     "android.app.Notification",
     "android.app.NotificationManager",
     "android.os.Build",

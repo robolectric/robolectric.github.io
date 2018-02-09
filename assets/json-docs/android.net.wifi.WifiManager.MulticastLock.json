@@ -1,0 +1,69 @@
+{
+  "methods": {
+    "acquire()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "acquire()"
+    },
+    "isHeld()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isHeld()"
+    },
+    "release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "release()"
+    },
+    "setReferenceCounted(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "refCounted"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setReferenceCounted(boolean)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.net.DhcpInfo",
+    "android.net.wifi.ScanResult",
+    "android.net.wifi.WifiConfiguration",
+    "android.net.wifi.WifiInfo",
+    "android.net.wifi.WifiManager",
+    "android.net.wifi.WifiManager.MulticastLock",
+    "android.os.RemoteException",
+    "android.util.Pair",
+    "java.util.ArrayList",
+    "java.util.LinkedHashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.Shadows",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowWifiManager.ShadowMulticastLock"
+}

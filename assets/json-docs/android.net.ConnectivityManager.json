@@ -1,5 +1,18 @@
 {
   "methods": {
+    "addDefaultNetworkActiveListener(android.net.ConnectivityManager.OnNetworkActiveListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "l"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "addDefaultNetworkActiveListener(android.net.ConnectivityManager.OnNetworkActiveListener)"
+    },
     "addNetwork(android.net.Network,android.net.NetworkInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -47,7 +60,8 @@
       "returnType": "android.net.Network",
       "exceptions": [],
       "minSdk": 23,
-      "name": "getActiveNetwork()"
+      "name": "getActiveNetwork()",
+      "documentation": "@see #setActiveNetworkInfo(NetworkInfo)\n@see #setNetworkInfo(int, NetworkInfo)\n"
     },
     "getActiveNetworkInfo()": {
       "isImplementation": true,
@@ -67,7 +81,8 @@
       "params": [],
       "returnType": "android.net.NetworkInfo[]",
       "exceptions": [],
-      "name": "getAllNetworkInfo()"
+      "name": "getAllNetworkInfo()",
+      "documentation": "@see #setActiveNetworkInfo(NetworkInfo)\n@see #setNetworkInfo(int, NetworkInfo)\n"
     },
     "getAllNetworks()": {
       "isImplementation": true,
@@ -155,7 +170,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isActiveNetworkMetered()",
-      "documentation": "Count {@link ConnectivityManager#TYPE_MOBILE} networks as metered.\nOther types will be considered unmetered.\n\n@return True if the active network is metered.\n"
+      "documentation": "Counts {@link ConnectivityManager#TYPE_MOBILE} networks as metered.\nOther types will be considered unmetered.\n\n@return `true` if the active network is metered, otherwise `false`.\n@see #setActiveNetworkInfo(NetworkInfo)\n@see #setDefaultNetworkActive(boolean)\n"
+    },
+    "isDefaultNetworkActive()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isDefaultNetworkActive()",
+      "documentation": "@return `true` by default, or the value specifed via {@link #setDefaultNetworkActive(boolean)}\n@see #setDefaultNetworkActive(boolean)\n"
     },
     "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
@@ -170,6 +197,19 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)"
+    },
+    "removeDefaultNetworkActiveListener(android.net.ConnectivityManager.OnNetworkActiveListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "l"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "removeDefaultNetworkActiveListener(android.net.ConnectivityManager.OnNetworkActiveListener)"
     },
     "removeNetwork(android.net.Network)": {
       "isImplementation": false,
@@ -207,6 +247,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setBackgroundDataSetting(boolean)"
+    },
+    "setDefaultNetworkActive(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isActive"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultNetworkActive(boolean)",
+      "documentation": "Sets the active state of the default network.\n\nBy default this is true and affects the result of {@link\nConnectivityManager#isActiveNetworkMetered()}, {@link\nConnectivityManager#isDefaultNetworkActive()}, {@link ConnectivityManager#getActiveNetwork()}\nand {@link ConnectivityManager#getAllNetworkInfo()}.\n\nCalling this method with {@code true} after any listeners have been registered with {@link\nConnectivityManager#addDefaultNetworkActiveListener(OnNetworkActiveListener)} will result in\nthose listeners being fired.\n\n@param isActive The active state of the default network.\n"
     },
     "setNetworkInfo(int,android.net.NetworkInfo)": {
       "isImplementation": false,
@@ -252,6 +305,7 @@
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.net.ConnectivityManager",
+    "android.net.ConnectivityManager.OnNetworkActiveListener",
     "android.net.Network",
     "android.net.NetworkInfo",
     "android.net.NetworkRequest",

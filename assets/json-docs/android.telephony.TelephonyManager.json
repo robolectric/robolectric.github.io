@@ -210,6 +210,17 @@
       "exceptions": [],
       "name": "initListener(android.telephony.PhoneStateListener,int)"
     },
+    "isSmsCapable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isSmsCapable()",
+      "documentation": "@return `true` by default, or the value specified via {@link #setIsSmsCapable(boolean)}\n"
+    },
     "listen(android.telephony.PhoneStateListener,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -297,6 +308,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setGroupIdLevel1(java.lang.String)"
+    },
+    "setIsSmsCapable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isSmsCapable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsSmsCapable(boolean)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#isSmsCapable()}. "
     },
     "setLine1Number(java.lang.String)": {
       "isImplementation": false,

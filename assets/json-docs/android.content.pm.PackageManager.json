@@ -53,18 +53,6 @@
       "exceptions": [],
       "name": "addDrawableResolution(java.lang.String,int,android.graphics.drawable.Drawable)"
     },
-    "addManifest(org.robolectric.manifest.AndroidManifest)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "androidManifest"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "addManifest(org.robolectric.manifest.AndroidManifest)"
-    },
     "addPackage(android.content.pm.PackageInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -90,6 +78,18 @@
       "exceptions": [],
       "name": "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)"
     },
+    "addPackage(android.content.pm.PackageParser.Package)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appPackage"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPackage(android.content.pm.PackageParser.Package)"
+    },
     "addPackage(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -100,7 +100,21 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addPackage(java.lang.String)"
+      "name": "addPackage(java.lang.String)",
+      "documentation": "@deprecated - use {@link #addPackage(PackageInfo)} instead "
+    },
+    "addPermissionGroupInfo(android.content.pm.PermissionGroupInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "permissionGroupInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPermissionGroupInfo(android.content.pm.PermissionGroupInfo)",
+      "documentation": "Allows overriding or adding permission-group elements. These would be otherwise specified by\neither (the system)[https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups]\nor by (the app itself)[https://developer.android.com/guide/topics/manifest/permission-group-element.html],\nas part of its manifest\n\n{@link android.content.pm.PackageParser.PermissionGroup}s added through this method have\nprecedence over those specified with the same name by one of the aforementioned methods.\n\n@see PackageManager#getAllPermissionGroups(int)\n@see PackageManager#getPermissionGroupInfo(String, int)\n"
     },
     "addPermissionInfo(android.content.pm.PermissionInfo)": {
       "isImplementation": false,
@@ -167,20 +181,6 @@
       "exceptions": [],
       "name": "addSystemAvailableFeature(android.content.pm.FeatureInfo)"
     },
-    "checkPermission(java.lang.String,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "permName",
-        "pkgName"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "checkPermission(java.lang.String,java.lang.String)",
-      "documentation": "@deprecated Prefer {@link PackageManager#checkPermission(String, String)} instead.\n"
-    },
     "clearSystemAvailableFeatures()": {
       "isImplementation": false,
       "modifiers": [
@@ -204,58 +204,18 @@
       "exceptions": [],
       "name": "compareSignature(android.content.pm.Signature[],android.content.pm.Signature[])"
     },
-    "createPathPermissions(java.util.List\u003corg.robolectric.manifest.PathPermissionData\u003e)": {
-      "isImplementation": false,
-      "modifiers": [
-        "static"
-      ],
-      "params": [
-        "pathPermissionDatas"
-      ],
-      "returnType": "android.content.pm.PathPermission[]",
-      "exceptions": [],
-      "name": "createPathPermissions(java.util.List\u003corg.robolectric.manifest.PathPermissionData\u003e)"
-    },
-    "createPermissionInfo(int,org.robolectric.manifest.PermissionItemData)": {
-      "isImplementation": false,
-      "modifiers": [
-        "static"
-      ],
-      "params": [
-        "flags",
-        "permissionItemData"
-      ],
-      "returnType": "android.content.pm.PermissionInfo",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
-      "name": "createPermissionInfo(int,org.robolectric.manifest.PermissionItemData)"
-    },
-    "decodeFlags(java.util.Map\u003cjava.lang.String,java.lang.String\u003e)": {
+    "convertIntentFilters(java.util.List\u003c? extends android.content.pm.PackageParser.IntentInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
         "private",
         "static"
       ],
       "params": [
-        "applicationAttributes"
+        "intentInfos"
       ],
-      "returnType": "int",
+      "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
       "exceptions": [],
-      "name": "decodeFlags(java.util.Map\u003cjava.lang.String,java.lang.String\u003e)"
-    },
-    "decodeProtectionLevel(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "protectionLevel"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "decodeProtectionLevel(java.lang.String)"
+      "name": "convertIntentFilters(java.util.List\u003c? extends android.content.pm.PackageParser.IntentInfo\u003e)"
     },
     "doPendingUninstallCallbacks()": {
       "isImplementation": false,
@@ -271,7 +231,7 @@
     "freeStorage(long,android.content.IntentSender)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "freeStorageSize",
@@ -284,7 +244,7 @@
     "freeStorageAndNotify(long,android.content.pm.IPackageDataObserver)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "freeStorageSize",
@@ -294,93 +254,19 @@
       "exceptions": [],
       "name": "freeStorageAndNotify(long,android.content.pm.IPackageDataObserver)"
     },
-    "getActivityIcon(android.content.ComponentName)": {
+    "getAppPackage(android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "private"
       ],
       "params": [
         "componentName"
       ],
-      "returnType": "android.graphics.drawable.Drawable",
+      "returnType": "android.content.pm.PackageParser.Package",
       "exceptions": [
         "android.content.pm.PackageManager.NameNotFoundException"
       ],
-      "name": "getActivityIcon(android.content.ComponentName)"
-    },
-    "getActivityIcon(android.content.Intent)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent"
-      ],
-      "returnType": "android.graphics.drawable.Drawable",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
-      "name": "getActivityIcon(android.content.Intent)"
-    },
-    "getActivityInfo(android.content.ComponentName,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "className",
-        "flags"
-      ],
-      "returnType": "android.content.pm.ActivityInfo",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
-      "name": "getActivityInfo(android.content.ComponentName,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#getActivityInfo(ComponentName, int)} instead.\n"
-    },
-    "getApplicationIcon(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "packageName"
-      ],
-      "returnType": "android.graphics.drawable.Drawable",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
-      "name": "getApplicationIcon(java.lang.String)",
-      "documentation": "@deprecated Prefer {@link PackageManager#getApplicationIcon(String)} instead.\n"
-    },
-    "getApplicationInfo(java.lang.String,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "packageName",
-        "flags"
-      ],
-      "returnType": "android.content.pm.ApplicationInfo",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
-      "name": "getApplicationInfo(java.lang.String,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#getApplicationInfo(String, int)} instead.\n"
-    },
-    "getApplicationLabel(android.content.pm.ApplicationInfo)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "info"
-      ],
-      "returnType": "java.lang.CharSequence",
-      "exceptions": [],
-      "name": "getApplicationLabel(android.content.pm.ApplicationInfo)",
-      "documentation": "@deprecated Prefer {@link PackageManager#getApplicationLabel(ApplicationInfo)} instead.\n"
+      "name": "getAppPackage(android.content.ComponentName)"
     },
     "getComponentEnabledSettingFlags(android.content.ComponentName)": {
       "isImplementation": false,
@@ -395,32 +281,6 @@
       "name": "getComponentEnabledSettingFlags(android.content.ComponentName)",
       "documentation": "Return the flags set in call to {@link android.app.ApplicationPackageManager#setComponentEnabledSetting(ComponentName, int, int)}.\n\n@param componentName The component name.\n@return The flags.\n"
     },
-    "getComponentState(android.content.ComponentName)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "componentName"
-      ],
-      "returnType": "org.robolectric.shadows.ShadowPackageManager.ComponentState",
-      "exceptions": [],
-      "name": "getComponentState(android.content.ComponentName)",
-      "documentation": "@deprecated Use {@link android.app.ApplicationPackageManager#getComponentEnabledSetting(ComponentName)} or\n{@link #getComponentEnabledSettingFlags(ComponentName)} instead. This method will be removed in Robolectric 3.5.\n"
-    },
-    "getConfigChanges(org.robolectric.manifest.ActivityData)": {
-      "isImplementation": false,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "activityData"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getConfigChanges(org.robolectric.manifest.ActivityData)"
-    },
     "getDeletedPackages()": {
       "isImplementation": false,
       "modifiers": [
@@ -432,50 +292,71 @@
       "name": "getDeletedPackages()",
       "documentation": "Returns package names successfully deleted with {@link PackageManager#deletePackage(String, IPackageDeleteObserver, int)}\nNote that like real {@link PackageManager} the calling context must have {@link android.Manifest.permission#DELETE_PACKAGES} permission set.\n"
     },
-    "getDrawable(java.lang.String,int,android.content.pm.ApplicationInfo)": {
+    "getIntentFiltersForActivity(android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
       "params": [
-        "packageName",
-        "resourceId",
-        "applicationInfo"
+        "componentName"
       ],
-      "returnType": "android.graphics.drawable.Drawable",
-      "exceptions": [],
-      "name": "getDrawable(java.lang.String,int,android.content.pm.ApplicationInfo)"
+      "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
+      "exceptions": [
+        "android.content.pm.PackageManager.NameNotFoundException"
+      ],
+      "name": "getIntentFiltersForActivity(android.content.ComponentName)",
+      "documentation": "Get list of intent filters defined for given activity.\n\n@param componentName Name of the activity whose intent filters are to be retrieved\n@return the activity\u0027s intent filters\n"
     },
-    "getInstalledPackages(int)": {
+    "getIntentFiltersForComponent(java.util.List\u003c? extends android.content.pm.PackageParser.Component\u003e,android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "private",
+        "static"
       ],
       "params": [
-        "flags"
+        "components",
+        "componentName"
       ],
-      "returnType": "java.util.List\u003candroid.content.pm.PackageInfo\u003e",
-      "exceptions": [],
-      "name": "getInstalledPackages(int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#getInstalledPackages(int)} instead.\n"
+      "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
+      "exceptions": [
+        "android.content.pm.PackageManager.NameNotFoundException"
+      ],
+      "name": "getIntentFiltersForComponent(java.util.List\u003c? extends android.content.pm.PackageParser.Component\u003e,android.content.ComponentName)"
     },
-    "getLaunchIntentForPackage(java.lang.String)": {
+    "getIntentFiltersForReceiver(android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
       "params": [
-        "packageName"
+        "componentName"
       ],
-      "returnType": "android.content.Intent",
-      "exceptions": [],
-      "name": "getLaunchIntentForPackage(java.lang.String)",
-      "documentation": "@deprecated Prefer {@link PackageManager#getLaunchIntentForPackage(String)} instead.\n"
+      "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
+      "exceptions": [
+        "android.content.pm.PackageManager.NameNotFoundException"
+      ],
+      "name": "getIntentFiltersForReceiver(android.content.ComponentName)",
+      "documentation": "Get list of intent filters defined for given receiver.\n\n@param componentName Name of the receiver whose intent filters are to be retrieved\n@return the receiver\u0027s intent filters\n"
+    },
+    "getIntentFiltersForService(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "componentName"
+      ],
+      "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
+      "exceptions": [
+        "android.content.pm.PackageManager.NameNotFoundException"
+      ],
+      "name": "getIntentFiltersForService(android.content.ComponentName)",
+      "documentation": "Get list of intent filters defined for given service.\n\n@param componentName Name of the service whose intent filters are to be retrieved\n@return the service\u0027s intent filters\n"
     },
     "getPackageArchiveInfo(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "archiveFilePath",
@@ -485,21 +366,18 @@
       "exceptions": [],
       "name": "getPackageArchiveInfo(java.lang.String,int)"
     },
-    "getPackageInfo(java.lang.String,int)": {
+    "getPackageName(android.content.pm.ResolveInfo)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "private",
+        "static"
       ],
       "params": [
-        "packageName",
-        "flags"
+        "resolveInfo"
       ],
-      "returnType": "android.content.pm.PackageInfo",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
-      "name": "getPackageInfo(java.lang.String,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#getPackageInfo(String, int)} instead.\n"
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getPackageName(android.content.pm.ResolveInfo)"
     },
     "getPreferredActivities(java.util.List\u003candroid.content.IntentFilter\u003e,java.util.List\u003candroid.content.ComponentName\u003e,java.lang.String)": {
       "isImplementation": false,
@@ -514,52 +392,6 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getPreferredActivities(java.util.List\u003candroid.content.IntentFilter\u003e,java.util.List\u003candroid.content.ComponentName\u003e,java.lang.String)"
-    },
-    "getReceiverInfo(android.content.ComponentName,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "className",
-        "flags"
-      ],
-      "returnType": "android.content.pm.ActivityInfo",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
-      "name": "getReceiverInfo(android.content.ComponentName,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#getReceiverInfo(ComponentName, int)} instead.\n"
-    },
-    "getResolveInfo(org.robolectric.manifest.ServiceData,android.content.IntentFilter,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "static"
-      ],
-      "params": [
-        "service",
-        "intentFilter",
-        "packageName"
-      ],
-      "returnType": "android.content.pm.ResolveInfo",
-      "exceptions": [],
-      "name": "getResolveInfo(org.robolectric.manifest.ServiceData,android.content.IntentFilter,java.lang.String)"
-    },
-    "getServiceInfo(android.content.ComponentName,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "className",
-        "flags"
-      ],
-      "returnType": "android.content.pm.ServiceInfo",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
-      "name": "getServiceInfo(android.content.ComponentName,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#getServiceInfo(ComponentName, int)} instead.\n"
     },
     "getVerificationExtendedTimeout(int)": {
       "isImplementation": false,
@@ -585,74 +417,10 @@
       "exceptions": [],
       "name": "getVerificationResult(int)"
     },
-    "hasSystemFeature(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "name"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "hasSystemFeature(java.lang.String)",
-      "documentation": "@deprecated Prefer {@link PackageManager#hasSystemFeature(String)} instead.\n"
-    },
-    "isQueryIntentImplicitly()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "isQueryIntentImplicitly()",
-      "documentation": "@deprecated - this will be the default behaviour in Robolectric 3.7 and bring behaviour into line with that of\nother Android components (note this method only affects Activities)\n"
-    },
-    "matchIntentFilter(android.content.Intent,java.util.List\u003corg.robolectric.manifest.IntentFilterData\u003e)": {
-      "isImplementation": false,
-      "modifiers": [
-        "static"
-      ],
-      "params": [
-        "intent",
-        "intentFilters"
-      ],
-      "returnType": "android.content.IntentFilter",
-      "exceptions": [],
-      "name": "matchIntentFilter(android.content.Intent,java.util.List\u003corg.robolectric.manifest.IntentFilterData\u003e)"
-    },
-    "metaDataToBundle(java.util.Map\u003cjava.lang.String,java.lang.Object\u003e)": {
-      "isImplementation": false,
-      "modifiers": [
-        "static"
-      ],
-      "params": [
-        "meta"
-      ],
-      "returnType": "android.os.Bundle",
-      "exceptions": [],
-      "name": "metaDataToBundle(java.util.Map\u003cjava.lang.String,java.lang.Object\u003e)",
-      "documentation": "Goes through the meta data and puts each value in to a\nbundle as the correct type.\n\nNote that this will convert resource identifiers specified\nvia the value attribute as well.\n@param meta Meta data to put in to a bundle\n@return bundle containing the meta data\n"
-    },
-    "queryBroadcastReceivers(android.content.Intent,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "flags"
-      ],
-      "returnType": "java.util.List\u003candroid.content.pm.ResolveInfo\u003e",
-      "exceptions": [],
-      "name": "queryBroadcastReceivers(android.content.Intent,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#queryBroadcastReceivers(Intent, int)} instead.\n"
-    },
     "queryBroadcastReceivers(android.content.Intent,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent",
@@ -666,7 +434,7 @@
     "queryBroadcastReceiversAsUser(android.content.Intent,int,android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent",
@@ -677,7 +445,7 @@
       "exceptions": [],
       "name": "queryBroadcastReceiversAsUser(android.content.Intent,int,android.os.UserHandle)"
     },
-    "queryIntent(android.content.Intent,int)": {
+    "queryOverriddenIntents(android.content.Intent,int)": {
       "isImplementation": false,
       "modifiers": [
         "protected"
@@ -688,35 +456,7 @@
       ],
       "returnType": "java.util.List\u003candroid.content.pm.ResolveInfo\u003e",
       "exceptions": [],
-      "name": "queryIntent(android.content.Intent,int)"
-    },
-    "queryIntentActivities(android.content.Intent,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "flags"
-      ],
-      "returnType": "java.util.List\u003candroid.content.pm.ResolveInfo\u003e",
-      "exceptions": [],
-      "name": "queryIntentActivities(android.content.Intent,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#queryIntentActivities(Intent, int)} instead.\n"
-    },
-    "queryIntentServices(android.content.Intent,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "flags"
-      ],
-      "returnType": "java.util.List\u003candroid.content.pm.ResolveInfo\u003e",
-      "exceptions": [],
-      "name": "queryIntentServices(android.content.Intent,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#queryIntentServices(Intent, int)}  instead.\n"
+      "name": "queryOverriddenIntents(android.content.Intent,int)"
     },
     "removePackage(java.lang.String)": {
       "isImplementation": false,
@@ -743,20 +483,6 @@
       "exceptions": [],
       "name": "removeResolveInfosForIntent(android.content.Intent,java.lang.String)"
     },
-    "resolveActivity(android.content.Intent,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "flags"
-      ],
-      "returnType": "android.content.pm.ResolveInfo",
-      "exceptions": [],
-      "name": "resolveActivity(android.content.Intent,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#resolveActivity(Intent, int)} instead.\n"
-    },
     "resolvePackageName(java.lang.String,android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
@@ -770,34 +496,6 @@
       "exceptions": [],
       "name": "resolvePackageName(java.lang.String,android.content.ComponentName)"
     },
-    "resolveService(android.content.Intent,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "flags"
-      ],
-      "returnType": "android.content.pm.ResolveInfo",
-      "exceptions": [],
-      "name": "resolveService(android.content.Intent,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#resolveService(Intent, int)} instead.\n"
-    },
-    "setApplicationEnabledSetting(java.lang.String,int,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "packageName",
-        "newState",
-        "flags"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setApplicationEnabledSetting(java.lang.String,int,int)"
-    },
     "setApplicationIcon(java.lang.String,android.graphics.drawable.Drawable)": {
       "isImplementation": false,
       "modifiers": [
@@ -810,21 +508,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setApplicationIcon(java.lang.String,android.graphics.drawable.Drawable)"
-    },
-    "setComponentEnabledSetting(android.content.ComponentName,int,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "componentName",
-        "newState",
-        "flags"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setComponentEnabledSetting(android.content.ComponentName,int,int)",
-      "documentation": "@deprecated Prefer {@link PackageManager#setComponentEnabledSetting(ComponentName, int, int)} instead.\n"
     },
     "setNameForUid(int,java.lang.String)": {
       "isImplementation": false,
@@ -877,19 +560,6 @@
       "exceptions": [],
       "name": "setPackagesForUid(int,java.lang.String...)"
     },
-    "setQueryIntentImplicitly(boolean)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "queryIntentImplicitly"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setQueryIntentImplicitly(boolean)",
-      "documentation": "@deprecated - this will be the default behaviour in Robolectric 3.7 and bring behaviour into line with that of\nother Android components (note this method only affects Activities)\n"
-    },
     "setShouldShowRequestPermissionRationale(java.lang.String,boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -931,23 +601,25 @@
     }
   },
   "imports": [
-    "android.content.pm.ApplicationInfo.FLAG_ALLOW_BACKUP",
-    "android.content.pm.ApplicationInfo.FLAG_ALLOW_CLEAR_USER_DATA",
-    "android.content.pm.ApplicationInfo.FLAG_ALLOW_TASK_REPARENTING",
-    "android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE",
-    "android.content.pm.ApplicationInfo.FLAG_HAS_CODE",
-    "android.content.pm.ApplicationInfo.FLAG_KILL_AFTER_RESTORE",
-    "android.content.pm.ApplicationInfo.FLAG_PERSISTENT",
-    "android.content.pm.ApplicationInfo.FLAG_RESIZEABLE_FOR_SCREENS",
-    "android.content.pm.ApplicationInfo.FLAG_RESTORE_ANY_VERSION",
-    "android.content.pm.ApplicationInfo.FLAG_SUPPORTS_LARGE_SCREENS",
-    "android.content.pm.ApplicationInfo.FLAG_SUPPORTS_NORMAL_SCREENS",
-    "android.content.pm.ApplicationInfo.FLAG_SUPPORTS_SCREEN_DENSITIES",
-    "android.content.pm.ApplicationInfo.FLAG_SUPPORTS_SMALL_SCREENS",
-    "android.content.pm.ApplicationInfo.FLAG_TEST_ONLY",
-    "android.content.pm.ApplicationInfo.FLAG_VM_SAFE_MODE",
     "android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED",
+    "android.content.pm.PackageManager.GET_ACTIVITIES",
+    "android.content.pm.PackageManager.GET_CONFIGURATIONS",
+    "android.content.pm.PackageManager.GET_GIDS",
+    "android.content.pm.PackageManager.GET_INSTRUMENTATION",
+    "android.content.pm.PackageManager.GET_INTENT_FILTERS",
     "android.content.pm.PackageManager.GET_META_DATA",
+    "android.content.pm.PackageManager.GET_PERMISSIONS",
+    "android.content.pm.PackageManager.GET_PROVIDERS",
+    "android.content.pm.PackageManager.GET_RECEIVERS",
+    "android.content.pm.PackageManager.GET_RESOLVED_FILTER",
+    "android.content.pm.PackageManager.GET_SERVICES",
+    "android.content.pm.PackageManager.GET_SHARED_LIBRARY_FILES",
+    "android.content.pm.PackageManager.GET_SIGNATURES",
+    "android.content.pm.PackageManager.GET_URI_PERMISSION_PATTERNS",
+    "android.content.pm.PackageManager.MATCH_DIRECT_BOOT_AWARE",
+    "android.content.pm.PackageManager.MATCH_DIRECT_BOOT_UNAWARE",
+    "android.content.pm.PackageManager.MATCH_DISABLED_COMPONENTS",
+    "android.content.pm.PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS",
     "android.content.pm.PackageManager.MATCH_UNINSTALLED_PACKAGES",
     "android.content.pm.PackageManager.SIGNATURE_FIRST_NOT_SIGNED",
     "android.content.pm.PackageManager.SIGNATURE_MATCH",
@@ -962,7 +634,6 @@
     "android.content.Intent",
     "android.content.IntentFilter",
     "android.content.IntentSender",
-    "android.content.pm.ActivityInfo",
     "android.content.pm.ApplicationInfo",
     "android.content.pm.FeatureInfo",
     "android.content.pm.IPackageDataObserver",
@@ -970,22 +641,25 @@
     "android.content.pm.PackageInfo",
     "android.content.pm.PackageManager",
     "android.content.pm.PackageManager.NameNotFoundException",
+    "android.content.pm.PackageParser",
+    "android.content.pm.PackageParser.Component",
+    "android.content.pm.PackageParser.IntentInfo",
+    "android.content.pm.PackageParser.Package",
     "android.content.pm.PackageStats",
-    "android.content.pm.PathPermission",
+    "android.content.pm.PackageUserState",
+    "android.content.pm.PermissionGroupInfo",
     "android.content.pm.PermissionInfo",
-    "android.content.pm.ProviderInfo",
     "android.content.pm.ResolveInfo",
-    "android.content.pm.ServiceInfo",
     "android.content.pm.Signature",
     "android.content.res.Resources",
     "android.graphics.drawable.Drawable",
     "android.net.Uri",
     "android.os.Binder",
-    "android.os.Bundle",
-    "android.os.PatternMatcher",
+    "android.os.Build",
     "android.os.Process",
     "android.os.RemoteException",
     "android.os.UserHandle",
+    "android.util.ArraySet",
     "android.util.Pair",
     "com.google.common.base.Preconditions",
     "java.util.ArrayList",
@@ -996,7 +670,6 @@
     "java.util.HashSet",
     "java.util.Iterator",
     "java.util.LinkedHashMap",
-    "java.util.LinkedList",
     "java.util.List",
     "java.util.Map",
     "java.util.Set",
@@ -1004,15 +677,7 @@
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.manifest.ActivityData",
-    "org.robolectric.manifest.AndroidManifest",
-    "org.robolectric.manifest.ContentProviderData",
-    "org.robolectric.manifest.IntentFilterData",
-    "org.robolectric.manifest.PathPermissionData",
-    "org.robolectric.manifest.PermissionItemData",
-    "org.robolectric.manifest.ServiceData",
-    "org.robolectric.res.AttributeResource",
-    "org.robolectric.res.ResName",
+    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.TempDirectory",
     "org.robolectric.shadows.ShadowPackageManager.IntentComparator",
     "org.robolectric.shadows.ShadowPackageManager.ComponentState"

@@ -17,7 +17,7 @@
     "getDeviceList()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.HashMap\u003cjava.lang.String,android.hardware.usb.UsbDevice\u003e",
@@ -28,7 +28,7 @@
     "hasPermission(android.hardware.usb.UsbDevice)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "device"
@@ -41,7 +41,7 @@
     "openAccessory(android.hardware.usb.UsbAccessory)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "accessory"
@@ -49,7 +49,7 @@
       "returnType": "android.os.ParcelFileDescriptor",
       "exceptions": [],
       "name": "openAccessory(android.hardware.usb.UsbAccessory)",
-      "documentation": "Opens a file descriptor from a temporary file.\n"
+      "documentation": "Opens a file descriptor from a temporary file. "
     },
     "removeUsbDevice(android.hardware.usb.UsbDevice)": {
       "isImplementation": false,

@@ -1,0 +1,249 @@
+{
+  "methods": {
+    "checkActivities(boolean)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "checkActivities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkActivities(boolean)"
+    },
+    "execStartActivities(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent[],android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "who",
+        "contextThread",
+        "token",
+        "target",
+        "intents",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "execStartActivities(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent[],android.os.Bundle)"
+    },
+    "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "who",
+        "contextThread",
+        "token",
+        "target",
+        "intent",
+        "requestCode",
+        "options"
+      ],
+      "returnType": "android.app.Instrumentation.ActivityResult",
+      "exceptions": [],
+      "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle)"
+    },
+    "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Fragment,android.content.Intent,int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "who",
+        "contextThread",
+        "token",
+        "target",
+        "intent",
+        "requestCode",
+        "options"
+      ],
+      "returnType": "android.app.Instrumentation.ActivityResult",
+      "exceptions": [],
+      "maxSdk": 22,
+      "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Fragment,android.content.Intent,int,android.os.Bundle)"
+    },
+    "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,java.lang.String,android.content.Intent,int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "who",
+        "contextThread",
+        "token",
+        "target",
+        "intent",
+        "requestCode",
+        "options"
+      ],
+      "returnType": "android.app.Instrumentation.ActivityResult",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,java.lang.String,android.content.Intent,int,android.os.Bundle)"
+    },
+    "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,java.lang.String,android.content.Intent,int,android.os.Bundle,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "who",
+        "contextThread",
+        "token",
+        "resultWho",
+        "intent",
+        "requestCode",
+        "options",
+        "user"
+      ],
+      "returnType": "android.app.Instrumentation.ActivityResult",
+      "exceptions": [],
+      "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,java.lang.String,android.content.Intent,int,android.os.Bundle,android.os.UserHandle)"
+    },
+    "execStartActivityAsCaller(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle,boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "who",
+        "contextThread",
+        "token",
+        "target",
+        "intent",
+        "requestCode",
+        "options",
+        "ignoreTargetSecurity",
+        "userId"
+      ],
+      "returnType": "android.app.Instrumentation.ActivityResult",
+      "exceptions": [],
+      "name": "execStartActivityAsCaller(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle,boolean,int)"
+    },
+    "execStartActivityFromAppTask(android.content.Context,android.os.IBinder,java.lang.Object,android.content.Intent,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "who",
+        "contextThread",
+        "appTask",
+        "intent",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "execStartActivityFromAppTask(android.content.Context,android.os.IBinder,java.lang.Object,android.content.Intent,android.os.Bundle)"
+    },
+    "getNextStartedActivity()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getNextStartedActivity()"
+    },
+    "getNextStartedActivityForResult()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
+      "exceptions": [],
+      "name": "getNextStartedActivityForResult()"
+    },
+    "getRequestCodeForIntent(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "requestIntent"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRequestCodeForIntent(android.content.Intent)"
+    },
+    "logStartedActivity(android.content.Intent,int,android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "intent",
+        "requestCode",
+        "options"
+      ],
+      "returnType": "android.app.Instrumentation.ActivityResult",
+      "exceptions": [],
+      "name": "logStartedActivity(android.content.Intent,int,android.os.Bundle)"
+    },
+    "peekNextStartedActivity()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "peekNextStartedActivity()"
+    },
+    "peekNextStartedActivityForResult()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
+      "exceptions": [],
+      "name": "peekNextStartedActivityForResult()"
+    },
+    "startActivitySync(android.content.Intent,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "options"
+      ],
+      "returnType": "android.app.Activity",
+      "exceptions": [],
+      "name": "startActivitySync(android.content.Intent,android.os.Bundle)"
+    },
+    "verifyActivityInManifest(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "verifyActivityInManifest(android.content.Intent)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.M",
+    "android.app.Activity",
+    "android.app.Fragment",
+    "android.app.Instrumentation",
+    "android.app.Instrumentation.ActivityResult",
+    "android.content.ActivityNotFoundException",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.content.Intent.FilterComparison",
+    "android.os.Bundle",
+    "android.os.IBinder",
+    "android.os.UserHandle",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowActivity.IntentForResult"
+  ],
+  "name": "org.robolectric.shadows.ShadowInstrumentation"
+}

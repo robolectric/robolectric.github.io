@@ -1,6 +1,6 @@
 {
   "methods": {
-    "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Object,java.lang.Class)": {
+    "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Object,java.lang.Class\u003cT\u003e)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -9,11 +9,11 @@
       "params": [
         "fieldName",
         "object",
-        "aClass"
+        "clazz"
       ],
       "returnType": "T",
       "exceptions": [],
-      "name": "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Object,java.lang.Class)"
+      "name": "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Object,java.lang.Class\u003cT\u003e)"
     },
     "enqueue(android.app.DownloadManager.Request)": {
       "isImplementation": true,
