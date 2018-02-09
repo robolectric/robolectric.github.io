@@ -85,7 +85,7 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "getBlockSizeLong()",
-      "documentation": "Robolectric always uses a block size of `4096`.\n@return\n"
+      "documentation": "Robolectric always uses a block size of `4096`.\n"
     },
     "getFreeBlocks()": {
       "isImplementation": true,

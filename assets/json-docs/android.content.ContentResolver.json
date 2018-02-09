@@ -203,18 +203,18 @@
       "name": "clearContentObservers()",
       "documentation": "@deprecated Do not use this method. "
     },
-    "createAndInitialize(org.robolectric.manifest.ContentProviderData)": {
+    "createAndInitialize(android.content.pm.ProviderInfo)": {
       "isImplementation": false,
       "modifiers": [
         "private",
         "static"
       ],
       "params": [
-        "providerData"
+        "providerInfo"
       ],
       "returnType": "android.content.ContentProvider",
       "exceptions": [],
-      "name": "createAndInitialize(org.robolectric.manifest.ContentProviderData)"
+      "name": "createAndInitialize(android.content.pm.ProviderInfo)"
     },
     "delete(android.net.Uri,java.lang.String,java.lang.String[])": {
       "isImplementation": true,
@@ -479,20 +479,6 @@
       "name": "getUpdateStatements()",
       "documentation": "Returns the list of {@link UpdateStatement}s for corresponding calls to\n{@link ContentResolver#update(Uri, ContentValues, String, String[])}.\n\n@return a list of update statements\n"
     },
-    "initialize(android.content.ContentProvider,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "provider",
-        "authorities"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "initialize(android.content.ContentProvider,java.lang.String)"
-    },
     "insert(android.net.Uri,android.content.ContentValues)": {
       "isImplementation": true,
       "modifiers": [
@@ -506,7 +492,7 @@
       "returnType": "android.net.Uri",
       "exceptions": [],
       "name": "insert(android.net.Uri,android.content.ContentValues)",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#insert(Uri, ContentValues)} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\na {@link Uri} including the incremented value set with {@link #setNextDatabaseIdForInserts(int)} will returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#insert(Uri, ContentValues)} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\na {@link Uri} including the incremented value set with\n{@link #setNextDatabaseIdForInserts(int)} will returned.\n"
     },
     "isBundleEqual(android.os.Bundle,android.os.Bundle)": {
       "isImplementation": false,
@@ -588,23 +574,6 @@
       "returnType": "java.io.OutputStream",
       "exceptions": [],
       "name": "openOutputStream(android.net.Uri)"
-    },
-    "openTypedAssetFileDescriptor(android.net.Uri,java.lang.String,android.os.Bundle)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "final"
-      ],
-      "params": [
-        "uri",
-        "mimeType",
-        "opts"
-      ],
-      "returnType": "android.content.res.AssetFileDescriptor",
-      "exceptions": [
-        "java.io.FileNotFoundException"
-      ],
-      "name": "openTypedAssetFileDescriptor(android.net.Uri,java.lang.String,android.os.Bundle)"
     },
     "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)": {
       "isImplementation": true,
@@ -842,7 +811,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNextDatabaseIdForUpdates(int)",
-      "documentation": "Set the value to be returned by {@link ContentResolver#update(Uri, ContentValues, String, String[])}\nwhen no appropriate {@link ContentProvider} can be found.\n\n@deprecated This method will be removed in Robolectric 3.5. Instead, {@code 1} will be returned.\n\n@param nextId the number of rows to return\n"
+      "documentation": "Set the value to be returned by\n{@link ContentResolver#update(Uri, ContentValues, String, String[])} when no appropriate\n{@link ContentProvider} can be found.\n\n@param nextId the number of rows to return\n@deprecated This method will be removed in Robolectric 3.5. Instead, {@code 1} will be\nreturned.\n"
     },
     "setSyncAutomatically(android.accounts.Account,java.lang.String,boolean)": {
       "isImplementation": true,
@@ -899,7 +868,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe value set with {@link #setNextDatabaseIdForUpdates(int)} will be incremented and returned.\n\n*Note:* the return value in this case will be changed to {@code 1} in a future release of Robolectric.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe value set with {@link #setNextDatabaseIdForUpdates(int)} will be incremented and returned.\n\n*Note:* the return value in this case will be changed to {@code 1} in a future release of\nRobolectric.\n"
     },
     "validateSyncExtrasBundle(android.os.Bundle)": {
       "isImplementation": true,
@@ -932,16 +901,15 @@
     "android.content.PeriodicSync",
     "android.content.UriPermission",
     "android.content.pm.ProviderInfo",
-    "android.content.res.AssetFileDescriptor",
     "android.database.ContentObserver",
     "android.database.Cursor",
     "android.net.Uri",
     "android.os.Bundle",
     "android.os.CancellationSignal",
-    "java.io.FileNotFoundException",
     "java.io.IOException",
     "java.io.InputStream",
     "java.io.OutputStream",
+    "java.lang.reflect.InvocationTargetException",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.HashMap",
@@ -956,8 +924,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.fakes.BaseCursor",
-    "org.robolectric.manifest.AndroidManifest",
-    "org.robolectric.manifest.ContentProviderData",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.NamedStream",
     "org.robolectric.util.ReflectionHelpers",

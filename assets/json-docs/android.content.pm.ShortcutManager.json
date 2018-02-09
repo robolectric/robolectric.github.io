@@ -3,7 +3,7 @@
     "addDynamicShortcuts(java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcutInfoList"
@@ -15,7 +15,7 @@
     "createShortcutResultIntent(android.content.pm.ShortcutInfo)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcut"
@@ -28,7 +28,7 @@
     "disableShortcuts(java.util.List\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcutIds"
@@ -40,7 +40,7 @@
     "disableShortcuts(java.util.List\u003cjava.lang.String\u003e,java.lang.CharSequence)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcutIds",
@@ -53,7 +53,7 @@
     "enableShortcuts(java.util.List\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcutIds"
@@ -65,7 +65,7 @@
     "getDynamicShortcuts()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.content.pm.ShortcutInfo\u003e",
@@ -75,7 +75,7 @@
     "getIconMaxHeight()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -85,7 +85,7 @@
     "getIconMaxWidth()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -95,7 +95,7 @@
     "getManifestShortcuts()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.content.pm.ShortcutInfo\u003e",
@@ -105,7 +105,7 @@
     "getMaxShortcutCountPerActivity()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -115,7 +115,7 @@
     "getPinnedShortcuts()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.content.pm.ShortcutInfo\u003e",
@@ -125,7 +125,7 @@
     "isRateLimitingActive()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -135,7 +135,7 @@
     "isRequestPinShortcutSupported()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -146,7 +146,7 @@
     "removeAllDynamicShortcuts()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -156,7 +156,7 @@
     "removeDynamicShortcuts(java.util.List\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcutIds"
@@ -168,7 +168,7 @@
     "reportShortcutUsed(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcutId"
@@ -180,7 +180,7 @@
     "requestPinShortcut(android.content.pm.ShortcutInfo,android.content.IntentSender)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcut",
@@ -194,7 +194,7 @@
     "setDynamicShortcuts(java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcutInfoList"
@@ -218,7 +218,7 @@
     "updateShortcuts(java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shortcutInfoList"

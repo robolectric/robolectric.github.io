@@ -148,20 +148,6 @@
       "exceptions": [],
       "name": "findById(long)"
     },
-    "getAssetsPath(org.robolectric.manifest.AndroidManifest,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "appManifest",
-        "fontName"
-      ],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "getAssetsPath(org.robolectric.manifest.AndroidManifest,java.lang.String)"
-    },
     "getFontDescription()": {
       "isImplementation": false,
       "modifiers": [
@@ -201,20 +187,18 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf",
     "android.content.res.AssetManager",
+    "android.graphics.FontFamily",
     "android.graphics.Typeface",
+    "android.util.ArrayMap",
     "java.io.File",
-    "java.util.ArrayList",
+    "java.util.Collection",
     "java.util.HashMap",
-    "java.util.List",
     "java.util.Map",
-    "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.manifest.AndroidManifest",
     "org.robolectric.res.FsFile",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",

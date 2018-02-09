@@ -195,11 +195,9 @@
     },
     "getAllAssetsDirectories()": {
       "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
+      "modifiers": [],
       "params": [],
-      "returnType": "java.util.List\u003corg.robolectric.res.FsFile\u003e",
+      "returnType": "java.util.Collection\u003corg.robolectric.res.FsFile\u003e",
       "exceptions": [],
       "name": "getAllAssetsDirectories()"
     },
@@ -228,16 +226,6 @@
       "returnType": "int[]",
       "exceptions": [],
       "name": "getArrayIntResource(int)"
-    },
-    "getAssetsDirectory()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [],
-      "returnType": "org.robolectric.res.FsFile",
-      "exceptions": [],
-      "name": "getAssetsDirectory()"
     },
     "getAssignedPackageIdentifiers()": {
       "isImplementation": true,
@@ -276,15 +264,17 @@
       "name": "getFileFromZip(java.io.File)",
       "documentation": "Extract an asset from a zipped up assets provided by the build system, this is required because there is no\nway to get a FileDescriptor from a zip entry. This is a temporary measure for Bazel which can be removed\nonce binary resources are supported.\n"
     },
-    "getLibraryAssetsDirectories()": {
+    "getFsFileFromPath(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
-      "params": [],
-      "returnType": "java.util.List\u003corg.robolectric.res.FsFile\u003e",
+      "params": [
+        "property"
+      ],
+      "returnType": "org.robolectric.res.FsFile",
       "exceptions": [],
-      "name": "getLibraryAssetsDirectories()"
+      "name": "getFsFileFromPath(java.lang.String)"
     },
     "getLocales()": {
       "isImplementation": true,
@@ -938,13 +928,18 @@
     "java.io.FileOutputStream",
     "java.io.IOException",
     "java.io.InputStream",
+    "java.net.MalformedURLException",
+    "java.net.URL",
     "java.nio.file.Files",
     "java.util.ArrayList",
     "java.util.Arrays",
+    "java.util.Collection",
     "java.util.Collections",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.Set",
+    "java.util.concurrent.CopyOnWriteArraySet",
     "java.util.zip.ZipEntry",
     "java.util.zip.ZipInputStream",
     "javax.annotation.Nonnull",
@@ -955,7 +950,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.manifest.AndroidManifest",
     "org.robolectric.res.AttrData",
     "org.robolectric.res.AttributeResource",
     "org.robolectric.res.EmptyStyle",

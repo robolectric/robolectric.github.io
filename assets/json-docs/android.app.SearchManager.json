@@ -3,7 +3,7 @@
     "getSearchableInfo(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "componentName"

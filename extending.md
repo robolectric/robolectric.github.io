@@ -141,11 +141,7 @@ public class MyShadowBitmap {
 
 ### Using a Custom Shadows
 
-Custom Shadows get hooked up to Robolectric using the @Config annotation on the test class or test method, using
-the `shadows` array attribute.  To use the MyShadowBitmap class mentioned in the previous section, you would annotate
-the test in question with `@Config(shadows={MyShadowBitmap.class})`, and to include multiple custom shadows:
-`@Config(shadows={MyShadowBitmap.class, MyOtherCustomShadow.class})`.  This causes Robolectric to recognize and use
-your custom shadow when executing code against the class you shadowed.
+Custom Shadows get hooked up to Robolectric using the `@Config` annotation on the test class or test method, using the `shadows` array attribute.  To use the `MyShadowBitmap` class mentioned in the previous section, you would annotate the test in question with `@Config(shadows={MyShadowBitmap.class})`, and to include multiple custom shadows: `@Config(shadows={MyShadowBitmap.class, MyOtherCustomShadow.class})`.  This causes Robolectric to recognize and use your custom shadow when executing code against the class you shadowed.
 
 If you would like your custom shadows to be applied to all tests in your suite or a certain package you can configure shadows through the [robolectric.properties](https://github.com/robolectric/robolectric.github.io/blob/master/configuring.md) file.
 
@@ -183,10 +179,10 @@ dependencies {
 Since Robolectric 3.7 `@Implementation` methods including `__constructor__` methods can be made `protected`. This is desirable as test code has no business calling these methods, by making your `@Implementation` methods protected you encourage test writers to call the public Android APIs instead.
 
 ### Don't use `useinheritImplementationMethods`
-This is  usually unnecessary and appears to have been cargo-culted. This will be removed in Robolectric 3.8
+This is usually unnecessary and will be removed in Robolectric 3.8
 
 ### Don't override `equals`, `hashCode` and `toString` in shadows.
-Avoid this unless you are mimicing behaviour in the class being shadowed. To test equality for comparisons in tests prefer helpers or assertion library extensions. prefer adding a `describe()` method instead of shadowing `toString()`
+Avoid this unless you are mimicking behaviour in the class being shadowed. To test equality for comparisons in tests prefer helpers or assertion library extensions. prefer adding a `describe()` method instead of shadowing `toString()`
 
 ### Write high quality shadows that promote testing behavior rather than implementation.
 Rather than using shadows as glorified argument captors prefer writing a shadow that encourages testing behaviour. For example, don't add a method that exposes registered listeners, rather add an @Implementation for a method that would invoke those listeners.
@@ -196,4 +192,3 @@ Robolectric provides a lot of power which requires responsible usage. Shadows ar
 
 ### Support the community
 Please please [contribute](https://github.com/robolectric/robolectric.github.io/blob/master/contributing.md) your enhancements for sharing with the community and reducing the bloat in your own codebase.
-

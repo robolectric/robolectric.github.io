@@ -302,6 +302,7 @@
     "android.appwidget.AppWidgetProviderInfo",
     "android.content.ComponentName",
     "android.content.Context",
+    "android.view.LayoutInflater",
     "android.view.View",
     "android.widget.RemoteViews",
     "java.util.ArrayList",

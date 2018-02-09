@@ -31,6 +31,31 @@
       "exceptions": [],
       "name": "dump(android.content.res.TypedArray)"
     },
+    "getNonConfigurationString(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "index",
+        "allowedChangingConfigs"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getNonConfigurationString(int,int)"
+    },
+    "getNonResourceString(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getNonResourceString(int)"
+    },
     "getPositionDescription()": {
       "isImplementation": true,
       "modifiers": [
@@ -56,13 +81,14 @@
   },
   "imports": [
     "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.annotation.StyleableRes",
     "android.content.res.Resources",
     "android.content.res.TypedArray",
     "android.os.Build",
     "android.util.TypedValue",
     "com.google.common.base.Strings",
     "com.google.common.collect.ImmutableMap",
-    "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.HiddenApi",

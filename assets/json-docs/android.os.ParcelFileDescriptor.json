@@ -1,5 +1,17 @@
 {
   "methods": {
+    "__constructor__(android.os.ParcelFileDescriptor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "wrapped"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.os.ParcelFileDescriptor)"
+    },
     "close()": {
       "isImplementation": true,
       "modifiers": [
@@ -11,6 +23,30 @@
         "java.io.IOException"
       ],
       "name": "close()"
+    },
+    "createPipe()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.os.ParcelFileDescriptor[]",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "createPipe()"
+    },
+    "getFd()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFd()",
+      "documentation": "Overrides framework to avoid call to {@link FileDescriptor#getInt() which does not exist on JVM.\n\n@return a fixed int (`0`)\n"
     },
     "getFileDescriptor()": {
       "isImplementation": true,
@@ -50,6 +86,8 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.os.ParcelFileDescriptor",
     "java.io.File",
     "java.io.FileDescriptor",
@@ -58,8 +96,10 @@
     "java.io.RandomAccessFile",
     "java.lang.reflect.Constructor",
     "org.robolectric.Shadows",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowParcelFileDescriptor"
 }

@@ -96,6 +96,16 @@
       "exceptions": [],
       "name": "getYOffset()"
     },
+    "isCancelled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isCancelled()"
+    },
     "makeText(android.content.Context,int,int)": {
       "isImplementation": true,
       "modifiers": [

@@ -1,5 +1,18 @@
 {
   "methods": {
+    "\u003cT\u003ereadParcelable(java.lang.ClassLoader)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "loader"
+      ],
+      "returnType": "T",
+      "exceptions": [],
+      "maxSdk": 17,
+      "name": "\u003cT\u003ereadParcelable(java.lang.ClassLoader)"
+    },
     "nativeAppendFrom(int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -299,6 +312,22 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "nativeMarshall(long)"
+    },
+    "nativeReadByteArray(long,byte[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "dest",
+        "destLen"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 27,
+      "name": "nativeReadByteArray(long,byte[],int)"
     },
     "nativeReadDouble(int)": {
       "isImplementation": true,
@@ -778,6 +807,18 @@
       "minSdk": 21,
       "name": "nativeWriteString(long,java.lang.String)"
     },
+    "readParcelableCreator(java.lang.ClassLoader)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "loader"
+      ],
+      "returnType": "android.os.Parcelable.Creator\u003c?\u003e",
+      "exceptions": [],
+      "name": "readParcelableCreator(java.lang.ClassLoader)"
+    },
     "writeByteArray(byte[],int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -794,17 +835,24 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.O_MR1",
     "org.robolectric.RuntimeEnvironment.castNativePtr",
+    "android.os.BadParcelableException",
     "android.os.Parcel",
+    "android.os.Parcelable",
     "android.text.TextUtils",
+    "android.util.Log",
     "android.util.Pair",
     "java.io.ByteArrayInputStream",
     "java.io.ByteArrayOutputStream",
     "java.io.IOException",
     "java.io.ObjectInputStream",
     "java.io.ObjectOutputStream",
+    "java.lang.reflect.Field",
+    "java.lang.reflect.Modifier",
     "java.util.ArrayList",
     "java.util.LinkedHashMap",
     "java.util.List",

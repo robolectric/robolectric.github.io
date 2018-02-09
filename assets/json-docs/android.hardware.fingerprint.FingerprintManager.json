@@ -1,0 +1,109 @@
+{
+  "methods": {
+    "authenticate(android.hardware.fingerprint.FingerprintManager.CryptoObject,android.os.CancellationSignal,int,android.hardware.fingerprint.FingerprintManager.AuthenticationCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "crypto",
+        "cancel",
+        "flags",
+        "callback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "authenticate(android.hardware.fingerprint.FingerprintManager.CryptoObject,android.os.CancellationSignal,int,android.hardware.fingerprint.FingerprintManager.AuthenticationCallback,android.os.Handler)",
+      "documentation": "Success or failure can be simulated with a subsequent call to {@link #authenticationSucceeds()}\nor {@link #authenticationFails()}.\n"
+    },
+    "authenticationFails()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "authenticationFails()",
+      "documentation": "Simulates a failed fingerprint authentication. An authentication request must have been\nissued with {@link FingerprintManager#authenticate(CryptoObject, CancellationSignal, int, AuthenticationCallback, Handler)} and not cancelled.\n"
+    },
+    "authenticationSucceeds()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "authenticationSucceeds()",
+      "documentation": "Simulates a successful fingerprint authentication. An authentication request must have been\nissued with {@link FingerprintManager#authenticate(CryptoObject, CancellationSignal, int, AuthenticationCallback, Handler)} and not cancelled.\n"
+    },
+    "hasEnrolledFingerprints()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasEnrolledFingerprints()",
+      "documentation": "@return `false` by default, or the value specified via {@link #setHasEnrolledFingerprints(boolean)}\n"
+    },
+    "isHardwareDetected()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isHardwareDetected()",
+      "documentation": "@return `false` by default, or the value specified via {@link #setIsHardwareDetected(boolean)}\n"
+    },
+    "setHasEnrolledFingerprints(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "hasEnrolledFingerprints"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHasEnrolledFingerprints(boolean)",
+      "documentation": "Sets the return value of {@link FingerprintManager#hasEnrolledFingerprints()}.\n"
+    },
+    "setIsHardwareDetected(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isHardwareDetected"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsHardwareDetected(boolean)",
+      "documentation": "Sets the return value of {@link FingerprintManager#isHardwareDetected()}.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.hardware.fingerprint.Fingerprint",
+    "android.hardware.fingerprint.FingerprintManager",
+    "android.hardware.fingerprint.FingerprintManager.AuthenticationCallback",
+    "android.hardware.fingerprint.FingerprintManager.AuthenticationResult",
+    "android.hardware.fingerprint.FingerprintManager.CryptoObject",
+    "android.os.CancellationSignal",
+    "android.os.Handler",
+    "android.util.Log",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowFingerprintManager",
+  "documentation": "Provides testing APIs for {@link FingerprintManager}\n"
+}

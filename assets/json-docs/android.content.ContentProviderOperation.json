@@ -1,16 +1,17 @@
 {
   "methods": {
-    "\u003cT\u003egetFieldReflectively(java.lang.String)": {
+    "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Class\u003cT\u003e)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
       "params": [
-        "fieldName"
+        "fieldName",
+        "clazz"
       ],
       "returnType": "T",
       "exceptions": [],
-      "name": "\u003cT\u003egetFieldReflectively(java.lang.String)"
+      "name": "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Class\u003cT\u003e)"
     },
     "getContentValues()": {
       "isImplementation": false,
