@@ -90,20 +90,8 @@ Loading resources for 'com.foo' from build/unpacked-libraries/library1...
 
 If you don't see a particular library in the list, double-check the configuration.
 
-If you reference resources that are outside of your project (i.e. in a aar dependency), you will need to provide Robolectric with a pointer to the exploded aar in your build system. See the section titled "Using Library Resources" for more information.
+If you reference resources that are outside of your project (i.e. in an aar dependency), you will need to provide Robolectric with a pointer to the exploded aar in your build system. See the section titled "Using Library Resources" for more information.
 
 ### Building with Eclipse
 
 Install the [m2e-android](http://rgladwell.github.io/m2e-android/) plugin for Eclipse, and import the project as a Maven project. After importing into Eclipse, you have to mark the *consume-aar* goal as ignored, since AAR consumption is not yet supported by m2e-android. To do this, simply apply the Quick fix on the "Plugin execution not covered by lifecycle configuration" error. To run your tests, just right click on the project -> *Run as* -> *JUnit Test*, then choose the *Eclipse JUnit Launcher*.
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
