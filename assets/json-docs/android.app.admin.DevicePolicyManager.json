@@ -228,6 +228,17 @@
       "exceptions": [],
       "name": "getShadowUserManager()"
     },
+    "getStorageEncryptionStatus()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStorageEncryptionStatus()",
+      "documentation": "@return the previously set status; default is\n{@link DevicePolicyManager#ENCRYPTION_STATUS_UNSUPPORTED}\n@see #setStorageEncryptionStatus(int)\n"
+    },
     "isAdminActive(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -455,6 +466,19 @@
       "name": "setProfileOwner(android.content.ComponentName)",
       "documentation": "Sets the admin as active admin and profile owner.\n\n@see DevicePolicyManager#getProfileOwner()\n"
     },
+    "setStorageEncryptionStatus(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "status"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStorageEncryptionStatus(int)",
+      "documentation": "Setter for {@link DevicePolicyManager#getStorageEncryptionStatus()}.\n"
+    },
     "setUninstallBlocked(android.content.ComponentName,java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -499,6 +523,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.Shadows.shadowOf",
     "android.annotation.Nullable",

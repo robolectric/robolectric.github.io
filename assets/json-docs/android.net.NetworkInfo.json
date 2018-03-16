@@ -81,6 +81,24 @@
       "exceptions": [],
       "name": "isConnectedOrConnecting()"
     },
+    "newInstance(android.net.NetworkInfo.DetailedState,int,int,boolean,android.net.NetworkInfo.State)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "detailedState",
+        "type",
+        "subType",
+        "isAvailable",
+        "state"
+      ],
+      "returnType": "android.net.NetworkInfo",
+      "exceptions": [],
+      "name": "newInstance(android.net.NetworkInfo.DetailedState,int,int,boolean,android.net.NetworkInfo.State)",
+      "documentation": "Allows developers to create a {@link NetworkInfo} instance for testing. "
+    },
     "newInstance(android.net.NetworkInfo.DetailedState,int,int,boolean,boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -96,7 +114,8 @@
       ],
       "returnType": "android.net.NetworkInfo",
       "exceptions": [],
-      "name": "newInstance(android.net.NetworkInfo.DetailedState,int,int,boolean,boolean)"
+      "name": "newInstance(android.net.NetworkInfo.DetailedState,int,int,boolean,boolean)",
+      "documentation": "@deprecated use {@link #newInstance(NetworkInfo.DetailedState, int, int, boolean,\n    NetworkInfo.State)} instead\n"
     },
     "setAvailableStatus(boolean)": {
       "isImplementation": false,
@@ -111,6 +130,19 @@
       "name": "setAvailableStatus(boolean)",
       "documentation": "Sets up the return value of {@link #isAvailable()}.\n\n@param isAvailable the value that {@link #isAvailable()} will return.\n"
     },
+    "setConnectionStatus(android.net.NetworkInfo.State)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "state"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConnectionStatus(android.net.NetworkInfo.State)",
+      "documentation": "Sets up the return value of {@link #getState()}.\n\n@param state the value that {@link #getState()} will return.\n"
+    },
     "setConnectionStatus(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -122,7 +154,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setConnectionStatus(boolean)",
-      "documentation": "Sets up the return value of {@link #isConnectedOrConnecting()} and {@link #isConnected()}.\n\n@param isConnected the value that {@link #isConnectedOrConnecting()} and {@link #isConnected()} will return.\n"
+      "documentation": "Sets up the return value of {@link #isConnectedOrConnecting()}, {@link #isConnected()}, and\n{@link #getState()}. If the input is true, state will be {@link NetworkInfo.State#CONNECTED},\nelse it will be {@link NetworkInfo.State#DISCONNECTED}.\n\n@param isConnected the value that {@link #isConnectedOrConnecting()} and {@link #isConnected()}\n    will return.\n@deprecated use {@link #setConnectionStatus(NetworkInfo.State)} instead\n"
     },
     "setConnectionType(int)": {
       "isImplementation": false,

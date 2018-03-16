@@ -311,6 +311,18 @@
       "name": "getHandler()",
       "documentation": "Retrieves the {@link Handler} object used by this\n{@code ShadowMediaPlayer}. Can be used for posting custom asynchronous\nevents to the thread (eg, asynchronous errors). Use this for scheduling\nevents to take place at a particular \"real\" time (ie, time as measured by\nthe scheduler). For scheduling events to occur at a particular playback\noffset (no matter how long playback may be paused for, or where you seek\nto, etc), see {@link MediaInfo#scheduleEventAtOffset(int, ShadowMediaPlayer.MediaEvent)} and\nits various helpers.\n\n@return Handler object that can be used to schedule asynchronous events on\n        this media player.\n"
     },
+    "getHandler(android.os.Looper)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "looper"
+      ],
+      "returnType": "android.os.Handler",
+      "exceptions": [],
+      "name": "getHandler(android.os.Looper)"
+    },
     "getInvalidStateBehavior()": {
       "isImplementation": false,
       "modifiers": [
@@ -940,6 +952,7 @@
     "android.media.MediaPlayer",
     "android.net.Uri",
     "android.os.Handler",
+    "android.os.Looper",
     "android.os.Message",
     "android.os.SystemClock",
     "java.io.FileDescriptor",

@@ -24,6 +24,23 @@
       "exceptions": [],
       "name": "__constructor__(long)"
     },
+    "buildSystemFallback(java.lang.String,java.lang.String,android.util.ArrayMap\u003cjava.lang.String,android.graphics.Typeface\u003e,android.util.ArrayMap\u003cjava.lang.String,android.graphics.FontFamily[]\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "xmlPath",
+        "fontDir",
+        "fontMap",
+        "fallbackMap"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "buildSystemFallback(java.lang.String,java.lang.String,android.util.ArrayMap\u003cjava.lang.String,android.graphics.Typeface\u003e,android.util.ArrayMap\u003cjava.lang.String,android.graphics.FontFamily[]\u003e)"
+    },
     "create(android.graphics.Typeface,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -184,6 +201,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.P",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf",
     "android.content.res.AssetManager",

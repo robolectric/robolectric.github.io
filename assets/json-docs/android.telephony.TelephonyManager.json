@@ -32,6 +32,16 @@
       "name": "getCallState()",
       "documentation": "Call state may be specified via {@link #setCallState(int)}. "
     },
+    "getCarrierConfig()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.PersistableBundle",
+      "exceptions": [],
+      "name": "getCarrierConfig()"
+    },
     "getCellLocation()": {
       "isImplementation": true,
       "modifiers": [
@@ -465,6 +475,7 @@
     "android.telephony.TelephonyManager.CALL_STATE_IDLE",
     "android.telephony.TelephonyManager.CALL_STATE_RINGING",
     "android.os.Build.VERSION",
+    "android.os.PersistableBundle",
     "android.telephony.CellInfo",
     "android.telephony.CellLocation",
     "android.telephony.PhoneStateListener",

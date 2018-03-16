@@ -19,6 +19,37 @@
       "minSdk": 23,
       "name": "nComputeLineBreaks(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
     },
+    "nComputeLineBreaks(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "text",
+        "measuredTextPtr",
+        "length",
+        "firstWidth",
+        "firstWidthLineCount",
+        "restWidth",
+        "variableTabStops",
+        "defaultTabStop",
+        "indentsOffset",
+        "recycle",
+        "recycleLength",
+        "recycleBreaks",
+        "recycleWidths",
+        "recycleAscents",
+        "recycleDescents",
+        "recycleFlags",
+        "charWidths"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "nComputeLineBreaks(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
     "nLineBreakOpportunities(java.lang.String,char[],int,int[])": {
       "isImplementation": true,
       "modifiers": [
@@ -42,6 +73,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.P",
     "android.text.StaticLayout",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",

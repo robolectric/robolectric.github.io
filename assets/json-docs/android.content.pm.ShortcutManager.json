@@ -215,6 +215,32 @@
       "exceptions": [],
       "name": "setIsRequestPinShortcutSupported(boolean)"
     },
+    "setManifestShortcuts(java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "manifestShortcuts"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setManifestShortcuts(java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)",
+      "documentation": "Sets the value returned by {@link #getManifestShortcuts()}. "
+    },
+    "setMaxShortcutCountPerActivity(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaxShortcutCountPerActivity(int)",
+      "documentation": "Sets the value returned by {@link #getMaxShortcutCountPerActivity()} . "
+    },
     "updateShortcuts(java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)": {
       "isImplementation": true,
       "modifiers": [

@@ -273,16 +273,6 @@
       "name": "postAtFrontOfQueue(java.lang.Runnable)",
       "documentation": "Enqueue a task to be run ahead of all other delayed tasks.\n\n@param runnable    the task to be run\n@return true if the runnable is enqueued\n@see android.os.Handler#postAtFrontOfQueue(Runnable)\n@deprecated Use a {@link android.os.Handler} instance to post to a looper.\n"
     },
-    "postSyncBarrier()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "postSyncBarrier()"
-    },
     "quit()": {
       "isImplementation": true,
       "modifiers": [
@@ -498,7 +488,6 @@
     "java.util.concurrent.TimeUnit",
     "org.robolectric.RoboSettings",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

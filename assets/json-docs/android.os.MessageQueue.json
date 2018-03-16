@@ -113,68 +113,10 @@
       "minSdk": 21,
       "name": "nativeIsIdling(long)"
     },
-    "nativePollOnce(int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "ptr",
-        "timeoutMillis"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "maxSdk": 20,
-      "name": "nativePollOnce(int,int)"
-    },
-    "nativePollOnce(long,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "ptr",
-        "timeoutMillis"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 21,
-      "name": "nativePollOnce(long,int)"
-    },
-    "nativeWake(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "ptr"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "maxSdk": 20,
-      "name": "nativeWake(int)"
-    },
-    "nativeWake(long)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "ptr"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 21,
-      "name": "nativeWake(long)"
-    },
     "removeSyncBarrier(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "token"
@@ -231,10 +173,12 @@
     "android.os.Handler",
     "android.os.Message",
     "android.os.MessageQueue",
+    "java.util.ArrayList",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.Logger",
     "org.robolectric.util.Scheduler"
   ],
   "name": "org.robolectric.shadows.ShadowMessageQueue",

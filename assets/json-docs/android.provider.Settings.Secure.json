@@ -2,14 +2,17 @@
   "methods": {},
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.M",
     "android.content.ContentResolver",
+    "android.content.Context",
     "android.provider.Settings",
     "java.util.HashMap",
     "java.util.Map",
     "java.util.WeakHashMap",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
   ],
   "name": "org.robolectric.shadows.ShadowSettings.ShadowSecure"
 }

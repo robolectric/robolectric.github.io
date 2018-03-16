@@ -78,18 +78,6 @@
       "exceptions": [],
       "name": "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)"
     },
-    "addPackage(android.content.pm.PackageParser.Package)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "appPackage"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "addPackage(android.content.pm.PackageParser.Package)"
-    },
     "addPackage(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -102,6 +90,19 @@
       "exceptions": [],
       "name": "addPackage(java.lang.String)",
       "documentation": "@deprecated - use {@link #addPackage(PackageInfo)} instead "
+    },
+    "addPackageInternal(android.content.pm.PackageParser.Package)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appPackage"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPackageInternal(android.content.pm.PackageParser.Package)",
+      "documentation": "Internal use only.\n@param appPackage\n"
     },
     "addPermissionGroupInfo(android.content.pm.PermissionGroupInfo)": {
       "isImplementation": false,

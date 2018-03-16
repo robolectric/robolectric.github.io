@@ -73,6 +73,17 @@
       "exceptions": [],
       "name": "isShutdown()"
     },
+    "isStopped()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isStopped()",
+      "documentation": "@return {@code true} if the TTS is stopped. "
+    },
     "shutdown()": {
       "isImplementation": true,
       "modifiers": [
@@ -82,6 +93,21 @@
       "returnType": "void",
       "exceptions": [],
       "name": "shutdown()"
+    },
+    "speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "queueMode",
+        "params",
+        "utteranceId"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)"
     },
     "speak(java.lang.String,int,java.util.HashMap\u003cjava.lang.String,java.lang.String\u003e)": {
       "isImplementation": true,
@@ -96,10 +122,21 @@
       "returnType": "int",
       "exceptions": [],
       "name": "speak(java.lang.String,int,java.util.HashMap\u003cjava.lang.String,java.lang.String\u003e)"
+    },
+    "stop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "stop()"
     }
   },
   "imports": [
     "android.content.Context",
+    "android.os.Bundle",
     "android.speech.tts.TextToSpeech",
     "java.util.HashMap",
     "org.robolectric.annotation.Implementation",

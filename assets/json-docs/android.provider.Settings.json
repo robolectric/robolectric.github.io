@@ -1,5 +1,31 @@
 {
   "methods": {
+    "canDrawOverlays(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "canDrawOverlays(android.content.Context)",
+      "documentation": "@return `false` by default, or the value specified via {@link #setCanDrawOverlays(boolean)} "
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "set24HourTimeFormat(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -28,6 +54,20 @@
       "name": "setAirplaneMode(boolean)",
       "documentation": "Sets the value of the {@link Settings.System#AIRPLANE_MODE_ON} setting.\n\n@param isAirplaneMode new status for airplane mode\n"
     },
+    "setCanDrawOverlays(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "canDrawOverlays"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCanDrawOverlays(boolean)",
+      "documentation": "Sets the value returned by {@link #canDrawOverlays(Context)}. "
+    },
     "setWifiOn(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -45,7 +85,9 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.M",
     "android.content.ContentResolver",
+    "android.content.Context",
     "android.provider.Settings",
     "java.util.HashMap",
     "java.util.Map",
@@ -53,6 +95,7 @@
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadows.ShadowSettings.ShadowSystem",
     "org.robolectric.shadows.ShadowSettings.ShadowSecure",
     "org.robolectric.shadows.ShadowSettings.ShadowGlobal"

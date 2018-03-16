@@ -44,6 +44,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock",

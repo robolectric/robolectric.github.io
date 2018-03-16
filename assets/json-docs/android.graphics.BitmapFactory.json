@@ -290,6 +290,7 @@
   "imports": [
     "java.nio.charset.StandardCharsets.UTF_8",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.content.res.AssetManager.AssetInputStream",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
     "android.graphics.BitmapFactory",

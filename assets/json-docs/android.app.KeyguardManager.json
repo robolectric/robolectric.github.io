@@ -84,6 +84,17 @@
       "minSdk": 26,
       "name": "requestDismissKeyguard(android.app.Activity,android.app.KeyguardManager.KeyguardDismissCallback)"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "setInRestrictedInputMode(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -173,6 +184,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock"
   ],

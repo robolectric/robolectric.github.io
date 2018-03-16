@@ -1,5 +1,17 @@
 {
   "methods": {
+    "__constructor__(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context)"
+    },
     "getRouteCount()": {
       "isImplementation": true,
       "modifiers": [
@@ -12,6 +24,7 @@
     }
   },
   "imports": [
+    "android.content.Context",
     "android.media.MediaRouter",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"

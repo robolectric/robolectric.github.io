@@ -1,5 +1,18 @@
 {
   "methods": {
+    "fillInProcessInfo(android.app.ActivityManager.RunningAppProcessInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "processInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "fillInProcessInfo(android.app.ActivityManager.RunningAppProcessInfo)"
+    },
     "getBackgroundPackage()": {
       "isImplementation": false,
       "modifiers": [
@@ -42,6 +55,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "getMemoryInfo(android.app.ActivityManager.MemoryInfo)"
+    },
+    "getMyMemoryState(android.app.ActivityManager.RunningAppProcessInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "inState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getMyMemoryState(android.app.ActivityManager.RunningAppProcessInfo)",
+      "documentation": "Returns information seeded by {@link #setProcesses}. "
     },
     "getRunningAppProcesses()": {
       "isImplementation": true,
@@ -120,6 +147,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "killBackgroundProcesses(java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "setIsLowRamDevice(boolean)": {
       "isImplementation": false,
@@ -212,6 +250,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowActivityManager"

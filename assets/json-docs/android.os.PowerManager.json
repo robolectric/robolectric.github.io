@@ -12,6 +12,18 @@
       "name": "getLatestWakeLock()",
       "documentation": "Retrieves the most recent wakelock registered by the application\n\n@return Most recent wake lock.\n"
     },
+    "isDeviceIdleMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isDeviceIdleMode()",
+      "documentation": "@return `false` by default, or the value specified via {@link #setIsDeviceIdleMode(boolean)}\n"
+    },
     "isIgnoringBatteryOptimizations(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -107,6 +119,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setIgnoringBatteryOptimizations(java.lang.String,boolean)"
+    },
+    "setIsDeviceIdleMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isDeviceIdleMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsDeviceIdleMode(boolean)",
+      "documentation": "Sets the value returned by {@link #isDeviceIdleMode()}. "
     },
     "setIsInteractive(boolean)": {
       "isImplementation": false,

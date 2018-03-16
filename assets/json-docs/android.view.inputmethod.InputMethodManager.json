@@ -1,5 +1,30 @@
 {
   "methods": {
+    "displayCompletions(android.view.View,android.view.inputmethod.CompletionInfo[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view",
+        "completions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "displayCompletions(android.view.View,android.view.inputmethod.CompletionInfo[])"
+    },
+    "focusIn(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "focusIn(android.view.View)"
+    },
     "hideSoftInputFromWindow(android.os.IBinder,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -27,6 +52,38 @@
       "exceptions": [],
       "name": "hideSoftInputFromWindow(android.os.IBinder,int,android.os.ResultReceiver)"
     },
+    "isActive()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isActive()"
+    },
+    "isActive(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isActive(android.view.View)"
+    },
+    "isFullscreenMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isFullscreenMode()"
+    },
     "isSoftInputVisible()": {
       "isImplementation": false,
       "modifiers": [
@@ -37,16 +94,52 @@
       "exceptions": [],
       "name": "isSoftInputVisible()"
     },
+    "onViewDetachedFromWindow(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onViewDetachedFromWindow(android.view.View)"
+    },
     "peekInstance()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
       "returnType": "android.view.inputmethod.InputMethodManager",
       "exceptions": [],
+      "maxSdk": 22,
       "name": "peekInstance()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "restartInput(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "restartInput(android.view.View)"
     },
     "setSoftInputVisibility(boolean)": {
       "isImplementation": false,
@@ -114,15 +207,22 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.os.IBinder",
+    "android.os.Looper",
     "android.os.ResultReceiver",
     "android.view.View",
+    "android.view.inputmethod.CompletionInfo",
     "android.view.inputmethod.InputMethodManager",
     "com.google.common.base.Optional",
-    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler"
   ],
   "name": "org.robolectric.shadows.ShadowInputMethodManager"
