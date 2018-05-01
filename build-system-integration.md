@@ -17,7 +17,7 @@ Keys in the file:
 * `android_merged_resources`: Full path to the project's merged resources.
 * `android_merged_assets`: Full path to the project's merged assets.
 * `android_custom_package`: Java packagename for the applications R class.
-* `android_resource_apk`: Path to a resources.ap_ file that contains binary resources produced by `aapt` tool
+* `android_resource_apk`: Path to a resources.ap_ file that contains binary resources and XML files produced by `aapt` tool, as well as merged assets.
 
 Note that Robolectric expects that build systems will have performed final `R.class` generation by the time unit tests are run.
 
