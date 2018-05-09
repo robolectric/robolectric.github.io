@@ -172,20 +172,21 @@
       "exceptions": [],
       "name": "logToStream(java.io.PrintStream,int,java.lang.String,java.lang.String,java.lang.Throwable)"
     },
-    "println(int,java.lang.String,java.lang.String)": {
+    "println_native(int,int,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
+        "bufID",
         "priority",
         "tag",
         "msg"
       ],
       "returnType": "int",
       "exceptions": [],
-      "name": "println(int,java.lang.String,java.lang.String)"
+      "name": "println_native(int,int,java.lang.String,java.lang.String)"
     },
     "reset()": {
       "isImplementation": false,

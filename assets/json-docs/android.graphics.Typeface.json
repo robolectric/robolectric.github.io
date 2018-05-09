@@ -3,7 +3,7 @@
     "__constructor__(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "fontId"
@@ -15,7 +15,7 @@
     "__constructor__(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "fontId"
@@ -44,7 +44,7 @@
     "create(android.graphics.Typeface,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -58,7 +58,7 @@
     "create(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -72,7 +72,7 @@
     "createFromAsset(android.content.res.AssetManager,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -86,7 +86,7 @@
     "createFromFamilies(java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -100,7 +100,7 @@
     "createFromFamiliesWithDefault(java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -114,7 +114,7 @@
     "createFromFile(java.io.File)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -127,7 +127,7 @@
     "createFromFile(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -179,7 +179,7 @@
     "getStyle()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -203,7 +203,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.P",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf",
+    "android.annotation.SuppressLint",
     "android.content.res.AssetManager",
     "android.graphics.FontFamily",
     "android.graphics.Typeface",
@@ -218,6 +218,7 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.res.FsFile",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowTypeface.FontDesc",

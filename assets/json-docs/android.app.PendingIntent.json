@@ -158,6 +158,23 @@
       "name": "getFlags()",
       "documentation": "@return the flags with which this PendingIntent was created\n"
     },
+    "getForegroundService(android.content.Context,int,android.content.Intent,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context",
+        "requestCode",
+        "intent",
+        "flags"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getForegroundService(android.content.Context,int,android.content.Intent,int)"
+    },
     "getIntentSender()": {
       "isImplementation": true,
       "modifiers": [
@@ -281,6 +298,17 @@
       "name": "isCanceled()",
       "documentation": "@return {@true} iff this PendingIntent has been canceled\n"
     },
+    "isForegroundServiceIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isForegroundServiceIntent()",
+      "documentation": "@return {@code true} iff sending this PendingIntent will start a foreground service "
+    },
     "isMutable(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -376,8 +404,10 @@
     "android.app.PendingIntent.FLAG_NO_CREATE",
     "android.app.PendingIntent.FLAG_ONE_SHOT",
     "android.app.PendingIntent.FLAG_UPDATE_CURRENT",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.Shadows.shadowOf",
     "android.annotation.NonNull",
+    "android.annotation.SuppressLint",
     "android.app.Activity",
     "android.app.ActivityThread",
     "android.app.PendingIntent",
@@ -398,6 +428,7 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.fakes.RoboIntentSender",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowPendingIntent.Type"
   ],

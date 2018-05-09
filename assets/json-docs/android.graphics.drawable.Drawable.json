@@ -247,7 +247,6 @@
     }
   },
   "imports": [
-    "org.robolectric.Shadows.shadowOf",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
     "android.graphics.BitmapFactory",

@@ -158,13 +158,25 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setScheduler(org.robolectric.util.Scheduler)"
+    },
+    "shadowOf(android.os.Message)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "actual"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowMessage",
+      "exceptions": [],
+      "name": "shadowOf(android.os.Message)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "org.robolectric.util.ReflectionHelpers.callInstanceMethod",
@@ -179,6 +191,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.Logger",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.Scheduler"
   ],
   "name": "org.robolectric.shadows.ShadowMessageQueue",

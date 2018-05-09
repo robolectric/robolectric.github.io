@@ -636,7 +636,6 @@
     "java.util.List",
     "java.util.Map",
     "java.util.Objects",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow",

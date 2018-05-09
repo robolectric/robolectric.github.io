@@ -15,6 +15,18 @@
       "exceptions": [],
       "name": "create(int,java.lang.String,android.os.Bundle,boolean)"
     },
+    "createSticky(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "android.content.BroadcastReceiver.PendingResult",
+      "exceptions": [],
+      "name": "createSticky(android.content.Intent)"
+    },
     "finish()": {
       "isImplementation": true,
       "modifiers": [
@@ -42,6 +54,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.content.BroadcastReceiver",
+    "android.content.Intent",
     "android.os.Bundle",
     "android.os.IBinder",
     "com.google.common.base.Preconditions",

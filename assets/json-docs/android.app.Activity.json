@@ -335,6 +335,17 @@
       "name": "isFinishing()",
       "documentation": "@return whether {@link #finish()} was called\n"
     },
+    "isLockTask()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLockTask()",
+      "documentation": "Returns if the activity is in the lock task mode.\n"
+    },
     "isTaskRoot()": {
       "isImplementation": true,
       "modifiers": [
@@ -390,7 +401,7 @@
       "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
       "exceptions": [],
       "name": "peekNextStartedActivityForResult()",
-      "documentation": "Returns the most recent {@code Intent} started by\n{@link #startActivityForResult(Intent, int)} without consuming it.\n\n@return the most recently started {@code Intent}, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
+      "documentation": "Returns the most recent {@code Intent} started by\n{@link Activity#startActivityForResult(Intent, int)} without consuming it.\n\n@return the most recently started {@code Intent}, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
     },
     "receiveResult(android.content.Intent,int,android.content.Intent)": {
       "isImplementation": false,
@@ -643,6 +654,18 @@
       "exceptions": [],
       "name": "showDialog(int,android.os.Bundle)"
     },
+    "startLockTask()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "startLockTask()",
+      "documentation": "Starts a lock task.\n\n\u003cp\u003eThe status of the lock task can be verified using {@link #isLockTask} method and is only\nscoped to this activity. Otherwise this implementation has no effect.\n"
+    },
     "startManagingCursor(android.database.Cursor)": {
       "isImplementation": true,
       "modifiers": [
@@ -654,6 +677,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "startManagingCursor(android.database.Cursor)"
+    },
+    "stopLockTask()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "stopLockTask()",
+      "documentation": "Stops a lock task.\n\n\u003cp\u003eThe status of the lock task can be verified using {@link #isLockTask} method and is only\nscoped to this activity. Otherwise this implementation has no effect.\n"
     },
     "stopManagingCursor(android.database.Cursor)": {
       "isImplementation": true,
@@ -672,7 +707,6 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.R",
     "android.app.Activity",
@@ -713,6 +747,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.fakes.RoboMenuItem",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowActivity.ActivityInvoker"

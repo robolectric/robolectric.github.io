@@ -287,7 +287,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getDuration()",
-      "documentation": "Simulates call to {@link MediaPlayer#getDuration()}. Retrieves the duration\nas defined by the current {@link MediaInfo} instance.\n\n@return The duration (in ms) of the current simulated playback.\n@see addMediaInfo\n"
+      "documentation": "Simulates call to {@link MediaPlayer#getDuration()}. Retrieves the duration\nas defined by the current {@link MediaInfo} instance.\n\n@return The duration (in ms) of the current simulated playback.\n@see #addMediaInfo(DataSource, MediaInfo)\n"
     },
     "getDurationRaw()": {
       "isImplementation": false,
@@ -936,7 +936,6 @@
     }
   },
   "imports": [
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadows.ShadowMediaPlayer.State.END",
     "org.robolectric.shadows.ShadowMediaPlayer.State.ERROR",
     "org.robolectric.shadows.ShadowMediaPlayer.State.IDLE",

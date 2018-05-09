@@ -3,7 +3,7 @@
     "__constructor__()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -13,7 +13,7 @@
     "__constructor__(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "name"
@@ -36,8 +36,8 @@
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadows.ShadowAssetManager.legacyShadowOf",
     "android.content.res.AssetFileDescriptor",
     "android.content.res.AssetManager",
     "android.content.res.Configuration",
@@ -53,7 +53,6 @@
     "android.util.DisplayMetrics",
     "android.util.LongSparseArray",
     "android.util.TypedValue",
-    "android.view.Display",
     "java.io.FileInputStream",
     "java.io.IOException",
     "java.io.InputStream",
@@ -63,7 +62,6 @@
     "java.util.List",
     "java.util.Locale",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.annotation.Config",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

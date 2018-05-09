@@ -514,7 +514,6 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.N",
-    "org.robolectric.Shadows.shadowOf",
     "android.graphics.ColorFilter",
     "android.graphics.Paint",
     "android.graphics.PathEffect",

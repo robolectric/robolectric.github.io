@@ -13,7 +13,7 @@
     "getAllCellInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.telephony.CellInfo\u003e",
@@ -24,7 +24,7 @@
     "getCallState()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -45,7 +45,7 @@
     "getCellLocation()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.telephony.CellLocation",
@@ -55,7 +55,7 @@
     "getDeviceId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -76,7 +76,7 @@
     "getGroupIdLevel1()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -84,10 +84,20 @@
       "minSdk": 18,
       "name": "getGroupIdLevel1()"
     },
+    "getImei()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getImei()"
+    },
     "getLine1Number()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -117,10 +127,20 @@
       "exceptions": [],
       "name": "getListenersForFlags(int)"
     },
+    "getMeid()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getMeid()"
+    },
     "getNetworkCountryIso()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -130,7 +150,7 @@
     "getNetworkOperator()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -140,7 +160,7 @@
     "getNetworkOperatorName()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -150,7 +170,7 @@
     "getNetworkType()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -160,7 +180,7 @@
     "getPhoneType()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -170,7 +190,7 @@
     "getSimCountryIso()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -180,7 +200,7 @@
     "getSimOperator()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -190,7 +210,7 @@
     "getSimOperatorName()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -200,7 +220,7 @@
     "getSimState()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -234,7 +254,7 @@
     "listen(android.telephony.PhoneStateListener,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener",
@@ -319,6 +339,19 @@
       "exceptions": [],
       "name": "setGroupIdLevel1(java.lang.String)"
     },
+    "setImei(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "imei"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setImei(java.lang.String)",
+      "documentation": "Set the IMEI returned by getImei(). "
+    },
     "setIsSmsCapable(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -343,6 +376,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setLine1Number(java.lang.String)"
+    },
+    "setMeid(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "meid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMeid(java.lang.String)",
+      "documentation": "Set the MEID returned by getMeid(). "
     },
     "setNetworkCountryIso(java.lang.String)": {
       "isImplementation": false,

@@ -85,6 +85,26 @@
       "exceptions": [],
       "name": "getLeScanCallbacks()"
     },
+    "getName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getName()"
+    },
+    "getScanMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScanMode()"
+    },
     "getSingleLeScanCallback()": {
       "isImplementation": false,
       "modifiers": [
@@ -125,6 +145,17 @@
       "exceptions": [],
       "name": "isEnabled()"
     },
+    "isMultipleAdvertisementSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isMultipleAdvertisementSupported()"
+    },
     "setAddress(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -160,6 +191,42 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setEnabled(boolean)"
+    },
+    "setIsMultipleAdvertisementSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsMultipleAdvertisementSupported(boolean)"
+    },
+    "setName(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setName(java.lang.String)"
+    },
+    "setScanMode(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "scanMode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setScanMode(int)"
     },
     "setState(int)": {
       "isImplementation": false,
@@ -226,6 +293,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothAdapter.LeScanCallback",
     "android.bluetooth.BluetoothDevice",

@@ -187,7 +187,6 @@
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadows.ShadowApplication.getInstance",
     "android.os.PowerManager",
     "android.os.WorkSource",

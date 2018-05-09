@@ -62,10 +62,10 @@
     }
   },
   "imports": [
-    "org.robolectric.Shadows.shadowOf",
     "android.os.Handler",
     "android.os.Looper",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowHandler",
   "documentation": "Robolectric places posted {@link Runnable}s into a queue instead of sending them to be handled on a\nseparate thread. {@link Runnable}s that are scheduled to be executed immediately can be triggered by calling\n{@link #idleMainLooper()}.\n\ntodo: add utility method to advance time and trigger execution of Runnables scheduled for a time in the future\n\n@deprecated There is no special shadow implementation for the {@link android.os.Handler} class. The special\nhandling is all done by {@link ShadowLooper} and {@link ShadowMessageQueue}. This class has been retained\nfor backward compatibility with the various static method implementations.\n"

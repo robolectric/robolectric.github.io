@@ -214,6 +214,17 @@
       "exceptions": [],
       "name": "eraseColor(int)"
     },
+    "getAllocationByteCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAllocationByteCount()"
+    },
     "getByteCount()": {
       "isImplementation": true,
       "modifiers": [
@@ -744,7 +755,6 @@
   },
   "imports": [
     "java.nio.charset.StandardCharsets.UTF_8",
-    "org.robolectric.Shadows.shadowOf",
     "android.graphics.Bitmap",
     "android.graphics.Matrix",
     "android.graphics.RectF",
@@ -759,6 +769,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowBitmap"

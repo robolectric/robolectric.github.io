@@ -83,6 +83,32 @@
       "name": "setScheduledRunnable(java.lang.Runnable)",
       "documentation": "Stores the {@link Runnable} instance that has been scheduled\nto invoke this message. This is called when the message is\nenqueued by {@link ShadowMessageQueue#enqueueMessage} and is used when\nthe message is recycled to ensure that the correct\n{@link Runnable} instance is removed from the associated scheduler.\n\n@param r the {@link Runnable} instance that is scheduled to\ntrigger this message.\n\n#if ($api \u003e\u003d 21)   * @see #recycleUnchecked()\n#else   * @see #recycle()\n#end\n"
     },
+    "shadowOf(android.os.Looper)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "looper"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowLooper",
+      "exceptions": [],
+      "name": "shadowOf(android.os.Looper)"
+    },
+    "shadowOf(android.os.MessageQueue)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "mq"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowMessageQueue",
+      "exceptions": [],
+      "name": "shadowOf(android.os.MessageQueue)"
+    },
     "unschedule()": {
       "isImplementation": false,
       "modifiers": [
@@ -98,19 +124,21 @@
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.ReflectionHelpers.getField",
     "org.robolectric.util.ReflectionHelpers.getStaticField",
     "org.robolectric.util.ReflectionHelpers.setField",
     "org.robolectric.util.ReflectionHelpers.setStaticField",
     "android.os.Handler",
+    "android.os.Looper",
     "android.os.Message",
+    "android.os.MessageQueue",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.Resetter"
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowMessage"
 }

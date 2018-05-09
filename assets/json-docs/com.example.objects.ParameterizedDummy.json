@@ -1,0 +1,9 @@
+{
+  "methods": {},
+  "imports": [
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "com.example.objects.ParameterizedDummy"
+  ],
+  "name": "org.robolectric.annotation.processing.shadows.ShadowParameterizedDummy"
+}

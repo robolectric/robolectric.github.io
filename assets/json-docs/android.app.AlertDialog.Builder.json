@@ -1,7 +1,6 @@
 {
   "methods": {},
   "imports": [
-    "org.robolectric.Shadows.shadowOf",
     "android.app.AlertDialog",
     "android.content.DialogInterface",
     "android.view.View",
@@ -9,7 +8,6 @@
     "android.widget.FrameLayout",
     "com.android.internal.app.AlertController",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

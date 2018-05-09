@@ -3,7 +3,7 @@
     "clearThreadStatsTag()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -14,7 +14,7 @@
     "getMobileRxBytes()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -25,7 +25,7 @@
     "getMobileRxPackets()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -36,7 +36,7 @@
     "getMobileTxBytes()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -47,7 +47,7 @@
     "getMobileTxPackets()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -58,7 +58,7 @@
     "getThreadStatsTag()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -69,7 +69,7 @@
     "getTotalRxBytes()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -80,7 +80,7 @@
     "getTotalRxPackets()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -91,7 +91,7 @@
     "getTotalTxBytes()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -102,7 +102,7 @@
     "getTotalTxPackets()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -113,7 +113,7 @@
     "getUidRxBytes(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -126,7 +126,7 @@
     "getUidRxPackets(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -139,7 +139,7 @@
     "getUidTcpRxBytes(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -152,7 +152,7 @@
     "getUidTcpRxSegments(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -165,7 +165,7 @@
     "getUidTcpTxBytes(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -178,7 +178,7 @@
     "getUidTcpTxSegments(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -191,7 +191,7 @@
     "getUidTxBytes(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -204,7 +204,7 @@
     "getUidTxPackets(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -217,7 +217,7 @@
     "getUidUdpRxBytes(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -230,7 +230,7 @@
     "getUidUdpRxPackets(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -243,7 +243,7 @@
     "getUidUdpTxBytes(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -256,7 +256,7 @@
     "getUidUdpTxPackets(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -269,7 +269,7 @@
     "incrementOperationCount(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -282,7 +282,7 @@
     "incrementOperationCount(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -296,7 +296,7 @@
     "setThreadStatsTag(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -309,7 +309,7 @@
     "tagSocket(java.net.Socket)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -324,7 +324,7 @@
     "untagSocket(java.net.Socket)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

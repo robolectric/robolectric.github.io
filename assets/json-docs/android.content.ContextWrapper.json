@@ -42,7 +42,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getNextStartedActivity()",
-      "documentation": "Consumes the most recent {@code Intent} started by {@link\n#startActivity(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}\n"
+      "documentation": "Consumes the most recent {@code Intent} started by {@link\nContextWrapper#startActivity(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}\n"
     },
     "getNextStartedService()": {
       "isImplementation": false,
@@ -87,7 +87,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "peekNextStartedActivity()",
-      "documentation": "Returns the most recent {@code Intent} started by {@link\n#startActivity(android.content.Intent)} without consuming it.\n\n@return the most recently started {@code Intent}\n"
+      "documentation": "Returns the most recent {@code Intent} started by {@link\nContextWrapper#startActivity(android.content.Intent)} without consuming it.\n\n@return the most recently started {@code Intent}\n"
     },
     "peekNextStartedService()": {
       "isImplementation": false,
@@ -102,13 +102,13 @@
     }
   },
   "imports": [
-    "org.robolectric.Shadows.shadowOf",
     "android.app.ActivityThread",
     "android.content.ContextWrapper",
     "android.content.Intent",
     "java.util.List",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowContextWrapper"
 }

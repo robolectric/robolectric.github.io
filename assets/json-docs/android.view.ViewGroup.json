@@ -149,10 +149,10 @@
     "android.view.animation.Animation.AnimationListener",
     "android.view.animation.LayoutAnimationController",
     "java.io.PrintStream",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowViewGroup"

@@ -128,7 +128,6 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf",
     "android.graphics.Bitmap",
     "android.graphics.BitmapFactory",
     "android.graphics.BitmapRegionDecoder",
@@ -141,6 +140,7 @@
     "java.io.InputStream",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowBitmapRegionDecoder"

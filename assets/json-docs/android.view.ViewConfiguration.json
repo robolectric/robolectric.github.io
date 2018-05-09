@@ -340,7 +340,6 @@
     "android.content.Context",
     "android.util.DisplayMetrics",
     "android.view.ViewConfiguration",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

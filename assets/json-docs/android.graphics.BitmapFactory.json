@@ -308,7 +308,6 @@
     "java.util.zip.CRC32",
     "java.util.zip.Checksum",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",

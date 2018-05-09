@@ -62,7 +62,6 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.Shadows.shadowOf",
     "android.graphics.Rect",
     "android.os.Bundle",
     "android.os.Parcel",
@@ -86,6 +85,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],

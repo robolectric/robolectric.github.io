@@ -134,6 +134,19 @@
       "exceptions": [],
       "name": "getClassNamed(java.lang.String)"
     },
+    "getCurrentWebviewPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.content.pm.PackageInfo",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getCurrentWebviewPackage()",
+      "documentation": "Overrides the system implementation for getting the webview package. Always returns null.\n"
+    },
     "getGoBackInvocations()": {
       "isImplementation": false,
       "modifiers": [
@@ -513,6 +526,7 @@
     }
   },
   "imports": [
+    "android.content.pm.PackageInfo",
     "android.os.Build",
     "android.view.ViewGroup.LayoutParams",
     "android.webkit.ValueCallback",

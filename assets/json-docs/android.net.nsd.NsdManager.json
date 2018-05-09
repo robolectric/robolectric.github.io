@@ -1,0 +1,21 @@
+{
+  "methods": {
+    "init()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "init()"
+    }
+  },
+  "imports": [
+    "android.net.nsd.NsdManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowNsdManager",
+  "documentation": "Shadow for {@link android.net.nsd.NsdManager} "
+}

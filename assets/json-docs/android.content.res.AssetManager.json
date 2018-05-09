@@ -3,7 +3,8 @@
     "__constructor__()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected",
+        "abstract"
       ],
       "params": [],
       "returnType": "void",
@@ -13,7 +14,8 @@
     "__constructor__(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected",
+        "abstract"
       ],
       "params": [
         "isSystem"
@@ -25,7 +27,8 @@
     "addAssetPath(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "path"
@@ -33,6 +36,96 @@
       "returnType": "int",
       "exceptions": [],
       "name": "addAssetPath(java.lang.String)"
+    },
+    "addAssetPathNative(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "addAssetPathNative(java.lang.String)"
+    },
+    "addAssetPathNative(java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "path",
+        "appAsLib"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "addAssetPathNative(java.lang.String,boolean)"
+    },
+    "applyStyle(int,int,int,int,int[],int[],int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "themeToken",
+        "defStyleAttr",
+        "defStyleRes",
+        "xmlParserToken",
+        "attrs",
+        "outValues",
+        "outIndices"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 21,
+      "name": "applyStyle(int,int,int,int,int[],int[],int[])"
+    },
+    "applyStyle(long,int,int,long,int[],int,long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "themeToken",
+        "defStyleAttr",
+        "defStyleRes",
+        "xmlParserToken",
+        "inAttrs",
+        "length",
+        "outValuesAddress",
+        "outIndicesAddress"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "applyStyle(long,int,int,long,int[],int,long,long)"
+    },
+    "applyStyle(long,int,int,long,int[],int[],int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "themeToken",
+        "defStyleAttr",
+        "defStyleRes",
+        "xmlParserToken",
+        "attrs",
+        "outValues",
+        "outIndices"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 25,
+      "name": "applyStyle(long,int,int,long,int[],int[],int[])"
     },
     "applyThemeStyle(int,int,boolean)": {
       "isImplementation": true,
@@ -65,52 +158,6 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "applyThemeStyle(long,int,boolean)"
-    },
-    "attrsToTypedArray(android.content.res.Resources,android.util.AttributeSet,int[],int,long,int)": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [
-        "resources",
-        "set",
-        "attrs",
-        "defStyleAttr",
-        "nativeTheme",
-        "defStyleRes"
-      ],
-      "returnType": "android.content.res.TypedArray",
-      "exceptions": [],
-      "name": "attrsToTypedArray(android.content.res.Resources,android.util.AttributeSet,int[],int,long,int)"
-    },
-    "buildTypedValue(android.util.AttributeSet,int,int,org.robolectric.res.Style,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "set",
-        "resId",
-        "defStyleAttr",
-        "themeStyleSet",
-        "defStyleRes"
-      ],
-      "returnType": "android.util.TypedValue",
-      "exceptions": [],
-      "name": "buildTypedValue(android.util.AttributeSet,int,int,org.robolectric.res.Style,int)"
-    },
-    "convertAndFill(org.robolectric.res.AttributeResource,android.util.TypedValue,org.robolectric.res.android.ResTable_config,boolean)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "attribute",
-        "outValue",
-        "config",
-        "resolveRefs"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "convertAndFill(org.robolectric.res.AttributeResource,android.util.TypedValue,org.robolectric.res.android.ResTable_config,boolean)"
     },
     "copyTheme(int,int)": {
       "isImplementation": true,
@@ -145,80 +192,112 @@
     "createTheme()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "java.lang.Number",
       "exceptions": [],
       "name": "createTheme()"
     },
+    "deleteTheme(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "theme"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "deleteTheme(int)"
+    },
+    "deleteTheme(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "theme"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "deleteTheme(long)"
+    },
+    "destroyAsset(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "asset"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "destroyAsset(int)"
+    },
+    "destroyAsset(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "asset"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "destroyAsset(long)"
+    },
+    "dumpTheme(long,int,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "theme",
+        "priority",
+        "tag",
+        "prefix"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dumpTheme(long,int,java.lang.String,java.lang.String)"
+    },
     "ensureStringBlocks()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected",
+        "abstract"
       ],
       "params": [],
-      "returnType": "void",
+      "returnType": "java.lang.Object",
       "exceptions": [],
       "name": "ensureStringBlocks()"
     },
-    "findAssetFile(java.lang.String)": {
+    "getAllAssetDirs()": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "abstract"
       ],
-      "params": [
-        "fileName"
-      ],
-      "returnType": "org.robolectric.res.FsFile",
-      "exceptions": [
-        "java.io.IOException"
-      ],
-      "name": "findAssetFile(java.lang.String)"
-    },
-    "findAttributeValue(int,android.util.AttributeSet,org.robolectric.res.Style,org.robolectric.res.Style,org.robolectric.res.Style,org.robolectric.res.Style)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "resId",
-        "attributeSet",
-        "styleAttrStyle",
-        "defStyleFromAttr",
-        "defStyleFromRes",
-        "themeStyleSet"
-      ],
-      "returnType": "org.robolectric.res.AttributeResource",
-      "exceptions": [],
-      "name": "findAttributeValue(int,android.util.AttributeSet,org.robolectric.res.Style,org.robolectric.res.Style,org.robolectric.res.Style,org.robolectric.res.Style)"
-    },
-    "getAllAssetsDirectories()": {
-      "isImplementation": false,
-      "modifiers": [],
       "params": [],
       "returnType": "java.util.Collection\u003corg.robolectric.res.FsFile\u003e",
       "exceptions": [],
-      "name": "getAllAssetsDirectories()"
-    },
-    "getAndResolve(int,org.robolectric.res.android.ResTable_config,boolean)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "resId",
-        "config",
-        "resolveRefs"
-      ],
-      "returnType": "org.robolectric.res.TypedResource",
-      "exceptions": [],
-      "name": "getAndResolve(int,org.robolectric.res.android.ResTable_config,boolean)"
+      "name": "getAllAssetDirs()"
     },
     "getArrayIntResource(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "resId"
@@ -227,107 +306,141 @@
       "exceptions": [],
       "name": "getArrayIntResource(int)"
     },
+    "getArraySize(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getArraySize(int)"
+    },
+    "getArrayStringInfo(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "arrayResId"
+      ],
+      "returnType": "int[]",
+      "exceptions": [],
+      "name": "getArrayStringInfo(int)"
+    },
+    "getArrayStringResource(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "arrayResId"
+      ],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "name": "getArrayStringResource(int)"
+    },
+    "getAssetLength(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "asset"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "getAssetLength(int)"
+    },
+    "getAssetLength(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "asset"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getAssetLength(long)"
+    },
+    "getAssetRemainingLength(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "asset"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "getAssetRemainingLength(int)"
+    },
+    "getAssetRemainingLength(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "assetHandle"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getAssetRemainingLength(long)"
+    },
     "getAssignedPackageIdentifiers()": {
       "isImplementation": true,
       "modifiers": [
         "public",
-        "final"
+        "abstract"
       ],
       "params": [],
       "returnType": "android.util.SparseArray\u003cjava.lang.String\u003e",
       "exceptions": [],
       "name": "getAssignedPackageIdentifiers()"
     },
-    "getConverter(org.robolectric.res.TypedResource)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "value"
-      ],
-      "returnType": "org.robolectric.shadows.Converter",
-      "exceptions": [],
-      "name": "getConverter(org.robolectric.res.TypedResource)"
-    },
-    "getFileFromZip(java.io.File)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "file"
-      ],
-      "returnType": "java.io.File",
-      "exceptions": [],
-      "name": "getFileFromZip(java.io.File)",
-      "documentation": "Extract an asset from a zipped up assets provided by the build system, this is required because there is no\nway to get a FileDescriptor from a zip entry. This is a temporary measure for Bazel which can be removed\nonce binary resources are supported.\n"
-    },
-    "getFsFileFromPath(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "property"
-      ],
-      "returnType": "org.robolectric.res.FsFile",
-      "exceptions": [],
-      "name": "getFsFileFromPath(java.lang.String)"
-    },
     "getLocales()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "java.lang.String[]",
       "exceptions": [],
       "name": "getLocales()"
     },
-    "getNativeTheme(android.content.res.Resources.Theme)": {
-      "isImplementation": false,
+    "getNativeStringBlock(int)": {
+      "isImplementation": true,
       "modifiers": [
-        "private",
-        "static"
+        "protected",
+        "abstract"
       ],
       "params": [
-        "theme"
+        "block"
       ],
-      "returnType": "org.robolectric.shadows.ShadowAssetManager.NativeTheme",
+      "returnType": "java.lang.Number",
       "exceptions": [],
-      "name": "getNativeTheme(android.content.res.Resources.Theme)"
-    },
-    "getNativeTheme(long)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "themePtr"
-      ],
-      "returnType": "org.robolectric.shadows.ShadowAssetManager.NativeTheme",
-      "exceptions": [],
-      "name": "getNativeTheme(long)"
-    },
-    "getResName(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "id"
-      ],
-      "returnType": "org.robolectric.res.ResName",
-      "exceptions": [],
-      "name": "getResName(int)"
+      "name": "getNativeStringBlock(int)"
     },
     "getResourceBagText(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "ident",
@@ -340,7 +453,8 @@
     "getResourceEntryName(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "resid"
@@ -352,7 +466,8 @@
     "getResourceIdentifier(java.lang.String,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "name",
@@ -366,7 +481,8 @@
     "getResourceName(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "resid"
@@ -378,7 +494,8 @@
     "getResourcePackageName(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "resid"
@@ -390,7 +507,8 @@
     "getResourceStringArray(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "id"
@@ -399,20 +517,11 @@
       "exceptions": [],
       "name": "getResourceStringArray(int)"
     },
-    "getResourceTable()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "org.robolectric.res.ResourceTable",
-      "exceptions": [],
-      "name": "getResourceTable()"
-    },
     "getResourceText(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "ident"
@@ -424,7 +533,8 @@
     "getResourceTextArray(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "resId"
@@ -433,22 +543,11 @@
       "exceptions": [],
       "name": "getResourceTextArray(int)"
     },
-    "getResourceType(org.robolectric.res.TypedResource)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "typedResource"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getResourceType(org.robolectric.res.TypedResource)"
-    },
     "getResourceTypeName(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "resid"
@@ -460,7 +559,8 @@
     "getResourceValue(int,int,android.util.TypedValue,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "ident",
@@ -472,10 +572,35 @@
       "exceptions": [],
       "name": "getResourceValue(int,int,android.util.TypedValue,boolean)"
     },
+    "getStringBlockCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStringBlockCount()"
+    },
+    "getStyleAttributes(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "themeRes"
+      ],
+      "returnType": "int[]",
+      "exceptions": [],
+      "name": "getStyleAttributes(int)"
+    },
     "getThemeValue(int,int,android.util.TypedValue,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "themePtr",
@@ -491,7 +616,8 @@
     "getThemeValue(long,int,android.util.TypedValue,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "themePtr",
@@ -504,62 +630,61 @@
       "minSdk": 21,
       "name": "getThemeValue(long,int,android.util.TypedValue,boolean)"
     },
-    "getTypedArray(android.content.res.Resources,java.util.List\u003corg.robolectric.res.TypedResource\u003e,int)": {
-      "isImplementation": false,
+    "init()": {
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected",
+        "abstract"
       ],
-      "params": [
-        "resources",
-        "typedResources",
-        "resId"
-      ],
-      "returnType": "android.content.res.TypedArray",
+      "params": [],
+      "returnType": "void",
       "exceptions": [],
-      "name": "getTypedArray(android.content.res.Resources,java.util.List\u003corg.robolectric.res.TypedResource\u003e,int)"
+      "maxSdk": 19,
+      "name": "init()"
     },
-    "getTypedArrayResource(android.content.res.Resources,int)": {
-      "isImplementation": false,
+    "init(boolean)": {
+      "isImplementation": true,
       "modifiers": [
-        "protected"
+        "protected",
+        "abstract"
       ],
       "params": [
-        "resources",
-        "resId"
+        "isSystem"
       ],
-      "returnType": "android.content.res.TypedArray",
+      "returnType": "void",
       "exceptions": [],
-      "name": "getTypedArrayResource(android.content.res.Resources,int)"
-    },
-    "getXmlResourceParser(org.robolectric.res.ResourceTable,org.robolectric.res.builder.XmlBlock,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "resourceProvider",
-        "block",
-        "packageName"
-      ],
-      "returnType": "android.content.res.XmlResourceParser",
-      "exceptions": [],
-      "name": "getXmlResourceParser(org.robolectric.res.ResourceTable,org.robolectric.res.builder.XmlBlock,java.lang.String)"
+      "minSdk": 20,
+      "name": "init(boolean)"
     },
     "isUpToDate()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
       "name": "isUpToDate()"
     },
+    "legacyShadowOf(android.content.res.AssetManager)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "assetManager"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowLegacyAssetManager",
+      "exceptions": [],
+      "name": "legacyShadowOf(android.content.res.AssetManager)",
+      "documentation": "@deprecated Avoid use.\n"
+    },
     "list(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
         "public",
-        "final"
+        "abstract"
       ],
       "params": [
         "path"
@@ -570,26 +695,88 @@
       ],
       "name": "list(java.lang.String)"
     },
-    "loadXmlResourceParser(int,java.lang.String)": {
-      "isImplementation": false,
+    "loadResourceBagValue(int,int,android.util.TypedValue,boolean)": {
+      "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected",
+        "abstract"
       ],
       "params": [
-        "resId",
-        "type"
+        "ident",
+        "bagEntryId",
+        "outValue",
+        "resolve"
       ],
-      "returnType": "android.content.res.XmlResourceParser",
-      "exceptions": [
-        "android.content.res.Resources.NotFoundException"
+      "returnType": "int",
+      "exceptions": [],
+      "name": "loadResourceBagValue(int,int,android.util.TypedValue,boolean)"
+    },
+    "loadResourceValue(int,short,android.util.TypedValue,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
       ],
-      "name": "loadXmlResourceParser(int,java.lang.String)"
+      "params": [
+        "ident",
+        "density",
+        "outValue",
+        "resolve"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "loadResourceValue(int,short,android.util.TypedValue,boolean)"
+    },
+    "loadThemeAttributeValue(int,int,android.util.TypedValue,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "themeHandle",
+        "ident",
+        "outValue",
+        "resolve"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "loadThemeAttributeValue(int,int,android.util.TypedValue,boolean)"
+    },
+    "loadThemeAttributeValue(long,int,android.util.TypedValue,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "themeHandle",
+        "ident",
+        "outValue",
+        "resolve"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "loadThemeAttributeValue(long,int,android.util.TypedValue,boolean)"
+    },
+    "newTheme()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [],
+      "returnType": "java.lang.Number",
+      "exceptions": [],
+      "name": "newTheme()"
     },
     "open(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
         "public",
-        "final"
+        "abstract"
       ],
       "params": [
         "fileName"
@@ -604,7 +791,7 @@
       "isImplementation": true,
       "modifiers": [
         "public",
-        "final"
+        "abstract"
       ],
       "params": [
         "fileName",
@@ -616,11 +803,43 @@
       ],
       "name": "open(java.lang.String,int)"
     },
+    "openAsset(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "fileName",
+        "mode"
+      ],
+      "returnType": "java.lang.Number",
+      "exceptions": [
+        "java.io.FileNotFoundException"
+      ],
+      "name": "openAsset(java.lang.String,int)"
+    },
+    "openAssetFd(java.lang.String,long[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "fileName",
+        "outOffsets"
+      ],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "openAssetFd(java.lang.String,long[])"
+    },
     "openFd(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
         "public",
-        "final"
+        "abstract"
       ],
       "params": [
         "fileName"
@@ -635,7 +854,7 @@
       "isImplementation": true,
       "modifiers": [
         "public",
-        "final"
+        "abstract"
       ],
       "params": [
         "cookie",
@@ -652,7 +871,7 @@
       "isImplementation": true,
       "modifiers": [
         "public",
-        "final"
+        "abstract"
       ],
       "params": [
         "cookie",
@@ -664,11 +883,61 @@
       ],
       "name": "openNonAssetFd(int,java.lang.String)"
     },
+    "openNonAssetFdNative(int,java.lang.String,long[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "cookie",
+        "fileName",
+        "outOffsets"
+      ],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "openNonAssetFdNative(int,java.lang.String,long[])"
+    },
+    "openNonAssetNative(int,java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "cookie",
+        "fileName",
+        "accessMode"
+      ],
+      "returnType": "java.lang.Number",
+      "exceptions": [
+        "java.io.FileNotFoundException"
+      ],
+      "name": "openNonAssetNative(int,java.lang.String,int)"
+    },
+    "openXmlAssetNative(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "cookie",
+        "fileName"
+      ],
+      "returnType": "java.lang.Number",
+      "exceptions": [
+        "java.io.FileNotFoundException"
+      ],
+      "name": "openXmlAssetNative(int,java.lang.String)"
+    },
     "openXmlResourceParser(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
         "public",
-        "final"
+        "abstract"
       ],
       "params": [
         "cookie",
@@ -680,22 +949,77 @@
       ],
       "name": "openXmlResourceParser(int,java.lang.String)"
     },
-    "qualifyFromNonAssetFileName(java.lang.String)": {
-      "isImplementation": false,
+    "readAsset(int,byte[],int,int)": {
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected",
+        "final"
       ],
       "params": [
-        "fileName"
+        "asset",
+        "b",
+        "off",
+        "len"
       ],
-      "returnType": "org.robolectric.res.ResName",
+      "returnType": "int",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "maxSdk": 20,
+      "name": "readAsset(int,byte[],int,int)"
+    },
+    "readAsset(long,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "asset",
+        "bArray",
+        "off",
+        "len"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 21,
+      "name": "readAsset(long,byte[],int,int)"
+    },
+    "readAssetChar(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "asset"
+      ],
+      "returnType": "int",
       "exceptions": [],
-      "name": "qualifyFromNonAssetFileName(java.lang.String)"
+      "maxSdk": 20,
+      "name": "readAssetChar(int)"
+    },
+    "readAssetChar(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "asset"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "readAssetChar(long)"
     },
     "releaseTheme(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "themePtr"
@@ -708,7 +1032,8 @@
     "releaseTheme(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "themePtr"
@@ -729,101 +1054,111 @@
       "exceptions": [],
       "name": "reset()"
     },
-    "resolve(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,int)": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [
-        "value",
-        "config",
-        "resId"
-      ],
-      "returnType": "org.robolectric.res.TypedResource",
-      "exceptions": [],
-      "name": "resolve(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,int)"
-    },
-    "resolveResName(org.robolectric.res.ResName,org.robolectric.res.android.ResTable_config)": {
-      "isImplementation": false,
+    "resolveAttrs(long,int,int,int[],int[],int[],int[])": {
+      "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected",
+        "static"
       ],
       "params": [
-        "resName",
-        "config"
+        "themeToken",
+        "defStyleAttr",
+        "defStyleRes",
+        "inValues",
+        "attrs",
+        "outValues",
+        "outIndices"
       ],
-      "returnType": "org.robolectric.res.ResName",
+      "returnType": "boolean",
       "exceptions": [],
-      "name": "resolveResName(org.robolectric.res.ResName,org.robolectric.res.android.ResTable_config)"
+      "minSdk": 21,
+      "name": "resolveAttrs(long,int,int,int[],int[],int[],int[])"
     },
-    "resolveResource(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,org.robolectric.res.ResName)": {
-      "isImplementation": false,
+    "retrieveArray(int,int[])": {
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected",
+        "abstract"
       ],
       "params": [
-        "value",
-        "config",
-        "resName"
+        "id",
+        "outValues"
       ],
-      "returnType": "org.robolectric.res.ResName",
+      "returnType": "int",
       "exceptions": [],
-      "name": "resolveResource(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,org.robolectric.res.ResName)"
+      "name": "retrieveArray(int,int[])"
     },
-    "resolveResourceValue(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,int)": {
-      "isImplementation": false,
+    "retrieveAttributes(int,int[],int[],int[])": {
+      "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected",
+        "final"
       ],
       "params": [
-        "value",
-        "config",
-        "resId"
+        "xmlParserToken",
+        "attrs",
+        "outValues",
+        "outIndices"
       ],
-      "returnType": "org.robolectric.res.TypedResource",
+      "returnType": "boolean",
       "exceptions": [],
-      "name": "resolveResourceValue(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,int)"
+      "maxSdk": 20,
+      "name": "retrieveAttributes(int,int[],int[],int[])"
     },
-    "resolveResourceValue(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,org.robolectric.res.ResName)": {
-      "isImplementation": false,
+    "retrieveAttributes(long,int[],int[],int[])": {
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected",
+        "abstract"
       ],
       "params": [
-        "value",
-        "config",
-        "resName"
+        "xmlParserToken",
+        "attrs",
+        "outValues",
+        "outIndices"
       ],
-      "returnType": "org.robolectric.res.TypedResource",
+      "returnType": "boolean",
       "exceptions": [],
-      "name": "resolveResourceValue(org.robolectric.res.TypedResource,org.robolectric.res.android.ResTable_config,org.robolectric.res.ResName)"
+      "minSdk": 21,
+      "name": "retrieveAttributes(long,int[],int[],int[])"
     },
-    "resolveStyle(int,org.robolectric.res.Style)": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [
-        "resId",
-        "themeStyleSet"
-      ],
-      "returnType": "org.robolectric.res.Style",
-      "exceptions": [],
-      "name": "resolveStyle(int,org.robolectric.res.Style)"
-    },
-    "resolveStyle(org.robolectric.res.ResName,org.robolectric.res.Style)": {
-      "isImplementation": false,
+    "seekAsset(int,long,int)": {
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected",
+        "final"
       ],
       "params": [
-        "themeStyleName",
-        "themeStyleSet"
+        "asset",
+        "offset",
+        "whence"
       ],
-      "returnType": "org.robolectric.res.Style",
+      "returnType": "long",
       "exceptions": [],
-      "name": "resolveStyle(org.robolectric.res.ResName,org.robolectric.res.Style)"
+      "maxSdk": 20,
+      "name": "seekAsset(int,long,int)"
+    },
+    "seekAsset(long,long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "asset",
+        "offset",
+        "whence"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "seekAsset(long,long,int)"
     },
     "setConfiguration(int,int,java.lang.String,int,int,int,int,int,int,int,int,int,int,int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "final"
       ],
       "params": [
         "mcc",
@@ -842,7 +1177,7 @@
         "screenHeightDp",
         "screenLayout",
         "uiMode",
-        "majorVersion"
+        "sdkVersion"
       ],
       "returnType": "void",
       "exceptions": [],
@@ -852,7 +1187,8 @@
     "setConfiguration(int,int,java.lang.String,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "mcc",
@@ -882,7 +1218,8 @@
     "setLocale(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "locale"
@@ -891,92 +1228,47 @@
       "exceptions": [],
       "name": "setLocale(java.lang.String)"
     },
-    "strictError(java.lang.String,java.lang.Object...)": {
+    "useLegacy()": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "public",
+        "static"
       ],
-      "params": [
-        "message",
-        "args"
-      ],
-      "returnType": "void",
+      "params": [],
+      "returnType": "boolean",
       "exceptions": [],
-      "name": "strictError(java.lang.String,java.lang.Object...)"
+      "name": "useLegacy()",
+      "documentation": "@deprecated Avoid use.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.O_MR1",
-    "org.robolectric.RuntimeEnvironment.castNativePtr",
-    "org.robolectric.Shadows.shadowOf",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.shadow.api.Shadow.invokeConstructor",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "android.os.Build.VERSION_CODES.N_MR1",
     "android.content.res.AssetFileDescriptor",
     "android.content.res.AssetManager",
-    "android.content.res.AssetManager.AssetInputStream",
-    "android.content.res.Resources",
-    "android.content.res.TypedArray",
     "android.content.res.XmlResourceParser",
     "android.os.Build",
     "android.os.Build.VERSION_CODES",
     "android.os.ParcelFileDescriptor",
-    "android.util.AttributeSet",
     "android.util.SparseArray",
     "android.util.TypedValue",
-    "com.google.common.collect.Ordering",
-    "java.io.ByteArrayInputStream",
-    "java.io.File",
-    "java.io.FileInputStream",
+    "dalvik.system.VMRuntime",
     "java.io.FileNotFoundException",
-    "java.io.FileOutputStream",
     "java.io.IOException",
     "java.io.InputStream",
-    "java.net.MalformedURLException",
-    "java.net.URL",
-    "java.nio.file.Files",
-    "java.util.ArrayList",
-    "java.util.Arrays",
     "java.util.Collection",
-    "java.util.Collections",
-    "java.util.HashMap",
-    "java.util.List",
-    "java.util.Map",
-    "java.util.Set",
-    "java.util.concurrent.CopyOnWriteArraySet",
-    "java.util.zip.ZipEntry",
-    "java.util.zip.ZipInputStream",
-    "javax.annotation.Nonnull",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.android.XmlResourceParserImpl",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.res.AttrData",
-    "org.robolectric.res.AttributeResource",
-    "org.robolectric.res.EmptyStyle",
-    "org.robolectric.res.FileTypedResource",
-    "org.robolectric.res.Fs",
     "org.robolectric.res.FsFile",
-    "org.robolectric.res.ResName",
-    "org.robolectric.res.ResType",
-    "org.robolectric.res.ResourceIds",
-    "org.robolectric.res.ResourceTable",
-    "org.robolectric.res.Style",
-    "org.robolectric.res.StyleData",
-    "org.robolectric.res.StyleResolver",
-    "org.robolectric.res.ThemeStyleSet",
-    "org.robolectric.res.TypedResource",
-    "org.robolectric.res.android.ResTable_config",
-    "org.robolectric.res.builder.XmlBlock",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.Logger",
-    "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadows.ShadowAssetManager.NativeTheme"
+    "org.robolectric.shadow.api.ShadowFactory",
+    "org.robolectric.shadows.ShadowAssetManager.Factory",
+    "org.robolectric.shadows.ShadowAssetManager.Factory"
   ],
   "name": "org.robolectric.shadows.ShadowAssetManager"
 }

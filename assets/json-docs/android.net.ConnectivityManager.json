@@ -313,10 +313,10 @@
     "java.util.HashSet",
     "java.util.Map",
     "java.util.Set",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowConnectivityManager"
 }

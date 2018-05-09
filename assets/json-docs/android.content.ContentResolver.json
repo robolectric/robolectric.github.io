@@ -886,9 +886,9 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
-    "org.robolectric.Shadows.shadowOf",
     "android.accounts.Account",
     "android.annotation.NonNull",
+    "android.annotation.SuppressLint",
     "android.content.ContentProvider",
     "android.content.ContentProviderClient",
     "android.content.ContentProviderOperation",

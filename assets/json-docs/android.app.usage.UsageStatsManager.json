@@ -1,0 +1,89 @@
+{
+  "methods": {
+    "addEvent(java.lang.String,long,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName",
+        "timeStamp",
+        "eventType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addEvent(java.lang.String,long,int)",
+      "documentation": "Adds an event to be returned by the shadowed {@link UsageStatsManager}.\n\n\u003cp\u003eThis method won\u0027t affect the results of any existing queries.\n"
+    },
+    "getAppStandbyBucket()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "getAppStandbyBucket()",
+      "documentation": "Returns the current app\u0027s standby bucket that is set by {@code setCurrentAppStandbyBucket}. If\nthe standby bucket value has never been set, return {@link\nUsageStatsManager.STANDBY_BUCKET_ACTIVE}.\n"
+    },
+    "queryEvents(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "beginTime",
+        "endTime"
+      ],
+      "returnType": "android.app.usage.UsageEvents",
+      "exceptions": [],
+      "name": "queryEvents(long,long)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setCurrentAppStandbyBucket(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bucket"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCurrentAppStandbyBucket(int)",
+      "documentation": "Sets the current app\u0027s standby bucket\n"
+    }
+  },
+  "imports": [
+    "android.app.usage.UsageEvents",
+    "android.app.usage.UsageEvents.Event",
+    "android.app.usage.UsageStatsManager",
+    "android.app.usage.UsageStatsManager.StandbyBuckets",
+    "android.content.res.Configuration",
+    "android.os.Build",
+    "android.os.Parcel",
+    "android.util.ArraySet",
+    "com.google.common.collect.ImmutableList",
+    "java.util.Arrays",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.TreeMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.shadows.ShadowUsageStatsManager",
+  "documentation": "Shadow of {@link UsageStatsManager}. "
+}

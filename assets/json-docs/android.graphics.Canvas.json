@@ -209,6 +209,40 @@
       "exceptions": [],
       "name": "drawRect(float,float,float,float,android.graphics.Paint)"
     },
+    "drawText(char[],int,int,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "index",
+        "count",
+        "x",
+        "y",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawText(char[],int,int,float,float,android.graphics.Paint)"
+    },
+    "drawText(java.lang.CharSequence,int,int,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "start",
+        "end",
+        "x",
+        "y",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawText(java.lang.CharSequence,int,int,float,float,android.graphics.Paint)"
+    },
     "drawText(java.lang.String,float,float,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
@@ -223,6 +257,23 @@
       "returnType": "void",
       "exceptions": [],
       "name": "drawText(java.lang.String,float,float,android.graphics.Paint)"
+    },
+    "drawText(java.lang.String,int,int,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "start",
+        "end",
+        "x",
+        "y",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawText(java.lang.String,int,int,float,float,android.graphics.Paint)"
     },
     "getArcPaintHistoryCount()": {
       "isImplementation": false,
@@ -583,7 +634,6 @@
     }
   },
   "imports": [
-    "org.robolectric.Shadows.shadowOf",
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.ColorFilter",
@@ -596,6 +646,7 @@
     "java.util.List",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowCanvas.LinePaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.OvalPaintHistoryEvent",

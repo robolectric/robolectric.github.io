@@ -3,7 +3,7 @@
     "quantityForIntImpl(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -18,7 +18,7 @@
     "quantityForIntImpl(long,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

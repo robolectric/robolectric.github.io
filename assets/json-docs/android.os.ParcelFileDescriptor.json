@@ -86,8 +86,10 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "android.annotation.SuppressLint",
     "android.os.ParcelFileDescriptor",
     "java.io.File",
     "java.io.FileDescriptor",
@@ -95,11 +97,11 @@
     "java.io.IOException",
     "java.io.RandomAccessFile",
     "java.lang.reflect.Constructor",
-    "org.robolectric.Shadows",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowParcelFileDescriptor"
 }

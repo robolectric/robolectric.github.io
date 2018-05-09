@@ -440,6 +440,32 @@
       "exceptions": [],
       "name": "setPaused(boolean)"
     },
+    "shadowOf(android.os.Looper)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "looper"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowLooper",
+      "exceptions": [],
+      "name": "shadowOf(android.os.Looper)"
+    },
+    "shadowOf(android.os.MessageQueue)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "mq"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowMessageQueue",
+      "exceptions": [],
+      "name": "shadowOf(android.os.MessageQueue)"
+    },
     "unPause()": {
       "isImplementation": false,
       "modifiers": [
@@ -478,10 +504,10 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "org.robolectric.RuntimeEnvironment.isMainThread",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.os.Looper",
+    "android.os.MessageQueue",
     "java.util.Collections",
     "java.util.Map",
     "java.util.WeakHashMap",
@@ -492,6 +518,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.Scheduler"
   ],
   "name": "org.robolectric.shadows.ShadowLooper",

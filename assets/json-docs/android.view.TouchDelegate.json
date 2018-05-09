@@ -3,7 +3,7 @@
     "__constructor__(android.graphics.Rect,android.view.View)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "bounds",

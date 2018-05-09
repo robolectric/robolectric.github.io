@@ -36,6 +36,20 @@
       "exceptions": [],
       "name": "checkAccessWifiStatePermission()"
     },
+    "connect(android.net.wifi.WifiConfiguration,android.net.wifi.WifiManager.ActionListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "wifiConfiguration",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "connect(android.net.wifi.WifiConfiguration,android.net.wifi.WifiManager.ActionListener)"
+    },
     "createWifiLock(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -114,6 +128,16 @@
       "exceptions": [],
       "name": "getLastEnabledNetwork()"
     },
+    "getMostRecentNetwork()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.net.wifi.WifiConfiguration",
+      "exceptions": [],
+      "name": "getMostRecentNetwork()"
+    },
     "getPrivilegedConfiguredNetworks()": {
       "isImplementation": true,
       "modifiers": [
@@ -134,6 +158,18 @@
       "returnType": "java.util.List\u003candroid.net.wifi.ScanResult\u003e",
       "exceptions": [],
       "name": "getScanResults()"
+    },
+    "getWifiConfiguration(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "netId"
+      ],
+      "returnType": "android.net.wifi.WifiConfiguration",
+      "exceptions": [],
+      "name": "getWifiConfiguration(int)"
     },
     "getWifiState()": {
       "isImplementation": true,
@@ -178,6 +214,16 @@
       "returnType": "android.net.wifi.WifiConfiguration",
       "exceptions": [],
       "name": "makeCopy(android.net.wifi.WifiConfiguration,int)"
+    },
+    "reconnect()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "reconnect()"
     },
     "removeNetwork(int)": {
       "isImplementation": true,
@@ -322,22 +368,28 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.Shadows.shadowOf",
+    "android.content.Context",
+    "android.net.ConnectivityManager",
     "android.net.DhcpInfo",
+    "android.net.NetworkInfo",
     "android.net.wifi.ScanResult",
     "android.net.wifi.WifiConfiguration",
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiManager",
     "android.net.wifi.WifiManager.MulticastLock",
-    "android.os.RemoteException",
     "android.util.Pair",
     "java.util.ArrayList",
     "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Map",
-    "org.robolectric.Shadows",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock",
     "org.robolectric.shadows.ShadowWifiManager.ShadowMulticastLock"

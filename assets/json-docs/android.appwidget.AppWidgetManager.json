@@ -310,11 +310,11 @@
     "java.util.List",
     "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.util.AppSingletonizer",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowAppWidgetManager.WidgetInfo"

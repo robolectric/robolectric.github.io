@@ -1,5 +1,76 @@
 {
   "methods": {
+    "__constructor__(android.content.Context,android.app.admin.IDevicePolicyManager)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "__constructor__(android.content.Context,android.app.admin.IDevicePolicyManager)"
+    },
+    "__constructor__(android.content.Context,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "__constructor__(android.content.Context,android.os.Handler)"
+    },
+    "__constructor__(android.content.Context,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "parentInstance"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "maxSdk": 25,
+      "name": "__constructor__(android.content.Context,boolean)"
+    },
+    "activateResetToken(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "activateResetToken(android.content.ComponentName)",
+      "documentation": "Activates reset token for given admin.\n\n@param admin Which {@link DeviceAdminReceiver} this request is associated with.\n@return if the activation state changed.\n@throws IllegalArgumentException if there is no token set for this admin.\n"
+    },
+    "addPersistentPreferredActivity(android.content.ComponentName,android.content.IntentFilter,android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "filter",
+        "activity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "addPersistentPreferredActivity(android.content.ComponentName,android.content.IntentFilter,android.content.ComponentName)"
+    },
     "addUserRestriction(android.content.ComponentName,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -12,6 +83,32 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addUserRestriction(android.content.ComponentName,java.lang.String)"
+    },
+    "clearPackagePersistentPreferredActivities(android.content.ComponentName,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "clearPackagePersistentPreferredActivities(android.content.ComponentName,java.lang.String)"
+    },
+    "clearProfileOwner(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearProfileOwner(android.content.ComponentName)"
     },
     "clearUserRestriction(android.content.ComponentName,java.lang.String)": {
       "isImplementation": true,
@@ -87,6 +184,19 @@
       "exceptions": [],
       "name": "enforceProfileOwner(android.content.ComponentName)"
     },
+    "failSetApplicationHiddenFor(java.util.Collection\u003cjava.lang.String\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packagesToFail"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "failSetApplicationHiddenFor(java.util.Collection\u003cjava.lang.String\u003e)",
+      "documentation": "Set package names for witch {@link DevicePolicyManager#setApplicationHidden} should fail.\n\n@param packagesToFail collection of package names or {@code null} to clear the packages.\n"
+    },
     "getAccountTypesWithManagementDisabled()": {
       "isImplementation": true,
       "modifiers": [
@@ -153,7 +263,31 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "getDeviceOwner()",
-      "documentation": "@see #setDeviceOwner(ComponentName)\n"
+      "documentation": "@see #setDeviceOwner(ComponentName) "
+    },
+    "getKeyguardDisabledFeatures(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "getKeyguardDisabledFeatures(android.content.ComponentName)"
+    },
+    "getLastSetPassword()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLastSetPassword()",
+      "documentation": "Retrieves last password set through {@link DevicePolicyManager#resetPassword} or {@link\nDevicePolicyManager#resetPasswordWithToken}.\n"
     },
     "getOrganizationColor(android.content.ComponentName)": {
       "isImplementation": true,
@@ -180,7 +314,22 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "getOrganizationName(android.content.ComponentName)",
-      "documentation": "Returns organization name.\n\nThe API can only be called by profile owner since Android N.\n\nAndroid framework has a hidden API for getting the organization name for device owner since\nAndroid O. This method, however, is extended to return the organization name for device owners\ntoo to make testing of {@link #setOrganizationName(ComponentName, CharSequence)} easier for\ndevice owner cases.\n"
+      "documentation": "Returns organization name.\n\n\u003cp\u003eThe API can only be called by profile owner since Android N.\n\n\u003cp\u003eAndroid framework has a hidden API for getting the organization name for device owner since\nAndroid O. This method, however, is extended to return the organization name for device owners\ntoo to make testing of {@link #setOrganizationName(ComponentName, CharSequence)} easier for\ndevice owner cases.\n"
+    },
+    "getPermissionGrantState(android.content.ComponentName,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "packageName",
+        "permission"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getPermissionGrantState(android.content.ComponentName,java.lang.String,java.lang.String)"
     },
     "getPermittedAccessibilityServices(android.content.ComponentName)": {
       "isImplementation": true,
@@ -216,7 +365,7 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "getProfileOwner()",
-      "documentation": "@see #setProfileOwner(ComponentName)\n"
+      "documentation": "@see #setProfileOwner(ComponentName) "
     },
     "getShadowUserManager()": {
       "isImplementation": false,
@@ -237,7 +386,29 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getStorageEncryptionStatus()",
-      "documentation": "@return the previously set status; default is\n{@link DevicePolicyManager#ENCRYPTION_STATUS_UNSUPPORTED}\n@see #setStorageEncryptionStatus(int)\n"
+      "documentation": "@return the previously set status; default is {@link\n    DevicePolicyManager#ENCRYPTION_STATUS_UNSUPPORTED}\n@see #setStorageEncryptionStatus(int)\n"
+    },
+    "getWipeCalledTimes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getWipeCalledTimes()"
+    },
+    "init(android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "init(android.content.Context)"
     },
     "isAdminActive(android.content.ComponentName)": {
       "isImplementation": true,
@@ -276,6 +447,19 @@
       "exceptions": [],
       "name": "isDeviceOwnerApp(java.lang.String)"
     },
+    "isPermissionGranted(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName",
+        "permission"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isPermissionGranted(java.lang.String,java.lang.String)"
+    },
     "isProfileOwnerApp(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -287,6 +471,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isProfileOwnerApp(java.lang.String)"
+    },
+    "isResetPasswordTokenActive(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "isResetPasswordTokenActive(android.content.ComponentName)"
     },
     "isUninstallBlocked(android.content.ComponentName,java.lang.String)": {
       "isImplementation": true,
@@ -300,6 +497,69 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isUninstallBlocked(android.content.ComponentName,java.lang.String)"
+    },
+    "lockNow()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "lockNow()"
+    },
+    "passwordMeetsRequirements(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "password"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "passwordMeetsRequirements(java.lang.String)"
+    },
+    "removeActiveAdmin(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeActiveAdmin(android.content.ComponentName)"
+    },
+    "resetPassword(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "password",
+        "flags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "resetPassword(java.lang.String,int)"
+    },
+    "resetPasswordWithToken(android.content.ComponentName,java.lang.String,byte[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "password",
+        "token",
+        "flags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "resetPasswordWithToken(android.content.ComponentName,java.lang.String,byte[],int)"
     },
     "setAccountManagementDisabled(android.content.ComponentName,java.lang.String,boolean)": {
       "isImplementation": true,
@@ -338,7 +598,7 @@
         "packageName",
         "hidden"
       ],
-      "returnType": "void",
+      "returnType": "boolean",
       "exceptions": [],
       "name": "setApplicationHidden(android.content.ComponentName,java.lang.String,boolean)"
     },
@@ -368,7 +628,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setApplicationRestrictions(java.lang.String,android.os.Bundle)",
-      "documentation": "Sets the application restrictions of the {@code packageName}.\n\nThe new {@code applicationRestrictions} always completely overwrites any existing ones.\n"
+      "documentation": "Sets the application restrictions of the {@code packageName}.\n\n\u003cp\u003eThe new {@code applicationRestrictions} always completely overwrites any existing ones.\n"
     },
     "setAutoTimeRequired(android.content.ComponentName,boolean)": {
       "isImplementation": true,
@@ -395,6 +655,20 @@
       "exceptions": [],
       "name": "setDeviceOwner(android.content.ComponentName)",
       "documentation": "Sets the admin as active admin and device owner.\n\n@see DevicePolicyManager#getDeviceOwner()\n"
+    },
+    "setKeyguardDisabledFeatures(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "which"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "setKeyguardDisabledFeatures(android.content.ComponentName,int)"
     },
     "setOrganizationColor(android.content.ComponentName,int)": {
       "isImplementation": true,
@@ -423,7 +697,143 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "setOrganizationName(android.content.ComponentName,java.lang.CharSequence)",
-      "documentation": "Sets organization name.\n\nThe API can only be called by profile owner since Android N and can be called by both of\nprofile owner and device owner since Android O.\n"
+      "documentation": "Sets organization name.\n\n\u003cp\u003eThe API can only be called by profile owner since Android N and can be called by both of\nprofile owner and device owner since Android O.\n"
+    },
+    "setPackagesSuspended(android.content.ComponentName,java.lang.String[],boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "packageNames",
+        "suspended"
+      ],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setPackagesSuspended(android.content.ComponentName,java.lang.String[],boolean)",
+      "documentation": "Sets packages to be suspended, but fails to suspend all of them.\n\n\u003cp\u003eCurrently there is no way to simulate suspension of packages and no way to force this method\nto return something else than {@code packageNames} passed in as parameter, although it verifies\nmethod preconditions correctly.\n"
+    },
+    "setPasswordMinimumLength(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordMinimumLength(android.content.ComponentName,int)"
+    },
+    "setPasswordMinimumLetters(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordMinimumLetters(android.content.ComponentName,int)"
+    },
+    "setPasswordMinimumLowerCase(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordMinimumLowerCase(android.content.ComponentName,int)"
+    },
+    "setPasswordMinimumNonLetter(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordMinimumNonLetter(android.content.ComponentName,int)"
+    },
+    "setPasswordMinimumNumeric(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordMinimumNumeric(android.content.ComponentName,int)"
+    },
+    "setPasswordMinimumSymbols(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordMinimumSymbols(android.content.ComponentName,int)"
+    },
+    "setPasswordMinimumUpperCase(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordMinimumUpperCase(android.content.ComponentName,int)"
+    },
+    "setPasswordQuality(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "quality"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordQuality(android.content.ComponentName,int)"
+    },
+    "setPermissionGrantState(android.content.ComponentName,java.lang.String,java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "packageName",
+        "permission",
+        "grantState"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setPermissionGrantState(android.content.ComponentName,java.lang.String,java.lang.String,int)"
     },
     "setPermittedAccessibilityServices(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
@@ -437,7 +847,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "setPermittedAccessibilityServices(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)",
-      "documentation": "Sets permitted accessibility services.\n\nThe API can be called by either a profile or device owner.\n\nThis method does not check already enabled non-system accessibility services, so will always\nset the restriction and return true.\n"
+      "documentation": "Sets permitted accessibility services.\n\n\u003cp\u003eThe API can be called by either a profile or device owner.\n\n\u003cp\u003eThis method does not check already enabled non-system accessibility services, so will always\nset the restriction and return true.\n"
     },
     "setPermittedInputMethods(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
@@ -451,7 +861,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "setPermittedInputMethods(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)",
-      "documentation": "Sets permitted input methods.\n\nThe API can be called by either a profile or device owner.\n\nThis method does not check already enabled non-system input methods, so will always set the\nrestriction and return true.\n"
+      "documentation": "Sets permitted input methods.\n\n\u003cp\u003eThe API can be called by either a profile or device owner.\n\n\u003cp\u003eThis method does not check already enabled non-system input methods, so will always set the\nrestriction and return true.\n"
     },
     "setProfileOwner(android.content.ComponentName)": {
       "isImplementation": false,
@@ -466,6 +876,20 @@
       "name": "setProfileOwner(android.content.ComponentName)",
       "documentation": "Sets the admin as active admin and profile owner.\n\n@see DevicePolicyManager#getProfileOwner()\n"
     },
+    "setResetPasswordToken(android.content.ComponentName,byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "token"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setResetPasswordToken(android.content.ComponentName,byte[])"
+    },
     "setStorageEncryptionStatus(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -477,7 +901,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setStorageEncryptionStatus(int)",
-      "documentation": "Setter for {@link DevicePolicyManager#getStorageEncryptionStatus()}.\n"
+      "documentation": "Setter for {@link DevicePolicyManager#getStorageEncryptionStatus()}. "
     },
     "setUninstallBlocked(android.content.ComponentName,java.lang.String,boolean)": {
       "isImplementation": true,
@@ -518,24 +942,53 @@
       "exceptions": [],
       "name": "wasSystemAppEnabled(java.lang.String)",
       "documentation": "Returns {@code true} if the given {@code packageName} was a system app and was enabled. "
+    },
+    "wipeData(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "wipeData(int)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.Shadows.shadowOf",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.annotation.Nullable",
+    "android.annotation.SuppressLint",
+    "android.app.KeyguardManager",
+    "android.app.admin.DeviceAdminReceiver",
     "android.app.admin.DevicePolicyManager",
+    "android.app.admin.IDevicePolicyManager",
     "android.content.ComponentName",
     "android.content.Context",
+    "android.content.IntentFilter",
+    "android.content.pm.PackageInfo",
+    "android.content.pm.PackageManager",
+    "android.content.pm.PackageManager.NameNotFoundException",
     "android.os.Build",
+    "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
+    "android.os.Handler",
     "android.os.Process",
-    "android.os.UserManager",
     "android.text.TextUtils",
     "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.Collection",
+    "java.util.Collections",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.List",
@@ -543,7 +996,10 @@
     "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowDevicePolicyManager.PackageAndPermission"
   ],
   "name": "org.robolectric.shadows.ShadowDevicePolicyManager",
   "documentation": "Shadow for {@link DevicePolicyManager} "

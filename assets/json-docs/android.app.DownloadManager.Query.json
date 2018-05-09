@@ -20,11 +20,11 @@
     "java.util.List",
     "java.util.Map",
     "java.util.TreeMap",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.fakes.BaseCursor",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowDownloadManager.ShadowQuery"

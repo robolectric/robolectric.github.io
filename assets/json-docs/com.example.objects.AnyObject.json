@@ -1,0 +1,20 @@
+{
+  "methods": {
+    "anotherResetter()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "anotherResetter()"
+    }
+  },
+  "imports": [
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.annotation.processing.shadows.ShadowClassNameOnly"
+}

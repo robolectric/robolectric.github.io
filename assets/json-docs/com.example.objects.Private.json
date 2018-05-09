@@ -1,0 +1,21 @@
+{
+  "methods": {
+    "resetMethod()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetMethod()"
+    }
+  },
+  "imports": [
+    "org.robolectric.Robolectric",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.annotation.processing.shadows.ShadowPrivate"
+}

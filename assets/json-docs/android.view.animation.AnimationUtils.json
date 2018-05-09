@@ -37,9 +37,9 @@
     "android.view.animation.LayoutAnimationController",
     "android.view.animation.LinearInterpolator",
     "android.view.animation.TranslateAnimation",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowAnimationUtils"
 }

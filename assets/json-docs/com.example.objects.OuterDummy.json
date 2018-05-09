@@ -1,0 +1,9 @@
+{
+  "methods": {},
+  "imports": [
+    "com.example.objects.OuterDummy",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.processing.shadows.ShadowOuterDummy.ShadowInnerDummy"
+  ],
+  "name": "org.robolectric.annotation.processing.shadows.ShadowOuterDummy"
+}

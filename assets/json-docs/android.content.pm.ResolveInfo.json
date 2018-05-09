@@ -62,9 +62,9 @@
     "android.content.pm.ApplicationInfo",
     "android.content.pm.PackageManager",
     "android.content.pm.ResolveInfo",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowResolveInfo"
 }

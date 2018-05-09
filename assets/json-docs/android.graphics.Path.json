@@ -114,9 +114,9 @@
     "android.graphics.Path",
     "java.util.ArrayList",
     "java.util.List",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowPath.Point"
   ],
   "name": "org.robolectric.shadows.ShadowPath",

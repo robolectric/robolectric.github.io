@@ -129,9 +129,9 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.Shadows.shadowOf",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
+    "android.annotation.SuppressLint",
     "android.content.IntentSender",
     "android.content.IntentSender.SendIntentException",
     "android.content.pm.PackageInstaller",
@@ -147,6 +147,7 @@
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowPackageInstaller.CallbackInfo",
     "org.robolectric.shadows.ShadowPackageInstaller.ShadowSession"
   ],

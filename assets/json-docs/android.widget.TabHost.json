@@ -135,7 +135,6 @@
     "android.widget.TabWidget",
     "java.util.ArrayList",
     "java.util.List",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

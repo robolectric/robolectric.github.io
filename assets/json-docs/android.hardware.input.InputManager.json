@@ -1,0 +1,50 @@
+{
+  "methods": {
+    "deviceHasKeys(int,int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id",
+        "keyCodes"
+      ],
+      "returnType": "boolean[]",
+      "exceptions": [],
+      "name": "deviceHasKeys(int,int[])"
+    },
+    "injectInputEvent(android.view.InputEvent,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "event",
+        "mode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "injectInputEvent(android.view.InputEvent,int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    }
+  },
+  "imports": [
+    "android.hardware.input.InputManager",
+    "android.view.InputEvent",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowInputManager"
+}

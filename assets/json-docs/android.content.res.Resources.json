@@ -3,7 +3,7 @@
     "getQuantityString(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "resId",
@@ -18,7 +18,7 @@
     "getQuantityString(int,int,java.lang.Object...)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id",
@@ -34,7 +34,7 @@
     "getSystem()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -42,10 +42,20 @@
       "exceptions": [],
       "name": "getSystem()"
     },
+    "isLegacyAssetManager()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLegacyAssetManager()"
+    },
     "loadDrawable(android.util.TypedValue,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "value",
@@ -58,7 +68,7 @@
     "loadDrawable(android.util.TypedValue,int,android.content.res.Resources.Theme)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "value",
@@ -74,7 +84,7 @@
     "loadXmlResourceParser(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "resId",
@@ -89,7 +99,7 @@
     "loadXmlResourceParser(java.lang.String,int,int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "file",
@@ -118,7 +128,7 @@
     "obtainAttributes(android.util.AttributeSet,int[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "set",
@@ -142,7 +152,7 @@
     "obtainTypedArray(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id"
@@ -156,7 +166,7 @@
     "openRawResource(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id"
@@ -170,7 +180,7 @@
     "openRawResourceFd(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id"
@@ -180,7 +190,7 @@
         "android.content.res.Resources.NotFoundException"
       ],
       "name": "openRawResourceFd(int)",
-      "documentation": "Since {@link AssetFileDescriptor}s are not yet supported by Robolectric, {@code null} will\nbe returned if the resource is found. If the resource cannot be found, {@link Resources.NotFoundException} will\nbe thrown.\n"
+      "documentation": "Since {@link AssetFileDescriptor}s are not yet supported by Robolectric, {@code null} will be\nreturned if the resource is found. If the resource cannot be found, {@link\nResources.NotFoundException} will be thrown.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -206,52 +216,13 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCreatedFromResId(android.content.res.Resources,int,android.graphics.drawable.Drawable)"
-    },
-    "setDensity(float)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "density"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setDensity(float)",
-      "documentation": "@deprecated Set screen density using {@link Config#qualifiers()} instead.\n"
-    },
-    "setDisplay(android.view.Display)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "display"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setDisplay(android.view.Display)",
-      "documentation": "@deprecated Set up display using {@link Config#qualifiers()} instead.\n"
-    },
-    "setScaledDensity(float)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "scaledDensity"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setScaledDensity(float)",
-      "documentation": "@deprecated Set screen density using {@link Config#qualifiers()} instead.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadows.ShadowAssetManager.legacyShadowOf",
     "android.content.res.AssetFileDescriptor",
     "android.content.res.AssetManager",
     "android.content.res.Configuration",
@@ -267,7 +238,6 @@
     "android.util.DisplayMetrics",
     "android.util.LongSparseArray",
     "android.util.TypedValue",
-    "android.view.Display",
     "java.io.FileInputStream",
     "java.io.IOException",
     "java.io.InputStream",
@@ -277,7 +247,6 @@
     "java.util.List",
     "java.util.Locale",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.annotation.Config",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

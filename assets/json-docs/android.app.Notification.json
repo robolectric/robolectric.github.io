@@ -191,6 +191,7 @@
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadows.ResourceHelper.getInternalResourceId",
+    "android.annotation.SuppressLint",
     "android.app.Notification",
     "android.graphics.Bitmap",
     "android.graphics.drawable.BitmapDrawable",
@@ -203,9 +204,9 @@
     "java.io.ByteArrayOutputStream",
     "java.io.PrintStream",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowNotification"
 }

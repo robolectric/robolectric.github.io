@@ -1,0 +1,8 @@
+{
+  "methods": {},
+  "imports": [
+    "com.example.objects.UniqueDummy",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.annotation.processing.shadows.ShadowUniqueDummy.ShadowInnerDummy"
+}

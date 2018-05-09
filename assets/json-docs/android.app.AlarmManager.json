@@ -205,9 +205,9 @@
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.List",
-    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm"
   ],
   "name": "org.robolectric.shadows.ShadowAlarmManager"

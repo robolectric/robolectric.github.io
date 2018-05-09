@@ -3,7 +3,7 @@
     "__constructor__(android.content.Context,android.util.AttributeSet,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -13,19 +13,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "__constructor__(android.content.Context,android.util.AttributeSet,int)"
-    },
-    "buildDrawable(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "resourceId"
-      ],
-      "returnType": "android.graphics.drawable.Drawable",
-      "exceptions": [],
-      "name": "buildDrawable(int)",
-      "documentation": "Build drawable, either LayerDrawable or BitmapDrawable.\n\n@param resourceId Resource id\n@return Drawable\n"
     },
     "callOnAttachedToWindow()": {
       "isImplementation": false,
@@ -83,16 +70,6 @@
       "name": "clickOn(android.view.View)",
       "documentation": "Calls {@code performClick()} on a {@code View} after ensuring that it and its ancestors are visible and that it\nis enabled.\n\n@param view the view to click on\n@return true if {@code View.OnClickListener}s were found and fired, false otherwise.\n@throws RuntimeException if the preconditions are not met.\n"
     },
-    "computeOpaqueFlags()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "computeOpaqueFlags()"
-    },
     "didRequestLayout()": {
       "isImplementation": false,
       "modifiers": [
@@ -116,7 +93,7 @@
     "draw(android.graphics.Canvas)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "canvas"
@@ -226,32 +203,10 @@
       "exceptions": [],
       "name": "getAttachInfo()"
     },
-    "getBackgroundColor()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getBackgroundColor()",
-      "documentation": "@return the color of this view\u0027s background, or 0 if it\u0027s not a solid color\n@deprecated Use FEST assertions instead.\n"
-    },
-    "getBackgroundResourceId()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getBackgroundResourceId()",
-      "documentation": "@return the resource ID of this view\u0027s background\n@deprecated Use FEST assertions instead.\n"
-    },
     "getDrawingCache()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.Bitmap",
@@ -261,7 +216,7 @@
     "getGlobalVisibleRect(android.graphics.Rect,android.graphics.Point)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "rect",
@@ -336,21 +291,10 @@
       "name": "getOnTouchListener()",
       "documentation": "@return Touch listener, if set.\n"
     },
-    "getQualifiers()": {
-      "isImplementation": false,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "getQualifiers()",
-      "documentation": "This will be removed in Robolectric 3.4 use {@link RuntimeEnvironment#getQualifiers()} instead, however\nthe correct way to configure qualifiers is using {@link Config#qualifiers()} so a constant can be used if this\nis important to your tests. However, qualifier strings are typically just used to initialize the test environment\nin a certain configuration. {@link android.content.res.Configuration} changes should be managed through\n{@link org.robolectric.android.controller.ActivityController#configurationChange(android.content.res.Configuration)}\n@deprecated\n"
-    },
     "getScrollX()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -360,7 +304,7 @@
     "getScrollY()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -370,7 +314,7 @@
     "getWindowId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.Object",
@@ -406,7 +350,7 @@
     "invalidate()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -428,7 +372,7 @@
     "isAttachedToWindow()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -448,7 +392,7 @@
     "onLayout(boolean,int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "changed",
@@ -474,7 +418,7 @@
     "onTouchEvent(android.view.MotionEvent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "event"
@@ -486,7 +430,7 @@
     "performHapticFeedback(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "hapticFeedbackType"
@@ -498,7 +442,7 @@
     "post(java.lang.Runnable)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "action"
@@ -510,7 +454,7 @@
     "postDelayed(java.lang.Runnable,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "action",
@@ -523,7 +467,7 @@
     "postInvalidateDelayed(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "delayMilliseconds"
@@ -535,7 +479,7 @@
     "removeCallbacks(java.lang.Runnable)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback"
@@ -547,7 +491,7 @@
     "requestLayout()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -557,7 +501,7 @@
     "scrollTo(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "x",
@@ -570,7 +514,7 @@
     "setAnimation(android.view.animation.Animation)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "animation"
@@ -618,7 +562,7 @@
     "setOnClickListener(android.view.View.OnClickListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "onClickListener"
@@ -630,7 +574,7 @@
     "setOnCreateContextMenuListener(android.view.View.OnCreateContextMenuListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "onCreateContextMenuListener"
@@ -642,7 +586,7 @@
     "setOnFocusChangeListener(android.view.View.OnFocusChangeListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "l"
@@ -654,7 +598,7 @@
     "setOnLongClickListener(android.view.View.OnLongClickListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "onLongClickListener"
@@ -666,7 +610,7 @@
     "setOnSystemUiVisibilityChangeListener(android.view.View.OnSystemUiVisibilityChangeListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "onSystemUiVisibilityChangeListener"
@@ -678,7 +622,7 @@
     "setOnTouchListener(android.view.View.OnTouchListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "onTouchListener"
@@ -690,7 +634,7 @@
     "setScrollX(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "scrollX"
@@ -702,7 +646,7 @@
     "setScrollY(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "scrollY"
@@ -751,18 +695,16 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.getField",
     "org.robolectric.util.ReflectionHelpers.setField",
+    "android.annotation.SuppressLint",
     "android.content.Context",
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.Point",
     "android.graphics.Rect",
-    "android.graphics.drawable.BitmapDrawable",
-    "android.graphics.drawable.ColorDrawable",
     "android.graphics.drawable.Drawable",
     "android.os.Looper",
     "android.os.RemoteException",
@@ -780,13 +722,11 @@
     "android.view.animation.Transformation",
     "java.io.PrintStream",
     "java.lang.reflect.Method",
-    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.android.AccessibilityUtil",
-    "org.robolectric.annotation.Config",
-    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.TimeUtils",

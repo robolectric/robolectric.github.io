@@ -26,6 +26,20 @@
       "exceptions": [],
       "name": "addActivityIcon(android.content.Intent,android.graphics.drawable.Drawable)"
     },
+    "addChangedPackage(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sequenceNumber",
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addChangedPackage(int,java.lang.String)",
+      "documentation": "Adds {@code packageName} to the list of changed packages for the particular {@code\nsequenceNumber}.\n\n@param sequenceNumber has to be \u003e\u003d 0\n@param packageName name of the package that was changed\n"
+    },
     "addCurrentToCannonicalName(java.lang.String,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -89,7 +103,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPackage(java.lang.String)",
-      "documentation": "@deprecated - use {@link #addPackage(PackageInfo)} instead "
+      "documentation": "@deprecated Use {@link #addPackage(PackageInfo)} instead. "
     },
     "addPackageInternal(android.content.pm.PackageParser.Package)": {
       "isImplementation": false,
@@ -115,7 +129,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPermissionGroupInfo(android.content.pm.PermissionGroupInfo)",
-      "documentation": "Allows overriding or adding permission-group elements. These would be otherwise specified by\neither (the system)[https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups]\nor by (the app itself)[https://developer.android.com/guide/topics/manifest/permission-group-element.html],\nas part of its manifest\n\n{@link android.content.pm.PackageParser.PermissionGroup}s added through this method have\nprecedence over those specified with the same name by one of the aforementioned methods.\n\n@see PackageManager#getAllPermissionGroups(int)\n@see PackageManager#getPermissionGroupInfo(String, int)\n"
+      "documentation": "Allows overriding or adding permission-group elements. These would be otherwise specified by\neither (the system)[https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups]\nor by (the app itself)[https://developer.android.com/guide/topics/manifest/permission-group-element.html],\nas part of its manifest\n\n\u003cp\u003e{@link android.content.pm.PackageParser.PermissionGroup}s added through this method have\nprecedence over those specified with the same name by one of the aforementioned methods.\n\n@see PackageManager#getAllPermissionGroups(int)\n@see PackageManager#getPermissionGroupInfo(String, int)\n"
     },
     "addPermissionInfo(android.content.pm.PermissionInfo)": {
       "isImplementation": false,
@@ -128,21 +142,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPermissionInfo(android.content.pm.PermissionInfo)"
-    },
-    "addPreferredActivity(android.content.IntentFilter,int,android.content.ComponentName[],android.content.ComponentName)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "filter",
-        "match",
-        "set",
-        "activity"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "addPreferredActivity(android.content.IntentFilter,int,android.content.ComponentName[],android.content.ComponentName)"
     },
     "addResolveInfoForIntent(android.content.Intent,android.content.pm.ResolveInfo)": {
       "isImplementation": false,
@@ -380,20 +379,6 @@
       "exceptions": [],
       "name": "getPackageName(android.content.pm.ResolveInfo)"
     },
-    "getPreferredActivities(java.util.List\u003candroid.content.IntentFilter\u003e,java.util.List\u003candroid.content.ComponentName\u003e,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "outFilters",
-        "outActivities",
-        "packageName"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getPreferredActivities(java.util.List\u003candroid.content.IntentFilter\u003e,java.util.List\u003candroid.content.ComponentName\u003e,java.lang.String)"
-    },
     "getVerificationExtendedTimeout(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -483,6 +468,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "removeResolveInfosForIntent(android.content.Intent,java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "resolvePackageName(java.lang.String,android.content.ComponentName)": {
       "isImplementation": false,
@@ -634,6 +630,7 @@
     "android.content.ComponentName",
     "android.content.Intent",
     "android.content.IntentFilter",
+    "android.content.IntentFilter.AuthorityEntry",
     "android.content.IntentSender",
     "android.content.pm.ApplicationInfo",
     "android.content.pm.FeatureInfo",
@@ -657,12 +654,17 @@
     "android.net.Uri",
     "android.os.Binder",
     "android.os.Build",
+    "android.os.Build.VERSION",
+    "android.os.Build.VERSION_CODES",
+    "android.os.PatternMatcher",
     "android.os.Process",
     "android.os.RemoteException",
     "android.os.UserHandle",
     "android.util.ArraySet",
     "android.util.Pair",
     "com.google.common.base.Preconditions",
+    "com.google.common.collect.HashMultimap",
+    "com.google.common.collect.Multimap",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.Collections",
@@ -673,14 +675,18 @@
     "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.Objects",
     "java.util.Set",
     "java.util.TreeMap",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.TempDirectory",
     "org.robolectric.shadows.ShadowPackageManager.IntentComparator",
+    "org.robolectric.shadows.ShadowPackageManager.IntentFilterWrapper",
+    "org.robolectric.shadows.ShadowPackageManager.ResolveInfoComparator",
     "org.robolectric.shadows.ShadowPackageManager.ComponentState"
   ],
   "name": "org.robolectric.shadows.ShadowPackageManager"
