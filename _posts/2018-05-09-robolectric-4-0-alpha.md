@@ -36,11 +36,15 @@ class OnDeviceTest {
 
 As you can see, many of the idioms common in instrumentation tests are now supported by Robolectric tests. In the near future we'll be expanding `androidx.test` support on Robolectric, as well as introducing some Robolectric-originated testing paradigms to traditional instrumentation tests.
 
-
-
 ### Binary Resources
 
 In conjunction with Android Studio 3.2, Robolectric can now use resources processed using the Android build toolchain, and loads and handles those resources using the same logic as on an actual Android device. Robolectric's old idiosyncratic resource handling mode is still available for projects not yet using the latest version of the build toolchain.
+
+To enable the use of toolchain-processed resources in Robolectric tests, add the following to your `gradle.properties`:
+
+```groovy
+android.enableUnitTestBinaryResources=true
+```
 
 ### Release Notes
 
