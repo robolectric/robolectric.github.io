@@ -12,7 +12,7 @@ We’re collaborating closely with the Android Jetpack testing team to develop c
 ```kotlin
 @RunWith(RobolectricTestRunner::class)
 class RobolectricTest {
-  @Test fun testTitle() {
+  @Test fun clickingOnTitle_shouldLaunchEditAction() {
     val activity = Robolectric.setupActivity(NoteListActivity::class.java)
     ShadowView.clickOn(activity.findViewById(R.id.title));
     assertThat(ShadowApplication.getInstance().peekNextStartedActivity().action)
@@ -27,7 +27,7 @@ class RobolectricTest {
 class OnDeviceTest {
   @get:Rule val rule = ActivityTestRule(NoteListActivity::class.java)
 
-  @Test fun testTitle() {
+  @Test fun clickingOnTitle_shouldLaunchEditAction() {
     onView(withId(R.id.button)).perform(click())
     intended(hasAction(equalTo("android.intent.action.EDIT")))
   }
