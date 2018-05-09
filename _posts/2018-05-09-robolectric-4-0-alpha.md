@@ -34,11 +34,19 @@ class OnDeviceTest {
 }
 ```
 
+As you can see, many of the idioms common in instrumentation tests are now supported by Robolectric tests. In the near future we'll be expanding `androidx.test` support on Robolectric, as well as introducing some Robolectric-originated testing paradigms to traditional instrumentation tests.
+
+
+
 ### Binary Resources
 
-In conjunction with Android Studio 3.2, Robolectric now uses resources processed using the Android build toolchain, and loads and handles those resources using the same logic as on an actual Android device.
+In conjunction with Android Studio 3.2, Robolectric can now use resources processed using the Android build toolchain, and loads and handles those resources using the same logic as on an actual Android device. Robolectric's old idiosyncratic resource handling mode is still available for projects not yet using the latest version of the build toolchain.
 
-Robolectric 4.0 is currently in alpha release, meaning that it is not yet feature-complete, and APIs are likely to change before the final release. Use with caution.
+### Release Notes
+
+Release notes are [available here](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.0-alpha-1). Robolectric 4.0 is currently in alpha release, meaning that it is not yet feature-complete, and APIs are likely to change before the final release. Use with caution.
+
+---
 
 As always, thanks for your pull requests, bug reports, ideas and questions! &#x1f4af;
 
