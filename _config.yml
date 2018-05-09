@@ -30,6 +30,7 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor
 
 menu:
   - title: Setup
