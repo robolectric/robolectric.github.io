@@ -38,6 +38,8 @@ class OnDeviceTest {
 
 In conjunction with Android Studio 3.2, Robolectric now uses resources processed using the Android build toolchain, and loads and handles those resources using the same logic as on an actual Android device.
 
+Robolectric 4.0 is currently in alpha release, meaning that it is not yet feature-complete, and APIs are likely to change before the final release. Use with caution.
+
 As always, thanks for your pull requests, bug reports, ideas and questions! &#x1f4af;
 
 _Your Robolectric maintainers,_
