@@ -40,7 +40,7 @@ As you can see, many of the idioms common in instrumentation tests are now suppo
 
 In conjunction with Android Studio 3.2, Robolectric can now use resources processed using the Android build toolchain, and loads and handles those resources using the same logic as on an actual Android device. Robolectric's old idiosyncratic resource handling mode is still available for projects not yet using the latest version of the build toolchain.
 
-To enable the use of toolchain-processed resources in Robolectric tests, add the following to your `gradle.properties`:
+To enable the use of toolchain-processed resources in Robolectric tests, make sure you're using Android Gradle Plugin version `com.android.tools.build:gradle:3.2.0-alpha14` or higher, and add the following to your `gradle.properties`:
 
 ```groovy
 android.enableUnitTestBinaryResources=true
