@@ -1,6 +1,6 @@
 ---
 title: Shadows
-group: Customizing
+group: Contributing
 order: 1
 redirect_from: 
   - /custom-shadows/
