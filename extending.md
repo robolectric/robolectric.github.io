@@ -62,9 +62,9 @@ public class ShadowImageView extends ShadowView {
 
 Robolectric supports shadowing all methods on the original class, including `private`, `static`, `final` or `native`.
 
-Typically `@Implementation` methods should also have the protected modifier. The intention is to reduce the API surface area of the Shadows and the test author should prefer calling such methods on the Android framework class directly.
+Typically `@Implementation` methods should also have the `protected` modifier. The intention is to reduce the API surface area of the Shadows; the test author should always call such methods on the Android framework class directly.
 
-It is important Shadow methods are implemented on the corresponding Shadow of the class in which they were originally defined. Otherwise Robolectric's lookup mechanism will not find them (even if they have been declared on a Shadow subclass.) For example, the method `setEnabled()` is defined on View. If a `setEnabled()` method is defined on `ShadowViewGroup` instead of `ShadowView` then it will not be found at run time even when `setEnabled()` is called on an instance of `ViewGroup`. 
+It is important that shadow methods are implemented on the corresponding shadow of the class in which they were originally defined. Otherwise Robolectric's lookup mechanism will not find them (even if they have been declared on a shadow subclass.) For example, the method `setEnabled()` is defined on `View`. If a `setEnabled()` method is defined on `ShadowViewGroup` instead of `ShadowView` then it will not be found at run time even when `setEnabled()` is called on an instance of `ViewGroup`.
 
 ### Shadowing Constructors
 
@@ -173,6 +173,7 @@ dependencies {
     ...
 }
 ```
+
 ## Best practices
 
 ### Limit API surface area of shadows.
