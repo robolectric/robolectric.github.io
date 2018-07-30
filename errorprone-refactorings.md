@@ -1,10 +1,10 @@
 ---
-title: ShadowUsageCheck
-page_title: ShadowUsageCheck
+title: Automatic Refactorings
+page_title: Automatic Refactorings
 group: [hide]
 ---
 ## Background
-Robolectric's APIs were very ad hoc for a while, so we're in the process of cleaning up a bunch of old, dubious decisions. Some of these changes require changes to test code. ErrorProne offers the ability to suggest or perform refactorings on existing code.
+Robolectric's APIs were very ad hoc for a while, so we're in the process of cleaning up a bunch of old, dubious decisions. Some of these changes require changes to test code. (ErrorProne)[https://errorprone.info/] offers the ability to suggest or perform refactorings on existing code.
 
 We’re introducing a set of ErrorProne refactorings to help test authors keep current with changes to Robolectric’s APIs, and to recommend best practices in writing tests. We anticipate keeping these current with ongoing Robolectric releases.
 
