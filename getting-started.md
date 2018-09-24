@@ -41,6 +41,8 @@ Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel inte
 
 Robolectric needs to be added as a dependency to your Bazel project. Add the following to your WORKSPACE file:
 ```python
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
 http_archive(
  name = "robolectric",
  urls = ["https://github.com/robolectric/robolectric-bazel/archive/robolectric-bazel-<VERSION>.tar.gz"],
