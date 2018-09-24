@@ -43,13 +43,15 @@ Robolectric needs to be added as a dependency to your Bazel project. Add the fol
 ```python
 http_archive(
  name = "robolectric",
- urls = ["https://github.com/robolectric/robolectric/archive/<COMMIT>.tar.gz"],
- strip_prefix = "robolectric-<COMMIT>",
+ urls = ["https://github.com/robolectric/robolectric-bazel/archive/robolectric-bazel-<VERSION>.tar.gz"],
+ strip_prefix = "robolectric-<VERSION>",
  sha256 = "<HASH>",
 )
-load("@robolectric//bazel:setup_robolectric.bzl", "setup_robolectric")
-setup_robolectric()
+load("@robolectric//bazel:setup_robolectric.bzl", "robolectric_repositories")
+robolectric_repositories()
 ```
+
+Currently supported versions are 3.8 and 4.0-alpha-3.
 
 Add an android_local_test rule to your BUILD file:
 ```python
