@@ -41,15 +41,19 @@ Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel inte
 
 Robolectric needs to be added as a dependency to your Bazel project. Add the following to your WORKSPACE file:
 ```python
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
 http_archive(
  name = "robolectric",
- urls = ["https://github.com/robolectric/robolectric/archive/<COMMIT>.tar.gz"],
- strip_prefix = "robolectric-<COMMIT>",
- sha256 = "<HASH>",
+ urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.0-alpha-3.tar.gz"],
+ strip_prefix = "robolectric-bazel-4.0-alpha-3",
+ sha256 = "7730b46281c2f8c23f6c045ddfe449bf077328f0128200043a5ac57210643f22",
 )
-load("@robolectric//bazel:setup_robolectric.bzl", "setup_robolectric")
-setup_robolectric()
+load("@robolectric//bazel:setup_robolectric.bzl", "robolectric_repositories")
+robolectric_repositories()
 ```
+
+Robolectric version 3.8 is also supported.
 
 Add an android_local_test rule to your BUILD file:
 ```python
