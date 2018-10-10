@@ -35,7 +35,7 @@ For unspecified properties, Robolectric picks consistent values based on the pro
 | Wide color gamut | None. | `nowidecg` | |
 | High dynamic range | None. | `lowdr` | |
 | Screen orientation | If width and height are specified, port or land as appropriate. | `port` | |
-| UI mode          | None. | None | |
+| UI mode          | None. | | `normal`, except this property isn't included in the qualifier list. |
 | Night mode       | None. | `notnight` | |
 | Screen pixel density | None. | `mdpi` | |
 | Touchscreen type | None. | `finger` | |
