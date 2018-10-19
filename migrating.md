@@ -157,6 +157,7 @@ class MyCustomPackageManager extends ShadowApplicationPackageManager {
 If you are using a custom subclass of `DefaultPackageManager` to implement functionality missing in Robolectric, check again as part of this work we've added support for a bunch more widely-used `PackageManager` features and it might be now possible to completely remove your custom subclass.
 
 ### Deprecated Classes & Methods
+
 | 3.2 (now `@Deprecated`)                                     | 3.3                                                            |
 | ----------------------------------------------------------- | -------------------------------------------------------------- |
 | `org.robolectric.res.builder.RobolectricPackageManager`     | `org.robolectric.shadows.ShadowPackageManager`                 |
