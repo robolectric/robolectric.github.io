@@ -61,7 +61,7 @@ Robolectric 4.0 includes initial support for [`androidx.test` APIs](https://deve
 
 | 3.8                                                     | 4.0                                                            |
 | ------------------------------------------------------- | -------------------------------------------------------------- |
-| `ShadowApplication.getInstance()`                       | [`ApplicationProvider.getApplicationContext()`](https://developer.android.com/reference/androidx/test/core/app/ApplicationProvider) |
+| `RuntimeEnvironment.application`                        | [`ApplicationProvider.getApplicationContext()`](https://developer.android.com/reference/androidx/test/core/app/ApplicationProvider) |
 | `ShadowMotionEvent`                                     | [`MotionEventBuilder`](https://developer.android.com/reference/androidx/test/core/view/MotionEventBuilder) |
 
 ### Troubleshooting
