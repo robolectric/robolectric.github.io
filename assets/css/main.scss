@@ -231,6 +231,10 @@ code {
     white-space: pre-wrap;
 }
 
+a code {
+    color: _palette(srclink);
+}
+
 .post {
 	h3 {
 		margin: 0;
@@ -269,5 +273,9 @@ code {
 		a {
 			color: _palette(fg);
 		}
+	}
+
+	.toclevel-2 {
+	    font-size: 0.9em;
 	}
 }

@@ -79,4 +79,5 @@ defaults:
 robolectric:
   version:
     current: "3.8"
+    preview: "4.0-beta-1"
     snapshot: "4.0-beta-2-SNAPSHOT"

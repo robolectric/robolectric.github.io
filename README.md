@@ -19,7 +19,7 @@ The above command may require `sudo`.
 Then run:
 
     bundle install
-    bundle exec jekyll server
+    bundle exec jekyll server --incremental
   
 This will build the docs and make them available at [localhost:4000](http://localhost:4000). Once
 your pull request is accepted, the docs will be automatically built and pushed to the web by GitHub.
