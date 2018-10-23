@@ -1,18 +1,17 @@
 ---
 title: Automated Migration
-page_title: Robolectric Automated Migration
 group: [hide]
 order: 7
 toc: true
 ---
 
-## Automated Migration
+# Automated Migration
 
 Robolectric provides an automated migration tool to help keep your test suite up to date with Robolectric API changes. It's based on [Error Prone](https://errorprone.info/docs/patching)'s refactoring tools.
 
 The migration tool will make changes directly to source files in your codebase, which you can review and commit to your source control system.
 
-Before updating your dependencies to the new version of Robolectric:
+***Before*** updating your dependencies to the new version of Robolectric:
 
 1. Make sure you're using a recent version of Gradle (4.10 or newer).
 
