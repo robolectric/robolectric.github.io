@@ -29,6 +29,8 @@ Put this in your `gradle.properties`:
 android.enableUnitTestBinaryResources=true
 ```
 
+If you have dependencies on `com.android.support.test`, switch them to `androidx.test`; see (Migrating to AndroidX)[https://developer.android.com/jetpack/androidx/migrate].
+
 ### Deprecations
 
 | 3.8                                                     | 4.0                                                            |
