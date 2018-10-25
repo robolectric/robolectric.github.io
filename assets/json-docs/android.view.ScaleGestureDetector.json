@@ -3,7 +3,7 @@
     "__constructor__(android.content.Context,android.view.ScaleGestureDetector.OnScaleGestureListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -16,7 +16,7 @@
     "getFocusX()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "float",
@@ -26,7 +26,7 @@
     "getFocusY()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "float",
@@ -56,7 +56,7 @@
     "getScaleFactor()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "float",
@@ -66,7 +66,7 @@
     "onTouchEvent(android.view.MotionEvent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "event"

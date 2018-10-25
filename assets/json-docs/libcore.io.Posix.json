@@ -1,5 +1,20 @@
 {
   "methods": {
+    "fstat(java.io.FileDescriptor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fd"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [
+        "android.system.ErrnoException"
+      ],
+      "name": "fstat(java.io.FileDescriptor)"
+    },
     "mkdir(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -37,6 +52,7 @@
     "android.system.ErrnoException",
     "android.system.StructStat",
     "java.io.File",
+    "java.io.FileDescriptor",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

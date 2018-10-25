@@ -46,16 +46,6 @@
       "exceptions": [],
       "name": "equals(java.lang.Object)"
     },
-    "getClassName()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "java.lang.CharSequence",
-      "exceptions": [],
-      "name": "getClassName()"
-    },
     "getClone()": {
       "isImplementation": false,
       "modifiers": [
@@ -66,16 +56,6 @@
       "exceptions": [],
       "name": "getClone()",
       "documentation": "@return A shallow copy.\n"
-    },
-    "getContentDescription()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "java.lang.CharSequence",
-      "exceptions": [],
-      "name": "getContentDescription()"
     },
     "getEventType()": {
       "isImplementation": true,
@@ -106,16 +86,6 @@
       "returnType": "int",
       "exceptions": [],
       "name": "hashCode()"
-    },
-    "isEnabled()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "isEnabled()"
     },
     "obtain()": {
       "isImplementation": true,
@@ -175,42 +145,6 @@
       "exceptions": [],
       "name": "resetObtainedInstances()",
       "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledNodes} will always\nreturn false if called immediately afterwards.\n"
-    },
-    "setClassName(java.lang.CharSequence)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "name"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setClassName(java.lang.CharSequence)"
-    },
-    "setContentDescription(java.lang.CharSequence)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "description"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setContentDescription(java.lang.CharSequence)"
-    },
-    "setEnabled(boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "value"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setEnabled(boolean)"
     },
     "setEventType(int)": {
       "isImplementation": true,

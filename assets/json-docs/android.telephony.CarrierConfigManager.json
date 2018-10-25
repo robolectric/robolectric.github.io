@@ -1,0 +1,41 @@
+{
+  "methods": {
+    "getConfigForSubId(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subId"
+      ],
+      "returnType": "android.os.PersistableBundle",
+      "exceptions": [],
+      "name": "getConfigForSubId(int)",
+      "documentation": "Returns {@link android.os.PersistableBundle} previously set by {@link #setConfigForSubId(int)},\nor default values for an invalid {@code subId}.\n"
+    },
+    "setConfigForSubId(int,android.os.PersistableBundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "subId",
+        "config"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConfigForSubId(int,android.os.PersistableBundle)",
+      "documentation": "Sets that the {@code config} PersistableBundle for a particular {@code subId}; controls the\nreturn value of {@link CarrierConfigManager#getConfigForSubId()}.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.PersistableBundle",
+    "android.telephony.CarrierConfigManager",
+    "android.util.SparseArray",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowCarrierConfigManager",
+  "documentation": "Shadow for {@link CarrierConfigManager}. "
+}

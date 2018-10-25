@@ -1,0 +1,57 @@
+{
+  "methods": {
+    "addCamera(java.lang.String,android.hardware.camera2.CameraCharacteristics)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cameraId",
+        "characteristics"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addCamera(java.lang.String,android.hardware.camera2.CameraCharacteristics)",
+      "documentation": "Adds the given cameraId and characteristics to this shadow.\n\n\u003cp\u003eThe result from {@link #getCameraIdList()} will be in the order in which cameras were added.\n\n@throws IllegalArgumentException if there\u0027s already an existing camera with the given id.\n"
+    },
+    "getCameraCharacteristics(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cameraId"
+      ],
+      "returnType": "android.hardware.camera2.CameraCharacteristics",
+      "exceptions": [],
+      "name": "getCameraCharacteristics(java.lang.String)"
+    },
+    "getCameraIdList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String[]",
+      "exceptions": [
+        "android.hardware.camera2.CameraAccessException"
+      ],
+      "name": "getCameraIdList()"
+    }
+  },
+  "imports": [
+    "android.annotation.NonNull",
+    "android.hardware.camera2.CameraAccessException",
+    "android.hardware.camera2.CameraCharacteristics",
+    "android.hardware.camera2.CameraManager",
+    "android.os.Build.VERSION_CODES",
+    "com.google.common.base.Preconditions",
+    "java.util.LinkedHashMap",
+    "java.util.Map",
+    "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowCameraManager",
+  "documentation": "Shadow for {@link CameraManager}. "
+}

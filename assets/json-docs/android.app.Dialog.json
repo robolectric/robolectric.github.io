@@ -64,7 +64,7 @@
     "dismiss()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -157,7 +157,7 @@
     "setCanceledOnTouchOutside(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "flag"
@@ -182,7 +182,7 @@
     "setOnCancelListener(android.content.DialogInterface.OnCancelListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -194,7 +194,7 @@
     "show()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",

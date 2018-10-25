@@ -3,7 +3,7 @@
     "addTextChangedListener(android.text.TextWatcher)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "watcher"
@@ -77,7 +77,7 @@
     "getPaintFlags()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -153,7 +153,7 @@
     "onKeyDown(int,android.view.KeyEvent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "keyCode",
@@ -166,7 +166,7 @@
     "onKeyUp(int,android.view.KeyEvent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "keyCode",
@@ -179,7 +179,7 @@
     "removeTextChangedListener(android.text.TextWatcher)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "watcher"
@@ -191,7 +191,7 @@
     "setCompoundDrawablesWithIntrinsicBounds(int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "left",
@@ -206,7 +206,7 @@
     "setOnEditorActionListener(android.widget.TextView.OnEditorActionListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "l"
@@ -218,7 +218,7 @@
     "setPaintFlags(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "paintFlags"
@@ -230,7 +230,7 @@
     "setTextAppearance(android.content.Context,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",

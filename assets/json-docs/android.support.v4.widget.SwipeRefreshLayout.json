@@ -14,7 +14,7 @@
     "setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"

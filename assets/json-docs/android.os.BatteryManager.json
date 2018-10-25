@@ -3,7 +3,7 @@
     "getIntProperty(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id"
@@ -16,7 +16,7 @@
     "getLongProperty(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id"
@@ -29,7 +29,7 @@
     "isCharging()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",

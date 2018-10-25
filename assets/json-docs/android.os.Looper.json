@@ -3,7 +3,7 @@
     "__constructor__(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "quitAllowed"
@@ -38,7 +38,7 @@
     "getMainLooper()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -66,7 +66,8 @@
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowLooper",
       "exceptions": [],
-      "name": "getShadowMainLooper()"
+      "name": "getShadowMainLooper()",
+      "documentation": "@deprecated Use `shadowOf({@link Looper#getMainLooper()})` instead. "
     },
     "hasQuit()": {
       "isImplementation": false,
@@ -193,7 +194,7 @@
     "loop()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -204,7 +205,7 @@
     "myLooper()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -276,7 +277,7 @@
     "quit()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -286,7 +287,7 @@
     "quitSafely()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",

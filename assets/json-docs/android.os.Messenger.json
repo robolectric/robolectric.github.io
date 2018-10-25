@@ -3,7 +3,7 @@
     "__constructor__(android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "handler"
@@ -12,10 +12,56 @@
       "exceptions": [],
       "name": "__constructor__(android.os.Handler)"
     },
+    "__constructor__(android.os.IBinder)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "target"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.os.IBinder)"
+    },
+    "clearLastMessageSent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLastMessageSent()",
+      "documentation": "Clears the last {@link Message} sent. "
+    },
+    "getBinder()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.IBinder",
+      "exceptions": [],
+      "name": "getBinder()"
+    },
+    "getLastMessageSent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.os.Message",
+      "exceptions": [],
+      "name": "getLastMessageSent()",
+      "documentation": "Returns the last {@link Message} sent, or {@code null} if there isn\u0027t any message sent. "
+    },
     "send(android.os.Message)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "message"
@@ -28,12 +74,17 @@
     }
   },
   "imports": [
+    "android.os.Binder",
     "android.os.Handler",
+    "android.os.IBinder",
     "android.os.Message",
     "android.os.Messenger",
     "android.os.RemoteException",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowMessenger.FakeBinder"
   ],
   "name": "org.robolectric.shadows.ShadowMessenger"
 }

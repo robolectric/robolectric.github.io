@@ -3,7 +3,7 @@
     "addTab(android.widget.TabHost.TabSpec)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "tabSpec"
@@ -15,7 +15,7 @@
     "getCurrentTab()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -35,7 +35,7 @@
     "getCurrentTabTag()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -45,7 +45,7 @@
     "getCurrentView()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.View",
@@ -67,7 +67,7 @@
     "getTabWidget()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.widget.TabWidget",
@@ -77,7 +77,7 @@
     "newTabSpec(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "tag"
@@ -89,7 +89,7 @@
     "setCurrentTab(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "index"
@@ -101,7 +101,7 @@
     "setCurrentTabByTag(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "tag"
@@ -113,7 +113,7 @@
     "setOnTabChangedListener(android.widget.TabHost.OnTabChangeListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"

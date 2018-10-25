@@ -1,0 +1,56 @@
+{
+  "methods": {
+    "\u003cT\u003eget(android.hardware.camera2.CameraCharacteristics.Key\u003cT\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "key"
+      ],
+      "returnType": "T",
+      "exceptions": [],
+      "name": "\u003cT\u003eget(android.hardware.camera2.CameraCharacteristics.Key\u003cT\u003e)"
+    },
+    "\u003cT\u003eset(android.hardware.camera2.CameraCharacteristics.Key\u003cT\u003e,java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "key",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "\u003cT\u003eset(android.hardware.camera2.CameraCharacteristics.Key\u003cT\u003e,java.lang.Object)",
+      "documentation": "Sets the value for a given key.\n\n@throws IllegalArgumentException if there\u0027s an existing value for the key.\n"
+    },
+    "newCameraCharacteristics()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.hardware.camera2.CameraCharacteristics",
+      "exceptions": [],
+      "name": "newCameraCharacteristics()",
+      "documentation": "Convenience method which returns a new instance of {@link CameraCharacteristics}. "
+    }
+  },
+  "imports": [
+    "android.annotation.Nullable",
+    "android.hardware.camera2.CameraCharacteristics",
+    "android.hardware.camera2.CameraCharacteristics.Key",
+    "android.os.Build.VERSION_CODES",
+    "com.google.common.base.Preconditions",
+    "java.util.HashMap",
+    "java.util.Map",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowCameraCharacteristics",
+  "documentation": "Shadow for {@link CameraCharacteristics}. "
+}

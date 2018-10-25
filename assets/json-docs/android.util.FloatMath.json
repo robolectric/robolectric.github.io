@@ -3,7 +3,7 @@
     "ceil(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -16,7 +16,7 @@
     "cos(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -29,7 +29,7 @@
     "floor(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -42,7 +42,7 @@
     "sin(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -55,7 +55,7 @@
     "sqrt(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

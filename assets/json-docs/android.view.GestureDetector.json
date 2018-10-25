@@ -3,7 +3,7 @@
     "__constructor__(android.content.Context,android.view.GestureDetector.OnGestureListener,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -58,7 +58,7 @@
     "onTouchEvent(android.view.MotionEvent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "ev"
@@ -80,7 +80,7 @@
     "setOnDoubleTapListener(android.view.GestureDetector.OnDoubleTapListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "onDoubleTapListener"

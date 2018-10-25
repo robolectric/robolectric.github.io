@@ -3,7 +3,7 @@
     "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -87,7 +87,7 @@
     "shutdown()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -107,12 +107,13 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 21,
       "name": "speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)"
     },
     "speak(java.lang.String,int,java.util.HashMap\u003cjava.lang.String,java.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "text",
@@ -135,6 +136,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.content.Context",
     "android.os.Bundle",
     "android.speech.tts.TextToSpeech",

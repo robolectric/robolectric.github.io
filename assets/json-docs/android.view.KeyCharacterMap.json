@@ -3,7 +3,7 @@
     "get(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "keyCode",
@@ -28,7 +28,7 @@
     "getEvents(char[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "charArray"
@@ -40,7 +40,7 @@
     "getKeyboardType()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -62,7 +62,7 @@
     "load(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

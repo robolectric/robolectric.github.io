@@ -3,7 +3,7 @@
     "acquire()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -13,7 +13,7 @@
     "acquire(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "synchronized"
       ],
       "params": [
@@ -37,7 +37,7 @@
     "isHeld()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "synchronized"
       ],
       "params": [],
@@ -59,7 +59,7 @@
     "release()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "synchronized"
       ],
       "params": [],
@@ -70,7 +70,7 @@
     "setReferenceCounted(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "value"
@@ -82,7 +82,7 @@
     "setWorkSource(android.os.WorkSource)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "synchronized"
       ],
       "params": [
@@ -94,13 +94,15 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.shadows.ShadowApplication.getInstance",
     "android.os.PowerManager",
     "android.os.WorkSource",
+    "com.google.common.collect.ImmutableList",
+    "java.util.ArrayList",
     "java.util.HashMap",
+    "java.util.List",
     "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",

@@ -3,7 +3,7 @@
     "loadLabel(android.content.pm.PackageManager)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "mgr"

@@ -3,7 +3,7 @@
     "__constructor__(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri"
@@ -20,7 +20,7 @@
     "__constructor__(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "count"

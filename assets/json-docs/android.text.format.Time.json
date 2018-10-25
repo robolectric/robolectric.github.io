@@ -3,7 +3,7 @@
     "__constructor__()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -14,7 +14,7 @@
     "__constructor__(android.text.format.Time)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "other"
@@ -27,7 +27,7 @@
     "__constructor__(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "timezone"
@@ -40,7 +40,7 @@
     "after(android.text.format.Time)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "other"
@@ -53,7 +53,7 @@
     "before(android.text.format.Time)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "other"
@@ -66,7 +66,7 @@
     "clear(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "timezone"
@@ -79,7 +79,7 @@
     "compare(android.text.format.Time,android.text.format.Time)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -94,7 +94,7 @@
     "format(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "format"
@@ -107,7 +107,7 @@
     "format2445()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -118,7 +118,7 @@
     "format3339(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "allDay"
@@ -141,7 +141,7 @@
     "getCurrentTimezone()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -153,7 +153,7 @@
     "getJulianDay(long,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -168,7 +168,7 @@
     "isEpoch(android.text.format.Time)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -182,7 +182,7 @@
     "parse(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "timeString"
@@ -195,7 +195,7 @@
     "parse3339(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "rfc3339String"
@@ -208,7 +208,7 @@
     "set(android.text.format.Time)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "other"
@@ -221,7 +221,7 @@
     "set(int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "monthDay",
@@ -236,7 +236,7 @@
     "set(int,int,int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "second",
@@ -254,7 +254,7 @@
     "set(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "millis"
@@ -267,7 +267,7 @@
     "setJulianDay(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "julianDay"
@@ -280,7 +280,7 @@
     "setToNow()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -291,7 +291,7 @@
     "switchTimezone(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "timezone"
@@ -316,7 +316,7 @@
     "toMillis(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "ignoreDst"

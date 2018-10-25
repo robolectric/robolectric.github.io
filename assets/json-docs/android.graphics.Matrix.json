@@ -3,7 +3,7 @@
     "__constructor__(android.graphics.Matrix)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "src"
@@ -23,6 +23,16 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "equals(java.lang.Object)"
+    },
+    "getAffineTransform()": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.awt.geom.AffineTransform",
+      "exceptions": [],
+      "name": "getAffineTransform()"
     },
     "getDescription()": {
       "isImplementation": false,
@@ -83,7 +93,7 @@
     "getValues(float[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "values"
@@ -91,6 +101,14 @@
       "returnType": "void",
       "exceptions": [],
       "name": "getValues(float[])"
+    },
+    "hasPerspective()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasPerspective()"
     },
     "hashCode()": {
       "isImplementation": true,
@@ -100,12 +118,13 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 19,
       "name": "hashCode()"
     },
     "invert(android.graphics.Matrix)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "inverse"
@@ -117,17 +136,18 @@
     "isAffine()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 21,
       "name": "isAffine()"
     },
     "isIdentity()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -178,7 +198,7 @@
     "mapRect(android.graphics.RectF,android.graphics.RectF)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "destination",
@@ -207,7 +227,7 @@
     "postConcat(android.graphics.Matrix)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "other"
@@ -231,7 +251,7 @@
     "postRotate(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "degrees"
@@ -243,7 +263,7 @@
     "postRotate(float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "degrees",
@@ -257,7 +277,7 @@
     "postScale(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sx",
@@ -270,7 +290,7 @@
     "postScale(float,float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sx",
@@ -285,7 +305,7 @@
     "postSkew(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "kx",
@@ -298,7 +318,7 @@
     "postSkew(float,float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "kx",
@@ -313,7 +333,7 @@
     "postTranslate(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dx",
@@ -326,7 +346,7 @@
     "preConcat(android.graphics.Matrix)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "other"
@@ -350,7 +370,7 @@
     "preRotate(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "degrees"
@@ -362,7 +382,7 @@
     "preRotate(float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "degrees",
@@ -376,7 +396,7 @@
     "preScale(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sx",
@@ -389,7 +409,7 @@
     "preScale(float,float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sx",
@@ -404,7 +424,7 @@
     "preSkew(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "kx",
@@ -417,7 +437,7 @@
     "preSkew(float,float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "kx",
@@ -432,7 +452,7 @@
     "preTranslate(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dx",
@@ -445,7 +465,7 @@
     "rectStaysRect()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -455,7 +475,7 @@
     "reset()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -465,7 +485,7 @@
     "set(android.graphics.Matrix)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "src"
@@ -477,7 +497,7 @@
     "setConcat(android.graphics.Matrix,android.graphics.Matrix)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "a",
@@ -490,7 +510,7 @@
     "setRotate(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "degrees"
@@ -502,7 +522,7 @@
     "setRotate(float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "degrees",
@@ -516,7 +536,7 @@
     "setScale(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sx",
@@ -529,7 +549,7 @@
     "setScale(float,float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sx",
@@ -544,7 +564,7 @@
     "setSinCos(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sinValue",
@@ -557,7 +577,7 @@
     "setSinCos(float,float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sinValue",
@@ -572,7 +592,7 @@
     "setSkew(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "kx",
@@ -585,7 +605,7 @@
     "setSkew(float,float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "kx",
@@ -600,7 +620,7 @@
     "setTranslate(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dx",
@@ -613,7 +633,7 @@
     "setValues(float[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "values"
@@ -624,9 +644,12 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.graphics.Matrix",
     "android.graphics.PointF",
     "android.graphics.RectF",
+    "java.awt.geom.AffineTransform",
     "java.util.ArrayDeque",
     "java.util.ArrayList",
     "java.util.Arrays",

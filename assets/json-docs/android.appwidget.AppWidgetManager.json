@@ -55,7 +55,7 @@
     "bindAppWidgetIdIfAllowed(int,android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "appWidgetId",
@@ -133,7 +133,7 @@
     "getAppWidgetIds(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "provider"
@@ -145,7 +145,7 @@
     "getAppWidgetInfo(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "appWidgetId"
@@ -170,7 +170,7 @@
     "getInstalledProviders()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.appwidget.AppWidgetProviderInfo\u003e",
@@ -180,7 +180,7 @@
     "getInstance(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -270,7 +270,7 @@
     "updateAppWidget(int,android.widget.RemoteViews)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "appWidgetId",
@@ -279,12 +279,12 @@
       "returnType": "void",
       "exceptions": [],
       "name": "updateAppWidget(int,android.widget.RemoteViews)",
-      "documentation": "Simulates updating an {@code AppWidget} with a new set of views\n\n@param appWidgetId id of widget\n@param views       views to update\n"
+      "documentation": "Simulates updating an {@code AppWidget} with a new set of views\n\n@param appWidgetId id of widget\n@param views views to update\n"
     },
     "updateAppWidget(int[],android.widget.RemoteViews)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "appWidgetIds",

@@ -27,7 +27,7 @@
     "createFromPath(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -53,7 +53,7 @@
     "createFromResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,java.lang.String,android.graphics.BitmapFactory.Options)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -70,7 +70,7 @@
     "createFromStream(java.io.InputStream,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -81,26 +81,15 @@
       "exceptions": [],
       "name": "createFromStream(java.io.InputStream,java.lang.String)"
     },
-    "equals(java.lang.Object)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "o"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "equals(java.lang.Object)"
-    },
     "getAlpha()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 19,
       "name": "getAlpha()"
     },
     "getCreatedFromResId()": {
@@ -126,7 +115,7 @@
     "getIntrinsicHeight()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -136,27 +125,17 @@
     "getIntrinsicWidth()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
       "name": "getIntrinsicWidth()"
     },
-    "hashCode()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "hashCode()"
-    },
     "invalidateSelf()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -166,7 +145,7 @@
     "setAlpha(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "alpha"
@@ -247,6 +226,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
     "android.graphics.BitmapFactory",

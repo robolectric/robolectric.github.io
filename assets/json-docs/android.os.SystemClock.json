@@ -1,5 +1,17 @@
 {
   "methods": {
+    "currentNetworkTimeMillis()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "currentNetworkTimeMillis()"
+    },
     "currentThreadTimeMicro()": {
       "isImplementation": true,
       "modifiers": [
@@ -14,7 +26,7 @@
     "currentThreadTimeMillis()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -48,13 +60,25 @@
     "elapsedRealtime()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
       "returnType": "long",
       "exceptions": [],
       "name": "elapsedRealtime()"
+    },
+    "elapsedRealtimeNanos()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "elapsedRealtimeNanos()"
     },
     "nanoTime()": {
       "isImplementation": false,
@@ -78,10 +102,21 @@
       "exceptions": [],
       "name": "now()"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "setCurrentTimeMillis(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -104,10 +139,24 @@
       "exceptions": [],
       "name": "setNanoTime(long)"
     },
+    "setNetworkTimeAvailable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "available"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkTimeAvailable(boolean)",
+      "documentation": "Sets whether network time is available. "
+    },
     "sleep(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -120,7 +169,7 @@
     "uptimeMillis()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -130,10 +179,14 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.P",
     "android.os.SystemClock",
+    "java.time.DateTimeException",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
   ],
   "name": "org.robolectric.shadows.ShadowSystemClock",
   "documentation": "Robolectric\u0027s concept of current time is base on the current time of the UI Scheduler for\nconsistency with previous implementations. This is not ideal, since both schedulers\n(background and foreground), can see different values for the current time.\n"

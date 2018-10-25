@@ -3,7 +3,7 @@
     "addGpsStatusListener(android.location.GpsStatus.Listener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -67,7 +67,7 @@
     "getAllProviders()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.String\u003e",
@@ -77,7 +77,7 @@
     "getBestProvider(android.location.Criteria,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "criteria",
@@ -112,6 +112,16 @@
       "exceptions": [],
       "name": "getBestProviderWithNoCriteria(boolean)"
     },
+    "getContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getContext()"
+    },
     "getLastBestProviderCriteria()": {
       "isImplementation": false,
       "modifiers": [
@@ -137,7 +147,7 @@
     "getLastKnownLocation(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "provider"
@@ -149,7 +159,7 @@
     "getProviders(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "enabledOnly"
@@ -213,10 +223,23 @@
       "exceptions": [],
       "name": "hasGpsStatusListener(android.location.GpsStatus.Listener)"
     },
+    "isLocationEnabledForUser(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "isLocationEnabledForUser(android.os.UserHandle)"
+    },
     "isProviderEnabled(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "provider"
@@ -241,7 +264,7 @@
     "removeGpsStatusListener(android.location.GpsStatus.Listener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -253,7 +276,7 @@
     "removeUpdates(android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "pendingIntent"
@@ -265,7 +288,7 @@
     "removeUpdates(android.location.LocationListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -277,7 +300,7 @@
     "requestLocationUpdates(java.lang.String,long,float,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "provider",
@@ -292,7 +315,7 @@
     "requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "provider",
@@ -307,7 +330,7 @@
     "requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener,android.os.Looper)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "provider",
@@ -323,7 +346,7 @@
     "requestLocationUpdates(long,float,android.location.Criteria,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "minTime",
@@ -381,6 +404,20 @@
       "name": "setLastKnownLocation(java.lang.String,android.location.Location)",
       "documentation": "Sets the value to return from {@link #getLastKnownLocation(String)} for the given {@code provider}\n\n@param provider\n           name of the provider whose location to set\n@param location\n           the last known location for the provider\n"
     },
+    "setLocationEnabledForUser(boolean,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "enabled",
+        "userHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "setLocationEnabledForUser(boolean,android.os.UserHandle)"
+    },
     "setProviderEnabled(java.lang.String,boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -423,8 +460,10 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.P",
     "android.app.PendingIntent",
     "android.app.PendingIntent.CanceledException",
+    "android.content.Context",
     "android.content.Intent",
     "android.location.Criteria",
     "android.location.GpsStatus.Listener",
@@ -432,6 +471,7 @@
     "android.location.LocationListener",
     "android.location.LocationManager",
     "android.os.Looper",
+    "android.os.UserHandle",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.HashMap",
@@ -444,6 +484,8 @@
     "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowLocationManager.ListenerRegistration",
     "org.robolectric.shadows.ShadowLocationManager.LocationProviderEntry"
   ],

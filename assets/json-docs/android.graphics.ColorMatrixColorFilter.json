@@ -3,7 +3,7 @@
     "__constructor__(android.graphics.ColorMatrix)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "matrix"
@@ -15,7 +15,7 @@
     "__constructor__(float[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "array"
@@ -24,15 +24,13 @@
       "exceptions": [],
       "name": "__constructor__(float[])"
     },
-    "toString()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
+    "getMatrix()": {
+      "isImplementation": false,
+      "modifiers": [],
       "params": [],
-      "returnType": "java.lang.String",
+      "returnType": "android.graphics.ColorMatrix",
       "exceptions": [],
-      "name": "toString()"
+      "name": "getMatrix()"
     }
   },
   "imports": [

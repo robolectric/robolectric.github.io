@@ -3,7 +3,7 @@
     "getInstance(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -16,7 +16,7 @@
     "sendWallpaperCommand(android.os.IBinder,java.lang.String,int,int,int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "windowToken",

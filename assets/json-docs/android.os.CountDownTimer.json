@@ -3,7 +3,7 @@
     "__constructor__(long,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "millisInFuture",
@@ -16,7 +16,7 @@
     "cancel()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -79,7 +79,7 @@
     "start()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final",
         "synchronized"
       ],

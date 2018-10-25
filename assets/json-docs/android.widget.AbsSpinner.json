@@ -13,7 +13,7 @@
     "setSelection(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "position"
@@ -25,7 +25,7 @@
     "setSelection(int,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "position",

@@ -82,6 +82,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 21,
       "name": "nativeAxisFromString(java.lang.String)"
     },
     "nativeAxisToString(int)": {
@@ -95,6 +96,7 @@
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
+      "minSdk": 21,
       "name": "nativeAxisToString(int)"
     },
     "nativeCopy(int,int,boolean)": {
@@ -215,20 +217,6 @@
       "minSdk": 21,
       "name": "nativeGetAction(long)"
     },
-    "nativeGetActionButton(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "nativePtr"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "maxSdk": 20,
-      "name": "nativeGetActionButton(int)"
-    },
     "nativeGetActionButton(long)": {
       "isImplementation": true,
       "modifiers": [
@@ -240,7 +228,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 21,
+      "minSdk": 23,
       "name": "nativeGetActionButton(long)"
     },
     "nativeGetAxisValue(int,int,int,int)": {
@@ -889,6 +877,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 28,
       "name": "nativeInitialize(long,int,int,int,int,int,int,int,float,float,float,float,long,long,int,android.view.MotionEvent.PointerProperties[],android.view.MotionEvent.PointerCoords[])"
     },
     "nativeIsTouchEvent(int)": {
@@ -1041,21 +1030,6 @@
       "minSdk": 21,
       "name": "nativeSetAction(long,int)"
     },
-    "nativeSetActionButton(int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "nativePtr",
-        "button"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "maxSdk": 20,
-      "name": "nativeSetActionButton(int,int)"
-    },
     "nativeSetActionButton(long,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -1068,23 +1042,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 21,
+      "minSdk": 23,
       "name": "nativeSetActionButton(long,int)"
-    },
-    "nativeSetButtonState(int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "nativePtr",
-        "buttonState"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "maxSdk": 20,
-      "name": "nativeSetButtonState(int,int)"
     },
     "nativeSetButtonState(long,int)": {
       "isImplementation": true,
@@ -1098,7 +1057,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 21,
+      "minSdk": 23,
       "name": "nativeSetButtonState(long,int)"
     },
     "nativeSetDownTimeNanos(int,long)": {
@@ -1319,7 +1278,7 @@
       "returnType": "android.view.MotionEvent",
       "exceptions": [],
       "name": "setPointer2(float,float)",
-      "documentation": "@deprecated use {@link MotionEvent#obtain} or {@link MotionEventBuilder} to create a\n    MotionEvent with desired data\n"
+      "documentation": "@deprecated use {@link MotionEvent#obtain} or {@link\n    androidx.test.core.view.MotionEventBuilder} to create a MotionEvent with desired data.\n"
     },
     "setPointerIds(int,int)": {
       "isImplementation": false,
@@ -1346,7 +1305,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setPointerIndex(int)",
-      "documentation": "@deprecated use {@link MotionEvent#obtain} or {@link MotionEventBuilder#setPointerAction(int,\n    int)} to create a MotionEvent with desired data.\n"
+      "documentation": "@deprecated use {@link MotionEvent#obtain} or {@link\n    androidx.test.core.view.MotionEventBuilder#setPointerAction(int, int)} to create a\n    MotionEvent with desired data.\n"
     },
     "transform(android.graphics.Matrix)": {
       "isImplementation": true,
@@ -1460,10 +1419,10 @@
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.P",
     "com.google.common.base.Preconditions.checkNotNull",
     "com.google.common.base.Preconditions.checkState",
-    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadows.NativeAndroidInput.AMOTION_EVENT_AXIS_ORIENTATION",
     "org.robolectric.shadows.NativeAndroidInput.AMOTION_EVENT_AXIS_PRESSURE",
     "org.robolectric.shadows.NativeAndroidInput.AMOTION_EVENT_AXIS_SIZE",
@@ -1487,8 +1446,10 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.res.android.NativeObjRegistry",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowMotionEvent",
-  "documentation": "Shadow of MotionEvent.\n\nThe Android framework stores motion events in a pool of native objects. All motion event data\nis stored natively, and accessed via a series of static native methods following the pattern\nnativeGetXXXX(mNativePtr, ...)\n\nThis shadow mirrors this design, but has java equivalents of each native object. Most of the\ncontents of this class were transliterated from oreo-mr1 (SDK 27)\nframeworks/base/core/jni/android_view_MotionEvent.cpp\n\n@see https://android.googlesource.com/platform/frameworks/base/+/oreo-mr1-release/core/jni/android_view_MotionEvent.cpp\n\nTests should not reference this class directly. MotionEvents should be created via one of the\nMotionEvent.obtain methods or via MotionEventBuilder.\n"
+  "documentation": "Shadow of MotionEvent.\n\nThe Android framework stores motion events in a pool of native objects. All motion event data\nis stored natively, and accessed via a series of static native methods following the pattern\nnativeGetXXXX(mNativePtr, ...)\n\nThis shadow mirrors this design, but has java equivalents of each native object. Most of the\ncontents of this class were transliterated from oreo-mr1 (SDK 27)\nframeworks/base/core/jni/android_view_MotionEvent.cpp\n\n@see \u003ca href\u003d\"https://android.googlesource.com/platform/frameworks/base/+/oreo-mr1-release/core/jni/android_view_MotionEvent.cpp\"\u003ecore/jni/android_view_MotionEvent.cpp\u003c/a\u003e\n\nTests should not reference this class directly. MotionEvents should be created via one of the\nMotionEvent.obtain methods or via MotionEventBuilder.\n"
 }

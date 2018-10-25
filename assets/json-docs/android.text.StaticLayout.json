@@ -17,6 +17,7 @@
       "returnType": "int",
       "exceptions": [],
       "minSdk": 23,
+      "maxSdk": 27,
       "name": "nComputeLineBreaks(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
     },
     "nComputeLineBreaks(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
@@ -47,7 +48,8 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 28,
+      "maxSdk": 28,
       "name": "nComputeLineBreaks(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
     },
     "nLineBreakOpportunities(java.lang.String,char[],int,int[])": {
@@ -73,6 +75,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
     "android.text.StaticLayout",
     "org.robolectric.annotation.HiddenApi",

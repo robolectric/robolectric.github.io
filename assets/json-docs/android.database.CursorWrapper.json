@@ -3,7 +3,7 @@
     "__constructor__(android.database.Cursor)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "c"
@@ -253,7 +253,7 @@
     "getWrappedCursor()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.database.Cursor",

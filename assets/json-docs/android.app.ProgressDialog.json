@@ -25,7 +25,7 @@
     "setProgressStyle(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "style"

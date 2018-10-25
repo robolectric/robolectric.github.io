@@ -236,6 +236,16 @@
       "exceptions": [],
       "name": "getLastTouchEvent()"
     },
+    "getLayerType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLayerType()"
+    },
     "getOnClickListener()": {
       "isImplementation": false,
       "modifiers": [
@@ -377,6 +387,7 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 19,
       "name": "isAttachedToWindow()"
     },
     "lastHapticFeedbackPerformed()": {
@@ -498,6 +509,19 @@
       "exceptions": [],
       "name": "requestLayout()"
     },
+    "scrollBy(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "scrollBy(int,int)"
+    },
     "scrollTo(int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -546,6 +570,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setGlobalVisibleRect(android.graphics.Rect)"
+    },
+    "setLayerType(int,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "layerType",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLayerType(int,android.graphics.Paint)"
     },
     "setMyParent(android.view.ViewParent)": {
       "isImplementation": false,
@@ -695,6 +732,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.KITKAT",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.getField",
@@ -703,6 +741,7 @@
     "android.content.Context",
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
+    "android.graphics.Paint",
     "android.graphics.Point",
     "android.graphics.Rect",
     "android.graphics.drawable.Drawable",

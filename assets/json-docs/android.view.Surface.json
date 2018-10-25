@@ -3,7 +3,7 @@
     "__constructor__(android.graphics.SurfaceTexture)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "surfaceTexture"
@@ -27,7 +27,10 @@
     "android.graphics.SurfaceTexture",
     "android.view.Surface",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowSurface"
 }

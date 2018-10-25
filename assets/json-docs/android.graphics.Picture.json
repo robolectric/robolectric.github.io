@@ -3,7 +3,7 @@
     "__constructor__()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -13,7 +13,7 @@
     "__constructor__(android.graphics.Picture)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "src"
@@ -25,7 +25,7 @@
     "__constructor__(int,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "nativePicture",
@@ -33,24 +33,26 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 20,
       "name": "__constructor__(int,boolean)"
     },
     "__constructor__(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "nativePicture"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 21,
       "name": "__constructor__(long)"
     },
     "beginRecording(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "width",
@@ -63,7 +65,7 @@
     "getHeight()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -73,7 +75,7 @@
     "getWidth()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -82,6 +84,8 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.Picture",

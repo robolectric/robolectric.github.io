@@ -15,7 +15,7 @@
     "compress(android.graphics.Bitmap.CompressFormat,int,java.io.OutputStream)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "format",
@@ -29,7 +29,7 @@
     "copy(android.graphics.Bitmap.Config,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "config",
@@ -42,7 +42,7 @@
     "copyPixelsFromBuffer(java.nio.Buffer)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dst"
@@ -54,7 +54,7 @@
     "copyPixelsToBuffer(java.nio.Buffer)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dst"
@@ -66,17 +66,18 @@
     "createAshmemBitmap()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
+      "minSdk": 23,
       "name": "createAshmemBitmap()"
     },
     "createBitmap(android.graphics.Bitmap)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -89,7 +90,7 @@
     "createBitmap(android.graphics.Bitmap,int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -106,7 +107,7 @@
     "createBitmap(android.graphics.Bitmap,int,int,int,int,android.graphics.Matrix,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -125,7 +126,7 @@
     "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -136,12 +137,13 @@
       ],
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
+      "minSdk": 17,
       "name": "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config)"
     },
     "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -153,12 +155,13 @@
       ],
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
+      "minSdk": 17,
       "name": "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config,boolean)"
     },
     "createBitmap(int,int,android.graphics.Bitmap.Config)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -173,7 +176,7 @@
     "createBitmap(int[],int,int,android.graphics.Bitmap.Config)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -189,7 +192,7 @@
     "createScaledBitmap(android.graphics.Bitmap,int,int,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -205,7 +208,7 @@
     "eraseColor(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "c"
@@ -217,18 +220,19 @@
     "getAllocationByteCount()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 19,
       "name": "getAllocationByteCount()"
     },
     "getByteCount()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -251,7 +255,7 @@
     "getConfig()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -394,7 +398,7 @@
     "getDensity()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -414,7 +418,7 @@
     "getGenerationId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -424,7 +428,7 @@
     "getHeight()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -434,7 +438,7 @@
     "getPixel(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "x",
@@ -447,7 +451,7 @@
     "getPixels(int[],int,int,int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "pixels",
@@ -461,7 +465,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "getPixels(int[],int,int,int,int,int,int)",
-      "documentation": "Note that this method will return a RuntimeException unless:\n- {@code pixels} has the same length as the number of pixels of the bitmap.\n- {@code x \u003d 0}\n- {@code y \u003d 0}\n- {@code width} and {@code height} height match the current bitmap\u0027s dimensions.\n"
+      "documentation": "Note that this method will return a RuntimeException unless: - {@code pixels} has the same\nlength as the number of pixels of the bitmap. - {@code x \u003d 0} - {@code y \u003d 0} - {@code width}\nand {@code height} height match the current bitmap\u0027s dimensions.\n"
     },
     "getRealBitmap()": {
       "isImplementation": false,
@@ -476,7 +480,7 @@
     "getRowBytes()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -486,7 +490,7 @@
     "getWidth()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -496,7 +500,7 @@
     "hasAlpha()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -507,12 +511,13 @@
     "hasMipMap()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 17,
       "name": "hasMipMap()"
     },
     "internalCheckPixelAccess(int,int)": {
@@ -531,7 +536,7 @@
     "isMutable()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -542,7 +547,7 @@
     "isRecycled()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -553,7 +558,7 @@
     "nativeCreateFromParcel(android.os.Parcel)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -563,10 +568,25 @@
       "exceptions": [],
       "name": "nativeCreateFromParcel(android.os.Parcel)"
     },
+    "reconfigure(int,int,android.graphics.Bitmap.Config)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "width",
+        "height",
+        "config"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "reconfigure(int,int,android.graphics.Bitmap.Config)"
+    },
     "recycle()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -576,13 +596,14 @@
     "setConfig(android.graphics.Bitmap.Config)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "config"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 19,
       "name": "setConfig(android.graphics.Bitmap.Config)"
     },
     "setCreatedFromResId(int,java.lang.String)": {
@@ -601,7 +622,7 @@
     "setDensity(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "density"
@@ -625,7 +646,7 @@
     "setHasAlpha(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "hasAlpha"
@@ -637,7 +658,7 @@
     "setHasMipMap(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -645,18 +666,20 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 17,
       "name": "setHasMipMap(boolean)"
     },
     "setHeight(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "height"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 19,
       "name": "setHeight(int)"
     },
     "setMutable(boolean)": {
@@ -674,7 +697,7 @@
     "setPixel(int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "x",
@@ -688,7 +711,7 @@
     "setPixels(int[],int,int,int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "pixels",
@@ -706,24 +729,15 @@
     "setWidth(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "width"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 19,
       "name": "setWidth(int)"
-    },
-    "toString()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "toString()"
     },
     "visualize(android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -742,7 +756,7 @@
     "writeToParcel(android.os.Parcel,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "p",
@@ -754,10 +768,14 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.M",
     "java.nio.charset.StandardCharsets.UTF_8",
     "android.graphics.Bitmap",
     "android.graphics.Matrix",
     "android.graphics.RectF",
+    "android.os.Build",
     "android.os.Parcel",
     "android.util.DisplayMetrics",
     "java.io.FileDescriptor",

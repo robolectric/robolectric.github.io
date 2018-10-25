@@ -3,7 +3,7 @@
     "addMovement(android.view.MotionEvent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "event"
@@ -15,7 +15,7 @@
     "clear()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -25,7 +25,7 @@
     "computeCurrentVelocity(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "units"
@@ -37,7 +37,7 @@
     "computeCurrentVelocity(int,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "units",
@@ -50,7 +50,7 @@
     "getXVelocity()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "float",
@@ -60,7 +60,7 @@
     "getXVelocity(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id"
@@ -72,7 +72,7 @@
     "getYVelocity()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "float",
@@ -82,7 +82,7 @@
     "getYVelocity(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id"

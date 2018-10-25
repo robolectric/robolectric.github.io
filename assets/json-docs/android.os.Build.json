@@ -3,13 +3,25 @@
     "getRadioVersion()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getRadioVersion()"
+    },
+    "getSerial()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getSerial()"
     },
     "reset()": {
       "isImplementation": false,
@@ -107,6 +119,20 @@
       "name": "setRadioVersion(java.lang.String)",
       "documentation": "Override return value from {@link Build#getRadioVersion()}\n\n@param radioVersion\n"
     },
+    "setSupported64BitAbis(java.lang.String[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "supported64BitAbis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupported64BitAbis(java.lang.String[])",
+      "documentation": "Sets the value of the {@link Build#SUPPORTED_64_BIT_ABIS} field. Available in Android L+.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
     "setTags(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -120,6 +146,20 @@
       "exceptions": [],
       "name": "setTags(java.lang.String)",
       "documentation": "Sets the value of the {@link Build#TAGS} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setType(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setType(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#TYPE} field.\n\nIt will be reset for the next test.\n"
     },
     "setVersionCodename(java.lang.String)": {
       "isImplementation": false,
@@ -165,7 +205,10 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.L",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.annotation.TargetApi",
     "android.os.Build",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

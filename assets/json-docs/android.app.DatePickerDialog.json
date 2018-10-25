@@ -3,7 +3,7 @@
     "__constructor__(android.content.Context,int,android.app.DatePickerDialog.OnDateSetListener,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -21,7 +21,7 @@
     "__constructor__(android.content.Context,int,android.app.DatePickerDialog.OnDateSetListener,java.util.Calendar,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",

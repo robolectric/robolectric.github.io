@@ -3,7 +3,7 @@
     "canPause()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -13,7 +13,7 @@
     "getCurrentPosition()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -34,7 +34,7 @@
     "getDuration()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -110,7 +110,7 @@
     "isPlaying()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -120,7 +120,7 @@
     "pause()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -130,7 +130,7 @@
     "resume()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -150,7 +150,7 @@
     "seekTo(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "msec"
@@ -174,7 +174,7 @@
     "setOnCompletionListener(android.media.MediaPlayer.OnCompletionListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "l"
@@ -186,7 +186,7 @@
     "setOnErrorListener(android.media.MediaPlayer.OnErrorListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "l"
@@ -198,7 +198,7 @@
     "setOnPreparedListener(android.media.MediaPlayer.OnPreparedListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "l"
@@ -210,7 +210,7 @@
     "setVideoPath(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "path"
@@ -222,7 +222,7 @@
     "setVideoURI(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri"
@@ -234,7 +234,7 @@
     "start()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -244,7 +244,7 @@
     "stopPlayback()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -254,7 +254,7 @@
     "suspend()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",

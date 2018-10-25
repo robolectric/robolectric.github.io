@@ -3,7 +3,7 @@
     "getName()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",

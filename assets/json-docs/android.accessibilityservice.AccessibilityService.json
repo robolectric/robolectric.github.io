@@ -1,7 +1,7 @@
 {
   "methods": {
     "getGlobalActionsPerformed()": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -13,7 +13,7 @@
     "performGlobalAction(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [

@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "onPause()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onPause()"
+    },
+    "onResume()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onResume()"
+    }
+  },
+  "imports": [
+    "android.opengl.GLSurfaceView",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowGLSurfaceView",
+  "documentation": "Fake implementation of GLSurfaceView "
+}

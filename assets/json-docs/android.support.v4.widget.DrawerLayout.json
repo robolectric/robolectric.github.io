@@ -3,7 +3,7 @@
     "closeDrawer(android.view.View,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "drawerView",
@@ -12,7 +12,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "closeDrawer(android.view.View,boolean)",
-      "documentation": "Drawer animations are disabled in unit tests.\n"
+      "documentation": "Drawer animations are disabled in unit tests. "
     },
     "getDrawerListener()": {
       "isImplementation": false,
@@ -27,7 +27,7 @@
     "openDrawer(android.view.View,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "drawerView",
@@ -36,12 +36,12 @@
       "returnType": "void",
       "exceptions": [],
       "name": "openDrawer(android.view.View,boolean)",
-      "documentation": "Drawer animations are disabled in unit tests.\n"
+      "documentation": "Drawer animations are disabled in unit tests. "
     },
     "setDrawerListener(android.support.v4.widget.DrawerLayout.DrawerListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "drawerListener"

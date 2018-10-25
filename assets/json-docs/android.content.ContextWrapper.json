@@ -1,5 +1,16 @@
 {
   "methods": {
+    "clearNextStartedActivities()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearNextStartedActivities()",
+      "documentation": "Clears all {@code Intent}s started by {@link\nContextWrapper#startActivity(android.content.Intent)}.\n"
+    },
     "clearStartedServices()": {
       "isImplementation": false,
       "modifiers": [
@@ -9,7 +20,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearStartedServices()",
-      "documentation": "Delegates to the application to clear the stack of started service intents.\n"
+      "documentation": "Clears all {@code Intent} started by\n{@link android.content.Context#startService(android.content.Intent)}.\n"
     },
     "denyPermissions(java.lang.String...)": {
       "isImplementation": false,
@@ -53,7 +64,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getNextStartedService()",
-      "documentation": "Delegates to the application to consume and return the next {@code Intent} on the\nstarted services stack.\n\n@return the next started {@code Intent} for a service\n"
+      "documentation": "Consumes the most recent {@code Intent} started by\n{@link android.content.Context#startService(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}\n"
     },
     "getNextStoppedService()": {
       "isImplementation": false,
@@ -64,7 +75,15 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getNextStoppedService()",
-      "documentation": "Delegates to the application to return the next {@code Intent} to stop\na service (irrespective of if the service was running)\n\n@return {@code Intent} for the next service requested to be stopped\n"
+      "documentation": "Consumes the {@code Intent} requested to stop a service by\n{@link android.content.Context#stopService(android.content.Intent)}\nfrom the bottom of the stack of stop requests.\n"
+    },
+    "getShadowInstrumentation()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowInstrumentation",
+      "exceptions": [],
+      "name": "getShadowInstrumentation()"
     },
     "grantPermissions(java.lang.String...)": {
       "isImplementation": false,
@@ -98,16 +117,31 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "peekNextStartedService()",
-      "documentation": "Return (without consuming) the next {@code Intent} on the started services stack.\n\n@return the next started {@code Intent} for a service\n"
+      "documentation": "Returns the most recent {@code Intent} started by\n{@link android.content.Context#startService(android.content.Intent)} without consuming it.\n\n@return the most recently started {@code Intent}\n"
+    },
+    "removeSystemService(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeSystemService(java.lang.String)",
+      "documentation": "Makes {@link Context#getSystemService(String)} return {@code null} for the given system service\nname, mimicking a device that doesn\u0027t have that system service.\n"
     }
   },
   "imports": [
     "android.app.ActivityThread",
+    "android.content.Context",
     "android.content.ContextWrapper",
     "android.content.Intent",
     "java.util.List",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowContextWrapper"

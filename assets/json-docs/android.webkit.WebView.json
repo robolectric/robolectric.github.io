@@ -3,7 +3,7 @@
     "addJavascriptInterface(java.lang.Object,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "obj",
@@ -16,7 +16,7 @@
     "canGoBack()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -26,7 +26,7 @@
     "clearCache(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "includeDiskFiles"
@@ -38,7 +38,7 @@
     "clearFormData()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -48,7 +48,7 @@
     "clearHistory()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -58,7 +58,7 @@
     "clearView()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -68,7 +68,7 @@
     "destroy()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -98,7 +98,7 @@
     "evaluateJavascript(java.lang.String,android.webkit.ValueCallback\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "script",
@@ -112,7 +112,7 @@
     "findAddress(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -144,8 +144,9 @@
       "returnType": "android.content.pm.PackageInfo",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 25,
       "name": "getCurrentWebviewPackage()",
-      "documentation": "Overrides the system implementation for getting the webview package. Always returns null.\n"
+      "documentation": "Overrides the system implementation for getting the webview package. Always returns null. "
     },
     "getGoBackInvocations()": {
       "isImplementation": false,
@@ -179,7 +180,7 @@
       "returnType": "java.util.Map\u003cjava.lang.String,java.lang.String\u003e",
       "exceptions": [],
       "name": "getLastAdditionalHttpHeaders()",
-      "documentation": "@return the additional Http headers that in the same request with last loaded url\n"
+      "documentation": "@return the additional Http headers that in the same request with last loaded url "
     },
     "getLastEvaluatedJavascript()": {
       "isImplementation": false,
@@ -220,32 +221,22 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getLastLoadedUrl()",
-      "documentation": "@return the last loaded url\n"
+      "documentation": "@return the last loaded url "
     },
     "getOriginalUrl()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getOriginalUrl()"
     },
-    "getRunFlag()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "getRunFlag()"
-    },
     "getSettings()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.webkit.WebSettings",
@@ -255,7 +246,7 @@
     "getUrl()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -271,7 +262,7 @@
       "returnType": "android.webkit.WebChromeClient",
       "exceptions": [],
       "name": "getWebChromeClient()",
-      "documentation": "@return webChromeClient\n"
+      "documentation": "@return webChromeClient "
     },
     "getWebViewClient()": {
       "isImplementation": false,
@@ -286,7 +277,7 @@
     "goBack()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -296,7 +287,7 @@
     "loadData(java.lang.String,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "data",
@@ -310,7 +301,7 @@
     "loadDataWithBaseURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "baseUrl",
@@ -326,7 +317,7 @@
     "loadUrl(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url"
@@ -338,7 +329,7 @@
     "loadUrl(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url",
@@ -363,7 +354,7 @@
     "onPause()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -373,24 +364,36 @@
     "onResume()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "name": "onResume()"
     },
-    "post(java.lang.Runnable)": {
+    "restoreState(android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
-        "action"
+        "inState"
       ],
-      "returnType": "void",
+      "returnType": "android.webkit.WebBackForwardList",
       "exceptions": [],
-      "name": "post(java.lang.Runnable)"
+      "name": "restoreState(android.os.Bundle)"
+    },
+    "saveState(android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "outState"
+      ],
+      "returnType": "android.webkit.WebBackForwardList",
+      "exceptions": [],
+      "name": "saveState(android.os.Bundle)"
     },
     "setCanGoBack(boolean)": {
       "isImplementation": false,
@@ -408,7 +411,7 @@
     "setLayoutParams(android.view.ViewGroup.LayoutParams)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "params"
@@ -420,7 +423,7 @@
     "setWebChromeClient(android.webkit.WebChromeClient)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "client"
@@ -445,7 +448,7 @@
     "setWebViewClient(android.webkit.WebViewClient)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "client"
@@ -526,11 +529,16 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.N_MR1",
     "android.content.pm.PackageInfo",
+    "android.graphics.Bitmap",
     "android.os.Build",
+    "android.os.Bundle",
     "android.view.ViewGroup.LayoutParams",
     "android.webkit.ValueCallback",
+    "android.webkit.WebBackForwardList",
     "android.webkit.WebChromeClient",
+    "android.webkit.WebHistoryItem",
     "android.webkit.WebSettings",
     "android.webkit.WebView",
     "android.webkit.WebViewClient",
@@ -541,7 +549,6 @@
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
-    "java.util.List",
     "java.util.Map",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
@@ -550,7 +557,9 @@
     "org.robolectric.fakes.RoboWebSettings",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowWebView.LoadDataWithBaseURL",
-    "org.robolectric.shadows.ShadowWebView.LoadData"
+    "org.robolectric.shadows.ShadowWebView.LoadData",
+    "org.robolectric.shadows.ShadowWebView.BackForwardList",
+    "org.robolectric.shadows.ShadowWebView.HistoryItem"
   ],
   "name": "org.robolectric.shadows.ShadowWebView"
 }

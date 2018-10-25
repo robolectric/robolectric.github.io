@@ -3,7 +3,7 @@
     "dispatchChange(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "selfChange"
@@ -15,7 +15,7 @@
     "dispatchChange(boolean,android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "selfChange",

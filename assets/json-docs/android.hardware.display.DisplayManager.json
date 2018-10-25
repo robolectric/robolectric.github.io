@@ -99,6 +99,18 @@
       "exceptions": [],
       "name": "fixNominalDimens(android.view.DisplayInfo)"
     },
+    "getSaturationLevel()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getSaturationLevel()",
+      "documentation": "Returns the current display saturation level set via {@link\nandroid.hardware.display.DisplayManager#setSaturationLevel(float)}.\n"
+    },
     "getShadowDisplayManagerGlobal()": {
       "isImplementation": false,
       "modifiers": [
@@ -123,6 +135,20 @@
       "exceptions": [],
       "name": "removeDisplay(int)",
       "documentation": "Removes a simulated display.\n\n@param displayId the display id to remove\n"
+    },
+    "setSaturationLevel(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "level"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSaturationLevel(float)",
+      "documentation": "Sets the current display saturation level.\n\n\u003cp\u003eThis is a workaround for tests which cannot use the relevant hidden {@link\nandroid.annotation.SystemApi}, {@link\nandroid.hardware.display.DisplayManager#setSaturationLevel(float)}.\n"
     }
   },
   "imports": [

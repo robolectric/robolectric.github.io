@@ -3,7 +3,7 @@
     "getBitmap(android.content.ContentResolver,android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

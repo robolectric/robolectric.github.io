@@ -77,7 +77,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addPackage(android.content.pm.PackageInfo)"
+      "name": "addPackage(android.content.pm.PackageInfo)",
+      "documentation": "Registers (\"installs\") a package with the PackageManager.\n\n\u003cp\u003e\nIn order to create PackageInfo objects in a valid state please use\n{@link androidx.test.core.content.pm.PackageInfoBuilder}.\n"
     },
     "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)": {
       "isImplementation": false,
@@ -181,6 +182,19 @@
       "exceptions": [],
       "name": "addSystemAvailableFeature(android.content.pm.FeatureInfo)"
     },
+    "addSystemSharedLibraryName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addSystemSharedLibraryName(java.lang.String)",
+      "documentation": "Adds a value to be returned by {@link PackageManager#getSystemSharedLibraryNames()}. "
+    },
     "clearSystemAvailableFeatures()": {
       "isImplementation": false,
       "modifiers": [
@@ -190,6 +204,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearSystemAvailableFeatures()"
+    },
+    "clearSystemSharedLibraryNames()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearSystemSharedLibraryNames()",
+      "documentation": "Clears the values returned by {@link PackageManager#getSystemSharedLibraryNames()}. "
     },
     "compareSignature(android.content.pm.Signature[],android.content.pm.Signature[])": {
       "isImplementation": false,
@@ -379,6 +404,19 @@
       "exceptions": [],
       "name": "getPackageName(android.content.pm.ResolveInfo)"
     },
+    "getPackageSetting(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowPackageManager.PackageSetting",
+      "exceptions": [],
+      "name": "getPackageSetting(java.lang.String)",
+      "documentation": "Returns the current {@link PackageSetting} of {@code packageName}.\n\n\u003cp\u003eIf {@code packageName} is not present in this {@link ShadowPackageManager}, this method will\nreturn null.\n"
+    },
     "getVerificationExtendedTimeout(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -415,6 +453,7 @@
       ],
       "returnType": "java.util.List\u003candroid.content.pm.ResolveInfo\u003e",
       "exceptions": [],
+      "minSdk": 17,
       "name": "queryBroadcastReceivers(android.content.Intent,int,int)"
     },
     "queryBroadcastReceiversAsUser(android.content.Intent,int,android.os.UserHandle)": {
@@ -429,6 +468,7 @@
       ],
       "returnType": "java.util.List\u003candroid.content.pm.ResolveInfo\u003e",
       "exceptions": [],
+      "minSdk": 24,
       "name": "queryBroadcastReceiversAsUser(android.content.Intent,int,android.os.UserHandle)"
     },
     "queryOverriddenIntents(android.content.Intent,int)": {
@@ -505,6 +545,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setApplicationIcon(java.lang.String,android.graphics.drawable.Drawable)"
+    },
+    "setCanRequestPackageInstalls(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "canRequestPackageInstalls"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCanRequestPackageInstalls(boolean)",
+      "documentation": "Sets if the {@link PackageManager} is allowed to request package installs through package\ninstaller.\n"
     },
     "setNameForUid(int,java.lang.String)": {
       "isImplementation": false,
@@ -583,6 +636,19 @@
       "exceptions": [],
       "name": "setSystemFeature(java.lang.String,boolean)"
     },
+    "setUnbadgedApplicationIcon(java.lang.String,android.graphics.drawable.Drawable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName",
+        "drawable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUnbadgedApplicationIcon(java.lang.String,android.graphics.drawable.Drawable)"
+    },
     "setUpPackageStorage(android.content.pm.ApplicationInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -623,6 +689,10 @@
     "android.content.pm.PackageManager.SIGNATURE_NEITHER_SIGNED",
     "android.content.pm.PackageManager.SIGNATURE_NO_MATCH",
     "android.content.pm.PackageManager.SIGNATURE_SECOND_NOT_SIGNED",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "java.util.Arrays.asList",
     "android.Manifest",
@@ -653,10 +723,9 @@
     "android.graphics.drawable.Drawable",
     "android.net.Uri",
     "android.os.Binder",
-    "android.os.Build",
     "android.os.Build.VERSION",
-    "android.os.Build.VERSION_CODES",
     "android.os.PatternMatcher",
+    "android.os.PersistableBundle",
     "android.os.Process",
     "android.os.RemoteException",
     "android.os.UserHandle",
@@ -684,6 +753,7 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.TempDirectory",
+    "org.robolectric.shadows.ShadowPackageManager.PackageSetting",
     "org.robolectric.shadows.ShadowPackageManager.IntentComparator",
     "org.robolectric.shadows.ShadowPackageManager.IntentFilterWrapper",
     "org.robolectric.shadows.ShadowPackageManager.ResolveInfoComparator",

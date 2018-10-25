@@ -3,7 +3,7 @@
     "createGroup(android.net.wifi.p2p.WifiP2pManager.Channel,android.net.wifi.p2p.WifiP2pManager.ActionListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "c",
@@ -46,7 +46,7 @@
     "initialize(android.content.Context,android.os.Looper,android.net.wifi.p2p.WifiP2pManager.ChannelListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -72,7 +72,7 @@
     "removeGroup(android.net.wifi.p2p.WifiP2pManager.Channel,android.net.wifi.p2p.WifiP2pManager.ActionListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "c",
@@ -85,7 +85,7 @@
     "requestGroupInfo(android.net.wifi.p2p.WifiP2pManager.Channel,android.net.wifi.p2p.WifiP2pManager.GroupInfoListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "c",
@@ -123,7 +123,7 @@
     "setWifiP2pChannels(android.net.wifi.p2p.WifiP2pManager.Channel,int,int,android.net.wifi.p2p.WifiP2pManager.ActionListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "c",
@@ -133,10 +133,12 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 19,
       "name": "setWifiP2pChannels(android.net.wifi.p2p.WifiP2pManager.Channel,int,int,android.net.wifi.p2p.WifiP2pManager.ActionListener)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.content.Context",
     "android.net.wifi.p2p.WifiP2pGroup",
     "android.net.wifi.p2p.WifiP2pManager",

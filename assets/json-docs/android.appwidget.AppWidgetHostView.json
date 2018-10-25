@@ -3,7 +3,7 @@
     "getAppWidgetId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -13,7 +13,7 @@
     "getAppWidgetInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.appwidget.AppWidgetProviderInfo",
@@ -33,7 +33,7 @@
     "setAppWidget(int,android.appwidget.AppWidgetProviderInfo)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "appWidgetId",

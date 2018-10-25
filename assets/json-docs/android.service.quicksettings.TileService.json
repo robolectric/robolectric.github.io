@@ -1,0 +1,36 @@
+{
+  "methods": {
+    "createTile()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.service.quicksettings.Tile",
+      "exceptions": [],
+      "name": "createTile()"
+    },
+    "getQsTile()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [],
+      "returnType": "android.service.quicksettings.Tile",
+      "exceptions": [],
+      "name": "getQsTile()"
+    }
+  },
+  "imports": [
+    "android.os.Build",
+    "android.service.quicksettings.Tile",
+    "android.service.quicksettings.TileService",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowTileService",
+  "documentation": "Shadow for {@link TileService}. "
+}

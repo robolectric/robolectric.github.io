@@ -3,7 +3,7 @@
     "abandonSession(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sessionId"
@@ -15,7 +15,7 @@
     "createSession(android.content.pm.PackageInstaller.SessionParams)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "params"
@@ -29,7 +29,7 @@
     "getAllSessions()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.content.pm.PackageInstaller.SessionInfo\u003e",
@@ -39,7 +39,7 @@
     "getSessionInfo(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sessionId"
@@ -51,7 +51,7 @@
     "openSession(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sessionId"
@@ -65,7 +65,7 @@
     "registerSessionCallback(android.content.pm.PackageInstaller.SessionCallback,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback",
@@ -128,6 +128,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.annotation.NonNull",
     "android.annotation.Nullable",

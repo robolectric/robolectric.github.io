@@ -3,7 +3,7 @@
     "__constructor__()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -13,7 +13,7 @@
     "__staticInitializer__()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -24,46 +24,46 @@
     "_pause()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "name": "_pause()",
-      "documentation": "Simulates {@link MediaPlayer#_pause()}. Invokes {@link #doStop()} to suspend\nplayback event callbacks and sets the state to PAUSED.\n\n@see #doStop()\n"
+      "documentation": "Simulates {@link MediaPlayer#_pause()}. Invokes {@link #doStop()} to suspend playback event\ncallbacks and sets the state to PAUSED.\n\n@see #doStop()\n"
     },
     "_release()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "name": "_release()",
-      "documentation": "Simulates call to {@link MediaPlayer#_release()}. Calls {@link #doStop()} to\nsuspend playback event callbacks and sets the state to END.\n"
+      "documentation": "Simulates call to {@link MediaPlayer#_release()}. Calls {@link #doStop()} to suspend playback\nevent callbacks and sets the state to END.\n"
     },
     "_reset()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "name": "_reset()",
-      "documentation": "Simulates call to {@link MediaPlayer#_reset()}. Calls {@link #doStop()} to\nsuspend playback event callbacks and sets the state to IDLE.\n"
+      "documentation": "Simulates call to {@link MediaPlayer#_reset()}. Calls {@link #doStop()} to suspend playback\nevent callbacks and sets the state to IDLE.\n"
     },
     "_stop()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "name": "_stop()",
-      "documentation": "Simulates call to {@link MediaPlayer#release()}. Calls {@link #doStop()} to\nsuspend playback event callbacks and sets the state to STOPPED.\n"
+      "documentation": "Simulates call to {@link MediaPlayer#release()}. Calls {@link #doStop()} to suspend playback\nevent callbacks and sets the state to STOPPED.\n"
     },
     "addException(org.robolectric.shadows.util.DataSource,java.io.IOException)": {
       "isImplementation": false,
@@ -110,7 +110,7 @@
     "attachAuxEffect(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "effectId"
@@ -164,7 +164,7 @@
     "create(android.content.Context,android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -178,7 +178,7 @@
     "create(android.content.Context,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -227,7 +227,7 @@
     "getAudioSessionId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -248,13 +248,13 @@
     "getCurrentPosition()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
       "name": "getCurrentPosition()",
-      "documentation": "Simulates call to {@link MediaPlayer#getCurrentPosition()}. Simply does the\nstate validity checks and then invokes {@link #getCurrentPositionRaw()} to\ncalculate the simulated playback position.\n\n@return The current offset (in ms) of the simulated playback.\n@see #getCurrentPositionRaw()\n"
+      "documentation": "Simulates call to {@link MediaPlayer#getCurrentPosition()}. Simply does the state validity\nchecks and then invokes {@link #getCurrentPositionRaw()} to calculate the simulated playback\nposition.\n\n@return The current offset (in ms) of the simulated playback.\n@see #getCurrentPositionRaw()\n"
     },
     "getCurrentPositionRaw()": {
       "isImplementation": false,
@@ -281,13 +281,13 @@
     "getDuration()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
       "name": "getDuration()",
-      "documentation": "Simulates call to {@link MediaPlayer#getDuration()}. Retrieves the duration\nas defined by the current {@link MediaInfo} instance.\n\n@return The duration (in ms) of the current simulated playback.\n@see #addMediaInfo(DataSource, MediaInfo)\n"
+      "documentation": "Simulates call to {@link MediaPlayer#getDuration()}. Retrieves the duration as defined by the\ncurrent {@link MediaInfo} instance.\n\n@return The duration (in ms) of the current simulated playback.\n@see #addMediaInfo(DataSource, MediaInfo)\n"
     },
     "getDurationRaw()": {
       "isImplementation": false,
@@ -471,7 +471,7 @@
     "getVideoHeight()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -481,7 +481,7 @@
     "getVideoWidth()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -552,7 +552,7 @@
     "isLooping()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -562,7 +562,7 @@
     "isPlaying()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -619,24 +619,24 @@
     "prepare()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "name": "prepare()",
-      "documentation": "Simulates {@link MediaPlayer#prepareAsync()}. Sleeps for\n{@link MediaInfo#getPreparationDelay() preparationDelay} ms by calling\n{@link SystemClock#sleep(long)} before calling\n{@link #invokePreparedListener()}.\n\nIf {@code preparationDelay} is not positive and non-zero, there is no\nsleep.\n\n@see MediaInfo#setPreparationDelay(int)\n@see #invokePreparedListener()\n"
+      "documentation": "Simulates {@link MediaPlayer#prepareAsync()}. Sleeps for {@link MediaInfo#getPreparationDelay()\npreparationDelay} ms by calling {@link SystemClock#sleep(long)} before calling {@link\n#invokePreparedListener()}.\n\n\u003cp\u003eIf {@code preparationDelay} is not positive and non-zero, there is no sleep.\n\n@see MediaInfo#setPreparationDelay(int)\n@see #invokePreparedListener()\n"
     },
     "prepareAsync()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "name": "prepareAsync()",
-      "documentation": "Simulates {@link MediaPlayer#prepareAsync()}. Sets state to PREPARING and\nposts a callback to {@link #invokePreparedListener()} if the current\npreparation delay for the current media (see {@link #getMediaInfo()}) is \u0026gt;\u003d\n0, otherwise the test suite is responsible for calling\n{@link #invokePreparedListener()} directly if required.\n\n@see MediaInfo#setPreparationDelay(int)\n@see #invokePreparedListener()\n"
+      "documentation": "Simulates {@link MediaPlayer#prepareAsync()}. Sets state to PREPARING and posts a callback to\n{@link #invokePreparedListener()} if the current preparation delay for the current media (see\n{@link #getMediaInfo()}) is \u0026gt;\u003d 0, otherwise the test suite is responsible for calling {@link\n#invokePreparedListener()} directly if required.\n\n@see MediaInfo#setPreparationDelay(int)\n@see #invokePreparedListener()\n"
     },
     "resetStaticState()": {
       "isImplementation": false,
@@ -662,7 +662,7 @@
     "seekTo(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "seekTo"
@@ -670,12 +670,26 @@
       "returnType": "void",
       "exceptions": [],
       "name": "seekTo(int)",
-      "documentation": "Simulates seeking to specified position. The seek will complete after\n{@link #seekDelay} ms (defaults to 0), or else if seekDelay is negative\nthen the controlling test is expected to simulate seek completion by\nmanually invoking {@link #invokeSeekCompleteListener}.\n\n@param seekTo\n         the offset (in ms) from the start of the track to seek to.\n"
+      "documentation": "Simulates seeking to specified position. The seek will complete after {@link #seekDelay} ms\n(defaults to 0), or else if seekDelay is negative then the controlling test is expected to\nsimulate seek completion by manually invoking {@link #invokeSeekCompleteListener}.\n\n@param seekTo the offset (in ms) from the start of the track to seek to.\n"
+    },
+    "seekTo(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "seekTo",
+        "mode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "seekTo(long,int)"
     },
     "setAudioSessionId(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sessionId"
@@ -687,7 +701,7 @@
     "setAudioStreamType(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "audioStreamType"
@@ -726,7 +740,7 @@
     "setDataSource(android.content.Context,android.net.Uri,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -742,7 +756,7 @@
     "setDataSource(java.io.FileDescriptor,long,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "fd",
@@ -758,7 +772,7 @@
     "setDataSource(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "path"
@@ -772,7 +786,7 @@
     "setDataSource(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -815,7 +829,7 @@
     "setLooping(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "looping"
@@ -827,7 +841,7 @@
     "setOnCompletionListener(android.media.MediaPlayer.OnCompletionListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -839,7 +853,7 @@
     "setOnErrorListener(android.media.MediaPlayer.OnErrorListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -851,7 +865,7 @@
     "setOnInfoListener(android.media.MediaPlayer.OnInfoListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -863,7 +877,7 @@
     "setOnPreparedListener(android.media.MediaPlayer.OnPreparedListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -875,7 +889,7 @@
     "setOnSeekCompleteListener(android.media.MediaPlayer.OnSeekCompleteListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -913,7 +927,7 @@
     "setVolume(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "left",
@@ -926,16 +940,17 @@
     "start()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "name": "start()",
-      "documentation": "Simulates private native method {@link MediaPlayer#_start()}. Sets state to STARTED and calls\n{@link #doStart()} to start scheduling playback callback events.\n\nIf the current state is PLAYBACK_COMPLETED, the current position is reset\nto zero before starting playback.\n\n@see #doStart()\n"
+      "documentation": "Simulates private native method {@link MediaPlayer#_start()}. Sets state to STARTED and calls\n{@link #doStart()} to start scheduling playback callback events.\n\n\u003cp\u003eIf the current state is PLAYBACK_COMPLETED, the current position is reset to zero before\nstarting playback.\n\n@see #doStart()\n"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadows.ShadowMediaPlayer.State.END",
     "org.robolectric.shadows.ShadowMediaPlayer.State.ERROR",
     "org.robolectric.shadows.ShadowMediaPlayer.State.IDLE",

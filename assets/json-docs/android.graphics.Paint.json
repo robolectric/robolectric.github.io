@@ -3,7 +3,7 @@
     "__constructor__(android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "otherPaint"
@@ -12,22 +12,10 @@
       "exceptions": [],
       "name": "__constructor__(android.graphics.Paint)"
     },
-    "__constructor__(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "flags"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "__constructor__(int)"
-    },
     "getAlpha()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -47,7 +35,7 @@
     "getColor()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -57,7 +45,7 @@
     "getColorFilter()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.ColorFilter",
@@ -67,7 +55,7 @@
     "getFlags()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -87,7 +75,7 @@
     "getPathEffect()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.PathEffect",
@@ -97,7 +85,7 @@
     "getShader()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.Shader",
@@ -151,7 +139,7 @@
     "getStrokeCap()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.Paint.Cap",
@@ -161,7 +149,7 @@
     "getStrokeJoin()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.Paint.Join",
@@ -171,7 +159,7 @@
     "getStrokeWidth()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "float",
@@ -181,7 +169,7 @@
     "getStyle()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.Paint.Style",
@@ -191,7 +179,7 @@
     "getTextAlign()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.Paint.Align",
@@ -201,7 +189,7 @@
     "getTextSize()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "float",
@@ -211,7 +199,7 @@
     "getTypeface()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.Typeface",
@@ -231,7 +219,7 @@
     "isAntiAlias()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -242,7 +230,7 @@
     "isDither()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -253,7 +241,7 @@
     "measureText(char[],int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "text",
@@ -267,7 +255,7 @@
     "measureText(java.lang.CharSequence,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "text",
@@ -281,7 +269,7 @@
     "measureText(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "text"
@@ -293,7 +281,7 @@
     "measureText(java.lang.String,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "text",
@@ -307,7 +295,7 @@
     "nInit()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -319,7 +307,7 @@
     "setAlpha(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "alpha"
@@ -331,7 +319,7 @@
     "setAntiAlias(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "antiAlias"
@@ -343,7 +331,7 @@
     "setColor(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "color"
@@ -355,7 +343,7 @@
     "setColorFilter(android.graphics.ColorFilter)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "filter"
@@ -367,7 +355,7 @@
     "setDither(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dither"
@@ -379,7 +367,7 @@
     "setFlags(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "flags"
@@ -391,7 +379,7 @@
     "setPathEffect(android.graphics.PathEffect)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "effect"
@@ -403,7 +391,7 @@
     "setShader(android.graphics.Shader)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "shader"
@@ -415,7 +403,7 @@
     "setShadowLayer(float,float,float,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "radius",
@@ -430,7 +418,7 @@
     "setStrokeCap(android.graphics.Paint.Cap)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "cap"
@@ -442,7 +430,7 @@
     "setStrokeJoin(android.graphics.Paint.Join)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "join"
@@ -454,7 +442,7 @@
     "setStrokeWidth(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "width"
@@ -466,7 +454,7 @@
     "setStyle(android.graphics.Paint.Style)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "style"
@@ -478,7 +466,7 @@
     "setTextAlign(android.graphics.Paint.Align)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "align"
@@ -490,7 +478,7 @@
     "setTextSize(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "textSize"
@@ -502,7 +490,7 @@
     "setTypeface(android.graphics.Typeface)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "typeface"

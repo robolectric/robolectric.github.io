@@ -30,7 +30,7 @@
     "bindProcessToNetwork(android.net.Network)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "network"
@@ -54,7 +54,7 @@
     "getActiveNetwork()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.net.Network",
@@ -66,7 +66,7 @@
     "getActiveNetworkInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.net.NetworkInfo",
@@ -76,7 +76,7 @@
     "getAllNetworkInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.net.NetworkInfo[]",
@@ -87,7 +87,7 @@
     "getAllNetworks()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.net.Network[]",
@@ -98,7 +98,7 @@
     "getBackgroundDataSetting()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -108,7 +108,7 @@
     "getBoundNetworkForProcess()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.net.Network",
@@ -126,10 +126,24 @@
       "exceptions": [],
       "name": "getNetworkCallbacks()"
     },
+    "getNetworkCapabilities(android.net.Network)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "network"
+      ],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getNetworkCapabilities(android.net.Network)",
+      "documentation": "Gets the network capabilities of a given {@link Network}.\n\n@param network The {@link Network} object identifying the network in question.\n@return The {@link android.net.NetworkCapabilities} for the network.\n@see #setNetworkCapabilities(Network, NetworkCapabilities)\n"
+    },
     "getNetworkInfo(android.net.Network)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "network"
@@ -142,7 +156,7 @@
     "getNetworkInfo(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "networkType"
@@ -154,23 +168,34 @@
     "getNetworkPreference()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
       "name": "getNetworkPreference()"
     },
+    "getReportedNetworkConnectivity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Map\u003candroid.net.Network,java.lang.Boolean\u003e",
+      "exceptions": [],
+      "name": "getReportedNetworkConnectivity()",
+      "documentation": "@return networks and their connectivity status which was reported with {@link\n    #reportNetworkConnectivity}.\n"
+    },
     "isActiveNetworkMetered()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
       "name": "isActiveNetworkMetered()",
-      "documentation": "Counts {@link ConnectivityManager#TYPE_MOBILE} networks as metered.\nOther types will be considered unmetered.\n\n@return `true` if the active network is metered, otherwise `false`.\n@see #setActiveNetworkInfo(NetworkInfo)\n@see #setDefaultNetworkActive(boolean)\n"
+      "documentation": "Counts {@link ConnectivityManager#TYPE_MOBILE} networks as metered. Other types will be\nconsidered unmetered.\n\n@return `true` if the active network is metered, otherwise `false`.\n@see #setActiveNetworkInfo(NetworkInfo)\n@see #setDefaultNetworkActive(boolean)\n"
     },
     "isDefaultNetworkActive()": {
       "isImplementation": true,
@@ -187,7 +212,7 @@
     "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "request",
@@ -197,6 +222,21 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)"
+    },
+    "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "networkCallback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,android.os.Handler)"
     },
     "removeDefaultNetworkActiveListener(android.net.ConnectivityManager.OnNetworkActiveListener)": {
       "isImplementation": true,
@@ -223,6 +263,34 @@
       "exceptions": [],
       "name": "removeNetwork(android.net.Network)",
       "documentation": "Removes the {@code network} from the list of all {@link android.net.Network}s.\n@param network The network.\n"
+    },
+    "reportNetworkConnectivity(android.net.Network,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "network",
+        "hasConnectivity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "reportNetworkConnectivity(android.net.Network,boolean)"
+    },
+    "requestNetwork(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "networkCallback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "requestNetwork(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)"
     },
     "setActiveNetworkInfo(android.net.NetworkInfo)": {
       "isImplementation": false,
@@ -261,6 +329,20 @@
       "name": "setDefaultNetworkActive(boolean)",
       "documentation": "Sets the active state of the default network.\n\nBy default this is true and affects the result of {@link\nConnectivityManager#isActiveNetworkMetered()}, {@link\nConnectivityManager#isDefaultNetworkActive()}, {@link ConnectivityManager#getActiveNetwork()}\nand {@link ConnectivityManager#getAllNetworkInfo()}.\n\nCalling this method with {@code true} after any listeners have been registered with {@link\nConnectivityManager#addDefaultNetworkActiveListener(OnNetworkActiveListener)} will result in\nthose listeners being fired.\n\n@param isActive The active state of the default network.\n"
     },
+    "setNetworkCapabilities(android.net.Network,android.net.NetworkCapabilities)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "network",
+        "networkCapabilities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkCapabilities(android.net.Network,android.net.NetworkCapabilities)",
+      "documentation": "Set network capability and affects the result of {@link\nConnectivityManager#getNetworkCapabilities(Network)}\n\n@param network The {@link Network} object identifying the network in question.\n@param networkCapabilities The {@link android.net.NetworkCapabilities} for the network.\n"
+    },
     "setNetworkInfo(int,android.net.NetworkInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -277,7 +359,7 @@
     "setNetworkPreference(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "preference"
@@ -289,7 +371,7 @@
     "unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "networkCallback"
@@ -303,12 +385,15 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.net.ConnectivityManager",
     "android.net.ConnectivityManager.OnNetworkActiveListener",
     "android.net.Network",
+    "android.net.NetworkCapabilities",
     "android.net.NetworkInfo",
     "android.net.NetworkRequest",
+    "android.os.Handler",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.Map",

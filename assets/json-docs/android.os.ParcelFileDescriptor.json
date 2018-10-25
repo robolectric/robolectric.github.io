@@ -3,7 +3,7 @@
     "__constructor__(android.os.ParcelFileDescriptor)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "wrapped"
@@ -15,7 +15,7 @@
     "close()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -40,7 +40,7 @@
     "getFd()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -51,17 +51,30 @@
     "getFileDescriptor()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.io.FileDescriptor",
       "exceptions": [],
       "name": "getFileDescriptor()"
     },
+    "getFileMode(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "mode"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getFileMode(int)"
+    },
     "getStatSize()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "long",
@@ -71,7 +84,7 @@
     "open(java.io.File,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -86,7 +99,6 @@
     }
   },
   "imports": [
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.annotation.SuppressLint",

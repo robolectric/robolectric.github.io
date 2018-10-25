@@ -75,14 +75,18 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.N_MR1",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadows.ShadowAssetManager.legacyShadowOf",
     "android.content.res.AssetFileDescriptor",
     "android.content.res.AssetManager",
     "android.content.res.Configuration",
     "android.content.res.Resources",
+    "android.content.res.Resources.NotFoundException",
     "android.content.res.ResourcesImpl",
     "android.content.res.TypedArray",
     "android.content.res.XmlResourceParser",
@@ -115,8 +119,9 @@
     "org.robolectric.res.ResourceTable",
     "org.robolectric.res.TypedResource",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowLegacyResourcesImpl.ShadowLegacyThemeImpl",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowResources.ShadowTheme"
+  "name": "org.robolectric.shadows.ShadowResources.ShadowLegacyTheme"
 }

@@ -3,7 +3,7 @@
     "getTabHost()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.widget.TabHost",
@@ -13,7 +13,7 @@
     "getTabWidget()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.widget.TabWidget",

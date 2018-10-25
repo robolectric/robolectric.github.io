@@ -26,7 +26,7 @@
     "getExtensionFromMimeType(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "mimeType"
@@ -38,7 +38,7 @@
     "getMimeTypeFromExtension(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "extension"
@@ -50,7 +50,7 @@
     "getSingleton()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -61,7 +61,7 @@
     "hasExtension(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "extension"
@@ -73,7 +73,7 @@
     "hasMimeType(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "mimeType"

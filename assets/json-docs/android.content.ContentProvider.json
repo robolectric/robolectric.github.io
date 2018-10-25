@@ -3,11 +3,12 @@
     "getCallingPackage()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
+      "minSdk": 19,
       "name": "getCallingPackage()"
     },
     "setCallingPackage(java.lang.String)": {
@@ -24,6 +25,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.content.ContentProvider",
     "org.robolectric.annotation.Implementation",

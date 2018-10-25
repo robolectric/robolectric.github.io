@@ -36,7 +36,7 @@
     "getDefault()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -80,7 +80,7 @@
     "getSmsManagerForSubscriptionId(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -94,7 +94,7 @@
     "sendDataMessage(java.lang.String,java.lang.String,short,byte[],android.app.PendingIntent,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "destinationAddress",
@@ -111,7 +111,7 @@
     "sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.ArrayList\u003cjava.lang.String\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "destinationAddress",
@@ -127,7 +127,7 @@
     "sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "destinationAddress",

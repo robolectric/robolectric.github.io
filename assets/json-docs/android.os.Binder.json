@@ -3,7 +3,7 @@
     "getCallingPid()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static",
         "final"
       ],
@@ -15,7 +15,7 @@
     "getCallingUid()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static",
         "final"
       ],
@@ -64,7 +64,7 @@
     "transact(int,android.os.Parcel,android.os.Parcel,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "code",

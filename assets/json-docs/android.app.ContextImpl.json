@@ -3,7 +3,7 @@
     "bindService(android.content.Intent,android.content.ServiceConnection,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent",
@@ -14,10 +14,27 @@
       "exceptions": [],
       "name": "bindService(android.content.Intent,android.content.ServiceConnection,int)"
     },
+    "bindServiceAsUser(android.content.Intent,android.content.ServiceConnection,int,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "serviceConnection",
+        "i",
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "bindServiceAsUser(android.content.Intent,android.content.ServiceConnection,int,android.os.UserHandle)",
+      "documentation": "Binds to a service but ignores the given UserHandle. "
+    },
     "checkCallingOrSelfPermission(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "permission"
@@ -29,7 +46,7 @@
     "checkCallingPermission(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "permission"
@@ -41,7 +58,7 @@
     "checkPermission(java.lang.String,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "permission",
@@ -55,7 +72,7 @@
     "getClassLoader()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.ClassLoader",
@@ -65,7 +82,7 @@
     "getContentResolver()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.content.ContentResolver",
@@ -75,7 +92,7 @@
     "getExternalCacheDir()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.io.File",
@@ -85,7 +102,7 @@
     "getExternalFilesDir(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type"
@@ -98,7 +115,7 @@
     "getExternalFilesDirs(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type"
@@ -108,10 +125,20 @@
       "minSdk": 19,
       "name": "getExternalFilesDirs(java.lang.String)"
     },
+    "getShadowInstrumentation()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowInstrumentation",
+      "exceptions": [],
+      "name": "getShadowInstrumentation()"
+    },
     "getSystemService(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "name"
@@ -123,17 +150,18 @@
     "getUserId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 17,
       "name": "getUserId()"
     },
     "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "receiver",
@@ -146,7 +174,7 @@
     "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "receiver",
@@ -161,7 +189,7 @@
     "registerReceiverAsUser(android.content.BroadcastReceiver,android.os.UserHandle,android.content.IntentFilter,java.lang.String,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "receiver",
@@ -172,7 +200,21 @@
       ],
       "returnType": "android.content.Intent",
       "exceptions": [],
+      "minSdk": 17,
       "name": "registerReceiverAsUser(android.content.BroadcastReceiver,android.os.UserHandle,android.content.IntentFilter,java.lang.String,android.os.Handler)"
+    },
+    "removeSystemService(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeSystemService(java.lang.String)",
+      "documentation": "Makes {@link #getSystemService(String)} return {@code null} for the given system service name,\nmimicking a device that doesn\u0027t have that system service.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -188,7 +230,7 @@
     "sendBroadcast(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent"
@@ -200,7 +242,7 @@
     "sendBroadcast(android.content.Intent,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent",
@@ -213,7 +255,7 @@
     "sendOrderedBroadcast(android.content.Intent,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent",
@@ -226,7 +268,7 @@
     "sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent",
@@ -244,7 +286,7 @@
     "sendStickyBroadcast(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent"
@@ -269,7 +311,7 @@
     "startForegroundService(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "service"
@@ -282,7 +324,7 @@
     "startIntentSender(android.content.IntentSender,android.content.Intent,int,int,int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent",
@@ -301,7 +343,7 @@
     "startService(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "service"
@@ -313,7 +355,7 @@
     "stopService(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "name"
@@ -325,7 +367,7 @@
     "unbindService(android.content.ServiceConnection)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "serviceConnection"
@@ -337,7 +379,7 @@
     "unregisterReceiver(android.content.BroadcastReceiver)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "broadcastReceiver"
@@ -348,11 +390,15 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.annotation.Nullable",
+    "android.app.ActivityThread",
     "android.content.BroadcastReceiver",
     "android.content.ComponentName",
     "android.content.ContentResolver",
@@ -369,12 +415,15 @@
     "android.os.UserHandle",
     "java.io.File",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.Map",
+    "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],

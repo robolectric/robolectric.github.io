@@ -80,7 +80,7 @@
     "setFlags(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "flags",
@@ -93,7 +93,7 @@
     "setSoftInputMode(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "softInputMode"

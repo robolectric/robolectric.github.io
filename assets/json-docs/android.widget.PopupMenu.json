@@ -3,7 +3,7 @@
     "dismiss()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -57,7 +57,7 @@
     "setOnMenuItemClickListener(android.widget.PopupMenu.OnMenuItemClickListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -69,7 +69,7 @@
     "show()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",

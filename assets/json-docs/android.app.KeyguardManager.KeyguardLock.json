@@ -41,6 +41,8 @@
     "android.app.Activity",
     "android.app.KeyguardManager",
     "android.app.KeyguardManager.KeyguardDismissCallback",
+    "java.util.HashSet",
+    "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

@@ -3,7 +3,7 @@
     "abortBroadcast()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -13,7 +13,7 @@
     "onReceive(android.content.Context,android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",

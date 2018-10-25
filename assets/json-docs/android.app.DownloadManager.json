@@ -18,7 +18,7 @@
     "enqueue(android.app.DownloadManager.Request)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "request"
@@ -52,7 +52,7 @@
     "query(android.app.DownloadManager.Query)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "query"
@@ -64,7 +64,7 @@
     "remove(long...)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "ids"

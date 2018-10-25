@@ -1,0 +1,83 @@
+{
+  "methods": {
+    "getVolumeList()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.storage.StorageVolume[]",
+      "exceptions": [],
+      "name": "getVolumeList()",
+      "documentation": "Gets the volume list from {@link #getVolumeList(int, int)}\n\n@return volume list\n"
+    },
+    "getVolumeList(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "userId",
+        "flags"
+      ],
+      "returnType": "android.os.storage.StorageVolume[]",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getVolumeList(int,int)"
+    },
+    "isFileEncryptedNativeOrEmulated()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isFileEncryptedNativeOrEmulated()"
+    },
+    "isUserKeyUnlocked(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "userId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isUserKeyUnlocked(int)"
+    },
+    "setFileEncryptedNativeOrEmulated(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFileEncryptedNativeOrEmulated(boolean)",
+      "documentation": "Setter for {@link #isFileEncryptedNativeOrEmulated()}\n\n@param isSupported a boolean value to set file encrypted native or not\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.RuntimeEnvironment.application",
+    "android.os.UserManager",
+    "android.os.storage.StorageManager",
+    "android.os.storage.StorageVolume",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowStorageManager",
+  "documentation": "Fake implementation of {@link android.os.storage.StorageManager}\n"
+}

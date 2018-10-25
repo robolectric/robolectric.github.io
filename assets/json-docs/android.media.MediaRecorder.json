@@ -3,7 +3,7 @@
     "__constructor__()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -13,7 +13,7 @@
     "__staticInitializer__()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -224,7 +224,7 @@
     "prepare()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -234,7 +234,7 @@
     "release()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -244,7 +244,7 @@
     "reset()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -254,7 +254,7 @@
     "setAudioChannels(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "numChannels"
@@ -266,7 +266,7 @@
     "setAudioEncoder(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "audio_encoder"
@@ -278,7 +278,7 @@
     "setAudioEncodingBitRate(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "bitRate"
@@ -290,7 +290,7 @@
     "setAudioSamplingRate(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "samplingRate"
@@ -302,7 +302,7 @@
     "setAudioSource(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "audio_source"
@@ -314,7 +314,7 @@
     "setCamera(android.hardware.Camera)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "c"
@@ -326,7 +326,7 @@
     "setMaxDuration(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "max_duration_ms"
@@ -338,7 +338,7 @@
     "setMaxFileSize(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "max_filesize_bytes"
@@ -350,7 +350,7 @@
     "setOnErrorListener(android.media.MediaRecorder.OnErrorListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "l"
@@ -362,7 +362,7 @@
     "setOnInfoListener(android.media.MediaRecorder.OnInfoListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -374,7 +374,7 @@
     "setOutputFile(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "path"
@@ -386,7 +386,7 @@
     "setOutputFormat(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "output_format"
@@ -398,7 +398,7 @@
     "setPreviewDisplay(android.view.Surface)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sv"
@@ -410,7 +410,7 @@
     "setVideoEncoder(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "video_encoder"
@@ -422,7 +422,7 @@
     "setVideoEncodingBitRate(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "bitRate"
@@ -434,7 +434,7 @@
     "setVideoFrameRate(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "rate"
@@ -446,7 +446,7 @@
     "setVideoSize(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "width",
@@ -459,7 +459,7 @@
     "setVideoSource(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "video_source"
@@ -471,7 +471,7 @@
     "start()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -481,7 +481,7 @@
     "stop()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",

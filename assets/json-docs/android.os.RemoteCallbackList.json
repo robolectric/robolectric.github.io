@@ -3,7 +3,7 @@
     "beginBroadcast()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -13,7 +13,7 @@
     "finishBroadcast()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -23,7 +23,7 @@
     "getBroadcastCookie(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "index"
@@ -35,7 +35,7 @@
     "getBroadcastItem(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "index"
@@ -47,7 +47,7 @@
     "kill()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -57,7 +57,7 @@
     "onCallbackDied(E)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback"
@@ -69,7 +69,7 @@
     "onCallbackDied(E,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback",
@@ -82,7 +82,7 @@
     "register(E)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback"
@@ -94,7 +94,7 @@
     "register(E,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback",
@@ -107,7 +107,7 @@
     "unregister(E)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback"

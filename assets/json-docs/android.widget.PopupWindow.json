@@ -3,7 +3,7 @@
     "invokePopup(android.view.WindowManager.LayoutParams)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "p"

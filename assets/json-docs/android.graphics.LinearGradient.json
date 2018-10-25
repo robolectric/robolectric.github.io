@@ -3,7 +3,7 @@
     "__constructor__(float,float,float,float,int,int,android.graphics.Shader.TileMode)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "x0",

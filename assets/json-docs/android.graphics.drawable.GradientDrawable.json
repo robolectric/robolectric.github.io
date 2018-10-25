@@ -13,7 +13,7 @@
     "setColor(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "color"

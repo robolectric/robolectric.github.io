@@ -1,9 +1,22 @@
 {
   "methods": {
+    "smoothScrollBy(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "smoothScrollBy(int,int)"
+    },
     "smoothScrollTo(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "x",

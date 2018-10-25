@@ -30,7 +30,7 @@
     "finish()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],

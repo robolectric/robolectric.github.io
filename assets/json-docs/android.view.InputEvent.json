@@ -3,7 +3,7 @@
     "getDevice()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.InputDevice",

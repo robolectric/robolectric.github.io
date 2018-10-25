@@ -80,6 +80,13 @@
     }
   },
   "imports": [
+    "org.robolectric.res.android.AttributeResolution.STYLE_ASSET_COOKIE",
+    "org.robolectric.res.android.AttributeResolution.STYLE_CHANGING_CONFIGURATIONS",
+    "org.robolectric.res.android.AttributeResolution.STYLE_DATA",
+    "org.robolectric.res.android.AttributeResolution.STYLE_DENSITY",
+    "org.robolectric.res.android.AttributeResolution.STYLE_NUM_ENTRIES",
+    "org.robolectric.res.android.AttributeResolution.STYLE_RESOURCE_ID",
+    "org.robolectric.res.android.AttributeResolution.STYLE_TYPE",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.annotation.StyleableRes",
     "android.content.res.Resources",

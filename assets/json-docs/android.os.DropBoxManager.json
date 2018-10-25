@@ -1,0 +1,51 @@
+{
+  "methods": {
+    "addData(java.lang.String,long,byte[])": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "tag",
+        "timestamp",
+        "data"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addData(java.lang.String,long,byte[])",
+      "documentation": "Adds entry to the DropboxManager with the flag indicating data is text.\n\n\u003cp\u003eThe existing {@link DropBoxManager#addData}, {@link DropBoxManager#addFile}, and {@link\nDropBoxManager#addText} methods in DropBoxManager are not shadowed. This method is a\nconvenience for quickly adding multiple historical entries. The entries can be added in any\norder since this shadow will sort the entries by the specified timestamp.\n\n\u003cp\u003eThe flag will be set to {@link DropBoxManager#IS_TEXT} so that {@link\nDropBoxManager.Entry#getText} can be used.\n\n@param tag can be any arbitrary string\n@param timestamp is an arbitrary timestamp that must be unique from all other entries\n@param data must not be null\n"
+    },
+    "getNextEntry(java.lang.String,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "tag",
+        "millis"
+      ],
+      "returnType": "android.os.DropBoxManager.Entry",
+      "exceptions": [],
+      "name": "getNextEntry(java.lang.String,long)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()",
+      "documentation": "Clears all entries.\n"
+    }
+  },
+  "imports": [
+    "android.os.DropBoxManager",
+    "android.os.DropBoxManager.Entry",
+    "java.util.SortedMap",
+    "java.util.TreeMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowDropBoxManager",
+  "documentation": "Fake dropbox manager that starts with no entries. "
+}

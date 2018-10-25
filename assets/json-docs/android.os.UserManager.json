@@ -13,6 +13,21 @@
       "exceptions": [],
       "name": "__constructor__(android.content.Context,android.os.IUserManager)"
     },
+    "addUser(int,java.lang.String,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id",
+        "name",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addUser(int,java.lang.String,int)",
+      "documentation": "Creates a user with the specified name, userId and flags.\n\n@param id the unique id of user\n@param name name of the user\n@param flags 16 bits for user type. See {@link UserInfo#flags}\n"
+    },
     "addUserProfile(android.os.UserHandle)": {
       "isImplementation": false,
       "modifiers": [
@@ -25,6 +40,18 @@
       "exceptions": [],
       "name": "addUserProfile(android.os.UserHandle)",
       "documentation": "Adds a profile associated for the user that the calling process is running on.\n\nThe user is assigned an arbitrary unique serial number.\n\n@return the user\u0027s serial number\n"
+    },
+    "canSwitchUsers()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "canSwitchUsers()",
+      "documentation": "Returns {@code true} by default, or the value specified via {@link #setCanSwitchUser(boolean)}.\n"
     },
     "checkPermissions()": {
       "isImplementation": false,
@@ -101,6 +128,18 @@
       "name": "getUserForSerialNumber(long)",
       "documentation": "@see #addUserProfile(UserHandle)\n"
     },
+    "getUserInfo(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "android.content.pm.UserInfo",
+      "exceptions": [],
+      "name": "getUserInfo(int)"
+    },
     "getUserProfiles()": {
       "isImplementation": true,
       "modifiers": [
@@ -145,8 +184,7 @@
       "params": [],
       "returnType": "java.util.List\u003candroid.content.pm.UserInfo\u003e",
       "exceptions": [],
-      "name": "getUsers()",
-      "documentation": "@return an empty list\n"
+      "name": "getUsers()"
     },
     "hasManageUsersPermission()": {
       "isImplementation": false,
@@ -184,6 +222,18 @@
       "name": "isDemoUser()",
       "documentation": "@return `false` by default, or the value specified via {@link #setIsDemoUser(boolean)}\n"
     },
+    "isLinkedUser()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "isLinkedUser()",
+      "documentation": "@return \u0027false\u0027 by default, or the value specified via {@link #setIsLinkedUser(boolean)}\n"
+    },
     "isManagedProfile()": {
       "isImplementation": true,
       "modifiers": [
@@ -195,6 +245,18 @@
       "minSdk": 21,
       "name": "isManagedProfile()",
       "documentation": "If permissions are enforced (see {@link #enforcePermissionChecks(boolean)}) and the application\ndoesn\u0027t have the {@link android.Manifest.permission#MANAGE_USERS} permission, throws a\n{@link SecurityManager} exception.\n\n@return `false` by default, or the value specified via {@link #setManagedProfile(boolean)}\n@see #enforcePermissionChecks(boolean)\n@see #setManagedProfile(boolean)\n"
+    },
+    "isSystemUser()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isSystemUser()",
+      "documentation": "@return \u0027true\u0027 by default, or the value specified via {@link #setIsSystemUser(boolean)}\n"
     },
     "isUserRunning(android.os.UserHandle)": {
       "isImplementation": true,
@@ -233,6 +295,30 @@
       "minSdk": 24,
       "name": "isUserUnlocked()"
     },
+    "removeUser(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "removeUser(int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "setApplicationRestrictions(java.lang.String,android.os.Bundle)": {
       "isImplementation": false,
       "modifiers": [
@@ -247,6 +333,19 @@
       "name": "setApplicationRestrictions(java.lang.String,android.os.Bundle)",
       "documentation": "Sets the value returned by {@link UserManager#getApplicationRestrictions(String)}.\n"
     },
+    "setCanSwitchUser(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "canSwitchUser"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCanSwitchUser(boolean)",
+      "documentation": "Sets whether switching users is allowed or not; controls the return value of {@link\nUserManager#canSwitchUser()}\n"
+    },
     "setIsDemoUser(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -258,7 +357,59 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setIsDemoUser(boolean)",
-      "documentation": "Sets that the current user is a demo user; controls the return value of\n{@link UserManager#isDemoUser()}.\n"
+      "documentation": "Sets that the current user is a demo user; controls the return value of {@link\nUserManager#isDemoUser()}.\n\n@deprecated Use {@link ShadowUserManager#addUser(int, String, int)} to create a demo user\n    instead of changing default user flags.\n"
+    },
+    "setIsGuestUser(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isGuestUser"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsGuestUser(boolean)",
+      "documentation": "Sets that the current user is the guest user; controls the return value of {@link\nUserManager#isGuestUser()}.\n\n@deprecated Use {@link ShadowUserManager#addUser(int, String, int)} to create a guest user\n    instead of changing default user flags.\n"
+    },
+    "setIsLinkedUser(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isLinkedUser"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsLinkedUser(boolean)",
+      "documentation": "Sets that the current user is the linked user; controls the return value of {@link\nUserManager#isLinkedUser()}.\n\n@deprecated Use {@link ShadowUserManager#addUser(int, String, int)} to create a linked user\n    instead of changing default user flags.\n"
+    },
+    "setIsPrimaryUser(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isPrimaryUser"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsPrimaryUser(boolean)",
+      "documentation": "Sets that the current user is the primary user; controls the return value of {@link\nUserManager#isPrimaryUser()}.\n\n@deprecated Use {@link ShadowUserManager#addUser(int, String, int)} to create a primary user\n    instead of changing default user flags.\n"
+    },
+    "setIsSystemUser(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isSystemUser"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsSystemUser(boolean)",
+      "documentation": "Sets that the current user is the system user; controls the return value of {@link\nUserManager#isSystemUser()}.\n\n@deprecated Use {@link ShadowUserManager#addUser(int, String, int)} to create a system user\n    instead of changing default user flags.\n"
     },
     "setManagedProfile(boolean)": {
       "isImplementation": false,
@@ -327,14 +478,29 @@
       "exceptions": [],
       "name": "setUserUnlocked(boolean)",
       "documentation": "Setter for {@link UserManager#isUserUnlocked()}\n"
+    },
+    "switchUser(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "switchUser(int)",
+      "documentation": "Switches the current user to {@code userHandle}.\n\n@param userId the integer handle of the user, where 0 is the primary user.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.Manifest.permission",
     "android.content.Context",
     "android.content.pm.PackageManager",
@@ -347,11 +513,14 @@
     "com.google.common.collect.BiMap",
     "com.google.common.collect.HashBiMap",
     "com.google.common.collect.ImmutableList",
+    "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadows.ShadowUserManager.UserState"
   ],
   "name": "org.robolectric.shadows.ShadowUserManager",

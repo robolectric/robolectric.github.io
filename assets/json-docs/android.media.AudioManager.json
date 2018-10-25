@@ -3,7 +3,7 @@
     "abandonAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "l"
@@ -11,6 +11,31 @@
       "returnType": "int",
       "exceptions": [],
       "name": "abandonAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener)"
+    },
+    "abandonAudioFocusRequest(android.media.AudioFocusRequest)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioFocusRequest"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "abandonAudioFocusRequest(android.media.AudioFocusRequest)",
+      "documentation": "Provides a mock like interface for the abandonAudioFocusRequest method by storing the request\nobject for later inspection and returning the value specified in setNextFocusRequestResponse.\n"
+    },
+    "getActivePlaybackConfigurations()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.media.AudioPlaybackConfiguration\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getActivePlaybackConfigurations()"
     },
     "getLastAbandonedAudioFocusListener()": {
       "isImplementation": false,
@@ -21,6 +46,16 @@
       "returnType": "android.media.AudioManager.OnAudioFocusChangeListener",
       "exceptions": [],
       "name": "getLastAbandonedAudioFocusListener()"
+    },
+    "getLastAbandonedAudioFocusRequest()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.media.AudioFocusRequest",
+      "exceptions": [],
+      "name": "getLastAbandonedAudioFocusRequest()"
     },
     "getLastAudioFocusRequest()": {
       "isImplementation": false,
@@ -35,7 +70,7 @@
     "getMode()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -45,7 +80,7 @@
     "getRingerMode()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -55,7 +90,7 @@
     "getStreamMaxVolume(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "streamType"
@@ -67,7 +102,7 @@
     "getStreamVolume(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "streamType"
@@ -79,7 +114,7 @@
     "isBluetoothA2dpOn()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -89,7 +124,7 @@
     "isBluetoothScoOn()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -99,7 +134,7 @@
     "isMicrophoneMute()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -109,7 +144,7 @@
     "isMusicActive()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -119,7 +154,7 @@
     "isSpeakerphoneOn()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -142,17 +177,31 @@
     "isWiredHeadsetOn()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
       "name": "isWiredHeadsetOn()"
     },
+    "requestAudioFocus(android.media.AudioFocusRequest)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioFocusRequest"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "requestAudioFocus(android.media.AudioFocusRequest)",
+      "documentation": "Provides a mock like interface for the requestAudioFocus method by storing the request\nobject for later inspection and returning the value specified in setNextFocusRequestResponse.\n"
+    },
     "requestAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "l",
@@ -163,10 +212,23 @@
       "exceptions": [],
       "name": "requestAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener,int,int)"
     },
+    "setActivePlaybackConfigurationsFor(java.util.List\u003candroid.media.AudioAttributes\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "audioAttributes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActivePlaybackConfigurationsFor(java.util.List\u003candroid.media.AudioAttributes\u003e)",
+      "documentation": "Sets active playback configurations that will be served by {@link\nAudioManager#getActivePlaybackConfigurations}.\n\n\u003cp\u003eNote that there is no public {@link AudioPlaybackConfiguration} constructor, so the\nconfigurations returned are specified by their audio attributes only.\n"
+    },
     "setBluetoothA2dpOn(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "on"
@@ -178,7 +240,7 @@
     "setBluetoothScoOn(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "isBluetoothScoOn"
@@ -202,7 +264,7 @@
     "setMicrophoneMute(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "on"
@@ -214,7 +276,7 @@
     "setMode(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "mode"
@@ -238,7 +300,7 @@
     "setRingerMode(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "ringerMode"
@@ -250,7 +312,7 @@
     "setSpeakerphoneOn(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "on"
@@ -286,7 +348,7 @@
     "setStreamVolume(int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "streamType",
@@ -300,7 +362,7 @@
     "setWiredHeadsetOn(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "on"
@@ -311,8 +373,16 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.media.AudioAttributes",
+    "android.media.AudioFocusRequest",
     "android.media.AudioManager",
+    "android.media.AudioPlaybackConfiguration",
+    "android.os.Parcel",
+    "java.util.ArrayList",
+    "java.util.Collections",
     "java.util.HashMap",
+    "java.util.List",
     "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

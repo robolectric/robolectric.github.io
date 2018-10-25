@@ -1,9 +1,68 @@
 {
   "methods": {
+    "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "autoConnect",
+        "callback"
+      ],
+      "returnType": "android.bluetooth.BluetoothGatt",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback)"
+    },
+    "createBond()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "createBond()",
+      "documentation": "Returns whether this device has been bonded with. "
+    },
+    "fetchUuidsWithSdp()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "fetchUuidsWithSdp()",
+      "documentation": "Overrides behavior of {@link BluetoothDevice#fetchUuidsWithSdp}. This method updates the\ncounter which counts the number of invocations of this method.\n\n@returns Value set by calling {@link ShadowBluetoothDevice#setFetchUuidsWithSdpResult}. If not\n    previously set, will return false by default.\n"
+    },
+    "getBondState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBondState()",
+      "documentation": "Overrides behavior of {@link BluetoothDevice#getBondState} to return pre-set result.\n\n@returns Value set by calling {@link ShadowBluetoothDevice#setBondState}. If setBondState has\n    not previously been called, will return {@link BluetoothDevice#BOND_NONE} to indicate the\n    device is not bonded.\n"
+    },
+    "getFetchUuidsWithSdpCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFetchUuidsWithSdpCount()",
+      "documentation": "Returns the number of times fetchUuidsWithSdp has been called. "
+    },
     "getName()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -13,14 +72,77 @@
     "getService()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
       "returnType": "android.bluetooth.IBluetooth",
       "exceptions": [],
       "name": "getService()",
-      "documentation": "Implements getService() in the same way the original method does, but ignores any Exceptions\nfrom invoking {@link BluetoothAdapter#getBluetoothService}.\n"
+      "documentation": "Implements getService() in the same way the original method does, but ignores any Exceptions\nfrom invoking {@link android.bluetooth.BluetoothAdapter#getBluetoothService}.\n"
+    },
+    "getUuids()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.ParcelUuid[]",
+      "exceptions": [],
+      "name": "getUuids()",
+      "documentation": "Overrides behavior of {@link BluetoothDevice#getUuids} to return pre-set result.\n\n@returns Value set by calling {@link ShadowBluetoothDevice#setUuids}. If setUuids has not\n    previously been called, will return null.\n"
+    },
+    "newInstance(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "address"
+      ],
+      "returnType": "android.bluetooth.BluetoothDevice",
+      "exceptions": [],
+      "name": "newInstance(java.lang.String)"
+    },
+    "setBondState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bondState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBondState(int)",
+      "documentation": "Sets value of bond state for {@link BluetoothDevice#getBondState}. "
+    },
+    "setCreatedBond(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "createdBond"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCreatedBond(boolean)",
+      "documentation": "Sets whether this device has been bonded with. "
+    },
+    "setFetchUuidsWithSdpResult(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "fetchUuidsWithSdpResult"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFetchUuidsWithSdpResult(boolean)",
+      "documentation": "Sets value of the return result for {@link BluetoothDevice#fetchUuidsWithSdp}. "
     },
     "setName(java.lang.String)": {
       "isImplementation": false,
@@ -33,14 +155,35 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setName(java.lang.String)"
+    },
+    "setUuids(android.os.ParcelUuid[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uuids"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUuids(android.os.ParcelUuid[])",
+      "documentation": "Sets the return value for {@link BluetoothDevice#getUuids}. "
     }
   },
   "imports": [
+    "android.bluetooth.BluetoothDevice.BOND_NONE",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.bluetooth.BluetoothDevice",
+    "android.bluetooth.BluetoothGatt",
+    "android.bluetooth.BluetoothGattCallback",
     "android.bluetooth.IBluetooth",
+    "android.content.Context",
+    "android.os.ParcelUuid",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothDevice"
 }

@@ -29,7 +29,7 @@
     "nCreateFullPath()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -40,7 +40,7 @@
     "nCreateFullPath(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -53,7 +53,7 @@
     "nCreateGroup()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -64,7 +64,7 @@
     "nCreateGroup(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -77,7 +77,7 @@
     "nGetFullPathProperties(long,byte[],int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -92,7 +92,7 @@
     "nGetGroupProperties(long,float[],int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -107,7 +107,7 @@
     "nUpdateFullPathProperties(long,float,int,float,int,float,float,float,float,float,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -132,7 +132,7 @@
     "nUpdateGroupProperties(long,float,float,float,float,float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

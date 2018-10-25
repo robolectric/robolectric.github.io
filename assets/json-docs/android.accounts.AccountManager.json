@@ -15,7 +15,7 @@
     "__constructor__(android.content.Context,android.accounts.IAccountManager)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -55,7 +55,7 @@
     "addAccount(java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "accountType",
@@ -73,7 +73,7 @@
     "addAccountExplicitly(android.accounts.Account,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",
@@ -112,7 +112,7 @@
     "addOnAccountsUpdatedListener(android.accounts.OnAccountsUpdateListener,android.os.Handler,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener",
@@ -126,7 +126,7 @@
     "blockingGetAuthToken(android.accounts.Account,java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",
@@ -140,7 +140,7 @@
     "get(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -149,12 +149,12 @@
       "returnType": "android.accounts.AccountManager",
       "exceptions": [],
       "name": "get(android.content.Context)",
-      "documentation": "@deprecated This method will be removed in Robolectric 3.4 Use {@link AccountManager#get(Context)} instead.\n"
+      "documentation": "@deprecated This method will be removed in Robolectric 3.4 Use {@link\n    AccountManager#get(Context)} instead.\n"
     },
     "getAccounts()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.accounts.Account[]",
@@ -164,7 +164,7 @@
     "getAccountsByType(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type"
@@ -176,7 +176,7 @@
     "getAccountsByTypeAndFeatures(java.lang.String,java.lang.String[],android.accounts.AccountManagerCallback\u003candroid.accounts.Account[]\u003e,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type",
@@ -191,7 +191,7 @@
     "getAccountsByTypeForPackage(java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type",
@@ -205,7 +205,7 @@
     "getAuthToken(android.accounts.Account,java.lang.String,android.os.Bundle,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",
@@ -222,7 +222,7 @@
     "getAuthToken(android.accounts.Account,java.lang.String,android.os.Bundle,boolean,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",
@@ -239,7 +239,7 @@
     "getAuthenticatorTypes()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.accounts.AuthenticatorDescription[]",
@@ -260,7 +260,7 @@
     "getPassword(android.accounts.Account)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account"
@@ -272,7 +272,7 @@
     "getPreviousName(android.accounts.Account)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account"
@@ -281,12 +281,12 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "getPreviousName(android.accounts.Account)",
-      "documentation": "@see #setPreviousAccountName(Account, String)\n"
+      "documentation": "@see #setPreviousAccountName(Account, String) "
     },
     "getUserData(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",
@@ -299,7 +299,7 @@
     "hasFeatures(android.accounts.Account,java.lang.String[],android.accounts.AccountManagerCallback\u003cjava.lang.Boolean\u003e,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",
@@ -314,7 +314,7 @@
     "invalidateAuthToken(java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "accountType",
@@ -337,7 +337,7 @@
     "peekAuthToken(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",
@@ -361,7 +361,7 @@
     "removeAccount(android.accounts.Account,android.accounts.AccountManagerCallback\u003cjava.lang.Boolean\u003e,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",
@@ -371,12 +371,12 @@
       "returnType": "android.accounts.AccountManagerFuture\u003cjava.lang.Boolean\u003e",
       "exceptions": [],
       "name": "removeAccount(android.accounts.Account,android.accounts.AccountManagerCallback\u003cjava.lang.Boolean\u003e,android.os.Handler)",
-      "documentation": "The remove operation is posted to the given {@code handler}, and will be\nexecuted according to the {@link IdleState} of the corresponding {@link org.robolectric.util.Scheduler}.\n"
+      "documentation": "The remove operation is posted to the given {@code handler}, and will be executed according to\nthe {@link IdleState} of the corresponding {@link org.robolectric.util.Scheduler}.\n"
     },
     "removeAccountExplicitly(android.accounts.Account)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account"
@@ -400,7 +400,7 @@
     "removeOnAccountsUpdatedListener(android.accounts.OnAccountsUpdateListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -412,7 +412,7 @@
     "setAuthToken(android.accounts.Account,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "synchronized"
       ],
       "params": [
@@ -423,6 +423,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setAuthToken(android.accounts.Account,java.lang.String,java.lang.String)"
+    },
+    "setAuthenticationErrorOnNextResponse(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "authenticationErrorOnNextResponse"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAuthenticationErrorOnNextResponse(boolean)",
+      "documentation": "Sets authenticator exception, which will be thrown by {@link #getAccountsByTypeAndFeatures}.\n\n@param authenticationErrorOnNextResponse to set flag that exception will be thrown on next\n    response.\n"
     },
     "setFeatures(android.accounts.Account,java.lang.String[])": {
       "isImplementation": false,
@@ -440,7 +453,7 @@
     "setPassword(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",
@@ -467,7 +480,7 @@
     "setUserData(android.accounts.Account,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account",

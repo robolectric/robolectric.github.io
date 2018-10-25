@@ -3,7 +3,7 @@
     "HSVToColor(int,float[])": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -17,7 +17,7 @@
     "RGBToHSV(int,int,int,float[])": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -29,7 +29,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "RGBToHSV(int,int,int,float[])",
-      "documentation": "This is implemented in native code in the Android SDK.\n\nSince HSV \u003d\u003d HSB then the implementation from {@link java.awt.Color} can be used,\nwith a small adjustment to the representation of the hue.\n\n{@link java.awt.Color} represents hue as 0..1 (where 1 \u003d\u003d 100% \u003d\u003d 360 degrees),\nwhile {@link android.graphics.Color} represents hue as 0..360 degrees. The correct hue\ncan be calculated by multiplying with 360.\n\n@param red Red component\n@param green Green component\n@param blue Blue component\n@param hsv Array to store HSV components\n"
+      "documentation": "This is implemented in native code in the Android SDK.\n\n\u003cp\u003eSince HSV \u003d\u003d HSB then the implementation from {@link java.awt.Color} can be used, with a\nsmall adjustment to the representation of the hue.\n\n\u003cp\u003e{@link java.awt.Color} represents hue as 0..1 (where 1 \u003d\u003d 100% \u003d\u003d 360 degrees), while {@link\nandroid.graphics.Color} represents hue as 0..360 degrees. The correct hue can be calculated by\nmultiplying with 360.\n\n@param red Red component\n@param green Green component\n@param blue Blue component\n@param hsv Array to store HSV components\n"
     }
   },
   "imports": [

@@ -1,14 +1,15 @@
 {
   "methods": {
-    "getParcelableData()": {
+    "getSource()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
-      "returnType": "android.os.Parcelable",
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
       "exceptions": [],
-      "name": "getParcelableData()"
+      "name": "getSource()",
+      "documentation": "Returns the {@link AccessibilityNodeInfo} of the event source or {@code null} if there is none.\n"
     },
     "getSourceRoot()": {
       "isImplementation": false,
@@ -30,22 +31,21 @@
       "exceptions": [],
       "name": "getVirtualDescendantId()"
     },
-    "setParcelableData(android.os.Parcelable)": {
+    "getWindowId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
-      "params": [
-        "data"
-      ],
-      "returnType": "void",
+      "params": [],
+      "returnType": "int",
       "exceptions": [],
-      "name": "setParcelableData(android.os.Parcelable)"
+      "name": "getWindowId()",
+      "documentation": "Returns the id of the window from which the event comes. "
     },
     "setSource(android.view.View)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "root"
@@ -57,7 +57,7 @@
     "setSource(android.view.View,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "root",
@@ -66,11 +66,37 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSource(android.view.View,int)"
+    },
+    "setSourceNode(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "node"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSourceNode(android.view.accessibility.AccessibilityNodeInfo)",
+      "documentation": "Sets the {@link AccessibilityNodeInfo} of the event source.\n\n@param node The node to set\n"
+    },
+    "setWindowId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWindowId(int)",
+      "documentation": "Sets the id of the window from which the event comes.\n\n@param id The id to set\n"
     }
   },
   "imports": [
-    "android.os.Parcelable",
     "android.view.View",
+    "android.view.accessibility.AccessibilityNodeInfo",
     "android.view.accessibility.AccessibilityRecord",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

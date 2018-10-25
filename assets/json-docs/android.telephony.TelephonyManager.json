@@ -10,6 +10,45 @@
       "exceptions": [],
       "name": "checkReadPhoneStatePermission()"
     },
+    "clearPhoneTypes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearPhoneTypes()",
+      "documentation": "Removes all {@code subId} to {@code phoneType} mappings. "
+    },
+    "createForPhoneAccountHandle(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "handle"
+      ],
+      "returnType": "android.telephony.TelephonyManager",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "createForPhoneAccountHandle(android.telecom.PhoneAccountHandle)",
+      "documentation": "Returns {@code null} by default or the value specified via {@link\n#setTelephonyManagerForHandle(PhoneAccountHandle, TelephonyManager)}.\n"
+    },
+    "createForSubscriptionId(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subId"
+      ],
+      "returnType": "android.telephony.TelephonyManager",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "createForSubscriptionId(int)",
+      "documentation": "Returns {@code null} by default or the value specified via {@link\n#setTelephonyManagerForSubscriptionId(int, TelephonyManager)}\n"
+    },
     "getAllCellInfo()": {
       "isImplementation": true,
       "modifiers": [
@@ -40,7 +79,36 @@
       "params": [],
       "returnType": "android.os.PersistableBundle",
       "exceptions": [],
-      "name": "getCarrierConfig()"
+      "minSdk": 26,
+      "name": "getCarrierConfig()",
+      "documentation": "Returns a new empty {@link PersistableBundle} by default, or the value specified via {@link\n#setCarrierConfig(PersistableBundle)}.\n"
+    },
+    "getCarrierPackageNamesForIntent(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getCarrierPackageNamesForIntent(android.content.Intent)"
+    },
+    "getCarrierPackageNamesForIntentAndPhone(android.content.Intent,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "phoneId"
+      ],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getCarrierPackageNamesForIntentAndPhone(android.content.Intent,int)"
     },
     "getCellLocation()": {
       "isImplementation": true,
@@ -52,6 +120,19 @@
       "exceptions": [],
       "name": "getCellLocation()"
     },
+    "getCurrentPhoneType(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subId"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getCurrentPhoneType(int)"
+    },
     "getDeviceId()": {
       "isImplementation": true,
       "modifiers": [
@@ -61,6 +142,20 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getDeviceId()"
+    },
+    "getDeviceId(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "slot"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getDeviceId(int)",
+      "documentation": "Returns {@code null} by default or the value specified via {@link #setDeviceId(int, String)}.\n"
     },
     "getEventFlags()": {
       "isImplementation": false,
@@ -92,6 +187,7 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
+      "minSdk": 21,
       "name": "getImei()"
     },
     "getLine1Number()": {
@@ -135,6 +231,7 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
+      "minSdk": 26,
       "name": "getMeid()"
     },
     "getNetworkCountryIso()": {
@@ -177,6 +274,18 @@
       "exceptions": [],
       "name": "getNetworkType()"
     },
+    "getPhoneCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getPhoneCount()",
+      "documentation": "Returns 1 by default or the value specified via {@link #setPhoneCount(int)}. "
+    },
     "getPhoneType()": {
       "isImplementation": true,
       "modifiers": [
@@ -187,6 +296,29 @@
       "exceptions": [],
       "name": "getPhoneType()"
     },
+    "getServiceState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.telephony.ServiceState",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getServiceState()",
+      "documentation": "Returns {@code null} by default or the value specified via {@link\n#setServiceState(ServiceState)}\n"
+    },
+    "getSimCarrierId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getSimCarrierId()"
+    },
     "getSimCountryIso()": {
       "isImplementation": true,
       "modifiers": [
@@ -196,6 +328,19 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getSimCountryIso()"
+    },
+    "getSimCountryIso(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subId"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getSimCountryIso(int)"
     },
     "getSimOperator()": {
       "isImplementation": true,
@@ -217,6 +362,16 @@
       "exceptions": [],
       "name": "getSimOperatorName()"
     },
+    "getSimSerialNumber()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSimSerialNumber()"
+    },
     "getSimState()": {
       "isImplementation": true,
       "modifiers": [
@@ -226,6 +381,77 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getSimState()"
+    },
+    "getSimState(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "slotIndex"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getSimState(int)"
+    },
+    "getSubscriberId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSubscriberId()"
+    },
+    "getVoiceMailAlphaTag()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getVoiceMailAlphaTag()",
+      "documentation": "Returns {@code null} by default or the value specified via {@link\n#setVoiceMailAlphaTag(String)}.\n"
+    },
+    "getVoiceMailNumber()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getVoiceMailNumber()",
+      "documentation": "Returns {@code null} by default, or the value specified via {@link\n#setVoiceMailNumber(String)}.\n"
+    },
+    "getVoiceNetworkType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getVoiceNetworkType()",
+      "documentation": "Returns whatever value was set by the last call to {@link #setVoiceNetworkType}, defaulting to\n{@link TelephonyManager#NETWORK_TYPE_UNKNOWN} if it was never called.\n"
+    },
+    "getVoicemailRingtoneUri(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "handle"
+      ],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getVoicemailRingtoneUri(android.telecom.PhoneAccountHandle)",
+      "documentation": "Returns {@code null} by default or the value specified via {@link\n#setVoicemailRingtoneUri(PhoneAccountHandle, Uri)}.\n"
     },
     "initListener(android.telephony.PhoneStateListener,int)": {
       "isImplementation": false,
@@ -240,6 +466,17 @@
       "exceptions": [],
       "name": "initListener(android.telephony.PhoneStateListener,int)"
     },
+    "isNetworkRoaming()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isNetworkRoaming()",
+      "documentation": "Returns {@code false} by default or the value specified via {@link\n#setIsNetworkRoaming(boolean)}\n"
+    },
     "isSmsCapable()": {
       "isImplementation": true,
       "modifiers": [
@@ -249,7 +486,21 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isSmsCapable()",
-      "documentation": "@return `true` by default, or the value specified via {@link #setIsSmsCapable(boolean)}\n"
+      "documentation": "@return `true` by default, or the value specified via {@link #setIsSmsCapable(boolean)} "
+    },
+    "isVoicemailVibrationEnabled(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "handle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isVoicemailVibrationEnabled(android.telecom.PhoneAccountHandle)",
+      "documentation": "Returns {@code null} by default or the value specified via {@link\n#setVoicemailVibrationEnabled(PhoneAccountHandle, boolean)}.\n"
     },
     "listen(android.telephony.PhoneStateListener,int)": {
       "isImplementation": true,
@@ -263,6 +514,28 @@
       "returnType": "void",
       "exceptions": [],
       "name": "listen(android.telephony.PhoneStateListener,int)"
+    },
+    "resetSimCountryIsos()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetSimCountryIsos()",
+      "documentation": "Clears {@code subId} to simCountryIso mapping and resets to default state. "
+    },
+    "resetSimStates()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetSimStates()",
+      "documentation": "Clears {@code slotIndex} to state mapping and resets to default state. "
     },
     "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)": {
       "isImplementation": false,
@@ -303,6 +576,33 @@
       "name": "setCallState(int,java.lang.String)",
       "documentation": "Sets the current call state with the option to specify an incoming phone number for the\nCALL_STATE_RINGING state. The incoming phone number will be ignored for all other cases.\n"
     },
+    "setCarrierConfig(android.os.PersistableBundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "carrierConfig"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCarrierConfig(android.os.PersistableBundle)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#getCarrierConfig()}.\n\n@param carrierConfig\n"
+    },
+    "setCarrierPackageNamesForPhone(int,java.util.List\u003cjava.lang.String\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneId",
+        "packages"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCarrierPackageNamesForPhone(int,java.util.List\u003cjava.lang.String\u003e)",
+      "documentation": "Sets the {@code packages} for the given {@code phoneId}. "
+    },
     "setCellLocation(android.telephony.CellLocation)": {
       "isImplementation": false,
       "modifiers": [
@@ -314,6 +614,34 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCellLocation(android.telephony.CellLocation)"
+    },
+    "setCurrentPhoneType(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "subId",
+        "phoneType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCurrentPhoneType(int,int)",
+      "documentation": "Sets the phone type for the given {@code subId}. "
+    },
+    "setDeviceId(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "slot",
+        "deviceId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDeviceId(int,java.lang.String)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#getDeviceId(int)}. "
     },
     "setDeviceId(java.lang.String)": {
       "isImplementation": false,
@@ -351,6 +679,19 @@
       "exceptions": [],
       "name": "setImei(java.lang.String)",
       "documentation": "Set the IMEI returned by getImei(). "
+    },
+    "setIsNetworkRoaming(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isNetworkRoaming"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsNetworkRoaming(boolean)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#isNetworkRoaming()}. "
     },
     "setIsSmsCapable(boolean)": {
       "isImplementation": false,
@@ -438,6 +779,19 @@
       "exceptions": [],
       "name": "setNetworkType(int)"
     },
+    "setPhoneCount(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPhoneCount(int)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#getPhoneCount()}. "
+    },
     "setPhoneType(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -461,6 +815,46 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setReadPhoneStatePermission(boolean)"
+    },
+    "setServiceState(android.telephony.ServiceState)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "serviceState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setServiceState(android.telephony.ServiceState)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#getServiceState()}. "
+    },
+    "setSimCarrierId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "simCarrierId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimCarrierId(int)",
+      "documentation": "Sets the value to be returned by {@link #getSimCarrierId()}. "
+    },
+    "setSimCountryIso(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "subId",
+        "simCountryIso"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimCountryIso(int,java.lang.String)",
+      "documentation": "Sets the {@code simCountryIso} for the given {@code subId}. "
     },
     "setSimCountryIso(java.lang.String)": {
       "isImplementation": false,
@@ -498,6 +892,19 @@
       "exceptions": [],
       "name": "setSimOperatorName(java.lang.String)"
     },
+    "setSimSerialNumber(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "simSerialNumber"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimSerialNumber(java.lang.String)",
+      "documentation": "sets the serial number that will be returned by {@link #getSimSerialNumber}. "
+    },
     "setSimState(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -508,30 +915,168 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setSimState(int)"
+      "name": "setSimState(int)",
+      "documentation": "Sets the sim state of slot 0. "
+    },
+    "setSimState(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "slotIndex",
+        "state"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimState(int,int)",
+      "documentation": "Set the sim state for the given {@code slotIndex}. "
+    },
+    "setSubscriberId(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "subscriberId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSubscriberId(java.lang.String)",
+      "documentation": "Sets the value to be returned by {@link #getSubscriberId()}. "
+    },
+    "setTelephonyManagerForHandle(android.telecom.PhoneAccountHandle,android.telephony.TelephonyManager)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "handle",
+        "telephonyManager"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTelephonyManagerForHandle(android.telecom.PhoneAccountHandle,android.telephony.TelephonyManager)",
+      "documentation": "Sets the value returned by {@link\nTelephonyManager#createForPhoneAccountHandle(PhoneAccountHandle)}.\n"
+    },
+    "setTelephonyManagerForSubscriptionId(int,android.telephony.TelephonyManager)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "subscriptionId",
+        "telephonyManager"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTelephonyManagerForSubscriptionId(int,android.telephony.TelephonyManager)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#createForSubscriptionId(int)}. "
+    },
+    "setVoiceMailAlphaTag(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "voiceMailAlphaTag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVoiceMailAlphaTag(java.lang.String)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#getVoiceMailAlphaTag()}. "
+    },
+    "setVoiceMailNumber(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "voiceMailNumber"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVoiceMailNumber(java.lang.String)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#getVoiceMailNumber()}. "
+    },
+    "setVoiceNetworkType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "voiceNetworkType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVoiceNetworkType(int)",
+      "documentation": "Sets the value to be returned by calls to {@link getVoiceNetworkType}. This \u003cb\u003eshould\u003c/b\u003e\ncorrespond to one of the {@code NETWORK_TYPE_*} constants defined on {@link TelephonyManager},\nbut this is not enforced.\n"
+    },
+    "setVoicemailRingtoneUri(android.telecom.PhoneAccountHandle,android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "handle",
+        "uri"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setVoicemailRingtoneUri(android.telecom.PhoneAccountHandle,android.net.Uri)",
+      "documentation": "Sets the value returned by {@link\nTelephonyManager#getVoicemailRingtoneUri(PhoneAccountHandle)}.\n"
+    },
+    "setVoicemailVibrationEnabled(android.telecom.PhoneAccountHandle,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "handle",
+        "isEnabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setVoicemailVibrationEnabled(android.telecom.PhoneAccountHandle,boolean)",
+      "documentation": "Sets the value returned by {@link\nTelephonyManager#isVoicemailVibrationEnabled(PhoneAccountHandle)}.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
     "android.telephony.PhoneStateListener.LISTEN_CALL_STATE",
     "android.telephony.PhoneStateListener.LISTEN_CELL_INFO",
     "android.telephony.PhoneStateListener.LISTEN_CELL_LOCATION",
     "android.telephony.PhoneStateListener.LISTEN_NONE",
     "android.telephony.TelephonyManager.CALL_STATE_IDLE",
     "android.telephony.TelephonyManager.CALL_STATE_RINGING",
+    "android.content.Intent",
+    "android.net.Uri",
     "android.os.Build.VERSION",
     "android.os.PersistableBundle",
+    "android.telecom.PhoneAccountHandle",
     "android.telephony.CellInfo",
     "android.telephony.CellLocation",
     "android.telephony.PhoneStateListener",
+    "android.telephony.ServiceState",
+    "android.telephony.SubscriptionManager",
     "android.telephony.TelephonyManager",
+    "android.util.SparseArray",
+    "android.util.SparseIntArray",
     "com.google.common.base.Predicate",
     "com.google.common.collect.Iterables",
     "java.util.Collections",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

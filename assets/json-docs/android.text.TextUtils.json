@@ -3,7 +3,7 @@
     "ellipsize(java.lang.CharSequence,android.text.TextPaint,float,android.text.TextUtils.TruncateAt)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

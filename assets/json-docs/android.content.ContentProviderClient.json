@@ -1,23 +1,9 @@
 {
   "methods": {
-    "__constructor__(android.content.ContentResolver,android.content.IContentProvider,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "contentResolver",
-        "contentProvider",
-        "stable"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "__constructor__(android.content.ContentResolver,android.content.IContentProvider,boolean)"
-    },
     "applyBatch(java.util.ArrayList\u003candroid.content.ContentProviderOperation\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "operations"
@@ -32,7 +18,7 @@
     "bulkInsert(android.net.Uri,android.content.ContentValues[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url",
@@ -47,7 +33,7 @@
     "call(java.lang.String,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "method",
@@ -58,12 +44,13 @@
       "exceptions": [
         "android.os.RemoteException"
       ],
+      "minSdk": 17,
       "name": "call(java.lang.String,java.lang.String,android.os.Bundle)"
     },
     "delete(android.net.Uri,java.lang.String,java.lang.String[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url",
@@ -79,7 +66,7 @@
     "getLocalContentProvider()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.content.ContentProvider",
@@ -89,7 +76,7 @@
     "getStreamTypes(android.net.Uri,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -102,7 +89,7 @@
     "getType(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri"
@@ -116,7 +103,7 @@
     "insert(android.net.Uri,android.content.ContentValues)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url",
@@ -151,7 +138,7 @@
     "openAssetFile(android.net.Uri,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url",
@@ -167,7 +154,7 @@
     "openFile(android.net.Uri,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url",
@@ -183,7 +170,7 @@
     "openTypedAssetFileDescriptor(android.net.Uri,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -201,7 +188,7 @@
     "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url",
@@ -219,7 +206,7 @@
     "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url",
@@ -238,7 +225,7 @@
     "release()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -258,7 +245,7 @@
     "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "url",
@@ -274,13 +261,12 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.content.ContentProvider",
     "android.content.ContentProviderClient",
     "android.content.ContentProviderOperation",
     "android.content.ContentProviderResult",
-    "android.content.ContentResolver",
     "android.content.ContentValues",
-    "android.content.IContentProvider",
     "android.content.OperationApplicationException",
     "android.content.res.AssetFileDescriptor",
     "android.database.Cursor",
@@ -292,7 +278,9 @@
     "java.io.FileNotFoundException",
     "java.util.ArrayList",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowContentProviderClient"
 }

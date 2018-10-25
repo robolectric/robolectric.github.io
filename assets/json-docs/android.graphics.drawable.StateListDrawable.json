@@ -16,7 +16,7 @@
     "addState(int[],android.graphics.drawable.Drawable)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "stateSet",
@@ -62,40 +62,18 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getResourceIdForState(int)"
-    },
-    "inflate(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "r",
-        "parser",
-        "attrs"
-      ],
-      "returnType": "void",
-      "exceptions": [
-        "org.xmlpull.v1.XmlPullParserException",
-        "java.io.IOException"
-      ],
-      "name": "inflate(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet)"
     }
   },
   "imports": [
-    "android.content.res.Resources",
     "android.graphics.drawable.Drawable",
     "android.graphics.drawable.StateListDrawable",
-    "android.util.AttributeSet",
     "android.util.StateSet",
-    "java.io.IOException",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.xmlpull.v1.XmlPullParser",
-    "org.xmlpull.v1.XmlPullParserException"
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowStateListDrawable"
 }

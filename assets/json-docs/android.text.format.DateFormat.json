@@ -3,7 +3,7 @@
     "getDateFormat(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -16,7 +16,7 @@
     "getLongDateFormat(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -29,7 +29,7 @@
     "getTimeFormat(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

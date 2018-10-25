@@ -3,7 +3,7 @@
     "addNetwork(android.net.wifi.WifiConfiguration)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "config"
@@ -15,7 +15,7 @@
     "calculateSignalLevel(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -50,10 +50,24 @@
       "minSdk": 19,
       "name": "connect(android.net.wifi.WifiConfiguration,android.net.wifi.WifiManager.ActionListener)"
     },
+    "connect(int,android.net.wifi.WifiManager.ActionListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "networkId",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "connect(int,android.net.wifi.WifiManager.ActionListener)"
+    },
     "createWifiLock(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "lockType",
@@ -66,7 +80,7 @@
     "createWifiLock(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "tag"
@@ -78,7 +92,7 @@
     "enableNetwork(int,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "netId",
@@ -91,7 +105,7 @@
     "getConfiguredNetworks()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.net.wifi.WifiConfiguration\u003e",
@@ -101,7 +115,7 @@
     "getConnectionInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.net.wifi.WifiInfo",
@@ -111,7 +125,7 @@
     "getDhcpInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.net.DhcpInfo",
@@ -141,7 +155,7 @@
     "getPrivilegedConfiguredNetworks()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.net.wifi.WifiConfiguration\u003e",
@@ -152,7 +166,7 @@
     "getScanResults()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.net.wifi.ScanResult\u003e",
@@ -174,17 +188,41 @@
     "getWifiState()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
       "name": "getWifiState()"
     },
+    "is5GHzBandSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "is5GHzBandSupported()"
+    },
+    "isQuoted(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "str"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isQuoted(java.lang.String)"
+    },
     "isScanAlwaysAvailable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -195,7 +233,7 @@
     "isWifiEnabled()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -228,7 +266,7 @@
     "removeNetwork(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "netId"
@@ -240,7 +278,7 @@
     "saveConfiguration()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -284,6 +322,19 @@
       "exceptions": [],
       "name": "setDhcpInfo(android.net.DhcpInfo)"
     },
+    "setIs5GHzBandSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "is5GHzBandSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIs5GHzBandSupported(boolean)",
+      "documentation": "Sets whether 5ghz band is supported. "
+    },
     "setIsScanAlwaysAvailable(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -321,10 +372,23 @@
       "exceptions": [],
       "name": "setSignalLevelInPercent(float)"
     },
+    "setStartScanSucceeds(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "succeeds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStartScanSucceeds(boolean)",
+      "documentation": "Sets the return value of {@link #startScan}. "
+    },
     "setWifiEnabled(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "wifiEnabled"
@@ -336,17 +400,31 @@
     "startScan()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "startScan()"
+      "name": "startScan()",
+      "documentation": "Does nothing and returns the configured success status.\n\n\u003cp\u003eThat is different from the Android implementation which always returns {@code true} up to\nand including Android 8, and either {@code true} or {@code false} on Android 9+.\n\n@return the value configured by {@link #setStartScanSucceeds}, or {@code true} if that method\n    was never called.\n"
+    },
+    "stripQuotes(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "str"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "stripQuotes(java.lang.String)"
     },
     "updateNetwork(android.net.wifi.WifiConfiguration)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "config"
@@ -370,7 +448,6 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.Shadows.shadowOf",
     "android.content.Context",
     "android.net.ConnectivityManager",
     "android.net.DhcpInfo",

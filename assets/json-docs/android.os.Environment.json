@@ -30,7 +30,7 @@
     "getExternalStorageDirectory()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -41,7 +41,7 @@
     "getExternalStoragePublicDirectory(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -54,7 +54,7 @@
     "getExternalStorageState()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -65,7 +65,7 @@
     "getExternalStorageState(java.io.File)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -79,7 +79,7 @@
     "getStorageState(java.io.File)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -93,7 +93,7 @@
     "isExternalStorageEmulated()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -104,7 +104,7 @@
     "isExternalStorageEmulated(java.io.File)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -118,7 +118,7 @@
     "isExternalStorageRemovable()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -129,7 +129,7 @@
     "isExternalStorageRemovable(java.io.File)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

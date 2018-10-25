@@ -148,7 +148,7 @@
     "extractMetadata(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "keyCode"
@@ -160,7 +160,7 @@
     "getFrameAtTime(long,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "timeUs",
@@ -184,7 +184,7 @@
     "setDataSource(android.content.Context,android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -197,7 +197,7 @@
     "setDataSource(java.io.FileDescriptor,long,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "fd",
@@ -211,7 +211,7 @@
     "setDataSource(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "path"
@@ -223,7 +223,7 @@
     "setDataSource(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",

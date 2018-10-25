@@ -3,7 +3,7 @@
     "__constructor__(android.view.View)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "ownerView"
@@ -15,7 +15,7 @@
     "setOnZoomListener(android.widget.ZoomButtonsController.OnZoomListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"

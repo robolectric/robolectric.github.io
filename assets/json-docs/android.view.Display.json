@@ -14,7 +14,7 @@
     "getCurrentSizeRange(android.graphics.Point,android.graphics.Point)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "outSmallestSize",
@@ -40,7 +40,7 @@
     "getDisplayId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -51,7 +51,7 @@
     "getMetrics(android.util.DisplayMetrics)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "outMetrics"
@@ -59,12 +59,12 @@
       "returnType": "void",
       "exceptions": [],
       "name": "getMetrics(android.util.DisplayMetrics)",
-      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity}\nwill be modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
+      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity} will\nbe modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "getPixelFormat()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -75,7 +75,7 @@
     "getRealMetrics(android.util.DisplayMetrics)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "outMetrics"
@@ -83,12 +83,12 @@
       "returnType": "void",
       "exceptions": [],
       "name": "getRealMetrics(android.util.DisplayMetrics)",
-      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity}\nwill be modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
+      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity} will\nbe modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "getRealSize(android.graphics.Point)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "outSize"
@@ -101,7 +101,7 @@
     "getRefreshRate()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "float",
@@ -112,7 +112,7 @@
     "getSizeInternal(android.graphics.Point,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "outSize",

@@ -3,7 +3,7 @@
     "__constructor__(android.content.Context,int,android.app.TimePickerDialog.OnTimeSetListener,int,int,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",

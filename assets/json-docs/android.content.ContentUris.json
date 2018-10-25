@@ -3,7 +3,7 @@
     "parseId(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -16,7 +16,7 @@
     "withAppendedId(android.net.Uri,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

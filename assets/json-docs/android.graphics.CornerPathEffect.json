@@ -3,7 +3,7 @@
     "__constructor__(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "radius"

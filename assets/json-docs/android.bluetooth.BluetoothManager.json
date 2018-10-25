@@ -3,7 +3,7 @@
     "getAdapter()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.bluetooth.BluetoothAdapter",

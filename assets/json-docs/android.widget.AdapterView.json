@@ -83,7 +83,7 @@
     "setOnItemSelectedListener(android.widget.AdapterView.OnItemSelectedListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "itemSelectedListener"

@@ -23,7 +23,7 @@
     "setButtonDrawable(android.graphics.drawable.Drawable)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "buttonDrawable"
@@ -35,7 +35,7 @@
     "setButtonDrawable(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "buttonDrawableId"

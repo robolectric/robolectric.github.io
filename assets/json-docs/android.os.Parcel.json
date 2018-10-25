@@ -3,7 +3,7 @@
     "\u003cT\u003ereadParcelable(java.lang.ClassLoader)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "loader"
@@ -33,7 +33,7 @@
     "nativeAppendFrom(long,long,int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -76,7 +76,7 @@
     "nativeCreateByteArray(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -104,7 +104,7 @@
     "nativeDataAvail(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -132,7 +132,7 @@
     "nativeDataCapacity(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -160,7 +160,7 @@
     "nativeDataPosition(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -188,7 +188,7 @@
     "nativeDataSize(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -216,7 +216,7 @@
     "nativeDestroy(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -245,7 +245,7 @@
     "nativeEnforceInterface(long,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -274,7 +274,7 @@
     "nativeFreeBuffer(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -302,7 +302,7 @@
     "nativeMarshall(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -312,6 +312,20 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "nativeMarshall(long)"
+    },
+    "nativeReadBlob(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeReadBlob(long)"
     },
     "nativeReadByteArray(long,byte[],int)": {
       "isImplementation": true,
@@ -346,7 +360,7 @@
     "nativeReadDouble(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -374,7 +388,7 @@
     "nativeReadFloat(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -402,7 +416,7 @@
     "nativeReadInt(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -430,7 +444,7 @@
     "nativeReadLong(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -458,7 +472,7 @@
     "nativeReadString(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -468,6 +482,34 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "nativeReadString(long)"
+    },
+    "nativeReadStrongBinder(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "android.os.IBinder",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeReadStrongBinder(int)"
+    },
+    "nativeReadStrongBinder(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "android.os.IBinder",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeReadStrongBinder(long)"
     },
     "nativeSetDataCapacity(int,int)": {
       "isImplementation": true,
@@ -487,7 +529,7 @@
     "nativeSetDataCapacity(long,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -517,7 +559,7 @@
     "nativeSetDataPosition(long,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -547,7 +589,7 @@
     "nativeSetDataSize(long,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -579,7 +621,7 @@
     "nativeUnmarshall(long,byte[],int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -592,6 +634,23 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "nativeUnmarshall(long,byte[],int,int)"
+    },
+    "nativeWriteBlob(long,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "b",
+        "offset",
+        "len"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWriteBlob(long,byte[],int,int)"
     },
     "nativeWriteByteArray(int,byte[],int,int)": {
       "isImplementation": true,
@@ -613,7 +672,7 @@
     "nativeWriteByteArray(long,byte[],int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -645,7 +704,7 @@
     "nativeWriteDouble(long,double)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -675,7 +734,7 @@
     "nativeWriteFloat(long,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -705,7 +764,7 @@
     "nativeWriteInt(long,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -735,7 +794,7 @@
     "nativeWriteInterfaceToken(long,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -765,7 +824,7 @@
     "nativeWriteLong(long,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -795,7 +854,7 @@
     "nativeWriteString(long,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -807,6 +866,53 @@
       "minSdk": 21,
       "name": "nativeWriteString(long,java.lang.String)"
     },
+    "nativeWriteStrongBinder(int,android.os.IBinder)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeWriteStrongBinder(int,android.os.IBinder)"
+    },
+    "nativeWriteStrongBinder(long,android.os.IBinder)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeWriteStrongBinder(long,android.os.IBinder)"
+    },
+    "openFileDescriptor(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "file",
+        "mode"
+      ],
+      "returnType": "java.io.FileDescriptor",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "maxSdk": 28,
+      "name": "openFileDescriptor(java.lang.String,int)"
+    },
     "readParcelableCreator(java.lang.ClassLoader)": {
       "isImplementation": true,
       "modifiers": [
@@ -817,12 +923,43 @@
       ],
       "returnType": "android.os.Parcelable.Creator\u003c?\u003e",
       "exceptions": [],
+      "minSdk": 18,
       "name": "readParcelableCreator(java.lang.ClassLoader)"
+    },
+    "throwsIfOutOfBounds(int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "len",
+        "offset",
+        "count"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "throwsIfOutOfBounds(int,int,int)"
+    },
+    "writeBlob(byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "b",
+        "offset",
+        "len"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "writeBlob(byte[],int,int)"
     },
     "writeByteArray(byte[],int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "b",
@@ -836,21 +973,28 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O_MR1",
+    "android.os.Build.VERSION_CODES.P",
     "org.robolectric.RuntimeEnvironment.castNativePtr",
     "android.os.BadParcelableException",
+    "android.os.IBinder",
     "android.os.Parcel",
+    "android.os.ParcelFileDescriptor",
     "android.os.Parcelable",
     "android.text.TextUtils",
     "android.util.Log",
     "android.util.Pair",
     "java.io.ByteArrayInputStream",
     "java.io.ByteArrayOutputStream",
+    "java.io.FileDescriptor",
     "java.io.IOException",
     "java.io.ObjectInputStream",
     "java.io.ObjectOutputStream",
+    "java.io.RandomAccessFile",
     "java.lang.reflect.Field",
     "java.lang.reflect.Modifier",
     "java.util.ArrayList",

@@ -3,7 +3,7 @@
     "decodeRegion(android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "rect",
@@ -30,7 +30,7 @@
     "getHeight()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -40,7 +40,7 @@
     "getWidth()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -61,7 +61,7 @@
     "newInstance(byte[],int,int,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -79,7 +79,7 @@
     "newInstance(java.io.FileDescriptor,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -95,7 +95,7 @@
     "newInstance(java.io.InputStream,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -111,7 +111,7 @@
     "newInstance(java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

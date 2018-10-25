@@ -38,7 +38,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 28,
       "name": "buildSystemFallback(java.lang.String,java.lang.String,android.util.ArrayMap\u003cjava.lang.String,android.graphics.Typeface\u003e,android.util.ArrayMap\u003cjava.lang.String,android.graphics.FontFamily[]\u003e)"
     },
     "create(android.graphics.Typeface,int)": {
@@ -109,6 +109,7 @@
       "returnType": "android.graphics.Typeface",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 25,
       "name": "createFromFamiliesWithDefault(java.lang.Object)"
     },
     "createFromFile(java.io.File)": {
@@ -201,6 +202,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.P",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.annotation.SuppressLint",

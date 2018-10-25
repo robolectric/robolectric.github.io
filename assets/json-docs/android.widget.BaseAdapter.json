@@ -13,7 +13,7 @@
     "notifyDataSetChanged()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",

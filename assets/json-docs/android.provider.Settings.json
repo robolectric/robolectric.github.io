@@ -40,6 +40,20 @@
       "name": "set24HourTimeFormat(boolean)",
       "documentation": "Sets the value of the {@link Settings.System#TIME_12_24} setting.\n\n@param use24HourTimeFormat new status for the time setting\n"
     },
+    "setAdbEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "adbEnabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAdbEnabled(boolean)",
+      "documentation": "Sets the value of the {@link Settings.Global#ADB_ENABLED} setting or {@link\nSettings.Secure#ADB_ENABLED} depending on API level.\n\n@param adbEnabled new value for whether adb is enabled\n"
+    },
     "setAirplaneMode(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -68,6 +82,20 @@
       "name": "setCanDrawOverlays(boolean)",
       "documentation": "Sets the value returned by {@link #canDrawOverlays(Context)}. "
     },
+    "setInstallNonMarketApps(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "installNonMarketApps"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInstallNonMarketApps(boolean)",
+      "documentation": "Sets the value of the {@link Settings.Global#INSTALL_NON_MARKET_APPS} setting or {@link\nSettings.Secure#INSTALL_NON_MARKET_APPS} depending on API level.\n\n@param installNonMarketApps new value for whether non-market apps are allowed to be installed\n"
+    },
     "setWifiOn(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -84,18 +112,27 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.content.ContentResolver",
     "android.content.Context",
+    "android.os.Build",
     "android.provider.Settings",
+    "android.text.TextUtils",
+    "java.util.Arrays",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.Map",
+    "java.util.Set",
     "java.util.WeakHashMap",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowSettings.ShadowSystem",
     "org.robolectric.shadows.ShadowSettings.ShadowSecure",
     "org.robolectric.shadows.ShadowSettings.ShadowGlobal"

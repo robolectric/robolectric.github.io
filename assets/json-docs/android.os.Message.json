@@ -14,25 +14,25 @@
     "isInUse()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
       "name": "isInUse()",
-      "documentation": "Convenience method to provide access to the private {@code Message.isInUse()}\nmethod. Note that the definition of \"in use\" changed with API 21:\n\nIn API 19, a message was only considered \"in use\" during its dispatch. In API 21, the\nmessage is considered \"in use\" from the time it is enqueued until the time that\nit is freshly obtained via a call to {@link Message#obtain()}. This means that\nin API 21 messages that are in the recycled pool will still be marked as \"in use\". \n\n@return {@code true} if the message is currently \"in use\", {@code false} otherwise.\n"
+      "documentation": "Convenience method to provide access to the private {@code Message.isInUse()} method. Note that\nthe definition of \"in use\" changed with API 21:\n\n\u003cp\u003eIn API 19, a message was only considered \"in use\" during its dispatch. In API 21, the\nmessage is considered \"in use\" from the time it is enqueued until the time that it is freshly\nobtained via a call to {@link Message#obtain()}. This means that in API 21 messages that are in\nthe recycled pool will still be marked as \"in use\".\n\n@return {@code true} if the message is currently \"in use\", {@code false} otherwise.\n"
     },
     "recycle()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
       "maxSdk": 20,
       "name": "recycle()",
-      "documentation": "Hook to unscheduled the callback when the message is recycled.\nInvokes {@link #unschedule()} and then calls through to\n{@link Message#recycle()} on the real object.\n"
+      "documentation": "Hook to unscheduled the callback when the message is recycled. Invokes {@link #unschedule()}\nand then calls through to {@link Message#recycle()} on the real object.\n"
     },
     "recycleUnchecked()": {
       "isImplementation": true,
@@ -42,6 +42,7 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 21,
       "name": "recycleUnchecked()",
       "documentation": "Hook to unscheduled the callback when the message is recycled.\nInvokes {@link #unschedule()} and then calls through to the\npackage private method {@link Message#recycleUnchecked()}\non the real object.\n"
     },

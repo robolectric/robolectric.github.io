@@ -3,7 +3,7 @@
     "setConvexPath(android.graphics.Path)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "convexPath"

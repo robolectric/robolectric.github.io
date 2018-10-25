@@ -12,6 +12,28 @@
       "name": "getLatestWakeLock()",
       "documentation": "Retrieves the most recent wakelock registered by the application\n\n@return Most recent wake lock.\n"
     },
+    "getRebootReasons()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getRebootReasons()",
+      "documentation": "Returns the list of reasons for each reboot, in chronological order. "
+    },
+    "getTimesRebooted()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTimesRebooted()",
+      "documentation": "Returns the number of times {@link #reboot(String)} was called. "
+    },
     "isDeviceIdleMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -27,7 +49,7 @@
     "isIgnoringBatteryOptimizations(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "packageName"
@@ -40,29 +62,29 @@
     "isInteractive()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 20,
+      "minSdk": 21,
       "name": "isInteractive()"
     },
     "isPowerSaveMode()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 20,
+      "minSdk": 21,
       "name": "isPowerSaveMode()"
     },
     "isScreenOn()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -72,7 +94,7 @@
     "isWakeLockLevelSupported(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "level"
@@ -85,7 +107,7 @@
     "newWakeLock(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "flags",
@@ -94,6 +116,18 @@
       "returnType": "android.os.PowerManager.WakeLock",
       "exceptions": [],
       "name": "newWakeLock(int,java.lang.String)"
+    },
+    "reboot(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "reason"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reboot(java.lang.String)"
     },
     "reset()": {
       "isImplementation": false,
@@ -105,7 +139,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()",
-      "documentation": "Discards the most recent {@code PowerManager.WakeLock}s\n"
+      "documentation": "Discards the most recent {@code PowerManager.WakeLock}s "
     },
     "setIgnoringBatteryOptimizations(java.lang.String,boolean)": {
       "isImplementation": false,
@@ -184,13 +218,15 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.shadows.ShadowApplication.getInstance",
     "android.os.PowerManager",
     "android.os.WorkSource",
+    "com.google.common.collect.ImmutableList",
+    "java.util.ArrayList",
     "java.util.HashMap",
+    "java.util.List",
     "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",

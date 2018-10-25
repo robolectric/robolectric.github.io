@@ -3,7 +3,7 @@
     "__constructor__(int,android.graphics.PorterDuff.Mode)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "color",
@@ -60,29 +60,35 @@
     "setColor(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "color"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 28,
       "name": "setColor(int)"
     },
     "setMode(android.graphics.PorterDuff.Mode)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "mode"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 28,
       "name": "setMode(android.graphics.PorterDuff.Mode)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.P",
     "android.graphics.PorterDuff",
     "android.graphics.PorterDuffColorFilter",
     "org.robolectric.annotation.Implementation",

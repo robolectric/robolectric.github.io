@@ -3,7 +3,6 @@
     "getRandomApplicationUid()": {
       "isImplementation": false,
       "modifiers": [
-        "private",
         "static"
       ],
       "params": [],
@@ -11,10 +10,25 @@
       "exceptions": [],
       "name": "getRandomApplicationUid()"
     },
+    "getThreadPriority(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static",
+        "final"
+      ],
+      "params": [
+        "tid"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getThreadPriority(int)",
+      "documentation": "Returns priority stored for the given thread.\n\n@param tid The identifier of the thread. If equals zero, the identifier of the calling thread\n    will be used.\n"
+    },
     "myPid()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static",
         "final"
       ],
@@ -23,10 +37,23 @@
       "exceptions": [],
       "name": "myPid()"
     },
+    "myTid()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "myTid()",
+      "documentation": "Returns the identifier ({@link java.lang.Thread#getId()}) of the current thread ({@link\njava.lang.Thread#currentThread()}).\n"
+    },
     "myUid()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static",
         "final"
       ],
@@ -34,7 +61,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "myUid()",
-      "documentation": "Returns the identifier of this process\u0027s uid. Unlike Android UIDs are randomly initialized to prevent\ntests from depending on any given value. Tests should access the current process UID via\n{@link android.os.Process#myUid()}.\n"
+      "documentation": "Returns the identifier of this process\u0027s uid. Unlike Android UIDs are randomly initialized to\nprevent tests from depending on any given value. Tests should access the current process UID\nvia {@link android.os.Process#myUid()}. You can override this value by calling {@link\n#setUid(int)}.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -60,10 +87,59 @@
       "exceptions": [],
       "name": "setPid(int)",
       "documentation": "Sets the identifier of this process.\n"
+    },
+    "setThreadPriority(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static",
+        "final"
+      ],
+      "params": [
+        "priority"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setThreadPriority(int)",
+      "documentation": "Stores priority for the current thread, but doesn\u0027t actually change it to not mess up with test\nrunner. Unlike real implementation does not throw any exceptions.\n"
+    },
+    "setThreadPriority(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static",
+        "final"
+      ],
+      "params": [
+        "tid",
+        "priority"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setThreadPriority(int,int)",
+      "documentation": "Stores priority for the given thread, but doesn\u0027t actually change it to not mess up with test\nrunner. Unlike real implementation does not throw any exceptions.\n\n@param tid The identifier of the thread. If equals zero, the identifier of the calling thread\n    will be used.\n"
+    },
+    "setUid(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "uid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUid(int)",
+      "documentation": "Sets the identifier of this process.\n"
     }
   },
   "imports": [
+    "com.google.common.base.Preconditions.checkArgument",
+    "java.util.HashMap",
+    "java.util.Map",
     "java.util.concurrent.ThreadLocalRandom",
+    "javax.annotation.concurrent.GuardedBy",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter"

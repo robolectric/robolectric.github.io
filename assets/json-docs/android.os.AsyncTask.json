@@ -3,7 +3,7 @@
     "cancel(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "mayInterruptIfRunning"
@@ -15,7 +15,7 @@
     "execute(Params...)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "params"
@@ -27,7 +27,7 @@
     "executeOnExecutor(java.util.concurrent.Executor,Params...)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "executor",
@@ -40,7 +40,7 @@
     "get()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "Result",
@@ -53,7 +53,7 @@
     "get(long,java.util.concurrent.TimeUnit)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "timeout",
@@ -80,7 +80,7 @@
     "getStatus()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.os.AsyncTask.Status",
@@ -90,7 +90,7 @@
     "isCancelled()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -100,7 +100,7 @@
     "publishProgress(Progress...)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "values"
@@ -108,7 +108,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "publishProgress(Progress...)",
-      "documentation": "Enqueue a call to {@link AsyncTask#onProgressUpdate(Object[])} on UI looper (or run it immediately\nif the looper it is not paused).\n\n@param values The progress values to update the UI with.\n@see AsyncTask#publishProgress(Object[])\n"
+      "documentation": "Enqueue a call to {@link AsyncTask#onProgressUpdate(Object[])} on UI looper (or run it\nimmediately if the looper it is not paused).\n\n@param values The progress values to update the UI with.\n@see AsyncTask#publishProgress(Object[])\n"
     }
   },
   "imports": [

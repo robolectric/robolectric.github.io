@@ -3,7 +3,7 @@
     "filter(java.lang.CharSequence,android.widget.Filter.FilterListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "constraint",

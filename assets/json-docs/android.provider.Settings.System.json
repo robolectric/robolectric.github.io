@@ -16,7 +16,7 @@
     "getFloat(android.content.ContentResolver,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -32,7 +32,7 @@
     "getFloat(android.content.ContentResolver,java.lang.String,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -47,7 +47,7 @@
     "getInt(android.content.ContentResolver,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -63,7 +63,7 @@
     "getInt(android.content.ContentResolver,java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -78,7 +78,7 @@
     "getLong(android.content.ContentResolver,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -94,7 +94,7 @@
     "getLong(android.content.ContentResolver,java.lang.String,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -109,7 +109,7 @@
     "getString(android.content.ContentResolver,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -123,7 +123,7 @@
     "getStringForUser(android.content.ContentResolver,java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -139,7 +139,7 @@
     "putFloat(android.content.ContentResolver,java.lang.String,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -154,7 +154,7 @@
     "putInt(android.content.ContentResolver,java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -169,7 +169,7 @@
     "putLong(android.content.ContentResolver,java.lang.String,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -184,7 +184,7 @@
     "putString(android.content.ContentResolver,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -198,18 +198,27 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.content.ContentResolver",
     "android.content.Context",
+    "android.os.Build",
     "android.provider.Settings",
+    "android.text.TextUtils",
+    "java.util.Arrays",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.Map",
+    "java.util.Set",
     "java.util.WeakHashMap",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.Resetter"
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowSettings.ShadowSystem"
 }

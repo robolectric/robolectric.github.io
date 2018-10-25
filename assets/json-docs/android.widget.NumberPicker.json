@@ -3,7 +3,7 @@
     "getDisplayedValues()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String[]",
@@ -13,7 +13,7 @@
     "getMaxValue()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -23,7 +23,7 @@
     "getMinValue()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -43,7 +43,7 @@
     "getValue()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -53,7 +53,7 @@
     "getWrapSelectorWheel()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -63,7 +63,7 @@
     "setDisplayedValues(java.lang.String[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "displayedValues"
@@ -75,7 +75,7 @@
     "setMaxValue(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "maxValue"
@@ -87,7 +87,7 @@
     "setMinValue(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "minValue"
@@ -99,7 +99,7 @@
     "setOnValueChangedListener(android.widget.NumberPicker.OnValueChangeListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -111,7 +111,7 @@
     "setValue(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "value"
@@ -123,7 +123,7 @@
     "setWrapSelectorWheel(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "wrapSelectorWheel"

@@ -13,7 +13,7 @@
     "setIntentRedelivery(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "enabled"

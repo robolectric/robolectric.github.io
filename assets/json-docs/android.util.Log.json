@@ -26,12 +26,12 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clear()",
-      "documentation": "Clear all accummulated logs.\n"
+      "documentation": "Clear all accumulated logs. "
     },
     "d(java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -45,7 +45,7 @@
     "d(java.lang.String,java.lang.String,java.lang.Throwable)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -60,7 +60,7 @@
     "e(java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -74,7 +74,7 @@
     "e(java.lang.String,java.lang.String,java.lang.Throwable)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -115,7 +115,7 @@
     "i(java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -129,7 +129,7 @@
     "i(java.lang.String,java.lang.String,java.lang.Throwable)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -144,7 +144,7 @@
     "isLoggable(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -214,6 +214,20 @@
       "name": "setLoggable(java.lang.String,int)",
       "documentation": "Sets the log level of a given tag, that {@link #isLoggable} will follow.\n@param tag A log tag\n@param level A log level, from {@link android.util.Log}\n"
     },
+    "setWtfIsFatal(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "fatal"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWtfIsFatal(boolean)",
+      "documentation": "Sets whether calling {@link Log#wtf} will throw {@link TerribleFailure}. "
+    },
     "setupLogging()": {
       "isImplementation": false,
       "modifiers": [
@@ -228,7 +242,7 @@
     "v(java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -242,7 +256,7 @@
     "v(java.lang.String,java.lang.String,java.lang.Throwable)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -257,7 +271,7 @@
     "w(java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -271,7 +285,7 @@
     "w(java.lang.String,java.lang.String,java.lang.Throwable)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -286,7 +300,7 @@
     "w(java.lang.String,java.lang.Throwable)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -300,7 +314,7 @@
     "wtf(java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -314,7 +328,7 @@
     "wtf(java.lang.String,java.lang.String,java.lang.Throwable)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -342,7 +356,8 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadows.ShadowLog.LogItem"
+    "org.robolectric.shadows.ShadowLog.LogItem",
+    "org.robolectric.shadows.ShadowLog.TerribleFailure"
   ],
   "name": "org.robolectric.shadows.ShadowLog"
 }

@@ -3,7 +3,7 @@
     "__constructor__(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "netId"

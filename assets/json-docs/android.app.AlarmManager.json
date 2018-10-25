@@ -1,9 +1,22 @@
 {
   "methods": {
+    "cancel(android.app.AlarmManager.OnAlarmListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "cancel(android.app.AlarmManager.OnAlarmListener)"
+    },
     "cancel(android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "operation"
@@ -15,7 +28,7 @@
     "getNextAlarmClock()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.app.AlarmManager.AlarmClockInfo",
@@ -45,6 +58,21 @@
       "name": "getScheduledAlarms()",
       "documentation": "@return all scheduled alarms\n"
     },
+    "internalSet(int,long,android.app.AlarmManager.OnAlarmListener,android.os.Handler)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "listener",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "internalSet(int,long,android.app.AlarmManager.OnAlarmListener,android.os.Handler)"
+    },
     "internalSet(int,long,long,android.app.PendingIntent,android.app.PendingIntent)": {
       "isImplementation": false,
       "modifiers": [
@@ -72,10 +100,21 @@
       "name": "peekNextScheduledAlarm()",
       "documentation": "@return the most recently scheduled alarm without consuming it\n"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "set(int,long,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type",
@@ -86,10 +125,27 @@
       "exceptions": [],
       "name": "set(int,long,android.app.PendingIntent)"
     },
+    "set(int,long,java.lang.String,android.app.AlarmManager.OnAlarmListener,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "tag",
+        "listener",
+        "targetHandler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "set(int,long,java.lang.String,android.app.AlarmManager.OnAlarmListener,android.os.Handler)"
+    },
     "setAlarmClock(android.app.AlarmManager.AlarmClockInfo,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "info",
@@ -103,7 +159,7 @@
     "setAndAllowWhileIdle(int,long,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type",
@@ -118,7 +174,7 @@
     "setExact(int,long,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type",
@@ -130,10 +186,27 @@
       "minSdk": 19,
       "name": "setExact(int,long,android.app.PendingIntent)"
     },
+    "setExact(int,long,java.lang.String,android.app.AlarmManager.OnAlarmListener,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "tag",
+        "listener",
+        "targetHandler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setExact(int,long,java.lang.String,android.app.AlarmManager.OnAlarmListener,android.os.Handler)"
+    },
     "setExactAndAllowWhileIdle(int,long,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type",
@@ -148,7 +221,7 @@
     "setInexactRepeating(int,long,long,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type",
@@ -163,7 +236,7 @@
     "setRepeating(int,long,long,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type",
@@ -175,10 +248,22 @@
       "exceptions": [],
       "name": "setRepeating(int,long,long,android.app.PendingIntent)"
     },
+    "setTimeZone(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "timeZone"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTimeZone(java.lang.String)"
+    },
     "setWindow(int,long,long,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "type",
@@ -190,6 +275,24 @@
       "exceptions": [],
       "minSdk": 19,
       "name": "setWindow(int,long,long,android.app.PendingIntent)"
+    },
+    "setWindow(int,long,long,java.lang.String,android.app.AlarmManager.OnAlarmListener,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "type",
+        "windowStartMillis",
+        "windowLengthMillis",
+        "tag",
+        "listener",
+        "targetHandler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setWindow(int,long,long,java.lang.String,android.app.AlarmManager.OnAlarmListener,android.os.Handler)"
     }
   },
   "imports": [
@@ -197,16 +300,22 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
     "android.annotation.TargetApi",
     "android.app.AlarmManager",
     "android.app.AlarmManager.AlarmClockInfo",
+    "android.app.AlarmManager.OnAlarmListener",
     "android.app.PendingIntent",
     "android.content.Intent",
+    "android.os.Handler",
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.List",
+    "java.util.TimeZone",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm"
   ],

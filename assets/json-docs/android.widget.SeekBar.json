@@ -13,7 +13,7 @@
     "setOnSeekBarChangeListener(android.widget.SeekBar.OnSeekBarChangeListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"

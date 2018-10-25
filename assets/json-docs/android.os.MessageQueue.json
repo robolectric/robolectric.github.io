@@ -16,7 +16,7 @@
     "enqueueMessage(android.os.Message,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "msg",
@@ -57,13 +57,14 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 18,
       "maxSdk": 20,
       "name": "nativeDestroy(int)"
     },
     "nativeDestroy(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -96,13 +97,14 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 19,
       "maxSdk": 20,
       "name": "nativeIsIdling(int)"
     },
     "nativeIsIdling(long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -111,6 +113,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 22,
       "name": "nativeIsIdling(long)"
     },
     "removeSyncBarrier(int)": {
@@ -174,8 +177,11 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
@@ -190,8 +196,8 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.Logger",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.Logger",
     "org.robolectric.util.Scheduler"
   ],
   "name": "org.robolectric.shadows.ShadowMessageQueue",

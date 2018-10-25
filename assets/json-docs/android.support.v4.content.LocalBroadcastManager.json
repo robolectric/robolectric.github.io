@@ -3,7 +3,7 @@
     "getInstance(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -36,7 +36,7 @@
     "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "receiver",
@@ -49,7 +49,7 @@
     "sendBroadcast(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "intent"
@@ -61,7 +61,7 @@
     "unregisterReceiver(android.content.BroadcastReceiver)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "receiver"

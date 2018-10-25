@@ -15,7 +15,7 @@
     "getFrameTimeNanos()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "long",
@@ -25,7 +25,7 @@
     "getInstance()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -47,7 +47,7 @@
     "postCallback(int,java.lang.Runnable,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callbackType",
@@ -57,12 +57,12 @@
       "returnType": "void",
       "exceptions": [],
       "name": "postCallback(int,java.lang.Runnable,java.lang.Object)",
-      "documentation": "The default implementation will call {@link #postCallbackDelayed(int, Runnable, Object, long)}\nwith no delay. {@link android.animation.AnimationHandler} calls this method to schedule\nanimation updates infinitely. Because during a Robolectric test the system time is paused and\nexecution of the event loop is invoked for each test instruction, the behavior of\nAnimationHandler would result in endless looping (the execution of the task results in a new\nanimation task created and scheduled to the front of the event loop queue).\n\nTo prevent endless looping, a test may call {@link #setPostCallbackDelay(int)} to specify a\nsmall delay when animation is scheduled.\n\n@see #setPostCallbackDelay(int)\n"
+      "documentation": "The default implementation will call {@link #postCallbackDelayed(int, Runnable, Object, long)}\nwith no delay. {@link android.animation.AnimationHandler} calls this method to schedule\nanimation updates infinitely. Because during a Robolectric test the system time is paused and\nexecution of the event loop is invoked for each test instruction, the behavior of\nAnimationHandler would result in endless looping (the execution of the task results in a new\nanimation task created and scheduled to the front of the event loop queue).\n\n\u003cp\u003eTo prevent endless looping, a test may call {@link #setPostCallbackDelay(int)} to specify a\nsmall delay when animation is scheduled.\n\n@see #setPostCallbackDelay(int)\n"
     },
     "postCallbackDelayed(int,java.lang.Runnable,java.lang.Object,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callbackType",
@@ -77,7 +77,7 @@
     "postFrameCallback(android.view.Choreographer.FrameCallback)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback"
@@ -85,12 +85,12 @@
       "returnType": "void",
       "exceptions": [],
       "name": "postFrameCallback(android.view.Choreographer.FrameCallback)",
-      "documentation": "The default implementation will call {@link #postFrameCallbackDelayed(FrameCallback, long)}\nwith no delay. {@link android.animation.AnimationHandler} calls this method to schedule\nanimation updates infinitely. Because during a Robolectric test the system time is paused and\nexecution of the event loop is invoked for each test instruction, the behavior of\nAnimationHandler would result in endless looping (the execution of the task results in a new\nanimation task created and scheduled to the front of the event loop queue).\n\nTo prevent endless looping, a test may call {@link #setPostFrameCallbackDelay(int)} to\nspecify a small delay when animation is scheduled.\n\n@see #setPostCallbackDelay(int)\n"
+      "documentation": "The default implementation will call {@link #postFrameCallbackDelayed(FrameCallback, long)}\nwith no delay. {@link android.animation.AnimationHandler} calls this method to schedule\nanimation updates infinitely. Because during a Robolectric test the system time is paused and\nexecution of the event loop is invoked for each test instruction, the behavior of\nAnimationHandler would result in endless looping (the execution of the task results in a new\nanimation task created and scheduled to the front of the event loop queue).\n\n\u003cp\u003eTo prevent endless looping, a test may call {@link #setPostFrameCallbackDelay(int)} to\nspecify a small delay when animation is scheduled.\n\n@see #setPostCallbackDelay(int)\n"
     },
     "postFrameCallbackDelayed(android.view.Choreographer.FrameCallback,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback",
@@ -103,7 +103,7 @@
     "removeCallbacks(int,java.lang.Runnable,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callbackType",
@@ -117,7 +117,7 @@
     "removeFrameCallback(android.view.Choreographer.FrameCallback)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback"

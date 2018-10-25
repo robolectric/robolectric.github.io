@@ -3,7 +3,7 @@
     "getCurrentActivity()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.app.Activity",

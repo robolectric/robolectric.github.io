@@ -3,7 +3,7 @@
     "disableForegroundDispatch(android.app.Activity)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "activity"
@@ -15,7 +15,7 @@
     "enableForegroundDispatch(android.app.Activity,android.app.PendingIntent,android.content.IntentFilter[],java.lang.String[][])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "activity",
@@ -67,6 +67,17 @@
       "exceptions": [],
       "name": "getIntent()"
     },
+    "getNdefPushMessage()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.nfc.NdefMessage",
+      "exceptions": [],
+      "name": "getNdefPushMessage()",
+      "documentation": "Returns last set NDEF message, or throws {@code IllegalStateException} if it was never set. "
+    },
     "getNdefPushMessageCallback()": {
       "isImplementation": false,
       "modifiers": [
@@ -75,12 +86,13 @@
       "params": [],
       "returnType": "android.nfc.NfcAdapter.CreateNdefMessageCallback",
       "exceptions": [],
-      "name": "getNdefPushMessageCallback()"
+      "name": "getNdefPushMessageCallback()",
+      "documentation": "Returns last registered callback, or {@code null} if none was set. "
     },
     "getNfcAdapter(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -89,6 +101,16 @@
       "returnType": "android.nfc.NfcAdapter",
       "exceptions": [],
       "name": "getNfcAdapter(android.content.Context)"
+    },
+    "getOnNdefPushCompleteCallback()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.nfc.NfcAdapter.OnNdefPushCompleteCallback",
+      "exceptions": [],
+      "name": "getOnNdefPushCompleteCallback()"
     },
     "getTechLists()": {
       "isImplementation": false,
@@ -103,12 +125,24 @@
     "isEnabled()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
       "name": "isEnabled()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "setEnabled(boolean)": {
       "isImplementation": false,
@@ -122,10 +156,25 @@
       "exceptions": [],
       "name": "setEnabled(boolean)"
     },
+    "setNdefPushMessage(android.nfc.NdefMessage,android.app.Activity,android.app.Activity...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "message",
+        "activity",
+        "activities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNdefPushMessage(android.nfc.NdefMessage,android.app.Activity,android.app.Activity...)",
+      "documentation": "Mocks setting NDEF push message so that it could be verified in the test. Use {@link\n#getNdefPushMessage()} to verify that message was set.\n"
+    },
     "setNdefPushMessageCallback(android.nfc.NfcAdapter.CreateNdefMessageCallback,android.app.Activity,android.app.Activity...)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback",
@@ -135,6 +184,35 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNdefPushMessageCallback(android.nfc.NfcAdapter.CreateNdefMessageCallback,android.app.Activity,android.app.Activity...)"
+    },
+    "setNfcHardwareExists(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "hardwareExists"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNfcHardwareExists(boolean)",
+      "documentation": "Modifies behavior of {@link #getNfcAdapter(Context)} to return {@code null}, to simulate\nabsence of NFC hardware.\n"
+    },
+    "setOnNdefPushCompleteCallback(android.nfc.NfcAdapter.OnNdefPushCompleteCallback,android.app.Activity,android.app.Activity...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback",
+        "activity",
+        "activities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnNdefPushCompleteCallback(android.nfc.NfcAdapter.OnNdefPushCompleteCallback,android.app.Activity,android.app.Activity...)",
+      "documentation": "Sets callback that should be used on successful Android Beam (TM).\n\n\u003cp\u003eThe last registered callback is recalled and can be fetched using {@link\n#getOnNdefPushCompleteCallback}.\n"
     }
   },
   "imports": [
@@ -142,10 +220,12 @@
     "android.app.PendingIntent",
     "android.content.Context",
     "android.content.IntentFilter",
+    "android.nfc.NdefMessage",
     "android.nfc.NfcAdapter",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowNfcAdapter"

@@ -3,7 +3,7 @@
     "__constructor__(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context"
@@ -15,7 +15,7 @@
     "onForceLoad()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",

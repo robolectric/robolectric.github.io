@@ -13,6 +13,18 @@
       "exceptions": [],
       "name": "fillInProcessInfo(android.app.ActivityManager.RunningAppProcessInfo)"
     },
+    "getAppTasks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.app.ActivityManager.AppTask\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getAppTasks()",
+      "documentation": "For tests, returns the list of {@link android.app.ActivityManager.AppTask} set using {@link\n#setAppTasks(List)}. Returns empty list if nothing is set.\n\n@see #setAppTasks(List)\n@return List of current AppTask.\n"
+    },
     "getBackgroundPackage()": {
       "isImplementation": false,
       "modifiers": [
@@ -27,17 +39,28 @@
     "getDeviceConfigurationInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.content.pm.ConfigurationInfo",
       "exceptions": [],
       "name": "getDeviceConfigurationInfo()"
     },
+    "getLockTaskModeState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getLockTaskModeState()"
+    },
     "getMemoryClass()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -47,7 +70,7 @@
     "getMemoryInfo(android.app.ActivityManager.MemoryInfo)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "outInfo"
@@ -73,7 +96,7 @@
     "getRunningAppProcesses()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e",
@@ -83,7 +106,7 @@
     "getRunningServices(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "maxNum"
@@ -95,7 +118,7 @@
     "getRunningTasks(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "maxNum"
@@ -107,28 +130,41 @@
     "getService()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
       "returnType": "android.app.IActivityManager",
       "exceptions": [],
+      "minSdk": 26,
       "name": "getService()"
     },
-    "isLowRamDevice()": {
+    "isInLockTaskMode()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 21,
+      "name": "isInLockTaskMode()"
+    },
+    "isLowRamDevice()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 19,
       "name": "isLowRamDevice()"
     },
     "isUserAMonkey()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -139,7 +175,7 @@
     "killBackgroundProcesses(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "packageName"
@@ -159,6 +195,19 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "setAppTasks(java.util.List\u003candroid.app.ActivityManager.AppTask\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appTasks"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAppTasks(java.util.List\u003candroid.app.ActivityManager.AppTask\u003e)",
+      "documentation": "Sets the values to be returned by {@link #getAppTasks()}.\n\n@see #getAppTasks()\n@param tasks List of app tasks.\n"
+    },
     "setIsLowRamDevice(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -167,10 +216,23 @@
       "params": [
         "isLowRamDevice"
       ],
-      "returnType": "org.robolectric.shadows.ShadowActivityManager",
+      "returnType": "void",
       "exceptions": [],
       "name": "setIsLowRamDevice(boolean)",
       "documentation": "Override the return value of isLowRamDevice().\n"
+    },
+    "setLockTaskModeState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lockTaskModeState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLockTaskModeState(int)",
+      "documentation": "Sets lock task mode state to be reported by {@link ActivityManager#getLockTaskModeState}, but\nhas no effect otherwise.\n"
     },
     "setMemoryClass(int)": {
       "isImplementation": false,
@@ -239,10 +301,14 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.app.ActivityManager",
     "android.app.IActivityManager",
     "android.content.pm.ConfigurationInfo",
+    "android.os.Build.VERSION_CODES",
     "android.os.Process",
     "java.util.List",
     "java.util.concurrent.CopyOnWriteArrayList",

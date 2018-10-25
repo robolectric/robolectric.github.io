@@ -8,10 +8,12 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 23,
       "name": "initTabWidget()"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.M",
     "android.widget.TabWidget",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",

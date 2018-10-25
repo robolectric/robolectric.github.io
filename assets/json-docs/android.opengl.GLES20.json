@@ -1,0 +1,50 @@
+{
+  "methods": {
+    "glCreateProgram()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "glCreateProgram()"
+    },
+    "glCreateShader(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "glCreateShader(int)"
+    },
+    "glGenTextures(int,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "n",
+        "textures",
+        "offset"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "glGenTextures(int,int[],int)"
+    }
+  },
+  "imports": [
+    "android.opengl.GLES20",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowGLES20",
+  "documentation": "Fake implementation of {@link GLES20}\n"
+}

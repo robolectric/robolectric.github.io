@@ -44,7 +44,7 @@
     "decodeByteArray(byte[],int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -59,7 +59,7 @@
     "decodeByteArray(byte[],int,int,android.graphics.BitmapFactory.Options)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -75,7 +75,7 @@
     "decodeFile(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -88,7 +88,7 @@
     "decodeFile(java.lang.String,android.graphics.BitmapFactory.Options)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -102,7 +102,7 @@
     "decodeFileDescriptor(java.io.FileDescriptor,android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -117,7 +117,7 @@
     "decodeResource(android.content.res.Resources,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -131,7 +131,7 @@
     "decodeResource(android.content.res.Resources,int,android.graphics.BitmapFactory.Options)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -146,7 +146,7 @@
     "decodeResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -163,7 +163,7 @@
     "decodeStream(java.io.InputStream)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -176,7 +176,7 @@
     "decodeStream(java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -299,6 +299,7 @@
     "android.net.Uri",
     "android.util.TypedValue",
     "java.io.FileDescriptor",
+    "java.io.IOException",
     "java.io.InputStream",
     "java.nio.charset.Charset",
     "java.util.ArrayList",

@@ -3,7 +3,7 @@
     "acquireContentProviderClient(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -16,7 +16,7 @@
     "acquireContentProviderClient(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -29,7 +29,7 @@
     "acquireProvider(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -42,7 +42,7 @@
     "acquireProvider(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -55,7 +55,7 @@
     "acquireUnstableContentProviderClient(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -68,7 +68,7 @@
     "acquireUnstableContentProviderClient(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -81,7 +81,7 @@
     "acquireUnstableProvider(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -94,7 +94,7 @@
     "acquireUnstableProvider(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -107,7 +107,7 @@
     "addPeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -136,7 +136,7 @@
     "applyBatch(java.lang.String,java.util.ArrayList\u003candroid.content.ContentProviderOperation\u003e)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "authority",
@@ -151,7 +151,7 @@
     "bulkInsert(android.net.Uri,android.content.ContentValues[])": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -161,12 +161,12 @@
       "returnType": "int",
       "exceptions": [],
       "name": "bulkInsert(android.net.Uri,android.content.ContentValues[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#bulkInsert(Uri, ContentValues[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe number of rows in {@code values} will be returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#bulkInsert(Uri, ContentValues[])} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\n\u003cp\u003eIf no appropriate {@link ContentProvider} is found, no action will be taken and the number\nof rows in {@code values} will be returned.\n"
     },
     "call(android.net.Uri,java.lang.String,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -181,7 +181,7 @@
     "cancelSync(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -191,17 +191,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "cancelSync(android.accounts.Account,java.lang.String)"
-    },
-    "clearContentObservers()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "clearContentObservers()",
-      "documentation": "@deprecated Do not use this method. "
     },
     "createAndInitialize(android.content.pm.ProviderInfo)": {
       "isImplementation": false,
@@ -219,7 +208,7 @@
     "delete(android.net.Uri,java.lang.String,java.lang.String[])": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -230,7 +219,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "delete(android.net.Uri,java.lang.String,java.lang.String[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#delete(Uri, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getDeleteStatements()}\nor {@link #getDeletedUris()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\n{@code 1} will be returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#delete(Uri, String, String[])} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getDeleteStatements()} or {@link\n#getDeletedUris()}.\n\n\u003cp\u003eIf no appropriate {@link ContentProvider} is found, no action will be taken and {@code 1}\nwill be returned.\n"
     },
     "getContentObservers(android.net.Uri)": {
       "isImplementation": false,
@@ -317,7 +306,7 @@
     "getIsSyncable(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -331,7 +320,7 @@
     "getMasterSyncAutomatically()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -352,7 +341,7 @@
     "getPeriodicSyncs(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -366,7 +355,7 @@
     "getPersistedUriPermissions()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.content.UriPermission\u003e",
@@ -442,10 +431,21 @@
       "name": "getStatus(android.accounts.Account,java.lang.String,boolean)",
       "documentation": "Retrieve information on the status of the given account.\n\n@param account the account\n@param authority the authority\n@param create whether to create if no such account is found\n@return the account\u0027s status\n"
     },
+    "getSyncAdapterTypes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.content.SyncAdapterType[]",
+      "exceptions": [],
+      "name": "getSyncAdapterTypes()"
+    },
     "getSyncAutomatically(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -459,7 +459,7 @@
     "getType(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri"
@@ -482,7 +482,7 @@
     "insert(android.net.Uri,android.content.ContentValues)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -492,7 +492,7 @@
       "returnType": "android.net.Uri",
       "exceptions": [],
       "name": "insert(android.net.Uri,android.content.ContentValues)",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#insert(Uri, ContentValues)} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\na {@link Uri} including the incremented value set with\n{@link #setNextDatabaseIdForInserts(int)} will returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#insert(Uri, ContentValues)} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\n\u003cp\u003eIf no appropriate {@link ContentProvider} is found, no action will be taken and a {@link\nUri} including the incremented value set with {@link #setNextDatabaseIdForInserts(int)} will\nreturned.\n"
     },
     "isBundleEqual(android.os.Bundle,android.os.Bundle)": {
       "isImplementation": false,
@@ -511,7 +511,7 @@
     "isSyncActive(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -525,7 +525,7 @@
     "notifyChange(android.net.Uri,android.database.ContentObserver)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -538,7 +538,7 @@
     "notifyChange(android.net.Uri,android.database.ContentObserver,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -552,7 +552,7 @@
     "openInputStream(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -565,7 +565,7 @@
     "openOutputStream(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -578,7 +578,7 @@
     "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -595,7 +595,7 @@
     "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -612,7 +612,7 @@
     "registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -626,7 +626,7 @@
     "registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -636,6 +636,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 17,
       "name": "registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver,int)"
     },
     "registerInputStream(android.net.Uri,java.io.InputStream)": {
@@ -650,6 +651,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "registerInputStream(android.net.Uri,java.io.InputStream)"
+    },
+    "registerOutputStream(android.net.Uri,java.io.OutputStream)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "outputStream"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerOutputStream(android.net.Uri,java.io.OutputStream)"
     },
     "registerProviderInternal(java.lang.String,android.content.ContentProvider)": {
       "isImplementation": false,
@@ -670,7 +684,7 @@
     "releasePersistableUriPermission(android.net.Uri,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -684,7 +698,7 @@
     "removePeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -699,7 +713,7 @@
     "requestSync(android.accounts.Account,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -763,7 +777,7 @@
     "setIsSyncable(android.accounts.Account,java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -778,7 +792,7 @@
     "setMasterSyncAutomatically(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -800,23 +814,24 @@
       "exceptions": [],
       "name": "setNextDatabaseIdForInserts(int)"
     },
-    "setNextDatabaseIdForUpdates(int)": {
+    "setSyncAdapterTypes(android.content.SyncAdapterType[])": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "static"
       ],
       "params": [
-        "nextId"
+        "syncAdapterTypes"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setNextDatabaseIdForUpdates(int)",
-      "documentation": "Set the value to be returned by\n{@link ContentResolver#update(Uri, ContentValues, String, String[])} when no appropriate\n{@link ContentProvider} can be found.\n\n@param nextId the number of rows to return\n@deprecated This method will be removed in Robolectric 3.5. Instead, {@code 1} will be\nreturned.\n"
+      "name": "setSyncAdapterTypes(android.content.SyncAdapterType[])",
+      "documentation": "Sets the SyncAdapterType array which will be returned by {@link #getSyncAdapterTypes()}. "
     },
     "setSyncAutomatically(android.accounts.Account,java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -831,7 +846,7 @@
     "takePersistableUriPermission(android.net.Uri,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -845,7 +860,7 @@
     "unregisterContentObserver(android.database.ContentObserver)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "observer"
@@ -857,7 +872,7 @@
     "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uri",
@@ -868,12 +883,12 @@
       "returnType": "int",
       "exceptions": [],
       "name": "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and\nthe value set with {@link #setNextDatabaseIdForUpdates(int)} will be incremented and returned.\n\n*Note:* the return value in this case will be changed to {@code 1} in a future release of\nRobolectric.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\n@return If no appropriate {@link ContentProvider} is found, no action will be taken and 1 will\nbe returned.\n"
     },
     "validateSyncExtrasBundle(android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -885,6 +900,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.accounts.Account",
     "android.annotation.NonNull",
@@ -899,6 +915,7 @@
     "android.content.Intent",
     "android.content.OperationApplicationException",
     "android.content.PeriodicSync",
+    "android.content.SyncAdapterType",
     "android.content.UriPermission",
     "android.content.pm.ProviderInfo",
     "android.database.ContentObserver",

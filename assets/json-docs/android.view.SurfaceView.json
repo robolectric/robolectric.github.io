@@ -13,7 +13,7 @@
     "getHolder()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.SurfaceHolder",
@@ -23,7 +23,7 @@
     "onAttachedToWindow()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",

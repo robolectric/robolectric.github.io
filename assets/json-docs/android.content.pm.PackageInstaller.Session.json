@@ -3,17 +3,18 @@
     "__constructor__()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 20,
       "name": "__constructor__()"
     },
     "abandon()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -23,7 +24,7 @@
     "close()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -33,7 +34,7 @@
     "commit(android.content.IntentSender)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "statusReceiver"
@@ -45,7 +46,7 @@
     "fsync(java.io.OutputStream)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "out"
@@ -59,7 +60,7 @@
     "openWrite(java.lang.String,long,long)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "name",
@@ -87,6 +88,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.annotation.NonNull",
     "android.annotation.Nullable",

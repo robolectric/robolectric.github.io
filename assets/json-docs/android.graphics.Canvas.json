@@ -3,7 +3,7 @@
     "__constructor__(android.graphics.Bitmap)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "bitmap"
@@ -40,7 +40,7 @@
     "drawArc(android.graphics.RectF,float,float,boolean,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "oval",
@@ -56,7 +56,7 @@
     "drawBitmap(android.graphics.Bitmap,android.graphics.Matrix,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "bitmap",
@@ -70,7 +70,7 @@
     "drawBitmap(android.graphics.Bitmap,android.graphics.Rect,android.graphics.Rect,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "bitmap",
@@ -85,7 +85,7 @@
     "drawBitmap(android.graphics.Bitmap,android.graphics.Rect,android.graphics.RectF,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "bitmap",
@@ -100,7 +100,7 @@
     "drawBitmap(android.graphics.Bitmap,float,float,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "bitmap",
@@ -115,7 +115,7 @@
     "drawCircle(float,float,float,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "cx",
@@ -130,7 +130,7 @@
     "drawColor(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "color"
@@ -142,7 +142,7 @@
     "drawLine(float,float,float,float,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "startX",
@@ -158,7 +158,7 @@
     "drawOval(android.graphics.RectF,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "oval",
@@ -171,7 +171,7 @@
     "drawPaint(android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "paint"
@@ -183,7 +183,7 @@
     "drawPath(android.graphics.Path,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "path",
@@ -196,7 +196,7 @@
     "drawRect(float,float,float,float,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "left",
@@ -246,7 +246,7 @@
     "drawText(java.lang.String,float,float,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "text",
@@ -274,6 +274,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "drawText(java.lang.String,int,int,float,float,android.graphics.Paint)"
+    },
+    "formatColorMatric(android.graphics.ColorMatrix)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "colorMatrix"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "formatColorMatric(android.graphics.ColorMatrix)"
     },
     "getArcPaintHistoryCount()": {
       "isImplementation": false,
@@ -414,7 +426,7 @@
     "getHeight()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -484,7 +496,7 @@
     "getWidth()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -524,7 +536,7 @@
     "restore()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -534,7 +546,7 @@
     "scale(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sx",
@@ -547,7 +559,7 @@
     "scale(float,float,float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "sx",
@@ -572,7 +584,7 @@
     "setBitmap(android.graphics.Bitmap)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "bitmap"
@@ -608,7 +620,7 @@
     "translate(float,float)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "x",
@@ -637,6 +649,8 @@
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.ColorFilter",
+    "android.graphics.ColorMatrix",
+    "android.graphics.ColorMatrixColorFilter",
     "android.graphics.Matrix",
     "android.graphics.Paint",
     "android.graphics.Path",
@@ -647,6 +661,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.Join",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowCanvas.LinePaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.OvalPaintHistoryEvent",

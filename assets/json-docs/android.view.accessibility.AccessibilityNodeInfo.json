@@ -3,7 +3,7 @@
     "__constructor__()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -13,7 +13,7 @@
     "addAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "action"
@@ -26,7 +26,7 @@
     "addAction(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "action"
@@ -38,7 +38,7 @@
     "addChild(android.view.View)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "child"
@@ -50,7 +50,7 @@
     "addChild(android.view.View,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "root",
@@ -90,7 +90,7 @@
     "canOpenPopup()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -101,7 +101,7 @@
     "describeContents()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -137,7 +137,7 @@
     "getActionList()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.view.accessibility.AccessibilityNodeInfo.AccessibilityAction\u003e",
@@ -159,18 +159,18 @@
     "getActions()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
       "name": "getActions()",
-      "documentation": "Obtain flags for actions supported. Currently only supports\n{@link AccessibilityNodeInfo#ACTION_CLICK},\n{@link AccessibilityNodeInfo#ACTION_LONG_CLICK},\n{@link AccessibilityNodeInfo#ACTION_SCROLL_FORWARD},\n{@link AccessibilityNodeInfo#ACTION_PASTE},\n{@link AccessibilityNodeInfo#ACTION_FOCUS},\n{@link AccessibilityNodeInfo#ACTION_SET_SELECTION},\n{@link AccessibilityNodeInfo#ACTION_SCROLL_BACKWARD}\nReturned value is derived from the getters.\n\n@return Action mask. 0 if no actions supported.\n"
+      "documentation": "Obtain flags for actions supported. Currently only supports {@link\nAccessibilityNodeInfo#ACTION_CLICK}, {@link AccessibilityNodeInfo#ACTION_LONG_CLICK}, {@link\nAccessibilityNodeInfo#ACTION_SCROLL_FORWARD}, {@link AccessibilityNodeInfo#ACTION_PASTE},\n{@link AccessibilityNodeInfo#ACTION_FOCUS}, {@link AccessibilityNodeInfo#ACTION_SET_SELECTION},\n{@link AccessibilityNodeInfo#ACTION_SCROLL_BACKWARD} Returned value is derived from the\ngetters.\n\n@return Action mask. 0 if no actions supported.\n"
     },
     "getBoundsInParent(android.graphics.Rect)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "outBounds"
@@ -182,7 +182,7 @@
     "getBoundsInScreen(android.graphics.Rect)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "outBounds"
@@ -194,7 +194,7 @@
     "getChild(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "index"
@@ -206,7 +206,7 @@
     "getChildCount()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -216,7 +216,7 @@
     "getClassName()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.CharSequence",
@@ -237,7 +237,7 @@
     "getCollectionInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo.CollectionInfo",
@@ -248,7 +248,7 @@
     "getCollectionItemInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo.CollectionItemInfo",
@@ -259,17 +259,29 @@
     "getContentDescription()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.CharSequence",
       "exceptions": [],
       "name": "getContentDescription()"
     },
+    "getDrawingOrder()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getDrawingOrder()",
+      "documentation": "Returns the drawing order of the view corresponding to this node. "
+    },
     "getError()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.CharSequence",
@@ -280,7 +292,7 @@
     "getInputType()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -291,21 +303,23 @@
     "getLabelFor()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo",
       "exceptions": [],
+      "minSdk": 18,
       "name": "getLabelFor()"
     },
     "getLabeledBy()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo",
       "exceptions": [],
+      "minSdk": 17,
       "name": "getLabeledBy()"
     },
     "getLastLegacyActionFromFrameWork()": {
@@ -322,7 +336,7 @@
     "getLiveRegion()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -333,7 +347,7 @@
     "getMaxTextLength()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -344,7 +358,7 @@
     "getMovementGranularities()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -354,7 +368,7 @@
     "getPackageName()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.CharSequence",
@@ -364,7 +378,7 @@
     "getParent()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo",
@@ -396,7 +410,7 @@
     "getRangeInfo()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo.RangeInfo",
@@ -407,7 +421,7 @@
     "getText()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.CharSequence",
@@ -417,29 +431,31 @@
     "getTextSelectionEnd()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 18,
       "name": "getTextSelectionEnd()",
       "documentation": "Gets the text selection end.\n\n@return The text selection end if there is selection or UNDEFINED_SELECTION_INDEX.\n"
     },
     "getTextSelectionStart()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 18,
       "name": "getTextSelectionStart()",
       "documentation": "Gets the text selection start.\n\n@return The text selection start if there is selection or UNDEFINED_SELECTION_INDEX.\n"
     },
     "getTraversalAfter()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo",
@@ -450,7 +466,7 @@
     "getTraversalBefore()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo",
@@ -461,7 +477,7 @@
     "getViewIdResourceName()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -472,13 +488,24 @@
     "getWindow()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityWindowInfo",
       "exceptions": [],
       "minSdk": 21,
       "name": "getWindow()"
+    },
+    "getWindowId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWindowId()",
+      "documentation": "Returns the id of the window from which the info comes. "
     },
     "hashCode()": {
       "isImplementation": true,
@@ -493,7 +520,7 @@
     "isAccessibilityFocused()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -503,7 +530,7 @@
     "isCheckable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -513,7 +540,7 @@
     "isChecked()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -523,7 +550,7 @@
     "isClickable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -533,7 +560,7 @@
     "isContentInvalid()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -544,7 +571,7 @@
     "isDismissable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -555,17 +582,18 @@
     "isEditable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 18,
       "name": "isEditable()"
     },
     "isEnabled()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -575,7 +603,7 @@
     "isFocusable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -585,7 +613,7 @@
     "isFocused()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -595,7 +623,7 @@
     "isLongClickable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -605,7 +633,7 @@
     "isMultiLine()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -616,7 +644,7 @@
     "isPassword()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -636,7 +664,7 @@
     "isScrollable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -646,7 +674,7 @@
     "isSelected()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -666,7 +694,7 @@
     "isVisibleToUser()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -676,7 +704,7 @@
     "obtain()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -687,7 +715,7 @@
     "obtain(android.view.View)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -700,7 +728,7 @@
     "obtain(android.view.View,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -714,7 +742,7 @@
     "obtain(android.view.accessibility.AccessibilityNodeInfo)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -727,7 +755,7 @@
     "performAction(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "action"
@@ -739,7 +767,7 @@
     "performAction(int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "action",
@@ -752,7 +780,7 @@
     "recycle()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -762,17 +790,18 @@
     "refresh()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 18,
       "name": "refresh()"
     },
     "removeAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "action"
@@ -785,7 +814,7 @@
     "removeAction(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "action"
@@ -810,7 +839,7 @@
     "setAccessibilityFocused(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "focused"
@@ -834,7 +863,7 @@
     "setBoundsInParent(android.graphics.Rect)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "b"
@@ -846,7 +875,7 @@
     "setBoundsInScreen(android.graphics.Rect)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "b"
@@ -858,7 +887,7 @@
     "setCanOpenPopup(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "opensPopup"
@@ -871,7 +900,7 @@
     "setCheckable(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "checkable"
@@ -883,7 +912,7 @@
     "setChecked(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "checked"
@@ -895,7 +924,7 @@
     "setClassName(java.lang.CharSequence)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "name"
@@ -907,7 +936,7 @@
     "setClickable(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "isClickable"
@@ -919,7 +948,7 @@
     "setCollectionInfo(android.view.accessibility.AccessibilityNodeInfo.CollectionInfo)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "collectionInfo"
@@ -932,7 +961,7 @@
     "setCollectionItemInfo(android.view.accessibility.AccessibilityNodeInfo.CollectionItemInfo)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "collectionItemInfo"
@@ -945,7 +974,7 @@
     "setContentDescription(java.lang.CharSequence)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "description"
@@ -957,7 +986,7 @@
     "setContentInvalid(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "contentInvalid"
@@ -970,7 +999,7 @@
     "setDismissable(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dismissable"
@@ -980,22 +1009,37 @@
       "minSdk": 21,
       "name": "setDismissable(boolean)"
     },
+    "setDrawingOrder(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "drawingOrder"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setDrawingOrder(int)",
+      "documentation": "Sets the drawing order of the view corresponding to this node. "
+    },
     "setEditable(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "isEditable"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 18,
       "name": "setEditable(boolean)"
     },
     "setEnabled(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "enabled"
@@ -1007,7 +1051,7 @@
     "setError(java.lang.CharSequence)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "error"
@@ -1020,7 +1064,7 @@
     "setFocusable(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "isFocusable"
@@ -1032,7 +1076,7 @@
     "setFocused(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "isFocused"
@@ -1044,7 +1088,7 @@
     "setInputType(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "inputType"
@@ -1081,7 +1125,7 @@
     "setLiveRegion(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "liveRegion"
@@ -1094,7 +1138,7 @@
     "setLongClickable(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "isLongClickable"
@@ -1106,7 +1150,7 @@
     "setMaxTextLength(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "maxTextLength"
@@ -1119,7 +1163,7 @@
     "setMovementGranularities(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "movementGranularities"
@@ -1131,7 +1175,7 @@
     "setMultiLine(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "multiLine"
@@ -1157,7 +1201,7 @@
     "setPackageName(java.lang.CharSequence)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "packageName"
@@ -1169,7 +1213,7 @@
     "setPassword(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "password"
@@ -1193,7 +1237,7 @@
     "setRangeInfo(android.view.accessibility.AccessibilityNodeInfo.RangeInfo)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "rangeInfo"
@@ -1218,7 +1262,7 @@
     "setScrollable(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "isScrollable"
@@ -1230,7 +1274,7 @@
     "setSelected(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "selected"
@@ -1242,7 +1286,7 @@
     "setSource(android.view.View)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "source"
@@ -1254,7 +1298,7 @@
     "setSource(android.view.View,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "root",
@@ -1267,7 +1311,7 @@
     "setText(java.lang.CharSequence)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "t"
@@ -1279,7 +1323,7 @@
     "setTextSelection(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "start",
@@ -1287,6 +1331,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 18,
       "name": "setTextSelection(int,int)"
     },
     "setTextSelectionSetable(boolean)": {
@@ -1301,8 +1346,22 @@
       "exceptions": [],
       "name": "setTextSelectionSetable(boolean)"
     },
-    "setTraversalAfter(android.view.accessibility.AccessibilityNodeInfo)": {
+    "setTraversalAfter(android.view.View,int)": {
       "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view",
+        "virtualDescendantId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "setTraversalAfter(android.view.View,int)"
+    },
+    "setTraversalAfter(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -1311,11 +1370,25 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "name": "setTraversalAfter(android.view.accessibility.AccessibilityNodeInfo)",
+      "documentation": "Sets the view whose node is visited after this one in accessibility traversal.\n\nThis may be useful for configuring traversal order in tests before the corresponding\nviews have been inflated.\n\n@param info The previous node.\n@see #getTraversalAfter()\n"
+    },
+    "setTraversalBefore(android.view.View,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "info",
+        "virtualDescendantId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
       "minSdk": 22,
-      "name": "setTraversalAfter(android.view.accessibility.AccessibilityNodeInfo)"
+      "name": "setTraversalBefore(android.view.View,int)"
     },
     "setTraversalBefore(android.view.accessibility.AccessibilityNodeInfo)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -1324,13 +1397,13 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 22,
-      "name": "setTraversalBefore(android.view.accessibility.AccessibilityNodeInfo)"
+      "name": "setTraversalBefore(android.view.accessibility.AccessibilityNodeInfo)",
+      "documentation": "Sets the view before whose node this one should be visited during traversal.\n\nThis may be useful for configuring traversal order in tests before the corresponding\nviews have been inflated.\n\n@param info The view providing the preceding node.\n@see #getTraversalBefore()\n"
     },
     "setViewIdResourceName(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "viewIdResourceName"
@@ -1343,7 +1416,7 @@
     "setVisibleToUser(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "isVisibleToUser"
@@ -1355,7 +1428,7 @@
     "writeToParcel(android.os.Parcel,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dest",
@@ -1367,10 +1440,12 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.N",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.graphics.Rect",
     "android.os.Bundle",
@@ -1395,6 +1470,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
@@ -1403,5 +1479,5 @@
     "org.robolectric.shadows.ShadowAccessibilityNodeInfo.OnPerformActionListener"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo",
-  "documentation": "Shadow of {@link android.view.accessibility.AccessibilityNodeInfo} that allows a test to set\nproperties that are locked in the original class. It also keeps track of calls to\n{@code obtain()} and {@code recycle()} to look for bugs that mismatches.\n"
+  "documentation": "Properties of {@link android.view.accessibility.AccessibilityNodeInfo} that are normally locked\nmay be changed using test APIs.\n\nCalls to {@code obtain()} and {@code recycle()} are tracked to help spot bugs.\n"
 }

@@ -1,0 +1,45 @@
+{
+  "methods": {
+    "getPort(android.os.ParcelUuid)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "uuid"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPort(android.os.ParcelUuid)"
+    },
+    "newInstance(int,boolean,boolean,android.os.ParcelUuid)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "type",
+        "auth",
+        "encrypt",
+        "uuid"
+      ],
+      "returnType": "android.bluetooth.BluetoothServerSocket",
+      "exceptions": [],
+      "name": "newInstance(int,boolean,boolean,android.os.ParcelUuid)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.annotation.SuppressLint",
+    "android.bluetooth.BluetoothServerSocket",
+    "android.bluetooth.BluetoothSocket",
+    "android.os.Build",
+    "android.os.ParcelUuid",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowBluetoothServerSocket",
+  "documentation": "Shadow for {@link BluetoothServerSocket}. "
+}

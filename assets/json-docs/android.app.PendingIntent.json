@@ -3,7 +3,7 @@
     "cancel()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -42,7 +42,7 @@
     "getActivities(android.content.Context,int,android.content.Intent[],int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -58,7 +58,7 @@
     "getActivities(android.content.Context,int,android.content.Intent[],int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -75,7 +75,7 @@
     "getActivity(android.content.Context,int,android.content.Intent,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -91,7 +91,7 @@
     "getActivity(android.content.Context,int,android.content.Intent,int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -108,7 +108,7 @@
     "getBroadcast(android.content.Context,int,android.content.Intent,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -140,11 +140,12 @@
     "getCreatorPackage()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
+      "minSdk": 17,
       "name": "getCreatorPackage()"
     },
     "getFlags()": {
@@ -178,7 +179,7 @@
     "getIntentSender()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.content.IntentSender",
@@ -232,7 +233,7 @@
     "getService(android.content.Context,int,android.content.Intent,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -248,7 +249,7 @@
     "getTargetPackage()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -360,7 +361,7 @@
     "send()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -372,7 +373,7 @@
     "send(android.content.Context,int,android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "context",
@@ -384,6 +385,80 @@
         "android.app.PendingIntent.CanceledException"
       ],
       "name": "send(android.content.Context,int,android.content.Intent)"
+    },
+    "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "code",
+        "intent",
+        "onFinished",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.app.PendingIntent.CanceledException"
+      ],
+      "name": "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler)"
+    },
+    "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "code",
+        "intent",
+        "onFinished",
+        "handler",
+        "requiredPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.app.PendingIntent.CanceledException"
+      ],
+      "name": "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler,java.lang.String)"
+    },
+    "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "code",
+        "intent",
+        "onFinished",
+        "handler",
+        "requiredPermission",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.app.PendingIntent.CanceledException"
+      ],
+      "minSdk": 23,
+      "name": "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler,java.lang.String,android.os.Bundle)"
+    },
+    "send(int,android.app.PendingIntent.OnFinished,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "code",
+        "onFinished",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.app.PendingIntent.CanceledException"
+      ],
+      "name": "send(int,android.app.PendingIntent.OnFinished,android.os.Handler)"
     },
     "setCreatorPackage(java.lang.String)": {
       "isImplementation": false,
@@ -404,8 +479,9 @@
     "android.app.PendingIntent.FLAG_NO_CREATE",
     "android.app.PendingIntent.FLAG_ONE_SHOT",
     "android.app.PendingIntent.FLAG_UPDATE_CURRENT",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
-    "org.robolectric.Shadows.shadowOf",
     "android.annotation.NonNull",
     "android.annotation.SuppressLint",
     "android.app.Activity",
@@ -416,6 +492,7 @@
     "android.content.Intent",
     "android.content.IntentSender",
     "android.os.Bundle",
+    "android.os.Handler",
     "android.os.IBinder",
     "java.util.ArrayList",
     "java.util.Arrays",

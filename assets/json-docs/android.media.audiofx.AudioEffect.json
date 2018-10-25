@@ -16,7 +16,7 @@
     "queryEffects()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],

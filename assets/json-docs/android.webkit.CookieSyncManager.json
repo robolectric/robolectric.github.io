@@ -3,7 +3,7 @@
     "createInstance(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static",
         "synchronized"
       ],
@@ -17,7 +17,7 @@
     "getInstance()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],

@@ -44,6 +44,17 @@
       "exceptions": [],
       "name": "getCustomView()"
     },
+    "getIconId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getIconId()",
+      "documentation": "@return the icon set with {@link AlertDialog.Builder#setIcon(int)}\n"
+    },
     "getItems()": {
       "isImplementation": false,
       "modifiers": [
@@ -81,7 +92,7 @@
     "getShadowAlertController()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "private"
       ],
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowAlertController",
@@ -107,7 +118,7 @@
       "returnType": "android.view.View",
       "exceptions": [],
       "name": "getView()",
-      "documentation": "@return return the view set with {@link AlertDialog.Builder#setView(View)}\n"
+      "documentation": "@return the view set with {@link AlertDialog.Builder#setView(View)}\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -122,7 +133,7 @@
       "documentation": "Resets the tracking of the most recently created {@code AlertDialog}\n"
     },
     "show()": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -140,7 +151,6 @@
     "android.widget.FrameLayout",
     "com.android.internal.app.AlertController",
     "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",

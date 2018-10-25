@@ -54,7 +54,7 @@
     "onDestroy()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -74,7 +74,7 @@
     "startForeground(int,android.app.Notification)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -88,7 +88,7 @@
     "stopForeground(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "removeNotification"
@@ -100,7 +100,7 @@
     "stopSelf()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -110,7 +110,7 @@
     "stopSelf(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id"
@@ -118,6 +118,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "stopSelf(int)"
+    },
+    "stopSelfResult(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "stopSelfResult(int)"
     }
   },
   "imports": [

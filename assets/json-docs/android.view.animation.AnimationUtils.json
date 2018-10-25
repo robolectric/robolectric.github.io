@@ -3,7 +3,7 @@
     "loadInterpolator(android.content.Context,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -17,7 +17,7 @@
     "loadLayoutAnimation(android.content.Context,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [

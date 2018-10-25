@@ -1,33 +1,118 @@
 {
   "methods": {
-    "__constructor__(android.content.Context)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "context"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "__constructor__(android.content.Context)"
-    },
-    "getRouteCount()": {
-      "isImplementation": true,
+    "addBluetoothRoute()": {
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
       "params": [],
-      "returnType": "int",
+      "returnType": "void",
       "exceptions": [],
-      "name": "getRouteCount()"
+      "name": "addBluetoothRoute()",
+      "documentation": "Adds the Bluetooth A2DP route and ensures it\u0027s the selected route, simulating connecting a\nBluetooth device.\n"
+    },
+    "callUpdateAudioRoutes(android.media.AudioRoutesInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "routesInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callUpdateAudioRoutes(android.media.AudioRoutesInfo)"
+    },
+    "getBluetoothA2dpRoute()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.media.MediaRouter.RouteInfo",
+      "exceptions": [],
+      "name": "getBluetoothA2dpRoute()"
+    },
+    "isBluetoothRouteSelected(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isBluetoothRouteSelected(int)",
+      "documentation": "Returns whether the Bluetooth A2DP route is the currently selected route. "
+    },
+    "newAudioRouteInfo(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "bluetoothDeviceName"
+      ],
+      "returnType": "android.media.AudioRoutesInfo",
+      "exceptions": [],
+      "name": "newAudioRouteInfo(java.lang.String)",
+      "documentation": "Creates a new {@link AudioRoutesInfo} to be used for updating the Bluetooth audio route.\n\n@param bluetoothDeviceName the name of the Bluetooth device or null to indicate that the\n    already-existing Bluetooth A2DP device should be removed\n"
+    },
+    "removeBluetoothRoute()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeBluetoothRoute()",
+      "documentation": "Removes the Bluetooth A2DP route, simulating disconnecting the Bluetooth device. "
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "updateBluetoothAudioRoute(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "bluetoothDeviceName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "updateBluetoothAudioRoute(java.lang.String)",
+      "documentation": "Updates the MediaRouter\u0027s Bluetooth audio route.\n\n@param bluetoothDeviceName the name of the Bluetooth device or null to indicate that the\n    already-existing Bluetooth A2DP device should be removed\n"
     }
   },
   "imports": [
-    "android.content.Context",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.media.AudioRoutesInfo",
     "android.media.MediaRouter",
-    "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "android.media.MediaRouter.RouteInfo",
+    "android.os.Parcel",
+    "android.text.TextUtils",
+    "javax.annotation.Nullable",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowMediaRouter"
+  "name": "org.robolectric.shadows.ShadowMediaRouter",
+  "documentation": "Shadow class for {@link android.media.MediaRouter}. "
 }

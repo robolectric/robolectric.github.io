@@ -28,10 +28,24 @@
       "exceptions": [],
       "name": "addSize(java.util.List\u003candroid.hardware.Camera.Size\u003e,int,int)"
     },
+    "addSupportedPreviewSize(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addSupportedPreviewSize(int,int)",
+      "documentation": "Add custom preview sizes to supportedPreviewSizes. "
+    },
     "getExposureCompensation()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -41,7 +55,7 @@
     "getExposureCompensationStep()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "float",
@@ -51,7 +65,7 @@
     "getFocusMode()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -61,7 +75,7 @@
     "getMaxExposureCompensation()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -71,7 +85,7 @@
     "getMinExposureCompensation()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -91,7 +105,7 @@
     "getPictureSize()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.hardware.Camera.Size",
@@ -111,7 +125,7 @@
     "getPreviewFormat()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -121,7 +135,7 @@
     "getPreviewFpsRange(int[])": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "range"
@@ -133,7 +147,7 @@
     "getPreviewFrameRate()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -153,7 +167,7 @@
     "getPreviewSize()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.hardware.Camera.Size",
@@ -173,7 +187,7 @@
     "getSupportedFocusModes()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.String\u003e",
@@ -183,7 +197,7 @@
     "getSupportedPictureFormats()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
@@ -193,7 +207,7 @@
     "getSupportedPictureSizes()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.hardware.Camera.Size\u003e",
@@ -203,7 +217,7 @@
     "getSupportedPreviewFormats()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
@@ -213,7 +227,7 @@
     "getSupportedPreviewFpsRange()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003cint[]\u003e",
@@ -223,7 +237,7 @@
     "getSupportedPreviewFrameRates()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
@@ -233,17 +247,28 @@
     "getSupportedPreviewSizes()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.hardware.Camera.Size\u003e",
       "exceptions": [],
       "name": "getSupportedPreviewSizes()"
     },
+    "initSupportedPreviewSizes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "initSupportedPreviewSizes()",
+      "documentation": "Explicitly initialize custom preview sizes array, to switch from default values to\nindividually added.\n"
+    },
     "setExposureCompensation(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "compensation"
@@ -255,7 +280,7 @@
     "setFocusMode(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "focusMode"
@@ -267,7 +292,7 @@
     "setPictureSize(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "width",
@@ -280,7 +305,7 @@
     "setPreviewFormat(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "pixel_format"
@@ -292,7 +317,7 @@
     "setPreviewFpsRange(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "min",
@@ -305,7 +330,7 @@
     "setPreviewFrameRate(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "fps"
@@ -317,7 +342,7 @@
     "setPreviewSize(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "width",
@@ -326,6 +351,30 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setPreviewSize(int,int)"
+    },
+    "setRecordingHint(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "recordingHint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRecordingHint(boolean)"
+    },
+    "setRotation(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rotation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRotation(int)"
     },
     "setSupportedFocusModes(java.lang.String...)": {
       "isImplementation": false,
@@ -354,8 +403,9 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowCamera.ShadowParameters",
-  "documentation": "Shadows the Android {@code Camera.Parameters} class.\n"
+  "documentation": "Shadows the Android {@code Camera.Parameters} class. "
 }

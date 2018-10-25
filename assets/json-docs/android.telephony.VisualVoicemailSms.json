@@ -1,0 +1,140 @@
+{
+  "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    },
+    "describeContents()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "describeContents()"
+    },
+    "getFields()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getFields()"
+    },
+    "getMessageBody()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getMessageBody()"
+    },
+    "getPhoneAccountHandle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.telecom.PhoneAccountHandle",
+      "exceptions": [],
+      "name": "getPhoneAccountHandle()"
+    },
+    "getPrefix()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getPrefix()"
+    },
+    "setFields(android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "fields"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowVisualVoicemailSms",
+      "exceptions": [],
+      "name": "setFields(android.os.Bundle)"
+    },
+    "setMessageBody(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "messageBody"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowVisualVoicemailSms",
+      "exceptions": [],
+      "name": "setMessageBody(java.lang.String)"
+    },
+    "setPhoneAccountHandle(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneAccountHandle"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowVisualVoicemailSms",
+      "exceptions": [],
+      "name": "setPhoneAccountHandle(android.telecom.PhoneAccountHandle)"
+    },
+    "setPrefix(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "prefix"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowVisualVoicemailSms",
+      "exceptions": [],
+      "name": "setPrefix(java.lang.String)"
+    },
+    "writeToParcel(android.os.Parcel,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dest",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writeToParcel(android.os.Parcel,int)"
+    }
+  },
+  "imports": [
+    "android.annotation.Nullable",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Bundle",
+    "android.os.Parcel",
+    "android.os.Parcelable.Creator",
+    "android.telecom.PhoneAccountHandle",
+    "android.telephony.VisualVoicemailSms",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowVisualVoicemailSms"
+}

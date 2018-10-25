@@ -1,0 +1,16 @@
+{
+  "methods": {},
+  "imports": [
+    "android.annotation.Nullable",
+    "android.content.Context",
+    "android.os.Build.VERSION_CODES",
+    "android.provider.Telephony",
+    "android.provider.Telephony.Sms",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadows.ShadowTelephony.ShadowSms"
+  ],
+  "name": "org.robolectric.shadows.ShadowTelephony",
+  "documentation": "Shadow for {@link Telephony}. "
+}

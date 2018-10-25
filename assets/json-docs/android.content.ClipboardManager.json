@@ -3,7 +3,7 @@
     "addPrimaryClipChangedListener(android.content.ClipboardManager.OnPrimaryClipChangedListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -15,7 +15,7 @@
     "getPrimaryClip()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.content.ClipData",
@@ -25,7 +25,7 @@
     "getPrimaryClipDescription()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.content.ClipDescription",
@@ -35,7 +35,7 @@
     "hasPrimaryClip()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -45,7 +45,7 @@
     "hasText()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -55,7 +55,7 @@
     "removePrimaryClipChangedListener(android.content.ClipboardManager.OnPrimaryClipChangedListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -67,7 +67,7 @@
     "setPrimaryClip(android.content.ClipData)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "clip"
@@ -79,7 +79,7 @@
     "setText(java.lang.CharSequence)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "text"

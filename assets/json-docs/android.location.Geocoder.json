@@ -15,19 +15,19 @@
         "java.io.IOException"
       ],
       "name": "getFromLocation(double,double,int)",
-      "documentation": "Returns an empty list by default, or the last value set by {@link #setFromLocation(List)}\n\n`latitude` and `longitude` are ignored by this implementation. `maxResults` determines the\nmaximum number of addresses to return.\n"
+      "documentation": "Returns an empty list by default, or the last value set by {@link #setFromLocation(List)}\n\n`latitude` and `longitude` are ignored by this implementation, except to check that they are in\nappropriate bounds. `maxResults` determines the\nmaximum number of addresses to return.\n"
     },
     "isPresent()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
       "name": "isPresent()",
-      "documentation": "@return `true` by default, or the value specified via {@link #setIsPresent(boolean)}\n"
+      "documentation": "@return `true` by default, or the value specified via {@link #setIsPresent(boolean)} "
     },
     "reset()": {
       "isImplementation": false,
@@ -71,6 +71,7 @@
   "imports": [
     "android.location.Address",
     "android.location.Geocoder",
+    "com.google.common.base.Preconditions",
     "java.io.IOException",
     "java.util.ArrayList",
     "java.util.List",

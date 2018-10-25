@@ -3,7 +3,7 @@
     "__constructor__()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -51,7 +51,7 @@
     "getBoundsInScreen(android.graphics.Rect)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "outBounds"
@@ -63,7 +63,7 @@
     "getChild(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "index"
@@ -75,7 +75,7 @@
     "getChildCount()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -95,7 +95,7 @@
     "getId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -105,7 +105,7 @@
     "getLayer()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -115,7 +115,7 @@
     "getParent()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityWindowInfo",
@@ -125,17 +125,29 @@
     "getRoot()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo",
       "exceptions": [],
       "name": "getRoot()"
     },
+    "getTitle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getTitle()",
+      "documentation": "Returns the title of this window, or {@code null} if none is available. "
+    },
     "getType()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -155,7 +167,7 @@
     "isAccessibilityFocused()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -165,7 +177,7 @@
     "isActive()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -175,7 +187,7 @@
     "isFocused()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -185,7 +197,7 @@
     "obtain()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -196,7 +208,7 @@
     "obtain(android.view.accessibility.AccessibilityWindowInfo)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -209,7 +221,7 @@
     "recycle()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -312,6 +324,19 @@
       "exceptions": [],
       "name": "setRoot(android.view.accessibility.AccessibilityNodeInfo)"
     },
+    "setTitle(java.lang.CharSequence)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTitle(java.lang.CharSequence)",
+      "documentation": "Sets the title of this window.\n\n@param value The {@link CharSequence} to set as the title of this window\n"
+    },
     "setType(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -327,6 +352,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N",
     "android.graphics.Rect",
     "android.view.accessibility.AccessibilityNodeInfo",
     "android.view.accessibility.AccessibilityWindowInfo",

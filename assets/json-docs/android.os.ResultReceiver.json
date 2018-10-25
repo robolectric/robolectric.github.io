@@ -3,7 +3,7 @@
     "send(int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "resultCode",

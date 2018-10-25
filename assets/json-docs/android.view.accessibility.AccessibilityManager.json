@@ -3,7 +3,7 @@
     "addAccessibilityStateChangeListener(android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -30,7 +30,7 @@
     "getAccessibilityServiceList()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.content.pm.ServiceInfo\u003e",
@@ -40,7 +40,7 @@
     "getEnabledAccessibilityServiceList(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "feedbackTypeFlags"
@@ -52,7 +52,7 @@
     "getInstalledAccessibilityServiceList()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.accessibilityservice.AccessibilityServiceInfo\u003e",
@@ -74,10 +74,23 @@
       ],
       "name": "getInstance(android.content.Context)"
     },
+    "isAccessibilityButtonSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 27,
+      "name": "isAccessibilityButtonSupported()",
+      "documentation": "Returns {@code true} by default, or the value specified via {@link\n#setAccessibilityButtonSupported(boolean)}\n"
+    },
     "isEnabled()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -87,7 +100,7 @@
     "isTouchExplorationEnabled()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -97,7 +110,7 @@
     "removeAccessibilityStateChangeListener(android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "listener"
@@ -116,6 +129,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "setAccessibilityButtonSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccessibilityButtonSupported(boolean)",
+      "documentation": "Sets that the system navigation area is supported accessibility button; controls the return\nvalue of {@link AccessibilityManager#isAccessibilityButtonSupported()}.\n"
     },
     "setAccessibilityServiceList(java.util.List\u003candroid.content.pm.ServiceInfo\u003e)": {
       "isImplementation": false,
@@ -180,6 +207,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.O_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.accessibilityservice.AccessibilityServiceInfo",
     "android.content.Context",

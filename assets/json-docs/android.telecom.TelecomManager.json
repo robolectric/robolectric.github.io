@@ -3,7 +3,7 @@
     "acceptRingingCall()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -13,7 +13,7 @@
     "addNewIncomingCall(android.telecom.PhoneAccountHandle,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "phoneAccount",
@@ -39,7 +39,7 @@
     "cancelMissedCallsNotification()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -81,6 +81,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 23,
       "name": "enablePhoneAccount(android.telecom.PhoneAccountHandle,boolean)"
     },
     "endCall()": {
@@ -96,13 +97,14 @@
     "getAdnUriForPhoneAccount(android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "accountHandle"
       ],
       "returnType": "android.net.Uri",
       "exceptions": [],
+      "minSdk": 22,
       "name": "getAdnUriForPhoneAccount(android.telecom.PhoneAccountHandle)"
     },
     "getAllIncomingCalls()": {
@@ -158,7 +160,7 @@
     "getCallCapablePhoneAccounts()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.telecom.PhoneAccountHandle\u003e",
@@ -212,7 +214,7 @@
     "getDefaultDialerPackage()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -223,7 +225,7 @@
     "getDefaultOutgoingPhoneAccount(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "uriScheme"
@@ -246,19 +248,20 @@
     "getLine1Number(android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "accountHandle"
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
+      "minSdk": 22,
       "name": "getLine1Number(android.telecom.PhoneAccountHandle)"
     },
     "getPhoneAccount(android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account"
@@ -292,7 +295,7 @@
     "getSimCallManager()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.telecom.PhoneAccountHandle",
@@ -309,6 +312,7 @@
       ],
       "returnType": "android.telecom.PhoneAccountHandle",
       "exceptions": [],
+      "minSdk": 23,
       "name": "getSimCallManager(int)"
     },
     "getSystemDialerPackage()": {
@@ -319,6 +323,7 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
+      "minSdk": 23,
       "name": "getSystemDialerPackage()"
     },
     "getUserSelectedOutgoingPhoneAccount()": {
@@ -334,19 +339,20 @@
     "getVoiceMailNumber(android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "accountHandle"
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
+      "minSdk": 23,
       "name": "getVoiceMailNumber(android.telecom.PhoneAccountHandle)"
     },
     "handleMmi(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dialString"
@@ -358,7 +364,7 @@
     "handleMmi(java.lang.String,android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "dialString",
@@ -366,12 +372,13 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 23,
       "name": "handleMmi(java.lang.String,android.telecom.PhoneAccountHandle)"
     },
     "isInCall()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -391,7 +398,7 @@
     "isTtySupported()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -401,7 +408,7 @@
     "isVoiceMailNumber(android.telecom.PhoneAccountHandle,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "accountHandle",
@@ -409,12 +416,13 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 22,
       "name": "isVoiceMailNumber(android.telecom.PhoneAccountHandle,java.lang.String)"
     },
     "placeCall(android.net.Uri,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "address",
@@ -422,12 +430,13 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 23,
       "name": "placeCall(android.net.Uri,android.os.Bundle)"
     },
     "registerPhoneAccount(android.telecom.PhoneAccount)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "account"
@@ -476,7 +485,7 @@
     "showInCallScreen(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "showDialpad"
@@ -488,7 +497,7 @@
     "silenceRinger()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -498,7 +507,7 @@
     "unregisterPhoneAccount(android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "accountHandle"
@@ -525,6 +534,7 @@
     "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Set",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

@@ -28,7 +28,7 @@
     "dismissDialog(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -41,7 +41,7 @@
     "findViewById(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "id"
@@ -54,7 +54,7 @@
     "finish()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -64,7 +64,7 @@
     "finishAffinity()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -75,7 +75,7 @@
     "finishAndRemoveTask()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -83,10 +83,20 @@
       "minSdk": 21,
       "name": "finishAndRemoveTask()"
     },
+    "getActivityManager()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.app.ActivityManager",
+      "exceptions": [],
+      "name": "getActivityManager()"
+    },
     "getCallingActivity()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.content.ComponentName",
@@ -107,7 +117,7 @@
     "getCurrentFocus()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.View",
@@ -139,7 +149,7 @@
     "getLastNonConfigurationInstance()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.Object",
@@ -160,7 +170,7 @@
     "getLayoutInflater()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.LayoutInflater",
@@ -180,7 +190,7 @@
     "getMenuInflater()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.MenuInflater",
@@ -222,7 +232,7 @@
     "getParent()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -253,7 +263,7 @@
     "getRequestedOrientation()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -285,7 +295,7 @@
     "getTaskId()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -295,7 +305,7 @@
     "getVolumeControlStream()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -306,13 +316,13 @@
     "getWindow()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.view.Window",
       "exceptions": [],
       "name": "getWindow()",
-      "documentation": "Constructs a new Window (a {@link com.android.internal.policy.impl.PhoneWindow}) if no window has previously been\nset.\n\n@return the window associated with this Activity\n"
+      "documentation": "Constructs a new Window (a {@link com.android.internal.policy.impl.PhoneWindow}) if no window\nhas previously been set.\n\n@return the window associated with this Activity\n"
     },
     "hasCancelledPendingTransitions()": {
       "isImplementation": false,
@@ -325,7 +335,7 @@
       "name": "hasCancelledPendingTransitions()"
     },
     "isFinishing()": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -333,7 +343,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isFinishing()",
-      "documentation": "@return whether {@link #finish()} was called\n"
+      "documentation": "Returns whether {@link #finish()} was called.\n\n@deprecated Use {@link Activity#isFinishing()} instead.\n"
     },
     "isLockTask()": {
       "isImplementation": false,
@@ -344,12 +354,12 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isLockTask()",
-      "documentation": "Returns if the activity is in the lock task mode.\n"
+      "documentation": "Returns if the activity is in the lock task mode.\n\n@deprecated Use {@link ActivityManager#getLockTaskModeState} instead.\n"
     },
     "isTaskRoot()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [],
@@ -360,7 +370,7 @@
     "onBackPressed()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -370,7 +380,7 @@
     "onCreateOptionsMenu(android.view.Menu)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "menu"
@@ -382,7 +392,7 @@
     "overridePendingTransition(int,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "enterAnim",
@@ -420,7 +430,7 @@
     "recreate()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -430,7 +440,7 @@
     "removeDialog(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -443,7 +453,7 @@
     "requestPermissions(java.lang.String[],int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -468,7 +478,7 @@
     "runOnUiThread(java.lang.Runnable)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "action"
@@ -517,7 +527,7 @@
     "setDefaultKeyMode(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "keyMode"
@@ -566,7 +576,7 @@
     "setRequestedOrientation(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "requestedOrientation"
@@ -578,7 +588,7 @@
     "setResult(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -591,7 +601,7 @@
     "setResult(int,android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -605,7 +615,7 @@
     "setVolumeControlStream(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -630,7 +640,7 @@
     "showDialog(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -643,7 +653,7 @@
     "showDialog(int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "final"
       ],
       "params": [
@@ -664,12 +674,12 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "startLockTask()",
-      "documentation": "Starts a lock task.\n\n\u003cp\u003eThe status of the lock task can be verified using {@link #isLockTask} method and is only\nscoped to this activity. Otherwise this implementation has no effect.\n"
+      "documentation": "Starts a lock task.\n\n\u003cp\u003eThe status of the lock task can be verified using {@link #isLockTask} method. Otherwise this\nimplementation has no effect.\n"
     },
     "startManagingCursor(android.database.Cursor)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "c"
@@ -688,12 +698,12 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "stopLockTask()",
-      "documentation": "Stops a lock task.\n\n\u003cp\u003eThe status of the lock task can be verified using {@link #isLockTask} method and is only\nscoped to this activity. Otherwise this implementation has no effect.\n"
+      "documentation": "Stops a lock task.\n\n\u003cp\u003eThe status of the lock task can be verified using {@link #isLockTask} method. Otherwise this\nimplementation has no effect.\n"
     },
     "stopManagingCursor(android.database.Cursor)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "c"
@@ -710,6 +720,7 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.R",
     "android.app.Activity",
+    "android.app.ActivityManager",
     "android.app.ActivityThread",
     "android.app.Application",
     "android.app.Dialog",

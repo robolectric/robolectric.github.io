@@ -3,7 +3,7 @@
     "draw(android.graphics.Canvas)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "canvas"
@@ -47,7 +47,7 @@
     "mutate()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "android.graphics.drawable.Drawable",
@@ -57,7 +57,7 @@
     "setColorFilter(android.graphics.ColorFilter)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "colorFilter"

@@ -3,7 +3,7 @@
     "cancel(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "abstract"
       ],
       "params": [
@@ -16,7 +16,7 @@
     "cancelAll()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "abstract"
       ],
       "params": [],
@@ -27,7 +27,7 @@
     "enqueue(android.app.job.JobInfo,android.app.job.JobWorkItem)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "abstract"
       ],
       "params": [
@@ -55,7 +55,7 @@
     "getAllPendingJobs()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "abstract"
       ],
       "params": [],
@@ -80,7 +80,7 @@
     "schedule(android.app.job.JobInfo)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "abstract"
       ],
       "params": [
@@ -105,6 +105,7 @@
     "java.util.List",
     "java.util.Map",
     "java.util.Set",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadows.ShadowJobScheduler.ShadowJobSchedulerImpl"

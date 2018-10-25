@@ -149,17 +149,27 @@
         "java.io.IOException"
       ],
       "name": "skip(long)"
+    },
+    "stream()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.io.InputStream",
+      "exceptions": [],
+      "name": "stream()"
     }
   },
   "imports": [
     "android.content.res.AssetManager.AssetInputStream",
     "java.io.IOException",
     "java.io.InputStream",
-    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowAssetInputStream.Picker"
   ],
-  "name": "org.robolectric.shadows.ShadowAssetInputStream"
+  "name": "org.robolectric.shadows.ShadowLegacyAssetInputStream"
 }

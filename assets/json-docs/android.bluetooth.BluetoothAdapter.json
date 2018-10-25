@@ -3,7 +3,7 @@
     "cancelDiscovery()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -13,7 +13,7 @@
     "checkBluetoothAddress(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -22,12 +22,12 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "checkBluetoothAddress(java.lang.String)",
-      "documentation": "Validate a Bluetooth address, such as \"00:43:A8:23:10:F0\"\nAlphabetic characters must be uppercase to be valid.\n\n@param address\n        Bluetooth address as string\n@return true if the address is valid, false otherwise\n"
+      "documentation": "Validate a Bluetooth address, such as \"00:43:A8:23:10:F0\" Alphabetic characters must be\nuppercase to be valid.\n\n@param address Bluetooth address as string\n@return true if the address is valid, false otherwise\n"
     },
     "disable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -37,7 +37,7 @@
     "enable()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -47,7 +47,7 @@
     "getAddress()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -57,7 +57,7 @@
     "getBondedDevices()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.Set\u003candroid.bluetooth.BluetoothDevice\u003e",
@@ -67,7 +67,7 @@
     "getDefaultAdapter()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -95,6 +95,19 @@
       "exceptions": [],
       "name": "getName()"
     },
+    "getProfileConnectionState(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "profile"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getProfileConnectionState(int)",
+      "documentation": "Returns the connection state for the given Bluetooth {@code profile}, defaulting to {@link\nBluetoothProfile.STATE_DISCONNECTED} if the profile\u0027s connection state was never set.\n\n\u003cp\u003eSet a Bluetooth profile\u0027s connection state via {@link #setProfileConnectionState(int, int)}.\n"
+    },
     "getScanMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -118,7 +131,7 @@
     "getState()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -128,7 +141,7 @@
     "isDiscovering()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -138,7 +151,7 @@
     "isEnabled()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -155,6 +168,19 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "isMultipleAdvertisementSupported()"
+    },
+    "listenUsingInsecureRfcommWithServiceRecord(java.lang.String,java.util.UUID)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "serviceName",
+        "uuid"
+      ],
+      "returnType": "android.bluetooth.BluetoothServerSocket",
+      "exceptions": [],
+      "name": "listenUsingInsecureRfcommWithServiceRecord(java.lang.String,java.util.UUID)"
     },
     "setAddress(java.lang.String)": {
       "isImplementation": false,
@@ -216,6 +242,20 @@
       "exceptions": [],
       "name": "setName(java.lang.String)"
     },
+    "setProfileConnectionState(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "profile",
+        "state"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProfileConnectionState(int,int)",
+      "documentation": "Sets the connection state {@code state} for the given BLuetoothProfile {@code profile}\n"
+    },
     "setScanMode(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -243,7 +283,7 @@
     "startDiscovery()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -253,7 +293,7 @@
     "startLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback"
@@ -266,7 +306,7 @@
     "startLeScan(java.util.UUID[],android.bluetooth.BluetoothAdapter.LeScanCallback)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "serviceUuids",
@@ -280,7 +320,7 @@
     "stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "callback"
@@ -297,8 +337,14 @@
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothAdapter.LeScanCallback",
     "android.bluetooth.BluetoothDevice",
+    "android.bluetooth.BluetoothProfile",
+    "android.bluetooth.BluetoothServerSocket",
+    "android.bluetooth.BluetoothSocket",
+    "android.os.ParcelUuid",
     "java.util.Collections",
+    "java.util.HashMap",
     "java.util.HashSet",
+    "java.util.Map",
     "java.util.Set",
     "java.util.UUID",
     "org.robolectric.annotation.Implementation",
