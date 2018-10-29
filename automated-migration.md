@@ -15,7 +15,7 @@ The migration tool will make changes directly to source files in your codebase, 
 
 1. Make sure you're using a recent version of Gradle (4.10 or newer).
 
-2. [Configure your project](https://errorprone.info/docs/installation) to compile using Error Prone. Quick config for Gradle:
+2. [Configure your project](https://errorprone.info/docs/installation) to compile using Error Prone. Quick config for Gradle (usually in `app/build.gradle`):
 
     ```groovy
     plugins {
