@@ -45,9 +45,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
  name = "robolectric",
- urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.0-alpha-3.tar.gz"],
- strip_prefix = "robolectric-bazel-4.0-alpha-3",
- sha256 = "7730b46281c2f8c23f6c045ddfe449bf077328f0128200043a5ac57210643f22",
+ urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.0.1.tar.gz"],
+ strip_prefix = "robolectric-bazel-4.0.1",
+ sha256 = "dff7a1f8e7bd8dc737f20b6bbfaf78d8b5851debe6a074757f75041029f0c43b",
 )
 load("@robolectric//bazel:setup_robolectric.bzl", "robolectric_repositories")
 robolectric_repositories()
