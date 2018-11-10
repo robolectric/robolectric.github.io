@@ -116,6 +116,18 @@
       "minSdk": 23,
       "name": "getBoundNetworkForProcess()"
     },
+    "getCaptivePortalServerUrl()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getCaptivePortalServerUrl()",
+      "documentation": "Returns the captive portal URL previously set with {@link #setCaptivePortalServerUrl}.\n"
+    },
     "getNetworkCallbacks()": {
       "isImplementation": false,
       "modifiers": [
@@ -316,6 +328,19 @@
       "exceptions": [],
       "name": "setBackgroundDataSetting(boolean)"
     },
+    "setCaptivePortalServerUrl(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "captivePortalServerUrl"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCaptivePortalServerUrl(java.lang.String)",
+      "documentation": "Sets the captive portal URL, which will be returned in {@link #getCaptivePortalServerUrl}.\n\n@param captivePortalServerUrl the url of captive portal.\n"
+    },
     "setDefaultNetworkActive(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -385,6 +410,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.net.ConnectivityManager",

@@ -7,13 +7,14 @@
         "static"
       ],
       "params": [],
-      "returnType": "int",
+      "returnType": "java.lang.Number",
       "exceptions": [],
       "name": "nativeConstructor()"
     }
   },
   "imports": [
     "android.graphics.Region",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"

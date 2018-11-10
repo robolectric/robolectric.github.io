@@ -1,6 +1,6 @@
 {
   "methods": {
-    "getColor()": {
+    "getLastSetColor()": {
       "isImplementation": false,
       "modifiers": [
         "public"
@@ -8,7 +8,8 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getColor()"
+      "name": "getLastSetColor()",
+      "documentation": "Returns the color of this drawable as set by the last call to {@link #setColor(int color)}.\n\n\u003cp\u003eNote that this only works if the color is explicitly set with {@link #setColor(int color)}.\nIf the color of this drawable is set by another method, the result will be {@code 0}.\n"
     },
     "setColor(int)": {
       "isImplementation": true,

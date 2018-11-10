@@ -8,7 +8,7 @@
       "params": [
         "mgr"
       ],
-      "returnType": "java.lang.String",
+      "returnType": "java.lang.CharSequence",
       "exceptions": [],
       "name": "loadLabel(android.content.pm.PackageManager)"
     },

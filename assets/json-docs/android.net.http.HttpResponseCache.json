@@ -108,7 +108,7 @@
         "uri",
         "urlConnection"
       ],
-      "returnType": "java.net.CacheResponse",
+      "returnType": "java.net.CacheRequest",
       "exceptions": [],
       "name": "put(java.net.URI,java.net.URLConnection)"
     },
@@ -127,6 +127,7 @@
     "org.robolectric.shadow.api.Shadow.newInstanceOf",
     "android.net.http.HttpResponseCache",
     "java.io.File",
+    "java.net.CacheRequest",
     "java.net.CacheResponse",
     "java.net.URI",
     "java.net.URLConnection",

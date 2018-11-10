@@ -79,7 +79,7 @@
         "outValues",
         "outIndices"
       ],
-      "returnType": "void",
+      "returnType": "boolean",
       "exceptions": [],
       "maxSdk": 20,
       "name": "applyStyle(int,int,int,int,int[],int[],int[])"
@@ -121,7 +121,7 @@
         "outValues",
         "outIndices"
       ],
-      "returnType": "void",
+      "returnType": "boolean",
       "exceptions": [],
       "minSdk": 21,
       "maxSdk": 25,
@@ -332,6 +332,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 27,
       "name": "dumpTheme(long,int,java.lang.String,java.lang.String)"
     },
     "ensureStringBlocks()": {
@@ -1379,6 +1380,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 27,
       "name": "resolveAttrs(long,int,int,int[],int[],int[],int[])"
     },
     "resolveResName(org.robolectric.res.ResName,org.robolectric.res.android.ResTable_config)": {

@@ -544,6 +544,17 @@
       "exceptions": [],
       "name": "isMutable()"
     },
+    "isPremultiplied()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "isPremultiplied()"
+    },
     "isRecycled()": {
       "isImplementation": true,
       "modifiers": [
@@ -592,6 +603,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "recycle()"
+    },
+    "sameAs(android.graphics.Bitmap)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "other"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "sameAs(android.graphics.Bitmap)"
     },
     "setConfig(android.graphics.Bitmap.Config)": {
       "isImplementation": true,
@@ -726,6 +749,19 @@
       "exceptions": [],
       "name": "setPixels(int[],int,int,int,int,int,int)"
     },
+    "setPremultiplied(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "isPremultiplied"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "setPremultiplied(boolean)"
+    },
     "setWidth(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -784,6 +820,7 @@
     "java.io.OutputStream",
     "java.nio.Buffer",
     "java.nio.ByteBuffer",
+    "java.util.Arrays",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

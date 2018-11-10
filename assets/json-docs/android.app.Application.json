@@ -206,7 +206,8 @@
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowPopupMenu",
       "exceptions": [],
-      "name": "getLatestPopupMenu()"
+      "name": "getLatestPopupMenu()",
+      "documentation": "@deprecated Use {@link ShadowPopupMenu#getLatestPopupMenu()} instead.\n"
     },
     "getLatestPopupWindow()": {
       "isImplementation": false,
@@ -441,7 +442,7 @@
     "setLatestAlertDialog(org.robolectric.shadows.ShadowAlertDialog)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "latestAlertDialog"
@@ -453,7 +454,7 @@
     "setLatestDialog(org.robolectric.shadows.ShadowDialog)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "latestDialog"
@@ -465,7 +466,7 @@
     "setLatestListPopupWindow(android.widget.ListPopupWindow)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "latestListPopupWindow"
@@ -477,7 +478,7 @@
     "setLatestPopupMenu(org.robolectric.shadows.ShadowPopupMenu)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "latestPopupMenu"
@@ -489,7 +490,7 @@
     "setLatestPopupWindow(android.widget.PopupWindow)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "latestPopupWindow"

@@ -65,6 +65,16 @@
       "exceptions": [],
       "name": "clearView()"
     },
+    "copyBackForwardList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.webkit.WebBackForwardList",
+      "exceptions": [],
+      "name": "copyBackForwardList()"
+    },
     "destroy()": {
       "isImplementation": true,
       "modifiers": [

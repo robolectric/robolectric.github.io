@@ -78,7 +78,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPackage(android.content.pm.PackageInfo)",
-      "documentation": "Registers (\"installs\") a package with the PackageManager.\n\n\u003cp\u003e\nIn order to create PackageInfo objects in a valid state please use\n{@link androidx.test.core.content.pm.PackageInfoBuilder}.\n"
+      "documentation": "Registers (\"installs\") a package with the PackageManager.\n\n\u003cp\u003eIn order to create PackageInfo objects in a valid state please use {@link\nandroidx.test.core.content.pm.PackageInfoBuilder}.\n"
     },
     "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)": {
       "isImplementation": false,
@@ -117,7 +117,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPackageInternal(android.content.pm.PackageParser.Package)",
-      "documentation": "Internal use only.\n@param appPackage\n"
+      "documentation": "Internal use only.\n\n@param appPackage\n"
     },
     "addPermissionGroupInfo(android.content.pm.PermissionGroupInfo)": {
       "isImplementation": false,
@@ -130,7 +130,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPermissionGroupInfo(android.content.pm.PermissionGroupInfo)",
-      "documentation": "Allows overriding or adding permission-group elements. These would be otherwise specified by\neither (the system)[https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups]\nor by (the app itself)[https://developer.android.com/guide/topics/manifest/permission-group-element.html],\nas part of its manifest\n\n\u003cp\u003e{@link android.content.pm.PackageParser.PermissionGroup}s added through this method have\nprecedence over those specified with the same name by one of the aforementioned methods.\n\n@see PackageManager#getAllPermissionGroups(int)\n@see PackageManager#getPermissionGroupInfo(String, int)\n"
+      "documentation": "Allows overriding or adding permission-group elements. These would be otherwise specified by\neither (the\nsystem)[https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups] or\nby (the app\nitself)[https://developer.android.com/guide/topics/manifest/permission-group-element.html], as\npart of its manifest\n\n\u003cp\u003e{@link android.content.pm.PackageParser.PermissionGroup}s added through this method have\nprecedence over those specified with the same name by one of the aforementioned methods.\n\n@see PackageManager#getAllPermissionGroups(int)\n@see PackageManager#getPermissionGroupInfo(String, int)\n"
     },
     "addPermissionInfo(android.content.pm.PermissionInfo)": {
       "isImplementation": false,
@@ -168,7 +168,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addResolveInfoForIntent(android.content.Intent,java.util.List\u003candroid.content.pm.ResolveInfo\u003e)"
+      "name": "addResolveInfoForIntent(android.content.Intent,java.util.List\u003candroid.content.pm.ResolveInfo\u003e)",
+      "documentation": "@deprecated please use {@link #setResolveInfosForIntent} or {@link\n    #addResolveInfoForIntent(Intent, ResolveInfo)} instead.\n"
     },
     "addSystemAvailableFeature(android.content.pm.FeatureInfo)": {
       "isImplementation": false,
@@ -251,7 +252,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "doPendingUninstallCallbacks()",
-      "documentation": "Runs the callbacks pending from calls to {@link PackageManager#deletePackage(String, IPackageDeleteObserver, int)}\n"
+      "documentation": "Runs the callbacks pending from calls to {@link PackageManager#deletePackage(String,\nIPackageDeleteObserver, int)}\n"
     },
     "freeStorage(long,android.content.IntentSender)": {
       "isImplementation": true,
@@ -304,7 +305,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getComponentEnabledSettingFlags(android.content.ComponentName)",
-      "documentation": "Return the flags set in call to {@link android.app.ApplicationPackageManager#setComponentEnabledSetting(ComponentName, int, int)}.\n\n@param componentName The component name.\n@return The flags.\n"
+      "documentation": "Return the flags set in call to {@link\nandroid.app.ApplicationPackageManager#setComponentEnabledSetting(ComponentName, int, int)}.\n\n@param componentName The component name.\n@return The flags.\n"
     },
     "getDeletedPackages()": {
       "isImplementation": false,
@@ -315,7 +316,7 @@
       "returnType": "java.util.Set\u003cjava.lang.String\u003e",
       "exceptions": [],
       "name": "getDeletedPackages()",
-      "documentation": "Returns package names successfully deleted with {@link PackageManager#deletePackage(String, IPackageDeleteObserver, int)}\nNote that like real {@link PackageManager} the calling context must have {@link android.Manifest.permission#DELETE_PACKAGES} permission set.\n"
+      "documentation": "Returns package names successfully deleted with {@link PackageManager#deletePackage(String,\nIPackageDeleteObserver, int)} Note that like real {@link PackageManager} the calling context\nmust have {@link android.Manifest.permission#DELETE_PACKAGES} permission set.\n"
     },
     "getIntentFiltersForActivity(android.content.ComponentName)": {
       "isImplementation": false,
@@ -609,6 +610,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setPackagesForUid(int,java.lang.String...)"
+    },
+    "setResolveInfosForIntent(android.content.Intent,java.util.List\u003candroid.content.pm.ResolveInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setResolveInfosForIntent(android.content.Intent,java.util.List\u003candroid.content.pm.ResolveInfo\u003e)",
+      "documentation": "Sets extra resolve infos for an intent.\n\n\u003cp\u003eThose entries are added to whatever might be in the manifest already.\n"
     },
     "setShouldShowRequestPermissionRationale(java.lang.String,boolean)": {
       "isImplementation": false,

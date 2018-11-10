@@ -12,7 +12,7 @@
         "msg",
         "throwable"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "addLog(int,java.lang.String,java.lang.String,java.lang.Throwable)"
     },
@@ -38,7 +38,7 @@
         "tag",
         "msg"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "d(java.lang.String,java.lang.String)"
     },
@@ -53,7 +53,7 @@
         "msg",
         "throwable"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "d(java.lang.String,java.lang.String,java.lang.Throwable)"
     },
@@ -67,7 +67,7 @@
         "tag",
         "msg"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "e(java.lang.String,java.lang.String)"
     },
@@ -82,7 +82,7 @@
         "msg",
         "throwable"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "e(java.lang.String,java.lang.String,java.lang.Throwable)"
     },
@@ -122,7 +122,7 @@
         "tag",
         "msg"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "i(java.lang.String,java.lang.String)"
     },
@@ -137,7 +137,7 @@
         "msg",
         "throwable"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "i(java.lang.String,java.lang.String,java.lang.Throwable)"
     },
@@ -249,7 +249,7 @@
         "tag",
         "msg"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "v(java.lang.String,java.lang.String)"
     },
@@ -264,7 +264,7 @@
         "msg",
         "throwable"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "v(java.lang.String,java.lang.String,java.lang.Throwable)"
     },
@@ -278,7 +278,7 @@
         "tag",
         "msg"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "w(java.lang.String,java.lang.String)"
     },
@@ -293,7 +293,7 @@
         "msg",
         "throwable"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "w(java.lang.String,java.lang.String,java.lang.Throwable)"
     },
@@ -307,7 +307,7 @@
         "tag",
         "throwable"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "w(java.lang.String,java.lang.Throwable)"
     },
@@ -321,7 +321,7 @@
         "tag",
         "msg"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "wtf(java.lang.String,java.lang.String)"
     },
@@ -336,7 +336,7 @@
         "msg",
         "throwable"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "name": "wtf(java.lang.String,java.lang.String,java.lang.Throwable)"
     }

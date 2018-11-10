@@ -135,7 +135,7 @@
         "admin",
         "packageName"
       ],
-      "returnType": "int",
+      "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
       "name": "enableSystemApp(android.content.ComponentName,java.lang.String)"

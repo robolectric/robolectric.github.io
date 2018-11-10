@@ -1,5 +1,44 @@
 {
   "methods": {
+    "addStorageVolume(android.os.storage.StorageVolume)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "storageVolume"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addStorageVolume(android.os.storage.StorageVolume)",
+      "documentation": "Adds a {@link StorageVolume} to the list returned by {@link #getStorageVolumes()}.\n\n@param StorageVolume to add to list\n"
+    },
+    "getStorageVolume(java.io.File)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "file"
+      ],
+      "returnType": "android.os.storage.StorageVolume",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getStorageVolume(java.io.File)",
+      "documentation": "Checks whether File belongs to any {@link StorageVolume} in the list returned by {@link\n#getStorageVolumes()}.\n\n@param File to check\n@return StorageVolume for the file\n"
+    },
+    "getStorageVolumes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.os.storage.StorageVolume\u003e",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getStorageVolumes()",
+      "documentation": "Returns the storage volumes configured via {@link #addStorageVolume()}.\n\n@return StorageVolume list\n"
+    },
     "getVolumeList()": {
       "isImplementation": false,
       "modifiers": [
@@ -52,6 +91,17 @@
       "minSdk": 24,
       "name": "isUserKeyUnlocked(int)"
     },
+    "resetStorageVolumeList()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetStorageVolumeList()",
+      "documentation": "Clears the storageVolumeList. "
+    },
     "setFileEncryptedNativeOrEmulated(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -73,6 +123,10 @@
     "android.os.UserManager",
     "android.os.storage.StorageManager",
     "android.os.storage.StorageVolume",
+    "com.google.common.base.Preconditions",
+    "java.io.File",
+    "java.util.ArrayList",
+    "java.util.List",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

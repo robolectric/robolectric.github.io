@@ -327,7 +327,7 @@
         "protected"
       ],
       "params": [],
-      "returnType": "java.lang.Object",
+      "returnType": "android.view.WindowId",
       "exceptions": [],
       "minSdk": 18,
       "name": "getWindowId()"
@@ -458,7 +458,7 @@
       "params": [
         "action"
       ],
-      "returnType": "void",
+      "returnType": "boolean",
       "exceptions": [],
       "name": "post(java.lang.Runnable)"
     },
@@ -471,7 +471,7 @@
         "action",
         "delayMills"
       ],
-      "returnType": "void",
+      "returnType": "boolean",
       "exceptions": [],
       "name": "postDelayed(java.lang.Runnable,long)"
     },
@@ -495,7 +495,7 @@
       "params": [
         "callback"
       ],
-      "returnType": "void",
+      "returnType": "boolean",
       "exceptions": [],
       "name": "removeCallbacks(java.lang.Runnable)"
     },

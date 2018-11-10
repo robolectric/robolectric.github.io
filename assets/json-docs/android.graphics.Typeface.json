@@ -138,6 +138,22 @@
       "exceptions": [],
       "name": "createFromFile(java.lang.String)"
     },
+    "createFromResources(android.content.res.AssetManager,java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "mgr",
+        "path",
+        "cookie"
+      ],
+      "returnType": "android.graphics.Typeface",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "createFromResources(android.content.res.AssetManager,java.lang.String,int)"
+    },
     "createUnderlyingTypeface(java.lang.String,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -203,6 +219,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.annotation.SuppressLint",

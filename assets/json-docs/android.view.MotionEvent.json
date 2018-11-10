@@ -1160,7 +1160,7 @@
         "nativePtr",
         "source"
       ],
-      "returnType": "void",
+      "returnType": "int",
       "exceptions": [],
       "maxSdk": 20,
       "name": "nativeSetSource(int,int)"

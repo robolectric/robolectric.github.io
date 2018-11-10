@@ -543,6 +543,16 @@
       "exceptions": [],
       "name": "restore()"
     },
+    "save()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "save()"
+    },
     "scale(float,float)": {
       "isImplementation": true,
       "modifiers": [
