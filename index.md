@@ -15,7 +15,7 @@ Running tests on an Android emulator or device is slow! Building, deploying, and
 public class MyActivityTest {
 
   @Test
-  public void clickingButton_shouldChangeMessage() throws Exception {
+  public void clickingButton_shouldChangeMessage() {
     MyActivity activity = Robolectric.setupActivity(MyActivity.class);
 
     activity.button.performClick();
@@ -24,12 +24,15 @@ public class MyActivityTest {
   }
 }
 ```
+[» Getting Started...](/getting-started/)
 
 ### Test APIs & Isolation
 
 Unlike traditional emulator-based Android tests, Robolectric tests run inside a sandbox which allows allows the Android environment to be precisely configured to the desired conditions for each test, isolates each test from its neighbors, and extends the Android framework with test APIs which provide minute control over the Android framework's behavior and visibility of state for assertions.
 
 While much of the Android framework will work as expected inside a Robolectric test, some Android components' regular behavior doesn't translate well to unit tests: hardware sensors need to be simulated, system services need to be loaded with test fixture data. In those cases, Robolectric provides a [test double](https://en.wikipedia.org/wiki/Test_double) that's suitable for most unit testing scenarios.
+
+You can find documentation for Robolectric's test APIs by installing the [Robolectric plugin for Chrome](https://chrome.google.com/webstore/detail/pjepcinimnfnaoopahdkpkefnefdkdgh) and visiting the [Android API Reference](https://developer.android.com/reference/packages).
 
 ### Run Tests Outside of the Emulator
 

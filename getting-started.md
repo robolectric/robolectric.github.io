@@ -2,6 +2,7 @@
 title: Getting Started
 group: Setup
 order: 1
+toc: true
 ---
 
 # Getting Started
@@ -10,15 +11,11 @@ Robolectric works best with Gradle or Bazel. If you are starting a new project, 
 
 ## Building with Gradle
 
-### Android Studio 3.0+
+### Android Studio 3.2.1+
 
-Starting with Robolectric 3.3 there is now tighter integration with the tool chain, where the build system processes and merges your resources. You'll need Android Studio 3.0.
-
-Add the following to your build.gradle:
+Add the following to your `build.gradle`:
 
 ```groovy
-testImplementation "org.robolectric:robolectric:{{ site.robolectric.version.current | escape }}"
-
 android {
   testOptions {
     unitTests {
@@ -26,6 +23,16 @@ android {
     }
   }
 }
+
+dependencies {
+  testImplementation 'org.robolectric:robolectric:{{ site.robolectric.version.current | escape }}'
+}
+```
+
+Add this line to your `gradle.properties` (no longer necessary with Android Studio 3.3+):
+
+```properties
+android.enableUnitTestBinaryResources=true
 ```
 
 Annotate your test with the Robolectric test runner:
@@ -37,7 +44,7 @@ public class SandwichTest {
 ```
 
 ## Building with Bazel
-Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel integrates with Robolectric through the android_local_test rule. The Robolectric Java test code is the same for a Bazel project as a new Gradle project.
+Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel integrates with Robolectric through the `android_local_test` rule. The Robolectric Java test code is the same for a Bazel project as a new Gradle project.
 
 Robolectric needs to be added as a dependency to your Bazel project. Add the following to your WORKSPACE file:
 ```python
@@ -52,8 +59,6 @@ http_archive(
 load("@robolectric//bazel:setup_robolectric.bzl", "robolectric_repositories")
 robolectric_repositories()
 ```
-
-Robolectric version 3.8 is also supported.
 
 Add an android_local_test rule to your BUILD file:
 ```python
@@ -74,6 +79,12 @@ android_library(
     manifest = "AndroidManifest.xml",
 )
 ```
+
+## Other Environments
+
+* [Buck](https://buckbuild.com/rule/robolectric_test.html)
+* [Older Android Studio/Gradle Versions](http://127.0.0.1:4000/other-environments/#android-studio--gradle-agp--30)
+* [Maven & Eclipse](http://127.0.0.1:4000/other-environments/#maven--eclipse)
 
 ## Sample Projects
 
