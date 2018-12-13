@@ -220,6 +220,5 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowSettings.ShadowGlobal",
-  "documentation": "Shadow for {@link Settings.Global}\n"
+  "name": "org.robolectric.shadows.ShadowSettings.ShadowGlobal"
 }

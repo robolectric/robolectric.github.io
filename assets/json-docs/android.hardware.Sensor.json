@@ -24,6 +24,5 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowSensor",
-  "documentation": "Shadow for {@link Sensor}.\n"
+  "name": "org.robolectric.shadows.ShadowSensor"
 }

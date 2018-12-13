@@ -22,6 +22,21 @@
       "name": "clearStartedServices()",
       "documentation": "Clears all {@code Intent} started by\n{@link android.content.Context#startService(android.content.Intent)}.\n"
     },
+    "denyPermissions(int,int,java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pid",
+        "uid",
+        "permissions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "denyPermissions(int,int,java.lang.String...)",
+      "documentation": "Revoke the given permissions for the given process and user. "
+    },
     "denyPermissions(java.lang.String...)": {
       "isImplementation": false,
       "modifiers": [
@@ -32,7 +47,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "denyPermissions(java.lang.String...)"
+      "name": "denyPermissions(java.lang.String...)",
+      "documentation": "Revoke the given permissions for the current process and user.\n\nHas no effect if permissions were not previously granted.\n"
     },
     "getBroadcastIntents()": {
       "isImplementation": false,
@@ -85,6 +101,21 @@
       "exceptions": [],
       "name": "getShadowInstrumentation()"
     },
+    "grantPermissions(int,int,java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pid",
+        "uid",
+        "permissions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "grantPermissions(int,int,java.lang.String...)",
+      "documentation": "Grant the given permissions for the given process and user. "
+    },
     "grantPermissions(java.lang.String...)": {
       "isImplementation": false,
       "modifiers": [
@@ -95,7 +126,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "grantPermissions(java.lang.String...)"
+      "name": "grantPermissions(java.lang.String...)",
+      "documentation": "Grant the given permissions for the current process and user. "
     },
     "peekNextStartedActivity()": {
       "isImplementation": false,

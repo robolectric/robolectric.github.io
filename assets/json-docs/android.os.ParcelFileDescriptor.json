@@ -45,8 +45,7 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getFd()",
-      "documentation": "Overrides framework to avoid call to {@link FileDescriptor#getInt() which does not exist on JVM.\n\n@return a fixed int (`0`)\n"
+      "name": "getFd()"
     },
     "getFileDescriptor()": {
       "isImplementation": true,
@@ -113,7 +112,8 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowParcelFileDescriptor"
 }

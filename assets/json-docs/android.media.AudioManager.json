@@ -374,10 +374,11 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.O",
+    "android.annotation.TargetApi",
     "android.media.AudioAttributes",
-    "android.media.AudioFocusRequest",
     "android.media.AudioManager",
     "android.media.AudioPlaybackConfiguration",
+    "android.os.Build.VERSION_CODES",
     "android.os.Parcel",
     "java.util.ArrayList",
     "java.util.Collections",

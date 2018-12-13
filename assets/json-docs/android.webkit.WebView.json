@@ -144,7 +144,7 @@
       "exceptions": [],
       "name": "getClassNamed(java.lang.String)"
     },
-    "getCurrentWebviewPackage()": {
+    "getCurrentWebViewPackage()": {
       "isImplementation": true,
       "modifiers": [
         "protected",
@@ -154,9 +154,8 @@
       "returnType": "android.content.pm.PackageInfo",
       "exceptions": [],
       "minSdk": 26,
-      "maxSdk": 25,
-      "name": "getCurrentWebviewPackage()",
-      "documentation": "Overrides the system implementation for getting the webview package. Always returns null. "
+      "name": "getCurrentWebViewPackage()",
+      "documentation": "Overrides the system implementation for getting the WebView package.\n\n\u003cp\u003eReturns null by default, but this can be changed with {@code #setCurrentWebviewPackage()}.\n"
     },
     "getGoBackInvocations()": {
       "isImplementation": false,
@@ -381,6 +380,17 @@
       "exceptions": [],
       "name": "onResume()"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "restoreState(android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
@@ -417,6 +427,20 @@
       "exceptions": [],
       "name": "setCanGoBack(boolean)",
       "documentation": "Sets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}\n@deprecated Do not depend on this method as it will be removed in a future update. The\n    preferered method is to populate a fake web history to use for going back.\n"
+    },
+    "setCurrentWebViewPackage(android.content.pm.PackageInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "webViewPackageInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCurrentWebViewPackage(android.content.pm.PackageInfo)",
+      "documentation": "Sets the value to return from {@code #getCurrentWebviewPackage()}. "
     },
     "setLayoutParams(android.view.ViewGroup.LayoutParams)": {
       "isImplementation": true,
@@ -539,7 +563,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.N_MR1",
     "android.content.pm.PackageInfo",
     "android.graphics.Bitmap",
     "android.os.Build",
@@ -564,6 +587,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.fakes.RoboWebSettings",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowWebView.LoadDataWithBaseURL",

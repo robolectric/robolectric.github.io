@@ -21,6 +21,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowStrictModeVmPolicy",
-  "documentation": "Shadow for StrictMode.VmPolicy "
+  "name": "org.robolectric.shadows.ShadowStrictModeVmPolicy"
 }

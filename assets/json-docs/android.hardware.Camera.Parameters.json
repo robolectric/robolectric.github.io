@@ -62,6 +62,16 @@
       "exceptions": [],
       "name": "getExposureCompensationStep()"
     },
+    "getFlashMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getFlashMode()"
+    },
     "getFocusMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -184,6 +194,16 @@
       "exceptions": [],
       "name": "getPreviewWidth()"
     },
+    "getSupportedFlashModes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getSupportedFlashModes()"
+    },
     "getSupportedFocusModes()": {
       "isImplementation": true,
       "modifiers": [
@@ -276,6 +296,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setExposureCompensation(int)"
+    },
+    "setFlashMode(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "flashMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFlashMode(java.lang.String)"
     },
     "setFocusMode(java.lang.String)": {
       "isImplementation": true,
@@ -375,6 +407,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setRotation(int)"
+    },
+    "setSupportedFlashModes(java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flashModes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupportedFlashModes(java.lang.String...)"
     },
     "setSupportedFocusModes(java.lang.String...)": {
       "isImplementation": false,

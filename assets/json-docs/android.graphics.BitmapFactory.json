@@ -114,20 +114,6 @@
       "exceptions": [],
       "name": "decodeFileDescriptor(java.io.FileDescriptor,android.graphics.Rect,android.graphics.BitmapFactory.Options)"
     },
-    "decodeResource(android.content.res.Resources,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "res",
-        "id"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "decodeResource(android.content.res.Resources,int)"
-    },
     "decodeResource(android.content.res.Resources,int,android.graphics.BitmapFactory.Options)": {
       "isImplementation": true,
       "modifiers": [
@@ -290,6 +276,7 @@
   "imports": [
     "java.nio.charset.StandardCharsets.UTF_8",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadows.ImageUtil.getImageSizeFromStream",
     "android.content.res.AssetManager.AssetInputStream",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
@@ -298,16 +285,14 @@
     "android.graphics.Rect",
     "android.net.Uri",
     "android.util.TypedValue",
+    "java.io.ByteArrayInputStream",
     "java.io.FileDescriptor",
     "java.io.IOException",
     "java.io.InputStream",
-    "java.nio.charset.Charset",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
-    "java.util.zip.CRC32",
-    "java.util.zip.Checksum",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

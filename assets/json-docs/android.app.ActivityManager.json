@@ -298,25 +298,42 @@
       "exceptions": [],
       "name": "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)",
       "documentation": "@param tasks List of running tasks.\n"
+    },
+    "switchUser(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userid"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "switchUser(int)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.app.ActivityManager",
     "android.app.IActivityManager",
+    "android.content.Context",
     "android.content.pm.ConfigurationInfo",
     "android.os.Build.VERSION_CODES",
     "android.os.Process",
     "java.util.List",
     "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowActivityManager"

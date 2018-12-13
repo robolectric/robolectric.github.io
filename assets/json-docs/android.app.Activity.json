@@ -12,6 +12,21 @@
       "exceptions": [],
       "name": "callAttach(android.content.Intent)"
     },
+    "callOnActivityResult(int,int,android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "requestCode",
+        "resultCode",
+        "resultData"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callOnActivityResult(int,int,android.content.Intent)",
+      "documentation": "For internal use only. Not for public use. "
+    },
     "clickMenuItem(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -155,6 +170,17 @@
       "returnType": "java.lang.Object",
       "exceptions": [],
       "name": "getLastNonConfigurationInstance()"
+    },
+    "getLastRequestedPermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowActivity.PermissionsRequest",
+      "exceptions": [],
+      "name": "getLastRequestedPermission()",
+      "documentation": "Gets the last permission request submitted to this activity.\n\n@return The permission request details.\n"
     },
     "getLastShownDialogId()": {
       "isImplementation": false,
@@ -761,7 +787,8 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
-    "org.robolectric.shadows.ShadowActivity.ActivityInvoker"
+    "org.robolectric.shadows.ShadowActivity.ActivityInvoker",
+    "org.robolectric.shadows.ShadowActivity.PermissionsRequest"
   ],
   "name": "org.robolectric.shadows.ShadowActivity"
 }

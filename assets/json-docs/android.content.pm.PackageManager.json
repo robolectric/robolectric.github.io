@@ -78,7 +78,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPackage(android.content.pm.PackageInfo)",
-      "documentation": "Registers (\"installs\") a package with the PackageManager.\n\n\u003cp\u003eIn order to create PackageInfo objects in a valid state please use {@link\nandroidx.test.core.content.pm.PackageInfoBuilder}.\n"
+      "documentation": "This method is getting renamed to {link {@link #installPackage}. "
     },
     "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)": {
       "isImplementation": false,
@@ -91,7 +91,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)"
+      "name": "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)",
+      "documentation": "Installs a package with its stats with the {@link PackageManager}.\n\n\u003cp\u003eThis method doesn\u0027t add any defaults to the {@code packageInfo} parameters. You should make\nsure it is valid (see {@link #installPackage(PackageInfo)}).\n"
     },
     "addPackage(java.lang.String)": {
       "isImplementation": false,
@@ -104,7 +105,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPackage(java.lang.String)",
-      "documentation": "@deprecated Use {@link #addPackage(PackageInfo)} instead. "
+      "documentation": "@deprecated Use {@link #installPackage(PackageInfo)} instead. "
     },
     "addPackageInternal(android.content.pm.PackageParser.Package)": {
       "isImplementation": false,
@@ -118,6 +119,19 @@
       "exceptions": [],
       "name": "addPackageInternal(android.content.pm.PackageParser.Package)",
       "documentation": "Internal use only.\n\n@param appPackage\n"
+    },
+    "addPackageNoDefaults(android.content.pm.PackageInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPackageNoDefaults(android.content.pm.PackageInfo)",
+      "documentation": "Adds a package to the {@link PackageManager}, but doesn\u0027t set any default values on it.\n\n\u003cp\u003eRight now it will not set {@link ApplicationInfo#FLAG_INSTALLED} flag on its application, so\nif not set explicitly, it will be treated as not installed.\n"
     },
     "addPermissionGroupInfo(android.content.pm.PermissionGroupInfo)": {
       "isImplementation": false,
@@ -155,7 +169,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addResolveInfoForIntent(android.content.Intent,android.content.pm.ResolveInfo)"
+      "name": "addResolveInfoForIntent(android.content.Intent,android.content.pm.ResolveInfo)",
+      "documentation": "Adds extra resolve info for an intent.\n\n\u003cp\u003eNote that this resolve info will have {@link ResolveInfo#isDefault} field set to {@code\ntrue} to allow its resolution for implicit intents. If this is not what you want, then please\nuse {@link #addResolveInfoForIntentNoDefaults} instead.\n"
     },
     "addResolveInfoForIntent(android.content.Intent,java.util.List\u003candroid.content.pm.ResolveInfo\u003e)": {
       "isImplementation": false,
@@ -170,6 +185,20 @@
       "exceptions": [],
       "name": "addResolveInfoForIntent(android.content.Intent,java.util.List\u003candroid.content.pm.ResolveInfo\u003e)",
       "documentation": "@deprecated please use {@link #setResolveInfosForIntent} or {@link\n    #addResolveInfoForIntent(Intent, ResolveInfo)} instead.\n"
+    },
+    "addResolveInfoForIntentNoDefaults(android.content.Intent,android.content.pm.ResolveInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addResolveInfoForIntentNoDefaults(android.content.Intent,android.content.pm.ResolveInfo)",
+      "documentation": "Adds the {@code info} as {@link ResolveInfo} for the intent but without applying any default\nvalues.\n\n\u003cp\u003eIn particular it will not make the {@link ResolveInfo#isDefault} field {@code true}, that\nmeans that this resolve info will not resolve for {@link Intent#resolveActivity} and {@link\nContext#startActivity}.\n"
     },
     "addSystemAvailableFeature(android.content.pm.FeatureInfo)": {
       "isImplementation": false,
@@ -230,19 +259,6 @@
       "exceptions": [],
       "name": "compareSignature(android.content.pm.Signature[],android.content.pm.Signature[])"
     },
-    "convertIntentFilters(java.util.List\u003c? extends android.content.pm.PackageParser.IntentInfo\u003e)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "intentInfos"
-      ],
-      "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
-      "exceptions": [],
-      "name": "convertIntentFilters(java.util.List\u003c? extends android.content.pm.PackageParser.IntentInfo\u003e)"
-    },
     "doPendingUninstallCallbacks()": {
       "isImplementation": false,
       "modifiers": [
@@ -283,7 +299,8 @@
     "getAppPackage(android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "private",
+        "static"
       ],
       "params": [
         "componentName"
@@ -379,6 +396,19 @@
       "name": "getIntentFiltersForService(android.content.ComponentName)",
       "documentation": "Get list of intent filters defined for given service.\n\n@param componentName Name of the service whose intent filters are to be retrieved\n@return the service\u0027s intent filters\n"
     },
+    "getInternalMutablePackageInfo(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "android.content.pm.PackageInfo",
+      "exceptions": [],
+      "name": "getInternalMutablePackageInfo(java.lang.String)",
+      "documentation": "Testing API allowing to retrieve internal package representation.\n\n\u003cp\u003eThis will allow to modify the package in a way visible to Robolectric, as this is\nRobolectric\u0027s internal full package representation.\n\n\u003cp\u003eNote that maybe a better way is to just modify the test manifest to make those modifications\nin a standard way.\n\n\u003cp\u003eRetrieving package info using {@link PackageManager#getPackageInfo} / {@link\nPackageManager#getApplicationInfo} will return defensive copies that will be stripped out of\ninformation according to provided flags. Don\u0027t use it to modify Robolectric state.\n"
+    },
     "getPackageArchiveInfo(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -391,6 +421,19 @@
       "returnType": "android.content.pm.PackageInfo",
       "exceptions": [],
       "name": "getPackageArchiveInfo(java.lang.String,int)"
+    },
+    "getPackageInfoForTesting(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "android.content.pm.PackageInfo",
+      "exceptions": [],
+      "name": "getPackageInfoForTesting(java.lang.String)",
+      "documentation": "@deprecated Use {@link #getInternalMutablePackageInfo} instead. It has better name. "
     },
     "getPackageName(android.content.pm.ResolveInfo)": {
       "isImplementation": false,
@@ -418,6 +461,18 @@
       "name": "getPackageSetting(java.lang.String)",
       "documentation": "Returns the current {@link PackageSetting} of {@code packageName}.\n\n\u003cp\u003eIf {@code packageName} is not present in this {@link ShadowPackageManager}, this method will\nreturn null.\n"
     },
+    "getPackagesForUid(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uid"
+      ],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "name": "getPackagesForUid(int)"
+    },
     "getVerificationExtendedTimeout(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -441,6 +496,19 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getVerificationResult(int)"
+    },
+    "installPackage(android.content.pm.PackageInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "installPackage(android.content.pm.PackageInfo)",
+      "documentation": "Installs a package with the {@link PackageManager}.\n\n\u003cp\u003eIn order to create PackageInfo objects in a valid state please use {@link\nandroidx.test.core.content.pm.PackageInfoBuilder}.\n\n\u003cp\u003eThis method automatically simulates instalation of a package in the system, so it adds a\nflag {@link ApplicationInfo#FLAG_INSTALLED} to the application info and makes sure it exits. It\nwill update applicationInfo in package components as well.\n\n\u003cp\u003eIf you don\u0027t want the package to be installed, use {@link #addPackageNoDefaults} instead.\n"
     },
     "queryBroadcastReceivers(android.content.Intent,int,int)": {
       "isImplementation": true,
@@ -623,7 +691,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setResolveInfosForIntent(android.content.Intent,java.util.List\u003candroid.content.pm.ResolveInfo\u003e)",
-      "documentation": "Sets extra resolve infos for an intent.\n\n\u003cp\u003eThose entries are added to whatever might be in the manifest already.\n"
+      "documentation": "Sets extra resolve infos for an intent.\n\n\u003cp\u003eThose entries are added to whatever might be in the manifest already.\n\n\u003cp\u003eNote that all resolve infos will have {@link ResolveInfo#isDefault} field set to {@code\ntrue} to allow their resolution for implicit intents. If this is not what you want, then you\nstill have the reference to those ResolveInfos, and you can set the field back to {@code\nfalse}.\n"
     },
     "setShouldShowRequestPermissionRationale(java.lang.String,boolean)": {
       "isImplementation": false,
@@ -711,13 +779,16 @@
     "android.os.Build.VERSION_CODES.N",
     "java.util.Arrays.asList",
     "android.Manifest",
+    "android.annotation.Nullable",
     "android.annotation.UserIdInt",
     "android.content.ComponentName",
+    "android.content.Context",
     "android.content.Intent",
     "android.content.IntentFilter",
     "android.content.IntentFilter.AuthorityEntry",
     "android.content.IntentSender",
     "android.content.pm.ApplicationInfo",
+    "android.content.pm.ComponentInfo",
     "android.content.pm.FeatureInfo",
     "android.content.pm.IPackageDataObserver",
     "android.content.pm.IPackageDeleteObserver",
@@ -726,7 +797,6 @@
     "android.content.pm.PackageManager.NameNotFoundException",
     "android.content.pm.PackageParser",
     "android.content.pm.PackageParser.Component",
-    "android.content.pm.PackageParser.IntentInfo",
     "android.content.pm.PackageParser.Package",
     "android.content.pm.PackageStats",
     "android.content.pm.PackageUserState",
@@ -738,6 +808,7 @@
     "android.graphics.drawable.Drawable",
     "android.net.Uri",
     "android.os.Binder",
+    "android.os.Build",
     "android.os.Build.VERSION",
     "android.os.PatternMatcher",
     "android.os.PersistableBundle",

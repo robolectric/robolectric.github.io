@@ -18,6 +18,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowDiscoverySession",
-  "documentation": "Shadow for {@link DiscoverySession}. "
+  "name": "org.robolectric.shadows.ShadowDiscoverySession"
 }

@@ -30,6 +30,28 @@
       "exceptions": [],
       "name": "getNotificationShouldRemoved()"
     },
+    "getStopSelfId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStopSelfId()",
+      "documentation": "Returns id passed to {@link #stopSelf(int)} method. Make sure to check result of {@link\n#isStoppedBySelf()} first.\n"
+    },
+    "getStopSelfResultId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStopSelfResultId()",
+      "documentation": "Returns id passed to {@link #stopSelfResult(int)} method. Make sure to check result of {@link\n#isStoppedBySelf()} first.\n"
+    },
     "isForegroundStopped()": {
       "isImplementation": false,
       "modifiers": [

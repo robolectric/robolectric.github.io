@@ -64,6 +64,18 @@
       "minSdk": 19,
       "name": "connect(int,android.net.wifi.WifiManager.ActionListener)"
     },
+    "createMulticastLock(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "android.net.wifi.WifiManager.MulticastLock",
+      "exceptions": [],
+      "name": "createMulticastLock(java.lang.String)"
+    },
     "createWifiLock(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -101,6 +113,17 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "enableNetwork(int,boolean)"
+    },
+    "getActiveLockCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getActiveLockCount()",
+      "documentation": "Returns the number of WifiLocks and MulticastLocks that are currently acquired. "
     },
     "getConfiguredNetworks()": {
       "isImplementation": true,
@@ -397,6 +420,45 @@
       "exceptions": [],
       "name": "setWifiEnabled(boolean)"
     },
+    "shadowOf(android.net.wifi.WifiManager)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowWifiManager",
+      "exceptions": [],
+      "name": "shadowOf(android.net.wifi.WifiManager)"
+    },
+    "shadowOf(android.net.wifi.WifiManager.MulticastLock)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowWifiManager.ShadowMulticastLock",
+      "exceptions": [],
+      "name": "shadowOf(android.net.wifi.WifiManager.MulticastLock)"
+    },
+    "shadowOf(android.net.wifi.WifiManager.WifiLock)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock",
+      "exceptions": [],
+      "name": "shadowOf(android.net.wifi.WifiManager.WifiLock)"
+    },
     "startScan()": {
       "isImplementation": true,
       "modifiers": [
@@ -462,10 +524,12 @@
     "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.concurrent.atomic.AtomicInteger",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock",

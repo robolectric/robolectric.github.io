@@ -211,11 +211,21 @@
         "protected"
       ],
       "params": [
-        "c"
+        "color"
       ],
       "returnType": "void",
       "exceptions": [],
       "name": "eraseColor(int)"
+    },
+    "extractAlpha()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "extractAlpha()"
     },
     "getAllocationByteCount()": {
       "isImplementation": true,
@@ -807,15 +817,14 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.M",
-    "java.nio.charset.StandardCharsets.UTF_8",
     "android.graphics.Bitmap",
+    "android.graphics.Color",
     "android.graphics.Matrix",
     "android.graphics.RectF",
     "android.os.Build",
     "android.os.Parcel",
     "android.util.DisplayMetrics",
     "java.io.FileDescriptor",
-    "java.io.IOException",
     "java.io.InputStream",
     "java.io.OutputStream",
     "java.nio.Buffer",

@@ -180,6 +180,17 @@
       "name": "removeOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)",
       "documentation": "Removes a listener from a local list of listeners. Will be triggered by {@link\n#setActiveSubscriptionInfoList} when the local list of {@link SubscriptionInfo} is updated.\n"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "setActiveSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -239,7 +250,7 @@
         "static"
       ],
       "params": [
-        "defaultDataSubscriptionId"
+        "defaultSubscriptionId"
       ],
       "returnType": "void",
       "exceptions": [],
@@ -282,15 +293,16 @@
     "android.telephony.SubscriptionManager.OnSubscriptionsChangedListener",
     "java.util.ArrayList",
     "java.util.Arrays",
+    "java.util.Collections",
     "java.util.HashSet",
     "java.util.List",
     "java.util.Set",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowSubscriptionManager.SubscriptionInfoBuilder"
   ],
-  "name": "org.robolectric.shadows.ShadowSubscriptionManager",
-  "documentation": "Shadow for {@link SubscriptionManager}. "
+  "name": "org.robolectric.shadows.ShadowSubscriptionManager"
 }

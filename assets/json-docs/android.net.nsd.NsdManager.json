@@ -16,6 +16,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowNsdManager",
-  "documentation": "Shadow for {@link android.net.nsd.NsdManager} "
+  "name": "org.robolectric.shadows.ShadowNsdManager"
 }

@@ -145,7 +145,8 @@
       ],
       "returnType": "java.lang.Object",
       "exceptions": [],
-      "name": "getSystemService(java.lang.String)"
+      "name": "getSystemService(java.lang.String)",
+      "documentation": "Returns the handle to a system-level service by name. If the service is not available in\nRoboletric, or it is set to unavailable in {@link ShadowServiceManager#setServiceAvailability},\n{@code null} will be returned.\n"
     },
     "getUserId()": {
       "isImplementation": true,

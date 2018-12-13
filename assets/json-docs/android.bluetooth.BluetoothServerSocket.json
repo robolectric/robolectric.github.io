@@ -40,6 +40,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowBluetoothServerSocket",
-  "documentation": "Shadow for {@link BluetoothServerSocket}. "
+  "name": "org.robolectric.shadows.ShadowBluetoothServerSocket"
 }

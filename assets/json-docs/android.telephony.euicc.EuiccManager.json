@@ -31,6 +31,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowEuiccManager",
-  "documentation": "Shadow for {@link EuiccManager}. "
+  "name": "org.robolectric.shadows.ShadowEuiccManager"
 }

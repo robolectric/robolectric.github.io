@@ -376,6 +376,20 @@
       "name": "getProfileOwner()",
       "documentation": "@see #setProfileOwner(ComponentName) "
     },
+    "getProfileOwnerNameAsUser(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userId"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getProfileOwnerNameAsUser(int)",
+      "documentation": "Returns the human-readable name of the profile owner for a user if set using\n{@link #setProfileOwnerName}, otherwise `null`.\n"
+    },
     "getShadowUserManager()": {
       "isImplementation": false,
       "modifiers": [
@@ -456,6 +470,18 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "isApplicationHidden(android.content.ComponentName,java.lang.String)"
+    },
+    "isDeviceManaged()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isDeviceManaged()",
+      "documentation": "@see #setDeviceOwner(ComponentName) "
     },
     "isDeviceOwnerApp(java.lang.String)": {
       "isImplementation": true,
@@ -922,6 +948,19 @@
       "name": "setProfileOwner(android.content.ComponentName)",
       "documentation": "Sets the admin as active admin and profile owner.\n\n@see DevicePolicyManager#getProfileOwner()\n"
     },
+    "setProfileOwnerName(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userId",
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProfileOwnerName(int,java.lang.String)"
+    },
     "setResetPasswordToken(android.content.ComponentName,byte[])": {
       "isImplementation": true,
       "modifiers": [
@@ -1061,6 +1100,5 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowDevicePolicyManager.PackageAndPermission"
   ],
-  "name": "org.robolectric.shadows.ShadowDevicePolicyManager",
-  "documentation": "Shadow for {@link DevicePolicyManager} "
+  "name": "org.robolectric.shadows.ShadowDevicePolicyManager"
 }

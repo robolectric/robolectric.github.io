@@ -36,6 +36,5 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowCarrierConfigManager",
-  "documentation": "Shadow for {@link CarrierConfigManager}. "
+  "name": "org.robolectric.shadows.ShadowCarrierConfigManager"
 }

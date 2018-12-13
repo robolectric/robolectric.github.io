@@ -203,16 +203,6 @@
       "exceptions": [],
       "name": "getAttachInfo()"
     },
-    "getDrawingCache()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "getDrawingCache()"
-    },
     "getGlobalVisibleRect(android.graphics.Rect,android.graphics.Point)": {
       "isImplementation": true,
       "modifiers": [
@@ -739,7 +729,6 @@
     "org.robolectric.util.ReflectionHelpers.setField",
     "android.annotation.SuppressLint",
     "android.content.Context",
-    "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.Paint",
     "android.graphics.Point",

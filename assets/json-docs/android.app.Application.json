@@ -38,21 +38,6 @@
       "exceptions": [],
       "name": "assertNoBroadcastListenersOfActionRegistered(android.content.ContextWrapper,java.lang.String)"
     },
-    "bindService(android.content.Intent,android.content.ServiceConnection,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "serviceConnection",
-        "i"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "bindService(android.content.Intent,android.content.ServiceConnection,int)",
-      "documentation": "@deprecated Use {@link Context#bindService(Intent, ServiceConnection, int)} instead. "
-    },
     "callAttach(android.content.Context)": {
       "isImplementation": false,
       "modifiers": [
@@ -110,7 +95,7 @@
       "returnType": "android.appwidget.AppWidgetManager",
       "exceptions": [],
       "name": "getAppWidgetManager()",
-      "documentation": "@return the app widget manager used by this {@code Application}\n"
+      "documentation": "@deprecated Please use {@link Context#getSystemService(Context.APPWIDGET_SERVICE)} intstead.\n"
     },
     "getBackgroundThreadScheduler()": {
       "isImplementation": false,
@@ -229,17 +214,6 @@
       "exceptions": [],
       "name": "getLatestWakeLock()"
     },
-    "getLayoutInflater()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "android.view.LayoutInflater",
-      "exceptions": [],
-      "name": "getLayoutInflater()",
-      "documentation": "@return the layout inflater used by this {@code Application}\n"
-    },
     "getReceiversForIntent(android.content.Intent)": {
       "isImplementation": false,
       "modifiers": [
@@ -297,36 +271,6 @@
       "name": "hasReceiverForIntent(android.content.Intent)",
       "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead "
     },
-    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "receiver",
-        "filter"
-      ],
-      "returnType": "android.content.Intent",
-      "exceptions": [],
-      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)",
-      "documentation": "@deprecated Use {@link Context#registerReceiver(BroadcastReceiver, IntentFilter)} instead. "
-    },
-    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "receiver",
-        "filter",
-        "broadcastPermission",
-        "scheduler"
-      ],
-      "returnType": "android.content.Intent",
-      "exceptions": [],
-      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)",
-      "documentation": "@deprecated Use {@link Context#registerReceiver(BroadcastReceiver, IntentFilter, String,\n    Handler)} instead.\n"
-    },
     "runBackgroundTasks()": {
       "isImplementation": false,
       "modifiers": [
@@ -338,79 +282,6 @@
       "exceptions": [],
       "name": "runBackgroundTasks()",
       "documentation": "Runs any background tasks previously queued by {@link android.os.AsyncTask#execute(Object[])}.\n\nNote: calling this method does not pause or un-pause the scheduler.\n"
-    },
-    "sendBroadcast(android.content.Intent)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "sendBroadcast(android.content.Intent)",
-      "documentation": "@deprecated Use {@link Context#sendBroadcast(Intent)} instead. "
-    },
-    "sendBroadcast(android.content.Intent,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "receiverPermission"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "sendBroadcast(android.content.Intent,java.lang.String)",
-      "documentation": "@deprecated Use {@link Context#sendBroadcast(Intent, String)} instead. "
-    },
-    "sendOrderedBroadcast(android.content.Intent,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "receiverPermission"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "sendOrderedBroadcast(android.content.Intent,java.lang.String)",
-      "documentation": "@deprecated Use {@link Context#sendOrderedBroadcast(Intent, String)} instead. "
-    },
-    "sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent",
-        "receiverPermission",
-        "resultReceiver",
-        "scheduler",
-        "initialCode",
-        "initialData",
-        "initialExtras"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)",
-      "documentation": "@deprecated Use {@link Context#sendOrderedBroadcast} instead. "
-    },
-    "sendStickyBroadcast(android.content.Intent)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "sendStickyBroadcast(android.content.Intent)",
-      "documentation": "@deprecated Use {@link Context#sendStickyBroadcast(Intent)} instead. "
     },
     "setComponentNameAndServiceForBindService(android.content.ComponentName,android.os.IBinder)": {
       "isImplementation": false,
@@ -524,45 +395,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setUnbindServiceShouldThrowIllegalArgument(boolean)"
-    },
-    "startService(android.content.Intent)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent"
-      ],
-      "returnType": "android.content.ComponentName",
-      "exceptions": [],
-      "name": "startService(android.content.Intent)",
-      "documentation": "@deprecated Use {@link Context#startService(Intent)} instead. "
-    },
-    "stopService(android.content.Intent)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intent"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "stopService(android.content.Intent)",
-      "documentation": "@deprecated Use {@link Context#stopService(Intent)} instead. "
-    },
-    "unbindService(android.content.ServiceConnection)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "serviceConnection"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "unbindService(android.content.ServiceConnection)",
-      "documentation": "@deprecated Use {@link Context#unbindService(ServiceConnection)} instead. "
     }
   },
   "imports": [
@@ -577,11 +409,9 @@
     "android.content.Intent",
     "android.content.IntentFilter",
     "android.content.ServiceConnection",
-    "android.os.Bundle",
     "android.os.Handler",
     "android.os.IBinder",
     "android.os.PowerManager",
-    "android.view.LayoutInflater",
     "android.widget.ListPopupWindow",
     "android.widget.PopupWindow",
     "android.widget.Toast",

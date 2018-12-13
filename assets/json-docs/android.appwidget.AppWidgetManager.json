@@ -1,5 +1,32 @@
 {
   "methods": {
+    "__constructor__(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 19,
+      "name": "__constructor__(android.content.Context)"
+    },
+    "__constructor__(android.content.Context,com.android.internal.appwidget.IAppWidgetService)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "__constructor__(android.content.Context,com.android.internal.appwidget.IAppWidgetService)"
+    },
     "addBoundWidget(int,android.appwidget.AppWidgetProviderInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -24,20 +51,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addInstalledProvider(android.appwidget.AppWidgetProviderInfo)"
-    },
-    "bind(android.appwidget.AppWidgetManager,android.content.Context)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "appWidgetManager",
-        "context"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "bind(android.appwidget.AppWidgetManager,android.content.Context)"
     },
     "bindAppWidgetId(int,android.content.ComponentName)": {
       "isImplementation": true,
@@ -78,19 +91,6 @@
       "exceptions": [],
       "name": "createWidget(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int)",
       "documentation": "Creates a widget by inflating its layout.\n\n@param appWidgetProviderClass the app widget provider class\n@param widgetLayoutId         id of the layout to inflate\n@return the ID of the new widget\n"
-    },
-    "createWidgetProvider(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int...)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "appWidgetProviderClass",
-        "newWidgetIds"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "createWidgetProvider(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int...)"
     },
     "createWidgetView(int)": {
       "isImplementation": false,
@@ -176,20 +176,6 @@
       "returnType": "java.util.List\u003candroid.appwidget.AppWidgetProviderInfo\u003e",
       "exceptions": [],
       "name": "getInstalledProviders()"
-    },
-    "getInstance(android.content.Context)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "context"
-      ],
-      "returnType": "android.appwidget.AppWidgetManager",
-      "exceptions": [],
-      "name": "getInstance(android.content.Context)",
-      "documentation": "Finds or creates an {@code AppWidgetManager} for the given {@code context}\n\n@param context the {@code context} for which to produce an assoicated {@code AppWidgetManager}\n@return the {@code AppWidgetManager} associated with the given {@code context}\n"
     },
     "getViewFor(int)": {
       "isImplementation": false,
@@ -296,7 +282,8 @@
     }
   },
   "imports": [
-    "android.app.Application",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.appwidget.AppWidgetManager",
     "android.appwidget.AppWidgetProvider",
     "android.appwidget.AppWidgetProviderInfo",
@@ -305,6 +292,7 @@
     "android.view.LayoutInflater",
     "android.view.View",
     "android.widget.RemoteViews",
+    "com.android.internal.appwidget.IAppWidgetService",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
@@ -314,8 +302,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.shadows.util.AppSingletonizer",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowAppWidgetManager.WidgetInfo"
   ],

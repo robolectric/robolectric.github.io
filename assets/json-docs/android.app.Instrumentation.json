@@ -75,6 +75,18 @@
       "exceptions": [],
       "name": "declareActionUnbindable(java.lang.String)"
     },
+    "denyPermissions(int,int,java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "pid",
+        "uid",
+        "permissions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "denyPermissions(int,int,java.lang.String...)"
+    },
     "denyPermissions(java.lang.String...)": {
       "isImplementation": false,
       "modifiers": [],
@@ -355,6 +367,18 @@
       "exceptions": [],
       "name": "getUnboundServiceConnections()"
     },
+    "grantPermissions(int,int,java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "pid",
+        "uid",
+        "permissions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "grantPermissions(int,int,java.lang.String...)"
+    },
     "grantPermissions(java.lang.String...)": {
       "isImplementation": false,
       "modifiers": [],
@@ -399,7 +423,7 @@
         "requestCode",
         "options"
       ],
-      "returnType": "android.app.Instrumentation.ActivityResult",
+      "returnType": "void",
       "exceptions": [],
       "name": "logStartedActivity(android.content.Intent,int,android.os.Bundle)"
     },
@@ -735,6 +759,7 @@
     "android.os.Build.VERSION_CODES.P",
     "com.google.common.util.concurrent.Futures.immediateFuture",
     "com.google.common.util.concurrent.MoreExecutors.directExecutor",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.app.Activity",
     "android.app.ActivityThread",
     "android.app.Fragment",
@@ -753,7 +778,9 @@
     "android.os.Handler",
     "android.os.IBinder",
     "android.os.Looper",
+    "android.os.Process",
     "android.os.UserHandle",
+    "android.util.Pair",
     "com.google.common.util.concurrent.AsyncFunction",
     "com.google.common.util.concurrent.Futures",
     "com.google.common.util.concurrent.ListenableFuture",
@@ -772,6 +799,7 @@
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowApplication.Wrapper",

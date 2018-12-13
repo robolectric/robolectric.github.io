@@ -121,6 +121,34 @@
       "exceptions": [],
       "name": "load(java.lang.String,int)"
     },
+    "notifyPathLoaded(java.lang.String,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "path",
+        "success"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyPathLoaded(java.lang.String,boolean)",
+      "documentation": "Notify the {@link OnLoadCompleteListener}, if present, that the given path was loaded. "
+    },
+    "notifyResourceLoaded(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "resId",
+        "success"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyResourceLoaded(int,boolean)",
+      "documentation": "Notify the {@link OnLoadCompleteListener}, if present, that the given resource was loaded. "
+    },
     "play(int,float,float,int,int,float)": {
       "isImplementation": true,
       "modifiers": [
@@ -138,6 +166,18 @@
       "exceptions": [],
       "maxSdk": 22,
       "name": "play(int,float,float,int,int,float)"
+    },
+    "setOnLoadCompleteListener(android.media.SoundPool.OnLoadCompleteListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnLoadCompleteListener(android.media.SoundPool.OnLoadCompleteListener)"
     },
     "wasPathPlayed(java.lang.String)": {
       "isImplementation": false,
@@ -174,6 +214,7 @@
     "android.content.Context",
     "android.media.IAudioService",
     "android.media.SoundPool",
+    "android.media.SoundPool.OnLoadCompleteListener",
     "android.util.SparseArray",
     "android.util.SparseIntArray",
     "com.google.common.collect.ImmutableList",

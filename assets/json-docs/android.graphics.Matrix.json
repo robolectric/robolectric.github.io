@@ -195,6 +195,18 @@
       "exceptions": [],
       "name": "mapPoints(float[],int,float[],int,int)"
     },
+    "mapRadius(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "radius"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "mapRadius(float)"
+    },
     "mapRect(android.graphics.RectF,android.graphics.RectF)": {
       "isImplementation": true,
       "modifiers": [
@@ -507,6 +519,20 @@
       "exceptions": [],
       "name": "setConcat(android.graphics.Matrix,android.graphics.Matrix)"
     },
+    "setRectToRect(android.graphics.RectF,android.graphics.RectF,android.graphics.Matrix.ScaleToFit)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "src",
+        "dst",
+        "stf"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setRectToRect(android.graphics.RectF,android.graphics.RectF,android.graphics.Matrix.ScaleToFit)"
+    },
     "setRotate(float)": {
       "isImplementation": true,
       "modifiers": [
@@ -647,6 +673,7 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.graphics.Matrix",
+    "android.graphics.Matrix.ScaleToFit",
     "android.graphics.PointF",
     "android.graphics.RectF",
     "java.awt.geom.AffineTransform",

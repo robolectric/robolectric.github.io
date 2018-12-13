@@ -31,7 +31,7 @@
         "protected"
       ],
       "params": [
-        "charArray"
+        "chars"
       ],
       "returnType": "android.view.KeyEvent[]",
       "exceptions": [],
@@ -46,6 +46,18 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getKeyboardType()"
+    },
+    "getMetaState(char)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "a"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMetaState(char)"
     },
     "getUpEvent(char)": {
       "isImplementation": false,
@@ -71,6 +83,18 @@
       "returnType": "android.view.KeyCharacterMap",
       "exceptions": [],
       "name": "load(int)"
+    },
+    "toCharKeyCode(char)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "a"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "toCharKeyCode(char)"
     }
   },
   "imports": [

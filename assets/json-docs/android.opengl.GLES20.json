@@ -24,6 +24,21 @@
       "exceptions": [],
       "name": "glCreateShader(int)"
     },
+    "glGenFramebuffers(int,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "n",
+        "framebuffers",
+        "offset"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "glGenFramebuffers(int,int[],int)"
+    },
     "glGenTextures(int,int[],int)": {
       "isImplementation": true,
       "modifiers": [
@@ -38,6 +53,38 @@
       "returnType": "void",
       "exceptions": [],
       "name": "glGenTextures(int,int[],int)"
+    },
+    "glGetProgramiv(int,int,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "program",
+        "pname",
+        "params",
+        "offset"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "glGetProgramiv(int,int,int[],int)"
+    },
+    "glGetShaderiv(int,int,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "shader",
+        "pname",
+        "params",
+        "offset"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "glGetShaderiv(int,int,int[],int)"
     }
   },
   "imports": [

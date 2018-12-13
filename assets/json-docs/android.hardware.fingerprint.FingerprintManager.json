@@ -166,5 +166,5 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowFingerprintManager",
-  "documentation": "Provides testing APIs for {@link FingerprintManager}\n"
+  "documentation": "Provides testing APIs for {@link FingerprintManager} "
 }

@@ -306,6 +306,23 @@
       "exceptions": [],
       "name": "setThreadStatsTag(int)"
     },
+    "tagDatagramSocket(java.net.DatagramSocket)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "socket"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.net.SocketException"
+      ],
+      "minSdk": 24,
+      "name": "tagDatagramSocket(java.net.DatagramSocket)",
+      "documentation": "No-op in tests. "
+    },
     "tagSocket(java.net.Socket)": {
       "isImplementation": true,
       "modifiers": [
@@ -339,6 +356,7 @@
   },
   "imports": [
     "android.net.TrafficStats",
+    "android.os.Build",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

@@ -62,6 +62,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowPathMeasure",
-  "documentation": "Shadow for {@link PathMeasure} "
+  "name": "org.robolectric.shadows.ShadowPathMeasure"
 }

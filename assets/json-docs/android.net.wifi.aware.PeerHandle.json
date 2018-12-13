@@ -18,6 +18,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowPeerHandle",
-  "documentation": "Shadow for {@link PeerHandle}. "
+  "name": "org.robolectric.shadows.ShadowPeerHandle"
 }

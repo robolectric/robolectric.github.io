@@ -159,6 +159,20 @@
       "minSdk": 19,
       "name": "noteOp(int,int,java.lang.String)"
     },
+    "noteProxyOpNoThrow(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "proxiedPackageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "noteProxyOpNoThrow(int,java.lang.String)"
+    },
     "setMode(int,int,java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -255,6 +269,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.P",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "android.annotation.Nullable",
@@ -267,6 +282,7 @@
     "android.content.Context",
     "android.content.pm.PackageManager.NameNotFoundException",
     "android.media.AudioAttributes.AttributeUsage",
+    "android.os.Binder",
     "android.os.Build",
     "com.android.internal.app.IAppOpsService",
     "com.google.common.collect.BiMap",
@@ -293,6 +309,5 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowAppOpsManager.ModeAndException"
   ],
-  "name": "org.robolectric.shadows.ShadowAppOpsManager",
-  "documentation": "Shadow for the {@link AppOpsManager}. "
+  "name": "org.robolectric.shadows.ShadowAppOpsManager"
 }

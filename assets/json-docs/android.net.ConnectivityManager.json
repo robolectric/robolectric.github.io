@@ -128,6 +128,20 @@
       "name": "getCaptivePortalServerUrl()",
       "documentation": "Returns the captive portal URL previously set with {@link #setCaptivePortalServerUrl}.\n"
     },
+    "getLinkProperties(android.net.Network)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "network"
+      ],
+      "returnType": "android.net.LinkProperties",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getLinkProperties(android.net.Network)",
+      "documentation": "@see #setLinkProperties(Network, LinkProperties) "
+    },
     "getNetworkCallbacks()": {
       "isImplementation": false,
       "modifiers": [
@@ -316,6 +330,20 @@
       "exceptions": [],
       "name": "setActiveNetworkInfo(android.net.NetworkInfo)"
     },
+    "setAirplaneMode(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "enable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "setAirplaneMode(boolean)",
+      "documentation": "Sets the value for enabling/disabling airplane mode\n\n@param enable new status for airplane mode\n"
+    },
     "setBackgroundDataSetting(boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -354,6 +382,20 @@
       "name": "setDefaultNetworkActive(boolean)",
       "documentation": "Sets the active state of the default network.\n\nBy default this is true and affects the result of {@link\nConnectivityManager#isActiveNetworkMetered()}, {@link\nConnectivityManager#isDefaultNetworkActive()}, {@link ConnectivityManager#getActiveNetwork()}\nand {@link ConnectivityManager#getAllNetworkInfo()}.\n\nCalling this method with {@code true} after any listeners have been registered with {@link\nConnectivityManager#addDefaultNetworkActiveListener(OnNetworkActiveListener)} will result in\nthose listeners being fired.\n\n@param isActive The active state of the default network.\n"
     },
+    "setLinkProperties(android.net.Network,android.net.LinkProperties)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "network",
+        "linkProperties"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLinkProperties(android.net.Network,android.net.LinkProperties)",
+      "documentation": "Sets the LinkProperties for the given Network.\n\n\u003cp\u003eA LinkProperties can be constructed by\n`org.robolectric.util.ReflectionHelpers.callConstructor` in tests.\n"
+    },
     "setNetworkCapabilities(android.net.Network,android.net.NetworkCapabilities)": {
       "isImplementation": false,
       "modifiers": [
@@ -366,7 +408,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNetworkCapabilities(android.net.Network,android.net.NetworkCapabilities)",
-      "documentation": "Set network capability and affects the result of {@link\nConnectivityManager#getNetworkCapabilities(Network)}\n\n@param network The {@link Network} object identifying the network in question.\n@param networkCapabilities The {@link android.net.NetworkCapabilities} for the network.\n"
+      "documentation": "Sets network capability and affects the result of {@link\nConnectivityManager#getNetworkCapabilities(Network)}\n\n@param network The {@link Network} object identifying the network in question.\n@param networkCapabilities The {@link android.net.NetworkCapabilities} for the network.\n"
     },
     "setNetworkInfo(int,android.net.NetworkInfo)": {
       "isImplementation": false,
@@ -408,6 +450,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
@@ -415,6 +458,7 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.net.ConnectivityManager",
     "android.net.ConnectivityManager.OnNetworkActiveListener",
+    "android.net.LinkProperties",
     "android.net.Network",
     "android.net.NetworkCapabilities",
     "android.net.NetworkInfo",

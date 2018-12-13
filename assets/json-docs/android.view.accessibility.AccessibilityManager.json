@@ -107,6 +107,17 @@
       "exceptions": [],
       "name": "isTouchExplorationEnabled()"
     },
+    "performAccessibilityShortcut()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "performAccessibilityShortcut()"
+    },
     "removeAccessibilityStateChangeListener(android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener)": {
       "isImplementation": true,
       "modifiers": [
@@ -207,6 +218,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.accessibilityservice.AccessibilityServiceInfo",

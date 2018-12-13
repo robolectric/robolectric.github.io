@@ -51,6 +51,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowCameraCharacteristics",
-  "documentation": "Shadow for {@link CameraCharacteristics}. "
+  "name": "org.robolectric.shadows.ShadowCameraCharacteristics"
 }

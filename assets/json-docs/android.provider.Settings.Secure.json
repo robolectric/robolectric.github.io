@@ -285,6 +285,5 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowSettings.ShadowSecure",
-  "documentation": "Shadow for {@link Settings.Secure}\n"
+  "name": "org.robolectric.shadows.ShadowSettings.ShadowSecure"
 }

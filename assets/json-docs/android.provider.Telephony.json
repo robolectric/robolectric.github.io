@@ -11,6 +11,5 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadows.ShadowTelephony.ShadowSms"
   ],
-  "name": "org.robolectric.shadows.ShadowTelephony",
-  "documentation": "Shadow for {@link Telephony}. "
+  "name": "org.robolectric.shadows.ShadowTelephony"
 }

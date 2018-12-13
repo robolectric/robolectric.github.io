@@ -1,5 +1,18 @@
 {
   "methods": {
+    "addCaptioningChangeListener(android.view.accessibility.CaptioningManager.CaptioningChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "addCaptioningChangeListener(android.view.accessibility.CaptioningManager.CaptioningChangeListener)"
+    },
     "getFontScale()": {
       "isImplementation": true,
       "modifiers": [
@@ -23,6 +36,19 @@
       "minSdk": 19,
       "name": "isEnabled()",
       "documentation": "Returns false or the most recent value passed to {@link #setEnabled(boolean)} "
+    },
+    "removeCaptioningChangeListener(android.view.accessibility.CaptioningManager.CaptioningChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "removeCaptioningChangeListener(android.view.accessibility.CaptioningManager.CaptioningChangeListener)"
     },
     "setEnabled(boolean)": {
       "isImplementation": false,
@@ -52,7 +78,10 @@
     }
   },
   "imports": [
+    "android.annotation.NonNull",
+    "android.util.ArraySet",
     "android.view.accessibility.CaptioningManager",
+    "android.view.accessibility.CaptioningManager.CaptioningChangeListener",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

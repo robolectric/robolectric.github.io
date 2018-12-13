@@ -28,6 +28,5 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowBluetoothGatt",
-  "documentation": "Shadow for {@link BluetoothGatt}. "
+  "name": "org.robolectric.shadows.ShadowBluetoothGatt"
 }
