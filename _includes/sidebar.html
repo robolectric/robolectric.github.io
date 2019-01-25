@@ -40,7 +40,17 @@
                         {% endfor %}
 
                         {% for menu_item in menu.items %}
-                        <li><a href="{{ menu_item.url }}">{{ menu_item.title | escape }}</a></li>
+                            {% if menu_item.items %}
+                                <li>
+                                    {{ menu_item.title | escape }}:
+                                    {% for sub_menu_item in menu_item.items %}
+                                        {% if forloop.index > 1 %}|{% endif %}
+                                        <a href="{{ sub_menu_item.url }}" class="{{ sub_menu_item.class }}">{{ sub_menu_item.title | escape }}</a>
+                                    {% endfor %}
+                                </li>
+                            {% else %}
+                            <li><a href="{{ menu_item.url }}" class="{{ menu_item.class }}">{{ menu_item.title | escape }}</a></li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </li>

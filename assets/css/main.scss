@@ -66,6 +66,11 @@
 small {
 	font-size: 0.8em;
 }
+
+.italic {
+	font-style: italic;
+}
+
 header {
 	.logo {
 		position: relative;
@@ -136,6 +141,14 @@ header {
 	ul.contact > li {
 		margin-top: -0.25em;
 		border-top: none;
+	}
+}
+
+#menu ul ul li {
+	font-size: 0.8em;
+	a {
+		font-size: 1em;
+		display: inline-block;
 	}
 }
 

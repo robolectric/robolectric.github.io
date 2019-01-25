@@ -46,7 +46,16 @@ menu:
     - title: Migration Guide
       url: /migrating
     - title: Javadoc
-      url: /javadoc/latest/
+      items:
+      - title: "3.8"
+        url: /javadoc/3.8/
+      - title: "4.0"
+        url: /javadoc/4.0/
+      - title: "4.1"
+        url: /javadoc/4.1/
+      - title: "4.2 Alpha 1"
+        url: /javadoc/4.2/
+        class: italic
     - title: Issues
       url: https://github.com/robolectric/robolectric/issues/
 
@@ -79,5 +88,5 @@ defaults:
 robolectric:
   version:
     current: "4.1"
-    preview: "4.1"
+    preview: "4.2-alpha-1"
     snapshot: "4.2-SNAPSHOT"
