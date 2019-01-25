@@ -1,0 +1,430 @@
+{
+  "methods": {
+    "cancelDiscovery()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "cancelDiscovery()"
+    },
+    "checkBluetoothAddress(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "address"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "checkBluetoothAddress(java.lang.String)",
+      "documentation": "Validate a Bluetooth address, such as \"00:43:A8:23:10:F0\" Alphabetic characters must be\nuppercase to be valid.\n\n@param address Bluetooth address as string\n@return true if the address is valid, false otherwise\n"
+    },
+    "closeProfileProxy(int,android.bluetooth.BluetoothProfile)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "profile",
+        "proxy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "closeProfileProxy(int,android.bluetooth.BluetoothProfile)",
+      "documentation": "Overrides behavior of {@link closeProfileProxy} if {@link\nShadowBluetoothAdapter#setProfileProxy} has been previously called.\n\nIf the given non-null BluetoothProfile {@code proxy} was previously set for the given {@code\nprofile} by {@link ShadowBluetoothAdapter#setProfileProxy}, this proxy will be \"deactivated\".\n"
+    },
+    "disable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "disable()"
+    },
+    "enable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "enable()"
+    },
+    "getAddress()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getAddress()"
+    },
+    "getBondedDevices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003candroid.bluetooth.BluetoothDevice\u003e",
+      "exceptions": [],
+      "name": "getBondedDevices()"
+    },
+    "getDefaultAdapter()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothAdapter",
+      "exceptions": [],
+      "name": "getDefaultAdapter()"
+    },
+    "getLeScanCallbacks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003candroid.bluetooth.BluetoothAdapter.LeScanCallback\u003e",
+      "exceptions": [],
+      "name": "getLeScanCallbacks()"
+    },
+    "getName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getName()"
+    },
+    "getProfileConnectionState(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "profile"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getProfileConnectionState(int)",
+      "documentation": "Returns the connection state for the given Bluetooth {@code profile}, defaulting to {@link\nBluetoothProfile.STATE_DISCONNECTED} if the profile\u0027s connection state was never set.\n\n\u003cp\u003eSet a Bluetooth profile\u0027s connection state via {@link #setProfileConnectionState(int, int)}.\n"
+    },
+    "getProfileProxy(android.content.Context,android.bluetooth.BluetoothProfile.ServiceListener,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "listener",
+        "profile"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getProfileProxy(android.content.Context,android.bluetooth.BluetoothProfile.ServiceListener,int)",
+      "documentation": "Overrides behavior of {@link getProfileProxy} if {@link ShadowBluetoothAdapter#setProfileProxy}\nhas been previously called.\n\nIf active (non-null) proxy has been set by {@link setProfileProxy} for the given {@code\nprofile}, {@link getProfileProxy} will immediately call {@code onServiceConnected} of the given\nBluetoothProfile.ServiceListener {@code listener}.\n\n@return \u0027true\u0027 if a proxy object has been set by {@link setProfileProxy} for the given\n    BluetoothProfile {@code profile}\n"
+    },
+    "getScanMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScanMode()"
+    },
+    "getSingleLeScanCallback()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothAdapter.LeScanCallback",
+      "exceptions": [],
+      "name": "getSingleLeScanCallback()"
+    },
+    "getState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getState()"
+    },
+    "hasActiveProfileProxy(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "profile"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasActiveProfileProxy(int)",
+      "documentation": "@return \u0027true\u0027 if active (non-null) proxy has been set by {@link\n    ShadowBluetoothAdapter#setProfileProxy} for the given {@code profile} AND it has not been\n    \"deactivated\" by a call to {@link BluetoothAdapter#closeProfileProxy}. Only meaningful if\n    {@link ShadowBluetoothAdapter#setProfileProxy} has been previously called.\n"
+    },
+    "isDiscovering()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isDiscovering()"
+    },
+    "isEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isEnabled()"
+    },
+    "isMultipleAdvertisementSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isMultipleAdvertisementSupported()"
+    },
+    "listenUsingInsecureRfcommWithServiceRecord(java.lang.String,java.util.UUID)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "serviceName",
+        "uuid"
+      ],
+      "returnType": "android.bluetooth.BluetoothServerSocket",
+      "exceptions": [],
+      "name": "listenUsingInsecureRfcommWithServiceRecord(java.lang.String,java.util.UUID)"
+    },
+    "listenUsingRfcommWithServiceRecord(java.lang.String,java.util.UUID)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "serviceName",
+        "uuid"
+      ],
+      "returnType": "android.bluetooth.BluetoothServerSocket",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "listenUsingRfcommWithServiceRecord(java.lang.String,java.util.UUID)"
+    },
+    "setAddress(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "address"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAddress(java.lang.String)"
+    },
+    "setBondedDevices(java.util.Set\u003candroid.bluetooth.BluetoothDevice\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bluetoothDevices"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBondedDevices(java.util.Set\u003candroid.bluetooth.BluetoothDevice\u003e)"
+    },
+    "setEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEnabled(boolean)"
+    },
+    "setIsMultipleAdvertisementSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsMultipleAdvertisementSupported(boolean)"
+    },
+    "setName(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setName(java.lang.String)"
+    },
+    "setProfileConnectionState(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "profile",
+        "state"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProfileConnectionState(int,int)",
+      "documentation": "Sets the connection state {@code state} for the given BluetoothProfile {@code profile} "
+    },
+    "setProfileProxy(int,android.bluetooth.BluetoothProfile)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "profile",
+        "proxy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProfileProxy(int,android.bluetooth.BluetoothProfile)",
+      "documentation": "Sets the active BluetoothProfile {@code proxy} for the given {@code profile}. Will always\naffect behavior of {@link BluetoothAdapter#getProfileProxy} and {@link\nBluetoothAdapter#closeProfileProxy}. Call to {@link BluetoothAdapter#closeProfileProxy} can\nremove the set active proxy.\n\n@param proxy can be \u0027null\u0027 to simulate the situation where {@link\n    BluetoothAdapter#getProfileProxy} would return \u0027false\u0027. This can happen on older Android\n    versions for Bluetooth profiles introduced in later Android versions.\n"
+    },
+    "setScanMode(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "scanMode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setScanMode(int)"
+    },
+    "setState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "state"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setState(int)"
+    },
+    "startDiscovery()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "startDiscovery()"
+    },
+    "startLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "startLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)"
+    },
+    "startLeScan(java.util.UUID[],android.bluetooth.BluetoothAdapter.LeScanCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "serviceUuids",
+        "callback"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "startLeScan(java.util.UUID[],android.bluetooth.BluetoothAdapter.LeScanCallback)"
+    },
+    "stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.bluetooth.BluetoothAdapter",
+    "android.bluetooth.BluetoothAdapter.LeScanCallback",
+    "android.bluetooth.BluetoothDevice",
+    "android.bluetooth.BluetoothProfile",
+    "android.bluetooth.BluetoothServerSocket",
+    "android.bluetooth.BluetoothSocket",
+    "android.content.Context",
+    "android.os.ParcelUuid",
+    "java.io.IOException",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.HashSet",
+    "java.util.Map",
+    "java.util.Set",
+    "java.util.UUID",
+    "javax.annotation.Nullable",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
+  "name": "org.robolectric.shadows.ShadowBluetoothAdapter"
+}

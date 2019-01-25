@@ -1,0 +1,114 @@
+{
+  "methods": {
+    "cancel(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "jobId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel(int)"
+    },
+    "cancelAll()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancelAll()"
+    },
+    "enqueue(android.app.job.JobInfo,android.app.job.JobWorkItem)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "job",
+        "work"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "enqueue(android.app.job.JobInfo,android.app.job.JobWorkItem)"
+    },
+    "failOnJob(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [
+        "jobId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "failOnJob(int)"
+    },
+    "getAllPendingJobs()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.app.job.JobInfo\u003e",
+      "exceptions": [],
+      "name": "getAllPendingJobs()"
+    },
+    "getPendingJob(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [
+        "jobId"
+      ],
+      "returnType": "android.app.job.JobInfo",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getPendingJob(int)"
+    },
+    "schedule(android.app.job.JobInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "job"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "schedule(android.app.job.JobInfo)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
+    "android.app.JobSchedulerImpl",
+    "android.app.job.JobInfo",
+    "android.app.job.JobScheduler",
+    "android.app.job.JobWorkItem",
+    "java.util.ArrayList",
+    "java.util.HashSet",
+    "java.util.LinkedHashMap",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.Set",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowJobScheduler.ShadowJobSchedulerImpl"
+  ],
+  "name": "org.robolectric.shadows.ShadowJobScheduler"
+}

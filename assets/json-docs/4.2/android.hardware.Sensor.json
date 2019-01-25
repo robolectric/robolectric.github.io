@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "newInstance(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "android.hardware.Sensor",
+      "exceptions": [],
+      "name": "newInstance(int)",
+      "documentation": "Constructs a {@link Sensor} with a given type.\n"
+    }
+  },
+  "imports": [
+    "android.hardware.Sensor",
+    "android.os.Build.VERSION_CODES",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowSensor"
+}

@@ -1,0 +1,309 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 19,
+      "name": "__constructor__(android.content.Context)"
+    },
+    "__constructor__(android.content.Context,com.android.internal.appwidget.IAppWidgetService)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "__constructor__(android.content.Context,com.android.internal.appwidget.IAppWidgetService)"
+    },
+    "addBoundWidget(int,android.appwidget.AppWidgetProviderInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appWidgetId",
+        "providerInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addBoundWidget(int,android.appwidget.AppWidgetProviderInfo)"
+    },
+    "addInstalledProvider(android.appwidget.AppWidgetProviderInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appWidgetProviderInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addInstalledProvider(android.appwidget.AppWidgetProviderInfo)"
+    },
+    "bindAppWidgetId(int,android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appWidgetId",
+        "provider"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "bindAppWidgetId(int,android.content.ComponentName)"
+    },
+    "bindAppWidgetIdIfAllowed(int,android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "appWidgetId",
+        "provider"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "bindAppWidgetIdIfAllowed(int,android.content.ComponentName)"
+    },
+    "createWidget(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appWidgetProviderClass",
+        "widgetLayoutId"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "createWidget(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int)",
+      "documentation": "Creates a widget by inflating its layout.\n\n@param appWidgetProviderClass the app widget provider class\n@param widgetLayoutId         id of the layout to inflate\n@return the ID of the new widget\n"
+    },
+    "createWidgetView(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "widgetLayoutId"
+      ],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "createWidgetView(int)"
+    },
+    "createWidgets(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appWidgetProviderClass",
+        "widgetLayoutId",
+        "howManyToCreate"
+      ],
+      "returnType": "int[]",
+      "exceptions": [],
+      "name": "createWidgets(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int,int)",
+      "documentation": "Creates a bunch of widgets by inflating the same layout multiple times.\n\n@param appWidgetProviderClass the app widget provider class\n@param widgetLayoutId         id of the layout to inflate\n@param howManyToCreate        number of new widgets to create\n@return the IDs of the new widgets\n"
+    },
+    "getAlwaysRecreateViewsDuringUpdate()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getAlwaysRecreateViewsDuringUpdate()",
+      "documentation": "@return the state of the{@code alwaysRecreateViewsDuringUpdate} flag\n"
+    },
+    "getAppWidgetIds(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "provider"
+      ],
+      "returnType": "int[]",
+      "exceptions": [],
+      "name": "getAppWidgetIds(android.content.ComponentName)"
+    },
+    "getAppWidgetInfo(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "appWidgetId"
+      ],
+      "returnType": "android.appwidget.AppWidgetProviderInfo",
+      "exceptions": [],
+      "name": "getAppWidgetInfo(int)"
+    },
+    "getAppWidgetProviderFor(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "widgetId"
+      ],
+      "returnType": "android.appwidget.AppWidgetProvider",
+      "exceptions": [],
+      "name": "getAppWidgetProviderFor(int)",
+      "documentation": "@param widgetId id of the widget whose provider is to be returned\n@return the {@code AppWidgetProvider} associated with {@code widgetId}\n"
+    },
+    "getInstalledProviders()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.appwidget.AppWidgetProviderInfo\u003e",
+      "exceptions": [],
+      "name": "getInstalledProviders()"
+    },
+    "getViewFor(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "widgetId"
+      ],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getViewFor(int)",
+      "documentation": "@param widgetId id of the desired widget\n@return the widget associated with {@code widgetId}\n"
+    },
+    "putWidgetInfo(int,android.appwidget.AppWidgetProviderInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appWidgetId",
+        "expectedWidgetInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "putWidgetInfo(int,android.appwidget.AppWidgetProviderInfo)"
+    },
+    "reconstructWidgetViewAsIfPhoneWasRotated(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appWidgetId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reconstructWidgetViewAsIfPhoneWasRotated(int)",
+      "documentation": "Triggers a reapplication of the most recent set of actions against the widget, which is what happens when the\nphone is rotated. Does not attempt to simulate a change in screen geometry.\n\n@param appWidgetId the ID of the widget to be affected\n"
+    },
+    "setAllowedToBindAppWidgets(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "allowed"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAllowedToBindAppWidgets(boolean)"
+    },
+    "setAlwaysRecreateViewsDuringUpdate(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "alwaysRecreate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAlwaysRecreateViewsDuringUpdate(boolean)",
+      "documentation": "Enables testing of widget behavior when all of the views are recreated on every\nupdate. This is useful for ensuring that your widget will behave correctly even\nif it is restarted by the OS between events.\n\n@param alwaysRecreate whether or not to always recreate the views\n"
+    },
+    "setValidWidgetProviderComponentName(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "validWidgetProviderComponentName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setValidWidgetProviderComponentName(boolean)"
+    },
+    "updateAppWidget(int,android.widget.RemoteViews)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "appWidgetId",
+        "views"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "updateAppWidget(int,android.widget.RemoteViews)",
+      "documentation": "Simulates updating an {@code AppWidget} with a new set of views\n\n@param appWidgetId id of widget\n@param views views to update\n"
+    },
+    "updateAppWidget(int[],android.widget.RemoteViews)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "appWidgetIds",
+        "views"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "updateAppWidget(int[],android.widget.RemoteViews)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.appwidget.AppWidgetManager",
+    "android.appwidget.AppWidgetProvider",
+    "android.appwidget.AppWidgetProviderInfo",
+    "android.content.ComponentName",
+    "android.content.Context",
+    "android.view.LayoutInflater",
+    "android.view.View",
+    "android.widget.RemoteViews",
+    "com.android.internal.appwidget.IAppWidgetService",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowAppWidgetManager.WidgetInfo"
+  ],
+  "name": "org.robolectric.shadows.ShadowAppWidgetManager"
+}

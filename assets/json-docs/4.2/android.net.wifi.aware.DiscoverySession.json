@@ -1,0 +1,22 @@
+{
+  "methods": {
+    "newInstance()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.net.wifi.aware.DiscoverySession",
+      "exceptions": [],
+      "name": "newInstance()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.net.wifi.aware.DiscoverySession",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowDiscoverySession"
+}

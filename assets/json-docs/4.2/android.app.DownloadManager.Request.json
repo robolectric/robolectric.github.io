@@ -1,0 +1,153 @@
+{
+  "methods": {
+    "getAllowedNetworkTypes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAllowedNetworkTypes()"
+    },
+    "getAllowedOverMetered()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getAllowedOverMetered()"
+    },
+    "getAllowedOverRoaming()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getAllowedOverRoaming()"
+    },
+    "getDescription()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getDescription()"
+    },
+    "getDestination()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "getDestination()"
+    },
+    "getMimeType()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getMimeType()"
+    },
+    "getNotificationVisibility()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNotificationVisibility()"
+    },
+    "getRequestHeaders()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.util.Pair\u003cjava.lang.String,java.lang.String\u003e\u003e",
+      "exceptions": [],
+      "name": "getRequestHeaders()"
+    },
+    "getStatus()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getStatus()"
+    },
+    "getTitle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getTitle()"
+    },
+    "getUri()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "getUri()"
+    },
+    "getVisibleInDownloadsUi()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getVisibleInDownloadsUi()"
+    },
+    "setStatus(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "status"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStatus(int)"
+    }
+  },
+  "imports": [
+    "android.app.DownloadManager",
+    "android.database.Cursor",
+    "android.net.Uri",
+    "android.util.Pair",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.TreeMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.fakes.BaseCursor",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowDownloadManager.ShadowRequest"
+}

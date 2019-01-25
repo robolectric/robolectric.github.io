@@ -1,0 +1,22 @@
+{
+  "methods": {
+    "getAdapter()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothAdapter",
+      "exceptions": [],
+      "name": "getAdapter()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.bluetooth.BluetoothAdapter",
+    "android.bluetooth.BluetoothManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowBluetoothManager"
+}

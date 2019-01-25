@@ -1,0 +1,21 @@
+{
+  "methods": {
+    "newInstance()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.webkit.JsPromptResult",
+      "exceptions": [],
+      "name": "newInstance()"
+    }
+  },
+  "imports": [
+    "org.robolectric.shadow.api.Shadow.newInstanceOf",
+    "android.webkit.JsPromptResult",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowJsPromptResult"
+}

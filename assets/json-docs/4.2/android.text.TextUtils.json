@@ -1,0 +1,29 @@
+{
+  "methods": {
+    "ellipsize(java.lang.CharSequence,android.text.TextPaint,float,android.text.TextUtils.TruncateAt)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "text",
+        "p",
+        "avail",
+        "where"
+      ],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "ellipsize(java.lang.CharSequence,android.text.TextPaint,float,android.text.TextUtils.TruncateAt)"
+    }
+  },
+  "imports": [
+    "android.text.TextPaint",
+    "android.text.TextUtils",
+    "android.text.TextUtils.TruncateAt",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowTextUtils",
+  "documentation": "Implement {@lint TextUtils#ellipsize} by truncating the text.\n"
+}

@@ -1,0 +1,47 @@
+{
+  "methods": {
+    "getFakeSurfaceHolder()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowSurfaceView.FakeSurfaceHolder",
+      "exceptions": [],
+      "name": "getFakeSurfaceHolder()"
+    },
+    "getHolder()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.view.SurfaceHolder",
+      "exceptions": [],
+      "name": "getHolder()"
+    },
+    "onAttachedToWindow()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onAttachedToWindow()"
+    }
+  },
+  "imports": [
+    "android.graphics.Canvas",
+    "android.graphics.Rect",
+    "android.view.Surface",
+    "android.view.SurfaceHolder",
+    "android.view.SurfaceView",
+    "java.util.HashSet",
+    "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowSurfaceView.FakeSurfaceHolder"
+  ],
+  "name": "org.robolectric.shadows.ShadowSurfaceView"
+}

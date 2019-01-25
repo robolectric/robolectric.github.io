@@ -1,0 +1,501 @@
+{
+  "methods": {
+    "__constructor__(android.database.Cursor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "c"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.database.Cursor)"
+    },
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "close()"
+    },
+    "copyStringToBuffer(int,android.database.CharArrayBuffer)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i",
+        "charArrayBuffer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "copyStringToBuffer(int,android.database.CharArrayBuffer)"
+    },
+    "deactivate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "deactivate()"
+    },
+    "getBlob(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "name": "getBlob(int)"
+    },
+    "getColumnCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getColumnCount()"
+    },
+    "getColumnIndex(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "s"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getColumnIndex(java.lang.String)"
+    },
+    "getColumnIndexOrThrow(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "s"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "java.lang.IllegalArgumentException"
+      ],
+      "name": "getColumnIndexOrThrow(java.lang.String)"
+    },
+    "getColumnName(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getColumnName(int)"
+    },
+    "getColumnNames()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "name": "getColumnNames()"
+    },
+    "getCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCount()"
+    },
+    "getDouble(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "double",
+      "exceptions": [],
+      "name": "getDouble(int)"
+    },
+    "getExtras()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getExtras()"
+    },
+    "getFloat(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getFloat(int)"
+    },
+    "getInt(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getInt(int)"
+    },
+    "getLong(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getLong(int)"
+    },
+    "getNotificationUri()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getNotificationUri()"
+    },
+    "getPosition()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPosition()"
+    },
+    "getShort(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "short",
+      "exceptions": [],
+      "name": "getShort(int)"
+    },
+    "getString(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getString(int)"
+    },
+    "getType(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "columnIndex"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getType(int)"
+    },
+    "getWantsAllOnMoveCalls()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getWantsAllOnMoveCalls()"
+    },
+    "getWrappedCursor()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "name": "getWrappedCursor()"
+    },
+    "isAfterLast()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAfterLast()"
+    },
+    "isBeforeFirst()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isBeforeFirst()"
+    },
+    "isClosed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isClosed()"
+    },
+    "isFirst()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isFirst()"
+    },
+    "isLast()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLast()"
+    },
+    "isNull(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isNull(int)"
+    },
+    "move(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "move(int)"
+    },
+    "moveToFirst()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "moveToFirst()"
+    },
+    "moveToLast()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "moveToLast()"
+    },
+    "moveToNext()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "moveToNext()"
+    },
+    "moveToPosition(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "moveToPosition(int)"
+    },
+    "moveToPrevious()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "moveToPrevious()"
+    },
+    "registerContentObserver(android.database.ContentObserver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "contentObserver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerContentObserver(android.database.ContentObserver)"
+    },
+    "registerDataSetObserver(android.database.DataSetObserver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dataSetObserver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerDataSetObserver(android.database.DataSetObserver)"
+    },
+    "requery()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "requery()"
+    },
+    "respond(android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bundle"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "respond(android.os.Bundle)"
+    },
+    "setExtras(android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setExtras(android.os.Bundle)"
+    },
+    "setNotificationUri(android.content.ContentResolver,android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "contentResolver",
+        "uri"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNotificationUri(android.content.ContentResolver,android.net.Uri)"
+    },
+    "unregisterContentObserver(android.database.ContentObserver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "contentObserver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterContentObserver(android.database.ContentObserver)"
+    },
+    "unregisterDataSetObserver(android.database.DataSetObserver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dataSetObserver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterDataSetObserver(android.database.DataSetObserver)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.M",
+    "android.content.ContentResolver",
+    "android.database.CharArrayBuffer",
+    "android.database.ContentObserver",
+    "android.database.Cursor",
+    "android.database.CursorWrapper",
+    "android.database.DataSetObserver",
+    "android.net.Uri",
+    "android.os.Bundle",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowCursorWrapper"
+}

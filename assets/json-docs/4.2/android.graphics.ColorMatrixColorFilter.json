@@ -1,0 +1,43 @@
+{
+  "methods": {
+    "__constructor__(android.graphics.ColorMatrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "matrix"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.graphics.ColorMatrix)"
+    },
+    "__constructor__(float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "array"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(float[])"
+    },
+    "getMatrix()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "android.graphics.ColorMatrix",
+      "exceptions": [],
+      "name": "getMatrix()"
+    }
+  },
+  "imports": [
+    "android.graphics.ColorMatrix",
+    "android.graphics.ColorMatrixColorFilter",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowColorMatrixColorFilter"
+}

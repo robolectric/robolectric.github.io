@@ -1,0 +1,168 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener)"
+    },
+    "clearLastSpokenText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLastSpokenText()"
+    },
+    "getContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getContext()"
+    },
+    "getLastSpokenText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLastSpokenText()"
+    },
+    "getOnInitListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.speech.tts.TextToSpeech.OnInitListener",
+      "exceptions": [],
+      "name": "getOnInitListener()"
+    },
+    "getQueueMode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getQueueMode()"
+    },
+    "getUtteranceProgressListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.speech.tts.UtteranceProgressListener",
+      "exceptions": [],
+      "name": "getUtteranceProgressListener()"
+    },
+    "isShutdown()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isShutdown()"
+    },
+    "isStopped()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isStopped()",
+      "documentation": "@return {@code true} if the TTS is stopped. "
+    },
+    "shutdown()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "shutdown()"
+    },
+    "speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "queueMode",
+        "params",
+        "utteranceId"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)"
+    },
+    "speak(java.lang.String,int,java.util.HashMap\u003cjava.lang.String,java.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "queueMode",
+        "params"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "speak(java.lang.String,int,java.util.HashMap\u003cjava.lang.String,java.lang.String\u003e)",
+      "documentation": "Speaks the string using the specified queuing strategy and speech parameters.\n\n@param params The real implementation converts the hashmap into a bundle, but the bundle\n    argument is not used in the shadow implementation.\n"
+    },
+    "stop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "stop()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.content.Context",
+    "android.os.Bundle",
+    "android.os.Handler",
+    "android.os.Looper",
+    "android.speech.tts.TextToSpeech",
+    "android.speech.tts.TextToSpeech.Engine",
+    "android.speech.tts.UtteranceProgressListener",
+    "java.util.HashMap",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowTextToSpeech"
+}

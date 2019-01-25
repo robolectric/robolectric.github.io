@@ -1,0 +1,8 @@
+{
+  "methods": {},
+  "imports": [
+    "android.os.Handler",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowHandler"
+}

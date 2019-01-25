@@ -1,0 +1,39 @@
+{
+  "methods": {
+    "setBackgroundDrawable(android.graphics.drawable.Drawable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "drawable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 22,
+      "name": "setBackgroundDrawable(android.graphics.drawable.Drawable)"
+    },
+    "setTitle(java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "title"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 22,
+      "name": "setTitle(java.lang.CharSequence)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.graphics.drawable.Drawable",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowPhoneWindowFor22"
+}

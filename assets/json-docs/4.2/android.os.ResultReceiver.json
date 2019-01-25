@@ -1,0 +1,27 @@
+{
+  "methods": {
+    "send(int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "resultCode",
+        "resultData"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "send(int,android.os.Bundle)"
+    }
+  },
+  "imports": [
+    "android.os.Bundle",
+    "android.os.ResultReceiver",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowResultReceiver"
+}

@@ -1,0 +1,24 @@
+{
+  "methods": {
+    "performAccessibilityButtonClick()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "performAccessibilityButtonClick()",
+      "documentation": "Performs click action for accessibility button. "
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.P",
+    "android.accessibilityservice.AccessibilityButtonController",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowAccessibilityButtonController",
+  "documentation": "Shadow for {@link AccessibilityButtonController}. "
+}

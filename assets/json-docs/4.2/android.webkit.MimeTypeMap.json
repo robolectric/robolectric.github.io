@@ -1,0 +1,107 @@
+{
+  "methods": {
+    "addExtensionMimeTypMapping(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "extension",
+        "mimeType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addExtensionMimeTypMapping(java.lang.String,java.lang.String)"
+    },
+    "clearMappings()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearMappings()"
+    },
+    "getExtensionFromMimeType(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "mimeType"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getExtensionFromMimeType(java.lang.String)"
+    },
+    "getMimeTypeFromExtension(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "extension"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getMimeTypeFromExtension(java.lang.String)"
+    },
+    "getSingleton()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.webkit.MimeTypeMap",
+      "exceptions": [],
+      "name": "getSingleton()"
+    },
+    "hasExtension(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "extension"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasExtension(java.lang.String)"
+    },
+    "hasMimeType(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "mimeType"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasMimeType(java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    }
+  },
+  "imports": [
+    "android.webkit.MimeTypeMap",
+    "java.util.HashMap",
+    "java.util.Map",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowMimeTypeMap"
+}

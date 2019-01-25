@@ -1,0 +1,94 @@
+{
+  "methods": {
+    "getInstance(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.support.v4.content.LocalBroadcastManager",
+      "exceptions": [],
+      "name": "getInstance(android.content.Context)"
+    },
+    "getRegisteredBroadcastReceivers()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.support.v4.ShadowLocalBroadcastManager.Wrapper\u003e",
+      "exceptions": [],
+      "name": "getRegisteredBroadcastReceivers()"
+    },
+    "getSentBroadcastIntents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.Intent\u003e",
+      "exceptions": [],
+      "name": "getSentBroadcastIntents()"
+    },
+    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "receiver",
+        "filter"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)"
+    },
+    "sendBroadcast(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "sendBroadcast(android.content.Intent)"
+    },
+    "unregisterReceiver(android.content.BroadcastReceiver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "receiver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterReceiver(android.content.BroadcastReceiver)"
+    }
+  },
+  "imports": [
+    "android.content.BroadcastReceiver",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.content.IntentFilter",
+    "android.support.v4.content.LocalBroadcastManager",
+    "java.util.ArrayList",
+    "java.util.Iterator",
+    "java.util.List",
+    "org.robolectric.Robolectric",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.Provider",
+    "org.robolectric.shadows.ShadowApplication",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager.Wrapper"
+  ],
+  "name": "org.robolectric.shadows.support.v4.ShadowLocalBroadcastManager"
+}

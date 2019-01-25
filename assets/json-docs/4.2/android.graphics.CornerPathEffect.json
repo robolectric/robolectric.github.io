@@ -1,0 +1,32 @@
+{
+  "methods": {
+    "__constructor__(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "radius"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(float)"
+    },
+    "getRadius()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getRadius()"
+    }
+  },
+  "imports": [
+    "android.graphics.CornerPathEffect",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowCornerPathEffect"
+}

@@ -1,0 +1,8 @@
+{
+  "methods": {},
+  "imports": [
+    "android.widget.RelativeLayout",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowRelativeLayout"
+}

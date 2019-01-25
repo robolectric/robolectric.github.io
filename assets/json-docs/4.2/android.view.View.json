@@ -1,0 +1,757 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,android.util.AttributeSet,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "attributeSet",
+        "defStyle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.util.AttributeSet,int)"
+    },
+    "callOnAttachedToWindow()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callOnAttachedToWindow()"
+    },
+    "callOnDetachedFromWindow()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callOnDetachedFromWindow()"
+    },
+    "checkedPerformClick()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "checkedPerformClick()",
+      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.\n"
+    },
+    "clearWasInvalidated()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearWasInvalidated()",
+      "documentation": "Clears the wasInvalidated flag\n"
+    },
+    "clickOn(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "clickOn(android.view.View)",
+      "documentation": "Calls {@code performClick()} on a {@code View} after ensuring that it and its ancestors are visible and that it\nis enabled.\n\n@param view the view to click on\n@return true if {@code View.OnClickListener}s were found and fired, false otherwise.\n@throws RuntimeException if the preconditions are not met.\n"
+    },
+    "didRequestLayout()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "didRequestLayout()"
+    },
+    "directly()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "directly()"
+    },
+    "draw(android.graphics.Canvas)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "canvas"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "draw(android.graphics.Canvas)"
+    },
+    "dump()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dump()",
+      "documentation": "Dumps the status of this {@code View} to {@code System.out}\n"
+    },
+    "dump(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dump(android.view.View)",
+      "documentation": "Emits an xml-like representation of the view to System.out.\n\n@param view the view to dump\n"
+    },
+    "dump(java.io.PrintStream,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "out",
+        "indent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dump(java.io.PrintStream,int)",
+      "documentation": "Dumps the status of this {@code View} to {@code System.out} at the given indentation level\n@param out Output stream.\n@param indent Indentation level.\n"
+    },
+    "dumpAttribute(java.io.PrintStream,java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out",
+        "name",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dumpAttribute(java.io.PrintStream,java.lang.String,java.lang.String)"
+    },
+    "dumpAttributes(java.io.PrintStream)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dumpAttributes(java.io.PrintStream)"
+    },
+    "dumpFirstPart(java.io.PrintStream,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out",
+        "indent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dumpFirstPart(java.io.PrintStream,int)"
+    },
+    "dumpIndent(java.io.PrintStream,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out",
+        "indent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dumpIndent(java.io.PrintStream,int)"
+    },
+    "getAttachInfo()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getAttachInfo()"
+    },
+    "getGlobalVisibleRect(android.graphics.Rect,android.graphics.Point)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rect",
+        "globalOffset"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getGlobalVisibleRect(android.graphics.Rect,android.graphics.Point)"
+    },
+    "getLastTouchEvent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.MotionEvent",
+      "exceptions": [],
+      "name": "getLastTouchEvent()"
+    },
+    "getLayerType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLayerType()"
+    },
+    "getOnClickListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View.OnClickListener",
+      "exceptions": [],
+      "name": "getOnClickListener()",
+      "documentation": "@return Returns click listener, if set.\n"
+    },
+    "getOnCreateContextMenuListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View.OnCreateContextMenuListener",
+      "exceptions": [],
+      "name": "getOnCreateContextMenuListener()",
+      "documentation": "@return Returns create ContextMenu listener, if set.\n"
+    },
+    "getOnLongClickListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View.OnLongClickListener",
+      "exceptions": [],
+      "name": "getOnLongClickListener()",
+      "documentation": "@return Returns long click listener, if set.\n"
+    },
+    "getOnSystemUiVisibilityChangeListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View.OnSystemUiVisibilityChangeListener",
+      "exceptions": [],
+      "name": "getOnSystemUiVisibilityChangeListener()",
+      "documentation": "@return Returns system ui visibility change listener.\n"
+    },
+    "getOnTouchListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.View.OnTouchListener",
+      "exceptions": [],
+      "name": "getOnTouchListener()",
+      "documentation": "@return Touch listener, if set.\n"
+    },
+    "getScrollX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScrollX()"
+    },
+    "getScrollY()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getScrollY()"
+    },
+    "getWindowId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.view.WindowId",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getWindowId()"
+    },
+    "innerText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "innerText()",
+      "documentation": "Returns a string representation of this {@code View}. Unless overridden, it will be an empty string.\n\nRobolectric extension.\n@return String representation of this view.\n"
+    },
+    "innerText(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "innerText(android.view.View)",
+      "documentation": "Returns the text contained within this view.\n\n@param view the view to scan for text\n@return Text contained within this view.\n"
+    },
+    "invalidate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "invalidate()"
+    },
+    "isAttachedToWindow()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "isAttachedToWindow()"
+    },
+    "lastHapticFeedbackPerformed()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "lastHapticFeedbackPerformed()"
+    },
+    "onLayout(boolean,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "changed",
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onLayout(boolean,int,int,int,int)"
+    },
+    "onLayoutWasCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "onLayoutWasCalled()"
+    },
+    "onTouchEvent(android.view.MotionEvent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "event"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "onTouchEvent(android.view.MotionEvent)"
+    },
+    "performHapticFeedback(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "hapticFeedbackType"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "performHapticFeedback(int)"
+    },
+    "post(java.lang.Runnable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "post(java.lang.Runnable)"
+    },
+    "postDelayed(java.lang.Runnable,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "action",
+        "delayMills"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "postDelayed(java.lang.Runnable,long)"
+    },
+    "postInvalidateDelayed(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "delayMilliseconds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postInvalidateDelayed(long)"
+    },
+    "removeCallbacks(java.lang.Runnable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "removeCallbacks(java.lang.Runnable)"
+    },
+    "requestLayout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "requestLayout()"
+    },
+    "scrollBy(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "scrollBy(int,int)"
+    },
+    "scrollTo(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "scrollTo(int,int)"
+    },
+    "setAnimation(android.view.animation.Animation)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "animation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAnimation(android.view.animation.Animation)"
+    },
+    "setDidRequestLayout(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "didRequestLayout"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDidRequestLayout(boolean)"
+    },
+    "setGlobalVisibleRect(android.graphics.Rect)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "rect"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGlobalVisibleRect(android.graphics.Rect)"
+    },
+    "setLayerType(int,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "layerType",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLayerType(int,android.graphics.Paint)"
+    },
+    "setMyParent(android.view.ViewParent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "viewParent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMyParent(android.view.ViewParent)"
+    },
+    "setOnClickListener(android.view.View.OnClickListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "onClickListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnClickListener(android.view.View.OnClickListener)"
+    },
+    "setOnCreateContextMenuListener(android.view.View.OnCreateContextMenuListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "onCreateContextMenuListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnCreateContextMenuListener(android.view.View.OnCreateContextMenuListener)"
+    },
+    "setOnFocusChangeListener(android.view.View.OnFocusChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "l"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnFocusChangeListener(android.view.View.OnFocusChangeListener)"
+    },
+    "setOnLongClickListener(android.view.View.OnLongClickListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "onLongClickListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnLongClickListener(android.view.View.OnLongClickListener)"
+    },
+    "setOnSystemUiVisibilityChangeListener(android.view.View.OnSystemUiVisibilityChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "onSystemUiVisibilityChangeListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnSystemUiVisibilityChangeListener(android.view.View.OnSystemUiVisibilityChangeListener)"
+    },
+    "setOnTouchListener(android.view.View.OnTouchListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "onTouchListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnTouchListener(android.view.View.OnTouchListener)"
+    },
+    "setScrollX(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "scrollX"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScrollX(int)"
+    },
+    "setScrollY(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "scrollY"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScrollY(int)"
+    },
+    "setViewFocus(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "hasFocus"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setViewFocus(boolean)"
+    },
+    "visualize(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "visualize(android.view.View)",
+      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param view the view to visualize\n@return Textual representation of the appearance of the object.\n"
+    },
+    "wasInvalidated()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasInvalidated()",
+      "documentation": "@return whether or not {@link #invalidate()} has been called\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.ReflectionHelpers.getField",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.SuppressLint",
+    "android.content.Context",
+    "android.graphics.Canvas",
+    "android.graphics.Paint",
+    "android.graphics.Point",
+    "android.graphics.Rect",
+    "android.graphics.drawable.Drawable",
+    "android.os.Looper",
+    "android.os.RemoteException",
+    "android.os.SystemClock",
+    "android.text.TextUtils",
+    "android.util.AttributeSet",
+    "android.view.Choreographer",
+    "android.view.IWindowFocusObserver",
+    "android.view.IWindowId",
+    "android.view.MotionEvent",
+    "android.view.View",
+    "android.view.ViewParent",
+    "android.view.WindowId",
+    "android.view.animation.Animation",
+    "android.view.animation.Transformation",
+    "java.io.PrintStream",
+    "java.lang.reflect.Method",
+    "org.robolectric.android.AccessibilityUtil",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.TimeUtils",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowView.AnimationRunner",
+    "org.robolectric.shadows.ShadowView._View_",
+    "org.robolectric.shadows.ShadowView.WindowIdHelper",
+    "org.robolectric.shadows.ShadowView._AttachInfo_"
+  ],
+  "name": "org.robolectric.shadows.ShadowView"
+}

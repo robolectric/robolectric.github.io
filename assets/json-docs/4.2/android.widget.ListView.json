@@ -1,0 +1,34 @@
+{
+  "methods": {
+    "getFooterViews()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.view.View\u003e",
+      "exceptions": [],
+      "name": "getFooterViews()"
+    },
+    "getHeaderViews()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.view.View\u003e",
+      "exceptions": [],
+      "name": "getHeaderViews()"
+    }
+  },
+  "imports": [
+    "android.view.View",
+    "android.widget.HeaderViewListAdapter",
+    "android.widget.ListView",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
+  "name": "org.robolectric.shadows.ShadowListView"
+}

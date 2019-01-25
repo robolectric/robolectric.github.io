@@ -1,0 +1,180 @@
+{
+  "methods": {
+    "clearNextStartedActivities()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearNextStartedActivities()",
+      "documentation": "Clears all {@code Intent}s started by {@link\nContextWrapper#startActivity(android.content.Intent)}.\n"
+    },
+    "clearStartedServices()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearStartedServices()",
+      "documentation": "Clears all {@code Intent} started by\n{@link android.content.Context#startService(android.content.Intent)}.\n"
+    },
+    "denyPermissions(int,int,java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pid",
+        "uid",
+        "permissions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "denyPermissions(int,int,java.lang.String...)",
+      "documentation": "Revoke the given permissions for the given process and user. "
+    },
+    "denyPermissions(java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "permissionNames"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "denyPermissions(java.lang.String...)",
+      "documentation": "Revoke the given permissions for the current process and user.\n\nHas no effect if permissions were not previously granted.\n"
+    },
+    "getBroadcastIntents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.Intent\u003e",
+      "exceptions": [],
+      "name": "getBroadcastIntents()"
+    },
+    "getNextStartedActivity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getNextStartedActivity()",
+      "documentation": "Consumes the most recent {@code Intent} started by {@link\nContextWrapper#startActivity(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}\n"
+    },
+    "getNextStartedService()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getNextStartedService()",
+      "documentation": "Consumes the most recent {@code Intent} started by\n{@link android.content.Context#startService(android.content.Intent)} and returns it.\n\n@return the most recently started {@code Intent}\n"
+    },
+    "getNextStoppedService()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getNextStoppedService()",
+      "documentation": "Consumes the {@code Intent} requested to stop a service by\n{@link android.content.Context#stopService(android.content.Intent)}\nfrom the bottom of the stack of stop requests.\n"
+    },
+    "getShadowInstrumentation()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowInstrumentation",
+      "exceptions": [],
+      "name": "getShadowInstrumentation()"
+    },
+    "grantPermissions(int,int,java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pid",
+        "uid",
+        "permissions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "grantPermissions(int,int,java.lang.String...)",
+      "documentation": "Grant the given permissions for the given process and user. "
+    },
+    "grantPermissions(java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "permissionNames"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "grantPermissions(java.lang.String...)",
+      "documentation": "Grant the given permissions for the current process and user. "
+    },
+    "peekNextStartedActivity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "peekNextStartedActivity()",
+      "documentation": "Returns the most recent {@code Intent} started by {@link\nContextWrapper#startActivity(android.content.Intent)} without consuming it.\n\n@return the most recently started {@code Intent}\n"
+    },
+    "peekNextStartedService()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "peekNextStartedService()",
+      "documentation": "Returns the most recent {@code Intent} started by\n{@link android.content.Context#startService(android.content.Intent)} without consuming it.\n\n@return the most recently started {@code Intent}\n"
+    },
+    "removeSystemService(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeSystemService(java.lang.String)",
+      "documentation": "Makes {@link Context#getSystemService(String)} return {@code null} for the given system service\nname, mimicking a device that doesn\u0027t have that system service.\n"
+    }
+  },
+  "imports": [
+    "android.app.ActivityThread",
+    "android.content.Context",
+    "android.content.ContextWrapper",
+    "android.content.Intent",
+    "java.util.List",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowContextWrapper"
+}

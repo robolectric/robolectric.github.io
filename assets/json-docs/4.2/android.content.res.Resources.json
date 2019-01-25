@@ -1,0 +1,277 @@
+{
+  "methods": {
+    "getQuantityString(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "resId",
+        "quantity"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "android.content.res.Resources.NotFoundException"
+      ],
+      "name": "getQuantityString(int,int)"
+    },
+    "getQuantityString(int,int,java.lang.Object...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id",
+        "quantity",
+        "formatArgs"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "android.content.res.Resources.NotFoundException"
+      ],
+      "name": "getQuantityString(int,int,java.lang.Object...)"
+    },
+    "getSystem()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.content.res.Resources",
+      "exceptions": [],
+      "name": "getSystem()"
+    },
+    "isLegacyAssetManager()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLegacyAssetManager()"
+    },
+    "loadDrawable(android.util.TypedValue,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "value",
+        "id"
+      ],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "loadDrawable(android.util.TypedValue,int)"
+    },
+    "loadDrawable(android.util.TypedValue,int,android.content.res.Resources.Theme)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "value",
+        "id",
+        "theme"
+      ],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [
+        "android.content.res.Resources.NotFoundException"
+      ],
+      "minSdk": 21,
+      "maxSdk": 25,
+      "name": "loadDrawable(android.util.TypedValue,int,android.content.res.Resources.Theme)"
+    },
+    "loadXmlResourceParser(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "resId",
+        "type"
+      ],
+      "returnType": "android.content.res.XmlResourceParser",
+      "exceptions": [
+        "android.content.res.Resources.NotFoundException"
+      ],
+      "name": "loadXmlResourceParser(int,java.lang.String)"
+    },
+    "loadXmlResourceParser(java.lang.String,int,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "file",
+        "id",
+        "assetCookie",
+        "type"
+      ],
+      "returnType": "android.content.res.XmlResourceParser",
+      "exceptions": [
+        "android.content.res.Resources.NotFoundException"
+      ],
+      "name": "loadXmlResourceParser(java.lang.String,int,int,java.lang.String)"
+    },
+    "newNotFoundException(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.content.res.Resources.NotFoundException",
+      "exceptions": [],
+      "name": "newNotFoundException(int)"
+    },
+    "obtainAttributes(android.util.AttributeSet,int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "set",
+        "attrs"
+      ],
+      "returnType": "android.content.res.TypedArray",
+      "exceptions": [],
+      "name": "obtainAttributes(android.util.AttributeSet,int[])"
+    },
+    "obtainResettableArrays()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.util.LongSparseArray\u003c?\u003e\u003e",
+      "exceptions": [],
+      "name": "obtainResettableArrays()"
+    },
+    "obtainTypedArray(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.content.res.TypedArray",
+      "exceptions": [
+        "android.content.res.Resources.NotFoundException"
+      ],
+      "name": "obtainTypedArray(int)"
+    },
+    "openRawResource(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "java.io.InputStream",
+      "exceptions": [
+        "android.content.res.Resources.NotFoundException"
+      ],
+      "name": "openRawResource(int)"
+    },
+    "openRawResourceFd(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.content.res.AssetFileDescriptor",
+      "exceptions": [
+        "android.content.res.Resources.NotFoundException"
+      ],
+      "name": "openRawResourceFd(int)",
+      "documentation": "Since {@link AssetFileDescriptor}s are not yet supported by Robolectric, {@code null} will be\nreturned if the resource is found. If the resource cannot be found, {@link\nResources.NotFoundException} will be thrown.\n"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setCreatedFromResId(android.content.res.Resources,int,android.graphics.drawable.Drawable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "resources",
+        "id",
+        "drawable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCreatedFromResId(android.content.res.Resources,int,android.graphics.drawable.Drawable)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadows.ShadowAssetManager.legacyShadowOf",
+    "android.content.res.AssetFileDescriptor",
+    "android.content.res.AssetManager",
+    "android.content.res.Configuration",
+    "android.content.res.Resources",
+    "android.content.res.Resources.NotFoundException",
+    "android.content.res.ResourcesImpl",
+    "android.content.res.TypedArray",
+    "android.content.res.XmlResourceParser",
+    "android.graphics.Bitmap",
+    "android.graphics.drawable.BitmapDrawable",
+    "android.graphics.drawable.Drawable",
+    "android.os.ParcelFileDescriptor",
+    "android.util.AttributeSet",
+    "android.util.DisplayMetrics",
+    "android.util.LongSparseArray",
+    "android.util.TypedValue",
+    "java.io.FileInputStream",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.lang.reflect.Field",
+    "java.lang.reflect.Modifier",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Locale",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.res.Plural",
+    "org.robolectric.res.PluralRules",
+    "org.robolectric.res.ResName",
+    "org.robolectric.res.ResType",
+    "org.robolectric.res.ResourceTable",
+    "org.robolectric.res.TypedResource",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowLegacyResourcesImpl.ShadowLegacyThemeImpl",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadows.ShadowResources.ShadowTheme",
+    "org.robolectric.shadows.ShadowResources.ShadowLegacyTheme",
+    "org.robolectric.shadows.ShadowResources.ShadowNotFoundException"
+  ],
+  "name": "org.robolectric.shadows.ShadowResources"
+}

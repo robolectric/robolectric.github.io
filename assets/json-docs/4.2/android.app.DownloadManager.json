@@ -1,0 +1,97 @@
+{
+  "methods": {
+    "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Object,java.lang.Class\u003cT\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "fieldName",
+        "object",
+        "clazz"
+      ],
+      "returnType": "T",
+      "exceptions": [],
+      "name": "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Object,java.lang.Class\u003cT\u003e)"
+    },
+    "enqueue(android.app.DownloadManager.Request)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "enqueue(android.app.DownloadManager.Request)"
+    },
+    "getRequest(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.app.DownloadManager.Request",
+      "exceptions": [],
+      "name": "getRequest(long)"
+    },
+    "getRequestCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRequestCount()"
+    },
+    "query(android.app.DownloadManager.Query)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "query"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "name": "query(android.app.DownloadManager.Query)"
+    },
+    "remove(long...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "ids"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "remove(long...)"
+    }
+  },
+  "imports": [
+    "android.app.DownloadManager",
+    "android.database.Cursor",
+    "android.net.Uri",
+    "android.util.Pair",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.TreeMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.fakes.BaseCursor",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowDownloadManager.ShadowRequest",
+    "org.robolectric.shadows.ShadowDownloadManager.ShadowQuery",
+    "org.robolectric.shadows.ShadowDownloadManager.ResultCursor"
+  ],
+  "name": "org.robolectric.shadows.ShadowDownloadManager"
+}

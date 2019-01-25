@@ -1,0 +1,8 @@
+{
+  "methods": {},
+  "imports": [
+    "android.text.TextPaint",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowTextPaint"
+}

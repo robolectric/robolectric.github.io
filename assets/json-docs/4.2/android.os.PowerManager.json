@@ -1,0 +1,239 @@
+{
+  "methods": {
+    "getLatestWakeLock()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.os.PowerManager.WakeLock",
+      "exceptions": [],
+      "name": "getLatestWakeLock()",
+      "documentation": "Retrieves the most recent wakelock registered by the application\n\n@return Most recent wake lock.\n"
+    },
+    "getRebootReasons()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getRebootReasons()",
+      "documentation": "Returns the list of reasons for each reboot, in chronological order. "
+    },
+    "getTimesRebooted()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTimesRebooted()",
+      "documentation": "Returns the number of times {@link #reboot(String)} was called. "
+    },
+    "isDeviceIdleMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isDeviceIdleMode()",
+      "documentation": "@return `false` by default, or the value specified via {@link #setIsDeviceIdleMode(boolean)}\n"
+    },
+    "isIgnoringBatteryOptimizations(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isIgnoringBatteryOptimizations(java.lang.String)"
+    },
+    "isInteractive()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isInteractive()"
+    },
+    "isPowerSaveMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isPowerSaveMode()"
+    },
+    "isScreenOn()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isScreenOn()"
+    },
+    "isWakeLockLevelSupported(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "level"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isWakeLockLevelSupported(int)"
+    },
+    "newWakeLock(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "flags",
+        "tag"
+      ],
+      "returnType": "android.os.PowerManager.WakeLock",
+      "exceptions": [],
+      "name": "newWakeLock(int,java.lang.String)"
+    },
+    "reboot(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "reason"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reboot(java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()",
+      "documentation": "Discards the most recent {@code PowerManager.WakeLock}s "
+    },
+    "setIgnoringBatteryOptimizations(java.lang.String,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIgnoringBatteryOptimizations(java.lang.String,boolean)"
+    },
+    "setIsDeviceIdleMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isDeviceIdleMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsDeviceIdleMode(boolean)",
+      "documentation": "Sets the value returned by {@link #isDeviceIdleMode()}. "
+    },
+    "setIsInteractive(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "interactive"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsInteractive(boolean)"
+    },
+    "setIsPowerSaveMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "powerSaveMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsPowerSaveMode(boolean)"
+    },
+    "setIsScreenOn(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "screenOn"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsScreenOn(boolean)"
+    },
+    "setIsWakeLockLevelSupported(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "level",
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsWakeLockLevelSupported(int,boolean)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.shadows.ShadowApplication.getInstance",
+    "android.os.PowerManager",
+    "android.os.WorkSource",
+    "com.google.common.collect.ImmutableList",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowPowerManager.ShadowWakeLock"
+  ],
+  "name": "org.robolectric.shadows.ShadowPowerManager"
+}

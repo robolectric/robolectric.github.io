@@ -1,0 +1,22 @@
+{
+  "methods": {
+    "getInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.webkit.WebStorage",
+      "exceptions": [],
+      "name": "getInstance()"
+    }
+  },
+  "imports": [
+    "android.webkit.WebStorage",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowWebStorage",
+  "documentation": "Shadow of {@link WebStorage} which constructs a stub instance rather than attempting to create a\nfull Chromium-backed instance.\n"
+}

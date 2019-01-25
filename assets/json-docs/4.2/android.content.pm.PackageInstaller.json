@@ -1,0 +1,156 @@
+{
+  "methods": {
+    "abandonSession(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "abandonSession(int)"
+    },
+    "createSession(android.content.pm.PackageInstaller.SessionParams)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "params"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "createSession(android.content.pm.PackageInstaller.SessionParams)"
+    },
+    "getAllSessions()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.pm.PackageInstaller.SessionInfo\u003e",
+      "exceptions": [],
+      "name": "getAllSessions()"
+    },
+    "getSessionInfo(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "android.content.pm.PackageInstaller.SessionInfo",
+      "exceptions": [],
+      "name": "getSessionInfo(int)"
+    },
+    "openSession(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "android.content.pm.PackageInstaller.Session",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "openSession(int)"
+    },
+    "registerSessionCallback(android.content.pm.PackageInstaller.SessionCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerSessionCallback(android.content.pm.PackageInstaller.SessionCallback,android.os.Handler)"
+    },
+    "setSessionFails(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSessionFails(int)"
+    },
+    "setSessionFinishes(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "sessionId",
+        "success"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSessionFinishes(int,boolean)"
+    },
+    "setSessionProgress(int,float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId",
+        "progress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSessionProgress(int,float)"
+    },
+    "setSessionSucceeds(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSessionSucceeds(int)",
+      "documentation": "Prefer instead to use the Android APIs to close the session\n{@link android.content.pm.PackageInstaller.Session#commit(IntentSender)}\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.annotation.NonNull",
+    "android.annotation.Nullable",
+    "android.annotation.SuppressLint",
+    "android.content.IntentSender",
+    "android.content.IntentSender.SendIntentException",
+    "android.content.pm.PackageInstaller",
+    "android.os.Handler",
+    "com.google.common.collect.ImmutableList",
+    "java.io.IOException",
+    "java.io.OutputStream",
+    "java.util.HashMap",
+    "java.util.HashSet",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.Set",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowPackageInstaller.CallbackInfo",
+    "org.robolectric.shadows.ShadowPackageInstaller.ShadowSession"
+  ],
+  "name": "org.robolectric.shadows.ShadowPackageInstaller"
+}

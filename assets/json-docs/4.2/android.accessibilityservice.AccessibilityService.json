@@ -1,0 +1,36 @@
+{
+  "methods": {
+    "getGlobalActionsPerformed()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
+      "exceptions": [],
+      "name": "getGlobalActionsPerformed()"
+    },
+    "performGlobalAction(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "action"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "performGlobalAction(int)"
+    }
+  },
+  "imports": [
+    "android.accessibilityservice.AccessibilityService",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowAccessibilityService",
+  "documentation": "Shadow of AccessibilityService that saves global actions to a list.\n"
+}

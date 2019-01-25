@@ -1,0 +1,83 @@
+{
+  "methods": {
+    "getFromLocation(double,double,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "latitude",
+        "longitude",
+        "maxResults"
+      ],
+      "returnType": "java.util.List\u003candroid.location.Address\u003e",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "getFromLocation(double,double,int)",
+      "documentation": "Returns an empty list by default, or the last value set by {@link #setFromLocation(List)}\n\n`latitude` and `longitude` are ignored by this implementation, except to check that they are in\nappropriate bounds. `maxResults` determines the\nmaximum number of addresses to return.\n"
+    },
+    "isPresent()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isPresent()",
+      "documentation": "@return `true` by default, or the value specified via {@link #setIsPresent(boolean)} "
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setFromLocation(java.util.List\u003candroid.location.Address\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "list"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFromLocation(java.util.List\u003candroid.location.Address\u003e)",
+      "documentation": "Sets the value to be returned by {@link Geocoder#getFromLocation(double, double, int)}. "
+    },
+    "setIsPresent(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsPresent(boolean)",
+      "documentation": "Sets the value to be returned by {@link Geocoder#isPresent()}.\n\nThis value is reset to `true` for each test.\n"
+    }
+  },
+  "imports": [
+    "android.location.Address",
+    "android.location.Geocoder",
+    "com.google.common.base.Preconditions",
+    "java.io.IOException",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.shadows.ShadowGeocoder"
+}

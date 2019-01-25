@@ -1,0 +1,8 @@
+{
+  "methods": {},
+  "imports": [
+    "android.media.MediaScannerConnection",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowMediaScannerConnection"
+}

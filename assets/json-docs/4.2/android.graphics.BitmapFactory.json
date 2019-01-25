@@ -1,0 +1,307 @@
+{
+  "methods": {
+    "create(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "create(java.lang.String)"
+    },
+    "create(java.lang.String,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "name",
+        "options"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options)"
+    },
+    "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "name",
+        "options",
+        "widthAndHeight"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)"
+    },
+    "decodeByteArray(byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "data",
+        "offset",
+        "length"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeByteArray(byte[],int,int)"
+    },
+    "decodeByteArray(byte[],int,int,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "data",
+        "offset",
+        "length",
+        "opts"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeByteArray(byte[],int,int,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeFile(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "pathName"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeFile(java.lang.String)"
+    },
+    "decodeFile(java.lang.String,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "pathName",
+        "options"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeFile(java.lang.String,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeFileDescriptor(java.io.FileDescriptor,android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fd",
+        "outPadding",
+        "opts"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeFileDescriptor(java.io.FileDescriptor,android.graphics.Rect,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeResource(android.content.res.Resources,int,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "res",
+        "id",
+        "options"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeResource(android.content.res.Resources,int,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "res",
+        "value",
+        "is",
+        "pad",
+        "opts"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)"
+    },
+    "decodeStream(java.io.InputStream)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "is"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeStream(java.io.InputStream)"
+    },
+    "decodeStream(java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "is",
+        "outPadding",
+        "opts"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "decodeStream(java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory.Options)"
+    },
+    "provideWidthAndHeightHints(android.net.Uri,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "uri",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "provideWidthAndHeightHints(android.net.Uri,int,int)"
+    },
+    "provideWidthAndHeightHints(int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "resourceId",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "provideWidthAndHeightHints(int,int,int)"
+    },
+    "provideWidthAndHeightHints(java.io.FileDescriptor,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "fd",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "provideWidthAndHeightHints(java.io.FileDescriptor,int,int)"
+    },
+    "provideWidthAndHeightHints(java.lang.String,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "file",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "provideWidthAndHeightHints(java.lang.String,int,int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "selectWidthAndHeight(java.lang.String,android.graphics.Point)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "name",
+        "widthAndHeight"
+      ],
+      "returnType": "android.graphics.Point",
+      "exceptions": [],
+      "name": "selectWidthAndHeight(java.lang.String,android.graphics.Point)"
+    },
+    "stringify(android.graphics.BitmapFactory.Options)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "options"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "stringify(android.graphics.BitmapFactory.Options)"
+    }
+  },
+  "imports": [
+    "java.nio.charset.StandardCharsets.UTF_8",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadows.ImageUtil.getImageSizeFromStream",
+    "android.content.res.AssetManager.AssetInputStream",
+    "android.content.res.Resources",
+    "android.graphics.Bitmap",
+    "android.graphics.BitmapFactory",
+    "android.graphics.Point",
+    "android.graphics.Rect",
+    "android.net.Uri",
+    "android.util.TypedValue",
+    "java.io.ByteArrayInputStream",
+    "java.io.FileDescriptor",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.Join",
+    "org.robolectric.util.NamedStream",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowBitmapFactory"
+}

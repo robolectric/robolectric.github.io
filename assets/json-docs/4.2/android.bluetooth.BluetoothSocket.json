@@ -1,0 +1,93 @@
+{
+  "methods": {
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "close()"
+    },
+    "connect()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "connect()",
+      "documentation": "This method doesn\u0027t perform an actual connection and returns immediately "
+    },
+    "getInputStream()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.io.InputStream",
+      "exceptions": [],
+      "name": "getInputStream()"
+    },
+    "getInputStreamFeeder()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.io.PipedOutputStream",
+      "exceptions": [],
+      "name": "getInputStreamFeeder()",
+      "documentation": "Returns {@link PipedOutputStream} that controls \u003cb\u003einput\u003c/b\u003e stream of the {@link\nBluetoothSocket}.\n"
+    },
+    "getOutputStream()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.io.OutputStream",
+      "exceptions": [],
+      "name": "getOutputStream()"
+    },
+    "getOutputStreamSink()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.io.PipedInputStream",
+      "exceptions": [],
+      "name": "getOutputStreamSink()",
+      "documentation": "Returns {@link PipedInputStream} that controls \u003cb\u003eoutput\u003c/b\u003e stream of the {@link\nBluetoothSocket}.\n"
+    },
+    "isConnected()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isConnected()"
+    }
+  },
+  "imports": [
+    "android.bluetooth.BluetoothSocket",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.io.OutputStream",
+    "java.io.PipedInputStream",
+    "java.io.PipedOutputStream",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowBluetoothSocket.SocketState"
+  ],
+  "name": "org.robolectric.shadows.ShadowBluetoothSocket"
+}

@@ -1,0 +1,236 @@
+{
+  "methods": {
+    "displayCompletions(android.view.View,android.view.inputmethod.CompletionInfo[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view",
+        "completions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "displayCompletions(android.view.View,android.view.inputmethod.CompletionInfo[])"
+    },
+    "focusIn(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "focusIn(android.view.View)"
+    },
+    "hideSoftInputFromWindow(android.os.IBinder,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "windowToken",
+        "flags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hideSoftInputFromWindow(android.os.IBinder,int)"
+    },
+    "hideSoftInputFromWindow(android.os.IBinder,int,android.os.ResultReceiver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "windowToken",
+        "flags",
+        "resultReceiver"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hideSoftInputFromWindow(android.os.IBinder,int,android.os.ResultReceiver)"
+    },
+    "isActive()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isActive()"
+    },
+    "isActive(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isActive(android.view.View)"
+    },
+    "isFullscreenMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isFullscreenMode()"
+    },
+    "isSoftInputVisible()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isSoftInputVisible()"
+    },
+    "onViewDetachedFromWindow(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "onViewDetachedFromWindow(android.view.View)"
+    },
+    "peekInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.view.inputmethod.InputMethodManager",
+      "exceptions": [],
+      "maxSdk": 22,
+      "name": "peekInstance()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "restartInput(android.view.View)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "restartInput(android.view.View)"
+    },
+    "setSoftInputVisibility(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "visible"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSoftInputVisibility(boolean)"
+    },
+    "setSoftInputVisibilityHandler(org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "visibilityChangeHandler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSoftInputVisibilityHandler(org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler)"
+    },
+    "showSoftInput(android.view.View,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view",
+        "flags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "showSoftInput(android.view.View,int)"
+    },
+    "showSoftInput(android.view.View,int,android.os.ResultReceiver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view",
+        "flags",
+        "resultReceiver"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "showSoftInput(android.view.View,int,android.os.ResultReceiver)"
+    },
+    "toggleSoftInput(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "showFlags",
+        "hideFlags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "toggleSoftInput(int,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.os.Build.VERSION_CODES",
+    "android.os.IBinder",
+    "android.os.Looper",
+    "android.os.ResultReceiver",
+    "android.util.SparseArray",
+    "android.view.View",
+    "android.view.inputmethod.CompletionInfo",
+    "android.view.inputmethod.InputMethodManager",
+    "com.google.common.base.Optional",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler",
+    "org.robolectric.shadows.ShadowInputMethodManager._InputMethodManager_"
+  ],
+  "name": "org.robolectric.shadows.ShadowInputMethodManager"
+}

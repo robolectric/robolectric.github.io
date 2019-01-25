@@ -1,0 +1,21 @@
+{
+  "methods": {
+    "updateTile()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "updateTile()"
+    }
+  },
+  "imports": [
+    "android.os.Build",
+    "android.service.quicksettings.Tile",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowTile"
+}

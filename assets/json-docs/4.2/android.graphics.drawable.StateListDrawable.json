@@ -1,0 +1,79 @@
+{
+  "methods": {
+    "addState(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "stateId",
+        "resId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addState(int,int)"
+    },
+    "addState(int[],android.graphics.drawable.Drawable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "stateSet",
+        "drawable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addState(int[],android.graphics.drawable.Drawable)"
+    },
+    "createStateList(int[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "stateSet"
+      ],
+      "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
+      "exceptions": [],
+      "name": "createStateList(int[])"
+    },
+    "getDrawableForState(int[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "stateSet"
+      ],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "getDrawableForState(int[])",
+      "documentation": "Non Android accessor to retrieve drawable added for a specific state.\n\n@param stateSet Int array describing the state\n@return Drawable added via {@link #addState(int[], android.graphics.drawable.Drawable)}\n"
+    },
+    "getResourceIdForState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "stateId"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getResourceIdForState(int)"
+    }
+  },
+  "imports": [
+    "android.graphics.drawable.Drawable",
+    "android.graphics.drawable.StateListDrawable",
+    "android.util.StateSet",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowStateListDrawable"
+}

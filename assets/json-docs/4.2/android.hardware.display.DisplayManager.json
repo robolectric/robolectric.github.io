@@ -1,0 +1,190 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context)"
+    },
+    "addDisplay(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "qualifiersStr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "addDisplay(java.lang.String)",
+      "documentation": "Adds a simulated display.\n\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display.\n@return the new display\u0027s ID\n"
+    },
+    "changeDisplay(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "displayId",
+        "qualifiersStr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "changeDisplay(int,java.lang.String)",
+      "documentation": "Changes properties of a simulated display. If `qualifiersStr` starts with a plus (`+`) sign,\nthe display\u0027s previous configuration is modified with the given qualifiers; otherwise defaults\nare applied as described [here](http://robolectric.org/device-configuration/).\n\n\n@param displayId the display id to change\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display\n"
+    },
+    "changeDisplay(int,org.robolectric.util.Consumer\u003corg.robolectric.android.internal.DisplayConfig\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "displayId",
+        "consumer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "changeDisplay(int,org.robolectric.util.Consumer\u003corg.robolectric.android.internal.DisplayConfig\u003e)",
+      "documentation": "Changes properties of a simulated display. The original properties will be passed to the\n`consumer`, which may modify them in place. The display will be updated with the new\nproperties.\n\n@param displayId the display id to change\n@param consumer a function which modifies the display properties\n"
+    },
+    "configureDefaultDisplay(android.content.res.Configuration,android.util.DisplayMetrics)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "configuration",
+        "displayMetrics"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "configureDefaultDisplay(android.content.res.Configuration,android.util.DisplayMetrics)",
+      "documentation": "internal only "
+    },
+    "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "configuration",
+        "displayMetrics"
+      ],
+      "returnType": "android.view.DisplayInfo",
+      "exceptions": [],
+      "name": "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics)"
+    },
+    "createDisplayInfo(java.lang.String,android.view.DisplayInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "qualifiersStr",
+        "baseDisplayInfo"
+      ],
+      "returnType": "android.view.DisplayInfo",
+      "exceptions": [],
+      "name": "createDisplayInfo(java.lang.String,android.view.DisplayInfo)"
+    },
+    "fixNominalDimens(android.view.DisplayInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "displayInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "fixNominalDimens(android.view.DisplayInfo)"
+    },
+    "getSaturationLevel()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getSaturationLevel()",
+      "documentation": "Returns the current display saturation level set via {@link\nandroid.hardware.display.DisplayManager#setSaturationLevel(float)}.\n"
+    },
+    "getShadowDisplayManagerGlobal()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowDisplayManagerGlobal",
+      "exceptions": [],
+      "name": "getShadowDisplayManagerGlobal()"
+    },
+    "removeDisplay(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "displayId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeDisplay(int)",
+      "documentation": "Removes a simulated display.\n\n@param displayId the display id to remove\n"
+    },
+    "setSaturationLevel(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "level"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSaturationLevel(float)",
+      "documentation": "Sets the current display saturation level.\n\nThis is a workaround for tests which cannot use the relevant hidden\n{@link android.annotation.SystemApi},\n{@link android.hardware.display.DisplayManager#setSaturationLevel(float)}.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadow.api.Shadow.extract",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "android.content.Context",
+    "android.content.res.Configuration",
+    "android.hardware.display.DisplayManager",
+    "android.hardware.display.DisplayManagerGlobal",
+    "android.os.Build",
+    "android.util.DisplayMetrics",
+    "android.view.Display",
+    "android.view.DisplayInfo",
+    "android.view.Surface",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.android.Bootstrap",
+    "org.robolectric.android.internal.DisplayConfig",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.res.Qualifiers",
+    "org.robolectric.util.Consumer",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowDisplayManager",
+  "documentation": "For tests, display properties may be changed and devices may be added or removed\nprogrammatically.\n"
+}

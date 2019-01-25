@@ -1,0 +1,363 @@
+{
+  "methods": {
+    "addLog(int,java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "level",
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "addLog(int,java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "clear()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clear()",
+      "documentation": "Clear all accumulated logs. "
+    },
+    "d(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "d(java.lang.String,java.lang.String)"
+    },
+    "d(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "d(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "e(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "e(java.lang.String,java.lang.String)"
+    },
+    "e(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "e(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "getLogs()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
+      "exceptions": [],
+      "name": "getLogs()",
+      "documentation": "Returns ordered list of all log entries.\n@return List of log items\n"
+    },
+    "getLogsForTag(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
+      "exceptions": [],
+      "name": "getLogsForTag(java.lang.String)",
+      "documentation": "Returns ordered list of all log items for a specific tag.\n\n@param tag The tag to get logs for\n@return The list of log items for the tag or an empty list if no logs for that tag exist.\n"
+    },
+    "i(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "i(java.lang.String,java.lang.String)"
+    },
+    "i(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "i(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "isLoggable(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "level"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLoggable(java.lang.String,int)"
+    },
+    "logToStream(java.io.PrintStream,int,java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "ps",
+        "level",
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "logToStream(java.io.PrintStream,int,java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "println_native(int,int,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "bufID",
+        "priority",
+        "tag",
+        "msg"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "println_native(int,int,java.lang.String,java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setLoggable(java.lang.String,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "level"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLoggable(java.lang.String,int)",
+      "documentation": "Sets the log level of a given tag, that {@link #isLoggable} will follow.\n@param tag A log tag\n@param level A log level, from {@link android.util.Log}\n"
+    },
+    "setWtfIsFatal(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "fatal"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWtfIsFatal(boolean)",
+      "documentation": "Sets whether calling {@link Log#wtf} will throw {@link TerribleFailure}. "
+    },
+    "setupLogging()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setupLogging()"
+    },
+    "v(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "v(java.lang.String,java.lang.String)"
+    },
+    "v(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "v(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "w(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "w(java.lang.String,java.lang.String)"
+    },
+    "w(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "w(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
+    "w(java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "throwable"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "w(java.lang.String,java.lang.Throwable)"
+    },
+    "wtf(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "wtf(java.lang.String,java.lang.String)"
+    },
+    "wtf(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "msg",
+        "throwable"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "wtf(java.lang.String,java.lang.String,java.lang.Throwable)"
+    }
+  },
+  "imports": [
+    "android.util.Log",
+    "java.io.FileOutputStream",
+    "java.io.IOException",
+    "java.io.PrintStream",
+    "java.util.ArrayList",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.Queue",
+    "java.util.concurrent.ConcurrentLinkedQueue",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadows.ShadowLog.LogItem",
+    "org.robolectric.shadows.ShadowLog.TerribleFailure"
+  ],
+  "name": "org.robolectric.shadows.ShadowLog"
+}

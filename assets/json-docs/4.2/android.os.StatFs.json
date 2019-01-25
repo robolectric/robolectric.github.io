@@ -1,0 +1,204 @@
+{
+  "methods": {
+    "__constructor__(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(java.lang.String)"
+    },
+    "getAvailableBlocks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAvailableBlocks()"
+    },
+    "getAvailableBlocksLong()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getAvailableBlocksLong()"
+    },
+    "getAvailableBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getAvailableBytes()"
+    },
+    "getBlockCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBlockCount()"
+    },
+    "getBlockCountLong()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getBlockCountLong()"
+    },
+    "getBlockSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBlockSize()"
+    },
+    "getBlockSizeLong()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getBlockSizeLong()",
+      "documentation": "Robolectric always uses a block size of `4096`. "
+    },
+    "getFreeBlocks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getFreeBlocks()"
+    },
+    "getFreeBlocksLong()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getFreeBlocksLong()"
+    },
+    "getFreeBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getFreeBytes()"
+    },
+    "getTotalBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getTotalBytes()"
+    },
+    "registerStats(java.io.File,int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "path",
+        "blockCount",
+        "freeBlocks",
+        "availableBlocks"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerStats(java.io.File,int,int,int)",
+      "documentation": "Register stats for a path, which will be used when a matching {@link StatFs} instance is\ncreated.\n\n@param path path to the file\n@param blockCount number of blocks\n@param freeBlocks number of free blocks\n@param availableBlocks number of available blocks\n"
+    },
+    "registerStats(java.lang.String,int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "path",
+        "blockCount",
+        "freeBlocks",
+        "availableBlocks"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerStats(java.lang.String,int,int,int)",
+      "documentation": "Register stats for a path, which will be used when a matching {@link StatFs} instance is\ncreated.  A {@link StatFs} instance matches if it extends path. If several registered paths\nmatch, we pick the longest one.\n\n@param path path to the file\n@param blockCount number of blocks\n@param freeBlocks number of free blocks\n@param availableBlocks number of available blocks\n"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "restat(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "restat(java.lang.String)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.StatFs",
+    "java.io.File",
+    "java.util.Map",
+    "java.util.TreeMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadows.ShadowStatFs.Stats"
+  ],
+  "name": "org.robolectric.shadows.ShadowStatFs",
+  "documentation": "Robolectic doesn\u0027t provide actual filesystem stats; rather, it provides the ability to specify\nstats values in advance.\n\n@see #registerStats(File, int, int, int)\n"
+}

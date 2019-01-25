@@ -1,0 +1,286 @@
+{
+  "methods": {
+    "applyBatch(java.util.ArrayList\u003candroid.content.ContentProviderOperation\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "operations"
+      ],
+      "returnType": "android.content.ContentProviderResult[]",
+      "exceptions": [
+        "android.os.RemoteException",
+        "android.content.OperationApplicationException"
+      ],
+      "name": "applyBatch(java.util.ArrayList\u003candroid.content.ContentProviderOperation\u003e)"
+    },
+    "bulkInsert(android.net.Uri,android.content.ContentValues[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url",
+        "initialValues"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "name": "bulkInsert(android.net.Uri,android.content.ContentValues[])"
+    },
+    "call(java.lang.String,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "method",
+        "arg",
+        "extras"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "minSdk": 17,
+      "name": "call(java.lang.String,java.lang.String,android.os.Bundle)"
+    },
+    "delete(android.net.Uri,java.lang.String,java.lang.String[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url",
+        "selection",
+        "selectionArgs"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "name": "delete(android.net.Uri,java.lang.String,java.lang.String[])"
+    },
+    "getLocalContentProvider()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.content.ContentProvider",
+      "exceptions": [],
+      "name": "getLocalContentProvider()"
+    },
+    "getStreamTypes(android.net.Uri,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uri",
+        "mimeTypeFilter"
+      ],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "name": "getStreamTypes(android.net.Uri,java.lang.String)"
+    },
+    "getType(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "name": "getType(android.net.Uri)"
+    },
+    "insert(android.net.Uri,android.content.ContentValues)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url",
+        "initialValues"
+      ],
+      "returnType": "android.net.Uri",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "name": "insert(android.net.Uri,android.content.ContentValues)"
+    },
+    "isReleased()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isReleased()"
+    },
+    "isStable()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isStable()"
+    },
+    "openAssetFile(android.net.Uri,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url",
+        "mode"
+      ],
+      "returnType": "android.content.res.AssetFileDescriptor",
+      "exceptions": [
+        "android.os.RemoteException",
+        "java.io.FileNotFoundException"
+      ],
+      "name": "openAssetFile(android.net.Uri,java.lang.String)"
+    },
+    "openFile(android.net.Uri,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url",
+        "mode"
+      ],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [
+        "android.os.RemoteException",
+        "java.io.FileNotFoundException"
+      ],
+      "name": "openFile(android.net.Uri,java.lang.String)"
+    },
+    "openTypedAssetFileDescriptor(android.net.Uri,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "uri",
+        "mimeType",
+        "opts"
+      ],
+      "returnType": "android.content.res.AssetFileDescriptor",
+      "exceptions": [
+        "android.os.RemoteException",
+        "java.io.FileNotFoundException"
+      ],
+      "name": "openTypedAssetFileDescriptor(android.net.Uri,java.lang.String,android.os.Bundle)"
+    },
+    "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url",
+        "projection",
+        "selection",
+        "selectionArgs",
+        "sortOrder"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "name": "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)"
+    },
+    "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url",
+        "projection",
+        "selection",
+        "selectionArgs",
+        "sortOrder",
+        "cancellationSignal"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "name": "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)"
+    },
+    "release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "release()"
+    },
+    "setContentProvider(android.content.ContentProvider)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "provider"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setContentProvider(android.content.ContentProvider)"
+    },
+    "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url",
+        "values",
+        "selection",
+        "selectionArgs"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "name": "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.content.ContentProvider",
+    "android.content.ContentProviderClient",
+    "android.content.ContentProviderOperation",
+    "android.content.ContentProviderResult",
+    "android.content.ContentValues",
+    "android.content.OperationApplicationException",
+    "android.content.res.AssetFileDescriptor",
+    "android.database.Cursor",
+    "android.net.Uri",
+    "android.os.Bundle",
+    "android.os.CancellationSignal",
+    "android.os.ParcelFileDescriptor",
+    "android.os.RemoteException",
+    "java.io.FileNotFoundException",
+    "java.util.ArrayList",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowContentProviderClient"
+}

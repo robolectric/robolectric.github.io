@@ -1,0 +1,37 @@
+{
+  "methods": {
+    "createInstance(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static",
+        "synchronized"
+      ],
+      "params": [
+        "ctx"
+      ],
+      "returnType": "android.webkit.CookieSyncManager",
+      "exceptions": [],
+      "name": "createInstance(android.content.Context)"
+    },
+    "getInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.webkit.CookieSyncManager",
+      "exceptions": [],
+      "name": "getInstance()"
+    }
+  },
+  "imports": [
+    "android.content.Context",
+    "android.webkit.CookieSyncManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowCookieSyncManager"
+}

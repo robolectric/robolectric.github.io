@@ -1,0 +1,152 @@
+{
+  "methods": {
+    "getWifiSsid(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "ssid"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getWifiSsid(java.lang.String)"
+    },
+    "newInstance()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.net.wifi.WifiInfo",
+      "exceptions": [],
+      "name": "newInstance()"
+    },
+    "setBSSID(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bssid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBSSID(java.lang.String)"
+    },
+    "setFrequency(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "frequency"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFrequency(int)"
+    },
+    "setInetAddress(java.net.InetAddress)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "address"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInetAddress(java.net.InetAddress)"
+    },
+    "setLinkSpeed(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "linkSpeed"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLinkSpeed(int)"
+    },
+    "setMacAddress(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "newMacAddress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMacAddress(java.lang.String)"
+    },
+    "setNetworkId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkId(int)"
+    },
+    "setRssi(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "rssi"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRssi(int)"
+    },
+    "setSSID(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "ssid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSSID(java.lang.String)"
+    },
+    "setSupplicantState(android.net.wifi.SupplicantState)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "state"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupplicantState(android.net.wifi.SupplicantState)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.net.wifi.SupplicantState",
+    "android.net.wifi.WifiInfo",
+    "android.net.wifi.WifiSsid",
+    "java.net.InetAddress",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowWifiInfo"
+}

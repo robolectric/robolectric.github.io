@@ -1,0 +1,308 @@
+{
+  "methods": {
+    "addOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "addOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)",
+      "documentation": "Adds a listener to a local list of listeners. Will be triggered by {@link\n#setActiveSubscriptionInfoList} when the local list of {@link SubscriptionInfo} is updated.\n"
+    },
+    "clearNetworkRoamingStatus()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearNetworkRoamingStatus()",
+      "documentation": "Clears the local cache of roaming subscription Ids used by {@link #isNetworkRoaming}. "
+    },
+    "dispatchOnSubscriptionsChanged()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dispatchOnSubscriptionsChanged()",
+      "documentation": "Notifies {@link OnSubscriptionsChangedListener} listeners that the list of {@link\nSubscriptionInfo} has been updated.\n"
+    },
+    "getActiveSubscriptionIdList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int[]",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "getActiveSubscriptionIdList()",
+      "documentation": "Returns subscription Ids that were set via {@link #setActiveSubscriptionInfoList}. "
+    },
+    "getActiveSubscriptionInfo(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subId"
+      ],
+      "returnType": "android.telephony.SubscriptionInfo",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "getActiveSubscriptionInfo(int)",
+      "documentation": "Returns subscription that were set via {@link #setActiveSubscriptionInfoList} if it can find\none with the specified id or null if none found.\n"
+    },
+    "getActiveSubscriptionInfoCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "getActiveSubscriptionInfoCount()",
+      "documentation": "Returns the size of the list of {@link SubscriptionInfo} that were set via {@link\n#setActiveSubscriptionInfoList}. If no list was set, returns 0.\n"
+    },
+    "getActiveSubscriptionInfoForSimSlotIndex(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "slotIndex"
+      ],
+      "returnType": "android.telephony.SubscriptionInfo",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getActiveSubscriptionInfoForSimSlotIndex(int)",
+      "documentation": "Returns subscription that were set via {@link #setActiveSubscriptionInfoList} if it can find\none with the specified slot index or null if none found.\n"
+    },
+    "getActiveSubscriptionInfoList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.telephony.SubscriptionInfo\u003e",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "getActiveSubscriptionInfoList()",
+      "documentation": "Returns the active list of {@link SubscriptionInfo} that were set via {@link\n#setActiveSubscriptionInfoList}.\n"
+    },
+    "getDefaultDataSubscriptionId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getDefaultDataSubscriptionId()",
+      "documentation": "Returns value set with {@link #setDefaultDataSubscriptionId(int)}. "
+    },
+    "getDefaultSmsSubscriptionId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getDefaultSmsSubscriptionId()",
+      "documentation": "Returns value set with {@link #setDefaultSmsSubscriptionId(int)}. "
+    },
+    "getDefaultSubscriptionId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getDefaultSubscriptionId()",
+      "documentation": "Returns value set with {@link #setDefaultSubscriptionId(int)}. "
+    },
+    "getDefaultVoiceSubscriptionId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getDefaultVoiceSubscriptionId()",
+      "documentation": "Returns value set with {@link #setDefaultVoiceSubscriptionId(int)}. "
+    },
+    "isNetworkRoaming(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "simSubscriptionId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "isNetworkRoaming(int)",
+      "documentation": "Uses the local cache of roaming sim subscription Ids managed by {@link\n#setNetworkRoamingStatus} to return subscription Ids marked as roaming. Otherwise subscription\nIds will be considered as non-roaming if they are not in the cache.\n"
+    },
+    "removeOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "removeOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)",
+      "documentation": "Removes a listener from a local list of listeners. Will be triggered by {@link\n#setActiveSubscriptionInfoList} when the local list of {@link SubscriptionInfo} is updated.\n"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setActiveSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "list"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActiveSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)",
+      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n@param list - The subscription info list, can be null.\n"
+    },
+    "setActiveSubscriptionInfos(android.telephony.SubscriptionInfo...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "infos"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActiveSubscriptionInfos(android.telephony.SubscriptionInfo...)",
+      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n"
+    },
+    "setDefaultDataSubscriptionId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "defaultDataSubscriptionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultDataSubscriptionId(int)"
+    },
+    "setDefaultSmsSubscriptionId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "defaultSmsSubscriptionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultSmsSubscriptionId(int)"
+    },
+    "setDefaultSubscriptionId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "defaultSubscriptionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultSubscriptionId(int)",
+      "documentation": "Sets the value that will be returned by {@link #getDefaultSubscriptionId()}. "
+    },
+    "setDefaultVoiceSubscriptionId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "defaultVoiceSubscriptionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultVoiceSubscriptionId(int)"
+    },
+    "setNetworkRoamingStatus(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "simSubscriptionId",
+        "isNetworkRoaming"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkRoamingStatus(int,boolean)",
+      "documentation": "If isNetworkRoaming is set, it will mark the provided sim subscriptionId as roaming in a local\ncache. If isNetworkRoaming is unset it will remove the subscriptionId from the local cache. The\nlocal cache is used to provide roaming status returned by {@link #isNetworkRoaming}.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.N",
+    "android.telephony.SubscriptionInfo",
+    "android.telephony.SubscriptionManager",
+    "android.telephony.SubscriptionManager.OnSubscriptionsChangedListener",
+    "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.Collections",
+    "java.util.HashSet",
+    "java.util.List",
+    "java.util.Set",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowSubscriptionManager.SubscriptionInfoBuilder"
+  ],
+  "name": "org.robolectric.shadows.ShadowSubscriptionManager"
+}

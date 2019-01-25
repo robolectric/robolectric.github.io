@@ -1,0 +1,133 @@
+{
+  "methods": {
+    "getNext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.Message",
+      "exceptions": [],
+      "name": "getNext()",
+      "documentation": "Convenience method to provide getter access to the private field\n{@code Message.next}.\n\n@return The next message in the current message chain.\n@see #setNext(Message) \n"
+    },
+    "isInUse()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isInUse()",
+      "documentation": "Convenience method to provide access to the private {@code Message.isInUse()} method. Note that\nthe definition of \"in use\" changed with API 21:\n\n\u003cp\u003eIn API 19, a message was only considered \"in use\" during its dispatch. In API 21, the\nmessage is considered \"in use\" from the time it is enqueued until the time that it is freshly\nobtained via a call to {@link Message#obtain()}. This means that in API 21 messages that are in\nthe recycled pool will still be marked as \"in use\".\n\n@return {@code true} if the message is currently \"in use\", {@code false} otherwise.\n"
+    },
+    "recycle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "recycle()",
+      "documentation": "Hook to unscheduled the callback when the message is recycled. Invokes {@link #unschedule()}\nand then calls through to {@link Message#recycle()} on the real object.\n"
+    },
+    "recycleUnchecked()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "recycleUnchecked()",
+      "documentation": "Hook to unscheduled the callback when the message is recycled.\nInvokes {@link #unschedule()} and then calls through to the\npackage private method {@link Message#recycleUnchecked()}\non the real object.\n"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()",
+      "documentation": "Resets the static state of the {@link Message} class by\nemptying the message pool.\n"
+    },
+    "setNext(android.os.Message)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "next"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNext(android.os.Message)",
+      "documentation": "Convenience method to provide setter access to the private field\n{@code Message.next}.\n\n@param next the new next message for the current message.\n@see #getNext() \n"
+    },
+    "setScheduledRunnable(java.lang.Runnable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "r"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScheduledRunnable(java.lang.Runnable)",
+      "documentation": "Stores the {@link Runnable} instance that has been scheduled\nto invoke this message. This is called when the message is\nenqueued by {@link ShadowMessageQueue#enqueueMessage} and is used when\nthe message is recycled to ensure that the correct\n{@link Runnable} instance is removed from the associated scheduler.\n\n@param r the {@link Runnable} instance that is scheduled to\ntrigger this message.\n\n#if ($api \u003e\u003d 21)   * @see #recycleUnchecked()\n#else   * @see #recycle()\n#end\n"
+    },
+    "shadowOf(android.os.Looper)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "looper"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowLooper",
+      "exceptions": [],
+      "name": "shadowOf(android.os.Looper)"
+    },
+    "unschedule()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unschedule()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.ReflectionHelpers.getStaticField",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.os.Handler",
+    "android.os.Looper",
+    "android.os.Message",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowMessage._Message_"
+  ],
+  "name": "org.robolectric.shadows.ShadowMessage"
+}

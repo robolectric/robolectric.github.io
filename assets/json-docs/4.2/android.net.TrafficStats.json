@@ -1,0 +1,364 @@
+{
+  "methods": {
+    "clearThreadStatsTag()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearThreadStatsTag()"
+    },
+    "getMobileRxBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getMobileRxBytes()"
+    },
+    "getMobileRxPackets()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getMobileRxPackets()"
+    },
+    "getMobileTxBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getMobileTxBytes()"
+    },
+    "getMobileTxPackets()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getMobileTxPackets()"
+    },
+    "getThreadStatsTag()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getThreadStatsTag()"
+    },
+    "getTotalRxBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getTotalRxBytes()"
+    },
+    "getTotalRxPackets()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getTotalRxPackets()"
+    },
+    "getTotalTxBytes()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getTotalTxBytes()"
+    },
+    "getTotalTxPackets()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getTotalTxPackets()"
+    },
+    "getUidRxBytes(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidRxBytes(int)"
+    },
+    "getUidRxPackets(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidRxPackets(int)"
+    },
+    "getUidTcpRxBytes(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidTcpRxBytes(int)"
+    },
+    "getUidTcpRxSegments(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidTcpRxSegments(int)"
+    },
+    "getUidTcpTxBytes(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidTcpTxBytes(int)"
+    },
+    "getUidTcpTxSegments(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidTcpTxSegments(int)"
+    },
+    "getUidTxBytes(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidTxBytes(int)"
+    },
+    "getUidTxPackets(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidTxPackets(int)"
+    },
+    "getUidUdpRxBytes(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidUdpRxBytes(int)"
+    },
+    "getUidUdpRxPackets(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidUdpRxPackets(int)"
+    },
+    "getUidUdpTxBytes(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidUdpTxBytes(int)"
+    },
+    "getUidUdpTxPackets(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getUidUdpTxPackets(int)"
+    },
+    "incrementOperationCount(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "operationCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "incrementOperationCount(int)"
+    },
+    "incrementOperationCount(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "operationCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "incrementOperationCount(int,int)"
+    },
+    "setThreadStatsTag(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setThreadStatsTag(int)"
+    },
+    "tagDatagramSocket(java.net.DatagramSocket)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "socket"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.net.SocketException"
+      ],
+      "minSdk": 24,
+      "name": "tagDatagramSocket(java.net.DatagramSocket)",
+      "documentation": "No-op in tests. "
+    },
+    "tagSocket(java.net.Socket)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "socket"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.net.SocketException"
+      ],
+      "name": "tagSocket(java.net.Socket)"
+    },
+    "untagSocket(java.net.Socket)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "socket"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.net.SocketException"
+      ],
+      "name": "untagSocket(java.net.Socket)"
+    }
+  },
+  "imports": [
+    "android.net.TrafficStats",
+    "android.os.Build",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowTrafficStats"
+}

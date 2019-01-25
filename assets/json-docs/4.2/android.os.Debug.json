@@ -1,0 +1,171 @@
+{
+  "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    },
+    "fixTracePath(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "tracePath"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "fixTracePath(java.lang.String)"
+    },
+    "getNativeHeapAllocatedSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getNativeHeapAllocatedSize()"
+    },
+    "getRuntimeStats()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.Map\u003cjava.lang.String,java.lang.String\u003e",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getRuntimeStats()"
+    },
+    "internalStartTracing(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "tracePath"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "internalStartTracing(java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "startMethodTracing()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startMethodTracing()"
+    },
+    "startMethodTracing(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tracePath"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startMethodTracing(java.lang.String)"
+    },
+    "startMethodTracing(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tracePath",
+        "bufferSize"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startMethodTracing(java.lang.String,int)"
+    },
+    "startMethodTracing(java.lang.String,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tracePath",
+        "bufferSize",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startMethodTracing(java.lang.String,int,int)"
+    },
+    "startMethodTracingSampling(java.lang.String,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tracePath",
+        "bufferSize",
+        "intervalUs"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "startMethodTracingSampling(java.lang.String,int,int)"
+    },
+    "stopMethodTracing()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopMethodTracing()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.L",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Debug",
+    "com.google.common.collect.ImmutableMap",
+    "com.google.common.io.Files",
+    "java.io.File",
+    "java.io.IOException",
+    "java.nio.charset.Charset",
+    "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.shadows.ShadowDebug"
+}

@@ -1,0 +1,39 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context)"
+    },
+    "onForceLoad()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onForceLoad()"
+    }
+  },
+  "imports": [
+    "android.content.Context",
+    "android.support.v4.content.AsyncTaskLoader",
+    "java.util.concurrent.Callable",
+    "java.util.concurrent.ExecutionException",
+    "java.util.concurrent.FutureTask",
+    "org.robolectric.Robolectric",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadows.support.v4.ShadowAsyncTaskLoader.BackgroundWorker"
+  ],
+  "name": "org.robolectric.shadows.support.v4.ShadowAsyncTaskLoader"
+}

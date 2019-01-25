@@ -1,0 +1,599 @@
+{
+  "methods": {
+    "addJavascriptInterface(java.lang.Object,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "obj",
+        "interfaceName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addJavascriptInterface(java.lang.Object,java.lang.String)"
+    },
+    "canGoBack()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "canGoBack()"
+    },
+    "clearCache(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "includeDiskFiles"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearCache(boolean)"
+    },
+    "clearFormData()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearFormData()"
+    },
+    "clearHistory()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearHistory()"
+    },
+    "clearView()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearView()"
+    },
+    "copyBackForwardList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.webkit.WebBackForwardList",
+      "exceptions": [],
+      "name": "copyBackForwardList()"
+    },
+    "destroy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "destroy()"
+    },
+    "didClearCacheIncludeDiskFiles()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "didClearCacheIncludeDiskFiles()"
+    },
+    "ensureProviderCreated()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "ensureProviderCreated()"
+    },
+    "evaluateJavascript(java.lang.String,android.webkit.ValueCallback\u003cjava.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "script",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "evaluateJavascript(java.lang.String,android.webkit.ValueCallback\u003cjava.lang.String\u003e)"
+    },
+    "findAddress(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "addr"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "findAddress(java.lang.String)"
+    },
+    "getClassNamed(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "className"
+      ],
+      "returnType": "java.lang.Class\u003c?\u003e",
+      "exceptions": [],
+      "name": "getClassNamed(java.lang.String)"
+    },
+    "getCurrentWebViewPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.content.pm.PackageInfo",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getCurrentWebViewPackage()",
+      "documentation": "Overrides the system implementation for getting the WebView package.\n\n\u003cp\u003eReturns null by default, but this can be changed with {@code #setCurrentWebviewPackage()}.\n"
+    },
+    "getGoBackInvocations()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getGoBackInvocations()",
+      "documentation": "@return goBackInvocations the number of times {@code android.webkit.WebView#goBack()} was\n    invoked\n"
+    },
+    "getJavascriptInterface(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "interfaceName"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getJavascriptInterface(java.lang.String)"
+    },
+    "getLastAdditionalHttpHeaders()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Map\u003cjava.lang.String,java.lang.String\u003e",
+      "exceptions": [],
+      "name": "getLastAdditionalHttpHeaders()",
+      "documentation": "@return the additional Http headers that in the same request with last loaded url "
+    },
+    "getLastEvaluatedJavascript()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLastEvaluatedJavascript()"
+    },
+    "getLastLoadData()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowWebView.LoadData",
+      "exceptions": [],
+      "name": "getLastLoadData()"
+    },
+    "getLastLoadDataWithBaseURL()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowWebView.LoadDataWithBaseURL",
+      "exceptions": [],
+      "name": "getLastLoadDataWithBaseURL()"
+    },
+    "getLastLoadedUrl()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLastLoadedUrl()",
+      "documentation": "@return the last loaded url "
+    },
+    "getOriginalUrl()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getOriginalUrl()"
+    },
+    "getSettings()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.webkit.WebSettings",
+      "exceptions": [],
+      "name": "getSettings()"
+    },
+    "getUrl()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getUrl()"
+    },
+    "getWebChromeClient()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.webkit.WebChromeClient",
+      "exceptions": [],
+      "name": "getWebChromeClient()",
+      "documentation": "@return webChromeClient "
+    },
+    "getWebViewClient()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.webkit.WebViewClient",
+      "exceptions": [],
+      "name": "getWebViewClient()"
+    },
+    "goBack()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "goBack()"
+    },
+    "loadData(java.lang.String,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "data",
+        "mimeType",
+        "encoding"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "loadData(java.lang.String,java.lang.String,java.lang.String)"
+    },
+    "loadDataWithBaseURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "baseUrl",
+        "data",
+        "mimeType",
+        "encoding",
+        "historyUrl"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "loadDataWithBaseURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+    },
+    "loadUrl(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "loadUrl(java.lang.String)"
+    },
+    "loadUrl(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "url",
+        "additionalHttpHeaders"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "loadUrl(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)"
+    },
+    "nullish(java.lang.reflect.Method)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "method"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "nullish(java.lang.reflect.Method)"
+    },
+    "onPause()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onPause()"
+    },
+    "onResume()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onResume()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "restoreState(android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "inState"
+      ],
+      "returnType": "android.webkit.WebBackForwardList",
+      "exceptions": [],
+      "name": "restoreState(android.os.Bundle)"
+    },
+    "saveState(android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "outState"
+      ],
+      "returnType": "android.webkit.WebBackForwardList",
+      "exceptions": [],
+      "name": "saveState(android.os.Bundle)"
+    },
+    "setCanGoBack(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "canGoBack"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCanGoBack(boolean)",
+      "documentation": "Sets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}\n@deprecated Do not depend on this method as it will be removed in a future update. The\n    preferered method is to populate a fake web history to use for going back.\n"
+    },
+    "setCurrentWebViewPackage(android.content.pm.PackageInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "webViewPackageInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCurrentWebViewPackage(android.content.pm.PackageInfo)",
+      "documentation": "Sets the value to return from {@code #getCurrentWebviewPackage()}. "
+    },
+    "setLayoutParams(android.view.ViewGroup.LayoutParams)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "params"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLayoutParams(android.view.ViewGroup.LayoutParams)"
+    },
+    "setWebChromeClient(android.webkit.WebChromeClient)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "client"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWebChromeClient(android.webkit.WebChromeClient)"
+    },
+    "setWebContentsDebuggingEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWebContentsDebuggingEnabled(boolean)"
+    },
+    "setWebViewClient(android.webkit.WebViewClient)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "client"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWebViewClient(android.webkit.WebViewClient)"
+    },
+    "wasClearCacheCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasClearCacheCalled()"
+    },
+    "wasClearFormDataCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasClearFormDataCalled()"
+    },
+    "wasClearHistoryCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasClearHistoryCalled()"
+    },
+    "wasClearViewCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasClearViewCalled()"
+    },
+    "wasDestroyCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasDestroyCalled()"
+    },
+    "wasOnPauseCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasOnPauseCalled()"
+    },
+    "wasOnResumeCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasOnResumeCalled()"
+    }
+  },
+  "imports": [
+    "android.content.pm.PackageInfo",
+    "android.graphics.Bitmap",
+    "android.os.Build",
+    "android.os.Bundle",
+    "android.view.ViewGroup.LayoutParams",
+    "android.webkit.ValueCallback",
+    "android.webkit.WebBackForwardList",
+    "android.webkit.WebChromeClient",
+    "android.webkit.WebHistoryItem",
+    "android.webkit.WebSettings",
+    "android.webkit.WebView",
+    "android.webkit.WebViewClient",
+    "java.lang.reflect.Field",
+    "java.lang.reflect.InvocationHandler",
+    "java.lang.reflect.Method",
+    "java.lang.reflect.Proxy",
+    "java.util.ArrayList",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.Map",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.fakes.RoboWebSettings",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowWebView.LoadDataWithBaseURL",
+    "org.robolectric.shadows.ShadowWebView.LoadData",
+    "org.robolectric.shadows.ShadowWebView.BackForwardList",
+    "org.robolectric.shadows.ShadowWebView.HistoryItem"
+  ],
+  "name": "org.robolectric.shadows.ShadowWebView"
+}

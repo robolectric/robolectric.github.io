@@ -1,0 +1,8 @@
+{
+  "methods": {},
+  "imports": [
+    "android.graphics.DashPathEffect",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowDashPathEffect"
+}

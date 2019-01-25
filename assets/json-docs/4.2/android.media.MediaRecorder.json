@@ -1,0 +1,500 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    },
+    "getAudioChannels()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAudioChannels()"
+    },
+    "getAudioEncoder()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAudioEncoder()"
+    },
+    "getAudioEncodingBitRate()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAudioEncodingBitRate()"
+    },
+    "getAudioSamplingRate()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAudioSamplingRate()"
+    },
+    "getAudioSource()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAudioSource()"
+    },
+    "getCamera()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.hardware.Camera",
+      "exceptions": [],
+      "name": "getCamera()"
+    },
+    "getErrorListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.media.MediaRecorder.OnErrorListener",
+      "exceptions": [],
+      "name": "getErrorListener()"
+    },
+    "getInfoListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.media.MediaRecorder.OnInfoListener",
+      "exceptions": [],
+      "name": "getInfoListener()"
+    },
+    "getMaxDuration()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMaxDuration()"
+    },
+    "getMaxFileSize()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getMaxFileSize()"
+    },
+    "getOutputFormat()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getOutputFormat()"
+    },
+    "getOutputPath()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getOutputPath()"
+    },
+    "getPreviewDisplay()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.Surface",
+      "exceptions": [],
+      "name": "getPreviewDisplay()"
+    },
+    "getState()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getState()"
+    },
+    "getVideoEncoder()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getVideoEncoder()"
+    },
+    "getVideoEncodingBitRate()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getVideoEncodingBitRate()"
+    },
+    "getVideoFrameRate()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getVideoFrameRate()"
+    },
+    "getVideoHeight()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getVideoHeight()"
+    },
+    "getVideoSource()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getVideoSource()"
+    },
+    "getVideoWidth()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getVideoWidth()"
+    },
+    "prepare()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "prepare()"
+    },
+    "release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "release()"
+    },
+    "reset()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setAudioChannels(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "numChannels"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAudioChannels(int)"
+    },
+    "setAudioEncoder(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audio_encoder"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAudioEncoder(int)"
+    },
+    "setAudioEncodingBitRate(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bitRate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAudioEncodingBitRate(int)"
+    },
+    "setAudioSamplingRate(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "samplingRate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAudioSamplingRate(int)"
+    },
+    "setAudioSource(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audio_source"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAudioSource(int)"
+    },
+    "setCamera(android.hardware.Camera)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "c"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCamera(android.hardware.Camera)"
+    },
+    "setMaxDuration(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "max_duration_ms"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaxDuration(int)"
+    },
+    "setMaxFileSize(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "max_filesize_bytes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaxFileSize(long)"
+    },
+    "setOnErrorListener(android.media.MediaRecorder.OnErrorListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "l"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnErrorListener(android.media.MediaRecorder.OnErrorListener)"
+    },
+    "setOnInfoListener(android.media.MediaRecorder.OnInfoListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnInfoListener(android.media.MediaRecorder.OnInfoListener)"
+    },
+    "setOutputFile(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOutputFile(java.lang.String)"
+    },
+    "setOutputFormat(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "output_format"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOutputFormat(int)"
+    },
+    "setPreviewDisplay(android.view.Surface)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "sv"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPreviewDisplay(android.view.Surface)"
+    },
+    "setVideoEncoder(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "video_encoder"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVideoEncoder(int)"
+    },
+    "setVideoEncodingBitRate(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bitRate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVideoEncodingBitRate(int)"
+    },
+    "setVideoFrameRate(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVideoFrameRate(int)"
+    },
+    "setVideoSize(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVideoSize(int,int)"
+    },
+    "setVideoSource(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "video_source"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVideoSource(int)"
+    },
+    "start()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "start()"
+    },
+    "stop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stop()"
+    }
+  },
+  "imports": [
+    "android.hardware.Camera",
+    "android.media.MediaRecorder",
+    "android.view.Surface",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowMediaRecorder"
+}

@@ -1,0 +1,23 @@
+{
+  "methods": {
+    "isNinePatchChunk(byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "chunk"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isNinePatchChunk(byte[])"
+    }
+  },
+  "imports": [
+    "android.graphics.NinePatch",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowNinePatch"
+}

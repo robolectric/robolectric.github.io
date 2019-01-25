@@ -1,0 +1,30 @@
+{
+  "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    }
+  },
+  "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.os.Build",
+    "android.os.StrictMode",
+    "android.os.StrictMode.VmPolicy",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowStrictModeVmPolicy._StrictMode_"
+  ],
+  "name": "org.robolectric.shadows.ShadowStrictModeVmPolicy"
+}

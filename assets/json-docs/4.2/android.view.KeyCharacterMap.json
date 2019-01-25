@@ -1,0 +1,110 @@
+{
+  "methods": {
+    "get(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "keyCode",
+        "metaState"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "get(int,int)"
+    },
+    "getDownEvent(char)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "a"
+      ],
+      "returnType": "android.view.KeyEvent",
+      "exceptions": [],
+      "name": "getDownEvent(char)"
+    },
+    "getEvents(char[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "chars"
+      ],
+      "returnType": "android.view.KeyEvent[]",
+      "exceptions": [],
+      "name": "getEvents(char[])"
+    },
+    "getKeyboardType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getKeyboardType()"
+    },
+    "getMetaState(char)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "a"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMetaState(char)"
+    },
+    "getUpEvent(char)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "a"
+      ],
+      "returnType": "android.view.KeyEvent",
+      "exceptions": [],
+      "name": "getUpEvent(char)"
+    },
+    "load(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "deviceId"
+      ],
+      "returnType": "android.view.KeyCharacterMap",
+      "exceptions": [],
+      "name": "load(int)"
+    },
+    "toCharKeyCode(char)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "a"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "toCharKeyCode(char)"
+    }
+  },
+  "imports": [
+    "android.view.KeyCharacterMap",
+    "android.view.KeyEvent",
+    "java.util.HashMap",
+    "java.util.Map",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowKeyCharacterMap"
+}

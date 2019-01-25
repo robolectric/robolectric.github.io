@@ -1,0 +1,36 @@
+{
+  "methods": {
+    "__constructor__(android.hardware.Camera,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "camera",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.hardware.Camera,int,int)"
+    }
+  },
+  "imports": [
+    "org.robolectric.shadow.api.Shadow.newInstanceOf",
+    "android.graphics.ImageFormat",
+    "android.hardware.Camera",
+    "android.view.SurfaceHolder",
+    "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowCamera.ShadowSize"
+}

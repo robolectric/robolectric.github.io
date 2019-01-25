@@ -1,0 +1,49 @@
+{
+  "methods": {
+    "isAnimatedTransition()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAnimatedTransition()"
+    },
+    "setSelection(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "position"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSelection(int)"
+    },
+    "setSelection(int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "position",
+        "animate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSelection(int,boolean)"
+    }
+  },
+  "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.widget.AbsSpinner",
+    "android.widget.SpinnerAdapter",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowAbsSpinner"
+}

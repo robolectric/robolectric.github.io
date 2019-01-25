@@ -1,0 +1,23 @@
+{
+  "methods": {
+    "getFillEventHistory()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.service.autofill.FillEventHistory",
+      "exceptions": [],
+      "name": "getFillEventHistory()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.service.autofill.FillEventHistory",
+    "android.view.autofill.AutofillManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowAutofillManager",
+  "documentation": "Robolectric implementation of {@link android.os.AutofillManager}.\n"
+}

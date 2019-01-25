@@ -1,0 +1,686 @@
+{
+  "methods": {
+    "__constructor__(android.graphics.Bitmap)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bitmap"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.graphics.Bitmap)"
+    },
+    "appendDescription(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "s"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "appendDescription(java.lang.String)"
+    },
+    "describeBitmap(android.graphics.Bitmap,android.graphics.Paint)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "bitmap",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "describeBitmap(android.graphics.Bitmap,android.graphics.Paint)"
+    },
+    "drawArc(android.graphics.RectF,float,float,boolean,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "oval",
+        "startAngle",
+        "sweepAngle",
+        "useCenter",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawArc(android.graphics.RectF,float,float,boolean,android.graphics.Paint)"
+    },
+    "drawBitmap(android.graphics.Bitmap,android.graphics.Matrix,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bitmap",
+        "matrix",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawBitmap(android.graphics.Bitmap,android.graphics.Matrix,android.graphics.Paint)"
+    },
+    "drawBitmap(android.graphics.Bitmap,android.graphics.Rect,android.graphics.Rect,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bitmap",
+        "src",
+        "dst",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawBitmap(android.graphics.Bitmap,android.graphics.Rect,android.graphics.Rect,android.graphics.Paint)"
+    },
+    "drawBitmap(android.graphics.Bitmap,android.graphics.Rect,android.graphics.RectF,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bitmap",
+        "src",
+        "dst",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawBitmap(android.graphics.Bitmap,android.graphics.Rect,android.graphics.RectF,android.graphics.Paint)"
+    },
+    "drawBitmap(android.graphics.Bitmap,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bitmap",
+        "left",
+        "top",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawBitmap(android.graphics.Bitmap,float,float,android.graphics.Paint)"
+    },
+    "drawCircle(float,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cx",
+        "cy",
+        "radius",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawCircle(float,float,float,android.graphics.Paint)"
+    },
+    "drawColor(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "color"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawColor(int)"
+    },
+    "drawLine(float,float,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "startX",
+        "startY",
+        "stopX",
+        "stopY",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawLine(float,float,float,float,android.graphics.Paint)"
+    },
+    "drawOval(android.graphics.RectF,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "oval",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawOval(android.graphics.RectF,android.graphics.Paint)"
+    },
+    "drawPaint(android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawPaint(android.graphics.Paint)"
+    },
+    "drawPath(android.graphics.Path,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawPath(android.graphics.Path,android.graphics.Paint)"
+    },
+    "drawRect(float,float,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawRect(float,float,float,float,android.graphics.Paint)"
+    },
+    "drawText(char[],int,int,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "index",
+        "count",
+        "x",
+        "y",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawText(char[],int,int,float,float,android.graphics.Paint)"
+    },
+    "drawText(java.lang.CharSequence,int,int,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "start",
+        "end",
+        "x",
+        "y",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawText(java.lang.CharSequence,int,int,float,float,android.graphics.Paint)"
+    },
+    "drawText(java.lang.String,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "x",
+        "y",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawText(java.lang.String,float,float,android.graphics.Paint)"
+    },
+    "drawText(java.lang.String,int,int,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "start",
+        "end",
+        "x",
+        "y",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawText(java.lang.String,int,int,float,float,android.graphics.Paint)"
+    },
+    "formatColorMatric(android.graphics.ColorMatrix)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "colorMatrix"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "formatColorMatric(android.graphics.ColorMatrix)"
+    },
+    "getArcPaintHistoryCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getArcPaintHistoryCount()"
+    },
+    "getCirclePaintHistoryCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCirclePaintHistoryCount()"
+    },
+    "getDescription()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getDescription()"
+    },
+    "getDrawnArc(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.ArcPaintHistoryEvent",
+      "exceptions": [],
+      "name": "getDrawnArc(int)"
+    },
+    "getDrawnCircle(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.CirclePaintHistoryEvent",
+      "exceptions": [],
+      "name": "getDrawnCircle(int)"
+    },
+    "getDrawnLine(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.LinePaintHistoryEvent",
+      "exceptions": [],
+      "name": "getDrawnLine(int)"
+    },
+    "getDrawnOval(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.OvalPaintHistoryEvent",
+      "exceptions": [],
+      "name": "getDrawnOval(int)"
+    },
+    "getDrawnPaint()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Paint",
+      "exceptions": [],
+      "name": "getDrawnPaint()"
+    },
+    "getDrawnPath(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "android.graphics.Path",
+      "exceptions": [],
+      "name": "getDrawnPath(int)"
+    },
+    "getDrawnPathPaint(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "android.graphics.Paint",
+      "exceptions": [],
+      "name": "getDrawnPathPaint(int)"
+    },
+    "getDrawnRect(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.RectPaintHistoryEvent",
+      "exceptions": [],
+      "name": "getDrawnRect(int)"
+    },
+    "getDrawnTextEvent(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.TextHistoryEvent",
+      "exceptions": [],
+      "name": "getDrawnTextEvent(int)"
+    },
+    "getHeight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHeight()"
+    },
+    "getLastDrawnRect()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.RectPaintHistoryEvent",
+      "exceptions": [],
+      "name": "getLastDrawnRect()"
+    },
+    "getLinePaintHistoryCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLinePaintHistoryCount()"
+    },
+    "getOvalPaintHistoryCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getOvalPaintHistoryCount()"
+    },
+    "getPathPaintHistoryCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPathPaintHistoryCount()"
+    },
+    "getRectPaintHistoryCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRectPaintHistoryCount()"
+    },
+    "getTextHistoryCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTextHistoryCount()"
+    },
+    "getWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWidth()"
+    },
+    "hasDrawnCircle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasDrawnCircle()"
+    },
+    "hasDrawnPath()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasDrawnPath()"
+    },
+    "resetCanvasHistory()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetCanvasHistory()"
+    },
+    "restore()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "restore()"
+    },
+    "save()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "save()"
+    },
+    "scale(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "sx",
+        "sy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "scale(float,float)"
+    },
+    "scale(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "sx",
+        "sy",
+        "px",
+        "py"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "scale(float,float,float,float)"
+    },
+    "separateLines()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "separateLines()"
+    },
+    "setBitmap(android.graphics.Bitmap)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bitmap"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBitmap(android.graphics.Bitmap)"
+    },
+    "setHeight(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHeight(int)"
+    },
+    "setWidth(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "width"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWidth(int)"
+    },
+    "translate(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "translate(float,float)"
+    },
+    "visualize(android.graphics.Canvas)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "canvas"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "visualize(android.graphics.Canvas)",
+      "documentation": "Returns a textual representation of the appearance of the object.\n\n@param canvas the canvas to visualize\n@return The textual representation of the appearance of the object.\n"
+    }
+  },
+  "imports": [
+    "android.graphics.Bitmap",
+    "android.graphics.Canvas",
+    "android.graphics.ColorFilter",
+    "android.graphics.ColorMatrix",
+    "android.graphics.ColorMatrixColorFilter",
+    "android.graphics.Matrix",
+    "android.graphics.Paint",
+    "android.graphics.Path",
+    "android.graphics.Rect",
+    "android.graphics.RectF",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.Join",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowCanvas.LinePaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.OvalPaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.RectPaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.PathPaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.CirclePaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.ArcPaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.TextHistoryEvent"
+  ],
+  "name": "org.robolectric.shadows.ShadowCanvas",
+  "documentation": "Broken. This implementation is very specific to the application for which it was developed.\nTodo: Reimplement. Consider using the same strategy of collecting a history of draw events\nand providing methods for writing queries based on type, number, and order of events.\n"
+}

@@ -1,0 +1,142 @@
+{
+  "methods": {
+    "getErrorDialog(android.app.Activity,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "activity",
+        "errorCode",
+        "requestCode"
+      ],
+      "returnType": "android.app.Dialog",
+      "exceptions": [],
+      "name": "getErrorDialog(android.app.Activity,int,int)"
+    },
+    "getErrorDialog(android.app.Activity,int,int,android.content.DialogInterface.OnCancelListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "activity",
+        "errorCode",
+        "requestCode",
+        "cancelListener"
+      ],
+      "returnType": "android.app.Dialog",
+      "exceptions": [],
+      "name": "getErrorDialog(android.app.Activity,int,int,android.content.DialogInterface.OnCancelListener)"
+    },
+    "getInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "com.google.android.gms.common.GoogleApiAvailability",
+      "exceptions": [],
+      "name": "getInstance()"
+    },
+    "getOpenSourceSoftwareLicenseInfo(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getOpenSourceSoftwareLicenseInfo(android.content.Context)"
+    },
+    "isGooglePlayServicesAvailable(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "isGooglePlayServicesAvailable(android.content.Context)"
+    },
+    "isUserResolvableError(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "errorCode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isUserResolvableError(int)"
+    },
+    "setErrorDialog(android.app.Dialog)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "errorDialog"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setErrorDialog(android.app.Dialog)"
+    },
+    "setIsGooglePlayServicesAvailable(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "availabilityCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsGooglePlayServicesAvailable(int)"
+    },
+    "setIsUserResolvableError(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isUserResolvableError"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsUserResolvableError(boolean)"
+    },
+    "setOpenSourceSoftwareLicenseInfo(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "openSourceSoftwareLicenseInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOpenSourceSoftwareLicenseInfo(java.lang.String)"
+    }
+  },
+  "imports": [
+    "android.app.Activity",
+    "android.app.Dialog",
+    "android.content.Context",
+    "android.content.DialogInterface",
+    "com.google.android.gms.common.ConnectionResult",
+    "com.google.android.gms.common.GoogleApiAvailability",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.gms.common.ShadowGoogleApiAvailability.InstanceHolder"
+  ],
+  "name": "org.robolectric.shadows.gms.common.ShadowGoogleApiAvailability"
+}

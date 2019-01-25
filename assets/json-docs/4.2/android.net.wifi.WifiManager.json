@@ -1,0 +1,556 @@
+{
+  "methods": {
+    "addNetwork(android.net.wifi.WifiConfiguration)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "config"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "addNetwork(android.net.wifi.WifiConfiguration)"
+    },
+    "calculateSignalLevel(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "rssi",
+        "numLevels"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "calculateSignalLevel(int,int)"
+    },
+    "checkAccessWifiStatePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkAccessWifiStatePermission()"
+    },
+    "connect(android.net.wifi.WifiConfiguration,android.net.wifi.WifiManager.ActionListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "wifiConfiguration",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "connect(android.net.wifi.WifiConfiguration,android.net.wifi.WifiManager.ActionListener)"
+    },
+    "connect(int,android.net.wifi.WifiManager.ActionListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "networkId",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "connect(int,android.net.wifi.WifiManager.ActionListener)"
+    },
+    "createMulticastLock(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "android.net.wifi.WifiManager.MulticastLock",
+      "exceptions": [],
+      "name": "createMulticastLock(java.lang.String)"
+    },
+    "createWifiLock(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "lockType",
+        "tag"
+      ],
+      "returnType": "android.net.wifi.WifiManager.WifiLock",
+      "exceptions": [],
+      "name": "createWifiLock(int,java.lang.String)"
+    },
+    "createWifiLock(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "android.net.wifi.WifiManager.WifiLock",
+      "exceptions": [],
+      "name": "createWifiLock(java.lang.String)"
+    },
+    "enableNetwork(int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "netId",
+        "disableOthers"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "enableNetwork(int,boolean)"
+    },
+    "getActiveLockCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getActiveLockCount()",
+      "documentation": "Returns the number of WifiLocks and MulticastLocks that are currently acquired. "
+    },
+    "getConfiguredNetworks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.net.wifi.WifiConfiguration\u003e",
+      "exceptions": [],
+      "name": "getConfiguredNetworks()"
+    },
+    "getConnectionInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.net.wifi.WifiInfo",
+      "exceptions": [],
+      "name": "getConnectionInfo()"
+    },
+    "getDhcpInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.net.DhcpInfo",
+      "exceptions": [],
+      "name": "getDhcpInfo()"
+    },
+    "getLastEnabledNetwork()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.util.Pair\u003cjava.lang.Integer,java.lang.Boolean\u003e",
+      "exceptions": [],
+      "name": "getLastEnabledNetwork()"
+    },
+    "getMostRecentNetwork()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.net.wifi.WifiConfiguration",
+      "exceptions": [],
+      "name": "getMostRecentNetwork()"
+    },
+    "getPrivilegedConfiguredNetworks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.net.wifi.WifiConfiguration\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getPrivilegedConfiguredNetworks()"
+    },
+    "getScanResults()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.net.wifi.ScanResult\u003e",
+      "exceptions": [],
+      "name": "getScanResults()"
+    },
+    "getWifiConfiguration(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "netId"
+      ],
+      "returnType": "android.net.wifi.WifiConfiguration",
+      "exceptions": [],
+      "name": "getWifiConfiguration(int)"
+    },
+    "getWifiState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWifiState()"
+    },
+    "is5GHzBandSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "is5GHzBandSupported()"
+    },
+    "isQuoted(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "str"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isQuoted(java.lang.String)"
+    },
+    "isScanAlwaysAvailable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "isScanAlwaysAvailable()"
+    },
+    "isWifiEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isWifiEnabled()"
+    },
+    "makeCopy(android.net.wifi.WifiConfiguration,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "config",
+        "networkId"
+      ],
+      "returnType": "android.net.wifi.WifiConfiguration",
+      "exceptions": [],
+      "name": "makeCopy(android.net.wifi.WifiConfiguration,int)"
+    },
+    "reconnect()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "reconnect()"
+    },
+    "removeNetwork(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "netId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "removeNetwork(int)"
+    },
+    "saveConfiguration()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "saveConfiguration()"
+    },
+    "setAccessWifiStatePermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accessWifiStatePermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccessWifiStatePermission(boolean)"
+    },
+    "setConnectionInfo(android.net.wifi.WifiInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "wifiInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConnectionInfo(android.net.wifi.WifiInfo)",
+      "documentation": "Sets the connection info as the provided {@link WifiInfo}.\n"
+    },
+    "setDhcpInfo(android.net.DhcpInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dhcpInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDhcpInfo(android.net.DhcpInfo)"
+    },
+    "setIs5GHzBandSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "is5GHzBandSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIs5GHzBandSupported(boolean)",
+      "documentation": "Sets whether 5ghz band is supported. "
+    },
+    "setIsScanAlwaysAvailable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isScanAlwaysAvailable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsScanAlwaysAvailable(boolean)"
+    },
+    "setScanResults(java.util.List\u003candroid.net.wifi.ScanResult\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "scanResults"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setScanResults(java.util.List\u003candroid.net.wifi.ScanResult\u003e)"
+    },
+    "setSignalLevelInPercent(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "level"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSignalLevelInPercent(float)"
+    },
+    "setStartScanSucceeds(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "succeeds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStartScanSucceeds(boolean)",
+      "documentation": "Sets the return value of {@link #startScan}. "
+    },
+    "setUpdateNetworkPermission(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkId",
+        "hasPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUpdateNetworkPermission(int,boolean)",
+      "documentation": "Prevents a networkId from being updated using the {@link updateNetwork(WifiConfiguration)}\nmethod. This is to simulate the case where a separate application creates a network, and the\nAndroid security model prevents your application from updating it.\n"
+    },
+    "setWifiEnabled(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "wifiEnabled"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setWifiEnabled(boolean)"
+    },
+    "shadowOf(android.net.wifi.WifiManager)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowWifiManager",
+      "exceptions": [],
+      "name": "shadowOf(android.net.wifi.WifiManager)"
+    },
+    "shadowOf(android.net.wifi.WifiManager.MulticastLock)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowWifiManager.ShadowMulticastLock",
+      "exceptions": [],
+      "name": "shadowOf(android.net.wifi.WifiManager.MulticastLock)"
+    },
+    "shadowOf(android.net.wifi.WifiManager.WifiLock)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock",
+      "exceptions": [],
+      "name": "shadowOf(android.net.wifi.WifiManager.WifiLock)"
+    },
+    "startScan()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "startScan()",
+      "documentation": "Does nothing and returns the configured success status.\n\n\u003cp\u003eThat is different from the Android implementation which always returns {@code true} up to\nand including Android 8, and either {@code true} or {@code false} on Android 9+.\n\n@return the value configured by {@link #setStartScanSucceeds}, or {@code true} if that method\n    was never called.\n"
+    },
+    "stripQuotes(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "str"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "stripQuotes(java.lang.String)"
+    },
+    "updateNetwork(android.net.wifi.WifiConfiguration)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "config"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "updateNetwork(android.net.wifi.WifiConfiguration)",
+      "documentation": "Adds or updates a network which can later be retrieved with {@link #getWifiConfiguration(int)}\nmethod. A null {@param config}, or one with a networkId less than 0, or a networkId that had\nits updatePermission removed using the {@link #setUpdateNetworkPermission(int, boolean)} will\nreturn -1, which indicates a failure to update.\n"
+    },
+    "wasConfigurationSaved()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasConfigurationSaved()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.content.Context",
+    "android.net.ConnectivityManager",
+    "android.net.DhcpInfo",
+    "android.net.NetworkInfo",
+    "android.net.wifi.ScanResult",
+    "android.net.wifi.WifiConfiguration",
+    "android.net.wifi.WifiInfo",
+    "android.net.wifi.WifiManager",
+    "android.net.wifi.WifiManager.MulticastLock",
+    "android.util.Pair",
+    "java.util.ArrayList",
+    "java.util.BitSet",
+    "java.util.LinkedHashMap",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.concurrent.atomic.AtomicInteger",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock",
+    "org.robolectric.shadows.ShadowWifiManager.ShadowMulticastLock"
+  ],
+  "name": "org.robolectric.shadows.ShadowWifiManager",
+  "documentation": "Shadow for {@link android.net.wifi.WifiManager}.\n"
+}

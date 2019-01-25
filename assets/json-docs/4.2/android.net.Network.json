@@ -1,0 +1,85 @@
+{
+  "methods": {
+    "bindSocket(java.io.FileDescriptor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "fd"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "bindSocket(java.io.FileDescriptor)",
+      "documentation": "No-ops. We cannot assume that a Network represents a real network interface on the device\nrunning this test, so we have nothing to bind the socket to.\n"
+    },
+    "bindSocket(java.net.DatagramSocket)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "socket"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "bindSocket(java.net.DatagramSocket)",
+      "documentation": "No-ops. We cannot assume that a Network represents a real network interface on the device\nrunning this test, so we have nothing to bind the socket to.\n"
+    },
+    "bindSocket(java.net.Socket)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "socket"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "bindSocket(java.net.Socket)",
+      "documentation": "No-ops. We cannot assume that a Network represents a real network interface on the device\nrunning this test, so we have nothing to bind the socket to.\n"
+    },
+    "getNetId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNetId()",
+      "documentation": "Allows to get the stored netId.\n\n@return The netId.\n"
+    },
+    "newInstance(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "netId"
+      ],
+      "returnType": "android.net.Network",
+      "exceptions": [],
+      "name": "newInstance(int)",
+      "documentation": "Creates new instance of {@link Network}, because its constructor is hidden.\n\n@param netId The netId.\n@return The Network instance.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.M",
+    "android.net.Network",
+    "java.io.FileDescriptor",
+    "java.net.DatagramSocket",
+    "java.net.Socket",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowNetwork"
+}

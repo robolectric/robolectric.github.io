@@ -1,0 +1,34 @@
+{
+  "methods": {
+    "getInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.webkit.CookieManager",
+      "exceptions": [],
+      "name": "getInstance()"
+    },
+    "resetCookies()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetCookies()"
+    }
+  },
+  "imports": [
+    "android.webkit.CookieManager",
+    "android.webkit.RoboCookieManager",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.shadows.ShadowCookieManager"
+}

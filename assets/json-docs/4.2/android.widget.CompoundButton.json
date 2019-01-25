@@ -1,0 +1,58 @@
+{
+  "methods": {
+    "getButtonDrawable()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "getButtonDrawable()"
+    },
+    "getButtonDrawableId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getButtonDrawableId()"
+    },
+    "setButtonDrawable(android.graphics.drawable.Drawable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buttonDrawable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setButtonDrawable(android.graphics.drawable.Drawable)"
+    },
+    "setButtonDrawable(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buttonDrawableId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setButtonDrawable(int)"
+    }
+  },
+  "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "android.graphics.drawable.Drawable",
+    "android.widget.CompoundButton",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
+  "name": "org.robolectric.shadows.ShadowCompoundButton"
+}

@@ -1,0 +1,34 @@
+{
+  "methods": {
+    "getOnSeekBarChangeListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.widget.SeekBar.OnSeekBarChangeListener",
+      "exceptions": [],
+      "name": "getOnSeekBarChangeListener()"
+    },
+    "setOnSeekBarChangeListener(android.widget.SeekBar.OnSeekBarChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnSeekBarChangeListener(android.widget.SeekBar.OnSeekBarChangeListener)"
+    }
+  },
+  "imports": [
+    "android.widget.SeekBar",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowSeekBar"
+}

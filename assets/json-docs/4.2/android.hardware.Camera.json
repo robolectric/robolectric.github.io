@@ -1,0 +1,396 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "addCallbackBuffer(byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callbackBuffer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addCallbackBuffer(byte[])"
+    },
+    "addCameraInfo(int,android.hardware.Camera.CameraInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "id",
+        "camInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addCameraInfo(int,android.hardware.Camera.CameraInfo)",
+      "documentation": "Add a mock {@code Camera.CameraInfo} object to simulate the existence of one or more cameras.\nBy default, no cameras are defined.\n\n@param id The camera id\n@param camInfo The CameraInfo\n"
+    },
+    "autoFocus(android.hardware.Camera.AutoFocusCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "autoFocus(android.hardware.Camera.AutoFocusCallback)"
+    },
+    "cancelAutoFocus()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancelAutoFocus()"
+    },
+    "clearCameraInfo()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearCameraInfo()"
+    },
+    "getAddedCallbackBuffers()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cbyte[]\u003e",
+      "exceptions": [],
+      "name": "getAddedCallbackBuffers()"
+    },
+    "getCameraInfo(int,android.hardware.Camera.CameraInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cameraId",
+        "cameraInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getCameraInfo(int,android.hardware.Camera.CameraInfo)"
+    },
+    "getDisplayOrientation()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDisplayOrientation()"
+    },
+    "getLastOpenedCameraId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLastOpenedCameraId()"
+    },
+    "getNumberOfCameras()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNumberOfCameras()"
+    },
+    "getParameters()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.hardware.Camera.Parameters",
+      "exceptions": [],
+      "name": "getParameters()"
+    },
+    "getPreviewDisplay()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.SurfaceHolder",
+      "exceptions": [],
+      "name": "getPreviewDisplay()"
+    },
+    "hasRequestedAutoFocus()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasRequestedAutoFocus()"
+    },
+    "invokeAutoFocusCallback(boolean,android.hardware.Camera)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "success",
+        "camera"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "invokeAutoFocusCallback(boolean,android.hardware.Camera)"
+    },
+    "invokePreviewCallback(byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "data"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "invokePreviewCallback(byte[])",
+      "documentation": "Allows test cases to invoke the preview callback, to simulate a frame of camera data.\n\n@param data byte buffer of simulated camera data\n"
+    },
+    "isLocked()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLocked()"
+    },
+    "isPreviewing()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isPreviewing()"
+    },
+    "isReleased()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isReleased()"
+    },
+    "open()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.hardware.Camera",
+      "exceptions": [],
+      "name": "open()"
+    },
+    "open(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cameraId"
+      ],
+      "returnType": "android.hardware.Camera",
+      "exceptions": [],
+      "name": "open(int)"
+    },
+    "reconnect()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reconnect()"
+    },
+    "release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "release()"
+    },
+    "setDisplayOrientation(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "degrees"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDisplayOrientation(int)"
+    },
+    "setOneShotPreviewCallback(android.hardware.Camera.PreviewCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cb"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOneShotPreviewCallback(android.hardware.Camera.PreviewCallback)"
+    },
+    "setParameters(android.hardware.Camera.Parameters)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "params"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setParameters(android.hardware.Camera.Parameters)"
+    },
+    "setPreviewCallback(android.hardware.Camera.PreviewCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cb"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPreviewCallback(android.hardware.Camera.PreviewCallback)"
+    },
+    "setPreviewCallbackWithBuffer(android.hardware.Camera.PreviewCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cb"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPreviewCallbackWithBuffer(android.hardware.Camera.PreviewCallback)"
+    },
+    "setPreviewDisplay(android.view.SurfaceHolder)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "holder"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPreviewDisplay(android.view.SurfaceHolder)"
+    },
+    "startPreview()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startPreview()"
+    },
+    "stopPreview()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopPreview()"
+    },
+    "takePicture(android.hardware.Camera.ShutterCallback,android.hardware.Camera.PictureCallback,android.hardware.Camera.PictureCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "shutter",
+        "raw",
+        "jpeg"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "takePicture(android.hardware.Camera.ShutterCallback,android.hardware.Camera.PictureCallback,android.hardware.Camera.PictureCallback)"
+    },
+    "unlock()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unlock()"
+    }
+  },
+  "imports": [
+    "org.robolectric.shadow.api.Shadow.newInstanceOf",
+    "android.graphics.ImageFormat",
+    "android.hardware.Camera",
+    "android.view.SurfaceHolder",
+    "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowCamera.ShadowParameters",
+    "org.robolectric.shadows.ShadowCamera.ShadowSize"
+  ],
+  "name": "org.robolectric.shadows.ShadowCamera"
+}

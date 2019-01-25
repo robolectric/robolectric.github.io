@@ -1,0 +1,289 @@
+{
+  "methods": {
+    "get(android.content.ContentResolver)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "cr"
+      ],
+      "returnType": "java.util.Map\u003cjava.lang.String,java.lang.Object\u003e",
+      "exceptions": [],
+      "name": "get(android.content.ContentResolver)"
+    },
+    "getFloat(android.content.ContentResolver,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name"
+      ],
+      "returnType": "float",
+      "exceptions": [
+        "android.provider.Settings.SettingNotFoundException"
+      ],
+      "name": "getFloat(android.content.ContentResolver,java.lang.String)"
+    },
+    "getFloat(android.content.ContentResolver,java.lang.String,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "def"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getFloat(android.content.ContentResolver,java.lang.String,float)"
+    },
+    "getInt(android.content.ContentResolver,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "resolver",
+        "name"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "android.provider.Settings.SettingNotFoundException"
+      ],
+      "name": "getInt(android.content.ContentResolver,java.lang.String)"
+    },
+    "getInt(android.content.ContentResolver,java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "resolver",
+        "name",
+        "def"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getInt(android.content.ContentResolver,java.lang.String,int)"
+    },
+    "getLong(android.content.ContentResolver,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name"
+      ],
+      "returnType": "long",
+      "exceptions": [
+        "android.provider.Settings.SettingNotFoundException"
+      ],
+      "name": "getLong(android.content.ContentResolver,java.lang.String)"
+    },
+    "getLong(android.content.ContentResolver,java.lang.String,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "def"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getLong(android.content.ContentResolver,java.lang.String,long)"
+    },
+    "getString(android.content.ContentResolver,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getString(android.content.ContentResolver,java.lang.String)"
+    },
+    "getStringForUser(android.content.ContentResolver,java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "userHandle"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "getStringForUser(android.content.ContentResolver,java.lang.String,int)"
+    },
+    "putFloat(android.content.ContentResolver,java.lang.String,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "putFloat(android.content.ContentResolver,java.lang.String,float)"
+    },
+    "putInt(android.content.ContentResolver,java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "resolver",
+        "name",
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "putInt(android.content.ContentResolver,java.lang.String,int)"
+    },
+    "putIntForUser(android.content.ContentResolver,java.lang.String,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "value",
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "putIntForUser(android.content.ContentResolver,java.lang.String,int,int)"
+    },
+    "putLong(android.content.ContentResolver,java.lang.String,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "putLong(android.content.ContentResolver,java.lang.String,long)"
+    },
+    "putString(android.content.ContentResolver,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "putString(android.content.ContentResolver,java.lang.String,java.lang.String)"
+    },
+    "setLocationProviderEnabled(android.content.ContentResolver,java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "provider",
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 16,
+      "name": "setLocationProviderEnabled(android.content.ContentResolver,java.lang.String,boolean)"
+    },
+    "setLocationProviderEnabledForUser(android.content.ContentResolver,java.lang.String,boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "provider",
+        "enabled",
+        "uid"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "setLocationProviderEnabledForUser(android.content.ContentResolver,java.lang.String,boolean,int)"
+    },
+    "updateEnabledProviders(android.content.ContentResolver,java.lang.String,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "provider",
+        "enabled"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "updateEnabledProviders(android.content.ContentResolver,java.lang.String,boolean)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "android.content.ContentResolver",
+    "android.content.Context",
+    "android.os.Build",
+    "android.provider.Settings",
+    "android.text.TextUtils",
+    "java.util.Arrays",
+    "java.util.HashMap",
+    "java.util.HashSet",
+    "java.util.Map",
+    "java.util.Set",
+    "java.util.WeakHashMap",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowSettings.ShadowSecure"
+}

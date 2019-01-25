@@ -1,0 +1,8 @@
+{
+  "methods": {},
+  "imports": [
+    "android.view.WindowManager",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowWindowManager"
+}

@@ -1,0 +1,52 @@
+{
+  "methods": {
+    "getLastMessageSent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.os.Message",
+      "exceptions": [],
+      "name": "getLastMessageSent()",
+      "documentation": "Returns the last {@link Message} sent, or {@code null} if there isn\u0027t any message sent. "
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "send(android.os.Message)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "message"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.os.RemoteException"
+      ],
+      "name": "send(android.os.Message)"
+    }
+  },
+  "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.os.Message",
+    "android.os.Messenger",
+    "android.os.RemoteException",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.shadows.ShadowMessenger"
+}

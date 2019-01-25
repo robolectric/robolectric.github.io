@@ -1,0 +1,130 @@
+{
+  "methods": {
+    "cancel(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "mayInterruptIfRunning"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "cancel(boolean)"
+    },
+    "execute(Params...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "params"
+      ],
+      "returnType": "android.os.AsyncTask\u003cParams,Progress,Result\u003e",
+      "exceptions": [],
+      "name": "execute(Params...)"
+    },
+    "executeOnExecutor(java.util.concurrent.Executor,Params...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "executor",
+        "params"
+      ],
+      "returnType": "android.os.AsyncTask\u003cParams,Progress,Result\u003e",
+      "exceptions": [],
+      "name": "executeOnExecutor(java.util.concurrent.Executor,Params...)"
+    },
+    "get()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "Result",
+      "exceptions": [
+        "java.lang.InterruptedException",
+        "java.util.concurrent.ExecutionException"
+      ],
+      "name": "get()"
+    },
+    "get(long,java.util.concurrent.TimeUnit)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "timeout",
+        "unit"
+      ],
+      "returnType": "Result",
+      "exceptions": [
+        "java.lang.InterruptedException",
+        "java.util.concurrent.ExecutionException",
+        "java.util.concurrent.TimeoutException"
+      ],
+      "name": "get(long,java.util.concurrent.TimeUnit)"
+    },
+    "getBridge()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowAsyncTaskBridge\u003cParams,Progress,Result\u003e",
+      "exceptions": [],
+      "name": "getBridge()"
+    },
+    "getStatus()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.AsyncTask.Status",
+      "exceptions": [],
+      "name": "getStatus()"
+    },
+    "isCancelled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isCancelled()"
+    },
+    "publishProgress(Progress...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "values"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "publishProgress(Progress...)",
+      "documentation": "Enqueue a call to {@link AsyncTask#onProgressUpdate(Object[])} on UI looper (or run it\nimmediately if the looper it is not paused).\n\n@param values The progress values to update the UI with.\n@see AsyncTask#publishProgress(Object[])\n"
+    }
+  },
+  "imports": [
+    "android.os.AsyncTask",
+    "java.util.concurrent.Callable",
+    "java.util.concurrent.CancellationException",
+    "java.util.concurrent.ExecutionException",
+    "java.util.concurrent.Executor",
+    "java.util.concurrent.FutureTask",
+    "java.util.concurrent.TimeUnit",
+    "java.util.concurrent.TimeoutException",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadows.ShadowAsyncTask.BackgroundWorker",
+    "org.robolectric.shadows.ShadowAsyncTask.OnPostExecuteException"
+  ],
+  "name": "org.robolectric.shadows.ShadowAsyncTask"
+}

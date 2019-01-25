@@ -1,0 +1,480 @@
+{
+  "methods": {
+    "addAutomaticZenRule(android.app.AutomaticZenRule)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "automaticZenRule"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "addAutomaticZenRule(android.app.AutomaticZenRule)"
+    },
+    "areNotificationsEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "areNotificationsEnabled()"
+    },
+    "cancel(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel(int)"
+    },
+    "cancel(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "tag",
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancel(java.lang.String,int)"
+    },
+    "cancelAll()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancelAll()"
+    },
+    "copyAutomaticZenRule(android.app.AutomaticZenRule)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "automaticZenRule"
+      ],
+      "returnType": "android.app.AutomaticZenRule",
+      "exceptions": [],
+      "name": "copyAutomaticZenRule(android.app.AutomaticZenRule)",
+      "documentation": "Returns a copy of {@code automaticZenRule}. "
+    },
+    "createNotificationChannel(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "channel"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "createNotificationChannel(java.lang.Object)"
+    },
+    "createNotificationChannelGroup(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "group"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "createNotificationChannelGroup(java.lang.Object)"
+    },
+    "createNotificationChannelGroups(java.util.List\u003cjava.lang.Object\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "groupList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "createNotificationChannelGroups(java.util.List\u003cjava.lang.Object\u003e)"
+    },
+    "createNotificationChannels(java.util.List\u003cjava.lang.Object\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "channelList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "createNotificationChannels(java.util.List\u003cjava.lang.Object\u003e)"
+    },
+    "deleteNotificationChannel(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "channelId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "deleteNotificationChannel(java.lang.String)"
+    },
+    "deleteNotificationChannelGroup(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "channelGroupId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "deleteNotificationChannelGroup(java.lang.String)",
+      "documentation": "Delete a notification channel group and all notification channels associated with the group.\nThis method will not notify any NotificationListenerService of resulting changes to\nnotification channel groups nor to notification channels.\n"
+    },
+    "enforcePolicyAccess()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enforcePolicyAccess()",
+      "documentation": "Enforces that the caller has notification policy access.\n\n@see NotificationManager#isNotificationPolicyAccessGranted()\n@throws SecurityException if the caller doesn\u0027t have notification policy access\n"
+    },
+    "getActiveNotifications()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.service.notification.StatusBarNotification[]",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getActiveNotifications()"
+    },
+    "getAllNotifications()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.app.Notification\u003e",
+      "exceptions": [],
+      "name": "getAllNotifications()"
+    },
+    "getAutomaticZenRule(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.app.AutomaticZenRule",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getAutomaticZenRule(java.lang.String)"
+    },
+    "getAutomaticZenRules()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.Map\u003cjava.lang.String,android.app.AutomaticZenRule\u003e",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getAutomaticZenRules()"
+    },
+    "getCurrentInterruptionFilter()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getCurrentInterruptionFilter()",
+      "documentation": "@return {@link NotificationManager#INTERRUPTION_FILTER_ALL} by default, or the value specified\n        via {@link #setInterruptionFilter(int)}\n"
+    },
+    "getNotification(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "android.app.Notification",
+      "exceptions": [],
+      "name": "getNotification(int)"
+    },
+    "getNotification(java.lang.String,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "tag",
+        "id"
+      ],
+      "returnType": "android.app.Notification",
+      "exceptions": [],
+      "name": "getNotification(java.lang.String,int)"
+    },
+    "getNotificationChannel(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "channelId"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getNotificationChannel(java.lang.String)"
+    },
+    "getNotificationChannelGroup(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getNotificationChannelGroup(java.lang.String)"
+    },
+    "getNotificationChannelGroups()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.Object\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getNotificationChannelGroups()"
+    },
+    "getNotificationChannels()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.Object\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getNotificationChannels()"
+    },
+    "getNotificationPolicy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [],
+      "returnType": "android.app.NotificationManager.Policy",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getNotificationPolicy()",
+      "documentation": "@return the value specified via {@link #setNotificationPolicy(Policy)}\n"
+    },
+    "isChannelDeleted(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "channelId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isChannelDeleted(java.lang.String)",
+      "documentation": "Checks whether a channel is considered a \"deleted\" channel by Android. This is a channel that\nwas created but later deleted. If a channel is created that was deleted before, it recreates\nthe channel with the old settings.\n"
+    },
+    "isNotificationPolicyAccessGranted()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isNotificationPolicyAccessGranted()",
+      "documentation": "@return the value specified via {@link #setNotificationPolicyAccessGranted(boolean)}\n"
+    },
+    "notify(int,android.app.Notification)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id",
+        "notification"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notify(int,android.app.Notification)"
+    },
+    "notify(java.lang.String,int,android.app.Notification)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "tag",
+        "id",
+        "notification"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notify(java.lang.String,int,android.app.Notification)"
+    },
+    "removeAutomaticZenRule(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "removeAutomaticZenRule(java.lang.String)"
+    },
+    "setInterruptionFilter(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "interruptionFilter"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setInterruptionFilter(int)",
+      "documentation": "Currently does not support checking for granted policy access.\n\n@see NotificationManager#getCurrentInterruptionFilter()\n"
+    },
+    "setNotificationPolicy(android.app.NotificationManager.Policy)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "policy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setNotificationPolicy(android.app.NotificationManager.Policy)",
+      "documentation": "Currently does not support checking for granted policy access.\n\n@see NotificationManager#getNotificationPolicy()\n"
+    },
+    "setNotificationPolicyAccessGranted(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "granted"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNotificationPolicyAccessGranted(boolean)",
+      "documentation": "Sets the value returned by {@link NotificationManager#isNotificationPolicyAccessGranted()}. If\n{@code granted} is false, this also deletes all {@link AutomaticZenRule}s.\n\n@see NotificationManager#isNotificationPolicyAccessGranted()\n"
+    },
+    "setNotificationsEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "areNotificationsEnabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNotificationsEnabled(boolean)"
+    },
+    "size()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "size()"
+    },
+    "updateAutomaticZenRule(java.lang.String,android.app.AutomaticZenRule)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id",
+        "automaticZenRule"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "updateAutomaticZenRule(java.lang.String,android.app.AutomaticZenRule)"
+    }
+  },
+  "imports": [
+    "android.app.NotificationManager.INTERRUPTION_FILTER_ALL",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "android.app.AutomaticZenRule",
+    "android.app.Notification",
+    "android.app.NotificationManager",
+    "android.app.NotificationManager.Policy",
+    "android.os.Build",
+    "android.os.Parcel",
+    "android.service.notification.StatusBarNotification",
+    "com.google.common.base.Preconditions",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.ImmutableMap",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.UUID",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowNotificationManager.Key"
+  ],
+  "name": "org.robolectric.shadows.ShadowNotificationManager"
+}

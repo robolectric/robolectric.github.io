@@ -1,0 +1,71 @@
+{
+  "methods": {
+    "newInstance(java.lang.String,java.lang.String,java.lang.String,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "SSID",
+        "BSSID",
+        "caps",
+        "level",
+        "frequency"
+      ],
+      "returnType": "android.net.wifi.ScanResult",
+      "exceptions": [],
+      "name": "newInstance(java.lang.String,java.lang.String,java.lang.String,int,int)"
+    },
+    "newInstance(java.lang.String,java.lang.String,java.lang.String,int,int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "SSID",
+        "BSSID",
+        "caps",
+        "level",
+        "frequency",
+        "is80211McRTTResponder"
+      ],
+      "returnType": "android.net.wifi.ScanResult",
+      "exceptions": [],
+      "name": "newInstance(java.lang.String,java.lang.String,java.lang.String,int,int,boolean)"
+    },
+    "toString()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "toString()"
+    },
+    "valueOrNone(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "valueOrNone(java.lang.String)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.P",
+    "android.net.wifi.ScanResult",
+    "android.os.Build",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowScanResult"
+}

@@ -1,0 +1,86 @@
+{
+  "methods": {
+    "draw(android.graphics.Canvas)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "canvas"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "draw(android.graphics.Canvas)",
+      "documentation": "Draws the contained bitmap onto the canvas at 0,0 with a default {@code Paint}\n\n@param canvas the canvas to draw on\n"
+    },
+    "getCreatedFromResId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCreatedFromResId()",
+      "documentation": "Returns the resource id that this {@code BitmapDrawable} was loaded from. This lets\nyour tests assert that the bitmap is correct without having to actually load the bitmap.\n\n@return resource id from which this {@code BitmapDrawable} was loaded\n@deprecated use ShadowBitmap#getCreatedFromResId() instead.\n"
+    },
+    "getPath()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getPath()"
+    },
+    "getSource()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getSource()"
+    },
+    "mutate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "mutate()"
+    },
+    "setColorFilter(android.graphics.ColorFilter)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "colorFilter"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setColorFilter(android.graphics.ColorFilter)"
+    }
+  },
+  "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.graphics.Bitmap",
+    "android.graphics.Canvas",
+    "android.graphics.ColorFilter",
+    "android.graphics.Paint",
+    "android.graphics.drawable.BitmapDrawable",
+    "android.graphics.drawable.Drawable",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowBitmapDrawable"
+}

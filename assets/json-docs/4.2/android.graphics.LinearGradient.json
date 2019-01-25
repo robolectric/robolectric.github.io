@@ -1,0 +1,99 @@
+{
+  "methods": {
+    "__constructor__(float,float,float,float,int,int,android.graphics.Shader.TileMode)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x0",
+        "y0",
+        "x1",
+        "y1",
+        "color0",
+        "color1",
+        "tile"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(float,float,float,float,int,int,android.graphics.Shader.TileMode)"
+    },
+    "getColor0()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getColor0()"
+    },
+    "getColor1()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getColor1()"
+    },
+    "getTile()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Shader.TileMode",
+      "exceptions": [],
+      "name": "getTile()"
+    },
+    "getX0()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getX0()"
+    },
+    "getX1()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getX1()"
+    },
+    "getY0()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getY0()"
+    },
+    "getY1()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getY1()"
+    }
+  },
+  "imports": [
+    "android.graphics.LinearGradient",
+    "android.graphics.Shader",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowLinearGradient"
+}

@@ -1,0 +1,26 @@
+{
+  "methods": {
+    "filter(java.lang.CharSequence,android.widget.Filter.FilterListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "constraint",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "filter(java.lang.CharSequence,android.widget.Filter.FilterListener)"
+    }
+  },
+  "imports": [
+    "android.widget.Filter",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowFilter"
+}

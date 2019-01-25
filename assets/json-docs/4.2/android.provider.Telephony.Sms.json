@@ -1,0 +1,54 @@
+{
+  "methods": {
+    "getDefaultSmsPackage(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getDefaultSmsPackage(android.content.Context)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setDefaultSmsPackage(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "defaultSmsPackage"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultSmsPackage(java.lang.String)",
+      "documentation": "Override the package name returned from calling {@link Sms#getDefaultSmsPackage(Context)}.\n\n\u003cp\u003eThis will be reset for the next test.\n"
+    }
+  },
+  "imports": [
+    "android.annotation.Nullable",
+    "android.content.Context",
+    "android.os.Build.VERSION_CODES",
+    "android.provider.Telephony",
+    "android.provider.Telephony.Sms",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.shadows.ShadowTelephony.ShadowSms"
+}

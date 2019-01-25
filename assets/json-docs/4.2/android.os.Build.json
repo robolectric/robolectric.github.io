@@ -1,0 +1,224 @@
+{
+  "methods": {
+    "getRadioVersion()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getRadioVersion()"
+    },
+    "getSerial()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getSerial()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setDevice(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDevice(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#DEVICE} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setFingerprint(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "fingerprint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFingerprint(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#FINGERPRINT} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setId(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setId(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#ID} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setManufacturer(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "manufacturer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setManufacturer(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#MANUFACTURER} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setModel(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "model"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setModel(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#MODEL} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setRadioVersion(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "radioVersion"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRadioVersion(java.lang.String)",
+      "documentation": "Override return value from {@link Build#getRadioVersion()}\n\n@param radioVersion\n"
+    },
+    "setSupported64BitAbis(java.lang.String[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "supported64BitAbis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupported64BitAbis(java.lang.String[])",
+      "documentation": "Sets the value of the {@link Build#SUPPORTED_64_BIT_ABIS} field. Available in Android L+.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
+    "setTags(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "tags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTags(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#TAGS} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setType(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setType(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#TYPE} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setVersionCodename(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "versionCodename"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVersionCodename(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build.VERSION#CODENAME} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setVersionIncremental(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "versionIncremental"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVersionIncremental(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build.VERSION#INCREMENTAL} field.\n\nIt will be reset for the next test.\n"
+    },
+    "setVersionRelease(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "release"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVersionRelease(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build.VERSION#RELEASE} field.\n\nIt will be reset for the next test.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.O",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.TargetApi",
+    "android.os.Build",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowBuild._Build_",
+    "org.robolectric.shadows.ShadowBuild._VERSION_"
+  ],
+  "name": "org.robolectric.shadows.ShadowBuild"
+}

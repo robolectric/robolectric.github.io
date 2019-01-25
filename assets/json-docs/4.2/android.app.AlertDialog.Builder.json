@@ -1,0 +1,17 @@
+{
+  "methods": {},
+  "imports": [
+    "android.app.AlertDialog",
+    "android.content.DialogInterface",
+    "android.view.View",
+    "android.widget.Adapter",
+    "android.widget.FrameLayout",
+    "com.android.internal.app.AlertController",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowAlertDialog.ShadowBuilder"
+}

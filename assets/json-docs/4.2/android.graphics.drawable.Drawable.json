@@ -1,0 +1,252 @@
+{
+  "methods": {
+    "addCorruptStreamSource(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "src"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addCorruptStreamSource(java.lang.String)"
+    },
+    "clearCorruptStreamSources()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearCorruptStreamSources()"
+    },
+    "createFromPath(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "pathName"
+      ],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "createFromPath(java.lang.String)"
+    },
+    "createFromResourceId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "resourceId"
+      ],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "createFromResourceId(int)"
+    },
+    "createFromResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,java.lang.String,android.graphics.BitmapFactory.Options)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "res",
+        "value",
+        "is",
+        "srcName",
+        "opts"
+      ],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "createFromResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,java.lang.String,android.graphics.BitmapFactory.Options)"
+    },
+    "createFromStream(java.io.InputStream,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "is",
+        "srcName"
+      ],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "createFromStream(java.io.InputStream,java.lang.String)"
+    },
+    "getAlpha()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getAlpha()"
+    },
+    "getCreatedFromResId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCreatedFromResId()"
+    },
+    "getInputStream()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.io.InputStream",
+      "exceptions": [],
+      "name": "getInputStream()"
+    },
+    "getIntrinsicHeight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getIntrinsicHeight()"
+    },
+    "getIntrinsicWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getIntrinsicWidth()"
+    },
+    "invalidateSelf()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "invalidateSelf()"
+    },
+    "setAlpha(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "alpha"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAlpha(int)"
+    },
+    "setDefaultIntrinsicHeight(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "defaultIntrinsicHeight"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultIntrinsicHeight(int)"
+    },
+    "setDefaultIntrinsicWidth(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "defaultIntrinsicWidth"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultIntrinsicWidth(int)"
+    },
+    "setIntrinsicHeight(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intrinsicHeight"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIntrinsicHeight(int)"
+    },
+    "setIntrinsicWidth(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intrinsicWidth"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIntrinsicWidth(int)"
+    },
+    "validate()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "validate()"
+    },
+    "wasInvalidated()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasInvalidated()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.content.res.Resources",
+    "android.graphics.Bitmap",
+    "android.graphics.BitmapFactory",
+    "android.graphics.NinePatch",
+    "android.graphics.Rect",
+    "android.graphics.drawable.BitmapDrawable",
+    "android.graphics.drawable.Drawable",
+    "android.graphics.drawable.NinePatchDrawable",
+    "android.util.DisplayMetrics",
+    "android.util.TypedValue",
+    "java.io.InputStream",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowDrawable"
+}

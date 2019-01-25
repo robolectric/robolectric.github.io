@@ -1,0 +1,113 @@
+{
+  "methods": {
+    "addView(android.view.View,int,android.view.ViewGroup.LayoutParams)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "child",
+        "index",
+        "params"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addView(android.view.View,int,android.view.ViewGroup.LayoutParams)"
+    },
+    "dump(java.io.PrintStream,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "out",
+        "indent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dump(java.io.PrintStream,int)",
+      "documentation": "Dumps the state of this {@code ViewGroup} to {@code System.out}.\n"
+    },
+    "getDisallowInterceptTouchEvent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getDisallowInterceptTouchEvent()"
+    },
+    "getInterceptedTouchEvent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.view.MotionEvent",
+      "exceptions": [],
+      "name": "getInterceptedTouchEvent()"
+    },
+    "innerText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "innerText()",
+      "documentation": "Returns a string representation of this {@code ViewGroup} by concatenating all of the\nstrings contained in all of the descendants of this {@code ViewGroup}.\n"
+    },
+    "onInterceptTouchEvent(android.view.MotionEvent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "ev"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "onInterceptTouchEvent(android.view.MotionEvent)"
+    },
+    "removedChild(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "child"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removedChild(android.view.View)"
+    },
+    "requestDisallowInterceptTouchEvent(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "disallowIntercept"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "requestDisallowInterceptTouchEvent(boolean)"
+    }
+  },
+  "imports": [
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.os.Looper",
+    "android.view.MotionEvent",
+    "android.view.View",
+    "android.view.ViewGroup",
+    "java.io.PrintStream",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowViewGroup"
+}

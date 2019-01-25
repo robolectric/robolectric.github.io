@@ -1,0 +1,713 @@
+{
+  "methods": {
+    "__constructor__(android.graphics.Path)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.graphics.Path)"
+    },
+    "addArc(float,float,float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom",
+        "startAngle",
+        "sweepAngle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "addArc(float,float,float,float,float,float)"
+    },
+    "addCircle(float,float,float,android.graphics.Path.Direction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x",
+        "y",
+        "radius",
+        "dir"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addCircle(float,float,float,android.graphics.Path.Direction)"
+    },
+    "addOval(float,float,float,float,android.graphics.Path.Direction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom",
+        "dir"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "addOval(float,float,float,float,android.graphics.Path.Direction)"
+    },
+    "addPath(android.graphics.Path)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "src"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPath(android.graphics.Path)"
+    },
+    "addPath(android.graphics.Path,android.graphics.Matrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "src",
+        "matrix"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPath(android.graphics.Path,android.graphics.Matrix)"
+    },
+    "addPath(android.graphics.Path,android.graphics.Path,java.awt.geom.AffineTransform)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "destPath",
+        "srcPath",
+        "transform"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPath(android.graphics.Path,android.graphics.Path,java.awt.geom.AffineTransform)"
+    },
+    "addPath(android.graphics.Path,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "src",
+        "dx",
+        "dy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPath(android.graphics.Path,float,float)"
+    },
+    "addRect(android.graphics.RectF,android.graphics.Path.Direction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rect",
+        "dir"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addRect(android.graphics.RectF,android.graphics.Path.Direction)"
+    },
+    "addRect(float,float,float,float,android.graphics.Path.Direction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom",
+        "dir"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addRect(float,float,float,float,android.graphics.Path.Direction)"
+    },
+    "addRoundRect(android.graphics.RectF,float,float,android.graphics.Path.Direction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rect",
+        "rx",
+        "ry",
+        "dir"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 16,
+      "name": "addRoundRect(android.graphics.RectF,float,float,android.graphics.Path.Direction)"
+    },
+    "addRoundRect(android.graphics.RectF,float[],android.graphics.Path.Direction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rect",
+        "radii",
+        "dir"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 16,
+      "name": "addRoundRect(android.graphics.RectF,float[],android.graphics.Path.Direction)"
+    },
+    "addRoundRect(float,float,float,float,float,float,android.graphics.Path.Direction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom",
+        "rx",
+        "ry",
+        "dir"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "addRoundRect(float,float,float,float,float,float,android.graphics.Path.Direction)"
+    },
+    "addRoundRect(float,float,float,float,float[],android.graphics.Path.Direction)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom",
+        "radii",
+        "dir"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "addRoundRect(float,float,float,float,float[],android.graphics.Path.Direction)"
+    },
+    "approximate(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "acceptableError"
+      ],
+      "returnType": "float[]",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "approximate(float)"
+    },
+    "arcTo(android.graphics.RectF,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "oval",
+        "startAngle",
+        "sweepAngle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "arcTo(android.graphics.RectF,float,float)"
+    },
+    "arcTo(android.graphics.RectF,float,float,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "oval",
+        "startAngle",
+        "sweepAngle",
+        "forceMoveTo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "arcTo(android.graphics.RectF,float,float,boolean)"
+    },
+    "arcTo(float,float,float,float,float,float,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom",
+        "startAngle",
+        "sweepAngle",
+        "forceMoveTo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "arcTo(float,float,float,float,float,float,boolean)"
+    },
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "close()"
+    },
+    "computeBounds(android.graphics.RectF,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bounds",
+        "exact"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "computeBounds(android.graphics.RectF,boolean)"
+    },
+    "cubicTo(float,float,float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x1",
+        "y1",
+        "x2",
+        "y2",
+        "x3",
+        "y3"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cubicTo(float,float,float,float,float,float)"
+    },
+    "fillBounds(android.graphics.RectF)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bounds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "fillBounds(android.graphics.RectF)",
+      "documentation": "Fills the given {@link RectF} with the path bounds.\n\n@param bounds the RectF to be filled.\n"
+    },
+    "getFillType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Path.FillType",
+      "exceptions": [],
+      "name": "getFillType()"
+    },
+    "getJavaShape()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "java.awt.geom.Path2D",
+      "exceptions": [],
+      "name": "getJavaShape()"
+    },
+    "getPoints()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowPath.Point\u003e",
+      "exceptions": [],
+      "name": "getPoints()",
+      "documentation": "@return all the points that have been added to the {@code Path}\n"
+    },
+    "getWindingRule(android.graphics.Path.FillType)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWindingRule(android.graphics.Path.FillType)",
+      "documentation": "Returns the Java2D winding rules matching a given Android {@link FillType}.\n\n@param type the android fill type\n@return the matching java2d winding rule.\n"
+    },
+    "hasPoints()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasPoints()"
+    },
+    "incReserve(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "extraPtCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "incReserve(int)"
+    },
+    "isConvex()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isConvex()"
+    },
+    "isEmpty()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isEmpty()"
+    },
+    "isInverseFillType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isInverseFillType()"
+    },
+    "isRect(android.graphics.RectF)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rect"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isRect(android.graphics.RectF)"
+    },
+    "lineTo(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "lineTo(float,float)"
+    },
+    "moveTo(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x",
+        "y"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "moveTo(float,float)"
+    },
+    "offset(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dx",
+        "dy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "offset(float,float)"
+    },
+    "offset(float,float,android.graphics.Path)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dx",
+        "dy",
+        "dst"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "offset(float,float,android.graphics.Path)"
+    },
+    "op(android.graphics.Path,android.graphics.Path,android.graphics.Path.Op)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path1",
+        "path2",
+        "op"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "op(android.graphics.Path,android.graphics.Path,android.graphics.Path.Op)"
+    },
+    "quadTo(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x1",
+        "y1",
+        "x2",
+        "y2"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "quadTo(float,float,float,float)"
+    },
+    "rCubicTo(float,float,float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "x1",
+        "y1",
+        "x2",
+        "y2",
+        "x3",
+        "y3"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "rCubicTo(float,float,float,float,float,float)"
+    },
+    "rLineTo(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dx",
+        "dy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "rLineTo(float,float)"
+    },
+    "rMoveTo(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dx",
+        "dy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "rMoveTo(float,float)"
+    },
+    "rQuadTo(float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dx1",
+        "dy1",
+        "dx2",
+        "dy2"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "rQuadTo(float,float,float,float)"
+    },
+    "reset()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "resetLastPointFromPath()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetLastPointFromPath()"
+    },
+    "rewind()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "rewind()"
+    },
+    "set(android.graphics.Path)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "src"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "set(android.graphics.Path)"
+    },
+    "setFillType(android.graphics.Path.FillType)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "fillType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFillType(android.graphics.Path.FillType)"
+    },
+    "setLastPoint(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dx",
+        "dy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLastPoint(float,float)"
+    },
+    "toggleInverseFillType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "toggleInverseFillType()"
+    },
+    "transform(android.graphics.Matrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "matrix"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "transform(android.graphics.Matrix)"
+    },
+    "transform(android.graphics.Matrix,android.graphics.Path)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "matrix",
+        "dst"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "transform(android.graphics.Matrix,android.graphics.Path)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.shadow.api.Shadow.extract",
+    "org.robolectric.shadows.ShadowPath.Point.Type.LINE_TO",
+    "org.robolectric.shadows.ShadowPath.Point.Type.MOVE_TO",
+    "android.graphics.Matrix",
+    "android.graphics.Path",
+    "android.graphics.Path.Direction",
+    "android.graphics.RectF",
+    "android.util.Log",
+    "java.awt.geom.AffineTransform",
+    "java.awt.geom.Arc2D",
+    "java.awt.geom.Area",
+    "java.awt.geom.Ellipse2D",
+    "java.awt.geom.GeneralPath",
+    "java.awt.geom.Path2D",
+    "java.awt.geom.PathIterator",
+    "java.awt.geom.Point2D",
+    "java.awt.geom.Rectangle2D",
+    "java.awt.geom.RoundRectangle2D",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadows.ShadowPath.Point"
+  ],
+  "name": "org.robolectric.shadows.ShadowPath",
+  "documentation": "The shadow only supports straight-line paths.\n"
+}

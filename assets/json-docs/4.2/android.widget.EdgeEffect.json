@@ -1,0 +1,7 @@
+{
+  "methods": {},
+  "imports": [
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowEdgeEffect"
+}

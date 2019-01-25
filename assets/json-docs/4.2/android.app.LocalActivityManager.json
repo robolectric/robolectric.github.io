@@ -1,0 +1,8 @@
+{
+  "methods": {},
+  "imports": [
+    "android.app.LocalActivityManager",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowLocalActivityManager"
+}

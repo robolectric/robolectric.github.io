@@ -1,0 +1,24 @@
+{
+  "methods": {
+    "install(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "install(android.content.Context)"
+    }
+  },
+  "imports": [
+    "android.content.Context",
+    "android.support.multidex.MultiDex",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.multidex.ShadowMultiDex"
+}

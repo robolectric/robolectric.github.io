@@ -1,0 +1,33 @@
+{
+  "methods": {
+    "getTabHost()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.widget.TabHost",
+      "exceptions": [],
+      "name": "getTabHost()"
+    },
+    "getTabWidget()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.widget.TabWidget",
+      "exceptions": [],
+      "name": "getTabWidget()"
+    }
+  },
+  "imports": [
+    "android.app.TabActivity",
+    "android.widget.TabHost",
+    "android.widget.TabWidget",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
+  "name": "org.robolectric.shadows.ShadowTabActivity"
+}

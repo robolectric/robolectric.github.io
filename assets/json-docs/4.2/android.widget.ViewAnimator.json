@@ -1,0 +1,64 @@
+{
+  "methods": {
+    "getCurrentView()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.view.View",
+      "exceptions": [],
+      "name": "getCurrentView()"
+    },
+    "getDisplayedChild()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDisplayedChild()"
+    },
+    "setDisplayedChild(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "whichChild"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDisplayedChild(int)"
+    },
+    "showNext()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "showNext()"
+    },
+    "showPrevious()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "showPrevious()"
+    }
+  },
+  "imports": [
+    "android.view.View",
+    "android.view.ViewGroup",
+    "android.widget.ViewAnimator",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowViewAnimator"
+}
