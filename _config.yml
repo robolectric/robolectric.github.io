@@ -53,7 +53,7 @@ menu:
         url: /javadoc/4.0/
       - title: "4.1"
         url: /javadoc/4.1/
-      - title: "4.2 Alpha 1"
+      - title: "4.2 Alpha 2"
         url: /javadoc/4.2/
         class: italic
     - title: Issues
