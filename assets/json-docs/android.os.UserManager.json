@@ -13,6 +13,22 @@
       "exceptions": [],
       "name": "__constructor__(android.content.Context,android.os.IUserManager)"
     },
+    "addProfile(int,int,java.lang.String,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "profileUserHandle",
+        "profileName",
+        "profileFlags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addProfile(int,int,java.lang.String,int)",
+      "documentation": "Add a profile to be returned by {@link #getProfiles(int)}."
+    },
     "addUser(int,java.lang.String,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -23,10 +39,10 @@
         "name",
         "flags"
       ],
-      "returnType": "void",
+      "returnType": "android.os.UserHandle",
       "exceptions": [],
       "name": "addUser(int,java.lang.String,int)",
-      "documentation": "Creates a user with the specified name, userId and flags.\n\n@param id the unique id of user\n@param name name of the user\n@param flags 16 bits for user type. See {@link UserInfo#flags}\n"
+      "documentation": "Creates a user with the specified name, userId and flags.\n\n@param id the unique id of user\n@param name name of the user\n@param flags 16 bits for user type. See {@link UserInfo#flags}\n@return a handle to the new user\n"
     },
     "addUserProfile(android.os.UserHandle)": {
       "isImplementation": false,
@@ -102,6 +118,20 @@
       "name": "getApplicationRestrictions(java.lang.String)",
       "documentation": "Compared to real Android, there is no check that the package name matches the application\npackage name and the method returns instantly.\n\n@see #setApplicationRestrictions(String, Bundle)\n"
     },
+    "getProfiles(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "java.util.List\u003candroid.content.pm.UserInfo\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getProfiles(int)",
+      "documentation": "If any profiles have been added using {@link #addProfile}, return those profiles.\n\nOtherwise follow real android behaviour.\n"
+    },
     "getSerialNumberForUser(android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -175,6 +205,19 @@
       "returnType": "android.os.Bundle",
       "exceptions": [],
       "name": "getUserRestrictionsForUser(android.os.UserHandle)"
+    },
+    "getUserSerialNumber(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getUserSerialNumber(int)",
+      "documentation": "@see #addUserProfile(UserHandle) "
     },
     "getUsers()": {
       "isImplementation": true,
@@ -502,6 +545,7 @@
     "android.os.Build.VERSION_CODES.N_MR1",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.Manifest.permission",
+    "android.annotation.UserIdInt",
     "android.content.Context",
     "android.content.pm.PackageManager",
     "android.content.pm.UserInfo",
@@ -517,10 +561,12 @@
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.Map.Entry",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowUserManager.UserState"
   ],
   "name": "org.robolectric.shadows.ShadowUserManager",

@@ -1,17 +1,5 @@
 {
   "methods": {
-    "__constructor__(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "netId"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "__constructor__(int)"
-    },
     "bindSocket(java.io.FileDescriptor)": {
       "isImplementation": true,
       "modifiers": [
@@ -89,7 +77,9 @@
     "java.net.Socket",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowNetwork"
 }

@@ -81,6 +81,18 @@
       "name": "getService()",
       "documentation": "Implements getService() in the same way the original method does, but ignores any Exceptions\nfrom invoking {@link android.bluetooth.BluetoothAdapter#getBluetoothService}.\n"
     },
+    "getType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "getType()",
+      "documentation": "Overrides behavior of {@link BluetoothDevice#getType} to return pre-set result.\n\n@return Value set by calling {@link ShadowBluetoothDevice#setType}. If setType has not\n    previously been called, will return BluetoothDevice.DEVICE_TYPE_UNKNOWN.\n"
+    },
     "getUuids()": {
       "isImplementation": true,
       "modifiers": [
@@ -155,6 +167,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setName(java.lang.String)"
+    },
+    "setType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setType(int)",
+      "documentation": "Sets the return value for {@link BluetoothDevice#getType}. "
     },
     "setUuids(android.os.ParcelUuid[])": {
       "isImplementation": false,

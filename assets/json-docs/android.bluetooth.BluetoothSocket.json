@@ -1,5 +1,30 @@
 {
   "methods": {
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "close()"
+    },
+    "connect()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "connect()",
+      "documentation": "This method doesn\u0027t perform an actual connection and returns immediately "
+    },
     "getInputStream()": {
       "isImplementation": true,
       "modifiers": [
@@ -41,6 +66,16 @@
       "exceptions": [],
       "name": "getOutputStreamSink()",
       "documentation": "Returns {@link PipedInputStream} that controls \u003cb\u003eoutput\u003c/b\u003e stream of the {@link\nBluetoothSocket}.\n"
+    },
+    "isConnected()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isConnected()"
     }
   },
   "imports": [
@@ -51,7 +86,8 @@
     "java.io.PipedInputStream",
     "java.io.PipedOutputStream",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowBluetoothSocket.SocketState"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothSocket"
 }

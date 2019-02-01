@@ -230,6 +230,7 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.os.Environment",
     "java.io.File",
     "java.io.IOException",
@@ -244,7 +245,10 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadows.ShadowEnvironment.ShadowUserEnvironment"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowEnvironment.ShadowUserEnvironment",
+    "org.robolectric.shadows.ShadowEnvironment._UserEnvironment_"
   ],
   "name": "org.robolectric.shadows.ShadowEnvironment"
 }

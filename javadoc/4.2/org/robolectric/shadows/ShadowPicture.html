@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":9,"i5":9};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -44,7 +44,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-SNAPSHOT | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -141,40 +141,35 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowPicture.html#Z:Z__constructor__--">__constructor__</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowPicture.html#Z:Z__constructor__-int-boolean-">__constructor__</a></span>(int&nbsp;nativePicture,
-               boolean&nbsp;fromStream)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowPicture.html#Z:Z__constructor__-long-">__constructor__</a></span>(long&nbsp;nativePicture)</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowPicture.html#Z:Z__constructor__-android.graphics.Picture-">__constructor__</a></span>(<a href="https://developer.android.com/reference/android/graphics/Picture.html?is-external=true" title="class or interface in android.graphics">Picture</a>&nbsp;src)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://developer.android.com/reference/android/graphics/Canvas.html?is-external=true" title="class or interface in android.graphics">Canvas</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowPicture.html#beginRecording-int-int-">beginRecording</a></span>(int&nbsp;width,
               int&nbsp;height)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowPicture.html#getHeight--">getHeight</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowPicture.html#getWidth--">getWidth</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>protected static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowPicture.html#nativeConstructor-int-">nativeConstructor</a></span>(int&nbsp;nativeSrc)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>protected static long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowPicture.html#nativeConstructor-long-">nativeConstructor</a></span>(long&nbsp;nativeSrc)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -215,35 +210,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="Z:Z__constructor__--">
+<a name="nativeConstructor-int-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>__constructor__</h4>
-<pre><a href="../../../org/robolectric/annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>
-protected&nbsp;void&nbsp;__constructor__()</pre>
+<h4>nativeConstructor</h4>
+<pre><a href="../../../org/robolectric/annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>(<a href="../../../org/robolectric/annotation/Implementation.html#maxSdk--">maxSdk</a>=19)
+protected static&nbsp;int&nbsp;nativeConstructor(int&nbsp;nativeSrc)</pre>
 </li>
 </ul>
-<a name="Z:Z__constructor__-long-">
+<a name="nativeConstructor-long-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>__constructor__</h4>
-<pre><a href="../../../org/robolectric/annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>(<a href="../../../org/robolectric/annotation/Implementation.html#minSdk--">minSdk</a>=21)
-protected&nbsp;void&nbsp;__constructor__(long&nbsp;nativePicture)</pre>
-</li>
-</ul>
-<a name="Z:Z__constructor__-int-boolean-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>__constructor__</h4>
-<pre><a href="../../../org/robolectric/annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>(<a href="../../../org/robolectric/annotation/Implementation.html#maxSdk--">maxSdk</a>=20)
-protected&nbsp;void&nbsp;__constructor__(int&nbsp;nativePicture,
-                                                          boolean&nbsp;fromStream)</pre>
+<h4>nativeConstructor</h4>
+<pre><a href="../../../org/robolectric/annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>(<a href="../../../org/robolectric/annotation/Implementation.html#minSdk--">minSdk</a>=20)
+protected static&nbsp;long&nbsp;nativeConstructor(long&nbsp;nativeSrc)</pre>
 </li>
 </ul>
 <a name="Z:Z__constructor__-android.graphics.Picture-">
@@ -311,7 +295,7 @@ protected&nbsp;<a href="https://developer.android.com/reference/android/graphics
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-SNAPSHOT | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

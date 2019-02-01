@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <pre>public interface <span class="typeNameLabel">Configurer&lt;T&gt;</span></pre>
 <div class="block"><p>Provides configuration data for tests.</p>
 <p>The test author can apply configuration data at a package, class, or method level, or any combination of those. See <a href="http://robolectric.org/configuring/">Configuring Robolectric</a> for more details.</p>
-<p>The implementation of the configurer determines how config information is collected and merged for each test.</p>
+<p>The implementation of the configurer determines how configuration information is collected and merged for each test.</p>
 <p>For a test:</p>
 <pre><code class="java">class com.foo.MyTest extends com.foo.BaseTest {
    @Test void testMethod() {}
@@ -127,7 +127,7 @@ var activeTableTab = "activeTableTab";
   <li>as specified in MyTest</li>
   <li>as specified in MyTest.testMethod</li>
 </ul>
-<p>Configuration objects can be accessed by shadows or tests via <code>org.robolectric.config.ConfigRegistry.get(Class)</code>.</p></div>
+<p>Configuration objects can be accessed by shadows or tests via <code>org.robolectric.configuration.ConfigRegistry.get(Class)</code>.</p></div>
 </li>
 </ul>
 </div>

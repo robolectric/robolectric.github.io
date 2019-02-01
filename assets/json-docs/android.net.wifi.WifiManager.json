@@ -408,6 +408,20 @@
       "name": "setStartScanSucceeds(boolean)",
       "documentation": "Sets the return value of {@link #startScan}. "
     },
+    "setUpdateNetworkPermission(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkId",
+        "hasPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUpdateNetworkPermission(int,boolean)",
+      "documentation": "Prevents a networkId from being updated using the {@link updateNetwork(WifiConfiguration)}\nmethod. This is to simulate the case where a separate application creates a network, and the\nAndroid security model prevents your application from updating it.\n"
+    },
     "setWifiEnabled(boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -493,7 +507,8 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "name": "updateNetwork(android.net.wifi.WifiConfiguration)"
+      "name": "updateNetwork(android.net.wifi.WifiConfiguration)",
+      "documentation": "Adds or updates a network which can later be retrieved with {@link #getWifiConfiguration(int)}\nmethod. A null {@param config}, or one with a networkId less than 0, or a networkId that had\nits updatePermission removed using the {@link #setUpdateNetworkPermission(int, boolean)} will\nreturn -1, which indicates a failure to update.\n"
     },
     "wasConfigurationSaved()": {
       "isImplementation": false,
@@ -521,6 +536,7 @@
     "android.net.wifi.WifiManager.MulticastLock",
     "android.util.Pair",
     "java.util.ArrayList",
+    "java.util.BitSet",
     "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Map",

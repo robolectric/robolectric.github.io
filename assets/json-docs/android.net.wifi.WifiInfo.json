@@ -119,6 +119,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSSID(java.lang.String)"
+    },
+    "setSupplicantState(android.net.wifi.SupplicantState)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "state"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupplicantState(android.net.wifi.SupplicantState)"
     }
   },
   "imports": [
@@ -126,6 +138,7 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.net.wifi.SupplicantState",
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiSsid",
     "java.net.InetAddress",

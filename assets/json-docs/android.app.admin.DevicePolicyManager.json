@@ -152,18 +152,6 @@
       "exceptions": [],
       "name": "enforceActiveAdmin(android.content.ComponentName)"
     },
-    "enforceDeviceOwner(android.content.ComponentName)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "admin"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "enforceDeviceOwner(android.content.ComponentName)"
-    },
     "enforceDeviceOwnerOrProfileOwner(android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
@@ -260,6 +248,18 @@
       "minSdk": 21,
       "name": "getAutoTimeRequired()"
     },
+    "getCameraDisabled(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getCameraDisabled(android.content.ComponentName)"
+    },
     "getDeviceOwner()": {
       "isImplementation": true,
       "modifiers": [
@@ -296,6 +296,30 @@
       "name": "getLastSetPassword()",
       "documentation": "Retrieves last password set through {@link DevicePolicyManager#resetPassword} or {@link\nDevicePolicyManager#resetPasswordWithToken}.\n"
     },
+    "getMaximumFailedPasswordsForWipe(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMaximumFailedPasswordsForWipe(android.content.ComponentName)"
+    },
+    "getMaximumTimeToLock(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getMaximumTimeToLock(android.content.ComponentName)"
+    },
     "getOrganizationColor(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -322,6 +346,138 @@
       "minSdk": 24,
       "name": "getOrganizationName(android.content.ComponentName)",
       "documentation": "Returns organization name.\n\n\u003cp\u003eThe API can only be called by profile owner since Android N.\n\n\u003cp\u003eAndroid framework has a hidden API for getting the organization name for device owner since\nAndroid O. This method, however, is extended to return the organization name for device owners\ntoo to make testing of {@link #setOrganizationName(ComponentName, CharSequence)} easier for\ndevice owner cases.\n"
+    },
+    "getPasswordExpiration(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getPasswordExpiration(android.content.ComponentName)"
+    },
+    "getPasswordExpirationTimeout(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getPasswordExpirationTimeout(android.content.ComponentName)"
+    },
+    "getPasswordHistoryLength(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPasswordHistoryLength(android.content.ComponentName)"
+    },
+    "getPasswordMinimumLength(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPasswordMinimumLength(android.content.ComponentName)"
+    },
+    "getPasswordMinimumLetters(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPasswordMinimumLetters(android.content.ComponentName)"
+    },
+    "getPasswordMinimumLowerCase(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPasswordMinimumLowerCase(android.content.ComponentName)"
+    },
+    "getPasswordMinimumNonLetter(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPasswordMinimumNonLetter(android.content.ComponentName)"
+    },
+    "getPasswordMinimumNumeric(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPasswordMinimumNumeric(android.content.ComponentName)"
+    },
+    "getPasswordMinimumSymbols(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPasswordMinimumSymbols(android.content.ComponentName)"
+    },
+    "getPasswordMinimumUpperCase(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPasswordMinimumUpperCase(android.content.ComponentName)"
+    },
+    "getPasswordQuality(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPasswordQuality(android.content.ComponentName)"
     },
     "getPermissionGrantState(android.content.ComponentName,java.lang.String,java.lang.String)": {
       "isImplementation": true,
@@ -444,6 +600,16 @@
       "returnType": "void",
       "exceptions": [],
       "name": "init(android.content.Context)"
+    },
+    "isActivePasswordSufficient()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isActivePasswordSufficient()"
     },
     "isAdminActive(android.content.ComponentName)": {
       "isImplementation": true,
@@ -656,6 +822,19 @@
       "name": "setActiveAdmin(android.content.ComponentName)",
       "documentation": "Sets the given {@code componentName} as one of the active admins. "
     },
+    "setActivePasswordSufficient(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sufficient"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActivePasswordSufficient(boolean)",
+      "documentation": "Sets if the password meets the current requirements.\n\n@param sufficient indicates the password meets the current requirements\n"
+    },
     "setApplicationHidden(android.content.ComponentName,java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -714,6 +893,19 @@
       "minSdk": 21,
       "name": "setAutoTimeRequired(android.content.ComponentName,boolean)"
     },
+    "setCameraDisabled(android.content.ComponentName,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "disabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCameraDisabled(android.content.ComponentName,boolean)"
+    },
     "setDeviceOwner(android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
@@ -740,6 +932,32 @@
       "exceptions": [],
       "minSdk": 17,
       "name": "setKeyguardDisabledFeatures(android.content.ComponentName,int)"
+    },
+    "setMaximumFailedPasswordsForWipe(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "num"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaximumFailedPasswordsForWipe(android.content.ComponentName,int)"
+    },
+    "setMaximumTimeToLock(android.content.ComponentName,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "timeMs"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaximumTimeToLock(android.content.ComponentName,long)"
     },
     "setOrganizationColor(android.content.ComponentName,int)": {
       "isImplementation": true,
@@ -784,6 +1002,46 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "setPackagesSuspended(android.content.ComponentName,java.lang.String[],boolean)"
+    },
+    "setPasswordExpiration(android.content.ComponentName,long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "timeout"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordExpiration(android.content.ComponentName,long)",
+      "documentation": "Sets the password expiration time for a particular admin.\n\n@param admin which DeviceAdminReceiver this request is associated with.\n@param timeout the password expiration time, in milliseconds since epoch.\n"
+    },
+    "setPasswordExpirationTimeout(android.content.ComponentName,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "timeout"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordExpirationTimeout(android.content.ComponentName,long)"
+    },
+    "setPasswordHistoryLength(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordHistoryLength(android.content.ComponentName,int)"
     },
     "setPasswordMinimumLength(android.content.ComponentName,int)": {
       "isImplementation": true,

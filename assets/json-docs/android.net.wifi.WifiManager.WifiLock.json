@@ -73,6 +73,7 @@
     "android.net.wifi.WifiManager.MulticastLock",
     "android.util.Pair",
     "java.util.ArrayList",
+    "java.util.BitSet",
     "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Map",

@@ -205,15 +205,20 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.L",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.TargetApi",
     "android.os.Build",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowBuild._Build_",
+    "org.robolectric.shadows.ShadowBuild._VERSION_"
   ],
   "name": "org.robolectric.shadows.ShadowBuild"
 }

@@ -98,6 +98,19 @@
       "minSdk": 26,
       "name": "createNotificationChannelGroup(java.lang.Object)"
     },
+    "createNotificationChannelGroups(java.util.List\u003cjava.lang.Object\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "groupList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "createNotificationChannelGroups(java.util.List\u003cjava.lang.Object\u003e)"
+    },
     "createNotificationChannels(java.util.List\u003cjava.lang.Object\u003e)": {
       "isImplementation": true,
       "modifiers": [

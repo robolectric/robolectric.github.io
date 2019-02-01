@@ -357,18 +357,6 @@
       "exceptions": [],
       "name": "invalidate()"
     },
-    "invokeReflectively(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "methodName"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "invokeReflectively(java.lang.String)"
-    },
     "isAttachedToWindow()": {
       "isImplementation": true,
       "modifiers": [
@@ -726,7 +714,7 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.getField",
-    "org.robolectric.util.ReflectionHelpers.setField",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.SuppressLint",
     "android.content.Context",
     "android.graphics.Canvas",
@@ -758,8 +746,12 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.TimeUtils",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowView.AnimationRunner",
-    "org.robolectric.shadows.ShadowView.WindowIdHelper"
+    "org.robolectric.shadows.ShadowView._View_",
+    "org.robolectric.shadows.ShadowView.WindowIdHelper",
+    "org.robolectric.shadows.ShadowView._AttachInfo_"
   ],
   "name": "org.robolectric.shadows.ShadowView"
 }

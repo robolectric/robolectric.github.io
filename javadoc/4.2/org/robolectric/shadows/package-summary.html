@@ -38,7 +38,7 @@
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-SNAPSHOT | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -1186,33 +1186,55 @@ UserHandle)</code></a>.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaCodec.html" title="class in org.robolectric.shadows">ShadowMediaCodec</a></td>
+<td class="colLast">
+<div class="block">Implementation of <a href="https://developer.android.com/reference/android/media/MediaCodec.html?is-external=true" title="class or interface in android.media"><code>MediaCodec</code></a> which only supports a passthrough asynchronous encoding pipeline.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaCodec.ShadowCodecBuffer.html" title="class in org.robolectric.shadows">ShadowMediaCodec.ShadowCodecBuffer</a></td>
+<td class="colLast">
+<div class="block">Shadows CodecBuffer to prevent attempting to free non-direct ByteBuffer objects.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaMetadataRetriever.html" title="class in org.robolectric.shadows">ShadowMediaMetadataRetriever</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaMuxer.html" title="class in org.robolectric.shadows">ShadowMediaMuxer</a></td>
+<td class="colLast">
+<div class="block">Implementation of <a href="https://developer.android.com/reference/android/media/MediaMuxer.html?is-external=true" title="class or interface in android.media"><code>MediaMuxer</code></a> which directly passes input bytes to the specified file, with no modification.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaPlayer.html" title="class in org.robolectric.shadows">ShadowMediaPlayer</a></td>
 <td class="colLast">
 <div class="block">Automated testing of media playback can be a difficult thing - especially testing that your code properly handles asynchronous errors and events.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaPlayer.MediaInfo.html" title="class in org.robolectric.shadows">ShadowMediaPlayer.MediaInfo</a></td>
 <td class="colLast">
 <div class="block">Class specifying information for an emulated media object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaRecorder.html" title="class in org.robolectric.shadows">ShadowMediaRecorder</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaRouter.html" title="class in org.robolectric.shadows">ShadowMediaRouter</a></td>
 <td class="colLast">
 <div class="block">Shadow class for <a href="https://developer.android.com/reference/android/media/MediaRouter.html?is-external=true" title="class or interface in android.media"><code>MediaRouter</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaScannerConnection.html" title="class in org.robolectric.shadows">ShadowMediaScannerConnection</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowMediaSession.html" title="class in org.robolectric.shadows">ShadowMediaSession</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -1464,6 +1486,18 @@ UserHandle)</code></a>.</div>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowQueuedWork.html" title="class in org.robolectric.shadows">ShadowQueuedWork</a></td>
 <td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowRangingResult.html" title="class in org.robolectric.shadows">ShadowRangingResult</a></td>
+<td class="colLast">
+<div class="block">Shadow for <a href="https://developer.android.com/reference/android/net/wifi/rtt/RangingResult.html?is-external=true" title="class or interface in android.net.wifi.rtt"><code>RangingResult</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowRangingResult.Builder.html" title="class in org.robolectric.shadows">ShadowRangingResult.Builder</a></td>
+<td class="colLast">
+<div class="block">A builder for creating ShadowRangingResults.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowRegion.html" title="class in org.robolectric.shadows">ShadowRegion</a></td>
@@ -2021,34 +2055,40 @@ String[], long, TimeUnit, PendingIntent)</code></a>.</div>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowWifiRttManager.html" title="class in org.robolectric.shadows">ShadowWifiRttManager</a></td>
+<td class="colLast">
+<div class="block">Shadow for <a href="https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager.html?is-external=true" title="class or interface in android.net.wifi.rtt"><code>WifiRttManager</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowWindow.html" title="class in org.robolectric.shadows">ShadowWindow</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowWindowManager.html" title="class in org.robolectric.shadows">ShadowWindowManager</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowWindowManagerGlobal.html" title="class in org.robolectric.shadows">ShadowWindowManagerGlobal</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowWindowManagerImpl.html" title="class in org.robolectric.shadows">ShadowWindowManagerImpl</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowWindowManagerImpl.ShadowCompatModeWrapper.html" title="class in org.robolectric.shadows">ShadowWindowManagerImpl.ShadowCompatModeWrapper</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowXmlBlock.html" title="class in org.robolectric.shadows">ShadowXmlBlock</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/ShadowZoomButtonsController.html" title="class in org.robolectric.shadows">ShadowZoomButtonsController</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/robolectric/shadows/StorageVolumeBuilder.html" title="class in org.robolectric.shadows">StorageVolumeBuilder</a></td>
 <td class="colLast">
 <div class="block">Class to build <a href="https://developer.android.com/reference/android/os/storage/StorageVolume.html?is-external=true" title="class or interface in android.os.storage"><code>StorageVolume</code></a></div>
@@ -2131,7 +2171,7 @@ String[], long, TimeUnit, PendingIntent)</code></a>.</div>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-SNAPSHOT | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

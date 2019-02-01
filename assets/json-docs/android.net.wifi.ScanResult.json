@@ -17,6 +17,24 @@
       "exceptions": [],
       "name": "newInstance(java.lang.String,java.lang.String,java.lang.String,int,int)"
     },
+    "newInstance(java.lang.String,java.lang.String,java.lang.String,int,int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "SSID",
+        "BSSID",
+        "caps",
+        "level",
+        "frequency",
+        "is80211McRTTResponder"
+      ],
+      "returnType": "android.net.wifi.ScanResult",
+      "exceptions": [],
+      "name": "newInstance(java.lang.String,java.lang.String,java.lang.String,int,int,boolean)"
+    },
     "toString()": {
       "isImplementation": true,
       "modifiers": [
@@ -41,7 +59,9 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.P",
     "android.net.wifi.ScanResult",
+    "android.os.Build",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

@@ -1,5 +1,17 @@
 {
   "methods": {
+    "__constructor__(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context)"
+    },
     "addDisplay(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -102,8 +114,7 @@
     "getSaturationLevel()": {
       "isImplementation": false,
       "modifiers": [
-        "public",
-        "static"
+        "public"
       ],
       "params": [],
       "returnType": "float",
@@ -139,8 +150,7 @@
     "setSaturationLevel(float)": {
       "isImplementation": false,
       "modifiers": [
-        "public",
-        "static"
+        "public"
       ],
       "params": [
         "level"
@@ -148,11 +158,15 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSaturationLevel(float)",
-      "documentation": "Sets the current display saturation level.\n\n\u003cp\u003eThis is a workaround for tests which cannot use the relevant hidden {@link\nandroid.annotation.SystemApi}, {@link\nandroid.hardware.display.DisplayManager#setSaturationLevel(float)}.\n"
+      "documentation": "Sets the current display saturation level.\n\nThis is a workaround for tests which cannot use the relevant hidden\n{@link android.annotation.SystemApi},\n{@link android.hardware.display.DisplayManager#setSaturationLevel(float)}.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadow.api.Shadow.extract",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "android.content.Context",
     "android.content.res.Configuration",
     "android.hardware.display.DisplayManager",
     "android.hardware.display.DisplayManagerGlobal",
@@ -164,10 +178,12 @@
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.android.Bootstrap",
     "org.robolectric.android.internal.DisplayConfig",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.res.Qualifiers",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.Consumer"
+    "org.robolectric.util.Consumer",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowDisplayManager",
   "documentation": "For tests, display properties may be changed and devices may be added or removed\nprogrammatically.\n"

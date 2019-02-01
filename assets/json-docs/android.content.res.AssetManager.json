@@ -354,7 +354,7 @@
       "params": [
         "fileName"
       ],
-      "returnType": "org.robolectric.res.FsFile",
+      "returnType": "java.nio.file.Path",
       "exceptions": [
         "java.io.IOException"
       ],
@@ -381,7 +381,7 @@
       "isImplementation": false,
       "modifiers": [],
       "params": [],
-      "returnType": "java.util.Collection\u003corg.robolectric.res.FsFile\u003e",
+      "returnType": "java.util.Collection\u003cjava.nio.file.Path\u003e",
       "exceptions": [],
       "name": "getAllAssetDirs()"
     },
@@ -544,31 +544,19 @@
       "exceptions": [],
       "name": "getConverter(org.robolectric.res.TypedResource)"
     },
-    "getFileFromZip(java.io.File)": {
+    "getFileFromZip(java.nio.file.Path)": {
       "isImplementation": false,
       "modifiers": [
         "private",
         "static"
       ],
       "params": [
-        "file"
+        "path"
       ],
-      "returnType": "java.io.File",
+      "returnType": "java.nio.file.Path",
       "exceptions": [],
-      "name": "getFileFromZip(java.io.File)",
-      "documentation": "Extract an asset from a zipped up assets provided by the build system, this is required because there is no\nway to get a FileDescriptor from a zip entry. This is a temporary measure for Bazel which can be removed\nonce binary resources are supported.\n"
-    },
-    "getFsFileFromPath(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "property"
-      ],
-      "returnType": "org.robolectric.res.FsFile",
-      "exceptions": [],
-      "name": "getFsFileFromPath(java.lang.String)"
+      "name": "getFileFromZip(java.nio.file.Path)",
+      "documentation": "Extract an asset from a zipped up assets provided by the build system, this is required because\nthere is no way to get a FileDescriptor from a zip entry. This is a temporary measure for Bazel\nwhich can be removed once binary resources are supported.\n"
     },
     "getLocales()": {
       "isImplementation": true,
@@ -1111,6 +1099,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 28,
+      "maxSdk": 28,
       "name": "nativeThemeCopy(long,long)"
     },
     "newTheme()": {
@@ -1656,6 +1645,7 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.SuppressLint",
     "android.content.res.ApkAssets",
     "android.content.res.AssetFileDescriptor",
@@ -1663,6 +1653,7 @@
     "android.content.res.Resources",
     "android.content.res.TypedArray",
     "android.content.res.XmlResourceParser",
+    "android.os.Build",
     "android.os.Build.VERSION_CODES",
     "android.os.ParcelFileDescriptor",
     "android.util.AttributeSet",
@@ -1671,15 +1662,12 @@
     "com.google.common.collect.Ordering",
     "dalvik.system.VMRuntime",
     "java.io.ByteArrayInputStream",
-    "java.io.File",
-    "java.io.FileInputStream",
     "java.io.FileNotFoundException",
-    "java.io.FileOutputStream",
     "java.io.IOException",
     "java.io.InputStream",
-    "java.net.MalformedURLException",
-    "java.net.URL",
+    "java.io.OutputStream",
     "java.nio.file.Files",
+    "java.nio.file.Path",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.Collection",
@@ -1689,8 +1677,6 @@
     "java.util.Map",
     "java.util.Set",
     "java.util.concurrent.CopyOnWriteArraySet",
-    "java.util.zip.ZipEntry",
-    "java.util.zip.ZipInputStream",
     "javax.annotation.Nonnull",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.android.XmlResourceParserImpl",
@@ -1704,7 +1690,6 @@
     "org.robolectric.res.EmptyStyle",
     "org.robolectric.res.FileTypedResource",
     "org.robolectric.res.Fs",
-    "org.robolectric.res.FsFile",
     "org.robolectric.res.ResName",
     "org.robolectric.res.ResType",
     "org.robolectric.res.ResourceIds",
@@ -1721,7 +1706,7 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowAssetManager.Picker",
     "org.robolectric.util.Logger",
-    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.TempDirectory",
     "org.robolectric.shadows.ShadowLegacyAssetManager.NativeTheme"
   ],
   "name": "org.robolectric.shadows.ShadowLegacyAssetManager"

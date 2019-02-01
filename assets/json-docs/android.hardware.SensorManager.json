@@ -129,6 +129,22 @@
       "name": "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,android.os.Handler)",
       "documentation": "@param handler is ignored. "
     },
+    "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener",
+        "sensor",
+        "rate",
+        "maxLatency"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,int)",
+      "documentation": "@param maxLatency is ignored. "
+    },
     "sendSensorEventToListeners(android.hardware.SensorEvent)": {
       "isImplementation": false,
       "modifiers": [

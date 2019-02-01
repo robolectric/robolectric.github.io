@@ -208,13 +208,14 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.os.Build.VERSION_CODES",
     "android.os.IBinder",
     "android.os.Looper",
     "android.os.ResultReceiver",
+    "android.util.SparseArray",
     "android.view.View",
     "android.view.inputmethod.CompletionInfo",
     "android.view.inputmethod.InputMethodManager",
@@ -225,7 +226,11 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler",
+    "org.robolectric.shadows.ShadowInputMethodManager._InputMethodManager_"
   ],
   "name": "org.robolectric.shadows.ShadowInputMethodManager"
 }

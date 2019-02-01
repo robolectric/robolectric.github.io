@@ -97,19 +97,6 @@
       "exceptions": [],
       "name": "shadowOf(android.os.Looper)"
     },
-    "shadowOf(android.os.MessageQueue)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "mq"
-      ],
-      "returnType": "org.robolectric.shadows.ShadowMessageQueue",
-      "exceptions": [],
-      "name": "shadowOf(android.os.MessageQueue)"
-    },
     "unschedule()": {
       "isImplementation": false,
       "modifiers": [
@@ -126,20 +113,21 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.util.ReflectionHelpers.getField",
     "org.robolectric.util.ReflectionHelpers.getStaticField",
-    "org.robolectric.util.ReflectionHelpers.setField",
-    "org.robolectric.util.ReflectionHelpers.setStaticField",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.os.Handler",
     "android.os.Looper",
     "android.os.Message",
-    "android.os.MessageQueue",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowMessage._Message_"
   ],
   "name": "org.robolectric.shadows.ShadowMessage"
 }

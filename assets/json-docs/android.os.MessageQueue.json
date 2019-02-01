@@ -185,9 +185,9 @@
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
-    "org.robolectric.util.ReflectionHelpers.callInstanceMethod",
     "org.robolectric.util.ReflectionHelpers.getField",
     "org.robolectric.util.ReflectionHelpers.setField",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.os.Handler",
     "android.os.Message",
     "android.os.MessageQueue",
@@ -197,8 +197,12 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowMessage._Message_",
     "org.robolectric.util.Logger",
-    "org.robolectric.util.Scheduler"
+    "org.robolectric.util.Scheduler",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowMessageQueue._MessageQueue_"
   ],
   "name": "org.robolectric.shadows.ShadowMessageQueue",
   "documentation": "Robolectric puts {@link android.os.Message}s into the scheduler queue instead of sending\nthem to be handled on a separate thread. {@link android.os.Message}s that are scheduled to\nbe dispatched can be triggered by calling {@link ShadowLooper#idleMainLooper}.\n\n@see ShadowLooper\n"

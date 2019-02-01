@@ -1,9 +1,0 @@
-{
-  "methods": {},
-  "imports": [
-    "android.database.Cursor",
-    "android.support.v4.content.CursorLoader",
-    "org.robolectric.annotation.Implements"
-  ],
-  "name": "org.robolectric.shadows.support.v4.ShadowCursorLoader"
-}

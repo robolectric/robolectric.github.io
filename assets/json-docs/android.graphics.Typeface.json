@@ -39,6 +39,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 28,
+      "maxSdk": 28,
       "name": "buildSystemFallback(java.lang.String,java.lang.String,android.util.ArrayMap\u003cjava.lang.String,android.graphics.Typeface\u003e,android.util.ArrayMap\u003cjava.lang.String,android.graphics.FontFamily[]\u003e)"
     },
     "create(android.graphics.Typeface,int)": {
@@ -188,6 +189,23 @@
       "minSdk": 26,
       "name": "createFromResources(android.content.res.AssetManager,java.lang.String,int)"
     },
+    "createFromResources(java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "entry",
+        "mgr",
+        "path"
+      ],
+      "returnType": "android.graphics.Typeface",
+      "exceptions": [],
+      "minSdk": 26,
+      "maxSdk": 27,
+      "name": "createFromResources(java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
     "createUnderlyingTypeface(java.lang.String,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -261,8 +279,12 @@
     "android.content.res.AssetManager",
     "android.graphics.FontFamily",
     "android.graphics.Typeface",
+    "android.os.Build",
     "android.util.ArrayMap",
     "java.io.File",
+    "java.io.IOException",
+    "java.nio.file.Files",
+    "java.nio.file.Path",
     "java.util.Collection",
     "java.util.HashMap",
     "java.util.Map",
@@ -271,12 +293,11 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.res.FsFile",
+    "org.robolectric.res.Fs",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "org.robolectric.shadows.ShadowTypeface.FontDesc",
-    "org.robolectric.shadows.ShadowTypeface.StartsWith"
+    "org.robolectric.shadows.ShadowTypeface.FontDesc"
   ],
   "name": "org.robolectric.shadows.ShadowTypeface"
 }

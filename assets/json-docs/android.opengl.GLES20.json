@@ -1,5 +1,19 @@
 {
   "methods": {
+    "glCheckFramebufferStatus(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "target"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "glCheckFramebufferStatus(int)",
+      "documentation": "Always returns {@link GLES20#GL_FRAMEBUFFER_COMPLETE}. "
+    },
     "glCreateProgram()": {
       "isImplementation": true,
       "modifiers": [

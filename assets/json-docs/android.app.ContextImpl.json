@@ -253,6 +253,37 @@
       "exceptions": [],
       "name": "sendBroadcast(android.content.Intent,java.lang.String)"
     },
+    "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "user"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle)",
+      "documentation": "Forwards the call to {@link #sendBroadcast(Intent)}, disregarding {@code user} param. "
+    },
+    "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "user",
+        "receiverPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String)",
+      "documentation": "Forwards the call to {@link #sendBroadcast(Intent,String)}, disregarding {@code user} param.\n"
+    },
     "sendOrderedBroadcast(android.content.Intent,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -283,6 +314,50 @@
       "returnType": "void",
       "exceptions": [],
       "name": "sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)"
+    },
+    "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "userHandle",
+        "receiverPermission",
+        "resultReceiver",
+        "scheduler",
+        "initialCode",
+        "initialData",
+        "initialExtras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)",
+      "documentation": "Behaves as {@link #sendOrderedBroadcast} and currently ignores userHandle. "
+    },
+    "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,int,android.os.Bundle,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "userHandle",
+        "receiverPermission",
+        "appOp",
+        "options",
+        "resultReceiver",
+        "scheduler",
+        "initialCode",
+        "initialData",
+        "initialExtras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,int,android.os.Bundle,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)",
+      "documentation": "Behaves as {@link #sendOrderedBroadcast}. Currently ignores userHandle, appOp, and options. "
     },
     "sendStickyBroadcast(android.content.Intent)": {
       "isImplementation": true,
@@ -395,11 +470,14 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.annotation.Nullable",
+    "android.annotation.RequiresPermission",
     "android.app.ActivityThread",
+    "android.app.LoadedApk",
     "android.content.BroadcastReceiver",
     "android.content.ComponentName",
     "android.content.ContentResolver",
@@ -426,7 +504,10 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowContextImpl._ContextImpl_"
   ],
   "name": "org.robolectric.shadows.ShadowContextImpl"
 }

@@ -190,6 +190,19 @@
       "minSdk": 21,
       "name": "getImei()"
     },
+    "getImei(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "slotIndex"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getImei(int)"
+    },
     "getLine1Number()": {
       "isImplementation": true,
       "modifiers": [
@@ -233,6 +246,19 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "getMeid()"
+    },
+    "getMeid(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "slotIndex"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getMeid(int)"
     },
     "getNetworkCountryIso()": {
       "isImplementation": true,
@@ -307,6 +333,17 @@
       "minSdk": 26,
       "name": "getServiceState()",
       "documentation": "Returns {@code null} by default or the value specified via {@link\n#setServiceState(ServiceState)}\n"
+    },
+    "getSignalStrength()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.telephony.SignalStrength",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getSignalStrength()"
     },
     "getSimCarrierId()": {
       "isImplementation": true,
@@ -404,6 +441,30 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getSubscriberId()"
+    },
+    "getUiccSlotsInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getUiccSlotsInfo()",
+      "documentation": "Returns the UICC slots information set by {@link #setUiccSlotsInfo}. "
+    },
+    "getVisualVoicemailPackageName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getVisualVoicemailPackageName()",
+      "documentation": "Returns the value set by {@link #setVisualVoicemailPackageName(String)}. "
     },
     "getVoiceMailAlphaTag()": {
       "isImplementation": true,
@@ -667,6 +728,20 @@
       "exceptions": [],
       "name": "setGroupIdLevel1(java.lang.String)"
     },
+    "setImei(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "slotIndex",
+        "imei"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setImei(int,java.lang.String)",
+      "documentation": "Set the IMEI returned by {@link #getImei(int)}. "
+    },
     "setImei(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -717,6 +792,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setLine1Number(java.lang.String)"
+    },
+    "setMeid(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "slotIndex",
+        "meid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMeid(int,java.lang.String)",
+      "documentation": "Set the MEID returned by {@link #getMeid(int)}. "
     },
     "setMeid(java.lang.String)": {
       "isImplementation": false,
@@ -828,6 +917,19 @@
       "exceptions": [],
       "name": "setServiceState(android.telephony.ServiceState)",
       "documentation": "Sets the value returned by {@link TelephonyManager#getServiceState()}. "
+    },
+    "setSignalStrength(android.telephony.SignalStrength)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "signalStrength"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSignalStrength(android.telephony.SignalStrength)",
+      "documentation": "Sets the value to be returned by {@link #getSignalStrength()} "
     },
     "setSimCarrierId(int)": {
       "isImplementation": false,
@@ -973,6 +1075,32 @@
       "name": "setTelephonyManagerForSubscriptionId(int,android.telephony.TelephonyManager)",
       "documentation": "Sets the value returned by {@link TelephonyManager#createForSubscriptionId(int)}. "
     },
+    "setUiccSlotsInfo(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uiccSlotsInfos"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUiccSlotsInfo(java.lang.Object)",
+      "documentation": "Sets the UICC slots information returned by {@link #getUiccSlotsInfo()}. "
+    },
+    "setVisualVoicemailPackageName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "visualVoicemailPackageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVisualVoicemailPackageName(java.lang.String)",
+      "documentation": "Sets the value to be returned by {@link #getVisualVoicemailPackageName()}. "
+    },
     "setVoiceMailAlphaTag(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -1057,17 +1185,22 @@
     "android.telephony.PhoneStateListener.LISTEN_NONE",
     "android.telephony.TelephonyManager.CALL_STATE_IDLE",
     "android.telephony.TelephonyManager.CALL_STATE_RINGING",
+    "android.content.Context",
     "android.content.Intent",
     "android.net.Uri",
+    "android.os.Build",
     "android.os.Build.VERSION",
     "android.os.PersistableBundle",
+    "android.os.SystemProperties",
     "android.telecom.PhoneAccountHandle",
     "android.telephony.CellInfo",
     "android.telephony.CellLocation",
     "android.telephony.PhoneStateListener",
     "android.telephony.ServiceState",
+    "android.telephony.SignalStrength",
     "android.telephony.SubscriptionManager",
     "android.telephony.TelephonyManager",
+    "android.text.TextUtils",
     "android.util.SparseArray",
     "android.util.SparseIntArray",
     "com.google.common.base.Predicate",
@@ -1075,10 +1208,13 @@
     "java.util.Collections",
     "java.util.HashMap",
     "java.util.List",
+    "java.util.Locale",
     "java.util.Map",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowTelephonyManager"
 }

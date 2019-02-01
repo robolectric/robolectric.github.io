@@ -209,6 +209,7 @@
       "returnType": "android.app.Instrumentation.ActivityResult",
       "exceptions": [],
       "minSdk": 23,
+      "maxSdk": 28,
       "name": "execStartActivityAsCaller(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle,boolean,int)"
     },
     "execStartActivityFromAppTask(android.content.Context,android.os.IBinder,java.lang.Object,android.content.Intent,android.os.Bundle)": {
@@ -750,6 +751,7 @@
     }
   },
   "imports": [
+    "android.content.pm.PackageManager.MATCH_DEFAULT_ONLY",
     "android.content.pm.PackageManager.PERMISSION_DENIED",
     "android.content.pm.PackageManager.PERMISSION_GRANTED",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
@@ -803,6 +805,9 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowApplication.Wrapper",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.WithType",
+    "org.robolectric.shadows.ShadowInstrumentation._Instrumentation_",
     "org.robolectric.shadows.ShadowInstrumentation.BroadcastResultHolder",
     "org.robolectric.shadows.ShadowInstrumentation.ServiceConnectionDataWrapper"
   ],

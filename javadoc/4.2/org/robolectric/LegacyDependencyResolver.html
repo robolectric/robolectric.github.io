@@ -44,7 +44,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../index-all.html">Index</a></li>
 <li><a href="../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-SNAPSHOT | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -117,6 +117,8 @@ var activeTableTab = "activeTableTab";
 public class <span class="typeNameLabel">LegacyDependencyResolver</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../org/robolectric/internal/dependency/DependencyResolver.html" title="interface in org.robolectric.internal.dependency">DependencyResolver</a></pre>
+<div class="block"><p>Robolectric&rsquo;s historical dependency resolver (which is currently still the default), which is used by <a href="../../org/robolectric/plugins/DefaultSdkProvider.html" title="class in org.robolectric.plugins"><code>DefaultSdkProvider</code></a> to locate SDK jars.</p>
+<p>Robolectric will attempt to find SDKs in the following order: 1. If a resource named <code>robolectric-deps.properties</code> is found on the classpath, then the  jars will be resolved based on that properties file. 2. If the system property <code>robolectric.offline</code> is <code>true</code> AND <code>robolectric-deps.properties</code> is  specified, then the jars will be resolved based on that properties file. 3. If the system property <code>robolectric.offline</code> is <code>true</code> AND <code>robolectric.dependency.dir</code> is  specified, then the jars will be resolved relative to that directory. 4. Otherwise the jars will be downloaded from Maven Central and cached locally.</p></div>
 </li>
 </ul>
 </div>
@@ -250,7 +252,7 @@ public&nbsp;LegacyDependencyResolver(<a href="https://docs.oracle.com/javase/8/d
 <li><a href="../../index-all.html">Index</a></li>
 <li><a href="../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-SNAPSHOT | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

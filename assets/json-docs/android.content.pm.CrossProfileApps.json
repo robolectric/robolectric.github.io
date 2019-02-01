@@ -1,0 +1,171 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,android.content.pm.ICrossProfileApps)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.content.pm.ICrossProfileApps)"
+    },
+    "addTargetUserProfile(android.os.UserHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addTargetUserProfile(android.os.UserHandle)",
+      "documentation": "Adds {@code userHandle} to the list of accessible handles. "
+    },
+    "clearTargetUserProfiles()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearTargetUserProfiles()",
+      "documentation": "Clears the list of accessible handles. "
+    },
+    "getProfileSwitchingIconDrawable(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "android.graphics.drawable.Drawable",
+      "exceptions": [],
+      "name": "getProfileSwitchingIconDrawable(android.os.UserHandle)",
+      "documentation": "Returns a {@link Drawable} that can be shown for profile switching, which is guaranteed to\nalways be the same for a particular user and to be distinct between users.\n"
+    },
+    "getProfileSwitchingLabel(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "name": "getProfileSwitchingLabel(android.os.UserHandle)",
+      "documentation": "Returns a {@link CharSequence} that can be shown as a label for profile switching, which is\nguaranteed to always be the same for a particular user and to be distinct between users.\n"
+    },
+    "getTargetUserProfiles()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.os.UserHandle\u003e",
+      "exceptions": [],
+      "name": "getTargetUserProfiles()",
+      "documentation": "Returns a list of {@link UserHandle}s currently accessible. This list is populated from calls\nto {@link #addTargetUserProfile(UserHandle)}.\n"
+    },
+    "peekNextStartedMainActivity()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowCrossProfileApps.StartedMainActivity",
+      "exceptions": [],
+      "name": "peekNextStartedMainActivity()",
+      "documentation": "Returns the most recent {@link ComponentName}, {@link UserHandle} pair started by {@link\nCrossProfileApps#startMainActivity(ComponentName, UserHandle)}, wrapped in {@link\nStartedMainActivity}.\n"
+    },
+    "removeTargetUserProfile(android.os.UserHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeTargetUserProfile(android.os.UserHandle)",
+      "documentation": "Removes {@code userHandle} from the list of accessible handles, if present. "
+    },
+    "startMainActivity(android.content.ComponentName,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "componentName",
+        "targetUser"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startMainActivity(android.content.ComponentName,android.os.UserHandle)",
+      "documentation": "Simulates starting the main activity specified in the specified profile, performing the same\nsecurity checks done by the real {@link CrossProfileApps}.\n\n\u003cp\u003eThe most recent main activity started can be queried by {@link\n#peekNextStartedMainActivity()}.\n"
+    },
+    "verifyCanAccessUser(android.os.UserHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "verifyCanAccessUser(android.os.UserHandle)"
+    },
+    "verifyMainActivityInManifest(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "component"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "verifyMainActivityInManifest(android.content.ComponentName)",
+      "documentation": "Ensures that {@code component} is present in the manifest as an exported and enabled launcher\nactivity. This check and the error thrown are the same as the check done by the real {@link\nCrossProfileApps}.\n"
+    }
+  },
+  "imports": [
+    "android.content.pm.PackageManager.MATCH_DIRECT_BOOT_AWARE",
+    "android.content.pm.PackageManager.MATCH_DIRECT_BOOT_UNAWARE",
+    "android.os.Build.VERSION_CODES.P",
+    "com.google.common.base.Preconditions.checkNotNull",
+    "android.content.ComponentName",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.content.pm.ActivityInfo",
+    "android.content.pm.CrossProfileApps",
+    "android.content.pm.ICrossProfileApps",
+    "android.content.pm.PackageManager",
+    "android.graphics.drawable.ColorDrawable",
+    "android.graphics.drawable.Drawable",
+    "android.os.Process",
+    "android.os.UserHandle",
+    "android.text.TextUtils",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.Iterables",
+    "java.util.ArrayList",
+    "java.util.LinkedHashSet",
+    "java.util.List",
+    "java.util.Objects",
+    "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowCrossProfileApps.StartedMainActivity"
+  ],
+  "name": "org.robolectric.shadows.ShadowCrossProfileApps",
+  "documentation": "Robolectric implementation of {@link CrossProfileApps}. "
+}

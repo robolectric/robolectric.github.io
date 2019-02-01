@@ -1,5 +1,45 @@
 {
   "methods": {
+    "accept(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "timeout"
+      ],
+      "returnType": "android.bluetooth.BluetoothSocket",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "accept(int)",
+      "documentation": "May block the current thread and wait until {@link BluetoothDevice} is offered via\n{@link #deviceConnected(BluetoothDevice)} method or timeout occurred.\n\n@return socket of the connected bluetooth device\n@throws IOException if socket has been closed, thread interrupted while waiting or timeout has\n        occurred.\n"
+    },
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "close()"
+    },
+    "deviceConnected(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "android.bluetooth.BluetoothSocket",
+      "exceptions": [],
+      "name": "deviceConnected(android.bluetooth.BluetoothDevice)",
+      "documentation": "Creates {@link BluetoothSocket} for the given device and makes this socket available\nimmediately in the {@link #accept(int)} method. "
+    },
     "getPort(android.os.ParcelUuid)": {
       "isImplementation": false,
       "modifiers": [
@@ -33,12 +73,19 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.annotation.SuppressLint",
+    "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothServerSocket",
     "android.bluetooth.BluetoothSocket",
     "android.os.Build",
     "android.os.ParcelUuid",
+    "java.io.IOException",
+    "java.util.concurrent.BlockingQueue",
+    "java.util.concurrent.LinkedBlockingQueue",
+    "java.util.concurrent.TimeUnit",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothServerSocket"
 }

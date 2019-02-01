@@ -383,7 +383,8 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "isInCall()"
+      "name": "isInCall()",
+      "documentation": "Overrides behavior of {@link TelecomManager#isInCall} to return pre-set result.\n\n@return Value set by calling {@link ShadowTelecomManager#setIsInCall}. If setIsInCall has not\n    previously been called, will return false.\n"
     },
     "isRinging()": {
       "isImplementation": true,
@@ -457,6 +458,19 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "setDefaultDialer(java.lang.String)"
+    },
+    "setIsInCall(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isInCall"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsInCall(boolean)",
+      "documentation": "Sets the return value for {@link TelecomManager#isInCall}. "
     },
     "setSimCallManager(android.telecom.PhoneAccountHandle)": {
       "isImplementation": false,

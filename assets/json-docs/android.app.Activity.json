@@ -12,6 +12,19 @@
       "exceptions": [],
       "name": "callAttach(android.content.Intent)"
     },
+    "callAttach(android.content.Intent,java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "lastNonConfigurationInstances"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callAttach(android.content.Intent,java.lang.Object)"
+    },
     "callOnActivityResult(int,int,android.content.Intent)": {
       "isImplementation": false,
       "modifiers": [
@@ -233,16 +246,6 @@
       "exceptions": [],
       "name": "getNextStartedActivityForResult()",
       "documentation": "Consumes and returns the next {@code Intent} on the\nstarted activities for results stack.\n\n@return the next started {@code Intent} for an activity, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
-    },
-    "getNonConfigurationClass()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [],
-      "returnType": "java.lang.Class\u003c?\u003e",
-      "exceptions": [],
-      "name": "getNonConfigurationClass()"
     },
     "getOptionsMenu()": {
       "isImplementation": false,
@@ -584,7 +587,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setLastNonConfigurationInstance(java.lang.Object)"
+      "name": "setLastNonConfigurationInstance(java.lang.Object)",
+      "documentation": "@deprecated use {@link ActivityController#recreate()}. "
     },
     "setParent(android.app.Activity)": {
       "isImplementation": true,
@@ -744,7 +748,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.shadow.api.Shadow.directlyOn",
-    "android.R",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.Activity",
     "android.app.ActivityManager",
     "android.app.ActivityThread",
@@ -757,11 +761,8 @@
     "android.content.pm.ActivityInfo",
     "android.content.pm.PackageManager",
     "android.content.pm.PackageManager.NameNotFoundException",
-    "android.content.res.Configuration",
     "android.database.Cursor",
-    "android.os.Build",
     "android.os.Bundle",
-    "android.os.IBinder",
     "android.text.Selection",
     "android.text.SpannableStringBuilder",
     "android.view.LayoutInflater",
@@ -769,16 +770,16 @@
     "android.view.MenuInflater",
     "android.view.View",
     "android.view.ViewGroup",
-    "android.view.ViewRootImpl",
     "android.view.Window",
-    "com.android.internal.app.IVoiceInteractor",
     "java.lang.reflect.InvocationTargetException",
     "java.lang.reflect.Method",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "javax.annotation.Nullable",
     "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.android.controller.ActivityController",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
@@ -786,6 +787,7 @@
     "org.robolectric.fakes.RoboMenuItem",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.WithType",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowActivity.ActivityInvoker",
     "org.robolectric.shadows.ShadowActivity.PermissionsRequest"

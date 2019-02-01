@@ -26,6 +26,21 @@
       "name": "abandonAudioFocusRequest(android.media.AudioFocusRequest)",
       "documentation": "Provides a mock like interface for the abandonAudioFocusRequest method by storing the request\nobject for later inspection and returning the value specified in setNextFocusRequestResponse.\n"
     },
+    "adjustStreamVolume(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "streamType",
+        "direction",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "adjustStreamVolume(int,int,int)",
+      "documentation": "Implements {@link AudioManager#adjustStreamVolume(int, int, int)}.\n\n\u003cp\u003eCurrently supports only the directions {@link AudioManager#ADJUST_MUTE} and {@link\nAudioManager#ADJUST_UNMUTE}.\n"
+    },
     "getActivePlaybackConfigurations()": {
       "isImplementation": true,
       "modifiers": [
@@ -76,6 +91,32 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getMode()"
+    },
+    "getParameter(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "key"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getParameter(java.lang.String)",
+      "documentation": "Returns a single parameter that was set via {@link #setParameters(String)}. "
+    },
+    "getParameters(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "keys"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getParameters(java.lang.String)",
+      "documentation": "The expected composition for keys is not well defined.\n\n\u003cp\u003eFor testing purposes this method call always returns null.\n"
     },
     "getRingerMode()": {
       "isImplementation": true,
@@ -161,6 +202,19 @@
       "exceptions": [],
       "name": "isSpeakerphoneOn()"
     },
+    "isStreamMute(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "streamType"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isStreamMute(int)"
+    },
     "isValidRingerMode(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -196,7 +250,7 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "requestAudioFocus(android.media.AudioFocusRequest)",
-      "documentation": "Provides a mock like interface for the requestAudioFocus method by storing the request\nobject for later inspection and returning the value specified in setNextFocusRequestResponse.\n"
+      "documentation": "Provides a mock like interface for the requestAudioFocus method by storing the request object\nfor later inspection and returning the value specified in setNextFocusRequestResponse.\n"
     },
     "requestAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener,int,int)": {
       "isImplementation": true,
@@ -261,6 +315,19 @@
       "exceptions": [],
       "name": "setIsMusicActive(boolean)"
     },
+    "setIsStreamMute(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "streamType",
+        "isMuted"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsStreamMute(int,boolean)"
+    },
     "setMicrophoneMute(boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -296,6 +363,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNextFocusRequestResponse(int)"
+    },
+    "setParameters(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "keyValuePairs"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setParameters(java.lang.String)"
     },
     "setRingerMode(int)": {
       "isImplementation": true,
@@ -373,6 +452,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "android.annotation.TargetApi",
     "android.media.AudioAttributes",

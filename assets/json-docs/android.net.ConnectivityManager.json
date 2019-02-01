@@ -235,6 +235,19 @@
       "name": "isDefaultNetworkActive()",
       "documentation": "@return `true` by default, or the value specifed via {@link #setDefaultNetworkActive(boolean)}\n@see #setDefaultNetworkActive(boolean)\n"
     },
+    "registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "networkCallback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)"
+    },
     "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
       "modifiers": [

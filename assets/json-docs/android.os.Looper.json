@@ -234,7 +234,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "pauseLooper(android.os.Looper)"
+      "name": "pauseLooper(android.os.Looper)",
+      "documentation": "Pauses execution of tasks posted to the ShadowLooper. This means that during tests, tasks sent\nto the looper will not execute immediately, but will be queued in a way that is similar to how\na real looper works. These queued tasks must be executed explicitly by calling {@link\n#runToEndOftasks} or a similar method, otherwise they will not run at all before your test\nends.\n\n@param looper the looper to pause\n"
     },
     "pauseMainLooper()": {
       "isImplementation": false,
@@ -245,7 +246,8 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "pauseMainLooper()"
+      "name": "pauseMainLooper()",
+      "documentation": "Puts the main ShadowLooper in an \"paused\" state.\n\n@see #pauseLooper\n"
     },
     "post(java.lang.Runnable,long)": {
       "isImplementation": false,
@@ -488,7 +490,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "unPauseLooper(android.os.Looper)"
+      "name": "unPauseLooper(android.os.Looper)",
+      "documentation": "Puts the shadow looper in an \"unpaused\" state (this is the default state). This means that\nduring tests, tasks sent to the looper will execute inline, immediately, on the calling (main)\nthread instead of being queued, in a way similar to how Guava\u0027s \"DirectExecutorService\" works.\nThis is likely not to be what you want: it will cause code to be potentially executed in a\ndifferent order than how it would execute on the device, and if you are using certain Android\nAPIs (such as view animations) that are non-reentrant, they may not work at all or do\nunpredictable things. For more information, see \u003ca\nhref\u003d\"https://github.com/robolectric/robolectric/issues/3369\"\u003ethis discussion\u003c/a\u003e.\n\n@param looper the looper to pause\n"
     },
     "unPauseMainLooper()": {
       "isImplementation": false,
@@ -499,7 +502,8 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "unPauseMainLooper()"
+      "name": "unPauseMainLooper()",
+      "documentation": "Puts the main ShadowLooper in an \"unpaused\" state.\n\n@see #unPauseLooper\n"
     }
   },
   "imports": [

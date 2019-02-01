@@ -78,7 +78,7 @@
         "protected"
       ],
       "params": [],
-      "returnType": "java.lang.Object[]",
+      "returnType": "java.lang.Object",
       "exceptions": [],
       "minSdk": 23,
       "name": "getPorts()"
@@ -211,12 +211,16 @@
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
     "org.robolectric.RuntimeEnvironment.application",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "org.robolectric.util.ReflectionHelpers.callConstructor",
+    "org.robolectric.util.ReflectionHelpers.getStaticField",
     "android.content.Intent",
     "android.hardware.usb.UsbAccessory",
     "android.hardware.usb.UsbDevice",
     "android.hardware.usb.UsbManager",
     "android.hardware.usb.UsbPort",
     "android.hardware.usb.UsbPortStatus",
+    "android.os.Build",
     "android.os.ParcelFileDescriptor",
     "com.google.common.base.Preconditions",
     "java.io.File",
@@ -227,7 +231,10 @@
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowUsbManager._UsbManager_"
   ],
   "name": "org.robolectric.shadows.ShadowUsbManager",
   "documentation": "Robolectric implementation of {@link android.hardware.usb.UsbManager}. "

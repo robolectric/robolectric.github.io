@@ -985,9 +985,7 @@
     "android.os.Parcel",
     "android.os.ParcelFileDescriptor",
     "android.os.Parcelable",
-    "android.text.TextUtils",
     "android.util.Log",
-    "android.util.Pair",
     "java.io.ByteArrayInputStream",
     "java.io.ByteArrayOutputStream",
     "java.io.FileDescriptor",
@@ -995,11 +993,14 @@
     "java.io.ObjectInputStream",
     "java.io.ObjectOutputStream",
     "java.io.RandomAccessFile",
+    "java.io.Serializable",
     "java.lang.reflect.Field",
     "java.lang.reflect.Modifier",
     "java.util.ArrayList",
+    "java.util.Arrays",
     "java.util.LinkedHashMap",
     "java.util.List",
+    "java.util.Locale",
     "java.util.Map",
     "java.util.Objects",
     "org.robolectric.annotation.HiddenApi",
@@ -1007,7 +1008,9 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowParcel.UnreliableBehaviorException",
     "org.robolectric.shadows.ShadowParcel.ByteBuffer"
   ],
-  "name": "org.robolectric.shadows.ShadowParcel"
+  "name": "org.robolectric.shadows.ShadowParcel",
+  "documentation": "Robolectric\u0027s {@link Parcel} pretends to be backed by a byte buffer, closely matching {@link\nParcel}\u0027s position, size, and capacity behavior. However, its internal pure-Java representation\nis strongly typed, to detect non-portable code and common testing mistakes. It may throw {@link\nIllegalArgumentException} or {@link IllegalStateException} for error-prone behavior normal {@link\nParcel} tolerates.\n"
 }

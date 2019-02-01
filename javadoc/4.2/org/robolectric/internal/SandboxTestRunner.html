@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -44,7 +44,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-SNAPSHOT | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -172,6 +172,10 @@ extends org.junit.runners.BlockJUnit4ClassRunner</pre>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#SandboxTestRunner-java.lang.Class-">SandboxTestRunner</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;klass)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#SandboxTestRunner-java.lang.Class-org.robolectric.util.inject.Injector-">SandboxTestRunner</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;klass,
+                 <a href="../../../org/robolectric/util/inject/Injector.html" title="class in org.robolectric.util.inject">Injector</a>&nbsp;injector)</code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -182,7 +186,7 @@ extends org.junit.runners.BlockJUnit4ClassRunner</pre>
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -227,28 +231,28 @@ extends org.junit.runners.BlockJUnit4ClassRunner</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#createShadowMap--">createShadowMap</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code>protected static <a href="../../../org/robolectric/util/inject/Injector.Builder.html" title="class in org.robolectric.util.inject">Injector.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#defaultInjector--">defaultInjector</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#finallyAfterTest-org.junit.runners.model.FrameworkMethod-">finallyAfterTest</a></span>(org.junit.runners.model.FrameworkMethod&nbsp;method)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../org/robolectric/internal/bytecode/Interceptor.html" title="class in org.robolectric.internal.bytecode">Interceptor</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#findInterceptors--">findInterceptors</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#getExtraShadows-org.junit.runners.model.FrameworkMethod-">getExtraShadows</a></span>(org.junit.runners.model.FrameworkMethod&nbsp;method)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/robolectric/internal/SandboxTestRunner.HelperTestRunner.html" title="class in org.robolectric.internal">SandboxTestRunner.HelperTestRunner</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#getHelperTestRunner-java.lang.Class-">getHelperTestRunner</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;bootstrappedTestClass)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/robolectric/internal/bytecode/Interceptors.html" title="class in org.robolectric.internal.bytecode">Interceptors</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#getInterceptors--">getInterceptors</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../org/robolectric/pluginapi/perf/PerfStatsReporter.html" title="interface in org.robolectric.pluginapi.perf">PerfStatsReporter</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#getPerfStatsReporters--">getPerfStatsReporters</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/robolectric/internal/bytecode/Sandbox.html" title="class in org.robolectric.internal.bytecode">Sandbox</a></code></td>
@@ -259,8 +263,12 @@ extends org.junit.runners.BlockJUnit4ClassRunner</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#methodBlock-org.junit.runners.model.FrameworkMethod-">methodBlock</a></span>(org.junit.runners.model.FrameworkMethod&nbsp;method)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
-<td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#shouldIgnore-org.junit.runners.model.FrameworkMethod-">shouldIgnore</a></span>(org.junit.runners.model.FrameworkMethod&nbsp;method)</code>&nbsp;</td>
+<td class="colFirst"><code>protected org.junit.runners.model.Statement</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxTestRunner.html#withPotentialTimeout-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-">withPotentialTimeout</a></span>(org.junit.runners.model.FrameworkMethod&nbsp;method,
+                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;test,
+                    org.junit.runners.model.Statement&nbsp;next)</code>
+<div class="block">Disables JUnit&rsquo;s normal timeout mode strategy.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -268,7 +276,7 @@ extends org.junit.runners.BlockJUnit4ClassRunner</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.junit.runners.BlockJUnit4ClassRunner</h3>
-<code>collectInitializationErrors, computeTestMethods, createTest, describeChild, getChildren, getTestRules, isIgnored, methodInvoker, possiblyExpectingExceptions, rules, runChild, testName, validateConstructor, validateFields, validateInstanceMethods, validateNoNonStaticInnerClass, validateOnlyOneConstructor, validateTestMethods, validateZeroArgConstructor, withAfters, withBefores, withPotentialTimeout</code></li>
+<code>collectInitializationErrors, computeTestMethods, createTest, describeChild, getChildren, getTestRules, isIgnored, methodInvoker, possiblyExpectingExceptions, rules, runChild, testName, validateConstructor, validateFields, validateInstanceMethods, validateNoNonStaticInnerClass, validateOnlyOneConstructor, validateTestMethods, validateZeroArgConstructor, withAfters, withBefores</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.org.junit.runners.ParentRunner">
@@ -308,10 +316,25 @@ extends org.junit.runners.BlockJUnit4ClassRunner</pre>
 <a name="SandboxTestRunner-java.lang.Class-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>SandboxTestRunner</h4>
 <pre>public&nbsp;SandboxTestRunner(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;klass)
+                  throws org.junit.runners.model.InitializationError</pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>org.junit.runners.model.InitializationError</code></dd>
+</dl>
+</li>
+</ul>
+<a name="SandboxTestRunner-java.lang.Class-org.robolectric.util.inject.Injector-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SandboxTestRunner</h4>
+<pre>public&nbsp;SandboxTestRunner(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;klass,
+                         <a href="../../../org/robolectric/util/inject/Injector.html" title="class in org.robolectric.util.inject">Injector</a>&nbsp;injector)
                   throws org.junit.runners.model.InitializationError</pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -327,14 +350,13 @@ extends org.junit.runners.BlockJUnit4ClassRunner</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getPerfStatsReporters--">
+<a name="defaultInjector--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getPerfStatsReporters</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
-protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="../../../org/robolectric/pluginapi/perf/PerfStatsReporter.html" title="interface in org.robolectric.pluginapi.perf">PerfStatsReporter</a>&gt;&nbsp;getPerfStatsReporters()</pre>
+<h4>defaultInjector</h4>
+<pre>protected static&nbsp;<a href="../../../org/robolectric/util/inject/Injector.Builder.html" title="class in org.robolectric.util.inject">Injector.Builder</a>&nbsp;defaultInjector()</pre>
 </li>
 </ul>
 <a name="findInterceptors--">
@@ -504,13 +526,23 @@ protected&nbsp;<a href="../../../org/robolectric/internal/bytecode/ClassHandler.
                                                    <a href="../../../org/robolectric/internal/bytecode/Sandbox.html" title="class in org.robolectric.internal.bytecode">Sandbox</a>&nbsp;sandbox)</pre>
 </li>
 </ul>
-<a name="shouldIgnore-org.junit.runners.model.FrameworkMethod-">
+<a name="withPotentialTimeout-org.junit.runners.model.FrameworkMethod-java.lang.Object-org.junit.runners.model.Statement-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>shouldIgnore</h4>
-<pre>protected&nbsp;boolean&nbsp;shouldIgnore(org.junit.runners.model.FrameworkMethod&nbsp;method)</pre>
+<h4>withPotentialTimeout</h4>
+<pre>protected&nbsp;org.junit.runners.model.Statement&nbsp;withPotentialTimeout(org.junit.runners.model.FrameworkMethod&nbsp;method,
+                                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;test,
+                                                                 org.junit.runners.model.Statement&nbsp;next)</pre>
+<div class="block"><p>Disables JUnit&rsquo;s normal timeout mode strategy.</p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>withPotentialTimeout</code>&nbsp;in class&nbsp;<code>org.junit.runners.BlockJUnit4ClassRunner</code></dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><code>BlockJUnit4ClassRunner.methodInvoker(FrameworkMethod, Object)</code>, 
+<code>TimeLimitedStatement</code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -537,7 +569,7 @@ protected&nbsp;<a href="../../../org/robolectric/internal/bytecode/ClassHandler.
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-SNAPSHOT | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

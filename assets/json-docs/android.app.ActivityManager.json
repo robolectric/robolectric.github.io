@@ -36,6 +36,18 @@
       "name": "getBackgroundPackage()",
       "documentation": "@return Get the package name of the last background processes killed.\n"
     },
+    "getCurrentUser()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "getCurrentUser()"
+    },
     "getDeviceConfigurationInfo()": {
       "isImplementation": true,
       "modifiers": [
@@ -319,12 +331,14 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.annotation.RequiresPermission",
     "android.app.ActivityManager",
     "android.app.IActivityManager",
     "android.content.Context",
     "android.content.pm.ConfigurationInfo",
     "android.os.Build.VERSION_CODES",
     "android.os.Process",
+    "android.os.UserHandle",
     "java.util.List",
     "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.RuntimeEnvironment",
