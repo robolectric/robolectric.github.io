@@ -56,7 +56,7 @@ http_archive(
  strip_prefix = "robolectric-bazel-4.0.1",
  sha256 = "dff7a1f8e7bd8dc737f20b6bbfaf78d8b5851debe6a074757f75041029f0c43b",
 )
-load("@robolectric//bazel:setup_robolectric.bzl", "robolectric_repositories")
+load("@robolectric//bazel:robolectric.bzl", "robolectric_repositories")
 robolectric_repositories()
 ```
 
