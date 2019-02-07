@@ -1,0 +1,239 @@
+{
+  "methods": {
+    "freeByteBuffer(java.nio.ByteBuffer)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "freeByteBuffer(java.nio.ByteBuffer)",
+      "documentation": "Prevents attempting to free non-direct ByteBuffer objects. "
+    },
+    "getBuffer(boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "input",
+        "index"
+      ],
+      "returnType": "java.nio.ByteBuffer",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getBuffer(boolean,int)",
+      "documentation": "Returns the input or output buffer corresponding to the given index, or null if invalid. "
+    },
+    "getBuffers(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "input"
+      ],
+      "returnType": "java.nio.ByteBuffer[]",
+      "exceptions": [],
+      "name": "getBuffers(boolean)",
+      "documentation": "Returns the shadow buffers used for input or output. "
+    },
+    "invalidateByteBuffer(java.nio.ByteBuffer[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers",
+        "index"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "invalidateByteBuffer(java.nio.ByteBuffer[],int)",
+      "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. "
+    },
+    "invalidateByteBuffers(java.nio.ByteBuffer[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "invalidateByteBuffers(java.nio.ByteBuffer[])",
+      "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. "
+    },
+    "makeInputBufferAvailable(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "makeInputBufferAvailable(int)"
+    },
+    "makeOutputBufferAvailable(int,android.media.MediaCodec.BufferInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "index",
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "makeOutputBufferAvailable(int,android.media.MediaCodec.BufferInfo)"
+    },
+    "native_queueInputBuffer(int,int,int,long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "index",
+        "offset",
+        "size",
+        "presentationTimeUs",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "native_queueInputBuffer(int,int,int,long,int)",
+      "documentation": "Triggers presentation of the corresponding output buffer for the given input buffer, and passes\nthe given metadata as buffer info.\n"
+    },
+    "native_setCallback(android.media.MediaCodec.Callback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "native_setCallback(android.media.MediaCodec.Callback)",
+      "documentation": "Saves the callback to allow use inside the shadow. "
+    },
+    "native_start()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "native_start()",
+      "documentation": "Starts the async encoding process, by first reporting a format change event, and then\npresenting an input buffer to the callback.\n"
+    },
+    "postFakeNativeEvent(int,int,int,java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "what",
+        "arg1",
+        "arg2",
+        "obj"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postFakeNativeEvent(int,int,int,java.lang.Object)"
+    },
+    "releaseOutputBuffer(int,boolean,boolean,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "index",
+        "render",
+        "updatePTS",
+        "timeNs"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "releaseOutputBuffer(int,boolean,boolean,long)",
+      "documentation": "Triggers presentation of the corresponding input buffer for the given output buffer, if end of\nstream has not yet been signaled.\n"
+    },
+    "revalidateByteBuffer(java.nio.ByteBuffer[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers",
+        "index"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "revalidateByteBuffer(java.nio.ByteBuffer[],int)",
+      "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. "
+    },
+    "validateInputByteBuffer(java.nio.ByteBuffer[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers",
+        "index"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "validateInputByteBuffer(java.nio.ByteBuffer[],int)",
+      "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. "
+    },
+    "validateOutputByteBuffer(java.nio.ByteBuffer[],int,android.media.MediaCodec.BufferInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers",
+        "index",
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "validateOutputByteBuffer(java.nio.ByteBuffer[],int,android.media.MediaCodec.BufferInfo)",
+      "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. Replicates existing behavior\nadjusting buffer positions and limits.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.annotation.NonNull",
+    "android.annotation.Nullable",
+    "android.media.MediaCodec",
+    "android.media.MediaCodec.BufferInfo",
+    "java.nio.ByteBuffer",
+    "java.util.HashMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowMediaCodec.ShadowCodecBuffer"
+  ],
+  "name": "org.robolectric.shadows.ShadowMediaCodec",
+  "documentation": "Implementation of {@link android.media.MediaCodec} which only supports a passthrough asynchronous\nencoding pipeline.\n\n\u003cp\u003eOnce the pipeline is started, a format change will be reported, switching to an empty\n{@link android.media.MediaFormat} with fake codec-specific info. Following this, the\nimplementation will present an input buffer, which will be directly copied to an output buffer\nonce queued, which will be subsequently presented to the callback handler.\n"
+}

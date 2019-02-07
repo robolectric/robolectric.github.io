@@ -1,5 +1,13 @@
 {
   "methods": {
+    "getGattCallback()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothGattCallback",
+      "exceptions": [],
+      "name": "getGattCallback()"
+    },
     "newInstance(android.bluetooth.BluetoothDevice)": {
       "isImplementation": false,
       "modifiers": [
@@ -12,6 +20,16 @@
       "returnType": "android.bluetooth.BluetoothGatt",
       "exceptions": [],
       "name": "newInstance(android.bluetooth.BluetoothDevice)"
+    },
+    "setGattCallback(android.bluetooth.BluetoothGattCallback)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "bluetoothGattCallback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGattCallback(android.bluetooth.BluetoothGattCallback)"
     }
   },
   "imports": [
@@ -22,6 +40,7 @@
     "android.annotation.SuppressLint",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothGatt",
+    "android.bluetooth.BluetoothGattCallback",
     "android.content.Context",
     "android.os.Build",
     "org.robolectric.RuntimeEnvironment",

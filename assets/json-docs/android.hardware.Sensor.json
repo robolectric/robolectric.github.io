@@ -1,5 +1,17 @@
 {
   "methods": {
+    "clearMask(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "mask"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearMask(int)"
+    },
     "newInstance(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -12,17 +24,46 @@
       "returnType": "android.hardware.Sensor",
       "exceptions": [],
       "name": "newInstance(int)",
-      "documentation": "Constructs a {@link Sensor} with a given type.\n"
+      "documentation": "Constructs a {@link Sensor} with a given type. "
+    },
+    "setMask(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "mask"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMask(int)"
+    },
+    "setWakeUpFlag(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "wakeup"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWakeUpFlag(boolean)",
+      "documentation": "Controls the return value of {@link Sensor#isWakeUpSensor()}. "
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.hardware.Sensor",
     "android.os.Build.VERSION_CODES",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowSensor._Sensor_"
   ],
   "name": "org.robolectric.shadows.ShadowSensor"
 }

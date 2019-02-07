@@ -1,15 +1,5 @@
 {
   "methods": {
-    "__constructor__()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "__constructor__()"
-    },
     "__constructor__(android.graphics.Picture)": {
       "isImplementation": true,
       "modifiers": [
@@ -21,33 +11,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "__constructor__(android.graphics.Picture)"
-    },
-    "__constructor__(int,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "nativePicture",
-        "fromStream"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "maxSdk": 20,
-      "name": "__constructor__(int,boolean)"
-    },
-    "__constructor__(long)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "nativePicture"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 21,
-      "name": "__constructor__(long)"
     },
     "beginRecording(int,int)": {
       "isImplementation": true,
@@ -81,11 +44,39 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getWidth()"
+    },
+    "nativeConstructor(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeSrc"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 19,
+      "name": "nativeConstructor(int)"
+    },
+    "nativeConstructor(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeSrc"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 20,
+      "name": "nativeConstructor(long)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.Picture",

@@ -23,6 +23,17 @@
       "exceptions": [],
       "name": "acquire(long)"
     },
+    "getTimesHeld()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTimesHeld()",
+      "documentation": "Returns how many times the wakelock was held. "
+    },
     "getWorkSource()": {
       "isImplementation": false,
       "modifiers": [

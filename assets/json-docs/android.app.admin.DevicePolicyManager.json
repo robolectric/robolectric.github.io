@@ -556,6 +556,18 @@
       "exceptions": [],
       "name": "getShadowUserManager()"
     },
+    "getStorageEncryption(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getStorageEncryption(android.content.ComponentName)"
+    },
     "getStorageEncryptionStatus()": {
       "isImplementation": true,
       "modifiers": [
@@ -588,6 +600,33 @@
       "returnType": "long",
       "exceptions": [],
       "name": "getWipeCalledTimes()"
+    },
+    "grantPolicy(android.content.ComponentName,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "admin",
+        "usesPolicy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "grantPolicy(android.content.ComponentName,int)",
+      "documentation": "Grants a particular device policy for an active ComponentName.\n\n@param admin the ComponentName which DeviceAdminReceiver this request is associated with. Must\n    be an active administrator, or an exception will be thrown. This value must never be null.\n@param usesPolicy the uses-policy to check\n"
+    },
+    "hasGrantedPolicy(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "usesPolicy"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasGrantedPolicy(android.content.ComponentName,int)"
     },
     "init(android.content.Context)": {
       "isImplementation": false,
@@ -1233,6 +1272,19 @@
       "minSdk": 26,
       "name": "setResetPasswordToken(android.content.ComponentName,byte[])"
     },
+    "setStorageEncryption(android.content.ComponentName,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "encrypt"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "setStorageEncryption(android.content.ComponentName,boolean)"
+    },
     "setStorageEncryptionStatus(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -1323,6 +1375,7 @@
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "android.annotation.NonNull",
     "android.annotation.Nullable",
     "android.annotation.SuppressLint",
     "android.app.ApplicationPackageManager",

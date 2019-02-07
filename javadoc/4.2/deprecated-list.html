@@ -38,7 +38,7 @@
 <li><a href="index-all.html">Index</a></li>
 <li><a href="help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-beta-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -429,289 +429,294 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><a href="org/robolectric/internal/dependency/DependencyResolver.html#getLocalArtifactUrls-org.robolectric.internal.dependency.DependencyJar-">org.robolectric.internal.dependency.DependencyResolver.getLocalArtifactUrls(DependencyJar)</a>
+<div class="block"><span class="deprecationComment">Robolectric will never ask for a dependency composed of more than one artifact,  so this method isn&rsquo;t necessary.</span></div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowDisplay.html#getMetrics-android.util.DisplayMetrics-">org.robolectric.shadows.ShadowDisplay.getMetrics(DisplayMetrics)</a>
 <div class="block"><span class="deprecationComment">This behavior is deprecated and will be removed in Robolectric 3.7.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/res/android/NativeObjRegistry.html#getNativeObjectId-T-">org.robolectric.res.android.NativeObjRegistry.getNativeObjectId(T)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/res/android/NativeObjRegistry.html#register-T-"><code>NativeObjRegistry.register(Object)</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/res/Qualifiers.html#getOrientation-java.lang.String-">org.robolectric.res.Qualifiers.getOrientation(String)</a>
 <div class="block"><span class="deprecationComment">Use <a href="https://developer.android.com/reference/android/content/res/Configuration.html?is-external=true#orientation" title="class or interface in android.content.res"><code>Configuration.orientation</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowPackageManager.html#getPackageInfoForTesting-java.lang.String-">org.robolectric.shadows.ShadowPackageManager.getPackageInfoForTesting(String)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/ShadowPackageManager.html#getInternalMutablePackageInfo-java.lang.String-"><code>ShadowPackageManager.getInternalMutablePackageInfo(java.lang.String)</code></a> instead. It has better name.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/res/FsFile.html#getPath--">org.robolectric.res.FsFile.getPath()</a>
 <div class="block"><span class="deprecationComment">use <a href="org/robolectric/res/Fs.html#externalize-java.nio.file.Path-"><code>Fs.externalize(Path)</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowDisplay.html#getPixelFormat--">org.robolectric.shadows.ShadowDisplay.getPixelFormat()</a>
 <div class="block"><span class="deprecationComment">This behavior is deprecated and will be removed in Robolectric 3.7.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/res/Qualifiers.html#getPlatformVersion-java.lang.String-">org.robolectric.res.Qualifiers.getPlatformVersion(String)</a>
 <div class="block"><span class="deprecationComment">Use <a href="https://developer.android.com/reference/android/os/Build.VERSION.html?is-external=true#SDK_INT" title="class or interface in android.os"><code>Build.VERSION.SDK_INT</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowDisplay.html#getRealMetrics-android.util.DisplayMetrics-">org.robolectric.shadows.ShadowDisplay.getRealMetrics(DisplayMetrics)</a>
 <div class="block"><span class="deprecationComment">This behavior is deprecated and will be removed in Robolectric 3.7.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowApplication.html#getReceiversForIntent-android.content.Intent-">org.robolectric.shadows.ShadowApplication.getReceiversForIntent(Intent)</a>
 <div class="block"><span class="deprecationComment">use PackageManager.queryBroadcastReceivers instead</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowDisplay.html#getRefreshRate--">org.robolectric.shadows.ShadowDisplay.getRefreshRate()</a>
 <div class="block"><span class="deprecationComment">This behavior is deprecated and will be removed in Robolectric 3.7.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/res/Qualifiers.html#getScreenWidth-java.lang.String-">org.robolectric.res.Qualifiers.getScreenWidth(String)</a>
 <div class="block"><span class="deprecationComment">Use <a href="https://developer.android.com/reference/android/content/res/Configuration.html?is-external=true#screenWidthDp" title="class or interface in android.content.res"><code>Configuration.screenWidthDp</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/httpclient/ShadowDefaultRequestDirector.html#getSentHttpRequest-int-">org.robolectric.shadows.httpclient.ShadowDefaultRequestDirector.getSentHttpRequest(int)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/httpclient/FakeHttp.html#getSentHttpRequestInfo-int-"><code>FakeHttp.getSentHttpRequestInfo(int)</code></a> instead.)</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/httpclient/ShadowDefaultRequestDirector.html#getSentHttpRequestInfo-int-">org.robolectric.shadows.httpclient.ShadowDefaultRequestDirector.getSentHttpRequestInfo(int)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/httpclient/FakeHttp.html#getSentHttpRequest-int-"><code>FakeHttp.getSentHttpRequest(int)</code></a> instead.)</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowLooper.html#getShadowMainLooper--">org.robolectric.shadows.ShadowLooper.getShadowMainLooper()</a>
 <div class="block"><span class="deprecationComment">Use <code>shadowOf(<a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true#getMainLooper--" title="class or interface in android.os"><code>Looper.getMainLooper()</code></a>)</code> instead.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/res/Qualifiers.html#getSmallestScreenWidth-java.lang.String-">org.robolectric.res.Qualifiers.getSmallestScreenWidth(String)</a>
 <div class="block"><span class="deprecationComment">Use <a href="https://developer.android.com/reference/android/content/res/Configuration.html?is-external=true#smallestScreenWidthDp" title="class or interface in android.content.res"><code>Configuration.smallestScreenWidthDp</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowApplication.html#hasReceiverForIntent-android.content.Intent-">org.robolectric.shadows.ShadowApplication.hasReceiverForIntent(Intent)</a>
 <div class="block"><span class="deprecationComment">use PackageManager.queryBroadcastReceivers instead</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowLooper.html#idle-long-">org.robolectric.shadows.ShadowLooper.idle(long)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/ShadowLooper.html#idle-long-java.util.concurrent.TimeUnit-"><code>ShadowLooper.idle(long, TimeUnit)</code></a>.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/util/Scheduler.html#idleConstantly-boolean-">org.robolectric.util.Scheduler.idleConstantly(boolean)</a>
 <div class="block"><span class="deprecationComment">This method is ambiguous in how it should behave when turning off constant idle. Use <a href="org/robolectric/util/Scheduler.html#setIdleState-org.robolectric.util.Scheduler.IdleState-"><code>Scheduler.setIdleState(IdleState)</code></a> instead to explicitly set the state.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowLooper.html#idleMainLooper-long-">org.robolectric.shadows.ShadowLooper.idleMainLooper(long)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/ShadowLooper.html#idleMainLooper-long-java.util.concurrent.TimeUnit-"><code>ShadowLooper.idleMainLooper(long, TimeUnit)</code></a>.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowActivity.html#isFinishing--">org.robolectric.shadows.ShadowActivity.isFinishing()</a>
 <div class="block"><span class="deprecationComment">Use <a href="https://developer.android.com/reference/android/app/Activity.html?is-external=true#isFinishing--" title="class or interface in android.app"><code>Activity.isFinishing()</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowActivity.html#isLockTask--">org.robolectric.shadows.ShadowActivity.isLockTask()</a>
 <div class="block"><span class="deprecationComment">Use <a href="https://developer.android.com/reference/android/app/ActivityManager.html?is-external=true#getLockTaskModeState--" title="class or interface in android.app"><code>ActivityManager.getLockTaskModeState()</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/res/FsFile.html#join-java.lang.String-">org.robolectric.res.FsFile.join(String)</a>
 <div class="block"><span class="deprecationComment">use <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html?is-external=true#resolve-java.nio.file.Path-" title="class or interface in java.nio.file"><code>Path.resolve(Path)</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/res/Fs.html#newFile-java.io.File-">org.robolectric.res.Fs.newFile(File)</a>
 <div class="block"><span class="deprecationComment">Use <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true#toPath--" title="class or interface in java.io"><code>File.toPath()</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowNetworkInfo.html#newInstance-android.net.NetworkInfo.DetailedState-int-int-boolean-boolean-">org.robolectric.shadows.ShadowNetworkInfo.newInstance(NetworkInfo.DetailedState, int, int, boolean, boolean)</a>
 <div class="block"><span class="deprecationComment">use <a href="org/robolectric/shadows/ShadowNetworkInfo.html#newInstance-android.net.NetworkInfo.DetailedState-int-int-boolean-android.net.NetworkInfo.State-"><code>ShadowNetworkInfo.newInstance(NetworkInfo.DetailedState, int, int, boolean,
     NetworkInfo.State)</code></a> instead</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/android/AccessibilityUtil.html#passesAccessibilityChecksIfEnabled-android.view.View-">org.robolectric.android.AccessibilityUtil.passesAccessibilityChecksIfEnabled(View)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowLooper.html#post-java.lang.Runnable-long-">org.robolectric.shadows.ShadowLooper.post(Runnable, long)</a>
 <div class="block"><span class="deprecationComment">Use a <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os"><code>Handler</code></a> instance to post to a looper.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowLooper.html#postAtFrontOfQueue-java.lang.Runnable-">org.robolectric.shadows.ShadowLooper.postAtFrontOfQueue(Runnable)</a>
 <div class="block"><span class="deprecationComment">Use a <a href="https://developer.android.com/reference/android/os/Handler.html?is-external=true" title="class or interface in android.os"><code>Handler</code></a> instance to post to a looper.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowAppWidgetManager.html#putWidgetInfo-int-android.appwidget.AppWidgetProviderInfo-">org.robolectric.shadows.ShadowAppWidgetManager.putWidgetInfo(int, AppWidgetProviderInfo)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowPackageManager.html#removeResolveInfosForIntent-android.content.Intent-java.lang.String-">org.robolectric.shadows.ShadowPackageManager.removeResolveInfosForIntent(Intent, String)</a>
 <div class="block"><span class="deprecationComment">see note on <a href="org/robolectric/shadows/ShadowPackageManager.html#addResolveInfoForIntent-android.content.Intent-android.content.pm.ResolveInfo-"><code>ShadowPackageManager.addResolveInfoForIntent(Intent, ResolveInfo)</code></a>.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowActivityThread.html#setApplicationInfo-android.content.pm.ApplicationInfo-">org.robolectric.shadows.ShadowActivityThread.setApplicationInfo(ApplicationInfo)</a>
 <div class="block"><span class="deprecationComment">do not use</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowWebView.html#setCanGoBack-boolean-">org.robolectric.shadows.ShadowWebView.setCanGoBack(boolean)</a>
 <div class="block"><span class="deprecationComment">Do not depend on this method as it will be removed in a future update. The  preferered method is to populate a fake web history to use for going back.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowNetworkInfo.html#setConnectionStatus-boolean-">org.robolectric.shadows.ShadowNetworkInfo.setConnectionStatus(boolean)</a>
 <div class="block"><span class="deprecationComment">use <a href="org/robolectric/shadows/ShadowNetworkInfo.html#setConnectionStatus-android.net.NetworkInfo.State-"><code>ShadowNetworkInfo.setConnectionStatus(NetworkInfo.State)</code></a> instead</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowDisplay.html#setDisplayId-int-">org.robolectric.shadows.ShadowDisplay.setDisplayId(int)</a>
 <div class="block"><span class="deprecationComment">This method is deprecated and will be removed in Robolectric 3.7.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowFingerprintManager.html#setHasEnrolledFingerprints-boolean-">org.robolectric.shadows.ShadowFingerprintManager.setHasEnrolledFingerprints(boolean)</a>
 <div class="block"><span class="deprecationComment">use <a href="org/robolectric/shadows/ShadowFingerprintManager.html#setDefaultFingerprints-int-"><code>ShadowFingerprintManager.setDefaultFingerprints(int)</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowKeyguardManager.html#setinRestrictedInputMode-boolean-">org.robolectric.shadows.ShadowKeyguardManager.setinRestrictedInputMode(boolean)</a>
 <div class="block"><span class="deprecationComment">use <a href="org/robolectric/shadows/ShadowKeyguardManager.html#setInRestrictedInputMode-boolean-"><code>ShadowKeyguardManager.setInRestrictedInputMode(boolean)</code></a> instead</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowUserManager.html#setIsDemoUser-boolean-">org.robolectric.shadows.ShadowUserManager.setIsDemoUser(boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/ShadowUserManager.html#addUser-int-java.lang.String-int-"><code>ShadowUserManager.addUser(int, String, int)</code></a> to create a demo user  instead of changing default user flags.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowUserManager.html#setIsGuestUser-boolean-">org.robolectric.shadows.ShadowUserManager.setIsGuestUser(boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/ShadowUserManager.html#addUser-int-java.lang.String-int-"><code>ShadowUserManager.addUser(int, String, int)</code></a> to create a guest user  instead of changing default user flags.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowUserManager.html#setIsLinkedUser-boolean-">org.robolectric.shadows.ShadowUserManager.setIsLinkedUser(boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/ShadowUserManager.html#addUser-int-java.lang.String-int-"><code>ShadowUserManager.addUser(int, String, int)</code></a> to create a linked user  instead of changing default user flags.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowUserManager.html#setIsPrimaryUser-boolean-">org.robolectric.shadows.ShadowUserManager.setIsPrimaryUser(boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/ShadowUserManager.html#addUser-int-java.lang.String-int-"><code>ShadowUserManager.addUser(int, String, int)</code></a> to create a primary user  instead of changing default user flags.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowUserManager.html#setIsSystemUser-boolean-">org.robolectric.shadows.ShadowUserManager.setIsSystemUser(boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/shadows/ShadowUserManager.html#addUser-int-java.lang.String-int-"><code>ShadowUserManager.addUser(int, String, int)</code></a> to create a system user  instead of changing default user flags.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowActivity.html#setLastNonConfigurationInstance-java.lang.Object-">org.robolectric.shadows.ShadowActivity.setLastNonConfigurationInstance(Object)</a>
 <div class="block"><span class="deprecationComment">use <a href="org/robolectric/android/controller/ActivityController.html#recreate--"><code>ActivityController.recreate()</code></a>.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowDisplay.html#setPixelFormat-int-">org.robolectric.shadows.ShadowDisplay.setPixelFormat(int)</a>
 <div class="block"><span class="deprecationComment">This method is deprecated and will be removed in Robolectric 3.7.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowMotionEvent.html#setPointer2-float-float-">org.robolectric.shadows.ShadowMotionEvent.setPointer2(float, float)</a>
 <div class="block"><span class="deprecationComment">use <a href="https://developer.android.com/reference/android/view/MotionEvent.html?is-external=true#obtain--" title="class or interface in android.view"><code>MotionEvent.obtain()</code></a> or <code>androidx.test.core.view.MotionEventBuilder</code> to create a MotionEvent with desired data.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowMotionEvent.html#setPointerIds-int-int-">org.robolectric.shadows.ShadowMotionEvent.setPointerIds(int, int)</a>
 <div class="block"><span class="deprecationComment">use <a href="https://developer.android.com/reference/android/view/MotionEvent.html?is-external=true#obtain--" title="class or interface in android.view"><code>MotionEvent.obtain()</code></a> or <code>MotionEventBuilder</code> to create a  MotionEvent with desired data</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowMotionEvent.html#setPointerIndex-int-">org.robolectric.shadows.ShadowMotionEvent.setPointerIndex(int)</a>
 <div class="block"><span class="deprecationComment">use <a href="https://developer.android.com/reference/android/view/MotionEvent.html?is-external=true#obtain--" title="class or interface in android.view"><code>MotionEvent.obtain()</code></a> or <code>androidx.test.core.view.MotionEventBuilder#setPointerAction(int, int)</code> to create a  MotionEvent with desired data.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowPackageManager.html#setResolveInfosForIntent-android.content.Intent-java.util.List-">org.robolectric.shadows.ShadowPackageManager.setResolveInfosForIntent(Intent, List&lt;ResolveInfo&gt;)</a>
 <div class="block"><span class="deprecationComment">see the note on <a href="org/robolectric/shadows/ShadowPackageManager.html#addResolveInfoForIntent-android.content.Intent-android.content.pm.ResolveInfo-"><code>ShadowPackageManager.addResolveInfoForIntent(Intent, ResolveInfo)</code></a>.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowDisplay.html#setScaledDensity-float-">org.robolectric.shadows.ShadowDisplay.setScaledDensity(float)</a>
 <div class="block"><span class="deprecationComment">This method is deprecated and will be removed in Robolectric 3.7.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowUserManager.html#setSerialNumberForUser-android.os.UserHandle-long-">org.robolectric.shadows.ShadowUserManager.setSerialNumberForUser(UserHandle, long)</a>
 <div class="block"><span class="deprecationComment">prefer <a href="org/robolectric/shadows/ShadowUserManager.html#addUserProfile-android.os.UserHandle-"><code>ShadowUserManager.addUserProfile(UserHandle)</code></a> to ensure consistency of profiles known to the <a href="https://developer.android.com/reference/android/os/UserManager.html?is-external=true" title="class or interface in android.os"><code>UserManager</code></a>. Furthermore, calling this method for the current user, i.e: <a href="https://developer.android.com/reference/android/os/Process.html?is-external=true#myUserHandle--" title="class or interface in android.os"><code>Process.myUserHandle()</code></a> is no longer necessary as this user is always known to UserManager and has a preassigned serial number.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowPackageInstaller.html#setSessionSucceeds-int-">org.robolectric.shadows.ShadowPackageInstaller.setSessionSucceeds(int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowApplication.html#setSystemService-java.lang.String-java.lang.Object-">org.robolectric.shadows.ShadowApplication.setSystemService(String, Object)</a>
 <div class="block"><span class="deprecationComment">Do not depend on this method to override services as it will be removed in a future update. The preferered method is use the shadow of the corresponding service.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/Robolectric.html#setupActivity-java.lang.Class-">org.robolectric.Robolectric.setupActivity(Class&lt;T&gt;)</a>
 <div class="block"><span class="deprecationComment">use <code>androidx.test.core.app.ActivityScenario</code></span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/RuntimeEnvironment.html#setUseLegacyResources-boolean-">org.robolectric.RuntimeEnvironment.setUseLegacyResources(boolean)</a>
 <div class="block"><span class="deprecationComment">Do not use.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/Shadows.html#shadowOf-android.os.Handler-">org.robolectric.Shadows.shadowOf(Handler)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/manifest/AndroidManifest.html#supportsBinaryResourcesMode--">org.robolectric.manifest.AndroidManifest.supportsBinaryResourcesMode()</a>
 <div class="block"><span class="deprecationComment">Do not use.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/manifest/AndroidManifest.html#supportsLegacyResourcesMode--">org.robolectric.manifest.AndroidManifest.supportsLegacyResourcesMode()</a>
 <div class="block"><span class="deprecationComment">Do not use.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/res/android/NativeObjRegistry.html#unregister-T-">org.robolectric.res.android.NativeObjRegistry.unregister(T)</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/robolectric/res/android/NativeObjRegistry.html#unregister-long-"><code>NativeObjRegistry.unregister(long)</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/shadows/ShadowAssetManager.html#useLegacy--">org.robolectric.shadows.ShadowAssetManager.useLegacy()</a>
 <div class="block"><span class="deprecationComment">Avoid use.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="org/robolectric/RuntimeEnvironment.html#useLegacyResources--">org.robolectric.RuntimeEnvironment.useLegacyResources()</a>
 <div class="block"><span class="deprecationComment">Do not use.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="org/robolectric/android/controller/ServiceController.html#withIntent-android.content.Intent-">org.robolectric.android.controller.ServiceController.withIntent(Intent)</a>
 <div class="block"><span class="deprecationComment">Use the appropriate builder in <a href="org/robolectric/Robolectric.html" title="class in org.robolectric"><code>Robolectric</code></a> instead.</p>
 <p>This method will be removed in Robolectric 3.6.</span></div>
@@ -805,7 +810,7 @@
 <li><a href="index-all.html">Index</a></li>
 <li><a href="help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="./highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-beta-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="./highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

@@ -1,0 +1,37 @@
+{
+  "methods": {
+    "asRangingResult(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "status",
+        "mac",
+        "distanceMm",
+        "distanceStdDevMm",
+        "rssi",
+        "numAttemptedMeasurements",
+        "numSuccessfulMeasurements",
+        "lci",
+        "lcr",
+        "timestamp"
+      ],
+      "returnType": "android.net.wifi.rtt.RangingResult",
+      "exceptions": [],
+      "name": "asRangingResult(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],long)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.P",
+    "android.net.MacAddress",
+    "android.net.wifi.rtt.RangingResult",
+    "org.robolectric.annotation.Config",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowRangingResult.Builder"
+  ],
+  "name": "org.robolectric.shadows.ShadowRangingResult",
+  "documentation": "Shadow for {@link android.net.wifi.rtt.RangingResult}. "
+}

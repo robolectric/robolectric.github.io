@@ -289,6 +289,17 @@
       "name": "isManagedProfile()",
       "documentation": "If permissions are enforced (see {@link #enforcePermissionChecks(boolean)}) and the application\ndoesn\u0027t have the {@link android.Manifest.permission#MANAGE_USERS} permission, throws a\n{@link SecurityManager} exception.\n\n@return `false` by default, or the value specified via {@link #setManagedProfile(boolean)}\n@see #enforcePermissionChecks(boolean)\n@see #setManagedProfile(boolean)\n"
     },
+    "isRestrictedProfile()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isRestrictedProfile()",
+      "documentation": "Returns \u0027false\u0027 by default, or the value specified via {@link\n#setIsRestrictedProfile(boolean)}.\n"
+    },
     "isSystemUser()": {
       "isImplementation": true,
       "modifiers": [
@@ -440,6 +451,19 @@
       "exceptions": [],
       "name": "setIsPrimaryUser(boolean)",
       "documentation": "Sets that the current user is the primary user; controls the return value of {@link\nUserManager#isPrimaryUser()}.\n\n@deprecated Use {@link ShadowUserManager#addUser(int, String, int)} to create a primary user\n    instead of changing default user flags.\n"
+    },
+    "setIsRestrictedProfile(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isRestrictedProfile"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsRestrictedProfile(boolean)",
+      "documentation": "Sets this process running under a restricted profile; controls the return value of {@link\nUserManager#isRestrictedProfile()}.\n"
     },
     "setIsSystemUser(boolean)": {
       "isImplementation": false,

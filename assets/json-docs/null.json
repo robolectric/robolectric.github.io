@@ -1,40 +1,23 @@
 {
   "methods": {
-    "getDefaultDisplay()": {
+    "apply()": {
       "isImplementation": true,
       "modifiers": [
         "protected"
       ],
       "params": [],
-      "returnType": "android.view.Display",
+      "returnType": "void",
       "exceptions": [],
-      "maxSdk": 16,
-      "name": "getDefaultDisplay()"
+      "name": "apply()"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
-    "android.content.res.Configuration",
+    "android.app.QueuedWork",
     "android.os.Build.VERSION_CODES",
-    "android.util.DisplayMetrics",
-    "android.view.Display",
-    "android.view.View",
-    "android.view.ViewGroup",
-    "android.view.WindowManagerImpl",
-    "com.google.common.collect.ArrayListMultimap",
-    "com.google.common.collect.ImmutableList",
-    "com.google.common.collect.Multimap",
-    "java.util.HashMap",
-    "java.util.List",
-    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowWindowManagerImpl.ShadowCompatModeWrapper"
+  "name": "org.robolectric.shadows.ShadowSharedPreferences.ShadowSharedPreferencesEditorImpl"
 }

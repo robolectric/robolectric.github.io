@@ -37,6 +37,17 @@
       "name": "fetchUuidsWithSdp()",
       "documentation": "Overrides behavior of {@link BluetoothDevice#fetchUuidsWithSdp}. This method updates the\ncounter which counts the number of invocations of this method.\n\n@returns Value set by calling {@link ShadowBluetoothDevice#setFetchUuidsWithSdpResult}. If not\n    previously set, will return false by default.\n"
     },
+    "getBluetoothGatts()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.bluetooth.BluetoothGatt\u003e",
+      "exceptions": [],
+      "name": "getBluetoothGatts()",
+      "documentation": "Returns all {@link BluetoothGatt} objects created by calling {@link\nShadowBluetoothDevice#connectGatt}.\n"
+    },
     "getBondState()": {
       "isImplementation": true,
       "modifiers": [
@@ -193,11 +204,26 @@
       "exceptions": [],
       "name": "setUuids(android.os.ParcelUuid[])",
       "documentation": "Sets the return value for {@link BluetoothDevice#getUuids}. "
+    },
+    "simulateGattConnectionChange(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "status",
+        "newState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "simulateGattConnectionChange(int,int)",
+      "documentation": "Causes {@link BluetoothGattCallback#onConnectionStateChange to be called for every GATT client.\n@param status Status of the GATT operation\n@param newState The new state of the GATT profile\n"
     }
   },
   "imports": [
     "android.bluetooth.BluetoothDevice.BOND_NONE",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothGatt",
@@ -205,9 +231,12 @@
     "android.bluetooth.IBluetooth",
     "android.content.Context",
     "android.os.ParcelUuid",
+    "java.util.ArrayList",
+    "java.util.List",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothDevice"

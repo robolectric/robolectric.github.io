@@ -87,6 +87,18 @@
       "name": "getListeners()",
       "documentation": "Returns the list of {@link SensorEventListener}s registered on this SensorManager. Note that\nthe list is unmodifiable, any attempt to modify it will throw an exception.\n"
     },
+    "getSensorList(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "java.util.List\u003candroid.hardware.Sensor\u003e",
+      "exceptions": [],
+      "name": "getSensorList(int)"
+    },
     "hasListener(android.hardware.SensorEventListener)": {
       "isImplementation": false,
       "modifiers": [

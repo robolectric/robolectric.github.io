@@ -1,0 +1,25 @@
+{
+  "methods": {
+    "__constructor__(android.content.Context,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "tag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,java.lang.String)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.content.Context",
+    "android.media.session.MediaSession",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowMediaSession"
+}

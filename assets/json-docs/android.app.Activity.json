@@ -747,6 +747,7 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.Activity",

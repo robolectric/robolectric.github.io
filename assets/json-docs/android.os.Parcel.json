@@ -1008,7 +1008,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadows.ShadowParcel.UnreliableBehaviorException",
+    "org.robolectric.shadows.ShadowParcel.UnreliableBehaviorError",
     "org.robolectric.shadows.ShadowParcel.ByteBuffer"
   ],
   "name": "org.robolectric.shadows.ShadowParcel",

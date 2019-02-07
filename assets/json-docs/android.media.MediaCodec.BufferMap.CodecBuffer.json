@@ -1,0 +1,41 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "free()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "free()",
+      "documentation": "Prevents attempting to free non-direct ByteBuffer objects. "
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.annotation.NonNull",
+    "android.annotation.Nullable",
+    "android.media.MediaCodec",
+    "android.media.MediaCodec.BufferInfo",
+    "java.nio.ByteBuffer",
+    "java.util.HashMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowMediaCodec.ShadowCodecBuffer",
+  "documentation": "Shadows CodecBuffer to prevent attempting to free non-direct ByteBuffer objects. "
+}

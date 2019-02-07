@@ -1,0 +1,123 @@
+{
+  "methods": {
+    "__constructor__(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path",
+        "format"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "__constructor__(java.lang.String,int)",
+      "documentation": "Opens a FileOutputStream for the given path, and sets muxer state.\n\n\u003cp\u003eThis needs to be shadowed, because the current MediaMuxer constructor opens a\nRandomAccessFile, passes only the FileDescriptor along, and then closes the file. Since there\ndoes not appear to be an easy way to go from FileDescriptor to a writeable stream in Java, this\nmethod overrides that behavior to instead open and maintain a FileOutputStream.\n"
+    },
+    "getStream(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "streamKey"
+      ],
+      "returnType": "java.io.FileOutputStream",
+      "exceptions": [],
+      "name": "getStream(long)"
+    },
+    "nativeAddTrack(long,java.lang.String[],java.lang.Object[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject",
+        "keys",
+        "values"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nativeAddTrack(long,java.lang.String[],java.lang.Object[])",
+      "documentation": "Returns an incremented track id for the associated muxer. "
+    },
+    "nativeSetup(java.io.FileDescriptor,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fd",
+        "format"
+      ],
+      "returnType": "long",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "nativeSetup(java.io.FileDescriptor,int)",
+      "documentation": "Generates and returns an internal id to track the FileOutputStream corresponding to individual\nMediaMuxer instances.\n"
+    },
+    "nativeStop(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nativeStop(long)",
+      "documentation": "Closes the FileOutputStream for the associated muxer. "
+    },
+    "nativeWriteSampleData(long,int,java.nio.ByteBuffer,int,int,long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject",
+        "trackIndex",
+        "byteBuf",
+        "offset",
+        "size",
+        "presentationTimeUs",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nativeWriteSampleData(long,int,java.nio.ByteBuffer,int,int,long,int)",
+      "documentation": "Writes the given data to the FileOutputStream for the associated muxer. "
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.O",
+    "android.annotation.NonNull",
+    "android.media.MediaCodec",
+    "android.media.MediaMuxer",
+    "android.media.MediaMuxer.Format",
+    "dalvik.system.CloseGuard",
+    "java.io.FileDescriptor",
+    "java.io.FileOutputStream",
+    "java.io.IOException",
+    "java.nio.ByteBuffer",
+    "java.util.Random",
+    "java.util.concurrent.ConcurrentHashMap",
+    "java.util.concurrent.atomic.AtomicInteger",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowMediaMuxer",
+  "documentation": "Implementation of {@link android.media.MediaMuxer} which directly passes input bytes to the\nspecified file, with no modification.\n"
+}

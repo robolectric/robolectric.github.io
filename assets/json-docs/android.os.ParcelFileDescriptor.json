@@ -37,6 +37,20 @@
       ],
       "name": "createPipe()"
     },
+    "createReliablePipe()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.os.ParcelFileDescriptor[]",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 19,
+      "name": "createReliablePipe()"
+    },
     "getFd()": {
       "isImplementation": true,
       "modifiers": [
@@ -98,6 +112,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.annotation.SuppressLint",

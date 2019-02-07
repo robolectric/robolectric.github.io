@@ -380,6 +380,18 @@
       "exceptions": [],
       "name": "onResume()"
     },
+    "removeJavascriptInterface(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeJavascriptInterface(java.lang.String)"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
