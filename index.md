@@ -10,18 +10,28 @@ Running tests on an Android emulator or device is slow! Building, deploying, and
 
 [Robolectric](http://robolectric.org/) is a framework that brings fast and reliable unit tests to Android. Tests run inside the JVM on your workstation in seconds. With Robolectric you can write tests like this:
 
-```java
-@RunWith(RobolectricTestRunner.class)
-public class MyActivityTest {
+```kotlin
+import androidx.test.core.app.ActivityScenario.launch
+import androidx.test.espresso.Espresso.onView
 
-  @Test
-  public void clickingButton_shouldChangeMessage() {
-    MyActivity activity = Robolectric.setupActivity(MyActivity.class);
+@RunWith(AndroidJUnit4::class)
+class AddContactActivityTest {
 
-    activity.button.performClick();
+    @Test fun inputTextShouldBeRetainedAfterActivityRecreation() {
+        // GIVEN
+        val contactName = "Test User"
+        val scenario = launchActivity<AddContactActivity>()
 
-    assertThat(activity.message.getText()).isEqualTo("Robolectric Rocks!");
-  }
+        // WHEN
+        // Enter contact name
+        onView(withId(R.id.contact_name_text)).perform(typeText(contactName))
+        // Destroy and recreate Activity
+        scenario.recreate()
+
+        // THEN
+        // Check contact name was preserved.
+        onView(withId(R.id.contact_name_text)).check(matches(withText(contactName)))
+     }
 }
 ```
 [» Getting Started...](/getting-started/)
@@ -44,6 +54,6 @@ Robolectric handles inflation of views, resource loading, and lots of other stuf
 
 ### No Mocking Frameworks Required
 
-An alternate approach to Robolectric is to use mock frameworks such as [Mockito](http://code.google.com/p/mockito/) or to mock out the Android SDK. While this is a valid approach, it often yields tests that are essentially reverse implementations of the application code.
+An alternate approach to Robolectric is to use mock frameworks such as [Mockito](http://code.google.com/p/mockito/) to mock out the Android SDK. This is problematic because it relies on each individual developer to fully understand the implementation of Android which can change across API versions. Because Robolectric's test doubles are community mainained, well tested and in some cases verified against real Android they're a lot more accurate than one off mocks. Futhermore, because the implementation is encapsulated inside the test doubles, it removes the need for distracting boilerplate stubbing from your tests.
 
-Robolectric allows a test style that is closer to black box testing, making the tests more effective for refactoring and allowing the tests to focus on the behavior of the application instead of the implementation of Android. You can still use a mocking framework along with Robolectric if you like.
+Robolectric allows a test style that is closer to black box testing, making the tests more effective for refactoring and allowing the tests to focus on the behavior of the application instead of the implementation of Android. We still recommend using a mocking framework along with Robolectric for your own dependencies.
