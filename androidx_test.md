@@ -2,6 +2,7 @@
 title: AndroidX Test
 group: User Guide
 order: 1
+redirect_from: "/activity-lifecycle/"
 ---
 
 # AndroidX Test
