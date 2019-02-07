@@ -16,9 +16,8 @@ test. Furthermore it will make your tests more portable and compatible with our 
 ### TestRunner
 
 It is now possible to use the AndroidX test runner in Robolectric tests. If you require a custom test runner currently,
-please check out the new [configuration and plugin API]
-(http://robolectric.org/javadoc/4.2/org/robolectric/pluginapi/package-summary.html) and let us know if there are any
-extension points missing that you require.
+please check out the new [configuration and plugin API](http://robolectric.org/javadoc/4.2/org/robolectric/pluginapi/package-summary.html)
+and let us know if there are any extension points missing that you require.
 
 **Robolectric**
 ```kotlin
@@ -36,8 +35,8 @@ public class SandwichTest {
 
 ### Application
 
-Since most Android code is centric around the `Context`, getting hold of your
-application’s context is a typical task for most tests. 
+Since most Android code is centric around the `Context`, getting hold of your application’s context is a typical task
+for most tests. 
 
 **Robolectric**
 ```kotlin
@@ -47,8 +46,7 @@ application’s context is a typical task for most tests.
 }
 ```
 
-This can be directly replaced with [`ApplicationProvider`]
-(https://developer.android.com/reference/androidx/test/core/app/ApplicationProvider).
+This can be directly replaced with [`ApplicationProvider`](https://developer.android.com/reference/androidx/test/core/app/ApplicationProvider).
 You may want to statically import it for readability. 
 
 **AndroidX Test**
@@ -164,8 +162,7 @@ Robolectric provides APIs such as `SupportFragmentUtil` and `SupportFragmentCont
 grained control of the Fragments lifecycle, which required developers to have a full understanding of lifecycle
 transitions and valid final states, making it easy to shoot oneself in the foot for the same reasons as with Activities above.
 
-AndroidX Test provides [`FragmentScenario`]
-(https://developer.android.com/reference/androidx/fragment/app/testing/FragmentScenario),
+AndroidX Test provides [`FragmentScenario`](https://developer.android.com/reference/androidx/fragment/app/testing/FragmentScenario),
 which offers APIS to safely create your fragment under test and drive it through
 valid transitions.
 
@@ -182,5 +179,5 @@ class FragmentTest {
 
 ```
 
-Read more aboout testing Fragments here [developer.android.com/training/basics/fragments/testing](https://developer.android.com/training/basics/fragments/testing)
+Read more aboout testing Fragments here: [developer.android.com/training/basics/fragments/testing](https://developer.android.com/training/basics/fragments/testing)
 
