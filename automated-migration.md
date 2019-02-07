@@ -3,6 +3,7 @@ title: Automated Migration
 group: [hide]
 order: 7
 toc: true
+redirect_from: "/errorprone-refactorings/"
 ---
 
 # Automated Migration
