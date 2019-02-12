@@ -83,8 +83,8 @@ android_library(
 ## Other Environments
 
 * [Buck](https://buckbuild.com/rule/robolectric_test.html)
-* [Older Android Studio/Gradle Versions](http://127.0.0.1:4000/other-environments/#android-studio--gradle-agp--30)
-* [Maven & Eclipse](http://127.0.0.1:4000/other-environments/#maven--eclipse)
+* [Older Android Studio/Gradle Versions](/other-environments/#android-studio--gradle-agp--30)
+* [Maven & Eclipse](/other-environments/#maven--eclipse)
 
 ## Sample Projects
 
