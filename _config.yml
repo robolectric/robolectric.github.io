@@ -53,9 +53,11 @@ menu:
         url: /javadoc/4.0/
       - title: "4.1"
         url: /javadoc/4.1/
-      - title: "4.2 Beta 1"
+      - title: "4.2"
         url: /javadoc/4.2/
-        class: italic
+#     - title: "4.3 Alpha"
+#       url: /javadoc/4.3/
+#       class: italic
     - title: Issues
       url: https://github.com/robolectric/robolectric/issues/
 
@@ -87,6 +89,6 @@ defaults:
 
 robolectric:
   version:
-    current: "4.1"
-    preview: "4.2-beta-1"
-    snapshot: "4.2-SNAPSHOT"
+    current: "4.2"
+    preview: "4.2"
+    snapshot: "4.3-SNAPSHOT"
