@@ -44,7 +44,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-beta-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -115,7 +115,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <p>Dependencies are identified by an interface or class, and optionally by a name specified with <code>@</code><code>Named</code>.</p>
 <h3>Dependency Resolution</h3>
 <p>When a dependency is requested, an implementation is sought.</p>
-<p>If the injector has a superinjector, it is always recursively consulted first (with the exception of interfaces annotated <code>@</code><a href="../../../../org/robolectric/util/inject/AutoFactory.html" title="annotation in org.robolectric.util.inject"><code>AutoFactory</code></a>; see <a href="#Scopes">Scopes</a> below).</p>
 <p>The injector looks for any instance that has been previously found for the given interface, or that has been explicitly registered with <a href="../../../../org/robolectric/util/inject/Injector.Builder.html#bind-java.lang.Class-T-"><code>Injector.Builder.bind(Class, Object)</code></a> or <code>Builder#bind(Key, Object)</code>. If none is found, the injector searches for an implementing class from the following sources, in order:</p>
 <ol>
   <li>Explicitly-registered implementations registered with <a href="../../../../org/robolectric/util/inject/Injector.Builder.html#bind-java.lang.Class-java.lang.Class-"><code>Injector.Builder.bind(Class, Class)</code></a>.</li>
@@ -124,6 +123,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
   <li>Fallback default implementation classes registered with  <a href="../../../../org/robolectric/util/inject/Injector.Builder.html#bindDefault-java.lang.Class-java.lang.Class-"><code>Injector.Builder.bindDefault(Class, Class)</code></a>.</li>
   <li>If the dependency type is a concrete class, then the dependency type itself.</li>
 </ol>
+<p>If the injector has a superinjector, it is always consulted first (with the exception of interfaces annotated <code>@</code><a href="../../../../org/robolectric/util/inject/AutoFactory.html" title="annotation in org.robolectric.util.inject"><code>AutoFactory</code></a>; see <a href="#Scopes">Scopes</a> below).</p>
 <p>If no implementing class is found in the injector or any superinjector, an exception is thrown.</p>
 <h3>Injection</h3>
 <p>When the injector has determined an implementing class, it attempts to instantiate it. It searches for a constructor in the following order:</p>
@@ -296,7 +296,7 @@ public&nbsp;&lt;T&gt;&nbsp;T&nbsp;getInstance(<a href="https://docs.oracle.com/j
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-beta-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../../highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../../highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

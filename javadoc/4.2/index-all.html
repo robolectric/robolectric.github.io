@@ -38,7 +38,7 @@
 <li class="navBarCell1Rev">Index</li>
 <li><a href="help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-beta-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -1218,10 +1218,18 @@
 <dd>&nbsp;</dd>
 <dt><a href="org/robolectric/internal/AndroidSandbox.html" title="class in org.robolectric.internal"><span class="typeNameLink">AndroidSandbox</span></a> - Class in <a href="org/robolectric/internal/package-summary.html">org.robolectric.internal</a></dt>
 <dd>
-<div class="block">Container simulating an Android device.</div>
+<div class="block">Sandbox simulating an Android device.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/AndroidSandbox.html#AndroidSandbox-javax.inject.Provider-java.lang.ClassLoader-org.robolectric.pluginapi.Sdk-">AndroidSandbox(Provider&lt;Environment&gt;, ClassLoader, Sdk)</a></span> - Constructor for class org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.html" title="class in org.robolectric.internal">AndroidSandbox</a></dt>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/AndroidSandbox.html#AndroidSandbox-org.robolectric.pluginapi.Sdk-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-org.robolectric.ApkLoader-org.robolectric.internal.AndroidSandbox.EnvironmentSpec-org.robolectric.internal.AndroidSandbox.SdkSandboxClassLoader-">AndroidSandbox(Sdk, Sdk, ResourcesMode, ApkLoader, AndroidSandbox.EnvironmentSpec, AndroidSandbox.SdkSandboxClassLoader)</a></span> - Constructor for class org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.html" title="class in org.robolectric.internal">AndroidSandbox</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal"><span class="typeNameLink">AndroidSandbox.EnvironmentSpec</span></a> - Class in <a href="org/robolectric/internal/package-summary.html">org.robolectric.internal</a></dt>
+<dd>
+<div class="block">Provides a mechanism for tests to inject a different AndroidEnvironment.</div>
+</dd>
+<dt><a href="org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal"><span class="typeNameLink">AndroidSandbox.SdkSandboxClassLoader</span></a> - Class in <a href="org/robolectric/internal/package-summary.html">org.robolectric.internal</a></dt>
+<dd>
+<div class="block">Adapter from Sdk to ResourceLoader.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/util/Consumer.html#andThen-org.robolectric.util.Consumer-">andThen(Consumer&lt;? super T&gt;)</a></span> - Method in interface org.robolectric.util.<a href="org/robolectric/util/Consumer.html" title="interface in org.robolectric.util">Consumer</a></dt>
 <dd>
 <div class="block">Returns a composed <code>Consumer</code> that performs, in sequence, this operation followed by the <code>after</code> operation.</div>
@@ -1657,6 +1665,8 @@
 <dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/InstrumentationConfiguration.Builder.html#build--">build()</a></span> - Method in class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/InstrumentationConfiguration.Builder.html" title="class in org.robolectric.internal.bytecode">InstrumentationConfiguration.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/ShadowMap.Builder.html#build--">build()</a></span> - Method in class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/ShadowMap.Builder.html" title="class in org.robolectric.internal.bytecode">ShadowMap.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/SandboxManager.SandboxBuilder.html#build-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.pluginapi.Sdk-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-">build(InstrumentationConfiguration, Sdk, Sdk, ResourcesMode)</a></span> - Method in interface org.robolectric.internal.<a href="org/robolectric/internal/SandboxManager.SandboxBuilder.html" title="interface in org.robolectric.internal">SandboxManager.SandboxBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/Robolectric.AttributeSetBuilder.html#build--">build()</a></span> - Method in interface org.robolectric.<a href="org/robolectric/Robolectric.AttributeSetBuilder.html" title="interface in org.robolectric">Robolectric.AttributeSetBuilder</a></dt>
 <dd>
@@ -2769,10 +2779,6 @@
 <dd>
 <div class="block">Create a <a href="org/robolectric/internal/bytecode/ClassHandler.html" title="interface in org.robolectric.internal.bytecode"><code>ClassHandler</code></a> appropriate for the given arguments.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/SandboxClassLoader.html#createClassInstrumentor-org.robolectric.internal.bytecode.ClassInstrumentor.Decorator-">createClassInstrumentor(ClassInstrumentor.Decorator)</a></span> - Method in class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/SandboxClassLoader.html" title="class in org.robolectric.internal.bytecode">SandboxClassLoader</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/SandboxFactory.html#createClassLoader-org.robolectric.internal.bytecode.InstrumentationConfiguration-java.net.URL...-">createClassLoader(InstrumentationConfiguration, URL...)</a></span> - Method in class org.robolectric.internal.<a href="org/robolectric/internal/SandboxFactory.html" title="class in org.robolectric.internal">SandboxFactory</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/internal/SandboxTestRunner.html#createClassLoaderConfig-org.junit.runners.model.FrameworkMethod-">createClassLoaderConfig(FrameworkMethod)</a></span> - Method in class org.robolectric.internal.<a href="org/robolectric/internal/SandboxTestRunner.html" title="class in org.robolectric.internal">SandboxTestRunner</a></dt>
 <dd>
 <div class="block">Create an <a href="org/robolectric/internal/bytecode/InstrumentationConfiguration.html" title="class in org.robolectric.internal.bytecode"><code>InstrumentationConfiguration</code></a> suitable for the provided <code>FrameworkMethod</code>.</div>
@@ -3636,6 +3642,10 @@ IPackageDeleteObserver, int)</code></a></div>
 <dd>&nbsp;</dd>
 <dt><a href="org/robolectric/internal/Environment.html" title="interface in org.robolectric.internal"><span class="typeNameLink">Environment</span></a> - Interface in <a href="org/robolectric/internal/package-summary.html">org.robolectric.internal</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html#EnvironmentSpec--">EnvironmentSpec()</a></span> - Constructor for class org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.EnvironmentSpec</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html#EnvironmentSpec-java.lang.Class-">EnvironmentSpec(Class&lt;? extends AndroidEnvironment&gt;)</a></span> - Constructor for class org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.EnvironmentSpec</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/android/internal/DisplayConfig.html#equals-java.lang.Object-">equals(Object)</a></span> - Method in class org.robolectric.android.internal.<a href="org/robolectric/android/internal/DisplayConfig.html" title="class in org.robolectric.android.internal">DisplayConfig</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/android/internal/DisplayConfig.html#equals-org.robolectric.android.internal.DisplayConfig-">equals(DisplayConfig)</a></span> - Method in class org.robolectric.android.internal.<a href="org/robolectric/android/internal/DisplayConfig.html" title="class in org.robolectric.android.internal">DisplayConfig</a></dt>
@@ -4481,7 +4491,7 @@ IPackageDeleteObserver, int)</code></a></div>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/manifest/AndroidManifest.html#getAndroidManifestFile--">getAndroidManifestFile()</a></span> - Method in class org.robolectric.manifest.<a href="org/robolectric/manifest/AndroidManifest.html" title="class in org.robolectric.manifest">AndroidManifest</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/SandboxFactory.html#getAndroidSandbox-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-">getAndroidSandbox(InstrumentationConfiguration, Sdk, ResourcesMode)</a></span> - Method in class org.robolectric.internal.<a href="org/robolectric/internal/SandboxFactory.html" title="class in org.robolectric.internal">SandboxFactory</a></dt>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/SandboxManager.html#getAndroidSandbox-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-">getAndroidSandbox(InstrumentationConfiguration, Sdk, ResourcesMode)</a></span> - Method in class org.robolectric.internal.<a href="org/robolectric/internal/SandboxManager.html" title="class in org.robolectric.internal">SandboxManager</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/pluginapi/Sdk.html#getAndroidVersion--">getAndroidVersion()</a></span> - Method in class org.robolectric.pluginapi.<a href="org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi">Sdk</a></dt>
 <dd>
@@ -5395,6 +5405,8 @@ IPackageDeleteObserver, int)</code></a></div>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/fakes/RoboWebSettings.html#getDatabasePath--">getDatabasePath()</a></span> - Method in class org.robolectric.fakes.<a href="org/robolectric/fakes/RoboWebSettings.html" title="class in org.robolectric.fakes">RoboWebSettings</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/shadows/ShadowContextImpl.html#getDatabasePath-java.lang.String-">getDatabasePath(String)</a></span> - Method in class org.robolectric.shadows.<a href="org/robolectric/shadows/ShadowContextImpl.html" title="class in org.robolectric.shadows">ShadowContextImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/shadows/ShadowIcon.html#getDataBytes--">getDataBytes()</a></span> - Method in class org.robolectric.shadows.<a href="org/robolectric/shadows/ShadowIcon.html" title="class in org.robolectric.shadows">ShadowIcon</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/shadows/ShadowIcon.html#getDataLength--">getDataLength()</a></span> - Method in class org.robolectric.shadows.<a href="org/robolectric/shadows/ShadowIcon.html" title="class in org.robolectric.shadows">ShadowIcon</a></dt>
@@ -5662,7 +5674,7 @@ IPackageDeleteObserver, int)</code></a> Note that like real <a href="https://dev
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/internal/AndroidSandbox.html#getEnvironment--">getEnvironment()</a></span> - Method in class org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.html" title="class in org.robolectric.internal">AndroidSandbox</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/SandboxFactory.html#getEnvironmentClass--">getEnvironmentClass()</a></span> - Method in class org.robolectric.internal.<a href="org/robolectric/internal/SandboxFactory.html" title="class in org.robolectric.internal">SandboxFactory</a></dt>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html#getEnvironmentClass--">getEnvironmentClass()</a></span> - Method in class org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.EnvironmentSpec</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/res/android/ResStringPool.html#getError--">getError()</a></span> - Method in class org.robolectric.res.android.<a href="org/robolectric/res/android/ResStringPool.html" title="class in org.robolectric.res.android">ResStringPool</a></dt>
 <dd>&nbsp;</dd>
@@ -7614,11 +7626,15 @@ IPackageDeleteObserver, int)</code></a> Note that like real <a href="https://dev
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/res/RoutingResourceTable.html#getResName-int-">getResName(int)</a></span> - Method in class org.robolectric.res.<a href="org/robolectric/res/RoutingResourceTable.html" title="class in org.robolectric.res">RoutingResourceTable</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/ResourceProvider.html#getResource-java.lang.String-">getResource(String)</a></span> - Method in interface org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/ResourceProvider.html" title="interface in org.robolectric.internal.bytecode">ResourceProvider</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/SandboxClassLoader.html#getResource-java.lang.String-">getResource(String)</a></span> - Method in class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/SandboxClassLoader.html" title="class in org.robolectric.internal.bytecode">SandboxClassLoader</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/res/android/CppAssetManager2.html#GetResource-int-boolean-short-org.robolectric.res.android.Ref-org.robolectric.res.android.Ref-org.robolectric.res.android.Ref-">GetResource(int, boolean, short, Ref&lt;ResourceTypes.Res_value&gt;, Ref&lt;ResTable_config&gt;, Ref&lt;Integer&gt;)</a></span> - Method in class org.robolectric.res.android.<a href="org/robolectric/res/android/CppAssetManager2.html" title="class in org.robolectric.res.android">CppAssetManager2</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/res/android/ResTable.html#getResource-int-org.robolectric.res.android.Ref-boolean-int-org.robolectric.res.android.Ref-org.robolectric.res.android.Ref-">getResource(int, Ref&lt;ResourceTypes.Res_value&gt;, boolean, int, Ref&lt;Integer&gt;, Ref&lt;ResTable_config&gt;)</a></span> - Method in class org.robolectric.res.android.<a href="org/robolectric/res/android/ResTable.html" title="class in org.robolectric.res.android">ResTable</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/ResourceProvider.html#getResourceAsStream-java.lang.String-">getResourceAsStream(String)</a></span> - Method in interface org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/ResourceProvider.html" title="interface in org.robolectric.internal.bytecode">ResourceProvider</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/shadows/ShadowLegacyAssetManager.html#getResourceBagText-int-int-">getResourceBagText(int, int)</a></span> - Method in class org.robolectric.shadows.<a href="org/robolectric/shadows/ShadowLegacyAssetManager.html" title="class in org.robolectric.shadows">ShadowLegacyAssetManager</a></dt>
 <dd>&nbsp;</dd>
@@ -10811,6 +10827,10 @@ IPackageDeleteObserver, int)</code></a> Note that like real <a href="https://dev
 <h2 class="title">M</h2>
 <dl>
 <dt><span class="memberNameLink"><a href="org/robolectric/JarInstrumentor.html#main-java.lang.String:A-">main(String[])</a></span> - Static method in class org.robolectric.<a href="org/robolectric/JarInstrumentor.html" title="class in org.robolectric">JarInstrumentor</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/AndroidSandbox.html#mainThreadFactory--">mainThreadFactory()</a></span> - Method in class org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.html" title="class in org.robolectric.internal">AndroidSandbox</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/Sandbox.html#mainThreadFactory--">mainThreadFactory()</a></span> - Method in class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/Sandbox.html" title="class in org.robolectric.internal.bytecode">Sandbox</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/res/ResourceIds.html#makeIdentifer-int-int-int-">makeIdentifer(int, int, int)</a></span> - Static method in class org.robolectric.res.<a href="org/robolectric/res/ResourceIds.html" title="class in org.robolectric.res">ResourceIds</a></dt>
 <dd>&nbsp;</dd>
@@ -14285,6 +14305,10 @@ IPackageDeleteObserver, int)</code></a> Note that like real <a href="https://dev
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/res/ResourcePath.html#ResourcePath-java.lang.Class-java.nio.file.Path-java.nio.file.Path-java.lang.Class-">ResourcePath(Class&lt;?&gt;, Path, Path, Class&lt;?&gt;)</a></span> - Constructor for class org.robolectric.res.<a href="org/robolectric/res/ResourcePath.html" title="class in org.robolectric.res">ResourcePath</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org/robolectric/internal/bytecode/ResourceProvider.html" title="interface in org.robolectric.internal.bytecode"><span class="typeNameLink">ResourceProvider</span></a> - Interface in <a href="org/robolectric/internal/bytecode/package-summary.html">org.robolectric.internal.bytecode</a></dt>
+<dd>
+<div class="block">A provider of resources (à la ClassLoader).</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/android/ConfigurationV25.html#resourceQualifierString-android.content.res.Configuration-android.util.DisplayMetrics-">resourceQualifierString(Configuration, DisplayMetrics)</a></span> - Static method in class org.robolectric.android.<a href="org/robolectric/android/ConfigurationV25.html" title="class in org.robolectric.android">ConfigurationV25</a></dt>
 <dd>
 <div class="block">Returns a string representation of the configuration that can be parsed by build tools (like AAPT).</div>
@@ -14793,26 +14817,32 @@ IPackageDeleteObserver, int)</code></a> Note that like real <a href="https://dev
 <dd>&nbsp;</dd>
 <dt><a href="org/robolectric/internal/bytecode/Sandbox.html" title="class in org.robolectric.internal.bytecode"><span class="typeNameLink">Sandbox</span></a> - Class in <a href="org/robolectric/internal/bytecode/package-summary.html">org.robolectric.internal.bytecode</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/Sandbox.html#Sandbox-java.lang.ClassLoader-">Sandbox(ClassLoader)</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/Sandbox.html" title="class in org.robolectric.internal.bytecode">Sandbox</a></dt>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/Sandbox.html#Sandbox-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.internal.bytecode.ResourceProvider-org.robolectric.internal.bytecode.ClassInstrumentor-">Sandbox(InstrumentationConfiguration, ResourceProvider, ClassInstrumentor)</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/Sandbox.html" title="class in org.robolectric.internal.bytecode">Sandbox</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/Sandbox.html#Sandbox-java.lang.ClassLoader-java.util.concurrent.ThreadFactory-">Sandbox(ClassLoader, ThreadFactory)</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/Sandbox.html" title="class in org.robolectric.internal.bytecode">Sandbox</a></dt>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/Sandbox.html#Sandbox-org.robolectric.internal.bytecode.SandboxClassLoader-">Sandbox(SandboxClassLoader)</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/Sandbox.html" title="class in org.robolectric.internal.bytecode">Sandbox</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/robolectric/internal/bytecode/SandboxClassLoader.html" title="class in org.robolectric.internal.bytecode"><span class="typeNameLink">SandboxClassLoader</span></a> - Class in <a href="org/robolectric/internal/bytecode/package-summary.html">org.robolectric.internal.bytecode</a></dt>
 <dd>
 <div class="block">Class loader that modifies the bytecode of Android classes to insert calls to Robolectric&rsquo;s shadow classes.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/SandboxClassLoader.html#SandboxClassLoader-org.robolectric.internal.bytecode.InstrumentationConfiguration-">SandboxClassLoader(InstrumentationConfiguration)</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/SandboxClassLoader.html" title="class in org.robolectric.internal.bytecode">SandboxClassLoader</a></dt>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/SandboxClassLoader.html#SandboxClassLoader-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.internal.bytecode.ResourceProvider-org.robolectric.internal.bytecode.ClassInstrumentor-">SandboxClassLoader(InstrumentationConfiguration, ResourceProvider, ClassInstrumentor)</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/SandboxClassLoader.html" title="class in org.robolectric.internal.bytecode">SandboxClassLoader</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/SandboxClassLoader.html#SandboxClassLoader-java.lang.ClassLoader-org.robolectric.internal.bytecode.InstrumentationConfiguration-java.net.URL...-">SandboxClassLoader(ClassLoader, InstrumentationConfiguration, URL...)</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/SandboxClassLoader.html" title="class in org.robolectric.internal.bytecode">SandboxClassLoader</a></dt>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/SandboxClassLoader.html#SandboxClassLoader-java.lang.ClassLoader-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.internal.bytecode.ResourceProvider-org.robolectric.internal.bytecode.ClassInstrumentor-">SandboxClassLoader(ClassLoader, InstrumentationConfiguration, ResourceProvider, ClassInstrumentor)</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/SandboxClassLoader.html" title="class in org.robolectric.internal.bytecode">SandboxClassLoader</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/robolectric/internal/bytecode/SandboxConfig.html" title="annotation in org.robolectric.internal.bytecode"><span class="typeNameLink">SandboxConfig</span></a> - Annotation Type in <a href="org/robolectric/internal/bytecode/package-summary.html">org.robolectric.internal.bytecode</a></dt>
 <dd>
 <div class="block">Configuration settings that can be used on a per-class or per-test basis.</div>
 </dd>
-<dt><a href="org/robolectric/internal/SandboxFactory.html" title="class in org.robolectric.internal"><span class="typeNameLink">SandboxFactory</span></a> - Class in <a href="org/robolectric/internal/package-summary.html">org.robolectric.internal</a></dt>
+<dt><a href="org/robolectric/internal/SandboxManager.html" title="class in org.robolectric.internal"><span class="typeNameLink">SandboxManager</span></a> - Class in <a href="org/robolectric/internal/package-summary.html">org.robolectric.internal</a></dt>
+<dd>
+<div class="block">Manager of sandboxes.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/SandboxManager.html#SandboxManager-org.robolectric.internal.SandboxManager.SandboxBuilder-org.robolectric.plugins.SdkCollection-">SandboxManager(SandboxManager.SandboxBuilder, SdkCollection)</a></span> - Constructor for class org.robolectric.internal.<a href="org/robolectric/internal/SandboxManager.html" title="class in org.robolectric.internal">SandboxManager</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="org/robolectric/internal/SandboxFactory.html#SandboxFactory-org.robolectric.util.inject.Injector-org.robolectric.plugins.SdkCollection-">SandboxFactory(Injector, SdkCollection)</a></span> - Constructor for class org.robolectric.internal.<a href="org/robolectric/internal/SandboxFactory.html" title="class in org.robolectric.internal">SandboxFactory</a></dt>
-<dd>&nbsp;</dd>
+<dt><a href="org/robolectric/internal/SandboxManager.SandboxBuilder.html" title="interface in org.robolectric.internal"><span class="typeNameLink">SandboxManager.SandboxBuilder</span></a> - Interface in <a href="org/robolectric/internal/package-summary.html">org.robolectric.internal</a></dt>
+<dd>
+<div class="block">Factory interface for AndroidSandbox.</div>
+</dd>
 <dt><a href="org/robolectric/internal/SandboxTestRunner.html" title="class in org.robolectric.internal"><span class="typeNameLink">SandboxTestRunner</span></a> - Class in <a href="org/robolectric/internal/package-summary.html">org.robolectric.internal</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/internal/SandboxTestRunner.html#SandboxTestRunner-java.lang.Class-">SandboxTestRunner(Class&lt;?&gt;)</a></span> - Constructor for class org.robolectric.internal.<a href="org/robolectric/internal/SandboxTestRunner.html" title="class in org.robolectric.internal">SandboxTestRunner</a></dt>
@@ -15024,6 +15054,8 @@ IPackageDeleteObserver, int)</code></a> Note that like real <a href="https://dev
 <div class="block">A provider of known instances of <a href="org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi"><code>Sdk</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/plugins/DefaultSdkPicker.html#sdkRange-int-int-">sdkRange(int, int)</a></span> - Method in class org.robolectric.plugins.<a href="org/robolectric/plugins/DefaultSdkPicker.html" title="class in org.robolectric.plugins">DefaultSdkPicker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html#SdkSandboxClassLoader-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.pluginapi.Sdk-org.robolectric.internal.bytecode.ClassInstrumentor-">SdkSandboxClassLoader(InstrumentationConfiguration, Sdk, ClassInstrumentor)</a></span> - Constructor for class org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal">AndroidSandbox.SdkSandboxClassLoader</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/res/android/ResTable_config.html#sdkVersion">sdkVersion</a></span> - Variable in class org.robolectric.res.android.<a href="org/robolectric/res/android/ResTable_config.html" title="class in org.robolectric.res.android">ResTable_config</a></dt>
 <dd>&nbsp;</dd>
@@ -18225,7 +18257,9 @@ UserHandle)</code></a>.</div>
 <dt><span class="memberNameLink"><a href="org/robolectric/shadows/ShadowDebug.html#ShadowDebug--">ShadowDebug()</a></span> - Constructor for class org.robolectric.shadows.<a href="org/robolectric/shadows/ShadowDebug.html" title="class in org.robolectric.shadows">ShadowDebug</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/robolectric/internal/bytecode/ShadowDecorator.html" title="class in org.robolectric.internal.bytecode"><span class="typeNameLink">ShadowDecorator</span></a> - Class in <a href="org/robolectric/internal/bytecode/package-summary.html">org.robolectric.internal.bytecode</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Decorator which adds Robolectric&rsquo;s shadowing behavior to a class.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/ShadowDecorator.html#ShadowDecorator--">ShadowDecorator()</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/ShadowDecorator.html" title="class in org.robolectric.internal.bytecode">ShadowDecorator</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/robolectric/shadows/httpclient/ShadowDefaultRequestDirector.html" title="class in org.robolectric.shadows.httpclient"><span class="typeNameLink">ShadowDefaultRequestDirector</span></a> - Class in <a href="org/robolectric/shadows/httpclient/package-summary.html">org.robolectric.shadows.httpclient</a></dt>
@@ -21375,6 +21409,12 @@ String[], long, TimeUnit, PendingIntent)</code></a>.</div>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/shadows/httpclient/FakeHttpLayer.UriRequestMatcher.html#UriRequestMatcher-java.lang.String-">UriRequestMatcher(String)</a></span> - Constructor for class org.robolectric.shadows.httpclient.<a href="org/robolectric/shadows/httpclient/FakeHttpLayer.UriRequestMatcher.html" title="class in org.robolectric.shadows.httpclient">FakeHttpLayer.UriRequestMatcher</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org/robolectric/internal/bytecode/UrlResourceProvider.html" title="class in org.robolectric.internal.bytecode"><span class="typeNameLink">UrlResourceProvider</span></a> - Class in <a href="org/robolectric/internal/bytecode/package-summary.html">org.robolectric.internal.bytecode</a></dt>
+<dd>
+<div class="block">ResourceProvider using URLs.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/robolectric/internal/bytecode/UrlResourceProvider.html#UrlResourceProvider-java.net.URL...-">UrlResourceProvider(URL...)</a></span> - Constructor for class org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/UrlResourceProvider.html" title="class in org.robolectric.internal.bytecode">UrlResourceProvider</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/shadows/RoundRectangle.html#urWidth">urWidth</a></span> - Variable in class org.robolectric.shadows.<a href="org/robolectric/shadows/RoundRectangle.html" title="class in org.robolectric.shadows">RoundRectangle</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/robolectric/android/fakes/RoboCharsets.html#US_ASCII">US_ASCII</a></span> - Static variable in class org.robolectric.android.fakes.<a href="org/robolectric/android/fakes/RoboCharsets.html" title="class in org.robolectric.android.fakes">RoboCharsets</a></dt>
@@ -22146,7 +22186,7 @@ the order they are declared.</div>
 <li class="navBarCell1Rev">Index</li>
 <li><a href="help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-beta-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="./highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="./highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

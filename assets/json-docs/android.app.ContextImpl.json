@@ -89,6 +89,18 @@
       "exceptions": [],
       "name": "getContentResolver()"
     },
+    "getDatabasePath(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "java.io.File",
+      "exceptions": [],
+      "name": "getDatabasePath(java.lang.String)"
+    },
     "getExternalCacheDir()": {
       "isImplementation": true,
       "modifiers": [
@@ -490,9 +502,11 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.os.Environment",
+    "android.os.FileUtils",
     "android.os.Handler",
     "android.os.UserHandle",
     "java.io.File",
+    "java.nio.file.Paths",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.Map",

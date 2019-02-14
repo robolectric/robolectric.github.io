@@ -38,7 +38,7 @@
 <li><a href="index-all.html">Index</a></li>
 <li><a href="help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-beta-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -130,6 +130,7 @@
 <li type="circle">org.robolectric.android.<a href="org/robolectric/android/AndroidInterceptors.html" title="class in org.robolectric.android"><span class="typeNameLink">AndroidInterceptors</span></a></li>
 <li type="circle">org.robolectric.manifest.<a href="org/robolectric/manifest/AndroidManifest.html" title="class in org.robolectric.manifest"><span class="typeNameLink">AndroidManifest</span></a> (implements org.robolectric.pluginapi.<a href="org/robolectric/pluginapi/UsesSdk.html" title="interface in org.robolectric.pluginapi">UsesSdk</a>)</li>
 <li type="circle">org.robolectric.<a href="org/robolectric/AndroidMetadata.html" title="class in org.robolectric"><span class="typeNameLink">AndroidMetadata</span></a></li>
+<li type="circle">org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal"><span class="typeNameLink">AndroidSandbox.EnvironmentSpec</span></a></li>
 <li type="circle">org.robolectric.res.android.<a href="org/robolectric/res/android/ApkAssetsCookie.html" title="class in org.robolectric.res.android"><span class="typeNameLink">ApkAssetsCookie</span></a></li>
 <li type="circle">org.robolectric.<a href="org/robolectric/ApkLoader.html" title="class in org.robolectric"><span class="typeNameLink">ApkLoader</span></a></li>
 <li type="circle">org.robolectric.res.android.<a href="org/robolectric/res/android/Asset.html" title="class in org.robolectric.res.android"><span class="typeNameLink">Asset</span></a></li>
@@ -191,7 +192,12 @@
 <ul>
 <li type="circle">java.net.<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLClassLoader.html?is-external=true" title="class or interface in java.net"><span class="typeNameLink">URLClassLoader</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a>)
 <ul>
-<li type="circle">org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/SandboxClassLoader.html" title="class in org.robolectric.internal.bytecode"><span class="typeNameLink">SandboxClassLoader</span></a></li>
+<li type="circle">org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/SandboxClassLoader.html" title="class in org.robolectric.internal.bytecode"><span class="typeNameLink">SandboxClassLoader</span></a>
+<ul>
+<li type="circle">org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal"><span class="typeNameLink">AndroidSandbox.SdkSandboxClassLoader</span></a></li>
+</ul>
+</li>
+<li type="circle">org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/UrlResourceProvider.html" title="class in org.robolectric.internal.bytecode"><span class="typeNameLink">UrlResourceProvider</span></a> (implements org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/ResourceProvider.html" title="interface in org.robolectric.internal.bytecode">ResourceProvider</a>)</li>
 </ul>
 </li>
 </ul>
@@ -531,7 +537,7 @@
 <li type="circle">org.robolectric.internal.<a href="org/robolectric/internal/AndroidSandbox.html" title="class in org.robolectric.internal"><span class="typeNameLink">AndroidSandbox</span></a></li>
 </ul>
 </li>
-<li type="circle">org.robolectric.internal.<a href="org/robolectric/internal/SandboxFactory.html" title="class in org.robolectric.internal"><span class="typeNameLink">SandboxFactory</span></a></li>
+<li type="circle">org.robolectric.internal.<a href="org/robolectric/internal/SandboxManager.html" title="class in org.robolectric.internal"><span class="typeNameLink">SandboxManager</span></a></li>
 <li type="circle">org.robolectric.util.<a href="org/robolectric/util/Scheduler.html" title="class in org.robolectric.util"><span class="typeNameLink">Scheduler</span></a></li>
 <li type="circle">org.robolectric.pluginapi.<a href="org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi"><span class="typeNameLink">Sdk</span></a> (implements java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&lt;T&gt;)
 <ul>
@@ -1224,6 +1230,7 @@
 <li type="circle">org.robolectric.pluginapi.perf.<a href="org/robolectric/pluginapi/perf/PerfStatsReporter.html" title="interface in org.robolectric.pluginapi.perf"><span class="typeNameLink">PerfStatsReporter</span></a></li>
 <li type="circle">org.robolectric.shadows.<a href="org/robolectric/shadows/Provider.html" title="interface in org.robolectric.shadows"><span class="typeNameLink">Provider</span></a>&lt;T&gt;</li>
 <li type="circle">org.robolectric.shadows.httpclient.<a href="org/robolectric/shadows/httpclient/RequestMatcher.html" title="interface in org.robolectric.shadows.httpclient"><span class="typeNameLink">RequestMatcher</span></a></li>
+<li type="circle">org.robolectric.internal.bytecode.<a href="org/robolectric/internal/bytecode/ResourceProvider.html" title="interface in org.robolectric.internal.bytecode"><span class="typeNameLink">ResourceProvider</span></a></li>
 <li type="circle">org.robolectric.res.<a href="org/robolectric/res/ResourceTable.html" title="interface in org.robolectric.res"><span class="typeNameLink">ResourceTable</span></a></li>
 <li type="circle">org.robolectric.res.<a href="org/robolectric/res/ResourceTable.Visitor.html" title="interface in org.robolectric.res"><span class="typeNameLink">ResourceTable.Visitor</span></a></li>
 <li type="circle">org.robolectric.res.<a href="org/robolectric/res/ResourceValueConverter.html" title="interface in org.robolectric.res"><span class="typeNameLink">ResourceValueConverter</span></a></li>
@@ -1233,6 +1240,7 @@
 <li type="circle">org.robolectric.android.<a href="org/robolectric/android/AttributeSetBuilder.html" title="interface in org.robolectric.android"><span class="typeNameLink">AttributeSetBuilder</span></a></li>
 </ul>
 </li>
+<li type="circle">org.robolectric.internal.<a href="org/robolectric/internal/SandboxManager.SandboxBuilder.html" title="interface in org.robolectric.internal"><span class="typeNameLink">SandboxManager.SandboxBuilder</span></a></li>
 <li type="circle">org.robolectric.pluginapi.<a href="org/robolectric/pluginapi/SdkPicker.html" title="interface in org.robolectric.pluginapi"><span class="typeNameLink">SdkPicker</span></a></li>
 <li type="circle">org.robolectric.pluginapi.<a href="org/robolectric/pluginapi/SdkProvider.html" title="interface in org.robolectric.pluginapi"><span class="typeNameLink">SdkProvider</span></a></li>
 <li type="circle">org.robolectric.shadows.<a href="org/robolectric/shadows/ShadowAccessibilityNodeInfo.OnPerformActionListener.html" title="interface in org.robolectric.shadows"><span class="typeNameLink">ShadowAccessibilityNodeInfo.OnPerformActionListener</span></a></li>
@@ -1343,7 +1351,7 @@
 <li><a href="index-all.html">Index</a></li>
 <li><a href="help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2-beta-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="./highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="./highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>
