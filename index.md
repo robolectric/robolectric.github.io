@@ -44,6 +44,6 @@ Robolectric handles inflation of views, resource loading, and lots of other stuf
 
 ### No Mocking Frameworks Required
 
-An alternate approach to Robolectric is to use mock frameworks such as [Mockito](https://github.com/mockito/mockito) or to mock out the Android SDK. While this is a valid approach, it often yields tests that are essentially reverse implementations of the application code.
+An alternate approach to Robolectric is to use mock frameworks such as [Mockito](https://site.mockito.org/) or to mock out the Android SDK. While this is a valid approach, it often yields tests that are essentially reverse implementations of the application code.
 
 Robolectric allows a test style that is closer to black box testing, making the tests more effective for refactoring and allowing the tests to focus on the behavior of the application instead of the implementation of Android. You can still use a mocking framework along with Robolectric if you like.
