@@ -1,5 +1,21 @@
 {
   "methods": {
+    "createConfirmFactoryResetCredentialIntent(java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "title",
+        "description",
+        "alternateButtonLabel"
+      ],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "minSdk": 27,
+      "name": "createConfirmFactoryResetCredentialIntent(java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence)",
+      "documentation": "Returns the intent set via\n{@link #setConfirmFactoryResetCredentialIntent(Intent)}, otherwise null.\n"
+    },
     "inKeyguardRestrictedInputMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -122,6 +138,19 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "setConfirmFactoryResetCredentialIntent(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConfirmFactoryResetCredentialIntent(android.content.Intent)",
+      "documentation": "For tests on Android \u003e\u003d O MR1, sets the value to be returned by\n{@link #createConfirmFactoryResetCredentialIntent(CharSequence,CharSequence,CharSequence)}.\n\n@see #createConfirmFactoryResetCredentialIntent(CharSequence,CharSequence,CharSequence)\n"
+    },
     "setInRestrictedInputMode(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -233,9 +262,11 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.O_MR1",
     "android.app.Activity",
     "android.app.KeyguardManager",
     "android.app.KeyguardManager.KeyguardDismissCallback",
+    "android.content.Intent",
     "java.util.HashSet",
     "java.util.Set",
     "org.robolectric.annotation.Implementation",

@@ -255,7 +255,7 @@
     "toOpEntry(java.lang.Integer)": {
       "isImplementation": false,
       "modifiers": [
-        "private",
+        "protected",
         "static"
       ],
       "params": [
@@ -264,6 +264,21 @@
       "returnType": "android.app.AppOpsManager.OpEntry",
       "exceptions": [],
       "name": "toOpEntry(java.lang.Integer)"
+    },
+    "unsafeCheckOpNoThrow(java.lang.String,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "unsafeCheckOpNoThrow(java.lang.String,int,java.lang.String)"
     }
   },
   "imports": [
@@ -271,6 +286,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "android.annotation.Nullable",
     "android.annotation.RequiresPermission",

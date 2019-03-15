@@ -23,6 +23,18 @@
       "exceptions": [],
       "name": "acquire(long)"
     },
+    "getTag()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getTag()",
+      "documentation": "Returns the tag. "
+    },
     "getTimesHeld()": {
       "isImplementation": false,
       "modifiers": [
@@ -90,6 +102,19 @@
       "exceptions": [],
       "name": "setReferenceCounted(boolean)"
     },
+    "setTag(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTag(java.lang.String)",
+      "documentation": "Sets the tag. "
+    },
     "setWorkSource(android.os.WorkSource)": {
       "isImplementation": true,
       "modifiers": [
@@ -107,6 +132,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadows.ShadowApplication.getInstance",
     "android.os.PowerManager",
     "android.os.WorkSource",
@@ -116,6 +142,7 @@
     "java.util.List",
     "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",

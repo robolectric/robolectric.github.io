@@ -43,7 +43,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "checkedPerformClick()",
-      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.\n"
+      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.\n@deprecated - Please use Espresso for View interactions.\n"
     },
     "clearWasInvalidated()": {
       "isImplementation": false,
@@ -68,7 +68,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "clickOn(android.view.View)",
-      "documentation": "Calls {@code performClick()} on a {@code View} after ensuring that it and its ancestors are visible and that it\nis enabled.\n\n@param view the view to click on\n@return true if {@code View.OnClickListener}s were found and fired, false otherwise.\n@throws RuntimeException if the preconditions are not met.\n"
+      "documentation": "Calls {@code performClick()} on a {@code View} after ensuring that it and its ancestors are visible and that it\nis enabled.\n\n@param view the view to click on\n@return true if {@code View.OnClickListener}s were found and fired, false otherwise.\n@throws RuntimeException if the preconditions are not met.\n@deprecated Please use Espresso for view interactions\n"
     },
     "didRequestLayout()": {
       "isImplementation": false,
@@ -111,7 +111,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "dump()",
-      "documentation": "Dumps the status of this {@code View} to {@code System.out}\n"
+      "documentation": "Dumps the status of this {@code View} to {@code System.out}\n@deprecated - Please use {@link androidx.test.espresso.util.HumanReadables#describe(View)}\n"
     },
     "dump(android.view.View)": {
       "isImplementation": false,
@@ -125,7 +125,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "dump(android.view.View)",
-      "documentation": "Emits an xml-like representation of the view to System.out.\n\n@param view the view to dump\n"
+      "documentation": "Emits an xml-like representation of the view to System.out.\n\n@param view the view to dump.\n@deprecated - Please use {@link androidx.test.espresso.util.HumanReadables#describe(View)}\n"
     },
     "dump(java.io.PrintStream,int)": {
       "isImplementation": false,
@@ -139,7 +139,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "dump(java.io.PrintStream,int)",
-      "documentation": "Dumps the status of this {@code View} to {@code System.out} at the given indentation level\n@param out Output stream.\n@param indent Indentation level.\n"
+      "documentation": "Dumps the status of this {@code View} to {@code System.out} at the given indentation level\n@param out Output stream.\n@param indent Indentation level.\n@deprecated - Please use {@link androidx.test.espresso.util.HumanReadables#describe(View)}\n"
     },
     "dumpAttribute(java.io.PrintStream,java.lang.String,java.lang.String)": {
       "isImplementation": false,

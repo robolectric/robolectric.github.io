@@ -390,6 +390,23 @@
       "name": "removeAccount(android.accounts.Account,android.accounts.AccountManagerCallback\u003cjava.lang.Boolean\u003e,android.os.Handler)",
       "documentation": "The remove operation is posted to the given {@code handler}, and will be executed according to\nthe {@link IdleState} of the corresponding {@link org.robolectric.util.Scheduler}.\n"
     },
+    "removeAccount(android.accounts.Account,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "account",
+        "activity",
+        "callback",
+        "handler"
+      ],
+      "returnType": "android.accounts.AccountManagerFuture\u003candroid.os.Bundle\u003e",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "removeAccount(android.accounts.Account,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)",
+      "documentation": "Removes the account unless {@link #setRemoveAccountIntent} has been set. If set, the future\nBundle will include the Intent and {@link AccountManager#KEY_BOOLEAN_RESULT} will be false.\n"
+    },
     "removeAccountExplicitly(android.accounts.Account)": {
       "isImplementation": true,
       "modifiers": [
@@ -493,6 +510,19 @@
       "exceptions": [],
       "name": "setPreviousAccountName(android.accounts.Account,java.lang.String)",
       "documentation": "Sets the previous name for an account, which will be returned by {@link AccountManager#getPreviousName(Account)}.\n\n@param account User account.\n@param previousName Previous account name.\n"
+    },
+    "setRemoveAccountIntent(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "removeAccountIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRemoveAccountIntent(android.content.Intent)",
+      "documentation": "Sets the intent to include in Bundle result from {@link #removeAccount} if Activity is given.\n\n@param removeAccountIntent the intent to surface as {@link AccountManager#KEY_INTENT}.\n"
     },
     "setUserData(android.accounts.Account,java.lang.String,java.lang.String)": {
       "isImplementation": true,

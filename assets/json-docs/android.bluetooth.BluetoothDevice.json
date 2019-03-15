@@ -1,5 +1,17 @@
 {
   "methods": {
+    "connectGatt(android.bluetooth.BluetoothGattCallback)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "android.bluetooth.BluetoothGatt",
+      "exceptions": [],
+      "name": "connectGatt(android.bluetooth.BluetoothGattCallback)"
+    },
     "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback)": {
       "isImplementation": true,
       "modifiers": [
@@ -14,6 +26,40 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback)"
+    },
+    "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "autoConnect",
+        "callback",
+        "transport"
+      ],
+      "returnType": "android.bluetooth.BluetoothGatt",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)"
+    },
+    "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int,int,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "autoConnect",
+        "callback",
+        "transport",
+        "phy",
+        "handler"
+      ],
+      "returnType": "android.bluetooth.BluetoothGatt",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int,int,android.os.Handler)"
     },
     "createBond()": {
       "isImplementation": true,
@@ -223,13 +269,15 @@
   "imports": [
     "android.bluetooth.BluetoothDevice.BOND_NONE",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "org.robolectric.Shadows.shadowOf",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothGatt",
     "android.bluetooth.BluetoothGattCallback",
     "android.bluetooth.IBluetooth",
     "android.content.Context",
+    "android.os.Handler",
     "android.os.ParcelUuid",
     "java.util.ArrayList",
     "java.util.List",

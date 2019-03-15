@@ -527,6 +527,33 @@
       "exceptions": [],
       "name": "initListener(android.telephony.PhoneStateListener,int)"
     },
+    "isCurrentEmergencyNumber(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "number"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "isCurrentEmergencyNumber(java.lang.String)",
+      "documentation": "Cribbed from {@link android.telephony.PhoneNumberUtils#isEmergencyNumberInternal}.\n\nTODO(b/122324733) need better implementation\n"
+    },
+    "isCurrentPotentialEmergencyNumber(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "number"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "isCurrentPotentialEmergencyNumber(java.lang.String)"
+    },
     "isNetworkRoaming()": {
       "isImplementation": true,
       "modifiers": [

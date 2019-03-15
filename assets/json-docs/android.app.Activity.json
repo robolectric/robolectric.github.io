@@ -1,5 +1,18 @@
 {
   "methods": {
+    "\u003cT\u003eattachController(org.robolectric.android.controller.ActivityController)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "controller"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "\u003cT\u003eattachController(org.robolectric.android.controller.ActivityController)",
+      "documentation": "For internal use only. Not for public use. "
+    },
     "callAttach(android.content.Intent)": {
       "isImplementation": false,
       "modifiers": [
@@ -374,6 +387,17 @@
       "name": "isFinishing()",
       "documentation": "Returns whether {@link #finish()} was called.\n\n@deprecated Use {@link Activity#isFinishing()} instead.\n"
     },
+    "isInMultiWindowMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isInMultiWindowMode()"
+    },
     "isLockTask()": {
       "isImplementation": false,
       "modifiers": [
@@ -565,6 +589,19 @@
       "exceptions": [],
       "name": "setDefaultKeyMode(int)"
     },
+    "setInMultiWindowMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInMultiWindowMode(boolean)",
+      "documentation": "Changes state of {@link #isInMultiWindowMode} method.\n"
+    },
     "setIsTaskRoot(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -667,6 +704,18 @@
       "exceptions": [],
       "name": "setWindow(android.view.Window)"
     },
+    "shadowOf(android.content.pm.PackageManager)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "packageManager"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowPackageManager",
+      "exceptions": [],
+      "name": "shadowOf(android.content.pm.PackageManager)"
+    },
     "showDialog(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -747,7 +796,7 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
-    "org.robolectric.Shadows.shadowOf",
+    "android.os.Build.VERSION_CODES.N",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.Activity",

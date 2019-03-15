@@ -1,0 +1,45 @@
+{
+  "methods": {
+    "build()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Typeface",
+      "exceptions": [],
+      "name": "build()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.O_MR1",
+    "android.os.Build.VERSION_CODES.P",
+    "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "android.annotation.SuppressLint",
+    "android.content.res.AssetManager",
+    "android.graphics.FontFamily",
+    "android.graphics.Typeface",
+    "android.os.Build",
+    "android.util.ArrayMap",
+    "java.io.File",
+    "java.io.IOException",
+    "java.nio.file.Files",
+    "java.nio.file.Path",
+    "java.util.Collection",
+    "java.util.HashMap",
+    "java.util.Map",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.res.Fs",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowTypeface.ShadowBuilder"
+}

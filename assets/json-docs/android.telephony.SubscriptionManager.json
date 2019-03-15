@@ -25,6 +25,18 @@
       "name": "clearNetworkRoamingStatus()",
       "documentation": "Clears the local cache of roaming subscription Ids used by {@link #isNetworkRoaming}. "
     },
+    "clearPhoneIds()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearPhoneIds()",
+      "documentation": "Removes all mappings between subscription IDs and phone IDs from the map used by {@link\ngetPhoneId}.\n"
+    },
     "dispatchOnSubscriptionsChanged()": {
       "isImplementation": false,
       "modifiers": [
@@ -100,6 +112,18 @@
       "name": "getActiveSubscriptionInfoList()",
       "documentation": "Returns the active list of {@link SubscriptionInfo} that were set via {@link\n#setActiveSubscriptionInfoList}.\n"
     },
+    "getDefaultDataSubId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "getDefaultDataSubId()"
+    },
     "getDefaultDataSubscriptionId()": {
       "isImplementation": true,
       "modifiers": [
@@ -112,6 +136,18 @@
       "minSdk": 24,
       "name": "getDefaultDataSubscriptionId()",
       "documentation": "Returns value set with {@link #setDefaultDataSubscriptionId(int)}. "
+    },
+    "getDefaultSmsSubId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "getDefaultSmsSubId()"
     },
     "getDefaultSmsSubscriptionId()": {
       "isImplementation": true,
@@ -126,6 +162,18 @@
       "name": "getDefaultSmsSubscriptionId()",
       "documentation": "Returns value set with {@link #setDefaultSmsSubscriptionId(int)}. "
     },
+    "getDefaultSubId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "getDefaultSubId()"
+    },
     "getDefaultSubscriptionId()": {
       "isImplementation": true,
       "modifiers": [
@@ -139,6 +187,18 @@
       "name": "getDefaultSubscriptionId()",
       "documentation": "Returns value set with {@link #setDefaultSubscriptionId(int)}. "
     },
+    "getDefaultVoiceSubId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "getDefaultVoiceSubId()"
+    },
     "getDefaultVoiceSubscriptionId()": {
       "isImplementation": true,
       "modifiers": [
@@ -151,6 +211,22 @@
       "minSdk": 24,
       "name": "getDefaultVoiceSubscriptionId()",
       "documentation": "Returns value set with {@link #setDefaultVoiceSubscriptionId(int)}. "
+    },
+    "getPhoneId(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "subId"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 22,
+      "maxSdk": 28,
+      "name": "getPhoneId(int)",
+      "documentation": "Uses the map of subscription IDs to phone IDs managed by {@link putPhoneId} and {@link\nremovePhoneId} to return the phone ID for a given subscription ID.\n"
     },
     "isNetworkRoaming(int)": {
       "isImplementation": true,
@@ -166,6 +242,21 @@
       "name": "isNetworkRoaming(int)",
       "documentation": "Uses the local cache of roaming sim subscription Ids managed by {@link\n#setNetworkRoamingStatus} to return subscription Ids marked as roaming. Otherwise subscription\nIds will be considered as non-roaming if they are not in the cache.\n"
     },
+    "putPhoneId(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "subId",
+        "phoneId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "putPhoneId(int,int)",
+      "documentation": "Adds a subscription ID-phone ID mapping to the map used by {@link getPhoneId}. "
+    },
     "removeOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)": {
       "isImplementation": true,
       "modifiers": [
@@ -179,6 +270,20 @@
       "minSdk": 22,
       "name": "removeOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)",
       "documentation": "Removes a listener from a local list of listeners. Will be triggered by {@link\n#setActiveSubscriptionInfoList} when the local list of {@link SubscriptionInfo} is updated.\n"
+    },
+    "removePhoneId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "subId"
+      ],
+      "returnType": "java.lang.Integer",
+      "exceptions": [],
+      "name": "removePhoneId(int)",
+      "documentation": "Removes a subscription ID-phone ID mapping from the map used by {@link getPhoneId}.\n\n@return the previous phone ID associated with the subscription ID, or null if there was no\n    mapping for the subscription ID\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -287,15 +392,19 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.P",
     "android.telephony.SubscriptionInfo",
     "android.telephony.SubscriptionManager",
     "android.telephony.SubscriptionManager.OnSubscriptionsChangedListener",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.Collections",
+    "java.util.HashMap",
     "java.util.HashSet",
     "java.util.List",
+    "java.util.Map",
     "java.util.Set",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",

@@ -56,6 +56,14 @@
       "name": "clearNextStartedActivities()",
       "documentation": "Clears all {@code Intent}s started by {@link #execStartActivity(Context, IBinder, IBinder,\nActivity, Intent, int, Bundle)}, {@link #execStartActivity(Context, IBinder, IBinder, Fragment,\nIntent, int, Bundle)}, and {@link #execStartActivity(Context, IBinder, IBinder, String, Intent,\nint, Bundle)}.\n"
     },
+    "clearRegisteredReceivers()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearRegisteredReceivers()"
+    },
     "clearStartedServices()": {
       "isImplementation": false,
       "modifiers": [],

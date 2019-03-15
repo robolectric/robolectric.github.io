@@ -1,5 +1,15 @@
 {
   "methods": {
+    "getEid()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getEid()"
+    },
     "isEnabled()": {
       "isImplementation": true,
       "modifiers": [
@@ -10,6 +20,19 @@
       "exceptions": [],
       "name": "isEnabled()",
       "documentation": "Returns {@code false}, or the value specified by calling {@link #setIsEnabled}. "
+    },
+    "setEid(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "eid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEid(java.lang.String)",
+      "documentation": "Set the value to be returned by {@link EuiccManager#getEid}. "
     },
     "setIsEnabled(boolean)": {
       "isImplementation": false,

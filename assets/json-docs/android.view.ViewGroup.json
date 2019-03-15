@@ -26,7 +26,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "dump(java.io.PrintStream,int)",
-      "documentation": "Dumps the state of this {@code ViewGroup} to {@code System.out}.\n"
+      "documentation": "Dumps the state of this {@code ViewGroup} to {@code System.out}.\n@deprecated - Please use {@link androidx.test.espresso.util.HumanReadables#describe(View)}\n"
     },
     "getDisallowInterceptTouchEvent()": {
       "isImplementation": false,

@@ -255,6 +255,22 @@
       "exceptions": [],
       "name": "getStyle()"
     },
+    "initSystemDefaultTypefaces(java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "systemFontMap",
+        "fallbacks",
+        "aliases"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "initSystemDefaultTypefaces(java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -297,7 +313,8 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "org.robolectric.shadows.ShadowTypeface.FontDesc"
+    "org.robolectric.shadows.ShadowTypeface.FontDesc",
+    "org.robolectric.shadows.ShadowTypeface.ShadowBuilder"
   ],
   "name": "org.robolectric.shadows.ShadowTypeface"
 }

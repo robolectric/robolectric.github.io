@@ -293,6 +293,19 @@
       "exceptions": [],
       "name": "goBack()"
     },
+    "goBackOrForward(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "steps"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "goBackOrForward(int)",
+      "documentation": "This is only a partial implementation of the method, and \u003cb\u003eonly performs backward\nnavigation\u003c/b\u003e. Any request to go one or more steps forward will be ignored.\n"
+    },
     "loadData(java.lang.String,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [

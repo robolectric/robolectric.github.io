@@ -1086,6 +1086,18 @@
       "minSdk": 28,
       "name": "nativeCreate()"
     },
+    "nativeCreateIdmapsForStaticOverlaysTargetingAndroid()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "nativeCreateIdmapsForStaticOverlaysTargetingAndroid()"
+    },
     "nativeThemeCopy(long,long)": {
       "isImplementation": true,
       "modifiers": [
@@ -1101,6 +1113,23 @@
       "minSdk": 28,
       "maxSdk": 28,
       "name": "nativeThemeCopy(long,long)"
+    },
+    "nativeThemeCopy(long,long,long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "dstAssetManagerPtr",
+        "dstThemePtr",
+        "srcAssetManagerPtr",
+        "srcThemePtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "nativeThemeCopy(long,long,long,long)"
     },
     "newTheme()": {
       "isImplementation": true,
@@ -1629,6 +1658,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "strictError(java.lang.String,java.lang.Object...)"
+    },
+    "windowsWorkaround(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "fileWithinJar"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "windowsWorkaround(java.lang.String)"
     }
   },
   "imports": [
@@ -1653,7 +1694,6 @@
     "android.content.res.Resources",
     "android.content.res.TypedArray",
     "android.content.res.XmlResourceParser",
-    "android.os.Build",
     "android.os.Build.VERSION_CODES",
     "android.os.ParcelFileDescriptor",
     "android.util.AttributeSet",
@@ -1662,10 +1702,15 @@
     "com.google.common.collect.Ordering",
     "dalvik.system.VMRuntime",
     "java.io.ByteArrayInputStream",
+    "java.io.File",
     "java.io.FileNotFoundException",
     "java.io.IOException",
     "java.io.InputStream",
     "java.io.OutputStream",
+    "java.io.UnsupportedEncodingException",
+    "java.net.MalformedURLException",
+    "java.net.URL",
+    "java.net.URLDecoder",
     "java.nio.file.Files",
     "java.nio.file.Path",
     "java.util.ArrayList",

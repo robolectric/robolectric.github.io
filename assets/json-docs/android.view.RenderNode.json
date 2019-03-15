@@ -170,6 +170,36 @@
       "exceptions": [],
       "name": "isValid()"
     },
+    "nSetLayerPaint(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "paint"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetLayerPaint(long,long)",
+      "documentation": "Implementation of native method nSetLayerPaint\n\n@param renderNode Ignored\n@param paint Ignored\n@return Always true\n"
+    },
+    "nSetLayerType(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "layerType"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetLayerType(long,int)",
+      "documentation": "Implementation of native method nSetLayerType\n\n@param renderNode Ignored\n@param layerType Ignored\n@return Always true\n"
+    },
     "setAlpha(float)": {
       "isImplementation": true,
       "modifiers": [

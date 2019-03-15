@@ -880,6 +880,38 @@
       "maxSdk": 28,
       "name": "nativeInitialize(long,int,int,int,int,int,int,int,float,float,float,float,long,long,int,android.view.MotionEvent.PointerProperties[],android.view.MotionEvent.PointerCoords[])"
     },
+    "nativeInitialize(long,int,int,int,int,int,int,int,int,int,float,float,float,float,long,long,int,android.view.MotionEvent.PointerProperties[],android.view.MotionEvent.PointerCoords[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "deviceId",
+        "source",
+        "displayId",
+        "action",
+        "flags",
+        "edgeFlags",
+        "metaState",
+        "buttonState",
+        "classification",
+        "xOffset",
+        "yOffset",
+        "xPrecision",
+        "yPrecision",
+        "downTimeNanos",
+        "eventTimeNanos",
+        "pointerCount",
+        "pointerIds",
+        "pointerCoords"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "nativeInitialize(long,int,int,int,int,int,int,int,int,int,float,float,float,float,long,long,int,android.view.MotionEvent.PointerProperties[],android.view.MotionEvent.PointerCoords[])"
+    },
     "nativeIsTouchEvent(int)": {
       "isImplementation": true,
       "modifiers": [

@@ -37,6 +37,33 @@
         "android.hardware.camera2.CameraAccessException"
       ],
       "name": "getCameraIdList()"
+    },
+    "getTorchMode(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cameraId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getTorchMode(java.lang.String)",
+      "documentation": "Returns what the supplied camera\u0027s torch is set to. "
+    },
+    "setTorchMode(java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cameraId",
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setTorchMode(java.lang.String,boolean)"
     }
   },
   "imports": [
@@ -46,6 +73,7 @@
     "android.hardware.camera2.CameraManager",
     "android.os.Build.VERSION_CODES",
     "com.google.common.base.Preconditions",
+    "java.util.HashMap",
     "java.util.LinkedHashMap",
     "java.util.Map",
     "java.util.Set",

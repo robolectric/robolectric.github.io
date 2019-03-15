@@ -1,0 +1,54 @@
+{
+  "methods": {
+    "addTransportType(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "transportType"
+      ],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "name": "addTransportType(int)",
+      "documentation": "Updates the transport types for this network capablities to include {@code transportType}. "
+    },
+    "newInstance()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "name": "newInstance()"
+    },
+    "removeTransportType(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "transportType"
+      ],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "name": "removeTransportType(int)",
+      "documentation": "Updates the transport types for this network capablities to remove {@code transportType}. "
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.net.NetworkCapabilities",
+    "org.robolectric.annotation.HiddenApi",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowNetworkCapabilities",
+  "documentation": "Robolectic provides overrides for fetching and updating transport. "
+}

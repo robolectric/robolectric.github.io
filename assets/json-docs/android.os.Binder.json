@@ -24,6 +24,19 @@
       "exceptions": [],
       "name": "getCallingUid()"
     },
+    "getCallingUserHandle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static",
+        "final"
+      ],
+      "params": [],
+      "returnType": "android.os.UserHandle",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "getCallingUserHandle()"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -61,6 +74,20 @@
       "exceptions": [],
       "name": "setCallingUid(int)"
     },
+    "setCallingUserHandle(android.os.UserHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCallingUserHandle(android.os.UserHandle)",
+      "documentation": "Configures {@link android.os.Binder#getCallingUserHandle} to return the specified {@link\nUserHandle} to subsequent callers on *any* thread, for testing purposes.\n"
+    },
     "transact(int,android.os.Parcel,android.os.Parcel,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -80,9 +107,11 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Binder",
     "android.os.Parcel",
     "android.os.RemoteException",
+    "android.os.UserHandle",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

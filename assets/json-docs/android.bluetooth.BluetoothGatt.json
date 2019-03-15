@@ -1,5 +1,17 @@
 {
   "methods": {
+    "connect()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "connect()",
+      "documentation": "Overrides behavior of {@link BluetoothGatt#connect()} to always return true.\n\n@return true, unconditionally\n"
+    },
     "getGattCallback()": {
       "isImplementation": false,
       "modifiers": [],
@@ -44,6 +56,7 @@
     "android.content.Context",
     "android.os.Build",
     "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow"
   ],

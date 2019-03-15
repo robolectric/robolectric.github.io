@@ -311,6 +311,19 @@
       "name": "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)",
       "documentation": "@param tasks List of running tasks.\n"
     },
+    "switchUser(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "switchUser(android.os.UserHandle)"
+    },
     "switchUser(int)": {
       "isImplementation": true,
       "modifiers": [

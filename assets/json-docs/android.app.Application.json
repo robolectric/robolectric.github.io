@@ -64,6 +64,17 @@
       "name": "checkActivities(boolean)",
       "documentation": "Set to true if you\u0027d like Robolectric to strictly simulate the real Android behavior when\ncalling {@link Context#startActivity(android.content.Intent)}. Real Android throws a\n{@link android.content.ActivityNotFoundException} if given\nan {@link Intent} that is not known to the {@link android.content.pm.PackageManager}\n\nBy default, this behavior is off (false).\n\n@param checkActivities True to validate activities.\n"
     },
+    "clearRegisteredReceivers()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearRegisteredReceivers()",
+      "documentation": "Removes all registered receivers. "
+    },
     "clearWakeLocks()": {
       "isImplementation": false,
       "modifiers": [

@@ -1,0 +1,22 @@
+{
+  "methods": {
+    "getNativeInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "getNativeInstance()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.graphics.ColorSpace",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowColorSpace.ShadowRgb"
+}

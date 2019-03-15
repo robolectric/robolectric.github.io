@@ -30,6 +30,16 @@
       "exceptions": [],
       "name": "getTag()"
     },
+    "getThreadId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getThreadId()"
+    },
     "getTimeNanos()": {
       "isImplementation": true,
       "modifiers": [

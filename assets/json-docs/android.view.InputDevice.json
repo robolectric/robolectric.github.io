@@ -10,6 +10,28 @@
       "exceptions": [],
       "name": "getName()"
     },
+    "getProductId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getProductId()"
+    },
+    "getVendorId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getVendorId()"
+    },
     "makeInputDeviceNamed(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -34,9 +56,34 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDeviceName(java.lang.String)"
+    },
+    "setProductId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "productId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProductId(int)"
+    },
+    "setVendorId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "vendorId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVendorId(int)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.view.InputDevice",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

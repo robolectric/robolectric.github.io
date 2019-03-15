@@ -11,7 +11,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addEvent(android.app.usage.UsageEvents.Event)",
-      "documentation": "Adds an event to be returned by {@link UsageStatsManager#queryEvents}.\n\nThis method won\u0027t affect the results of {@link #queryUsageStats} method.\n\nThe {@link Event} can be built by {@link EventBuilder}.\n"
+      "documentation": "Adds an event to be returned by {@link UsageStatsManager#queryEvents}.\n\n\u003cp\u003eThis method won\u0027t affect the results of {@link #queryUsageStats} method.\n\n\u003cp\u003eThe {@link Event} can be built by {@link EventBuilder}.\n"
     },
     "addEvent(java.lang.String,long,int)": {
       "isImplementation": false,
@@ -26,7 +26,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addEvent(java.lang.String,long,int)",
-      "documentation": "Adds an event to be returned by {@link UsageStatsManager#queryEvents}.\n\nThis method won\u0027t affect the results of {@link #queryUsageStats} method.\n\n@deprecated Use {@link #addEvent(Event)} and {@link EventBuilder} instead.\n"
+      "documentation": "Adds an event to be returned by {@link UsageStatsManager#queryEvents}.\n\n\u003cp\u003eThis method won\u0027t affect the results of {@link #queryUsageStats} method.\n\n@deprecated Use {@link #addEvent(Event)} and {@link EventBuilder} instead.\n"
     },
     "addUsageStats(int,android.app.usage.UsageStats)": {
       "isImplementation": false,
@@ -90,6 +90,17 @@
       "name": "getRegisteredAppUsageObservers()",
       "documentation": "Returns the {@link AppUsageObserver}s currently registered in {@link UsageStatsManager}. "
     },
+    "getRegisteredUsageSessionObservers()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowUsageStatsManager.UsageSessionObserver\u003e",
+      "exceptions": [],
+      "name": "getRegisteredUsageSessionObservers()",
+      "documentation": "Returns the {@link UsageSessionObserver}s currently registered in {@link UsageStatsManager}.\n"
+    },
     "queryEvents(long,long)": {
       "isImplementation": true,
       "modifiers": [
@@ -116,7 +127,7 @@
       "returnType": "java.util.List\u003candroid.app.usage.UsageStats\u003e",
       "exceptions": [],
       "name": "queryUsageStats(int,long,long)",
-      "documentation": "Returns aggregated UsageStats added by calling {@link #addUsageStats}.\n\nThe real implementation creates these aggregated objects from individual {@link Event}. This\naggregation logic is nontrivial, so the shadow implementation just returns the aggregate data\nadded using {@link #addUsageStats}.\n"
+      "documentation": "Returns aggregated UsageStats added by calling {@link #addUsageStats}.\n\n\u003cp\u003eThe real implementation creates these aggregated objects from individual {@link Event}. This\naggregation logic is nontrivial, so the shadow implementation just returns the aggregate data\nadded using {@link #addUsageStats}.\n"
     },
     "registerAppUsageObserver(int,java.lang.String[],long,java.util.concurrent.TimeUnit,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -134,6 +145,26 @@
       "exceptions": [],
       "minSdk": 28,
       "name": "registerAppUsageObserver(int,java.lang.String[],long,java.util.concurrent.TimeUnit,android.app.PendingIntent)"
+    },
+    "registerUsageSessionObserver(int,java.lang.String[],long,java.util.concurrent.TimeUnit,long,java.util.concurrent.TimeUnit,android.app.PendingIntent,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "observerId",
+        "packages",
+        "sessionStepTime",
+        "sessionStepTimeUnit",
+        "thresholdTime",
+        "thresholdTimeUnit",
+        "sessionStepTriggeredIntent",
+        "sessionEndedIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "registerUsageSessionObserver(int,java.lang.String[],long,java.util.concurrent.TimeUnit,long,java.util.concurrent.TimeUnit,android.app.PendingIntent,android.app.PendingIntent)"
     },
     "reset()": {
       "isImplementation": false,
@@ -198,7 +229,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "simulateTimeChange(long)",
-      "documentation": "Simulates the operations done by the framework when there is a time change. If the time is\nchanged, the timestamps of all existing usage events will be shifted by the same offset as the\ntime change, in order to make sure they remain stable relative to the new time.\n\nThis method won\u0027t affect the results of {@link #queryUsageStats} method.\n\n@param offsetToAddInMillis the offset to be applied to all events. For example, if {@code\n    offsetInMillis} is 60,000, then all {@link Event}s will be shifted forward by 1 minute\n    (into the future). Likewise, if {@code offsetInMillis} is -60,000, then all {@link Event}s\n    will be shifted backward by 1 minute (into the past).\n"
+      "documentation": "Simulates the operations done by the framework when there is a time change. If the time is\nchanged, the timestamps of all existing usage events will be shifted by the same offset as the\ntime change, in order to make sure they remain stable relative to the new time.\n\n\u003cp\u003eThis method won\u0027t affect the results of {@link #queryUsageStats} method.\n\n@param offsetToAddInMillis the offset to be applied to all events. For example, if {@code\n    offsetInMillis} is 60,000, then all {@link Event}s will be shifted forward by 1 minute\n    (into the future). Likewise, if {@code offsetInMillis} is -60,000, then all {@link Event}s\n    will be shifted backward by 1 minute (into the past).\n"
     },
     "triggerRegisteredAppUsageObserver(int,long)": {
       "isImplementation": false,
@@ -212,7 +243,34 @@
       "returnType": "void",
       "exceptions": [],
       "name": "triggerRegisteredAppUsageObserver(int,long)",
-      "documentation": "Triggers a currently registered {@link AppUsageObserver} with {@code observerId}.\n\nThe observer will be no longer registered afterwards.\n"
+      "documentation": "Triggers a currently registered {@link AppUsageObserver} with {@code observerId}.\n\n\u003cp\u003eThe observer will be no longer registered afterwards.\n"
+    },
+    "triggerRegisteredSessionEndedObserver(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "observerId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerRegisteredSessionEndedObserver(int)",
+      "documentation": "Triggers a currently registered {@link UsageSessionObserver} with {@code observerId}.\n\n\u003cp\u003eThe observer SHOULD be registered afterwards.\n"
+    },
+    "triggerRegisteredSessionStepObserver(int,long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "observerId",
+        "timeUsedInMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerRegisteredSessionStepObserver(int,long)",
+      "documentation": "Triggers a currently registered {@link UsageSessionObserver} with {@code observerId}.\n\n\u003cp\u003eThe observer SHOULD be registered afterwards.\n"
     },
     "unregisterAppUsageObserver(int)": {
       "isImplementation": true,
@@ -226,6 +284,19 @@
       "exceptions": [],
       "minSdk": 28,
       "name": "unregisterAppUsageObserver(int)"
+    },
+    "unregisterUsageSessionObserver(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "observerId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "unregisterUsageSessionObserver(int)"
     }
   },
   "imports": [
@@ -253,6 +324,7 @@
     "java.util.Arrays",
     "java.util.Collection",
     "java.util.HashMap",
+    "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Map",
     "java.util.NavigableMap",
@@ -263,6 +335,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadows.ShadowUsageStatsManager.AppUsageObserver",
+    "org.robolectric.shadows.ShadowUsageStatsManager.UsageSessionObserver",
     "org.robolectric.shadows.ShadowUsageStatsManager.UsageStatsBuilder",
     "org.robolectric.shadows.ShadowUsageStatsManager.EventBuilder"
   ],

@@ -132,6 +132,17 @@
       "name": "getProfiles(int)",
       "documentation": "If any profiles have been added using {@link #addProfile}, return those profiles.\n\nOtherwise follow real android behaviour.\n"
     },
+    "getSeedAccountType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "getSeedAccountType()"
+    },
     "getSerialNumberForUser(android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -491,6 +502,19 @@
       "name": "setManagedProfile(boolean)",
       "documentation": "Setter for {@link UserManager#isManagedProfile()}.\n"
     },
+    "setSeedAccountType(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "seedAccountType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSeedAccountType(java.lang.String)",
+      "documentation": "Setter for {@link UserManager#getSeedAccountType()} "
+    },
     "setSerialNumberForUser(android.os.UserHandle,long)": {
       "isImplementation": false,
       "modifiers": [
@@ -504,6 +528,19 @@
       "exceptions": [],
       "name": "setSerialNumberForUser(android.os.UserHandle,long)",
       "documentation": "@deprecated prefer {@link #addUserProfile(UserHandle)} to ensure consistency of profiles known\nto the {@link UserManager}. Furthermore, calling this method for the current user, i.e: {@link\nProcess#myUserHandle()} is no longer necessary as this user is always known to UserManager and\nhas a preassigned serial number.\n"
+    },
+    "setSupportsMultipleUsers(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isMultiUserSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupportsMultipleUsers(boolean)",
+      "documentation": "Sets whether multiple users are supported; controls the return value of {@link\nUserManager#supportsMultipleUser}.\n"
     },
     "setUserRestriction(android.os.UserHandle,java.lang.String,boolean)": {
       "isImplementation": false,
@@ -546,6 +583,18 @@
       "name": "setUserUnlocked(boolean)",
       "documentation": "Setter for {@link UserManager#isUserUnlocked()}\n"
     },
+    "supportsMultipleUsers()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "supportsMultipleUsers()"
+    },
     "switchUser(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -573,6 +622,7 @@
     "android.content.Context",
     "android.content.pm.PackageManager",
     "android.content.pm.UserInfo",
+    "android.os.Build",
     "android.os.Bundle",
     "android.os.IUserManager",
     "android.os.Process",

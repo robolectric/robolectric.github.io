@@ -38,6 +38,39 @@
       "name": "clearPorts()",
       "documentation": "Remove all added ports from UsbManager. "
     },
+    "createUsbPort(android.hardware.usb.UsbManager,java.lang.String,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "usbManager",
+        "id",
+        "supportedModes"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "createUsbPort(android.hardware.usb.UsbManager,java.lang.String,int)",
+      "documentation": "Helper method for creating a {@link UsbPort}.\n\nReturns Object to avoid referencing the API M+ UsbPort when running on older platforms.\n"
+    },
+    "createUsbPortStatus(int,int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "currentMode",
+        "currentPowerRole",
+        "currentDataRole",
+        "supportedRoleCombinations"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "createUsbPortStatus(int,int,int,int)",
+      "documentation": "Helper method for creating a {@link UsbPortStatus}.\n\nReturns Object to avoid referencing the API M+ UsbPortStatus when running on older platforms.\n"
+    },
     "getAccessoryList()": {
       "isImplementation": true,
       "modifiers": [
@@ -234,7 +267,8 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.reflector.ForType",
-    "org.robolectric.shadows.ShadowUsbManager._UsbManager_"
+    "org.robolectric.shadows.ShadowUsbManager._UsbManager_",
+    "org.robolectric.shadows.ShadowUsbManager._UsbManagerQ_"
   ],
   "name": "org.robolectric.shadows.ShadowUsbManager",
   "documentation": "Robolectric implementation of {@link android.hardware.usb.UsbManager}. "

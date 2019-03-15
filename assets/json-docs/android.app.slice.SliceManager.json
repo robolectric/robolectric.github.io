@@ -28,6 +28,17 @@
       "exceptions": [],
       "name": "checkSlicePermission(android.net.Uri,int,int)"
     },
+    "getPinnedSlices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.net.Uri\u003e",
+      "exceptions": [],
+      "name": "getPinnedSlices()"
+    },
     "getUidForPackage(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -89,9 +100,11 @@
     "android.content.pm.PackageManager.NameNotFoundException",
     "android.net.Uri",
     "android.os.Handler",
+    "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.HashMap",
+    "java.util.List",
     "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
