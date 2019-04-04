@@ -404,6 +404,18 @@
       "name": "setLastKnownLocation(java.lang.String,android.location.Location)",
       "documentation": "Sets the value to return from {@link #getLastKnownLocation(String)} for the given {@code provider}\n\n@param provider\n           name of the provider whose location to set\n@param location\n           the last known location for the provider\n"
     },
+    "setLocationEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLocationEnabled(boolean)"
+    },
     "setLocationEnabledForUser(boolean,android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -471,7 +483,9 @@
     "android.location.LocationListener",
     "android.location.LocationManager",
     "android.os.Looper",
+    "android.os.Process",
     "android.os.UserHandle",
+    "android.provider.Settings",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.HashMap",

@@ -14,6 +14,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.P",
+    "org.robolectric.shadows.ShadowBaseLooper.shadowMainLooper",
     "android.accessibilityservice.AccessibilityButtonController",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

@@ -1,0 +1,24 @@
+{
+  "methods": {
+    "newTotalCaptureResult()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.hardware.camera2.TotalCaptureResult",
+      "exceptions": [],
+      "name": "newTotalCaptureResult()",
+      "documentation": "Convenience method which returns a new instance of {@link TotalCaptureResult}. "
+    }
+  },
+  "imports": [
+    "android.hardware.camera2.TotalCaptureResult",
+    "android.os.Build.VERSION_CODES",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowTotalCaptureResult",
+  "documentation": "Shadow of {@link TotalCaptureResult}. "
+}

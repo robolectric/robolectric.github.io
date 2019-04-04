@@ -14,19 +14,6 @@
       "name": "addExternalDir(java.lang.String)",
       "documentation": "Adds a directory to list returned by {@link ShadowUserEnvironment#getExternalDirs()}.\n\n@param path the external dir to add\n"
     },
-    "exists(java.nio.file.Path)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "path"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "exists(java.nio.file.Path)"
-    },
     "getExternalStorageDirectory()": {
       "isImplementation": true,
       "modifiers": [

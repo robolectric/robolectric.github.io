@@ -151,6 +151,18 @@
       "minSdk": 26,
       "name": "getService()"
     },
+    "isBackgroundRestricted()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "isBackgroundRestricted()",
+      "documentation": "Returns the background restricion state set by {@link #setBackgroundRestricted}.\n"
+    },
     "isInLockTaskMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -219,6 +231,19 @@
       "exceptions": [],
       "name": "setAppTasks(java.util.List\u003candroid.app.ActivityManager.AppTask\u003e)",
       "documentation": "Sets the values to be returned by {@link #getAppTasks()}.\n\n@see #getAppTasks()\n@param tasks List of app tasks.\n"
+    },
+    "setBackgroundRestricted(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isBackgroundRestricted"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBackgroundRestricted(boolean)",
+      "documentation": "Sets the background restriction state reported by\n{@link ActivityManager#isBackgroundRestricted}, but has no effect otherwise.\n"
     },
     "setIsLowRamDevice(boolean)": {
       "isImplementation": false,
@@ -343,6 +368,7 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.annotation.RequiresPermission",
     "android.app.ActivityManager",

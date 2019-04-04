@@ -148,6 +148,9 @@
     }
   },
   "imports": [
+    "android.os.Handler",
+    "android.os.Looper",
+    "android.os.SystemClock",
     "android.widget.Scroller",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"

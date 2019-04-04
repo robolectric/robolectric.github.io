@@ -112,16 +112,6 @@
       "exceptions": [],
       "name": "getFinalY()"
     },
-    "getScheduler()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [],
-      "returnType": "org.robolectric.util.Scheduler",
-      "exceptions": [],
-      "name": "getScheduler()"
-    },
     "getStartX()": {
       "isImplementation": true,
       "modifiers": [
@@ -193,12 +183,12 @@
     }
   },
   "imports": [
+    "android.os.Handler",
     "android.os.Looper",
+    "android.os.SystemClock",
     "android.widget.OverScroller",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.Scheduler"
+    "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowOverScroller"
 }

@@ -44,7 +44,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -170,9 +170,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../org/robolectric/internal/AndroidSandbox.html" title="class in org.robolectric.internal">AndroidSandbox</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxManager.html#getAndroidSandbox-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-">getAndroidSandbox</a></span>(<a href="../../../org/robolectric/internal/bytecode/InstrumentationConfiguration.html" title="class in org.robolectric.internal.bytecode">InstrumentationConfiguration</a>&nbsp;instrumentationConfig,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/SandboxManager.html#getAndroidSandbox-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-org.robolectric.annotation.LooperMode.Mode-">getAndroidSandbox</a></span>(<a href="../../../org/robolectric/internal/bytecode/InstrumentationConfiguration.html" title="class in org.robolectric.internal.bytecode">InstrumentationConfiguration</a>&nbsp;instrumentationConfig,
                  <a href="../../../org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi">Sdk</a>&nbsp;sdk,
-                 <a href="../../../org/robolectric/internal/ResourcesMode.html" title="enum in org.robolectric.internal">ResourcesMode</a>&nbsp;resourcesMode)</code>&nbsp;</td>
+                 <a href="../../../org/robolectric/internal/ResourcesMode.html" title="enum in org.robolectric.internal">ResourcesMode</a>&nbsp;resourcesMode,
+                 <a href="../../../org/robolectric/annotation/LooperMode.Mode.html" title="enum in org.robolectric.annotation">LooperMode.Mode</a>&nbsp;looperMode)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -215,7 +216,7 @@ public&nbsp;SandboxManager(<a href="../../../org/robolectric/internal/SandboxMan
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getAndroidSandbox-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-">
+<a name="getAndroidSandbox-org.robolectric.internal.bytecode.InstrumentationConfiguration-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-org.robolectric.annotation.LooperMode.Mode-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -223,7 +224,8 @@ public&nbsp;SandboxManager(<a href="../../../org/robolectric/internal/SandboxMan
 <h4>getAndroidSandbox</h4>
 <pre>public&nbsp;<a href="../../../org/robolectric/internal/AndroidSandbox.html" title="class in org.robolectric.internal">AndroidSandbox</a>&nbsp;getAndroidSandbox(<a href="../../../org/robolectric/internal/bytecode/InstrumentationConfiguration.html" title="class in org.robolectric.internal.bytecode">InstrumentationConfiguration</a>&nbsp;instrumentationConfig,
                                         <a href="../../../org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi">Sdk</a>&nbsp;sdk,
-                                        <a href="../../../org/robolectric/internal/ResourcesMode.html" title="enum in org.robolectric.internal">ResourcesMode</a>&nbsp;resourcesMode)</pre>
+                                        <a href="../../../org/robolectric/internal/ResourcesMode.html" title="enum in org.robolectric.internal">ResourcesMode</a>&nbsp;resourcesMode,
+                                        <a href="../../../org/robolectric/annotation/LooperMode.Mode.html" title="enum in org.robolectric.annotation">LooperMode.Mode</a>&nbsp;looperMode)</pre>
 </li>
 </ul>
 </li>
@@ -250,7 +252,7 @@ public&nbsp;SandboxManager(<a href="../../../org/robolectric/internal/SandboxMan
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

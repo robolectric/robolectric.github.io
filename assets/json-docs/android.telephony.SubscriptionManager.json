@@ -112,6 +112,18 @@
       "name": "getActiveSubscriptionInfoList()",
       "documentation": "Returns the active list of {@link SubscriptionInfo} that were set via {@link\n#setActiveSubscriptionInfoList}.\n"
     },
+    "getAvailableSubscriptionInfoList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.telephony.SubscriptionInfo\u003e",
+      "exceptions": [],
+      "minSdk": 27,
+      "name": "getAvailableSubscriptionInfoList()",
+      "documentation": "Returns the available list of {@link SubscriptionInfo} that were set via {@link\n#setAvailableSubscriptionInfoList}.\n"
+    },
     "getDefaultDataSubId()": {
       "isImplementation": true,
       "modifiers": [
@@ -322,6 +334,32 @@
       "name": "setActiveSubscriptionInfos(android.telephony.SubscriptionInfo...)",
       "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n"
     },
+    "setAvailableSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "list"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAvailableSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)",
+      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n\n@param list - The subscription info list, can be null.\n"
+    },
+    "setAvailableSubscriptionInfos(android.telephony.SubscriptionInfo...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "infos"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAvailableSubscriptionInfos(android.telephony.SubscriptionInfo...)",
+      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n"
+    },
     "setDefaultDataSubscriptionId(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -394,13 +432,14 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
     "android.telephony.SubscriptionInfo",
     "android.telephony.SubscriptionManager",
     "android.telephony.SubscriptionManager.OnSubscriptionsChangedListener",
+    "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.Arrays",
-    "java.util.Collections",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.List",

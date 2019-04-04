@@ -98,7 +98,7 @@
   },
   "imports": [
     "org.robolectric.shadow.api.Shadow.directlyOn",
-    "android.os.Looper",
+    "org.robolectric.shadows.ShadowBaseLooper.shadowMainLooper",
     "android.view.MotionEvent",
     "android.view.View",
     "android.view.ViewGroup",

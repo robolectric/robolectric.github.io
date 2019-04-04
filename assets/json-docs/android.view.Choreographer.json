@@ -195,5 +195,5 @@
     "org.robolectric.util.TimeUtils"
   ],
   "name": "org.robolectric.shadows.ShadowChoreographer",
-  "documentation": "Robolectric maintains its own concept of the current time from the Choreographer\u0027s\npoint of view, aimed at making animations work correctly. Time starts out at {@code 0}\nand advances by {@code frameInterval} every time\n{@link Choreographer#getFrameTimeNanos()} is called.\n"
+  "documentation": "Robolectric maintains its own concept of the current time from the Choreographer\u0027s point of view,\naimed at making animations work correctly. Time starts out at {@code 0} and advances by {@code\nframeInterval} every time {@link Choreographer#getFrameTimeNanos()} is called.\n"
 }

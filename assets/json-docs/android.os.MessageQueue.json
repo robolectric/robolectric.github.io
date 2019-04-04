@@ -205,5 +205,5 @@
     "org.robolectric.shadows.ShadowMessageQueue._MessageQueue_"
   ],
   "name": "org.robolectric.shadows.ShadowMessageQueue",
-  "documentation": "Robolectric puts {@link android.os.Message}s into the scheduler queue instead of sending\nthem to be handled on a separate thread. {@link android.os.Message}s that are scheduled to\nbe dispatched can be triggered by calling {@link ShadowLooper#idleMainLooper}.\n\n@see ShadowLooper\n"
+  "documentation": "Robolectric puts {@link android.os.Message}s into the scheduler queue instead of sending them to\nbe handled on a separate thread. {@link android.os.Message}s that are scheduled to be dispatched\ncan be triggered by calling {@link ShadowLooper#idleMainLooper}.\n\n@see ShadowLooper\n"
 }

@@ -837,6 +837,7 @@
     "org.robolectric.fakes.RoboMenuItem",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.WithType",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowActivity.ActivityInvoker",

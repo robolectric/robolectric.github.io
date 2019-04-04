@@ -44,7 +44,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../index-all.html">Index</a></li>
 <li><a href="../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -404,7 +404,8 @@ public static&nbsp;<a href="https://developer.android.com/reference/android/app/
 <li class="blockList">
 <h4>isMainThread</h4>
 <pre>public static&nbsp;boolean&nbsp;isMainThread()</pre>
-<div class="block"><p>Tests if the current thread is currently set as the main thread.</p></div>
+<div class="block"><p>Tests if the current thread is currently set as the main thread.</p>
+<p>Not supported in realistic looper mode.</p></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><tt>true</tt> if the current thread is the main thread, <tt>false</tt> otherwise.</dd>
@@ -418,7 +419,8 @@ public static&nbsp;<a href="https://developer.android.com/reference/android/app/
 <li class="blockList">
 <h4>getMainThread</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a>&nbsp;getMainThread()</pre>
-<div class="block"><p>Retrieves the main thread. The main thread is the thread to which the main looper is attached. Defaults to the thread that initialises the <tt>RuntimeEnvironment</tt> class.</p></div>
+<div class="block"><p>Retrieves the main thread. The main thread is the thread to which the main looper is attached. Defaults to the thread that initialises the <tt>RuntimeEnvironment</tt> class.</p>
+<p>Not supported in realistic looper mode.</p></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The main thread.</dd>
@@ -435,7 +437,8 @@ public static&nbsp;<a href="https://developer.android.com/reference/android/app/
 <li class="blockList">
 <h4>setMainThread</h4>
 <pre>public static&nbsp;void&nbsp;setMainThread(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a>&nbsp;newMainThread)</pre>
-<div class="block"><p>Sets the main thread. The main thread is the thread to which the main looper is attached. Defaults to the thread that initialises the <tt>RuntimeEnvironment</tt> class.</p></div>
+<div class="block"><p>Sets the main thread. The main thread is the thread to which the main looper is attached. Defaults to the thread that initialises the <tt>RuntimeEnvironment</tt> class.</p>
+<p>Not supported in realistic looper mode.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>newMainThread</code> - the new main thread.</dd>
@@ -535,7 +538,8 @@ public static&nbsp;<a href="https://developer.android.com/reference/android/app/
 <li class="blockList">
 <h4>getMasterScheduler</h4>
 <pre>public static&nbsp;<a href="../../org/robolectric/util/Scheduler.html" title="class in org.robolectric.util">Scheduler</a>&nbsp;getMasterScheduler()</pre>
-<div class="block"><p>Retrieves the current master scheduler. This scheduler is always used by the main <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>Looper</code></a>, and if the global scheduler option is set it is also used for the background scheduler and for all other <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>Looper</code></a>s</p></div>
+<div class="block"><p>Retrieves the current master scheduler. This scheduler is always used by the main <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>Looper</code></a>, and if the global scheduler option is set it is also used for the background scheduler and for all other <a href="https://developer.android.com/reference/android/os/Looper.html?is-external=true" title="class or interface in android.os"><code>Looper</code></a>s</p>
+<p>Not supported in realistic looper mode.</p></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The current master scheduler.</dd>
@@ -552,7 +556,8 @@ public static&nbsp;<a href="https://developer.android.com/reference/android/app/
 <li class="blockList">
 <h4>setMasterScheduler</h4>
 <pre>public static&nbsp;void&nbsp;setMasterScheduler(<a href="../../org/robolectric/util/Scheduler.html" title="class in org.robolectric.util">Scheduler</a>&nbsp;masterScheduler)</pre>
-<div class="block"><p>Sets the current master scheduler. See <a href="../../org/robolectric/RuntimeEnvironment.html#getMasterScheduler--"><code>getMasterScheduler()</code></a> for details. Note that this method is primarily intended to be called by the Robolectric core setup code. Changing the master scheduler during a test will have unpredictable results.</p></div>
+<div class="block"><p>Sets the current master scheduler. See <a href="../../org/robolectric/RuntimeEnvironment.html#getMasterScheduler--"><code>getMasterScheduler()</code></a> for details. Note that this method is primarily intended to be called by the Robolectric core setup code. Changing the master scheduler during a test will have unpredictable results.</p>
+<p>Not supported in realistic looper mode.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>masterScheduler</code> - the new master scheduler.</dd>
@@ -700,7 +705,7 @@ public static&nbsp;void&nbsp;setUseLegacyResources(boolean&nbsp;useLegacyResourc
 <li><a href="../../index-all.html">Index</a></li>
 <li><a href="../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

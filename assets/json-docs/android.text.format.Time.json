@@ -330,6 +330,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "android.os.SystemClock",
     "android.text.format.Time",
     "android.util.TimeFormatException",
     "java.text.ParseException",

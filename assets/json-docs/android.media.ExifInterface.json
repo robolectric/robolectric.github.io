@@ -1,0 +1,8 @@
+{
+  "methods": {},
+  "imports": [
+    "android.media.ExifInterface",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowExifInterface"
+}

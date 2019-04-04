@@ -22,6 +22,16 @@
       "exceptions": [],
       "name": "doLoop()"
     },
+    "getLastScheduledTaskTime()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.time.Duration",
+      "exceptions": [],
+      "name": "getLastScheduledTaskTime()"
+    },
     "getLooperForThread(java.lang.Thread)": {
       "isImplementation": false,
       "modifiers": [
@@ -45,6 +55,16 @@
       "returnType": "android.os.Looper",
       "exceptions": [],
       "name": "getMainLooper()"
+    },
+    "getNextScheduledTaskTime()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.time.Duration",
+      "exceptions": [],
+      "name": "getNextScheduledTaskTime()"
     },
     "getScheduler()": {
       "isImplementation": false,
@@ -129,6 +149,29 @@
       "exceptions": [],
       "name": "idleConstantly(boolean)"
     },
+    "idleFor(long,java.util.concurrent.TimeUnit)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "time",
+        "timeUnit"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "idleFor(long,java.util.concurrent.TimeUnit)"
+    },
+    "idleIfPaused()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "idleIfPaused()"
+    },
     "idleMainLooper()": {
       "isImplementation": false,
       "modifiers": [
@@ -180,6 +223,16 @@
       "returnType": "void",
       "exceptions": [],
       "name": "idleMainLooperConstantly(boolean)"
+    },
+    "isIdle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isIdle()"
     },
     "isPaused()": {
       "isImplementation": false,
@@ -513,6 +566,7 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.os.Looper",
     "android.os.MessageQueue",
+    "java.time.Duration",
     "java.util.Collections",
     "java.util.Map",
     "java.util.WeakHashMap",
@@ -527,5 +581,5 @@
     "org.robolectric.util.Scheduler"
   ],
   "name": "org.robolectric.shadows.ShadowLooper",
-  "documentation": "Robolectric enqueues posted {@link Runnable}s to be run\n(on this thread) later. {@code Runnable}s that are scheduled to run immediately can be\ntriggered by calling {@link #idle()}.\n\n@see ShadowMessageQueue\n"
+  "documentation": "Robolectric enqueues posted {@link Runnable}s to be run (on this thread) later. {@code Runnable}s\nthat are scheduled to run immediately can be triggered by calling {@link #idle()}.\n\n@see ShadowMessageQueue\n"
 }

@@ -189,5 +189,5 @@
     "org.robolectric.annotation.Resetter"
   ],
   "name": "org.robolectric.shadows.ShadowSystemClock",
-  "documentation": "Robolectric\u0027s concept of current time is base on the current time of the UI Scheduler for\nconsistency with previous implementations. This is not ideal, since both schedulers\n(background and foreground), can see different values for the current time.\n"
+  "documentation": "Robolectric\u0027s concept of current time is base on the current time of the UI Scheduler for\nconsistency with previous implementations. This is not ideal, since both schedulers (background\nand foreground), can see different values for the current time.\n"
 }

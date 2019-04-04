@@ -62,6 +62,19 @@
       "exceptions": [],
       "name": "getFlags()"
     },
+    "getFontMetricsInt(android.graphics.Paint.FontMetricsInt)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "fmi"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "getFontMetricsInt(android.graphics.Paint.FontMetricsInt)"
+    },
     "getJoin()": {
       "isImplementation": false,
       "modifiers": [
@@ -292,6 +305,98 @@
       "exceptions": [],
       "name": "measureText(java.lang.String,int,int)"
     },
+    "nGetFontMetricsInt(java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "nativePaint",
+        "nativeTypeface",
+        "fmi"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "maxSdk": 25,
+      "name": "nGetFontMetricsInt(java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
+    "nGetFontMetricsInt(long,android.graphics.Paint.FontMetricsInt)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "paintPtr",
+        "fmi"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "nGetFontMetricsInt(long,android.graphics.Paint.FontMetricsInt)"
+    },
+    "nGetFontMetricsInt(long,long,android.graphics.Paint.FontMetricsInt)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePaint",
+        "nativeTypeface",
+        "fmi"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "maxSdk": 27,
+      "name": "nGetFontMetricsInt(long,long,android.graphics.Paint.FontMetricsInt)"
+    },
+    "nGetRunAdvance(long,char[],int,int,int,int,boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "paintPtr",
+        "text",
+        "start",
+        "end",
+        "contextStart",
+        "contextEnd",
+        "isRtl",
+        "offset"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "nGetRunAdvance(long,char[],int,int,int,int,boolean,int)"
+    },
+    "nGetRunAdvance(long,long,char[],int,int,int,int,boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "paintPtr",
+        "typefacePtr",
+        "text",
+        "start",
+        "end",
+        "contextStart",
+        "contextEnd",
+        "isRtl",
+        "offset"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 24,
+      "maxSdk": 27,
+      "name": "nGetRunAdvance(long,long,char[],int,int,int,int,boolean,int)"
+    },
     "nInit()": {
       "isImplementation": true,
       "modifiers": [
@@ -303,6 +408,169 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "nInit()"
+    },
+    "native_getRunAdvance(long,long,char[],int,int,int,int,boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject",
+        "nativeTypeface",
+        "text",
+        "start",
+        "end",
+        "contextStart",
+        "contextEnd",
+        "isRtl",
+        "offset"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 23,
+      "maxSdk": 23,
+      "name": "native_getRunAdvance(long,long,char[],int,int,int,int,boolean,int)"
+    },
+    "native_getTextRunAdvances(int,char[],int,int,int,int,int,float[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject",
+        "text",
+        "index",
+        "count",
+        "contextIndex",
+        "contextCount",
+        "flags",
+        "advances",
+        "advancesIndex"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 18,
+      "maxSdk": 19,
+      "name": "native_getTextRunAdvances(int,char[],int,int,int,int,int,float[],int)"
+    },
+    "native_getTextRunAdvances(int,char[],int,int,int,int,int,float[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject",
+        "text",
+        "index",
+        "count",
+        "contextIndex",
+        "contextCount",
+        "flags",
+        "advances",
+        "advancesIndex",
+        "reserved"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "maxSdk": 17,
+      "name": "native_getTextRunAdvances(int,char[],int,int,int,int,int,float[],int,int)"
+    },
+    "native_getTextRunAdvances(int,java.lang.String,int,int,int,int,int,float[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject",
+        "text",
+        "start",
+        "end",
+        "contextStart",
+        "contextEnd",
+        "flags",
+        "advances",
+        "advancesIndex"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 18,
+      "maxSdk": 19,
+      "name": "native_getTextRunAdvances(int,java.lang.String,int,int,int,int,int,float[],int)"
+    },
+    "native_getTextRunAdvances(int,java.lang.String,int,int,int,int,int,float[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject",
+        "text",
+        "start",
+        "end",
+        "contextStart",
+        "contextEnd",
+        "flags",
+        "advances",
+        "advancesIndex",
+        "reserved"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "maxSdk": 17,
+      "name": "native_getTextRunAdvances(int,java.lang.String,int,int,int,int,int,float[],int,int)"
+    },
+    "native_getTextRunAdvances(long,long,char[],int,int,int,int,boolean,float[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject",
+        "nativeTypeface",
+        "text",
+        "index",
+        "count",
+        "contextIndex",
+        "contextCount",
+        "isRtl",
+        "advances",
+        "advancesIndex"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 20,
+      "maxSdk": 22,
+      "name": "native_getTextRunAdvances(long,long,char[],int,int,int,int,boolean,float[],int)"
+    },
+    "native_getTextRunAdvances(long,long,java.lang.String,int,int,int,int,boolean,float[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeObject",
+        "nativeTypeface",
+        "text",
+        "start",
+        "end",
+        "contextStart",
+        "contextEnd",
+        "isRtl",
+        "advances",
+        "advancesIndex"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 20,
+      "maxSdk": 22,
+      "name": "native_getTextRunAdvances(long,long,java.lang.String,int,int,int,int,boolean,float[],int)"
     },
     "setAlpha(int)": {
       "isImplementation": true,
@@ -501,15 +769,29 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.O_MR1",
+    "android.os.Build.VERSION_CODES.P",
+    "org.robolectric.annotation.TextLayoutMode.Mode.REALISTIC",
     "android.graphics.ColorFilter",
     "android.graphics.Paint",
+    "android.graphics.Paint.FontMetricsInt",
     "android.graphics.PathEffect",
     "android.graphics.Shader",
     "android.graphics.Typeface",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.TextLayoutMode",
+    "org.robolectric.config.ConfigurationRegistry",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],

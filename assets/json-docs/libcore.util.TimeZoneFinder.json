@@ -1,0 +1,42 @@
+{
+  "methods": {
+    "getInstance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getInstance()"
+    },
+    "readTzlookup()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "readTzlookup()",
+      "documentation": "Reads tzlookup.xml from the files bundled inside android-all JARs. We need to read the file\ninstead of passing in the path because the real implementation uses {@link java.nio.file.Paths}\nwhich doesn\u0027t support reading from JARs.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
+    "java.nio.charset.StandardCharsets.UTF_8",
+    "java.io.BufferedReader",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.io.InputStreamReader",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowTimeZoneFinder",
+  "documentation": "Shadow of TimeZoneFinder for Android O and P. "
+}

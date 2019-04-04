@@ -426,6 +426,7 @@
     "android.widget.ListPopupWindow",
     "android.widget.PopupWindow",
     "android.widget.Toast",
+    "com.google.common.base.Preconditions",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",

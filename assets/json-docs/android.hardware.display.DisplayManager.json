@@ -24,7 +24,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "addDisplay(java.lang.String)",
-      "documentation": "Adds a simulated display.\n\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display.\n@return the new display\u0027s ID\n"
+      "documentation": "Adds a simulated display and drain the main looper queue to ensure all the callbacks are\nprocessed.\n\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display.\n@return the new display\u0027s ID\n"
     },
     "changeDisplay(int,java.lang.String)": {
       "isImplementation": false,
@@ -39,7 +39,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "changeDisplay(int,java.lang.String)",
-      "documentation": "Changes properties of a simulated display. If `qualifiersStr` starts with a plus (`+`) sign,\nthe display\u0027s previous configuration is modified with the given qualifiers; otherwise defaults\nare applied as described [here](http://robolectric.org/device-configuration/).\n\n\n@param displayId the display id to change\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display\n"
+      "documentation": "Changes properties of a simulated display. If `qualifiersStr` starts with a plus (`+`) sign,\nthe display\u0027s previous configuration is modified with the given qualifiers; otherwise defaults\nare applied as described [here](http://robolectric.org/device-configuration/).\n\n\u003cp\u003eIdles the main looper to ensure all listeners are notified.\n\n@param displayId the display id to change\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display\n"
     },
     "changeDisplay(int,org.robolectric.util.Consumer\u003corg.robolectric.android.internal.DisplayConfig\u003e)": {
       "isImplementation": false,
@@ -145,7 +145,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "removeDisplay(int)",
-      "documentation": "Removes a simulated display.\n\n@param displayId the display id to remove\n"
+      "documentation": "Removes a simulated display and idles the main looper to ensure all listeners are notified.\n\n@param displayId the display id to remove\n"
     },
     "setSaturationLevel(float)": {
       "isImplementation": false,
@@ -166,6 +166,7 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.extract",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.shadows.ShadowBaseLooper.shadowMainLooper",
     "android.content.Context",
     "android.content.res.Configuration",
     "android.hardware.display.DisplayManager",

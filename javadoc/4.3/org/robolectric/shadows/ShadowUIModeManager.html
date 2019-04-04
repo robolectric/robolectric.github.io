@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -44,7 +44,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
@@ -133,6 +133,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowUIModeManager.html#currentModeType">currentModeType</a></span></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowUIModeManager.html#currentNightMode">currentNightMode</a></span></code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -177,6 +181,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowUIModeManager.html#getCurrentModeType--">getCurrentModeType</a></span>()</code>&nbsp;</td>
 </tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowUIModeManager.html#getNightMode--">getNightMode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/shadows/ShadowUIModeManager.html#setNightMode-int-">setNightMode</a></span>(int&nbsp;mode)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -202,10 +214,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <a name="currentModeType">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>currentModeType</h4>
 <pre>public&nbsp;int currentModeType</pre>
+</li>
+</ul>
+<a name="currentNightMode">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>currentNightMode</h4>
+<pre>public&nbsp;int currentNightMode</pre>
 </li>
 </ul>
 </li>
@@ -256,11 +277,31 @@ public&nbsp;void&nbsp;enableCarMode(int&nbsp;flags)</pre>
 <a name="disableCarMode-int-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>disableCarMode</h4>
 <pre><a href="../../../org/robolectric/annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>
 public&nbsp;void&nbsp;disableCarMode(int&nbsp;flags)</pre>
+</li>
+</ul>
+<a name="getNightMode--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNightMode</h4>
+<pre><a href="../../../org/robolectric/annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>
+public&nbsp;int&nbsp;getNightMode()</pre>
+</li>
+</ul>
+<a name="setNightMode-int-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setNightMode</h4>
+<pre><a href="../../../org/robolectric/annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>
+public&nbsp;void&nbsp;setNightMode(int&nbsp;mode)</pre>
 </li>
 </ul>
 </li>
@@ -287,7 +328,7 @@ public&nbsp;void&nbsp;disableCarMode(int&nbsp;flags)</pre>
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>

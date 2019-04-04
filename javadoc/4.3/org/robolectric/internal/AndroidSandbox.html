@@ -44,12 +44,12 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 </div>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../org/robolectric/internal/AndroidConfigurer.html" title="class in org.robolectric.internal"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/robolectric/internal/AndroidSandbox.html" target="_top">Frames</a></li>
@@ -136,14 +136,14 @@ extends <a href="../../../org/robolectric/internal/bytecode/Sandbox.html" title=
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.EnvironmentSpec</a></span></code>
-<div class="block">Provides a mechanism for tests to inject a different AndroidEnvironment.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal">AndroidSandbox.SdkSandboxClassLoader</a></span></code>
+<div class="block">Adapter from Sdk to ResourceLoader.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal">AndroidSandbox.SdkSandboxClassLoader</a></span></code>
-<div class="block">Adapter from Sdk to ResourceLoader.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/AndroidSandbox.TestEnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.TestEnvironmentSpec</a></span></code>
+<div class="block">Provides a mechanism for tests to inject a different AndroidTestEnvironment.</div>
 </td>
 </tr>
 </table>
@@ -176,11 +176,11 @@ extends <a href="../../../org/robolectric/internal/bytecode/Sandbox.html" title=
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/AndroidSandbox.html#AndroidSandbox-org.robolectric.pluginapi.Sdk-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-org.robolectric.ApkLoader-org.robolectric.internal.AndroidSandbox.EnvironmentSpec-org.robolectric.internal.AndroidSandbox.SdkSandboxClassLoader-org.robolectric.internal.bytecode.ShadowProviders-">AndroidSandbox</a></span>(<a href="../../../org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi">Sdk</a>&nbsp;runtimeSdk,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/AndroidSandbox.html#AndroidSandbox-org.robolectric.pluginapi.Sdk-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-org.robolectric.ApkLoader-org.robolectric.internal.AndroidSandbox.TestEnvironmentSpec-org.robolectric.internal.AndroidSandbox.SdkSandboxClassLoader-org.robolectric.internal.bytecode.ShadowProviders-">AndroidSandbox</a></span>(<a href="../../../org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi">Sdk</a>&nbsp;runtimeSdk,
               <a href="../../../org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi">Sdk</a>&nbsp;compileSdk,
               <a href="../../../org/robolectric/internal/ResourcesMode.html" title="enum in org.robolectric.internal">ResourcesMode</a>&nbsp;resourcesMode,
               <a href="../../../org/robolectric/ApkLoader.html" title="class in org.robolectric">ApkLoader</a>&nbsp;apkLoader,
-              <a href="../../../org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.EnvironmentSpec</a>&nbsp;environmentSpec,
+              <a href="../../../org/robolectric/internal/AndroidSandbox.TestEnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.TestEnvironmentSpec</a>&nbsp;testEnvironmentSpec,
               <a href="../../../org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal">AndroidSandbox.SdkSandboxClassLoader</a>&nbsp;sdkSandboxClassLoader,
               <a href="../../../org/robolectric/internal/bytecode/ShadowProviders.html" title="class in org.robolectric.internal.bytecode">ShadowProviders</a>&nbsp;shadowProviders)</code>&nbsp;</td>
 </tr>
@@ -200,12 +200,12 @@ extends <a href="../../../org/robolectric/internal/bytecode/Sandbox.html" title=
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../org/robolectric/internal/Environment.html" title="interface in org.robolectric.internal">Environment</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/AndroidSandbox.html#getEnvironment--">getEnvironment</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi">Sdk</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/AndroidSandbox.html#getSdk--">getSdk</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../org/robolectric/internal/TestEnvironment.html" title="interface in org.robolectric.internal">TestEnvironment</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/robolectric/internal/AndroidSandbox.html#getTestEnvironment--">getTestEnvironment</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ThreadFactory.html?is-external=true" title="class or interface in java.util.concurrent">ThreadFactory</a></code></td>
@@ -244,7 +244,7 @@ extends <a href="../../../org/robolectric/internal/bytecode/Sandbox.html" title=
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="AndroidSandbox-org.robolectric.pluginapi.Sdk-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-org.robolectric.ApkLoader-org.robolectric.internal.AndroidSandbox.EnvironmentSpec-org.robolectric.internal.AndroidSandbox.SdkSandboxClassLoader-org.robolectric.internal.bytecode.ShadowProviders-">
+<a name="AndroidSandbox-org.robolectric.pluginapi.Sdk-org.robolectric.pluginapi.Sdk-org.robolectric.internal.ResourcesMode-org.robolectric.ApkLoader-org.robolectric.internal.AndroidSandbox.TestEnvironmentSpec-org.robolectric.internal.AndroidSandbox.SdkSandboxClassLoader-org.robolectric.internal.bytecode.ShadowProviders-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -257,7 +257,7 @@ public&nbsp;AndroidSandbox(@Named(value="runtimeSdk")
                               <a href="../../../org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi">Sdk</a>&nbsp;compileSdk,
                               <a href="../../../org/robolectric/internal/ResourcesMode.html" title="enum in org.robolectric.internal">ResourcesMode</a>&nbsp;resourcesMode,
                               <a href="../../../org/robolectric/ApkLoader.html" title="class in org.robolectric">ApkLoader</a>&nbsp;apkLoader,
-                              <a href="../../../org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.EnvironmentSpec</a>&nbsp;environmentSpec,
+                              <a href="../../../org/robolectric/internal/AndroidSandbox.TestEnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.TestEnvironmentSpec</a>&nbsp;testEnvironmentSpec,
                               <a href="../../../org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal">AndroidSandbox.SdkSandboxClassLoader</a>&nbsp;sdkSandboxClassLoader,
                               <a href="../../../org/robolectric/internal/bytecode/ShadowProviders.html" title="class in org.robolectric.internal.bytecode">ShadowProviders</a>&nbsp;shadowProviders)</pre>
 </li>
@@ -292,13 +292,13 @@ public&nbsp;AndroidSandbox(@Named(value="runtimeSdk")
 <pre>public&nbsp;<a href="../../../org/robolectric/pluginapi/Sdk.html" title="class in org.robolectric.pluginapi">Sdk</a>&nbsp;getSdk()</pre>
 </li>
 </ul>
-<a name="getEnvironment--">
+<a name="getTestEnvironment--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getEnvironment</h4>
-<pre>public&nbsp;<a href="../../../org/robolectric/internal/Environment.html" title="interface in org.robolectric.internal">Environment</a>&nbsp;getEnvironment()</pre>
+<h4>getTestEnvironment</h4>
+<pre>public&nbsp;<a href="../../../org/robolectric/internal/TestEnvironment.html" title="interface in org.robolectric.internal">TestEnvironment</a>&nbsp;getTestEnvironment()</pre>
 </li>
 </ul>
 <a name="toString--">
@@ -338,7 +338,7 @@ public&nbsp;AndroidSandbox(@Named(value="runtimeSdk")
 <li><a href="../../../index-all.html">Index</a></li>
 <li><a href="../../../help-doc.html">Help</a></li>
 </ul>
-<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-1 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
+<div class="aboutLanguage"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.3-alpha-2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul><script type="text/javascript" src="../../../highlight.pack.js"></script>
 <script type="text/javascript"><!--
 hljs.initHighlightingOnLoad();
 //--></script></div>
@@ -346,7 +346,7 @@ hljs.initHighlightingOnLoad();
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../org/robolectric/internal/AndroidConfigurer.html" title="class in org.robolectric.internal"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?org/robolectric/internal/AndroidSandbox.html" target="_top">Frames</a></li>

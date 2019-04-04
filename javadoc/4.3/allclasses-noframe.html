@@ -19,7 +19,6 @@
 <li><a href="org/robolectric/android/controller/ActivityController.html" title="class in org.robolectric.android.controller">ActivityController</a></li>
 <li><a href="org/robolectric/manifest/ActivityData.html" title="class in org.robolectric.manifest">ActivityData</a></li>
 <li><a href="org/robolectric/internal/AndroidConfigurer.html" title="class in org.robolectric.internal">AndroidConfigurer</a></li>
-<li><a href="org/robolectric/android/internal/AndroidEnvironment.html" title="class in org.robolectric.android.internal">AndroidEnvironment</a></li>
 <li><a href="org/robolectric/android/AndroidInterceptors.html" title="class in org.robolectric.android">AndroidInterceptors</a></li>
 <li><a href="org/robolectric/android/AndroidInterceptors.CleanerInterceptor.html" title="class in org.robolectric.android">AndroidInterceptors.CleanerInterceptor</a></li>
 <li><a href="org/robolectric/android/AndroidInterceptors.LinkedHashMapEldestInterceptor.html" title="class in org.robolectric.android">AndroidInterceptors.LinkedHashMapEldestInterceptor</a></li>
@@ -32,8 +31,9 @@
 <li><a href="org/robolectric/manifest/AndroidManifest.html" title="class in org.robolectric.manifest">AndroidManifest</a></li>
 <li><a href="org/robolectric/AndroidMetadata.html" title="class in org.robolectric">AndroidMetadata</a></li>
 <li><a href="org/robolectric/internal/AndroidSandbox.html" title="class in org.robolectric.internal">AndroidSandbox</a></li>
-<li><a href="org/robolectric/internal/AndroidSandbox.EnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.EnvironmentSpec</a></li>
 <li><a href="org/robolectric/internal/AndroidSandbox.SdkSandboxClassLoader.html" title="class in org.robolectric.internal">AndroidSandbox.SdkSandboxClassLoader</a></li>
+<li><a href="org/robolectric/internal/AndroidSandbox.TestEnvironmentSpec.html" title="class in org.robolectric.internal">AndroidSandbox.TestEnvironmentSpec</a></li>
+<li><a href="org/robolectric/android/internal/AndroidTestEnvironment.html" title="class in org.robolectric.android.internal">AndroidTestEnvironment</a></li>
 <li><a href="org/robolectric/res/android/ApkAssetsCookie.html" title="class in org.robolectric.res.android">ApkAssetsCookie</a></li>
 <li><a href="org/robolectric/ApkLoader.html" title="class in org.robolectric">ApkLoader</a></li>
 <li><a href="org/robolectric/res/android/Asset.html" title="class in org.robolectric.res.android">Asset</a></li>
@@ -58,6 +58,7 @@
 <li><a href="org/robolectric/android/AttributeSetBuilderImpl.LegacyResourceResolver.html" title="class in org.robolectric.android">AttributeSetBuilderImpl.LegacyResourceResolver</a></li>
 <li><a href="org/robolectric/android/AttributeSetBuilderImpl.ResourceResolver.html" title="interface in org.robolectric.android"><span class="interfaceName">AttributeSetBuilderImpl.ResourceResolver</span></a></li>
 <li><a href="org/robolectric/util/inject/AutoFactory.html" title="annotation in org.robolectric.util.inject">AutoFactory</a></li>
+<li><a href="org/robolectric/android/util/concurrent/BackgroundExecutor.html" title="class in org.robolectric.android.util.concurrent">BackgroundExecutor</a></li>
 <li><a href="org/robolectric/android/controller/BackupAgentController.html" title="class in org.robolectric.android.controller">BackupAgentController</a></li>
 <li><a href="org/robolectric/fakes/BaseCursor.html" title="class in org.robolectric.fakes">BaseCursor</a></li>
 <li><a href="org/robolectric/android/Bootstrap.html" title="class in org.robolectric.android">Bootstrap</a></li>
@@ -132,7 +133,6 @@
 <li><a href="org/robolectric/res/DrawableResourceLoader.html" title="class in org.robolectric.res">DrawableResourceLoader</a></li>
 <li><a href="org/robolectric/res/android/DynamicRefTable.html" title="class in org.robolectric.res.android">DynamicRefTable</a></li>
 <li><a href="org/robolectric/res/EmptyStyle.html" title="class in org.robolectric.res">EmptyStyle</a></li>
-<li><a href="org/robolectric/internal/Environment.html" title="interface in org.robolectric.internal"><span class="interfaceName">Environment</span></a></li>
 <li><a href="org/robolectric/res/android/Errors.html" title="class in org.robolectric.res.android">Errors</a></li>
 <li><a href="org/robolectric/junit/rules/ExpectedLogMessagesRule.html" title="class in org.robolectric.junit.rules">ExpectedLogMessagesRule</a></li>
 <li><a href="org/robolectric/pluginapi/ExtensionPoint.html" title="annotation in org.robolectric.pluginapi">ExtensionPoint</a></li>
@@ -181,6 +181,7 @@
 <li><a href="org/robolectric/util/inject/Injector.html" title="class in org.robolectric.util.inject">Injector</a></li>
 <li><a href="org/robolectric/util/inject/Injector.Builder.html" title="class in org.robolectric.util.inject">Injector.Builder</a></li>
 <li><a href="org/robolectric/util/inject/Injector.Key.html" title="class in org.robolectric.util.inject">Injector.Key</a></li>
+<li><a href="org/robolectric/android/util/concurrent/InlineExecutorService.html" title="class in org.robolectric.android.util.concurrent">InlineExecutorService</a></li>
 <li><a href="org/robolectric/annotation/internal/Instrument.html" title="annotation in org.robolectric.annotation.internal">Instrument</a></li>
 <li><a href="org/robolectric/internal/bytecode/InstrumentationConfiguration.html" title="class in org.robolectric.internal.bytecode">InstrumentationConfiguration</a></li>
 <li><a href="org/robolectric/internal/bytecode/InstrumentationConfiguration.Builder.html" title="class in org.robolectric.internal.bytecode">InstrumentationConfiguration.Builder</a></li>
@@ -210,6 +211,10 @@
 <li><a href="org/robolectric/android/internal/LocalPermissionGranter.html" title="class in org.robolectric.android.internal">LocalPermissionGranter</a></li>
 <li><a href="org/robolectric/android/internal/LocalUiController.html" title="class in org.robolectric.android.internal">LocalUiController</a></li>
 <li><a href="org/robolectric/util/Logger.html" title="class in org.robolectric.util">Logger</a></li>
+<li><a href="org/robolectric/annotation/LooperMode.html" title="annotation in org.robolectric.annotation">LooperMode</a></li>
+<li><a href="org/robolectric/annotation/LooperMode.Mode.html" title="enum in org.robolectric.annotation">LooperMode.Mode</a></li>
+<li><a href="org/robolectric/plugins/LooperModeConfigurer.html" title="class in org.robolectric.plugins">LooperModeConfigurer</a></li>
+<li><a href="org/robolectric/shadows/LooperShadowPicker.html" title="class in org.robolectric.shadows">LooperShadowPicker</a></li>
 <li><a href="org/robolectric/internal/ManifestFactory.html" title="interface in org.robolectric.internal"><span class="interfaceName">ManifestFactory</span></a></li>
 <li><a href="org/robolectric/internal/ManifestIdentifier.html" title="class in org.robolectric.internal">ManifestIdentifier</a></li>
 <li><a href="org/robolectric/internal/dependency/MavenDependencyResolver.html" title="class in org.robolectric.internal.dependency">MavenDependencyResolver</a></li>
@@ -239,6 +244,7 @@
 <li><a href="org/robolectric/ParameterizedRobolectricTestRunner.Parameters.html" title="annotation in org.robolectric">ParameterizedRobolectricTestRunner.Parameters</a></li>
 <li><a href="org/robolectric/shadows/httpclient/ParamsParser.html" title="class in org.robolectric.shadows.httpclient">ParamsParser</a></li>
 <li><a href="org/robolectric/manifest/PathPermissionData.html" title="class in org.robolectric.manifest">PathPermissionData</a></li>
+<li><a href="org/robolectric/android/util/concurrent/PausedExecutorService.html" title="class in org.robolectric.android.util.concurrent">PausedExecutorService</a></li>
 <li><a href="org/robolectric/util/PerfStatsCollector.html" title="class in org.robolectric.util">PerfStatsCollector</a></li>
 <li><a href="org/robolectric/util/PerfStatsCollector.ThrowingRunnable.html" title="interface in org.robolectric.util"><span class="interfaceName">PerfStatsCollector.ThrowingRunnable</span></a></li>
 <li><a href="org/robolectric/util/PerfStatsCollector.ThrowingSupplier.html" title="interface in org.robolectric.util"><span class="interfaceName">PerfStatsCollector.ThrowingSupplier</span></a></li>
@@ -324,6 +330,7 @@
 <li><a href="org/robolectric/fakes/RoboIntentSender.html" title="class in org.robolectric.fakes">RoboIntentSender</a></li>
 <li><a href="org/robolectric/Robolectric.html" title="class in org.robolectric">Robolectric</a></li>
 <li><a href="org/robolectric/Robolectric.AttributeSetBuilder.html" title="interface in org.robolectric"><span class="interfaceName">Robolectric.AttributeSetBuilder</span></a></li>
+<li><a href="org/robolectric/internal/bytecode/RobolectricGeneratorAdapter.html" title="class in org.robolectric.internal.bytecode">RobolectricGeneratorAdapter</a></li>
 <li><a href="org/robolectric/internal/bytecode/RobolectricInternals.html" title="class in org.robolectric.internal.bytecode">RobolectricInternals</a></li>
 <li><a href="org/robolectric/annotation/processing/RobolectricModel.html" title="class in org.robolectric.annotation.processing">RobolectricModel</a></li>
 <li><a href="org/robolectric/annotation/processing/RobolectricModel.Builder.html" title="class in org.robolectric.annotation.processing">RobolectricModel.Builder</a></li>
@@ -434,6 +441,19 @@
 <li><a href="org/robolectric/shadows/ShadowBackgroundThread.html" title="class in org.robolectric.shadows">ShadowBackgroundThread</a></li>
 <li><a href="org/robolectric/shadows/ShadowBackupManager.html" title="class in org.robolectric.shadows">ShadowBackupManager</a></li>
 <li><a href="org/robolectric/shadows/ShadowBaseAdapter.html" title="class in org.robolectric.shadows">ShadowBaseAdapter</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseAsyncTask.html" title="class in org.robolectric.shadows">ShadowBaseAsyncTask</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseAsyncTask.Picker.html" title="class in org.robolectric.shadows">ShadowBaseAsyncTask.Picker</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseAsyncTaskLoader.html" title="class in org.robolectric.shadows">ShadowBaseAsyncTaskLoader</a></li>
+<li><a href="org/robolectric/shadows/support/v4/ShadowBaseAsyncTaskLoader.html" title="class in org.robolectric.shadows.support.v4">ShadowBaseAsyncTaskLoader</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseAsyncTaskLoader.Picker.html" title="class in org.robolectric.shadows">ShadowBaseAsyncTaskLoader.Picker</a></li>
+<li><a href="org/robolectric/shadows/support/v4/ShadowBaseAsyncTaskLoader.Picker.html" title="class in org.robolectric.shadows.support.v4">ShadowBaseAsyncTaskLoader.Picker</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseChoreographer.html" title="class in org.robolectric.shadows">ShadowBaseChoreographer</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseChoreographer.Picker.html" title="class in org.robolectric.shadows">ShadowBaseChoreographer.Picker</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseLooper.html" title="class in org.robolectric.shadows">ShadowBaseLooper</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseLooper.Picker.html" title="class in org.robolectric.shadows">ShadowBaseLooper.Picker</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseMessage.html" title="class in org.robolectric.shadows">ShadowBaseMessage</a></li>
+<li><a href="org/robolectric/shadows/ShadowBaseMessage.Picker.html" title="class in org.robolectric.shadows">ShadowBaseMessage.Picker</a></li>
+<li><a href="org/robolectric/shadows/ShadowBasicTagTechnology.html" title="class in org.robolectric.shadows">ShadowBasicTagTechnology</a></li>
 <li><a href="org/robolectric/shadows/ShadowBatteryManager.html" title="class in org.robolectric.shadows">ShadowBatteryManager</a></li>
 <li><a href="org/robolectric/shadows/ShadowBinder.html" title="class in org.robolectric.shadows">ShadowBinder</a></li>
 <li><a href="org/robolectric/shadows/ShadowBinderBridge.html" title="class in org.robolectric.shadows">ShadowBinderBridge</a></li>
@@ -466,6 +486,7 @@
 <li><a href="org/robolectric/shadows/ShadowCanvas.RectPaintHistoryEvent.html" title="class in org.robolectric.shadows">ShadowCanvas.RectPaintHistoryEvent</a></li>
 <li><a href="org/robolectric/shadows/ShadowCanvas.TextHistoryEvent.html" title="class in org.robolectric.shadows">ShadowCanvas.TextHistoryEvent</a></li>
 <li><a href="org/robolectric/shadows/ShadowCaptioningManager.html" title="class in org.robolectric.shadows">ShadowCaptioningManager</a></li>
+<li><a href="org/robolectric/shadows/ShadowCaptureResult.html" title="class in org.robolectric.shadows">ShadowCaptureResult</a></li>
 <li><a href="org/robolectric/shadows/ShadowCarrierConfigManager.html" title="class in org.robolectric.shadows">ShadowCarrierConfigManager</a></li>
 <li><a href="org/robolectric/shadows/ShadowChoreographer.html" title="class in org.robolectric.shadows">ShadowChoreographer</a></li>
 <li><a href="org/robolectric/shadows/ShadowClipboardManager.html" title="class in org.robolectric.shadows">ShadowClipboardManager</a></li>
@@ -509,10 +530,12 @@
 <li><a href="org/robolectric/shadows/ShadowDebug.html" title="class in org.robolectric.shadows">ShadowDebug</a></li>
 <li><a href="org/robolectric/internal/bytecode/ShadowDecorator.html" title="class in org.robolectric.internal.bytecode">ShadowDecorator</a></li>
 <li><a href="org/robolectric/shadows/httpclient/ShadowDefaultRequestDirector.html" title="class in org.robolectric.shadows.httpclient">ShadowDefaultRequestDirector</a></li>
+<li><a href="org/robolectric/shadows/ShadowDeviceConfig.html" title="class in org.robolectric.shadows">ShadowDeviceConfig</a></li>
 <li><a href="org/robolectric/shadows/ShadowDevicePolicyManager.html" title="class in org.robolectric.shadows">ShadowDevicePolicyManager</a></li>
 <li><a href="org/robolectric/shadows/ShadowDialog.html" title="class in org.robolectric.shadows">ShadowDialog</a></li>
 <li><a href="org/robolectric/shadows/ShadowDiscoverySession.html" title="class in org.robolectric.shadows">ShadowDiscoverySession</a></li>
 <li><a href="org/robolectric/shadows/ShadowDisplay.html" title="class in org.robolectric.shadows">ShadowDisplay</a></li>
+<li><a href="org/robolectric/shadows/ShadowDisplayEventReceiver.html" title="class in org.robolectric.shadows">ShadowDisplayEventReceiver</a></li>
 <li><a href="org/robolectric/shadows/ShadowDisplayListCanvas.html" title="class in org.robolectric.shadows">ShadowDisplayListCanvas</a></li>
 <li><a href="org/robolectric/shadows/ShadowDisplayManager.html" title="class in org.robolectric.shadows">ShadowDisplayManager</a></li>
 <li><a href="org/robolectric/shadows/ShadowDisplayManagerGlobal.html" title="class in org.robolectric.shadows">ShadowDisplayManagerGlobal</a></li>
@@ -568,6 +591,7 @@
 <li><a href="org/robolectric/shadows/ShadowIntentService.html" title="class in org.robolectric.shadows">ShadowIntentService</a></li>
 <li><a href="org/robolectric/internal/bytecode/ShadowInvalidator.html" title="class in org.robolectric.internal.bytecode">ShadowInvalidator</a></li>
 <li><a href="org/robolectric/shadows/ShadowIoUtils.html" title="class in org.robolectric.shadows">ShadowIoUtils</a></li>
+<li><a href="org/robolectric/shadows/ShadowIsoDep.html" title="class in org.robolectric.shadows">ShadowIsoDep</a></li>
 <li><a href="org/robolectric/shadows/ShadowJobScheduler.html" title="class in org.robolectric.shadows">ShadowJobScheduler</a></li>
 <li><a href="org/robolectric/shadows/ShadowJobScheduler.ShadowJobSchedulerImpl.html" title="class in org.robolectric.shadows">ShadowJobScheduler.ShadowJobSchedulerImpl</a></li>
 <li><a href="org/robolectric/shadows/ShadowJobService.html" title="class in org.robolectric.shadows">ShadowJobService</a></li>
@@ -644,6 +668,7 @@
 <li><a href="org/robolectric/shadows/ShadowNumberPicker.html" title="class in org.robolectric.shadows">ShadowNumberPicker</a></li>
 <li><a href="org/robolectric/shadows/ShadowObjectAnimator.html" title="class in org.robolectric.shadows">ShadowObjectAnimator</a></li>
 <li><a href="org/robolectric/shadows/ShadowOpenGLMatrix.html" title="class in org.robolectric.shadows">ShadowOpenGLMatrix</a></li>
+<li><a href="org/robolectric/shadows/ShadowOsConstants.html" title="class in org.robolectric.shadows">ShadowOsConstants</a></li>
 <li><a href="org/robolectric/shadows/ShadowOutline.html" title="class in org.robolectric.shadows">ShadowOutline</a></li>
 <li><a href="org/robolectric/shadows/ShadowOverScroller.html" title="class in org.robolectric.shadows">ShadowOverScroller</a></li>
 <li><a href="org/robolectric/shadows/ShadowPackageInstaller.html" title="class in org.robolectric.shadows">ShadowPackageInstaller</a></li>
@@ -689,6 +714,14 @@
 <li><a href="org/robolectric/shadows/ShadowQueuedWork.html" title="class in org.robolectric.shadows">ShadowQueuedWork</a></li>
 <li><a href="org/robolectric/shadows/ShadowRangingResult.html" title="class in org.robolectric.shadows">ShadowRangingResult</a></li>
 <li><a href="org/robolectric/shadows/ShadowRangingResult.Builder.html" title="class in org.robolectric.shadows">ShadowRangingResult.Builder</a></li>
+<li><a href="org/robolectric/shadows/ShadowRealisticAsyncTask.html" title="class in org.robolectric.shadows">ShadowRealisticAsyncTask</a></li>
+<li><a href="org/robolectric/shadows/ShadowRealisticAsyncTaskLoader.html" title="class in org.robolectric.shadows">ShadowRealisticAsyncTaskLoader</a></li>
+<li><a href="org/robolectric/shadows/support/v4/ShadowRealisticAsyncTaskLoader.html" title="class in org.robolectric.shadows.support.v4">ShadowRealisticAsyncTaskLoader</a></li>
+<li><a href="org/robolectric/shadows/ShadowRealisticChoreographer.html" title="class in org.robolectric.shadows">ShadowRealisticChoreographer</a></li>
+<li><a href="org/robolectric/shadows/ShadowRealisticLooper.html" title="class in org.robolectric.shadows">ShadowRealisticLooper</a></li>
+<li><a href="org/robolectric/shadows/ShadowRealisticMessage.html" title="class in org.robolectric.shadows">ShadowRealisticMessage</a></li>
+<li><a href="org/robolectric/shadows/ShadowRealisticMessageQueue.html" title="class in org.robolectric.shadows">ShadowRealisticMessageQueue</a></li>
+<li><a href="org/robolectric/shadows/ShadowRealisticSystemClock.html" title="class in org.robolectric.shadows">ShadowRealisticSystemClock</a></li>
 <li><a href="org/robolectric/shadows/ShadowRecordingCanvas.html" title="class in org.robolectric.shadows">ShadowRecordingCanvas</a></li>
 <li><a href="org/robolectric/shadows/ShadowRegion.html" title="class in org.robolectric.shadows">ShadowRegion</a></li>
 <li><a href="org/robolectric/shadows/ShadowRelativeLayout.html" title="class in org.robolectric.shadows">ShadowRelativeLayout</a></li>
@@ -758,6 +791,7 @@
 <li><a href="org/robolectric/shadows/ShadowSurfaceView.html" title="class in org.robolectric.shadows">ShadowSurfaceView</a></li>
 <li><a href="org/robolectric/shadows/ShadowSurfaceView.FakeSurfaceHolder.html" title="class in org.robolectric.shadows">ShadowSurfaceView.FakeSurfaceHolder</a></li>
 <li><a href="org/robolectric/shadows/support/v4/ShadowSwipeRefreshLayout.html" title="class in org.robolectric.shadows.support.v4">ShadowSwipeRefreshLayout</a></li>
+<li><a href="org/robolectric/shadows/ShadowSystem.html" title="class in org.robolectric.shadows">ShadowSystem</a></li>
 <li><a href="org/robolectric/shadows/ShadowSystemClock.html" title="class in org.robolectric.shadows">ShadowSystemClock</a></li>
 <li><a href="org/robolectric/shadows/ShadowSystemFonts.html" title="class in org.robolectric.shadows">ShadowSystemFonts</a></li>
 <li><a href="org/robolectric/shadows/ShadowSystemProperties.html" title="class in org.robolectric.shadows">ShadowSystemProperties</a></li>
@@ -785,7 +819,9 @@
 <li><a href="org/robolectric/shadows/ShadowTime.html" title="class in org.robolectric.shadows">ShadowTime</a></li>
 <li><a href="org/robolectric/shadows/ShadowTimePickerDialog.html" title="class in org.robolectric.shadows">ShadowTimePickerDialog</a></li>
 <li><a href="org/robolectric/shadows/ShadowTimeZoneFinder.html" title="class in org.robolectric.shadows">ShadowTimeZoneFinder</a></li>
+<li><a href="org/robolectric/shadows/ShadowTimeZoneFinderQ.html" title="class in org.robolectric.shadows">ShadowTimeZoneFinderQ</a></li>
 <li><a href="org/robolectric/shadows/ShadowToast.html" title="class in org.robolectric.shadows">ShadowToast</a></li>
+<li><a href="org/robolectric/shadows/ShadowTotalCaptureResult.html" title="class in org.robolectric.shadows">ShadowTotalCaptureResult</a></li>
 <li><a href="org/robolectric/shadows/ShadowTouchDelegate.html" title="class in org.robolectric.shadows">ShadowTouchDelegate</a></li>
 <li><a href="org/robolectric/shadows/ShadowTrace.html" title="class in org.robolectric.shadows">ShadowTrace</a></li>
 <li><a href="org/robolectric/shadows/ShadowTrafficStats.html" title="class in org.robolectric.shadows">ShadowTrafficStats</a></li>
@@ -872,11 +908,16 @@
 <li><a href="org/robolectric/shadows/support/v4/SupportFragmentController.html" title="class in org.robolectric.shadows.support.v4">SupportFragmentController</a></li>
 <li><a href="org/robolectric/shadows/support/v4/SupportFragmentTestUtil.html" title="class in org.robolectric.shadows.support.v4">SupportFragmentTestUtil</a></li>
 <li><a href="org/robolectric/util/TempDirectory.html" title="class in org.robolectric.util">TempDirectory</a></li>
+<li><a href="org/robolectric/internal/TestEnvironment.html" title="interface in org.robolectric.internal"><span class="interfaceName">TestEnvironment</span></a></li>
+<li><a href="org/robolectric/pluginapi/TestEnvironmentLifecyclePlugin.html" title="interface in org.robolectric.pluginapi"><span class="interfaceName">TestEnvironmentLifecyclePlugin</span></a></li>
 <li><a href="org/robolectric/shadows/httpclient/TestHttpResponse.html" title="class in org.robolectric.shadows.httpclient">TestHttpResponse</a></li>
 <li><a href="org/robolectric/TestLifecycle.html" title="interface in org.robolectric"><span class="interfaceName">TestLifecycle</span></a></li>
 <li><a href="org/robolectric/TestLifecycleApplication.html" title="interface in org.robolectric"><span class="interfaceName">TestLifecycleApplication</span></a></li>
 <li><a href="org/robolectric/util/TestRunnable.html" title="class in org.robolectric.util">TestRunnable</a></li>
 <li><a href="org/robolectric/res/TextCollectingNodeHandler.html" title="class in org.robolectric.res">TextCollectingNodeHandler</a></li>
+<li><a href="org/robolectric/annotation/TextLayoutMode.html" title="annotation in org.robolectric.annotation">TextLayoutMode</a></li>
+<li><a href="org/robolectric/annotation/TextLayoutMode.Mode.html" title="enum in org.robolectric.annotation">TextLayoutMode.Mode</a></li>
+<li><a href="org/robolectric/plugins/TextLayoutModeConfigurer.html" title="class in org.robolectric.plugins">TextLayoutModeConfigurer</a></li>
 <li><a href="org/robolectric/res/ThemeStyleSet.html" title="class in org.robolectric.res">ThemeStyleSet</a></li>
 <li><a href="org/robolectric/util/TimeUtils.html" title="class in org.robolectric.util">TimeUtils</a></li>
 <li><a href="org/robolectric/res/TypedResource.html" title="class in org.robolectric.res">TypedResource</a></li>

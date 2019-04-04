@@ -33,11 +33,34 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getCurrentModeType()"
+    },
+    "getNightMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getNightMode()"
+    },
+    "setNightMode(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "mode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNightMode(int)"
     }
   },
   "imports": [
     "android.app.UiModeManager",
     "android.content.res.Configuration",
+    "com.google.common.collect.ImmutableSet",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

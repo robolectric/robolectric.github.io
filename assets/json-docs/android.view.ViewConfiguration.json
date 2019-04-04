@@ -340,10 +340,12 @@
     "android.content.Context",
     "android.util.DisplayMetrics",
     "android.view.ViewConfiguration",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowViewConfiguration"
 }

@@ -255,8 +255,7 @@
     "toOpEntry(java.lang.Integer)": {
       "isImplementation": false,
       "modifiers": [
-        "protected",
-        "static"
+        "protected"
       ],
       "params": [
         "op"

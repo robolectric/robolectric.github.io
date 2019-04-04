@@ -296,6 +296,19 @@
       "name": "getLastSetPassword()",
       "documentation": "Retrieves last password set through {@link DevicePolicyManager#resetPassword} or {@link\nDevicePolicyManager#resetPasswordWithToken}.\n"
     },
+    "getLockTaskPackages(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "java.lang.String[]",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getLockTaskPackages(android.content.ComponentName)"
+    },
     "getMaximumFailedPasswordsForWipe(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -971,6 +984,20 @@
       "exceptions": [],
       "minSdk": 17,
       "name": "setKeyguardDisabledFeatures(android.content.ComponentName,int)"
+    },
+    "setLockTaskPackages(android.content.ComponentName,java.lang.String[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "packages"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setLockTaskPackages(android.content.ComponentName,java.lang.String[])"
     },
     "setMaximumFailedPasswordsForWipe(android.content.ComponentName,int)": {
       "isImplementation": true,

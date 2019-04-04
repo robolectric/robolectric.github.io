@@ -1,0 +1,142 @@
+{
+  "methods": {
+    "__constructor__(android.nfc.Tag)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.nfc.Tag)"
+    },
+    "getMaxTransceiveLength()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMaxTransceiveLength()"
+    },
+    "getTimeout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTimeout()"
+    },
+    "isExtendedLengthApduSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isExtendedLengthApduSupported()"
+    },
+    "newInstance()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.nfc.tech.IsoDep",
+      "exceptions": [],
+      "name": "newInstance()"
+    },
+    "setExtendedLengthApduSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setExtendedLengthApduSupported(boolean)"
+    },
+    "setMaxTransceiveLength(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaxTransceiveLength(int)"
+    },
+    "setNextTransceiveResponse(byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "response"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNextTransceiveResponse(byte[])"
+    },
+    "setTimeout(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "timeoutMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTimeout(int)"
+    },
+    "setTransceiveResponse(byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "response"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTransceiveResponse(byte[])"
+    },
+    "transceive(byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "data"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "transceive(byte[])"
+    }
+  },
+  "imports": [
+    "android.annotation.SuppressLint",
+    "android.nfc.Tag",
+    "android.nfc.tech.IsoDep",
+    "java.io.IOException",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowIsoDep",
+  "documentation": "Extends IsoDep to allow for testing.\n\n\u003cp\u003eControl the allowed packet size with {@link #setExtendedLengthApduSupported} and {@link\n#setMaxTransceiveLength}. Note that extended Apdu packets have a max transceive length of 0x10008\nbut most hardware implementations will have a lower limit. If extended length apdus are not\nsupported, the theoretical max transceive length is 0x105 but, again, may be lower in practice.\n\n\u003cp\u003eDictate the Apdu response returned in {@link transceive} via {@link #setTransceiveResponse} or\n{@link #setNextTransceiveResponse}. The former will be returned with every call to transceive\nwhile the later will be returned only once. If neither is set, transceive will throw an\nIOException.\n"
+}

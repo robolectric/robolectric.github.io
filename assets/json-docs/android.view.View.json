@@ -43,7 +43,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "checkedPerformClick()",
-      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.\n@deprecated - Please use Espresso for View interactions.\n"
+      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\nIf running with LooperMode PAUSED will also idle the main Looper.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.\n@deprecated - Please use Espresso for View interactions.\n"
     },
     "clearWasInvalidated()": {
       "isImplementation": false,
@@ -713,6 +713,7 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.shadows.ShadowBaseLooper.shadowMainLooper",
     "org.robolectric.util.ReflectionHelpers.getField",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.SuppressLint",
