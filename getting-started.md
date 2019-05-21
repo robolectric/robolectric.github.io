@@ -88,4 +88,4 @@ android_library(
 
 ## Sample Projects
 
-Look at the [Robolectric samples](https://github.com/robolectric/robolectric-samples) to see how fast and easy it can be to test drive the development of Android applications. In addition, check out the [Gradle](https://github.com/robolectric/deckard-gradle) or [Maven](https://github.com/robolectric/deckard-maven) starter projects.
+Look at the [Google's Android Testing samples](https://github.com/googlesamples/android-testing) to see how fast and easy it can be to test drive the development of Android applications.
