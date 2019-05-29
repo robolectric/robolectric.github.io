@@ -16,7 +16,6 @@ Base classes are also searched for annotations, so if you find yourself specifyi
 
 ```java
   @Config(sdk=JELLYBEAN_MR1,
-      manifest="some/build/path/AndroidManifest.xml",
       shadows={ShadowFoo.class, ShadowBar.class})
   public class SandwichTest {
   }
@@ -31,7 +30,6 @@ Below is an example:
 ```properties
 # src/test/resources/com/mycompany/app/robolectric.properties
 sdk=18
-manifest=some/build/path/AndroidManifest.xml
 shadows=my.package.ShadowFoo,my.package.ShadowBar
 ```
 
@@ -86,22 +84,6 @@ public class SandwichTest {
     }
 }
 ```
-
-### Configure Resource and Asset Paths
-
-Robolectric provides defaults for Gradle and Maven, but allows you to customize the path to your manifest, resource directory, and assets directory. This can be useful if you have a custom build system. You can specify these values by setting:
-
-```java
-@Config(resourceDir = "some/build/path/res")
-public class SandwichTest {
-
-    @Config(resourceDir = "other/build/path/ham-sandwich/res")
-    public void getSandwich_shouldReturnHamSandwich() {
-    }
-}
-```
-
-By default, Robolectric will assume that your resources and assets are located in directories named `res` and `assets`, respectively. These paths are assumed to be relative to the directory where the manifest is located. You can change these values by adding the `resourceDir` and `assetDir` options to the `@Config` annotaton.
 
 ### Configure Qualifiers
 
