@@ -1,0 +1,66 @@
+{
+  "methods": {
+    "isDexOptNeeded(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fileName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [
+        "java.lang.Throwable"
+      ],
+      "name": "isDexOptNeeded(java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setIsDexOptNeeded(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "isDexOptNeeded"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsDexOptNeeded(boolean)",
+      "documentation": "Sets the value to be returned when isDexOptNeeded() is called with any argument. "
+    },
+    "setIsDexOptNeededError(java.lang.Throwable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "error"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsDexOptNeededError(java.lang.Throwable)",
+      "documentation": "Sets the throwable that will be thrown when isDexOptNeeded() is called. isDexOptNeeded() won\u0027t\nthrow if the error is null.\n"
+    }
+  },
+  "imports": [
+    "dalvik.system.DexFile",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.shadows.ShadowDexFile",
+  "documentation": "Shadow implementation of dalvik.system.Dexfile. "
+}

@@ -101,6 +101,17 @@
       "name": "getRegisteredUsageSessionObservers()",
       "documentation": "Returns the {@link UsageSessionObserver}s currently registered in {@link UsageStatsManager}.\n"
     },
+    "getUsageSource()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "getUsageSource()"
+    },
     "queryEvents(long,long)": {
       "isImplementation": true,
       "modifiers": [
@@ -218,6 +229,19 @@
       "name": "setCurrentAppStandbyBucket(int)",
       "documentation": "Sets the current app\u0027s standby bucket "
     },
+    "setUsageSource(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "usageSource"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUsageSource(int)",
+      "documentation": "Sets what app usage observers will consider the source of usage for an activity. "
+    },
     "simulateTimeChange(long)": {
       "isImplementation": false,
       "modifiers": [
@@ -301,6 +325,7 @@
   },
   "imports": [
     "android.annotation.NonNull",
+    "android.annotation.TargetApi",
     "android.app.PendingIntent",
     "android.app.PendingIntent.CanceledException",
     "android.app.usage.UsageEvents",
@@ -308,6 +333,7 @@
     "android.app.usage.UsageStats",
     "android.app.usage.UsageStatsManager",
     "android.app.usage.UsageStatsManager.StandbyBuckets",
+    "android.app.usage.UsageStatsManager.UsageSource",
     "android.content.Intent",
     "android.content.res.Configuration",
     "android.os.Build",
@@ -320,6 +346,7 @@
     "com.google.common.collect.Multimaps",
     "com.google.common.collect.Range",
     "com.google.common.collect.SetMultimap",
+    "java.time.Duration",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.Collection",

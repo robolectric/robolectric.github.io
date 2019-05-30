@@ -166,7 +166,7 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.extract",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
-    "org.robolectric.shadows.ShadowBaseLooper.shadowMainLooper",
+    "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
     "android.content.Context",
     "android.content.res.Configuration",
     "android.hardware.display.DisplayManager",

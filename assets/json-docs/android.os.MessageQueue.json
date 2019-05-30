@@ -1,209 +1,77 @@
 {
   "methods": {
-    "dispatchMessage(android.os.Message)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "msg"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "dispatchMessage(android.os.Message)"
-    },
-    "enqueueMessage(android.os.Message,long)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "msg",
-        "when"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "enqueueMessage(android.os.Message,long)"
-    },
     "getHead()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "android.os.Message",
       "exceptions": [],
-      "name": "getHead()"
+      "name": "getHead()",
+      "documentation": "Retrieves the current Message at the top of the queue.\n\n\u003cp\u003eOnly supported in {@link LooperMode.Mode.LEGACY}.\n"
     },
     "getScheduler()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "org.robolectric.util.Scheduler",
       "exceptions": [],
-      "name": "getScheduler()"
-    },
-    "nativeDestroy(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "ptr"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 18,
-      "maxSdk": 20,
-      "name": "nativeDestroy(int)"
-    },
-    "nativeDestroy(long)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "ptr"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 21,
-      "name": "nativeDestroy(long)"
-    },
-    "nativeInit()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [],
-      "returnType": "java.lang.Number",
-      "exceptions": [],
-      "name": "nativeInit()"
-    },
-    "nativeIsIdling(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "ptr"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "minSdk": 19,
-      "maxSdk": 20,
-      "name": "nativeIsIdling(int)"
-    },
-    "nativeIsIdling(long)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "ptr"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "minSdk": 21,
-      "maxSdk": 22,
-      "name": "nativeIsIdling(long)"
-    },
-    "removeSyncBarrier(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "token"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "removeSyncBarrier(int)"
+      "name": "getScheduler()",
+      "documentation": "Return this queue\u0027s Scheduler.\n\n\u003cp\u003eOnly supported in {@link LooperMode.Mode.LEGACY}.\n"
     },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "name": "reset()"
+      "name": "reset()",
+      "documentation": "Reset the messageQueue state. Should not be called by tests - it intended for use by the\nRobolectric framework.\n"
     },
     "setHead(android.os.Message)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "msg"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setHead(android.os.Message)"
+      "name": "setHead(android.os.Message)",
+      "documentation": "Sets the current Message at the top of the queue.\n\n\u003cp\u003eOnly supported in {@link LooperMode.Mode.LEGACY}.\n"
     },
     "setScheduler(org.robolectric.util.Scheduler)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "scheduler"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setScheduler(org.robolectric.util.Scheduler)"
-    },
-    "shadowOf(android.os.Message)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "actual"
-      ],
-      "returnType": "org.robolectric.shadows.ShadowMessage",
-      "exceptions": [],
-      "name": "shadowOf(android.os.Message)"
+      "name": "setScheduler(org.robolectric.util.Scheduler)",
+      "documentation": "Set this queue\u0027s Scheduler.\n\n\u003cp\u003eOnly supported in {@link LooperMode.Mode.LEGACY}.\n"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "android.os.Build.VERSION_CODES.KITKAT",
-    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
-    "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
-    "org.robolectric.util.ReflectionHelpers.getField",
-    "org.robolectric.util.ReflectionHelpers.setField",
-    "org.robolectric.util.reflector.Reflector.reflector",
-    "android.os.Handler",
     "android.os.Message",
     "android.os.MessageQueue",
-    "java.util.ArrayList",
-    "org.robolectric.annotation.HiddenApi",
-    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.shadows.ShadowMessage._Message_",
-    "org.robolectric.util.Logger",
     "org.robolectric.util.Scheduler",
-    "org.robolectric.util.reflector.Accessor",
-    "org.robolectric.util.reflector.ForType",
-    "org.robolectric.shadows.ShadowMessageQueue._MessageQueue_"
+    "org.robolectric.shadows.ShadowMessageQueue.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowMessageQueue",
-  "documentation": "Robolectric puts {@link android.os.Message}s into the scheduler queue instead of sending them to\nbe handled on a separate thread. {@link android.os.Message}s that are scheduled to be dispatched\ncan be triggered by calling {@link ShadowLooper#idleMainLooper}.\n\n@see ShadowLooper\n"
+  "documentation": "The shadow API for {@link MessageQueue}.\n\n\u003cp\u003eDifferent shadow implementations will be used depending on the current {@link LooperMode}. See\n{@link ShadowLegacyMessageQueue} and {@link ShadowPausedMessageQueue} for details.\n"
 }

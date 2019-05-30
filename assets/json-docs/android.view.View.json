@@ -311,6 +311,19 @@
       "exceptions": [],
       "name": "getScrollY()"
     },
+    "getWindowDisplayFrame(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "outRect"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getWindowDisplayFrame(android.graphics.Rect)"
+    },
     "getWindowId()": {
       "isImplementation": true,
       "modifiers": [
@@ -321,6 +334,18 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "getWindowId()"
+    },
+    "getWindowVisibleDisplayFrame(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "outRect"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getWindowVisibleDisplayFrame(android.graphics.Rect)"
     },
     "innerText()": {
       "isImplementation": false,
@@ -711,9 +736,10 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.N",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
-    "org.robolectric.shadows.ShadowBaseLooper.shadowMainLooper",
+    "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
     "org.robolectric.util.ReflectionHelpers.getField",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.SuppressLint",
@@ -742,6 +768,7 @@
     "org.robolectric.android.AccessibilityUtil",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",

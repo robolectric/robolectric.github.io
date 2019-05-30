@@ -409,7 +409,9 @@
     }
   },
   "imports": [
+    "org.robolectric.annotation.LooperMode.Mode.LEGACY",
     "org.robolectric.shadow.api.Shadow.newInstanceOf",
+    "org.robolectric.shadows.ShadowLooper.assertLooperMode",
     "android.app.ActivityThread",
     "android.app.Application",
     "android.appwidget.AppWidgetManager",
@@ -426,7 +428,6 @@
     "android.widget.ListPopupWindow",
     "android.widget.PopupWindow",
     "android.widget.Toast",
-    "com.google.common.base.Preconditions",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",

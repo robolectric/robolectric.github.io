@@ -84,6 +84,36 @@
       "exceptions": [],
       "name": "load(int)"
     },
+    "nativeGetNumber(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "keyCode"
+      ],
+      "returnType": "char",
+      "exceptions": [],
+      "maxSdk": 19,
+      "name": "nativeGetNumber(int,int)"
+    },
+    "nativeGetNumber(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "keyCode"
+      ],
+      "returnType": "char",
+      "exceptions": [],
+      "minSdk": 20,
+      "name": "nativeGetNumber(long,int)"
+    },
     "toCharKeyCode(char)": {
       "isImplementation": false,
       "modifiers": [
@@ -98,6 +128,8 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.view.KeyCharacterMap",
     "android.view.KeyEvent",
     "java.util.HashMap",

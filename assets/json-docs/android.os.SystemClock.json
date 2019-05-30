@@ -1,49 +1,18 @@
 {
   "methods": {
-    "currentNetworkTimeMillis()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "long",
-      "exceptions": [],
-      "minSdk": 28,
-      "name": "currentNetworkTimeMillis()"
-    },
-    "currentThreadTimeMicro()": {
-      "isImplementation": true,
+    "advanceBy(java.time.Duration)": {
+      "isImplementation": false,
       "modifiers": [
         "public",
         "static"
       ],
-      "params": [],
-      "returnType": "long",
-      "exceptions": [],
-      "name": "currentThreadTimeMicro()"
-    },
-    "currentThreadTimeMillis()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
+      "params": [
+        "duration"
       ],
-      "params": [],
-      "returnType": "long",
+      "returnType": "void",
       "exceptions": [],
-      "name": "currentThreadTimeMillis()"
-    },
-    "currentTimeMicro()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [],
-      "returnType": "long",
-      "exceptions": [],
-      "name": "currentTimeMicro()"
+      "name": "advanceBy(java.time.Duration)",
+      "documentation": "A convenience method for advancing the clock via {@link SystemClock#setCurrentTimeMillis(long)}\n\n@param duration The interval by which to advance.\n"
     },
     "currentTimeMillis()": {
       "isImplementation": false,
@@ -57,29 +26,6 @@
       "name": "currentTimeMillis()",
       "documentation": "Implements {@link System#currentTimeMillis} through ShadowWrangler.\n\n@return Current time in millis.\n"
     },
-    "elapsedRealtime()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "long",
-      "exceptions": [],
-      "name": "elapsedRealtime()"
-    },
-    "elapsedRealtimeNanos()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "long",
-      "exceptions": [],
-      "minSdk": 17,
-      "name": "elapsedRealtimeNanos()"
-    },
     "nanoTime()": {
       "isImplementation": false,
       "modifiers": [
@@ -90,17 +36,7 @@
       "returnType": "long",
       "exceptions": [],
       "name": "nanoTime()",
-      "documentation": "Implements {@link System#nanoTime} through ShadowWrangler.\n\n@return Current time with nanos.\n"
-    },
-    "now()": {
-      "isImplementation": false,
-      "modifiers": [
-        "static"
-      ],
-      "params": [],
-      "returnType": "long",
-      "exceptions": [],
-      "name": "now()"
+      "documentation": "Implements {@link System#nanoTime}.\n\n@return Current time with nanos.\n@deprecated Don\u0027t call this method directly; instead, use {@link System#nanoTime()}.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -113,19 +49,6 @@
       "exceptions": [],
       "name": "reset()"
     },
-    "setCurrentTimeMillis(long)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "millis"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "setCurrentTimeMillis(long)"
-    },
     "setNanoTime(long)": {
       "isImplementation": false,
       "modifiers": [
@@ -137,7 +60,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setNanoTime(long)"
+      "name": "setNanoTime(long)",
+      "documentation": "Sets the value for {@link System#nanoTime()}.\n\nMay only be used for {@link LooperMode.Mode.LEGACY}. For {@link LooperMode.Mode.PAUSED},\n`nanoTime` is calculated based on {@link SystemClock#uptimeMillis()} and can\u0027t be set\nexplicitly.\n"
     },
     "setNetworkTimeAvailable(boolean)": {
       "isImplementation": false,
@@ -152,42 +76,17 @@
       "exceptions": [],
       "name": "setNetworkTimeAvailable(boolean)",
       "documentation": "Sets whether network time is available. "
-    },
-    "sleep(long)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "millis"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "sleep(long)"
-    },
-    "uptimeMillis()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "long",
-      "exceptions": [],
-      "name": "uptimeMillis()"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.P",
+    "org.robolectric.shadows.ShadowLooper.assertLooperMode",
     "android.os.SystemClock",
-    "java.time.DateTimeException",
-    "org.robolectric.annotation.HiddenApi",
-    "org.robolectric.annotation.Implementation",
+    "java.time.Duration",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.Resetter"
+    "org.robolectric.annotation.LooperMode",
+    "org.robolectric.annotation.LooperMode.Mode",
+    "org.robolectric.shadows.ShadowSystemClock.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowSystemClock",
-  "documentation": "Robolectric\u0027s concept of current time is base on the current time of the UI Scheduler for\nconsistency with previous implementations. This is not ideal, since both schedulers (background\nand foreground), can see different values for the current time.\n"
+  "documentation": "The shadow API for {@link SystemClock}.\n\nThe behavior of SystemClock in Robolectric will differ based on the current {@link\nLooperMode}. See {@link ShadowLegacySystemClock} and {@link ShadowPausedSystemClock} for more\ndetails.\n"
 }

@@ -396,6 +396,22 @@
       "exceptions": [],
       "name": "setSystemService(java.lang.String,java.lang.Object)"
     },
+    "startActivityAsUser(android.content.Intent,android.os.Bundle,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "options",
+        "user"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "startActivityAsUser(android.content.Intent,android.os.Bundle,android.os.UserHandle)",
+      "documentation": "Behaves as {@link #startActivity}. The user parameter is ignored.\n"
+    },
     "startForegroundService(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [

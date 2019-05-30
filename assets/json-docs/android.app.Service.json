@@ -62,6 +62,17 @@
       "exceptions": [],
       "name": "isForegroundStopped()"
     },
+    "isLastForegroundNotificationAttached()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isLastForegroundNotificationAttached()",
+      "documentation": "Returns whether the last foreground notification is still \"attached\" to the service,\nmeaning it will be removed when the service is destroyed.\n"
+    },
     "isStoppedBySelf()": {
       "isImplementation": false,
       "modifiers": [
@@ -108,7 +119,7 @@
       "name": "startForeground(int,android.app.Notification)"
     },
     "stopForeground(boolean)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "protected"
       ],
@@ -118,6 +129,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "stopForeground(boolean)"
+    },
+    "stopForeground(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "stopForeground(int)"
     },
     "stopSelf()": {
       "isImplementation": true,
@@ -155,6 +179,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.N",
     "android.app.Notification",
     "android.app.NotificationManager",
     "android.app.Service",

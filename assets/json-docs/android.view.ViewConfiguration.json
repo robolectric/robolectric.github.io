@@ -314,7 +314,8 @@
     "setHasPermanentMenuKey(boolean)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "static"
       ],
       "params": [
         "value"

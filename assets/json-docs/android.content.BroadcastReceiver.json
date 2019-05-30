@@ -10,6 +10,26 @@
       "exceptions": [],
       "name": "abortBroadcast()"
     },
+    "getOriginalPendingResult()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.BroadcastReceiver.PendingResult",
+      "exceptions": [],
+      "name": "getOriginalPendingResult()"
+    },
+    "goAsync()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.content.BroadcastReceiver.PendingResult",
+      "exceptions": [],
+      "name": "goAsync()"
+    },
     "onReceive(android.content.Context,android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
@@ -36,16 +56,28 @@
       "returnType": "void",
       "exceptions": [],
       "name": "onReceive(android.content.Context,android.content.Intent,java.util.concurrent.atomic.AtomicBoolean)"
+    },
+    "wentAsync()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wentAsync()"
     }
   },
   "imports": [
     "android.content.BroadcastReceiver",
+    "android.content.BroadcastReceiver.PendingResult",
     "android.content.Context",
     "android.content.Intent",
     "java.util.concurrent.atomic.AtomicBoolean",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowBroadcastReceiver"
 }

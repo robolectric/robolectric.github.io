@@ -12,6 +12,16 @@
       "exceptions": [],
       "name": "clearMask(int)"
     },
+    "getMaximumRange()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getMaximumRange()"
+    },
     "newInstance(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -38,6 +48,19 @@
       "exceptions": [],
       "name": "setMask(int)"
     },
+    "setMaximumRange(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "range"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaximumRange(float)",
+      "documentation": "Sets the return value for {@link Sensor#getMaximumRange}. "
+    },
     "setWakeUpFlag(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -57,6 +80,7 @@
     "android.hardware.Sensor",
     "android.os.Build.VERSION_CODES",
     "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",

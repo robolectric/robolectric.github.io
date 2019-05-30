@@ -360,6 +360,17 @@
       "name": "getOrganizationName(android.content.ComponentName)",
       "documentation": "Returns organization name.\n\n\u003cp\u003eThe API can only be called by profile owner since Android N.\n\n\u003cp\u003eAndroid framework has a hidden API for getting the organization name for device owner since\nAndroid O. This method, however, is extended to return the organization name for device owners\ntoo to make testing of {@link #setOrganizationName(ComponentName, CharSequence)} easier for\ndevice owner cases.\n"
     },
+    "getPasswordComplexity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "getPasswordComplexity()"
+    },
     "getPasswordExpiration(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -713,6 +724,19 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "isDeviceOwnerApp(java.lang.String)"
+    },
+    "isLockTaskPermitted(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "pkg"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "isLockTaskPermitted(java.lang.String)"
     },
     "isPackageSuspended(android.content.ComponentName,java.lang.String)": {
       "isImplementation": true,
@@ -1069,6 +1093,19 @@
       "minSdk": 24,
       "name": "setPackagesSuspended(android.content.ComponentName,java.lang.String[],boolean)"
     },
+    "setPasswordComplexity(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "passwordComplexity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPasswordComplexity(int)",
+      "documentation": "Sets the password complexity. "
+    },
     "setPasswordExpiration(android.content.ComponentName,long)": {
       "isImplementation": false,
       "modifiers": [
@@ -1400,6 +1437,7 @@
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.annotation.NonNull",
@@ -1409,6 +1447,7 @@
     "android.app.KeyguardManager",
     "android.app.admin.DeviceAdminReceiver",
     "android.app.admin.DevicePolicyManager",
+    "android.app.admin.DevicePolicyManager.PasswordComplexity",
     "android.app.admin.IDevicePolicyManager",
     "android.content.ComponentName",
     "android.content.Context",

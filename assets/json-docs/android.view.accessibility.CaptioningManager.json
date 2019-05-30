@@ -25,6 +25,18 @@
       "name": "getFontScale()",
       "documentation": "Returns 1.0 as default or the most recent value passed to {@link #setFontScale()} "
     },
+    "getLocale()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.Locale",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getLocale()",
+      "documentation": "Returns null or the most recent value passed to {@link #setLocale(Locale)} "
+    },
     "isEnabled()": {
       "isImplementation": true,
       "modifiers": [
@@ -75,6 +87,19 @@
       "exceptions": [],
       "name": "setFontScale(float)",
       "documentation": "Sets the value to be returned by {@link CaptioningManager#getFontScale()} "
+    },
+    "setLocale(java.util.Locale)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "locale"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLocale(java.util.Locale)",
+      "documentation": "Sets the value to be returned by {@link CaptioningManager#getLocale()} "
     }
   },
   "imports": [
@@ -82,6 +107,8 @@
     "android.util.ArraySet",
     "android.view.accessibility.CaptioningManager",
     "android.view.accessibility.CaptioningManager.CaptioningChangeListener",
+    "java.util.Locale",
+    "javax.annotation.Nullable",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

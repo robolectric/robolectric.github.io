@@ -67,7 +67,7 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "canSwitchUsers()",
-      "documentation": "Returns {@code true} by default, or the value specified via {@link #setCanSwitchUser(boolean)}.\n"
+      "documentation": "Returns {@code false} by default, or the value specified via {@link\n#setCanSwitchUser(boolean)}.\n"
     },
     "checkPermissions()": {
       "isImplementation": false,
@@ -360,6 +360,19 @@
       "minSdk": 24,
       "name": "isUserUnlocked()"
     },
+    "removeUser(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "user"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "removeUser(android.os.UserHandle)"
+    },
     "removeUser(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -409,7 +422,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCanSwitchUser(boolean)",
-      "documentation": "Sets whether switching users is allowed or not; controls the return value of {@link\nUserManager#canSwitchUser()}\n"
+      "documentation": "Sets whether switching users is allowed or not; controls the return value of {@link\nUserManager#canSwitchUsers()}\n"
     },
     "setIsDemoUser(boolean)": {
       "isImplementation": false,
@@ -616,6 +629,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.Manifest.permission",
     "android.annotation.UserIdInt",

@@ -461,7 +461,7 @@
       "name": "peekNextStartedService()",
       "documentation": "Returns the most recent {@code Intent} started by {@link #startService(android.content.Intent)}\nwithout consuming it.\n\n@return the most recently started {@code Intent}\n"
     },
-    "postIntent(android.content.Intent,org.robolectric.shadows.ShadowApplication.Wrapper,java.util.concurrent.atomic.AtomicBoolean,android.content.Context)": {
+    "postIntent(android.content.Intent,org.robolectric.shadows.ShadowApplication.Wrapper,java.util.concurrent.atomic.AtomicBoolean,android.content.Context,int)": {
       "isImplementation": false,
       "modifiers": [
         "private"
@@ -470,11 +470,12 @@
         "intent",
         "wrapper",
         "abort",
-        "context"
+        "context",
+        "resultCode"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "postIntent(android.content.Intent,org.robolectric.shadows.ShadowApplication.Wrapper,java.util.concurrent.atomic.AtomicBoolean,android.content.Context)"
+      "name": "postIntent(android.content.Intent,org.robolectric.shadows.ShadowApplication.Wrapper,java.util.concurrent.atomic.AtomicBoolean,android.content.Context,int)"
     },
     "postIntent(org.robolectric.shadows.ShadowApplication.Wrapper,android.content.Intent,com.google.common.util.concurrent.ListenableFuture\u003corg.robolectric.shadows.ShadowInstrumentation.BroadcastResultHolder\u003e,java.util.concurrent.atomic.AtomicBoolean,android.content.Context)": {
       "isImplementation": false,
@@ -510,7 +511,7 @@
       "exceptions": [],
       "name": "postOrderedToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent,int,java.lang.String,android.os.Bundle,android.content.Context)"
     },
-    "postToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent,android.content.Context)": {
+    "postToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent,android.content.Context,int)": {
       "isImplementation": false,
       "modifiers": [
         "private"
@@ -518,11 +519,12 @@
       "params": [
         "wrappers",
         "intent",
-        "context"
+        "context",
+        "resultCode"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "postToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent,android.content.Context)"
+      "name": "postToWrappers(java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e,android.content.Intent,android.content.Context,int)"
     },
     "processStickyIntents(android.content.IntentFilter,android.content.BroadcastReceiver,android.content.Context)": {
       "isImplementation": false,
@@ -601,6 +603,19 @@
       "exceptions": [],
       "name": "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context)",
       "documentation": "Broadcasts the {@code Intent} by iterating through the registered receivers, invoking their\nfilters including permissions, and calling {@code onReceive(Application, Intent)} as\nappropriate. Does not enqueue the {@code Intent} for later inspection.\n\n@param context\n@param intent the {@code Intent} to broadcast todo: enqueue the Intent for later inspection\n"
+    },
+    "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context,int)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "intent",
+        "receiverPermission",
+        "context",
+        "resultCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context,int)"
     },
     "sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle,android.content.Context)": {
       "isImplementation": false,
