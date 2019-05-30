@@ -444,6 +444,20 @@
       "minSdk": 23,
       "name": "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler,java.lang.String,android.os.Bundle)"
     },
+    "send(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "code"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.app.PendingIntent.CanceledException"
+      ],
+      "name": "send(int)"
+    },
     "send(int,android.app.PendingIntent.OnFinished,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [

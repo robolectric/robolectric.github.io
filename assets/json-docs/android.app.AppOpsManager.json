@@ -159,6 +159,21 @@
       "minSdk": 19,
       "name": "noteOp(int,int,java.lang.String)"
     },
+    "noteOpNoThrow(int,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "noteOpNoThrow(int,int,java.lang.String)"
+    },
     "noteProxyOpNoThrow(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [

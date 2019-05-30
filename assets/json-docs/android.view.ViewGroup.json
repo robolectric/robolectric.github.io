@@ -98,13 +98,14 @@
   },
   "imports": [
     "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.shadows.ShadowBaseLooper.shadowMainLooper",
+    "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
     "android.view.MotionEvent",
     "android.view.View",
     "android.view.ViewGroup",
     "java.io.PrintStream",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"

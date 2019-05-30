@@ -15,6 +15,21 @@
       ],
       "name": "fstat(java.io.FileDescriptor)"
     },
+    "lstat(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [
+        "android.system.ErrnoException"
+      ],
+      "name": "lstat(java.lang.String)"
+    },
     "mkdir(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -30,6 +45,20 @@
         "android.system.ErrnoException"
       ],
       "name": "mkdir(java.lang.String,int)"
+    },
+    "setMode(int,java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "mode",
+        "structStat"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMode(int,java.lang.Object)"
     },
     "stat(java.lang.String)": {
       "isImplementation": true,
@@ -53,6 +82,7 @@
     "android.system.StructStat",
     "java.io.File",
     "java.io.FileDescriptor",
+    "java.lang.reflect.Field",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

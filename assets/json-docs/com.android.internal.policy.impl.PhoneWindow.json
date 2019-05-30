@@ -1,5 +1,16 @@
 {
   "methods": {
+    "getOptionsPanelGravity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 22,
+      "name": "getOptionsPanelGravity()"
+    },
     "setBackgroundDrawable(android.graphics.drawable.Drawable)": {
       "isImplementation": true,
       "modifiers": [
@@ -35,5 +46,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowPhoneWindowFor22"
+  "name": "org.robolectric.shadows.ShadowPhoneWindowFor22",
+  "documentation": "Shadow for the API 16-22 PhoneWindow.li\n"
 }

@@ -187,6 +187,17 @@
       "exceptions": [],
       "name": "getDialogById(int)"
     },
+    "getLastIntentSenderRequest()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowActivity.IntentSenderRequest",
+      "exceptions": [],
+      "name": "getLastIntentSenderRequest()",
+      "documentation": "Gets the last startIntentSenderForResult request made to this activity.\n\n@return The IntentSender request details.\n"
+    },
     "getLastNonConfigurationInstance()": {
       "isImplementation": true,
       "modifiers": [
@@ -679,6 +690,19 @@
       "exceptions": [],
       "name": "setResult(int,android.content.Intent)"
     },
+    "setThrowIntentSenderException(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "throwIntentSenderException"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setThrowIntentSenderException(boolean)",
+      "documentation": "Sets if startIntentSenderForRequestCode will throw an IntentSender.SendIntentException. "
+    },
     "setVolumeControlStream(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -742,6 +766,26 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "showDialog(int,android.os.Bundle)"
+    },
+    "startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intentSender",
+        "requestCode",
+        "fillInIntent",
+        "flagsMask",
+        "flagsValues",
+        "extraFlags",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.content.IntentSender.SendIntentException"
+      ],
+      "name": "startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)"
     },
     "startLockTask()": {
       "isImplementation": true,
@@ -808,6 +852,7 @@
     "android.content.ComponentName",
     "android.content.Context",
     "android.content.Intent",
+    "android.content.IntentSender",
     "android.content.pm.ActivityInfo",
     "android.content.pm.PackageManager",
     "android.content.pm.PackageManager.NameNotFoundException",
@@ -833,6 +878,7 @@
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.fakes.RoboMenuItem",
     "org.robolectric.shadow.api.Shadow",
@@ -841,7 +887,8 @@
     "org.robolectric.util.reflector.WithType",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowActivity.ActivityInvoker",
-    "org.robolectric.shadows.ShadowActivity.PermissionsRequest"
+    "org.robolectric.shadows.ShadowActivity.PermissionsRequest",
+    "org.robolectric.shadows.ShadowActivity.IntentSenderRequest"
   ],
   "name": "org.robolectric.shadows.ShadowActivity"
 }

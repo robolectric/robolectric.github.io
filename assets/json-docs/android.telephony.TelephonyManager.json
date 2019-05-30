@@ -554,6 +554,18 @@
       "minSdk": 10000,
       "name": "isCurrentPotentialEmergencyNumber(java.lang.String)"
     },
+    "isDataEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "isDataEnabled()",
+      "documentation": "Implementation for {@link TelephonyManager#isDataEnabled}.\n@return False by default, unless set with {@link TelephonyManager#setDataEnabled}.\n"
+    },
     "isNetworkRoaming()": {
       "isImplementation": true,
       "modifiers": [
@@ -716,6 +728,20 @@
       "exceptions": [],
       "name": "setCurrentPhoneType(int,int)",
       "documentation": "Sets the phone type for the given {@code subId}. "
+    },
+    "setDataEnabled(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setDataEnabled(boolean)",
+      "documentation": "Implementation for {@link TelephonyManager#setDataEnabled}. "
     },
     "setDeviceId(int,java.lang.String)": {
       "isImplementation": false,
