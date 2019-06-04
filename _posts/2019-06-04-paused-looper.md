@@ -72,7 +72,7 @@ To switch to PAUSED:
 *   Convert any background `org.robolectric.util.Scheduler` calls for controlling `Loopers` to 
 `shadowOf(looper)`
 * Recommended, but not mandatory: Convert any foreground `org.robolectric.util.Scheduler` calls 
-to `shadowOf(getMainLooper())` 
+to `shadowOf(getMainLooper())`. The Scheduler APIs will be @deprecated and removed over time.
 *    Convert any `org.robolectric.android.util.concurrent.RoboExecutorService` usages to 
 `org.robolectric.android.util.concurrent.PausedExecutorService` or
 `org.robolectric.android.util.concurrent.InlineExecutorService`
