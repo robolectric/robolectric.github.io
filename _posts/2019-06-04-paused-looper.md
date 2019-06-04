@@ -3,7 +3,7 @@ title:  "Improving Robolectric's Looper simulation"
 author: Brett Chabot and Jonathan Gerrish
 ---
 
-**TL;DR: **We'd love your feedback on improvements we've made to make Robolectric's Looper behavior 
+**TL;DR: We'd love your feedback on improvements we've made to make Robolectric's Looper behavior 
 more realistic.** Try it out today by annotating your tests with _@LooperMode(PAUSED)_ and let us 
 know your experience!
 
