@@ -163,7 +163,7 @@ grained control of the Fragments lifecycle, which required developers to have a 
 transitions and valid final states, making it easy to shoot oneself in the foot for the same reasons as with Activities above.
 
 AndroidX Test provides [`FragmentScenario`](https://developer.android.com/reference/androidx/fragment/app/testing/FragmentScenario),
-which offers APIS to safely create your fragment under test and drive it through
+which offers APIs to safely create your fragment under test and drive it through
 valid transitions.
 
 ```kotlin
