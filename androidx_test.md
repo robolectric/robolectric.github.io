@@ -9,7 +9,7 @@ redirect_from: "/activity-lifecycle/"
 
 Robolectric is intended to be fully compatible with Android's official testing libraries since version 4.0.
 As such we encourage you to try these new APIs and provide feedback. At some point the Robolectric equivalents will
-be deprecated and removed. Using the AndroidX Test APIs reduces the cognative load for you as a developer, with just one
+be deprecated and removed. Using the AndroidX Test APIs reduces the cognitive load for you as a developer, with just one
 set of APIs to learn for the same Android concept, no matter if you are writing an Robolectric test or an instrumentation
 test. Furthermore it will make your tests more portable and compatible with our future plans.
 
