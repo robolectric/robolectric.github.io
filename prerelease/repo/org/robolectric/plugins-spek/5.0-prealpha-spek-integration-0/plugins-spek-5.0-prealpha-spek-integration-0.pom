@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.robolectric</groupId>
+  <artifactId>plugins-spek</artifactId>
+  <version>5.0-prealpha-spek-integration-0</version>
+  <name>spek</name>
+  <description>An alternative Android testing framework.</description>
+  <url>http://robolectric.org</url>
+  <licenses>
+    <license>
+      <name>The MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Christian Williams</name>
+      <email>christianw@google.com</email>
+      <organization>Google Inc.</organization>
+      <organizationUrl>http://google.com</organizationUrl>
+    </developer>
+    <developer>
+      <name>Jonathan Gerrish</name>
+      <email>jongerrish@google.com</email>
+      <organization>Google Inc.</organization>
+      <organizationUrl>http://google.com</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/robolectric/robolectric.git</connection>
+    <developerConnection>scm:git:https://github.com/robolectric/robolectric.git</developerConnection>
+    <url>git@github.com:robolectric/robolectric.git</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>org.robolectric</groupId>
+      <artifactId>robolectric</artifactId>
+      <version>5.0-prealpha-spek-integration-0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib-jdk8</artifactId>
+      <version>1.3.70</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-reflect</artifactId>
+      <version>1.3.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.spekframework.spek2</groupId>
+      <artifactId>spek-runtime-jvm</artifactId>
+      <version>2.0.9</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.robolectric</groupId>
+      <artifactId>android-all</artifactId>
+      <version>10-robolectric-5803371</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.robolectric</groupId>
+      <artifactId>testapp</artifactId>
+      <version>5.0-prealpha-spek-integration-0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.spekframework.spek2</groupId>
+      <artifactId>spek-dsl-jvm</artifactId>
+      <version>2.0.9</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.truth</groupId>
+      <artifactId>truth</artifactId>
+      <version>1.0.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.test</groupId>
+      <artifactId>core</artifactId>
+      <version>1.3.0-alpha04</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
