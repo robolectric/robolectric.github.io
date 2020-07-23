@@ -1095,7 +1095,7 @@
       "params": [],
       "returnType": "java.lang.String[]",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "nativeCreateIdmapsForStaticOverlaysTargetingAndroid()"
     },
     "nativeThemeCopy(long,long)": {
@@ -1128,7 +1128,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "nativeThemeCopy(long,long,long,long)"
     },
     "newTheme()": {

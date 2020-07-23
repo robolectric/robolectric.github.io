@@ -52,7 +52,7 @@
       "returnType": "java.util.Deque\u003cjava.lang.String\u003e",
       "exceptions": [],
       "name": "getCurrentSections()",
-      "documentation": "Returns a stack of the currently active trace sections. "
+      "documentation": "Returns a stack of the currently active trace sections for the current thread. "
     },
     "getPreviousSections()": {
       "isImplementation": false,
@@ -64,7 +64,20 @@
       "returnType": "java.util.Queue\u003cjava.lang.String\u003e",
       "exceptions": [],
       "name": "getPreviousSections()",
-      "documentation": "Returns a queue of all the previously active trace sections. "
+      "documentation": "Returns a queue of all the previously active trace sections for the current thread. "
+    },
+    "isEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isEnabled()",
+      "documentation": "Returns whether systrace is enabled. "
     },
     "isTagEnabled(long)": {
       "isImplementation": true,
@@ -105,17 +118,32 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "setAppTracingAllowed(boolean)"
+    },
+    "setEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEnabled(boolean)",
+      "documentation": "Sets the systrace to enabled or disabled. "
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.os.Trace",
     "android.util.Log",
     "java.util.ArrayDeque",
     "java.util.Deque",
     "java.util.Queue",
-    "javax.annotation.concurrent.GuardedBy",
+    "java.util.function.Supplier",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",

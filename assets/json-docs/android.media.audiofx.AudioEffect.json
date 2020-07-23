@@ -11,7 +11,202 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addEffect(android.media.audiofx.AudioEffect.Descriptor)"
+      "name": "addEffect(android.media.audiofx.AudioEffect.Descriptor)",
+      "documentation": "Adds an effect represented by an {@link AudioEffect.Descriptor}, only to be queried from {@link\n#queryEffects()}.\n"
+    },
+    "copyByteBufferToArrayAndReturnSize(java.nio.ByteBuffer,byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "byteBuffer",
+        "array"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "copyByteBufferToArrayAndReturnSize(java.nio.ByteBuffer,byte[])"
+    },
+    "createReadOnlyByteBuffer(byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "array"
+      ],
+      "returnType": "java.nio.ByteBuffer",
+      "exceptions": [],
+      "name": "createReadOnlyByteBuffer(byte[])"
+    },
+    "createReadOnlyByteBuffer(byte[],int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "array",
+        "length"
+      ],
+      "returnType": "java.nio.ByteBuffer",
+      "exceptions": [],
+      "name": "createReadOnlyByteBuffer(byte[],int)"
+    },
+    "getAudioEffects()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003candroid.media.audiofx.AudioEffect\u003e",
+      "exceptions": [],
+      "name": "getAudioEffects()",
+      "documentation": "Returns all effects created with an {@code AudioEffect} constructor. "
+    },
+    "getAudioSession()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAudioSession()",
+      "documentation": "Returns the audio session set in the {@link AudioEffect} ctor. "
+    },
+    "getDefaultParameter(java.nio.ByteBuffer)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "parameter"
+      ],
+      "returnType": "java.util.Optional\u003cjava.nio.ByteBuffer\u003e",
+      "exceptions": [],
+      "name": "getDefaultParameter(java.nio.ByteBuffer)",
+      "documentation": "Allows sub-classes to provide default parameters.\n\n\u003cp\u003eOverride this method to provide default parameters.\n"
+    },
+    "getPriority()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPriority()",
+      "documentation": "Returns the priority set in the {@link AudioEffect} ctor. "
+    },
+    "native_getEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "native_getEnabled()",
+      "documentation": "Returns whether the {@link AudioEffect} is enabled (as per {@link #native_setEnabled}). "
+    },
+    "native_getParameter(int,byte[],int,byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "psize",
+        "param",
+        "vsize",
+        "value"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "native_getParameter(int,byte[],int,byte[])",
+      "documentation": "Gets the value of the parameter with key {@code param}, by putting its value in {@code value}.\n\n\u003cp\u003eNote: Sub-classes of {@link ShadowAudioEffect} can declare default values for any\nparameters. Note: If the given parameter has not been set, and there is no default value for\nthat parameter, then we \"return\" (set {@code value} to) a single integer 0.\n\n@return the size of the returned value, in bytes.\n"
+    },
+    "native_release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "native_release()",
+      "documentation": "Removes this audio effect from the set of active audio effects. "
+    },
+    "native_setEnabled(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "native_setEnabled(boolean)",
+      "documentation": "Marks the {@link AudioEffect} as enabled, and always returns {@code SUCCESS}. "
+    },
+    "native_setParameter(int,byte[],int,byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "psize",
+        "param",
+        "vsize",
+        "value"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "native_setParameter(int,byte[],int,byte[])",
+      "documentation": "Sets the parameter with the given key {@code param} to the given value {@code value}.\n\n@return always {@code SUCCESS}\n"
+    },
+    "native_setup(java.lang.Object,java.lang.String,java.lang.String,int,int,int[],java.lang.Object[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioEffectThis",
+        "type",
+        "uuid",
+        "priority",
+        "audioSession",
+        "id",
+        "desc"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 16,
+      "maxSdk": 22,
+      "name": "native_setup(java.lang.Object,java.lang.String,java.lang.String,int,int,int[],java.lang.Object[])"
+    },
+    "native_setup(java.lang.Object,java.lang.String,java.lang.String,int,int,int[],java.lang.Object[],java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioEffectThis",
+        "type",
+        "uuid",
+        "priority",
+        "audioSession",
+        "id",
+        "desc",
+        "opPackageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "maxSdk": 29,
+      "name": "native_setup(java.lang.Object,java.lang.String,java.lang.String,int,int,int[],java.lang.Object[],java.lang.String)"
     },
     "queryEffects()": {
       "isImplementation": true,
@@ -22,7 +217,8 @@
       "params": [],
       "returnType": "android.media.audiofx.AudioEffect.Descriptor[]",
       "exceptions": [],
-      "name": "queryEffects()"
+      "name": "queryEffects()",
+      "documentation": "Returns the set of audio effects added through {@link #addEffect}.\n\n\u003cp\u003eNote: in the original {@link AudioEffect} implementation this method returns all the\nexisting unique AudioEffects created through an {@link AudioEffect} ctor. In this\nimplementation only the effects added through {@link #addEffect} are returned here.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -37,12 +233,23 @@
     }
   },
   "imports": [
+    "android.media.audiofx.AudioEffect.SUCCESS",
+    "com.google.common.base.Preconditions.checkArgument",
     "android.media.audiofx.AudioEffect",
+    "android.os.Build.VERSION_CODES",
+    "com.google.common.collect.ImmutableList",
+    "java.nio.ByteBuffer",
     "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.HashMap",
     "java.util.List",
+    "java.util.Map",
+    "java.util.Optional",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter"
   ],
-  "name": "org.robolectric.shadows.ShadowAudioEffect"
+  "name": "org.robolectric.shadows.ShadowAudioEffect",
+  "documentation": "Implements {@link AudioEffect} by shadowing its native methods. "
 }

@@ -1,5 +1,16 @@
 {
   "methods": {
+    "clearBroadcastIntents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearBroadcastIntents()",
+      "documentation": "Clears the broadcast intents sent during the tests (for all users). "
+    },
     "clearNextStartedActivities()": {
       "isImplementation": false,
       "modifiers": [
@@ -58,7 +69,21 @@
       "params": [],
       "returnType": "java.util.List\u003candroid.content.Intent\u003e",
       "exceptions": [],
-      "name": "getBroadcastIntents()"
+      "name": "getBroadcastIntents()",
+      "documentation": "Returns the broadcast intents sent during the tests (for all users). "
+    },
+    "getBroadcastIntentsForUser(android.os.UserHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "java.util.List\u003candroid.content.Intent\u003e",
+      "exceptions": [],
+      "name": "getBroadcastIntentsForUser(android.os.UserHandle)",
+      "documentation": "Returns the broadcast intents sent to the given user. "
     },
     "getNextStartedActivity()": {
       "isImplementation": false,
@@ -192,6 +217,7 @@
     "android.content.Context",
     "android.content.ContextWrapper",
     "android.content.Intent",
+    "android.os.UserHandle",
     "java.util.List",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implements",

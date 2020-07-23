@@ -681,6 +681,17 @@
       "exceptions": [],
       "name": "isSelected()"
     },
+    "isTextEntryKey()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isTextEntryKey()"
+    },
     "isTextSelectionSetable()": {
       "isImplementation": false,
       "modifiers": [
@@ -1320,6 +1331,19 @@
       "exceptions": [],
       "name": "setText(java.lang.CharSequence)"
     },
+    "setTextEntryKey(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "isTextEntrykey"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setTextEntryKey(boolean)"
+    },
     "setTextSelection(int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -1425,6 +1449,16 @@
       "exceptions": [],
       "name": "setVisibleToUser(boolean)"
     },
+    "toString()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "toString()"
+    },
     "writeToParcel(android.os.Parcel,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -1446,6 +1480,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.graphics.Rect",
     "android.os.Bundle",
@@ -1460,6 +1495,7 @@
     "android.view.accessibility.AccessibilityNodeInfo.CollectionItemInfo",
     "android.view.accessibility.AccessibilityNodeInfo.RangeInfo",
     "android.view.accessibility.AccessibilityWindowInfo",
+    "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",

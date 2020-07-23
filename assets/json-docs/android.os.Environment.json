@@ -14,6 +14,34 @@
       "name": "addExternalDir(java.lang.String)",
       "documentation": "Adds a directory to list returned by {@link ShadowUserEnvironment#getExternalDirs()}.\n\n@param path the external dir to add\n"
     },
+    "buildExternalStorageAppCacheDirs(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "java.io.File[]",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "buildExternalStorageAppCacheDirs(java.lang.String)"
+    },
+    "getExternalStorageAppCacheDirectory(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "java.io.File",
+      "exceptions": [],
+      "maxSdk": 18,
+      "name": "getExternalStorageAppCacheDirectory(java.lang.String)"
+    },
     "getExternalStorageDirectory()": {
       "isImplementation": true,
       "modifiers": [
@@ -102,6 +130,32 @@
       "minSdk": 21,
       "name": "isExternalStorageEmulated(java.io.File)"
     },
+    "isExternalStorageLegacy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isExternalStorageLegacy()"
+    },
+    "isExternalStorageLegacy(java.io.File)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isExternalStorageLegacy(java.io.File)"
+    },
     "isExternalStorageRemovable()": {
       "isImplementation": true,
       "modifiers": [
@@ -137,6 +191,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "setExternalStorageDirectory(java.nio.file.Path)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "directory"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setExternalStorageDirectory(java.nio.file.Path)",
+      "documentation": "Sets the return value of {@link #getExternalStorageDirectory()}.  Note that\nthe default value provides a directory that is usable in the test environment.\nIf the test app uses this method to override that default directory, please\nclean up any files written to that directory, as the Robolectric environment\nwill not purge that directory when the test ends.\n\n@param directory Path to return from {@link #getExternalStorageDirectory()}.\n"
     },
     "setExternalStorageEmulated(java.io.File,boolean)": {
       "isImplementation": false,
@@ -210,17 +278,34 @@
       "exceptions": [],
       "name": "setIsExternalStorageEmulated(boolean)",
       "documentation": "Sets the return value of {@link #isExternalStorageEmulated()}.\n\n@param emulated Value to return from {@link #isExternalStorageEmulated()}.\n"
+    },
+    "setIsExternalStorageLegacy(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "legacy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsExternalStorageLegacy(boolean)",
+      "documentation": "Sets the return value of {@link #isExternalStorageLegacy()} ()}.\n\n@param legacy Value to return from {@link #isExternalStorageLegacy()}.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.os.Environment",
     "java.io.File",
     "java.io.IOException",
+    "java.nio.file.FileAlreadyExistsException",
     "java.nio.file.Files",
     "java.nio.file.Path",
     "java.util.ArrayList",

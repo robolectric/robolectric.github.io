@@ -209,6 +209,21 @@
       "exceptions": [],
       "name": "drawRect(float,float,float,float,android.graphics.Paint)"
     },
+    "drawRoundRect(android.graphics.RectF,float,float,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rect",
+        "rx",
+        "ry",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawRoundRect(android.graphics.RectF,float,float,android.graphics.Paint)"
+    },
     "drawText(char[],int,int,float,float,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
@@ -411,6 +426,18 @@
       "exceptions": [],
       "name": "getDrawnRect(int)"
     },
+    "getDrawnRoundRect(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.RoundRectPaintHistoryEvent",
+      "exceptions": [],
+      "name": "getDrawnRoundRect(int)"
+    },
     "getDrawnTextEvent(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -442,6 +469,16 @@
       "returnType": "org.robolectric.shadows.ShadowCanvas.RectPaintHistoryEvent",
       "exceptions": [],
       "name": "getLastDrawnRect()"
+    },
+    "getLastDrawnRoundRect()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.RoundRectPaintHistoryEvent",
+      "exceptions": [],
+      "name": "getLastDrawnRoundRect()"
     },
     "getLinePaintHistoryCount()": {
       "isImplementation": false,
@@ -482,6 +519,16 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getRectPaintHistoryCount()"
+    },
+    "getRoundRectPaintHistoryCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRoundRectPaintHistoryCount()"
     },
     "getTextHistoryCount()": {
       "isImplementation": false,
@@ -676,6 +723,7 @@
     "org.robolectric.shadows.ShadowCanvas.LinePaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.OvalPaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.RectPaintHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.RoundRectPaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.PathPaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.CirclePaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.ArcPaintHistoryEvent",

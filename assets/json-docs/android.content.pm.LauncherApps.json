@@ -1,5 +1,19 @@
 {
   "methods": {
+    "addActivity(android.os.UserHandle,android.content.pm.LauncherActivityInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "activityInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addActivity(android.os.UserHandle,android.content.pm.LauncherActivityInfo)",
+      "documentation": "Add an {@link LauncherActivityInfo} to be got by {@link #getActivityList(String, UserHandle)}.\n\n@param userHandle the user handle to be added.\n@param activityInfo the {@link LauncherActivityInfo} to be added.\n"
+    },
     "addDynamicShortcut(android.content.pm.ShortcutInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -13,6 +27,34 @@
       "name": "addDynamicShortcut(android.content.pm.ShortcutInfo)",
       "documentation": "Adds a dynamic shortcut to be returned by {@link #getShortcuts(ShortcutQuery, UserHandle)}.\n\n@param shortcutInfo the shortcut to add.\n"
     },
+    "addEnabledPackage(android.os.UserHandle,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addEnabledPackage(android.os.UserHandle,java.lang.String)",
+      "documentation": "Adds an enabled package to be checked by {@link #isPackageEnabled(String, UserHandle)}.\n\n@param userHandle the user handle to be added.\n@param packageName the package name to be added.\n"
+    },
+    "getActivityList(java.lang.String,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "user"
+      ],
+      "returnType": "java.util.List\u003candroid.content.pm.LauncherActivityInfo\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getActivityList(java.lang.String,android.os.UserHandle)"
+    },
     "getAllPackageInstallerSessions()": {
       "isImplementation": true,
       "modifiers": [
@@ -21,7 +63,7 @@
       "params": [],
       "returnType": "java.util.List\u003candroid.content.pm.PackageInstaller.SessionInfo\u003e",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "getAllPackageInstallerSessions()"
     },
     "getShortcutConfigActivityIntent(android.content.pm.LauncherActivityInfo)": {
@@ -194,7 +236,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "registerPackageInstallerSessionCallback(java.util.concurrent.Executor,android.content.pm.PackageInstaller.SessionCallback)"
     },
     "shortcutsChanged(java.lang.String,java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)": {
@@ -221,7 +263,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "shouldHideFromSuggestions(java.lang.String,android.os.UserHandle)"
     },
     "startAppDetailsActivity(android.content.ComponentName,android.os.UserHandle,android.graphics.Rect,android.os.Bundle)": {
@@ -251,7 +293,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "startPackageInstallerSessionDetailsActivity(android.content.pm.PackageInstaller.SessionInfo,android.graphics.Rect,android.os.Bundle)"
     },
     "startShortcut(android.content.pm.ShortcutInfo,android.graphics.Rect,android.os.Bundle)": {
@@ -308,11 +350,12 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "unregisterPackageInstallerSessionCallback(android.content.pm.PackageInstaller.SessionCallback)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.L",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
@@ -334,13 +377,17 @@
     "android.os.Looper",
     "android.os.Process",
     "android.os.UserHandle",
-    "android.support.annotation.NonNull",
-    "android.support.annotation.Nullable",
+    "androidx.annotation.NonNull",
+    "androidx.annotation.Nullable",
+    "com.google.common.collect.HashMultimap",
     "com.google.common.collect.Iterables",
     "com.google.common.collect.Lists",
+    "com.google.common.collect.Multimap",
     "java.util.ArrayList",
     "java.util.List",
     "java.util.concurrent.Executor",
+    "java.util.function.Predicate",
+    "java.util.stream.Collectors",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.Pair",

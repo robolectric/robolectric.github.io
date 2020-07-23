@@ -16,6 +16,18 @@
       "name": "createConfirmFactoryResetCredentialIntent(java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence)",
       "documentation": "Returns the intent set via\n{@link #setConfirmFactoryResetCredentialIntent(Intent)}, otherwise null.\n"
     },
+    "getCallback()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.app.KeyguardManager.KeyguardDismissCallback",
+      "exceptions": [],
+      "name": "getCallback()",
+      "documentation": "Retrieves callback set by using requestDismissKeyguard.\n\n@return The callback passed in.\n"
+    },
     "inKeyguardRestrictedInputMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -25,7 +37,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "inKeyguardRestrictedInputMode()",
-      "documentation": "For tests, returns the value set via {@link #setinRestrictedInputMode(boolean)}, or `false` by\ndefault.\n\n@see #setInRestrictedInputMode(boolean)\n"
+      "documentation": "For tests, returns the value set via {@link #setinRestrictedInputMode(boolean)}, or false by\ndefault.\n\n@see #setInRestrictedInputMode(boolean)\n"
     },
     "isDeviceLocked()": {
       "isImplementation": true,
@@ -37,7 +49,7 @@
       "exceptions": [],
       "minSdk": 22,
       "name": "isDeviceLocked()",
-      "documentation": "@return `false` by default, or the value passed to {@link #setIsDeviceLocked(boolean)}.\n@see #isDeviceLocked()\n"
+      "documentation": "@return false by default, or the value passed to {@link #setIsDeviceLocked(boolean)}.\n@see #isDeviceLocked()\n"
     },
     "isDeviceLocked(int)": {
       "isImplementation": true,
@@ -62,7 +74,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "isDeviceSecure()",
-      "documentation": "For tests on Android \u003e\u003dM, returns the value set by {@link #setIsDeviceSecure(boolean)}, or\n`false` by default.\n\n@see #setIsDeviceSecure(boolean)\n"
+      "documentation": "For tests on Android \u003e\u003dM, returns the value set by {@link #setIsDeviceSecure(boolean)}, or\nfalse by default.\n\n@see #setIsDeviceSecure(boolean)\n"
     },
     "isDeviceSecure(int)": {
       "isImplementation": true,
@@ -76,7 +88,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "isDeviceSecure(int)",
-      "documentation": "For tests on Android \u003e\u003dM, returns the value set by {@link #setIsDeviceSecure(int, boolean)}, or\n`false` by default.\n\n@see #setIsDeviceSecure(int, boolean)\n"
+      "documentation": "For tests on Android \u003e\u003dM, returns the value set by {@link #setIsDeviceSecure(int, boolean)}, or\nfalse by default.\n\n@see #setIsDeviceSecure(int, boolean)\n"
     },
     "isKeyguardLocked()": {
       "isImplementation": true,
@@ -87,7 +99,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isKeyguardLocked()",
-      "documentation": "For tests, returns the value set via {@link #setKeyguardLocked(boolean)}, or `false` by\ndefault.\n\n@see #setKeyguardLocked(boolean)\n"
+      "documentation": "For tests, returns the value set via {@link #setKeyguardLocked(boolean)}, or false by default.\n\n@see #setKeyguardLocked(boolean)\n"
     },
     "isKeyguardSecure()": {
       "isImplementation": true,
@@ -98,7 +110,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isKeyguardSecure()",
-      "documentation": "For tests, returns the value set by {@link #setIsKeyguardSecure(boolean)}, or `false` by\ndefault.\n\n@see #setIsKeyguardSecure(boolean)\n"
+      "documentation": "For tests, returns the value set by {@link #setIsKeyguardSecure(boolean)}, or false by default.\n\n@see #setIsKeyguardSecure(boolean)\n"
     },
     "newKeyguardLock(java.lang.String)": {
       "isImplementation": true,
@@ -263,15 +275,16 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
+    "android.annotation.TargetApi",
     "android.app.Activity",
     "android.app.KeyguardManager",
     "android.app.KeyguardManager.KeyguardDismissCallback",
     "android.content.Intent",
+    "android.os.Build.VERSION_CODES",
     "java.util.HashSet",
     "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock"

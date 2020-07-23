@@ -101,16 +101,6 @@
       "exceptions": [],
       "name": "getDatabasePath(java.lang.String)"
     },
-    "getExternalCacheDir()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "java.io.File",
-      "exceptions": [],
-      "name": "getExternalCacheDir()"
-    },
     "getExternalFilesDir(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -168,7 +158,7 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 17,
+      "minSdk": 18,
       "name": "getUserId()"
     },
     "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)": {
@@ -277,8 +267,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 17,
-      "name": "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle)",
-      "documentation": "Forwards the call to {@link #sendBroadcast(Intent)}, disregarding {@code user} param. "
+      "name": "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle)"
     },
     "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String)": {
       "isImplementation": true,
@@ -293,8 +282,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 17,
-      "name": "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String)",
-      "documentation": "Forwards the call to {@link #sendBroadcast(Intent,String)}, disregarding {@code user} param.\n"
+      "name": "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String)"
     },
     "sendOrderedBroadcast(android.content.Intent,java.lang.String)": {
       "isImplementation": true,
@@ -344,9 +332,9 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
+      "minSdk": 17,
       "name": "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)",
-      "documentation": "Behaves as {@link #sendOrderedBroadcast} and currently ignores userHandle. "
+      "documentation": "Allows the test to query for the broadcasts for specific users, for everything else behaves as\n{@link #sendOrderedBroadcastAsUser}.\n"
     },
     "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,int,android.os.Bundle,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
@@ -369,7 +357,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,int,android.os.Bundle,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)",
-      "documentation": "Behaves as {@link #sendOrderedBroadcast}. Currently ignores userHandle, appOp, and options. "
+      "documentation": "Behaves as {@link #sendOrderedBroadcastAsUser}. Currently ignores appOp and options. "
     },
     "sendStickyBroadcast(android.content.Intent)": {
       "isImplementation": true,
@@ -395,6 +383,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSystemService(java.lang.String,java.lang.Object)"
+    },
+    "setUserId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUserId(int)"
     },
     "startActivityAsUser(android.content.Intent,android.os.Bundle,android.os.UserHandle)": {
       "isImplementation": true,
@@ -491,6 +491,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "unregisterReceiver(android.content.BroadcastReceiver)"
+    },
+    "validateServiceIntent(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "validateServiceIntent(android.content.Intent)"
     }
   },
   "imports": [
@@ -515,6 +527,7 @@
     "android.content.IntentFilter",
     "android.content.IntentSender",
     "android.content.ServiceConnection",
+    "android.os.Build",
     "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.os.Environment",

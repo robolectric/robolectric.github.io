@@ -12,6 +12,39 @@
       "returnType": "android.webkit.WebViewDatabase",
       "exceptions": [],
       "name": "getInstance(android.content.Context)"
+    },
+    "resetClearFormData()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetClearFormData()",
+      "documentation": "Resets {@link #wasClearFormDataCalled()}, setting it back to false. "
+    },
+    "resetDatabase()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetDatabase()",
+      "documentation": "Resets the {@code WebViewDatabase} instance to clear any state between tests. "
+    },
+    "wasClearFormDataCalled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasClearFormDataCalled()",
+      "documentation": "Returns {@code true} if {@link WebViewDatabase#clearFormData()} was called. "
     }
   },
   "imports": [

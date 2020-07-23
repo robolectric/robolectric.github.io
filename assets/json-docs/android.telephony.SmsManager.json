@@ -1,5 +1,16 @@
 {
   "methods": {
+    "clearLastDownloadedMultimediaMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLastDownloadedMultimediaMessageParams()",
+      "documentation": "Clear last recorded parameters for {@link #downloadMultimediaMessage}. "
+    },
     "clearLastSentDataMessageParams()": {
       "isImplementation": false,
       "modifiers": [
@@ -9,7 +20,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearLastSentDataMessageParams()",
-      "documentation": "Clear last recorded parameters for {@code sendDataMessage}.\n"
+      "documentation": "Clear last recorded parameters for {@link #sendDataMessage}. "
+    },
+    "clearLastSentMultimediaMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLastSentMultimediaMessageParams()",
+      "documentation": "Clear last recorded parameters for {@link #sendMultimediaMessage}. "
     },
     "clearLastSentMultipartTextMessageParams()": {
       "isImplementation": false,
@@ -20,7 +42,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearLastSentMultipartTextMessageParams()",
-      "documentation": "Clear last recorded parameters for {@code sendMultipartTextMessage}.\n"
+      "documentation": "Clear last recorded parameters for {@link #sendMultipartTextMessage}. "
     },
     "clearLastSentTextMessageParams()": {
       "isImplementation": false,
@@ -31,7 +53,35 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearLastSentTextMessageParams()",
-      "documentation": "Clear last recorded parameters for {@code sendTextMessage}.\n"
+      "documentation": "Clear last recorded parameters for {@link #sendTextMessage}. "
+    },
+    "downloadMultimediaMessage(android.content.Context,java.lang.String,android.net.Uri,android.os.Bundle,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "locationUrl",
+        "contentUri",
+        "configOverrides",
+        "sentIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "downloadMultimediaMessage(android.content.Context,java.lang.String,android.net.Uri,android.os.Bundle,android.app.PendingIntent)"
+    },
+    "getLastDownloadedMultimediaMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowSmsManager.DownloadMultimediaMessageParams",
+      "exceptions": [],
+      "name": "getLastDownloadedMultimediaMessageParams()",
+      "documentation": "@return Parameters for last call to {@link #downloadMultimediaMessage}. "
     },
     "getLastSentDataMessageParams()": {
       "isImplementation": false,
@@ -42,7 +92,18 @@
       "returnType": "org.robolectric.shadows.ShadowSmsManager.DataMessageParams",
       "exceptions": [],
       "name": "getLastSentDataMessageParams()",
-      "documentation": "@return Parameters for last call to {@code sendDataMessage}.\n"
+      "documentation": "@return Parameters for last call to {@link #sendDataMessage}. "
+    },
+    "getLastSentMultimediaMessageParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowSmsManager.SendMultimediaMessageParams",
+      "exceptions": [],
+      "name": "getLastSentMultimediaMessageParams()",
+      "documentation": "@return Parameters for last call to {@link #sendMultimediaMessage}. "
     },
     "getLastSentMultipartTextMessageParams()": {
       "isImplementation": false,
@@ -53,7 +114,7 @@
       "returnType": "org.robolectric.shadows.ShadowSmsManager.TextMultipartParams",
       "exceptions": [],
       "name": "getLastSentMultipartTextMessageParams()",
-      "documentation": "@return Parameters for last call to {@code sendMultipartTextMessage}.\n"
+      "documentation": "@return Parameters for last call to {@link #sendMultipartTextMessage}. "
     },
     "getLastSentTextMessageParams()": {
       "isImplementation": false,
@@ -64,7 +125,7 @@
       "returnType": "org.robolectric.shadows.ShadowSmsManager.TextSmsParams",
       "exceptions": [],
       "name": "getLastSentTextMessageParams()",
-      "documentation": "@return Parameters for last call to {@code sendTextMessage}.\n"
+      "documentation": "@return Parameters for last call to {@link #sendTextMessage}. "
     },
     "reset()": {
       "isImplementation": false,
@@ -93,6 +154,23 @@
       "returnType": "void",
       "exceptions": [],
       "name": "sendDataMessage(java.lang.String,java.lang.String,short,byte[],android.app.PendingIntent,android.app.PendingIntent)"
+    },
+    "sendMultimediaMessage(android.content.Context,android.net.Uri,java.lang.String,android.os.Bundle,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "contentUri",
+        "locationUrl",
+        "configOverrides",
+        "sentIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "sendMultimediaMessage(android.content.Context,android.net.Uri,java.lang.String,android.os.Bundle,android.app.PendingIntent)"
     },
     "sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.ArrayList\u003cjava.lang.String\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e)": {
       "isImplementation": true,
@@ -129,8 +207,13 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.app.PendingIntent",
+    "android.content.Context",
+    "android.net.Uri",
+    "android.os.Bundle",
+    "androidx.annotation.Nullable",
     "android.telephony.SmsManager",
     "android.text.TextUtils",
     "java.util.ArrayList",
@@ -143,7 +226,10 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowSmsManager.DataMessageParams",
     "org.robolectric.shadows.ShadowSmsManager.TextSmsParams",
-    "org.robolectric.shadows.ShadowSmsManager.TextMultipartParams"
+    "org.robolectric.shadows.ShadowSmsManager.TextMultipartParams",
+    "org.robolectric.shadows.ShadowSmsManager.MultimediaMessageParams",
+    "org.robolectric.shadows.ShadowSmsManager.SendMultimediaMessageParams",
+    "org.robolectric.shadows.ShadowSmsManager.DownloadMultimediaMessageParams"
   ],
   "name": "org.robolectric.shadows.ShadowSmsManager"
 }

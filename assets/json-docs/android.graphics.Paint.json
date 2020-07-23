@@ -12,6 +12,36 @@
       "exceptions": [],
       "name": "__constructor__(android.graphics.Paint)"
     },
+    "breakText(char[],float,float[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "text",
+        "maxWidth",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "breakText(char[],float,float[])"
+    },
+    "breakText(java.lang.String,float,float[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "text",
+        "maxWidth",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "breakText(java.lang.String,float,float[])"
+    },
     "getAlpha()": {
       "isImplementation": true,
       "modifiers": [
@@ -305,6 +335,88 @@
       "exceptions": [],
       "name": "measureText(java.lang.String,int,int)"
     },
+    "nBreakText(long,char[],int,int,float,int,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nObject",
+        "text",
+        "index",
+        "count",
+        "maxWidth",
+        "bidiFlags",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "nBreakText(long,char[],int,int,float,int,float[])"
+    },
+    "nBreakText(long,java.lang.String,boolean,float,int,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nObject",
+        "text",
+        "measureForwards",
+        "maxWidth",
+        "bidiFlags",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "nBreakText(long,java.lang.String,boolean,float,int,float[])"
+    },
+    "nBreakText(long,long,char[],int,int,float,int,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nObject",
+        "nTypeface",
+        "text",
+        "index",
+        "count",
+        "maxWidth",
+        "bidiFlags",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "maxSdk": 27,
+      "name": "nBreakText(long,long,char[],int,int,float,int,float[])"
+    },
+    "nBreakText(long,long,java.lang.String,boolean,float,int,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nObject",
+        "nTypeface",
+        "text",
+        "measureForwards",
+        "maxWidth",
+        "bidiFlags",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "maxSdk": 27,
+      "name": "nBreakText(long,long,java.lang.String,boolean,float,int,float[])"
+    },
     "nGetFontMetricsInt(java.lang.Object,java.lang.Object,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
@@ -408,6 +520,119 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "nInit()"
+    },
+    "native_breakText(char[],int,int,float,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "index",
+        "count",
+        "maxWidth",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 17,
+      "name": "native_breakText(char[],int,int,float,float[])"
+    },
+    "native_breakText(char[],int,int,float,int,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "index",
+        "count",
+        "maxWidth",
+        "bidiFlags",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 18,
+      "maxSdk": 20,
+      "name": "native_breakText(char[],int,int,float,int,float[])"
+    },
+    "native_breakText(java.lang.String,boolean,float,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "measureForwards",
+        "maxWidth",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 17,
+      "name": "native_breakText(java.lang.String,boolean,float,float[])"
+    },
+    "native_breakText(java.lang.String,boolean,float,int,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "measureForwards",
+        "maxWidth",
+        "bidiFlags",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 18,
+      "maxSdk": 20,
+      "name": "native_breakText(java.lang.String,boolean,float,int,float[])"
+    },
+    "native_breakText(long,long,char[],int,int,float,int,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "native_object",
+        "native_typeface",
+        "text",
+        "index",
+        "count",
+        "maxWidth",
+        "bidiFlags",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 23,
+      "name": "native_breakText(long,long,char[],int,int,float,int,float[])"
+    },
+    "native_breakText(long,long,java.lang.String,boolean,float,int,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "native_object",
+        "native_typeface",
+        "text",
+        "measureForwards",
+        "maxWidth",
+        "bidiFlags",
+        "measuredWidth"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 23,
+      "name": "native_breakText(long,long,java.lang.String,boolean,float,int,float[])"
     },
     "native_getRunAdvance(long,long,char[],int,int,int,int,boolean,int)": {
       "isImplementation": true,
@@ -766,6 +991,18 @@
       "returnType": "android.graphics.Typeface",
       "exceptions": [],
       "name": "setTypeface(android.graphics.Typeface)"
+    },
+    "setUnderlineText(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "underlineText"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUnderlineText(boolean)"
     }
   },
   "imports": [
@@ -773,6 +1010,7 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",

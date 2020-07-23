@@ -1,5 +1,31 @@
 {
   "methods": {
+    "addThermalStatusListener(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "addThermalStatusListener(java.lang.Object)",
+      "documentation": "This function adds a listener for thermal status change. "
+    },
+    "getCurrentThermalStatus()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getCurrentThermalStatus()",
+      "documentation": "This function returns the current thermal status of the device. "
+    },
     "getLatestWakeLock()": {
       "isImplementation": false,
       "modifiers": [
@@ -11,6 +37,18 @@
       "exceptions": [],
       "name": "getLatestWakeLock()",
       "documentation": "Retrieves the most recent wakelock registered by the application\n\n@return Most recent wake lock.\n"
+    },
+    "getLocationPowerSaveMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getLocationPowerSaveMode()",
+      "documentation": "Returns how location features should behave when battery saver is on. When battery saver is\noff, this will always return {@link #LOCATION_MODE_NO_CHANGE}.\n"
     },
     "getRebootReasons()": {
       "isImplementation": false,
@@ -44,7 +82,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "isDeviceIdleMode()",
-      "documentation": "@return `false` by default, or the value specified via {@link #setIsDeviceIdleMode(boolean)}\n"
+      "documentation": "@return false by default, or the value specified via {@link #setIsDeviceIdleMode(boolean)} "
     },
     "isIgnoringBatteryOptimizations(java.lang.String)": {
       "isImplementation": true,
@@ -69,6 +107,18 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "isInteractive()"
+    },
+    "isLightDeviceIdleMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isLightDeviceIdleMode()",
+      "documentation": "@return false by default, or the value specified via {@link #setIsLightDeviceIdleMode(boolean)}\n"
     },
     "isPowerSaveMode()": {
       "isImplementation": true,
@@ -129,6 +179,20 @@
       "exceptions": [],
       "name": "reboot(java.lang.String)"
     },
+    "removeThermalStatusListener(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "removeThermalStatusListener(java.lang.Object)",
+      "documentation": "This function removes a listener for thermal status change. "
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -140,6 +204,19 @@
       "exceptions": [],
       "name": "reset()",
       "documentation": "Discards the most recent {@code PowerManager.WakeLock}s "
+    },
+    "setCurrentThermalStatus(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "thermalStatus"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCurrentThermalStatus(int)",
+      "documentation": "Sets the value returned by {@link #getCurrentThermalStatus()}. "
     },
     "setIgnoringBatteryOptimizations(java.lang.String,boolean)": {
       "isImplementation": false,
@@ -179,6 +256,19 @@
       "exceptions": [],
       "name": "setIsInteractive(boolean)"
     },
+    "setIsLightDeviceIdleMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lightDeviceIdleMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsLightDeviceIdleMode(boolean)",
+      "documentation": "Sets the value returned by {@link #isLightDeviceIdleMode()}. "
+    },
     "setIsPowerSaveMode(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -215,20 +305,39 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setIsWakeLockLevelSupported(int,boolean)"
+    },
+    "setLocationPowerSaveMode(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "locationMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLocationPowerSaveMode(int)",
+      "documentation": "Sets the value returned by {@link #getLocationPowerSaveMode()} when battery saver is on. "
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
+    "com.google.common.base.Preconditions.checkState",
     "org.robolectric.shadows.ShadowApplication.getInstance",
     "android.os.PowerManager",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.List",
     "java.util.Map",
+    "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
@@ -237,5 +346,6 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowPowerManager.ShadowWakeLock"
   ],
-  "name": "org.robolectric.shadows.ShadowPowerManager"
+  "name": "org.robolectric.shadows.ShadowPowerManager",
+  "documentation": "Shadow of PowerManager "
 }

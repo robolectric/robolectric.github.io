@@ -35,12 +35,14 @@
     }
   },
   "imports": [
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "android.graphics.Rect",
     "android.view.TouchDelegate",
     "android.view.View",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowTouchDelegate"
 }

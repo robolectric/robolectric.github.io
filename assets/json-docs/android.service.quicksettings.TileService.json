@@ -21,14 +21,29 @@
       "returnType": "android.service.quicksettings.Tile",
       "exceptions": [],
       "name": "getQsTile()"
+    },
+    "startActivityAndCollapse(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startActivityAndCollapse(android.content.Intent)",
+      "documentation": "Starts an activity without collapsing the quick settings panel. "
     }
   },
   "imports": [
+    "android.content.Intent",
     "android.os.Build",
     "android.service.quicksettings.Tile",
     "android.service.quicksettings.TileService",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowTileService"

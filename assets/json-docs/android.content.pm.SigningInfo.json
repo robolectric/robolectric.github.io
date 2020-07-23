@@ -65,14 +65,32 @@
       "exceptions": [],
       "name": "setSignatures(android.content.pm.Signature[])",
       "documentation": "Set the current Signatures for this package. If signatures has a size greater than 1,\n{@link #hasMultipleSigners} will be true and {@link #getSigningCertificateHistory} will return\nnull.\n"
+    },
+    "writeToParcel(android.os.Parcel,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "parcel",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writeToParcel(android.os.Parcel,int)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.P",
+    "org.robolectric.Shadows.shadowOf",
     "android.content.pm.Signature",
     "android.content.pm.SigningInfo",
+    "android.os.Parcel",
+    "android.os.Parcelable",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowSigningInfo"
 }

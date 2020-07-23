@@ -68,6 +68,17 @@
       "exceptions": [],
       "name": "getAddress()"
     },
+    "getBluetoothLeScanner()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.le.BluetoothLeScanner",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getBluetoothLeScanner()"
+    },
     "getBondedDevices()": {
       "isImplementation": true,
       "modifiers": [
@@ -89,6 +100,16 @@
       "exceptions": [],
       "name": "getDefaultAdapter()"
     },
+    "getDiscoverableTimeout()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDiscoverableTimeout()"
+    },
     "getLeScanCallbacks()": {
       "isImplementation": false,
       "modifiers": [
@@ -98,6 +119,18 @@
       "returnType": "java.util.Set\u003candroid.bluetooth.BluetoothAdapter.LeScanCallback\u003e",
       "exceptions": [],
       "name": "getLeScanCallbacks()"
+    },
+    "getLeState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getLeState()",
+      "documentation": "Decides the correct LE state. When off, BLE calls will fail or return null.\n\n\u003cp\u003eLE is enabled if either Bluetooth or BLE scans are enabled. LE is always off if Airplane\nMode is enabled.\n"
     },
     "getName()": {
       "isImplementation": true,
@@ -180,6 +213,30 @@
       "name": "hasActiveProfileProxy(int)",
       "documentation": "@return \u0027true\u0027 if active (non-null) proxy has been set by {@link\n    ShadowBluetoothAdapter#setProfileProxy} for the given {@code profile} AND it has not been\n    \"deactivated\" by a call to {@link BluetoothAdapter#closeProfileProxy}. Only meaningful if\n    {@link ShadowBluetoothAdapter#setProfileProxy} has been previously called.\n"
     },
+    "isAirplaneMode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAirplaneMode()",
+      "documentation": "True if either Bluetooth is enabled or BLE scanning is available. Always false if Airplane Mode\nis enabled. When false, BLE scans will fail. @Implementation(minSdk \u003d M) protected boolean\nisLeEnabled() { if (isAirplaneMode()) { return false; } return isEnabled() ||\nisBleScanAlwaysAvailable(); }\n"
+    },
+    "isBleScanAlwaysAvailable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isBleScanAlwaysAvailable()",
+      "documentation": "When true, overrides the value of {@link #getLeState}. By default, this is false. "
+    },
     "isDiscovering()": {
       "isImplementation": true,
       "modifiers": [
@@ -199,6 +256,18 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isEnabled()"
+    },
+    "isLeExtendedAdvertisingSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "isLeExtendedAdvertisingSupported()",
+      "documentation": "Returns the last value of {@link #setIsLeExtendedAdvertisingSupported}, defaulting to true. "
     },
     "isMultipleAdvertisementSupported()": {
       "isImplementation": true,
@@ -239,6 +308,17 @@
       ],
       "name": "listenUsingRfcommWithServiceRecord(java.lang.String,java.util.UUID)"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "setAddress(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -250,6 +330,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setAddress(java.lang.String)"
+    },
+    "setBleScanAlwaysAvailable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "alwaysAvailable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBleScanAlwaysAvailable(boolean)",
+      "documentation": "Sets the value for {@link isBleScanAlwaysAvailable}. If true, {@link getLeState} will always\nreturn true.\n"
     },
     "setBondedDevices(java.util.Set\u003candroid.bluetooth.BluetoothDevice\u003e)": {
       "isImplementation": false,
@@ -263,6 +356,18 @@
       "exceptions": [],
       "name": "setBondedDevices(java.util.Set\u003candroid.bluetooth.BluetoothDevice\u003e)"
     },
+    "setDiscoverableTimeout(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "timeout"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDiscoverableTimeout(int)"
+    },
     "setEnabled(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -275,6 +380,33 @@
       "exceptions": [],
       "name": "setEnabled(boolean)"
     },
+    "setIsBluetoothSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsBluetoothSupported(boolean)",
+      "documentation": "Determines if getDefaultAdapter() returns the default local adapter (true) or null (false). "
+    },
+    "setIsLeExtendedAdvertisingSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsLeExtendedAdvertisingSupported(boolean)",
+      "documentation": "Sets the isLeExtendedAdvertisingSupported to enable/disable LE extended advertisements feature\n"
+    },
     "setIsMultipleAdvertisementSupported(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -285,7 +417,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setIsMultipleAdvertisementSupported(boolean)"
+      "name": "setIsMultipleAdvertisementSupported(boolean)",
+      "documentation": "Sets the value for {@link isMultipleAdvertisementSupported}. "
     },
     "setName(java.lang.String)": {
       "isImplementation": true,
@@ -338,6 +471,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "setScanMode(int)"
+    },
+    "setScanMode(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "scanMode",
+        "discoverableTimeout"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setScanMode(int,int)"
     },
     "setState(int)": {
       "isImplementation": false,
@@ -405,6 +551,8 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothAdapter.LeScanCallback",
@@ -412,8 +560,11 @@
     "android.bluetooth.BluetoothProfile",
     "android.bluetooth.BluetoothServerSocket",
     "android.bluetooth.BluetoothSocket",
+    "android.bluetooth.le.BluetoothLeScanner",
     "android.content.Context",
+    "android.os.Build",
     "android.os.ParcelUuid",
+    "android.provider.Settings",
     "java.io.IOException",
     "java.util.Collections",
     "java.util.HashMap",
@@ -422,9 +573,11 @@
     "java.util.Set",
     "java.util.UUID",
     "javax.annotation.Nullable",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothAdapter"
 }

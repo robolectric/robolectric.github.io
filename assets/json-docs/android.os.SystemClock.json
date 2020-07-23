@@ -14,6 +14,18 @@
       "name": "advanceBy(java.time.Duration)",
       "documentation": "A convenience method for advancing the clock via {@link SystemClock#setCurrentTimeMillis(long)}\n\n@param duration The interval by which to advance.\n"
     },
+    "currentGnssTimeClock()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "currentGnssTimeClock()"
+    },
     "currentTimeMillis()": {
       "isImplementation": false,
       "modifiers": [
@@ -49,6 +61,20 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "setGnssTimeAvailable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "available"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGnssTimeAvailable(boolean)",
+      "documentation": "Sets whether gnss location based time is available. "
+    },
     "setNanoTime(long)": {
       "isImplementation": false,
       "modifiers": [
@@ -61,7 +87,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNanoTime(long)",
-      "documentation": "Sets the value for {@link System#nanoTime()}.\n\nMay only be used for {@link LooperMode.Mode.LEGACY}. For {@link LooperMode.Mode.PAUSED},\n`nanoTime` is calculated based on {@link SystemClock#uptimeMillis()} and can\u0027t be set\nexplicitly.\n"
+      "documentation": "Sets the value for {@link System#nanoTime()}.\n\n\u003cp\u003eMay only be used for {@link LooperMode.Mode#LEGACY}. For {@link LooperMode.Mode#PAUSED},\n{@param nanoTime} is calculated based on {@link SystemClock#uptimeMillis()} and can\u0027t be set\nexplicitly.\n"
     },
     "setNetworkTimeAvailable(boolean)": {
       "isImplementation": false,
@@ -79,9 +105,14 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.Q",
+    "java.time.ZoneOffset.UTC",
     "org.robolectric.shadows.ShadowLooper.assertLooperMode",
+    "android.os.SimpleClock",
     "android.os.SystemClock",
+    "java.time.DateTimeException",
     "java.time.Duration",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.LooperMode.Mode",

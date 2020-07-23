@@ -98,6 +98,16 @@
       "exceptions": [],
       "name": "getRoot()"
     },
+    "getSessionToken()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.support.v4.media.session.MediaSessionCompat.Token",
+      "exceptions": [],
+      "name": "getSessionToken()"
+    },
     "isConnected()": {
       "isImplementation": true,
       "modifiers": [
@@ -180,8 +190,9 @@
     "android.support.v4.media.MediaBrowserCompat.MediaItem",
     "android.support.v4.media.MediaBrowserCompat.SearchCallback",
     "android.support.v4.media.MediaBrowserCompat.SubscriptionCallback",
-    "android.support.v4.media.MediaBrowserServiceCompat",
     "android.support.v4.media.MediaMetadataCompat",
+    "android.support.v4.media.session.MediaSessionCompat",
+    "android.support.v4.media.MediaBrowserServiceCompat",
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.LinkedHashMap",

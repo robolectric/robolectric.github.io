@@ -1,0 +1,147 @@
+{
+  "methods": {
+    "executeOnMetadataChanged(android.media.MediaMetadata)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "metadata"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "executeOnMetadataChanged(android.media.MediaMetadata)",
+      "documentation": "Executes all registered onMetadataChanged callbacks. "
+    },
+    "executeOnPlaybackStateChanged(android.media.session.PlaybackState)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "playbackState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "executeOnPlaybackStateChanged(android.media.session.PlaybackState)",
+      "documentation": "Executes all registered onPlaybackStateChanged callbacks. "
+    },
+    "getCallbacks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.media.session.MediaController.Callback\u003e",
+      "exceptions": [],
+      "name": "getCallbacks()",
+      "documentation": "Gets the callbacks registered to MediaController. "
+    },
+    "getMetadata()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.media.MediaMetadata",
+      "exceptions": [],
+      "name": "getMetadata()",
+      "documentation": "Gets the mediaMetadata set via {@link #setMetadata}. "
+    },
+    "getPlaybackState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.media.session.PlaybackState",
+      "exceptions": [],
+      "name": "getPlaybackState()",
+      "documentation": "Gets the playbackState set via {@link #setPlaybackState}. "
+    },
+    "registerCallback(android.media.session.MediaController.Callback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerCallback(android.media.session.MediaController.Callback)",
+      "documentation": "Register callback and store it in the shadow to make it easier to check the state of the\nregistered callbacks.\n"
+    },
+    "setMetadata(android.media.MediaMetadata)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "mediaMetadata"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMetadata(android.media.MediaMetadata)",
+      "documentation": "Saves the mediaMetadata to control the return value of {@link MediaController#getMetadata()}.\n"
+    },
+    "setPackageName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPackageName(java.lang.String)",
+      "documentation": "Saves the package name for use inside the shadow. "
+    },
+    "setPlaybackState(android.media.session.PlaybackState)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "playbackState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPlaybackState(android.media.session.PlaybackState)",
+      "documentation": "Saves the playbackState to control the return value of {@link\nMediaController#getPlaybackState()}.\n"
+    },
+    "unregisterCallback(android.media.session.MediaController.Callback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterCallback(android.media.session.MediaController.Callback)",
+      "documentation": "Unregister callback and remove it from the shadow to make it easier to check the state of the\nregistered callbacks.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.annotation.NonNull",
+    "android.media.MediaMetadata",
+    "android.media.session.MediaController",
+    "android.media.session.MediaController.Callback",
+    "android.media.session.PlaybackState",
+    "android.os.Bundle",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowMediaController",
+  "documentation": "Implementation of {@link android.media.session.MediaController}.\n"
+}

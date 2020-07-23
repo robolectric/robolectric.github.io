@@ -1,5 +1,31 @@
 {
   "methods": {
+    "dispatchGesture(android.accessibilityservice.GestureDescription,android.accessibilityservice.AccessibilityService.GestureResultCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "gesture",
+        "callback",
+        "handler"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "dispatchGesture(android.accessibilityservice.GestureDescription,android.accessibilityservice.AccessibilityService.GestureResultCallback,android.os.Handler)"
+    },
+    "getGesturesDispatched()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowAccessibilityService.GestureDispatch\u003e",
+      "exceptions": [],
+      "name": "getGesturesDispatched()",
+      "documentation": "Returns a list of gestures that have been dispatched.\n\nGestures are dispatched by calling {@link AccessibilityService#dispatchGesture}.\n"
+    },
     "getGlobalActionsPerformed()": {
       "isImplementation": false,
       "modifiers": [
@@ -9,6 +35,18 @@
       "returnType": "java.util.List\u003cjava.lang.Integer\u003e",
       "exceptions": [],
       "name": "getGlobalActionsPerformed()"
+    },
+    "getWindows()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getWindows()",
+      "documentation": "Returns a representation of interactive windows shown on the device screen. Mirrors the values\nprovided to {@link #setWindows(List\u003cAccessibilityWindowInfo\u003e)}. Returns an empty List if not\nset.\n"
     },
     "performGlobalAction(int)": {
       "isImplementation": true,
@@ -22,15 +60,48 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "performGlobalAction(int)"
+    },
+    "setCanDispatchGestures(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "canDispatchGestures"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCanDispatchGestures(boolean)",
+      "documentation": "Sets whether the service is currently able to dispatch gestures.\n\nIf {@code false}, {@link AccessibilityService#dispatchGesture} will return {@code false}.\n"
+    },
+    "setWindows(java.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "windowList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWindows(java.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e)",
+      "documentation": "Sets the list of interactive windows shown on the device screen as reported by {@link\n#getWindows()}\n"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N",
     "android.accessibilityservice.AccessibilityService",
+    "android.accessibilityservice.AccessibilityService.GestureResultCallback",
+    "android.accessibilityservice.GestureDescription",
+    "android.os.Handler",
+    "android.view.accessibility.AccessibilityWindowInfo",
     "java.util.ArrayList",
     "java.util.List",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowAccessibilityService.GestureDispatch"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityService",
-  "documentation": "Shadow of AccessibilityService that saves global actions to a list.\n"
+  "documentation": "Shadow of AccessibilityService that tracks global actions and provides a mechanism to simulate\nthe window list.\n"
 }

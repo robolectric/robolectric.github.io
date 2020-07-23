@@ -23,6 +23,16 @@
       "exceptions": [],
       "name": "canGoBack()"
     },
+    "canGoForward()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "canGoForward()"
+    },
     "clearCache(boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -74,6 +84,21 @@
       "returnType": "android.webkit.WebBackForwardList",
       "exceptions": [],
       "name": "copyBackForwardList()"
+    },
+    "createHitTestResult(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "type",
+        "extra"
+      ],
+      "returnType": "android.webkit.WebView.HitTestResult",
+      "exceptions": [],
+      "name": "createHitTestResult(int,java.lang.String)",
+      "documentation": "Creates an instance of {@link HitTestResult}. "
     },
     "destroy()": {
       "isImplementation": true,
@@ -166,7 +191,28 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getGoBackInvocations()",
-      "documentation": "@return goBackInvocations the number of times {@code android.webkit.WebView#goBack()} was\n    invoked\n"
+      "documentation": "Returns the number of times {@code android.webkit.WebView#goBack()} was invoked. "
+    },
+    "getGoForwardInvocations()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getGoForwardInvocations()",
+      "documentation": "Returns the number of times {@code android.webkit.WebView#goForward()} was invoked. "
+    },
+    "getHitTestResult()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.webkit.WebView.HitTestResult",
+      "exceptions": [],
+      "name": "getHitTestResult()"
     },
     "getJavascriptInterface(java.lang.String)": {
       "isImplementation": false,
@@ -242,6 +288,17 @@
       "exceptions": [],
       "name": "getOriginalUrl()"
     },
+    "getReloadInvocations()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getReloadInvocations()",
+      "documentation": "Returns the number of times {@code android.webkit.WebView#reload()} was invoked "
+    },
     "getSettings()": {
       "isImplementation": true,
       "modifiers": [
@@ -251,6 +308,16 @@
       "returnType": "android.webkit.WebSettings",
       "exceptions": [],
       "name": "getSettings()"
+    },
+    "getTitle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getTitle()"
     },
     "getUrl()": {
       "isImplementation": true,
@@ -303,8 +370,17 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "goBackOrForward(int)",
-      "documentation": "This is only a partial implementation of the method, and \u003cb\u003eonly performs backward\nnavigation\u003c/b\u003e. Any request to go one or more steps forward will be ignored.\n"
+      "name": "goBackOrForward(int)"
+    },
+    "goForward()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "goForward()"
     },
     "loadData(java.lang.String,java.lang.String,java.lang.String)": {
       "isImplementation": true,
@@ -359,7 +435,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "loadUrl(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)"
+      "name": "loadUrl(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)",
+      "documentation": "Fires a request to load the given {@code url} in WebView.\n\n\u003cp\u003eThe {@code url} is is not added to the history until {@link #pushEntryToHistory(String)} is\ncalled. If you want to simulate a redirect you can pass the redirect URL to {@link\n#pushEntryToHistory(String)}.\n"
     },
     "nullish(java.lang.reflect.Method)": {
       "isImplementation": false,
@@ -392,6 +469,75 @@
       "returnType": "void",
       "exceptions": [],
       "name": "onResume()"
+    },
+    "performNoPageLoadClientCallbacks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "performNoPageLoadClientCallbacks()",
+      "documentation": "Performs no callbacks on {@link WebViewClient} and {@link WebChromeClient} when any of {@link\n#loadUrl}, {@link loadData} or {@link #loadDataWithBaseURL} is called.\n"
+    },
+    "performPageLoadType(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "url"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "performPageLoadType(java.lang.String)"
+    },
+    "performSuccessfulPageLoad(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "url"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "performSuccessfulPageLoad(java.lang.String)"
+    },
+    "performSuccessfulPageLoadClientCallbacks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "performSuccessfulPageLoadClientCallbacks()",
+      "documentation": "Performs callbacks on {@link WebViewClient} and {@link WebChromeClient} that simulates a\nsuccessful page load when any of {@link #loadUrl}, {@link loadData} or {@link\n#loadDataWithBaseURL} is called.\n"
+    },
+    "pushEntryToHistory(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "url"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "pushEntryToHistory(java.lang.String)",
+      "documentation": "Pushes an entry to the history with the given {@code url}.\n\n\u003cp\u003eThis method can be used after a {@link #loadUrl(String)} call to push that navigation into\nthe history. This matches the prod behaviour of WebView, a navigation is never committed to\nhistory inline and can take an arbitrary amount of time depending on the network connection.\nNotice that the given {@code url} does not need to match that of the {@link #loadUrl(String)}\nas URL can be changed e.g. through server-side redirects without WebView being notified by the\ntime it is committed.\n\n\u003cp\u003eThis method can also be used to simulate navigations started by user interaction, as these\nwould still add an entry to the history themselves.\n\n\u003cp\u003eIf there are any entries ahead of the current index (for forward navigation) these are\nremoved.\n"
+    },
+    "reload()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reload()"
     },
     "removeJavascriptInterface(java.lang.String)": {
       "isImplementation": true,
@@ -466,6 +612,19 @@
       "exceptions": [],
       "name": "setCurrentWebViewPackage(android.content.pm.PackageInfo)",
       "documentation": "Sets the value to return from {@code #getCurrentWebviewPackage()}. "
+    },
+    "setHitTestResult(android.webkit.WebView.HitTestResult)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "hitTestResult"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHitTestResult(android.webkit.WebView.HitTestResult)",
+      "documentation": "Sets the {@link HitTestResult} that should be returned from {@link #getHitTestResult()}. "
     },
     "setLayoutParams(android.view.ViewGroup.LayoutParams)": {
       "isImplementation": true,
@@ -591,7 +750,10 @@
     "android.content.pm.PackageInfo",
     "android.graphics.Bitmap",
     "android.os.Build",
+    "android.os.Build.VERSION",
     "android.os.Bundle",
+    "android.os.Handler",
+    "android.os.Looper",
     "android.view.ViewGroup.LayoutParams",
     "android.webkit.ValueCallback",
     "android.webkit.WebBackForwardList",
@@ -599,6 +761,7 @@
     "android.webkit.WebHistoryItem",
     "android.webkit.WebSettings",
     "android.webkit.WebView",
+    "android.webkit.WebView.HitTestResult",
     "android.webkit.WebViewClient",
     "java.lang.reflect.Field",
     "java.lang.reflect.InvocationHandler",
@@ -617,6 +780,7 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowWebView.LoadDataWithBaseURL",
     "org.robolectric.shadows.ShadowWebView.LoadData",
+    "org.robolectric.shadows.ShadowWebView.PageLoadType",
     "org.robolectric.shadows.ShadowWebView.BackForwardList",
     "org.robolectric.shadows.ShadowWebView.HistoryItem"
   ],

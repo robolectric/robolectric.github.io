@@ -291,8 +291,38 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "unsafeCheckOpNoThrow(java.lang.String,int,java.lang.String)"
+    },
+    "unsafeCheckOpRawNoThrow(int,int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "unsafeCheckOpRawNoThrow(int,int,java.lang.String)"
+    },
+    "unsafeCheckOpRawNoThrow(java.lang.String,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "unsafeCheckOpRawNoThrow(java.lang.String,int,java.lang.String)",
+      "documentation": "Like {@link #unsafeCheckOpNoThrow(String, int, String)} but returns the \u003cem\u003eraw\u003c/em\u003e mode\nassociated with the op. Does not throw a security exception, does not translate {@link\nAppOpsManager#MODE_FOREGROUND}.\n"
     }
   },
   "imports": [
@@ -314,6 +344,8 @@
     "android.media.AudioAttributes.AttributeUsage",
     "android.os.Binder",
     "android.os.Build",
+    "android.util.LongSparseArray",
+    "android.util.LongSparseLongArray",
     "com.android.internal.app.IAppOpsService",
     "com.google.common.collect.BiMap",
     "com.google.common.collect.HashBiMap",

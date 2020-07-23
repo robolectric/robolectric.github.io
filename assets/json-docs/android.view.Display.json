@@ -362,5 +362,5 @@
     "org.robolectric.shadows.ShadowDisplay._Display_"
   ],
   "name": "org.robolectric.shadows.ShadowDisplay",
-  "documentation": "It is possible to override some display properties using setters on {@link ShadowDisplay};\nhowever, this behavior is deprecated as of Robolectric 3.6 and will be removed in 3.7.\n\nUse [device configuration](http://robolectric.org/device-configuration/) to set up your\ndisplay properties instead.\n"
+  "documentation": "It is possible to override some display properties using setters on {@link ShadowDisplay};\nhowever, this behavior is deprecated as of Robolectric 3.6 and will be removed in 3.7.\n\n@see \u003ca href\u003d\"http://robolectric.org/device-configuration/\"\u003edevice configuration\u003c/a\u003e for details.\n"
 }

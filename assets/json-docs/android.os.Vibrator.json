@@ -1,5 +1,16 @@
 {
   "methods": {
+    "getEffectId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getEffectId()",
+      "documentation": "Returns the last vibration effect ID of a {@link VibrationEffect#Prebaked} (e.g. {@link\nVibrationEffect#EFFECT_CLICK}).\n\n\u003cp\u003eThis field is non-zero only if a {@link VibrationEffect#Prebaked} was ever requested.\n"
+    },
     "getMilliseconds()": {
       "isImplementation": false,
       "modifiers": [

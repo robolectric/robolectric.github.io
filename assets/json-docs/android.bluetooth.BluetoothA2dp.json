@@ -1,0 +1,77 @@
+{
+  "methods": {
+    "addDevice(android.bluetooth.BluetoothDevice,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bluetoothDevice",
+        "connectionState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addDevice(android.bluetooth.BluetoothDevice,int)"
+    },
+    "getConnectedDevices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.bluetooth.BluetoothDevice\u003e",
+      "exceptions": [],
+      "name": "getConnectedDevices()"
+    },
+    "getConnectionState(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getConnectionState(android.bluetooth.BluetoothDevice)"
+    },
+    "getDevicesMatchingConnectionStates(int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "states"
+      ],
+      "returnType": "java.util.List\u003candroid.bluetooth.BluetoothDevice\u003e",
+      "exceptions": [],
+      "name": "getDevicesMatchingConnectionStates(int[])"
+    },
+    "removeDevice(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bluetoothDevice"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeDevice(android.bluetooth.BluetoothDevice)"
+    }
+  },
+  "imports": [
+    "android.bluetooth.BluetoothA2dp",
+    "android.bluetooth.BluetoothDevice",
+    "android.bluetooth.BluetoothProfile",
+    "com.google.common.collect.ImmutableList",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowBluetoothA2dp",
+  "documentation": "Shadow of {@link BluetoothA2dp}. "
+}

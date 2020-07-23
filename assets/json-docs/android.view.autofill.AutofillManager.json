@@ -1,5 +1,17 @@
 {
   "methods": {
+    "getAutofillServiceComponentName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.content.ComponentName",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getAutofillServiceComponentName()",
+      "documentation": "Returns the overridden value set by {@link #setAutofillServiceComponentName(ComponentName)}.\n"
+    },
     "getFillEventHistory()": {
       "isImplementation": true,
       "modifiers": [
@@ -9,11 +21,75 @@
       "returnType": "android.service.autofill.FillEventHistory",
       "exceptions": [],
       "name": "getFillEventHistory()"
+    },
+    "isAutofillSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAutofillSupported()",
+      "documentation": "Returns the overridden value set by {@link #setAutofillSupported(boolean)}. "
+    },
+    "isEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isEnabled()",
+      "documentation": "Returns the overridden value set by {@link #setEnabled(boolean)}. "
+    },
+    "setAutofillServiceComponentName(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "componentName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAutofillServiceComponentName(android.content.ComponentName)",
+      "documentation": "Overrides the component name of the autofill service enabled for the current user. See {@link\nAutofillManager#getAutofillServiceComponentName()}.\n"
+    },
+    "setAutofillSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAutofillSupported(boolean)",
+      "documentation": "Overrides the autofill supported state for the current device and current user. See {@link\nAutofillManager#isAutofillSupported()}.\n"
+    },
+    "setEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEnabled(boolean)",
+      "documentation": "Overrides the autofill enabled state for the current user. See {@link\nAutofillManager#isEnabled()}.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
+    "android.content.ComponentName",
     "android.service.autofill.FillEventHistory",
+    "androidx.annotation.Nullable",
     "android.view.autofill.AutofillManager",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"

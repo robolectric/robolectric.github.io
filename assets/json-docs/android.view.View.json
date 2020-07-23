@@ -14,6 +14,18 @@
       "exceptions": [],
       "name": "__constructor__(android.content.Context,android.util.AttributeSet,int)"
     },
+    "addOnAttachStateChangeListener(android.view.View.OnAttachStateChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "onAttachStateChangeListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addOnAttachStateChangeListener(android.view.View.OnAttachStateChangeListener)"
+    },
     "callOnAttachedToWindow()": {
       "isImplementation": false,
       "modifiers": [
@@ -193,6 +205,19 @@
       "exceptions": [],
       "name": "dumpIndent(java.io.PrintStream,int)"
     },
+    "getAccessibilityChecker()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.pluginapi.AccessibilityChecker",
+      "exceptions": [],
+      "name": "getAccessibilityChecker()",
+      "documentation": "Remove after 4.4.\n@deprecated Transitional use only.\n"
+    },
     "getAttachInfo()": {
       "isImplementation": false,
       "modifiers": [
@@ -235,6 +260,17 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getLayerType()"
+    },
+    "getOnAttachStateChangeListeners()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003candroid.view.View.OnAttachStateChangeListener\u003e",
+      "exceptions": [],
+      "name": "getOnAttachStateChangeListeners()",
+      "documentation": "@return Returns the attached listeners, or the empty set if none are present. "
     },
     "getOnClickListener()": {
       "isImplementation": false,
@@ -502,6 +538,18 @@
       "exceptions": [],
       "name": "removeCallbacks(java.lang.Runnable)"
     },
+    "removeOnAttachStateChangeListener(android.view.View.OnAttachStateChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "onAttachStateChangeListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeOnAttachStateChangeListener(android.view.View.OnAttachStateChangeListener)"
+    },
     "requestLayout()": {
       "isImplementation": true,
       "modifiers": [
@@ -765,15 +813,18 @@
     "android.view.animation.Transformation",
     "java.io.PrintStream",
     "java.lang.reflect.Method",
-    "org.robolectric.android.AccessibilityUtil",
+    "java.util.HashSet",
+    "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.pluginapi.AccessibilityChecker",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.TimeUtils",
+    "org.robolectric.util.inject.Injector",
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowView.AnimationRunner",

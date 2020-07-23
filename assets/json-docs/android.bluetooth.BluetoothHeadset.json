@@ -37,6 +37,44 @@
       "name": "getConnectionState(android.bluetooth.BluetoothDevice)",
       "documentation": "Overrides behavior of {@link getConnectionState}.\n\n@return {@code BluetoothProfile.STATE_CONNECTED} if the given device has been previously added\n    by a call to {@link ShadowBluetoothHeadset#addConnectedDevice}, and {@code\n    BluetoothProfile.STATE_DISCONNECTED} otherwise.\n"
     },
+    "isAudioConnected(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bluetoothDevice"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAudioConnected(android.bluetooth.BluetoothDevice)"
+    },
+    "isDeviceActive(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "bluetoothDevice"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isDeviceActive(android.bluetooth.BluetoothDevice)"
+    },
+    "sendAudioStateChangedBroadcast(int,android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "bluetoothProfileExtraState",
+        "bluetoothDevice"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendAudioStateChangedBroadcast(int,android.bluetooth.BluetoothDevice)"
+    },
     "sendVendorSpecificResultCode(android.bluetooth.BluetoothDevice,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -65,6 +103,32 @@
       "exceptions": [],
       "name": "setAllowsSendVendorSpecificResultCode(boolean)",
       "documentation": "Affects the behavior of {@link BluetoothHeadset#sendVendorSpecificResultCode}\n\n@param allowsSendVendorSpecificResultCode can be set to \u0027false\u0027 to simulate the situation where\n    the system is unable to send vendor-specific result codes to a device\n"
+    },
+    "startVoiceRecognition(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bluetoothDevice"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "startVoiceRecognition(android.bluetooth.BluetoothDevice)",
+      "documentation": "Overrides behavior of {@link startVoiceRecognition}. Returns false if \u0027bluetoothDevice\u0027 is null\nor voice recognition is already started. Users can listen to {@link\nACTION_AUDIO_STATE_CHANGED}. If this function returns true, this intent will be broadcasted\nonce with {@link BluetoothProfile.EXTRA_STATE} set to {@link STATE_AUDIO_CONNECTING} and once\nset to {@link STATE_AUDIO_CONNECTED}.\n"
+    },
+    "stopVoiceRecognition(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bluetoothDevice"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "stopVoiceRecognition(android.bluetooth.BluetoothDevice)",
+      "documentation": "Overrides the behavior of {@link stopVoiceRecognition}. Returns false if voice recognition was\nnot started or voice recogntion has already ended on this headset. If this function returns\ntrue, {@link ACTION_AUDIO_STATE_CHANGED} intent is broadcasted with {@link\nBluetoothProfile.EXTRA_STATE} set to {@link STATE_DISCONNECTED}.\n"
     }
   },
   "imports": [
@@ -72,8 +136,12 @@
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothHeadset",
     "android.bluetooth.BluetoothProfile",
+    "android.content.Intent",
     "java.util.ArrayList",
     "java.util.List",
+    "java.util.Objects",
+    "javax.annotation.concurrent.NotThreadSafe",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

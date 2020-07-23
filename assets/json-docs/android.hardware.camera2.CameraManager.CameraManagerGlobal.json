@@ -1,0 +1,44 @@
+{
+  "methods": {
+    "scheduleCameraServiceReconnectionLocked()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "scheduleCameraServiceReconnectionLocked()",
+      "documentation": "Cannot create a CameraService connection within Robolectric. Avoid endless reconnect loop.\n"
+    }
+  },
+  "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.NonNull",
+    "android.content.Context",
+    "android.hardware.camera2.CameraAccessException",
+    "android.hardware.camera2.CameraCharacteristics",
+    "android.hardware.camera2.CameraDevice",
+    "android.hardware.camera2.CameraDevice.StateCallback",
+    "android.hardware.camera2.CameraManager",
+    "android.os.Build",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Handler",
+    "com.google.common.base.Preconditions",
+    "java.util.HashMap",
+    "java.util.LinkedHashMap",
+    "java.util.Map",
+    "java.util.Set",
+    "java.util.concurrent.Executor",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType"
+  ],
+  "name": "org.robolectric.shadows.ShadowCameraManager.ShadowCameraManagerGlobal",
+  "documentation": "Shadow class for internal class CameraManager$CameraManagerGlobal "
+}

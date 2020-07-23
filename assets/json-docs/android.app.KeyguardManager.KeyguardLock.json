@@ -20,7 +20,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isEnabled()",
-      "documentation": "For tests, returns the value set via {@link #disableKeyguard()} or {@link reenableKeyguard},\nor `true` by default.\n\n@see #setKeyguardLocked(boolean)\n"
+      "documentation": "For tests, returns the value set via {@link #disableKeyguard()} or {@link reenableKeyguard},\nor true by default.\n\n@see #setKeyguardLocked(boolean)\n"
     },
     "reenableKeyguard()": {
       "isImplementation": true,
@@ -39,15 +39,16 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
+    "android.annotation.TargetApi",
     "android.app.Activity",
     "android.app.KeyguardManager",
     "android.app.KeyguardManager.KeyguardDismissCallback",
     "android.content.Intent",
+    "android.os.Build.VERSION_CODES",
     "java.util.HashSet",
     "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow"
   ],

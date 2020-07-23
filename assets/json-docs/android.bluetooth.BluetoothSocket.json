@@ -76,6 +76,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isConnected()"
+    },
+    "setOutputStream(java.io.PipedOutputStream)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outputStream"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOutputStream(java.io.PipedOutputStream)",
+      "documentation": "Set the output stream. {@code write()} operations on this stream can be observed to verify\nexpected behavior.\n"
     }
   },
   "imports": [

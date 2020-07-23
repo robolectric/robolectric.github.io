@@ -1,0 +1,27 @@
+{
+  "methods": {
+    "setChannel(android.app.NotificationChannel)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "notificationChannel"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setChannel(android.app.NotificationChannel)",
+      "documentation": "Overrides the return value for {@link Ranking#getChannel()}. "
+    }
+  },
+  "imports": [
+    "android.app.NotificationChannel",
+    "android.os.Build.VERSION_CODES",
+    "android.service.notification.NotificationListenerService.Ranking",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers"
+  ],
+  "name": "org.robolectric.shadows.ShadowRanking",
+  "documentation": "Shadow for {@link android.service.notification.NotificationListenerService.Ranking}. "
+}
