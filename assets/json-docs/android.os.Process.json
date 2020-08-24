@@ -1,5 +1,16 @@
 {
   "methods": {
+    "clearKilledProcesses()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearKilledProcesses()"
+    },
     "getRandomApplicationUid()": {
       "isImplementation": false,
       "modifiers": [
@@ -24,6 +35,21 @@
       "exceptions": [],
       "name": "getThreadPriority(int)",
       "documentation": "Returns priority stored for the given thread.\n\n@param tid The identifier of the thread. If equals zero, the identifier of the calling thread\n    will be used.\n"
+    },
+    "killProcess(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static",
+        "final"
+      ],
+      "params": [
+        "pid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "killProcess(int)",
+      "documentation": "Stores requests for killing processes. Processe that were requested to be killed can be\nretrieved by calling {@link #wasKilled(int)}. Use {@link #clearKilledProcesses()} to clear the\nlist.\n"
     },
     "myPid()": {
       "isImplementation": true,
@@ -132,12 +158,28 @@
       "exceptions": [],
       "name": "setUid(int)",
       "documentation": "Sets the identifier of this process.\n"
+    },
+    "wasKilled(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "pid"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "wasKilled(int)",
+      "documentation": "Gets an indication of whether or not a process was killed (using {@link #killProcess(int)}).\n"
     }
   },
   "imports": [
     "com.google.common.base.Preconditions.checkArgument",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.Map",
+    "java.util.Set",
     "java.util.concurrent.ThreadLocalRandom",
     "javax.annotation.concurrent.GuardedBy",
     "org.robolectric.annotation.Implementation",

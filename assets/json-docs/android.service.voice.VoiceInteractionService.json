@@ -1,0 +1,106 @@
+{
+  "methods": {
+    "getLastUiHintBundle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getLastUiHintBundle()",
+      "documentation": "Returns the last Bundle object set via {@link #setUiHints(Bundle bundle)} or null if there\nwasn\u0027t any.\n"
+    },
+    "getPreviousUiHintBundles()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.os.Bundle\u003e",
+      "exceptions": [],
+      "name": "getPreviousUiHintBundles()",
+      "documentation": "Returns list of bundles provided with calls to {@link #setUiHints(Bundle bundle)} in invocation\norder.\n"
+    },
+    "isActiveService(android.content.Context,android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context",
+        "componentName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isActiveService(android.content.Context,android.content.ComponentName)"
+    },
+    "onReady()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onReady()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()",
+      "documentation": "Resets this shadow instance. "
+    },
+    "setActiveService(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "activeService"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActiveService(android.content.ComponentName)",
+      "documentation": "Sets return value for {@link #isActiveService(Context context, ComponentName componentName)}\nmethod.\n"
+    },
+    "setUiHints(android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "hints"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setUiHints(android.os.Bundle)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.content.ComponentName",
+    "android.content.Context",
+    "android.os.Bundle",
+    "android.service.voice.VoiceInteractionService",
+    "java.util.ArrayList",
+    "java.util.Collections",
+    "java.util.List",
+    "javax.annotation.Nullable",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.shadows.ShadowVoiceInteractionService",
+  "documentation": "Shadow implementation of {@link android.service.voice.VoiceInteractionService}. "
+}

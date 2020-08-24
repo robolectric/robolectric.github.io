@@ -25,7 +25,24 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPort(java.lang.String)",
-      "documentation": "Adds a USB port to UsbManager. "
+      "documentation": "Adds a USB port with given ID to UsbManager. "
+    },
+    "addPort(java.lang.String,int,int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "portId",
+        "statusCurrentMode",
+        "statusCurrentPowerRole",
+        "statusCurrentDataRole",
+        "statusSupportedRoleCombinations"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addPort(java.lang.String,int,int,int,int)",
+      "documentation": "Adds a USB port with given ID and {@link UsbPortStatus} parameters to UsbManager for Q+. "
     },
     "clearPorts()": {
       "isImplementation": false,
@@ -52,7 +69,7 @@
       "returnType": "java.lang.Object",
       "exceptions": [],
       "name": "createUsbPort(android.hardware.usb.UsbManager,java.lang.String,int)",
-      "documentation": "Helper method for creating a {@link UsbPort}.\n\nReturns Object to avoid referencing the API M+ UsbPort when running on older platforms.\n"
+      "documentation": "Helper method for creating a {@link UsbPort}.\n\n\u003cp\u003eReturns Object to avoid referencing the API M+ UsbPort when running on older platforms.\n"
     },
     "createUsbPortStatus(int,int,int,int)": {
       "isImplementation": false,
@@ -69,7 +86,7 @@
       "returnType": "java.lang.Object",
       "exceptions": [],
       "name": "createUsbPortStatus(int,int,int,int)",
-      "documentation": "Helper method for creating a {@link UsbPortStatus}.\n\nReturns Object to avoid referencing the API M+ UsbPortStatus when running on older platforms.\n"
+      "documentation": "Helper method for creating a {@link UsbPortStatus}.\n\n\u003cp\u003eReturns Object to avoid referencing the API M+ UsbPortStatus when running on older\nplatforms.\n"
     },
     "getAccessoryList()": {
       "isImplementation": true,
@@ -104,6 +121,19 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "getPortStatus(java.lang.Object)"
+    },
+    "getPortStatus(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "portId"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getPortStatus(java.lang.String)",
+      "documentation": "Returns the {@link UsbPortStatus} corresponding to the {@link UsbPort} with given {@code\nportId} if present; otherwise returns {@code null}.\n"
     },
     "getPorts()": {
       "isImplementation": true,
@@ -247,6 +277,8 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "org.robolectric.util.ReflectionHelpers.callConstructor",
     "org.robolectric.util.ReflectionHelpers.getStaticField",
+    "android.annotation.Nullable",
+    "android.annotation.TargetApi",
     "android.content.Intent",
     "android.hardware.usb.UsbAccessory",
     "android.hardware.usb.UsbDevice",

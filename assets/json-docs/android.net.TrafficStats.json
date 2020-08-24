@@ -293,6 +293,74 @@
       "exceptions": [],
       "name": "incrementOperationCount(int,int)"
     },
+    "restoreDefaults()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "restoreDefaults()",
+      "documentation": "Updates all non UID specific fields back to {@link TrafficStats#UNSUPPORTED} "
+    },
+    "setMobileRxBytes(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "mobileRxBytes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMobileRxBytes(int)",
+      "documentation": "Sets the value returned by {@link #getMobileRxBytes()} for testing "
+    },
+    "setMobileRxPackets(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "mobileRxPackets"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMobileRxPackets(int)",
+      "documentation": "Sets the value returned by {@link #getMobileRxPackets()} for testing "
+    },
+    "setMobileTxBytes(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "mobileTxBytes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMobileTxBytes(int)",
+      "documentation": "Sets the value returned by {@link #getMobileTxBytes()} for testing "
+    },
+    "setMobileTxPackets(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "mobileTxPackets"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMobileTxPackets(int)",
+      "documentation": "Sets the value returned by {@link #getMobileTxPackets()} for testing "
+    },
     "setThreadStatsTag(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -305,6 +373,62 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setThreadStatsTag(int)"
+    },
+    "setTotalRxBytes(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "totalRxBytes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTotalRxBytes(int)",
+      "documentation": "Sets the value returned by {@link #getTotalRxBytes()} for testing "
+    },
+    "setTotalRxPackets(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "totalRxPackets"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTotalRxPackets(int)",
+      "documentation": "Sets the value returned by {@link #getTotalRxPackets()} for testing "
+    },
+    "setTotalTxBytes(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "totalTxBytes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTotalTxBytes(int)",
+      "documentation": "Sets the value returned by {@link #getTotalTxBytes()} for testing "
+    },
+    "setTotalTxPackets(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "totalTxPackets"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTotalTxPackets(int)",
+      "documentation": "Sets the value returned by {@link #getTotalTxPackets()} for testing "
     },
     "tagDatagramSocket(java.net.DatagramSocket)": {
       "isImplementation": true,
@@ -358,7 +482,8 @@
     "android.net.TrafficStats",
     "android.os.Build",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
   ],
   "name": "org.robolectric.shadows.ShadowTrafficStats"
 }

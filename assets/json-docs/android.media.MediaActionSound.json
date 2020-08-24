@@ -1,0 +1,68 @@
+{
+  "methods": {
+    "getPlayCount(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "soundName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPlayCount(int)",
+      "documentation": "Get the number of times a sound has been played. "
+    },
+    "initializePlayCountMap()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static",
+        "final"
+      ],
+      "params": [],
+      "returnType": "java.util.HashMap\u003cjava.lang.Integer,java.util.concurrent.atomic.AtomicInteger\u003e",
+      "exceptions": [],
+      "name": "initializePlayCountMap()"
+    },
+    "play(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "soundName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "play(int)",
+      "documentation": "Instrumented call to {@link android.media.MediaActionSound#play} "
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    }
+  },
+  "imports": [
+    "android.media.MediaActionSound",
+    "android.os.Build",
+    "java.util.HashMap",
+    "java.util.Map",
+    "java.util.concurrent.atomic.AtomicInteger",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow"
+  ],
+  "name": "org.robolectric.shadows.ShadowMediaActionSound",
+  "documentation": "A shadow implementation of {@link android.media.MediaActionSound}. "
+}

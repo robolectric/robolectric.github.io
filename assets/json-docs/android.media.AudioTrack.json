@@ -1,0 +1,86 @@
+{
+  "methods": {
+    "native_get_min_buff_size(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "sampleRateInHz",
+        "channelConfig",
+        "audioFormat"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "native_get_min_buff_size(int,int,int)",
+      "documentation": "Returns a predefined or default minimum buffer size. Audio format and config are neglected. "
+    },
+    "native_write_byte(byte[],int,int,int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "audioData",
+        "offsetInBytes",
+        "sizeInBytes",
+        "format",
+        "isBlocking"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "native_write_byte(byte[],int,int,int,boolean)",
+      "documentation": "Always return the number of bytes to write. This method returns immedidately even with {@link\nAudioTrack#WRITE_BLOCKING}\n"
+    },
+    "setMinBufferSize(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "bufferSize"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMinBufferSize(int)",
+      "documentation": "In the real class, the minimum buffer size is estimated from audio sample rate and other\nfactors. We do not provide such estimation in {@link #native_get_min_buff_size(int, int, int)},\ninstead letting users set the minimum for the expected audio sample. Usually higher sample rate\nrequires bigger buffer size.\n"
+    },
+    "write(java.nio.ByteBuffer,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioData",
+        "sizeInBytes",
+        "writeMode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "write(java.nio.ByteBuffer,int,int)",
+      "documentation": "Always return the number of bytes to write except with invalid parameters. Assumes AudioTrack\nis already initialized (object properly created). Do not block even if AudioTrack in offload\nmode is in STOPPING play state. This method returns immediately even with {@link\nAudioTrack#WRITE_BLOCKING}\n"
+    }
+  },
+  "imports": [
+    "android.media.AudioTrack.ERROR_BAD_VALUE",
+    "android.media.AudioTrack.WRITE_BLOCKING",
+    "android.media.AudioTrack.WRITE_NON_BLOCKING",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "android.media.AudioTrack",
+    "android.media.AudioTrack.WriteMode",
+    "androidx.annotation.NonNull",
+    "android.util.Log",
+    "java.nio.Buffer",
+    "java.nio.ByteBuffer",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowAudioTrack",
+  "documentation": "Implementation of a couple methods in {@link AudioTrack}. Only a couple methods are supported,\nother methods are expected run through the real class. The two {@link WriteMode} are treated the\nsame.\n"
+}

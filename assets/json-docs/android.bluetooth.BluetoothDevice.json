@@ -72,6 +72,20 @@
       "name": "createBond()",
       "documentation": "Returns whether this device has been bonded with. "
     },
+    "createRfcommSocketToServiceRecord(java.util.UUID)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uuid"
+      ],
+      "returnType": "android.bluetooth.BluetoothSocket",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "createRfcommSocketToServiceRecord(java.util.UUID)"
+    },
     "fetchUuidsWithSdp()": {
       "isImplementation": true,
       "modifiers": [
@@ -82,6 +96,39 @@
       "exceptions": [],
       "name": "fetchUuidsWithSdp()",
       "documentation": "Overrides behavior of {@link BluetoothDevice#fetchUuidsWithSdp}. This method updates the\ncounter which counts the number of invocations of this method.\n\n@returns Value set by calling {@link ShadowBluetoothDevice#setFetchUuidsWithSdpResult}. If not\n    previously set, will return false by default.\n"
+    },
+    "getAlias()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getAlias()"
+    },
+    "getAliasName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [
+        "java.lang.ReflectiveOperationException"
+      ],
+      "name": "getAliasName()"
+    },
+    "getBluetoothClass()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothClass",
+      "exceptions": [],
+      "name": "getBluetoothClass()",
+      "documentation": "Overrides behavior of {@link BluetoothDevice#getBluetoothClass} to return pre-set result.\n\n@return Value set by calling {@link ShadowBluetoothDevice#setBluetoothClass}. If setType has\n    not previously been called, will return null.\n"
     },
     "getBluetoothGatts()": {
       "isImplementation": false,
@@ -126,6 +173,28 @@
       "exceptions": [],
       "name": "getName()"
     },
+    "getPairingConfirmation()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.Boolean",
+      "exceptions": [],
+      "name": "getPairingConfirmation()",
+      "documentation": "Get the confirmation value previously set with a call to {@link\nBluetoothDevice#setPairingConfirmation(boolean)}, or null if no value is set.\n"
+    },
+    "getPin()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "name": "getPin()",
+      "documentation": "Get the PIN previously set with a call to {@link BluetoothDevice#setPin(byte[])}, or null if no\nPIN has been set.\n"
+    },
     "getService()": {
       "isImplementation": true,
       "modifiers": [
@@ -159,7 +228,7 @@
       "returnType": "android.os.ParcelUuid[]",
       "exceptions": [],
       "name": "getUuids()",
-      "documentation": "Overrides behavior of {@link BluetoothDevice#getUuids} to return pre-set result.\n\n@returns Value set by calling {@link ShadowBluetoothDevice#setUuids}. If setUuids has not\n    previously been called, will return null.\n"
+      "documentation": "Overrides behavior of {@link BluetoothDevice#getUuids} to return pre-set result.\n\n@return Value set by calling {@link ShadowBluetoothDevice#setUuids}. If setUuids has not\n    previously been called, will return null.\n"
     },
     "newInstance(java.lang.String)": {
       "isImplementation": false,
@@ -173,6 +242,43 @@
       "returnType": "android.bluetooth.BluetoothDevice",
       "exceptions": [],
       "name": "newInstance(java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setAlias(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "alias"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAlias(java.lang.String)",
+      "documentation": "Sets the alias name of the device.\n\n\u003cp\u003eAlias is the locally modified name of a remote device.\n\n\u003cp\u003eAlias Name is not part of the supported SDK, and accessed via reflection.\n\n@param alias alias name.\n"
+    },
+    "setBluetoothClass(android.bluetooth.BluetoothClass)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bluetoothClass"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBluetoothClass(android.bluetooth.BluetoothClass)",
+      "documentation": "Sets the return value for {@link BluetoothDevice#getBluetoothClass}. "
     },
     "setBondState(int)": {
       "isImplementation": false,
@@ -225,6 +331,43 @@
       "exceptions": [],
       "name": "setName(java.lang.String)"
     },
+    "setPairingConfirmation(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "confirm"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setPairingConfirmation(boolean)"
+    },
+    "setPin(byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "pin"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setPin(byte[])"
+    },
+    "setThrowOnGetAliasName(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "shouldThrow"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setThrowOnGetAliasName(boolean)",
+      "documentation": "Sets if a runtime exception is thrown when the alias name of the device is accessed.\n\n\u003cp\u003eIntended to replicate what may happen if the unsupported SDK is changed.\n\n\u003cp\u003eAlias is the locally modified name of a remote device.\n\n\u003cp\u003eAlias Name is not part of the supported SDK, and accessed via reflection.\n\n@param shouldThrow if getAliasName() should throw when called.\n"
+    },
     "setType(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -272,18 +415,23 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.bluetooth.BluetoothClass",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothGatt",
     "android.bluetooth.BluetoothGattCallback",
+    "android.bluetooth.BluetoothSocket",
     "android.bluetooth.IBluetooth",
     "android.content.Context",
     "android.os.Handler",
     "android.os.ParcelUuid",
+    "java.io.IOException",
     "java.util.ArrayList",
     "java.util.List",
+    "java.util.UUID",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],

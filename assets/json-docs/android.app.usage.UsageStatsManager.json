@@ -79,6 +79,17 @@
       "minSdk": 28,
       "name": "getAppStandbyBuckets()"
     },
+    "getRegisteredAppUsageLimitObservers()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowUsageStatsManager.AppUsageLimitObserver\u003e",
+      "exceptions": [],
+      "name": "getRegisteredAppUsageLimitObservers()",
+      "documentation": "Returns the {@link AppUsageLimitObserver}s currently registered in {@link UsageStatsManager}.\n"
+    },
     "getRegisteredAppUsageObservers()": {
       "isImplementation": false,
       "modifiers": [
@@ -109,7 +120,7 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "getUsageSource()"
     },
     "queryEvents(long,long)": {
@@ -140,6 +151,24 @@
       "name": "queryUsageStats(int,long,long)",
       "documentation": "Returns aggregated UsageStats added by calling {@link #addUsageStats}.\n\n\u003cp\u003eThe real implementation creates these aggregated objects from individual {@link Event}. This\naggregation logic is nontrivial, so the shadow implementation just returns the aggregate data\nadded using {@link #addUsageStats}.\n"
     },
+    "registerAppUsageLimitObserver(int,java.lang.String[],java.time.Duration,java.time.Duration,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "observerId",
+        "observedEntities",
+        "timeLimit",
+        "timeUsed",
+        "callbackIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "registerAppUsageLimitObserver(int,java.lang.String[],java.time.Duration,java.time.Duration,android.app.PendingIntent)",
+      "documentation": "Registers an app usage limit observer that receives a callback on {@code callbackIntent} when\nthe sum of usages of apps and tokens in {@code observedEntities} exceeds {@code timeLimit -\ntimeUsed}.\n"
+    },
     "registerAppUsageObserver(int,java.lang.String[],long,java.util.concurrent.TimeUnit,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
@@ -157,7 +186,7 @@
       "minSdk": 28,
       "name": "registerAppUsageObserver(int,java.lang.String[],long,java.util.concurrent.TimeUnit,android.app.PendingIntent)"
     },
-    "registerUsageSessionObserver(int,java.lang.String[],long,java.util.concurrent.TimeUnit,long,java.util.concurrent.TimeUnit,android.app.PendingIntent,android.app.PendingIntent)": {
+    "registerUsageSessionObserver(int,java.lang.String[],java.time.Duration,java.time.Duration,android.app.PendingIntent,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
         "protected"
@@ -165,17 +194,15 @@
       "params": [
         "observerId",
         "packages",
-        "sessionStepTime",
-        "sessionStepTimeUnit",
-        "thresholdTime",
-        "thresholdTimeUnit",
+        "sessionStepDuration",
+        "thresholdTimeDuration",
         "sessionStepTriggeredIntent",
         "sessionEndedIntent"
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
-      "name": "registerUsageSessionObserver(int,java.lang.String[],long,java.util.concurrent.TimeUnit,long,java.util.concurrent.TimeUnit,android.app.PendingIntent,android.app.PendingIntent)"
+      "minSdk": 29,
+      "name": "registerUsageSessionObserver(int,java.lang.String[],java.time.Duration,java.time.Duration,android.app.PendingIntent,android.app.PendingIntent)"
     },
     "reset()": {
       "isImplementation": false,
@@ -255,6 +282,20 @@
       "name": "simulateTimeChange(long)",
       "documentation": "Simulates the operations done by the framework when there is a time change. If the time is\nchanged, the timestamps of all existing usage events will be shifted by the same offset as the\ntime change, in order to make sure they remain stable relative to the new time.\n\n\u003cp\u003eThis method won\u0027t affect the results of {@link #queryUsageStats} method.\n\n@param offsetToAddInMillis the offset to be applied to all events. For example, if {@code\n    offsetInMillis} is 60,000, then all {@link Event}s will be shifted forward by 1 minute\n    (into the future). Likewise, if {@code offsetInMillis} is -60,000, then all {@link Event}s\n    will be shifted backward by 1 minute (into the past).\n"
     },
+    "triggerRegisteredAppUsageLimitObserver(int,java.time.Duration)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "observerId",
+        "timeUsed"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerRegisteredAppUsageLimitObserver(int,java.time.Duration)",
+      "documentation": "Triggers a currently registered {@link AppUsageLimitObserver} with {@code observerId}.\n\n\u003cp\u003eThe observer will still be registered afterwards.\n"
+    },
     "triggerRegisteredAppUsageObserver(int,long)": {
       "isImplementation": false,
       "modifiers": [
@@ -296,6 +337,20 @@
       "name": "triggerRegisteredSessionStepObserver(int,long)",
       "documentation": "Triggers a currently registered {@link UsageSessionObserver} with {@code observerId}.\n\n\u003cp\u003eThe observer SHOULD be registered afterwards.\n"
     },
+    "unregisterAppUsageLimitObserver(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "observerId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "unregisterAppUsageLimitObserver(int)",
+      "documentation": "Unregisters the app usage limit observer specified by {@code observerId}. "
+    },
     "unregisterAppUsageObserver(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -319,11 +374,12 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "unregisterUsageSessionObserver(int)"
     }
   },
   "imports": [
+    "com.google.common.base.Preconditions.checkNotNull",
     "android.annotation.NonNull",
     "android.annotation.TargetApi",
     "android.app.PendingIntent",
@@ -363,6 +419,7 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadows.ShadowUsageStatsManager.AppUsageObserver",
     "org.robolectric.shadows.ShadowUsageStatsManager.UsageSessionObserver",
+    "org.robolectric.shadows.ShadowUsageStatsManager.AppUsageLimitObserver",
     "org.robolectric.shadows.ShadowUsageStatsManager.UsageStatsBuilder",
     "org.robolectric.shadows.ShadowUsageStatsManager.EventBuilder"
   ],

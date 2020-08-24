@@ -193,6 +193,23 @@
       "exceptions": [],
       "name": "showSoftInput(android.view.View,int,android.os.ResultReceiver)"
     },
+    "startInputInner(int,android.os.IBinder,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "startInputReason",
+        "windowGainingFocus",
+        "startInputFlags",
+        "softInputMode",
+        "windowFlags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "startInputInner(int,android.os.IBinder,int,int,int)"
+    },
     "toggleSoftInput(int,int)": {
       "isImplementation": true,
       "modifiers": [

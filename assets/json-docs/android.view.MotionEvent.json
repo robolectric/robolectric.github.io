@@ -909,7 +909,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "nativeInitialize(long,int,int,int,int,int,int,int,int,int,float,float,float,float,long,long,int,android.view.MotionEvent.PointerProperties[],android.view.MotionEvent.PointerCoords[])"
     },
     "nativeIsTouchEvent(int)": {

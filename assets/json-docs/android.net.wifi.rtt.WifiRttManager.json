@@ -1,5 +1,17 @@
 {
   "methods": {
+    "isAvailable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "isAvailable()",
+      "documentation": "Assumes the WifiRttManager is always available. "
+    },
     "setRangeResults(java.util.List\u003candroid.net.wifi.rtt.RangingResult\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -36,6 +48,7 @@
     "android.net.wifi.rtt.RangingResult",
     "android.net.wifi.rtt.RangingResultCallback",
     "android.net.wifi.rtt.WifiRttManager",
+    "java.util.ArrayList",
     "java.util.List",
     "java.util.concurrent.Executor",
     "org.robolectric.annotation.Config",

@@ -25,6 +25,22 @@
       "exceptions": [],
       "name": "bindService(android.content.Intent,android.content.ServiceConnection,int)"
     },
+    "broadcastReceiverMatchesIntent(android.content.Context,org.robolectric.shadows.ShadowApplication.Wrapper,android.content.Intent,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "broadcastContext",
+        "wrapper",
+        "intent",
+        "receiverPermission"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "broadcastReceiverMatchesIntent(android.content.Context,org.robolectric.shadows.ShadowApplication.Wrapper,android.content.Intent,java.lang.String)"
+    },
     "checkActivities(boolean)": {
       "isImplementation": false,
       "modifiers": [],
@@ -46,6 +62,14 @@
       "returnType": "int",
       "exceptions": [],
       "name": "checkPermission(java.lang.String,int,int)"
+    },
+    "clearBroadcastIntents()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearBroadcastIntents()"
     },
     "clearNextStartedActivities()": {
       "isImplementation": false,
@@ -82,6 +106,16 @@
       "returnType": "void",
       "exceptions": [],
       "name": "declareActionUnbindable(java.lang.String)"
+    },
+    "declareComponentUnbindable(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "component"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "declareComponentUnbindable(android.content.ComponentName)"
     },
     "denyPermissions(int,int,java.lang.String...)": {
       "isImplementation": false,
@@ -196,7 +230,8 @@
       "returnType": "android.app.Instrumentation.ActivityResult",
       "exceptions": [],
       "minSdk": 17,
-      "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,java.lang.String,android.content.Intent,int,android.os.Bundle,android.os.UserHandle)"
+      "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,java.lang.String,android.content.Intent,int,android.os.Bundle,android.os.UserHandle)",
+      "documentation": "Behaves as {@link #execStartActivity(Context, IBinder, IBinder, String, Intent, int, Bundle).\n\n\u003cp\u003eCurrently ignores the user.\n"
     },
     "execStartActivityAsCaller(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle,boolean,int)": {
       "isImplementation": true,
@@ -237,18 +272,20 @@
       "minSdk": 21,
       "name": "execStartActivityFromAppTask(android.content.Context,android.os.IBinder,java.lang.Object,android.content.Intent,android.os.Bundle)"
     },
-    "getAppropriateWrappers(android.content.Intent,java.lang.String)": {
+    "getAppropriateWrappers(android.content.Context,android.os.UserHandle,android.content.Intent,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
       "params": [
+        "context",
+        "userHandle",
         "intent",
         "receiverPermission"
       ],
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
       "exceptions": [],
-      "name": "getAppropriateWrappers(android.content.Intent,java.lang.String)",
+      "name": "getAppropriateWrappers(android.content.Context,android.os.UserHandle,android.content.Intent,java.lang.String)",
       "documentation": "Returns the BroadcaseReceivers wrappers, matching intent\u0027s action and permissions. "
     },
     "getBoundServiceConnections()": {
@@ -268,6 +305,16 @@
       "returnType": "java.util.List\u003candroid.content.Intent\u003e",
       "exceptions": [],
       "name": "getBroadcastIntents()"
+    },
+    "getBroadcastIntentsForUser(android.os.UserHandle)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "java.util.List\u003candroid.content.Intent\u003e",
+      "exceptions": [],
+      "name": "getBroadcastIntentsForUser(android.os.UserHandle)"
     },
     "getInstrumentation()": {
       "isImplementation": false,
@@ -341,20 +388,20 @@
       "isImplementation": false,
       "modifiers": [],
       "params": [],
-      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
+      "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
       "exceptions": [],
       "name": "getRegisteredReceivers()",
-      "documentation": "@return list of {@link Wrapper}s for registered receivers "
+      "documentation": "@return copy of the list of {@link Wrapper}s for registered receivers "
     },
-    "getRequestCodeForIntent(android.content.Intent)": {
+    "getTargetAndRequestCodeForIntent(android.content.Intent)": {
       "isImplementation": false,
       "modifiers": [],
       "params": [
         "requestIntent"
       ],
-      "returnType": "int",
+      "returnType": "org.robolectric.shadows.ShadowInstrumentation.TargetAndRequestCode",
       "exceptions": [],
-      "name": "getRequestCodeForIntent(android.content.Intent)"
+      "name": "getTargetAndRequestCodeForIntent(android.content.Intent)"
     },
     "getUnbindableActions()": {
       "isImplementation": false,
@@ -365,6 +412,14 @@
       "returnType": "java.util.List\u003cjava.lang.String\u003e",
       "exceptions": [],
       "name": "getUnbindableActions()"
+    },
+    "getUnbindableComponents()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.ComponentName\u003e",
+      "exceptions": [],
+      "name": "getUnbindableComponents()"
     },
     "getUnboundServiceConnections()": {
       "isImplementation": false,
@@ -398,19 +453,6 @@
       "exceptions": [],
       "name": "grantPermissions(java.lang.String...)"
     },
-    "hasMatchingPermission(java.lang.String,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "permission1",
-        "permission2"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "hasMatchingPermission(java.lang.String,java.lang.String)"
-    },
     "hasReceiverForIntent(android.content.Intent)": {
       "isImplementation": false,
       "modifiers": [],
@@ -422,19 +464,35 @@
       "name": "hasReceiverForIntent(android.content.Intent)",
       "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead "
     },
-    "logStartedActivity(android.content.Intent,int,android.os.Bundle)": {
+    "hasRequiredPermissionForBroadcast(android.content.Context,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "context",
+        "requiredPermission"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasRequiredPermissionForBroadcast(android.content.Context,java.lang.String)",
+      "documentation": "A null {@code requiredPermission} indicates that no permission is required. "
+    },
+    "logStartedActivity(android.content.Intent,java.lang.String,int,android.os.Bundle)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
       "params": [
         "intent",
+        "target",
         "requestCode",
         "options"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "logStartedActivity(android.content.Intent,int,android.os.Bundle)"
+      "name": "logStartedActivity(android.content.Intent,java.lang.String,int,android.os.Bundle)"
     },
     "peekNextStartedActivity()": {
       "isImplementation": false,
@@ -591,18 +649,33 @@
       "exceptions": [],
       "name": "sendBroadcast(android.content.Intent,android.content.Context)"
     },
-    "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context)": {
+    "sendBroadcastWithPermission(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.Context)": {
       "isImplementation": false,
       "modifiers": [],
       "params": [
         "intent",
+        "userHandle",
         "receiverPermission",
         "context"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context)",
+      "name": "sendBroadcastWithPermission(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.Context)",
       "documentation": "Broadcasts the {@code Intent} by iterating through the registered receivers, invoking their\nfilters including permissions, and calling {@code onReceive(Application, Intent)} as\nappropriate. Does not enqueue the {@code Intent} for later inspection.\n\n@param context\n@param intent the {@code Intent} to broadcast todo: enqueue the Intent for later inspection\n"
+    },
+    "sendBroadcastWithPermission(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.Context,int)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "intent",
+        "userHandle",
+        "receiverPermission",
+        "context",
+        "resultCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendBroadcastWithPermission(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.Context,int)"
     },
     "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context,int)": {
       "isImplementation": false,
@@ -617,11 +690,12 @@
       "exceptions": [],
       "name": "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context,int)"
     },
-    "sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle,android.content.Context)": {
+    "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle,android.content.Context)": {
       "isImplementation": false,
       "modifiers": [],
       "params": [
         "intent",
+        "userHandle",
         "receiverPermission",
         "resultReceiver",
         "scheduler",
@@ -632,7 +706,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle,android.content.Context)"
+      "name": "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle,android.content.Context)"
     },
     "sendOrderedBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context)": {
       "isImplementation": false,
@@ -666,7 +740,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setComponentNameAndServiceForBindService(android.content.ComponentName,android.os.IBinder)"
+      "name": "setComponentNameAndServiceForBindService(android.content.ComponentName,android.os.IBinder)",
+      "documentation": "Set the default IBinder implementation that will be returned when the service is bound using\nthe specified Intent. The IBinder can implement the methods to simulate a bound Service. Useful\nfor testing the ServiceConnection implementation.\n\n@param name The ComponentName of the Service\n@param service The IBinder implementation to return when the service is bound.\n"
     },
     "setComponentNameAndServiceForBindServiceForIntent(android.content.Intent,android.content.ComponentName,android.os.IBinder)": {
       "isImplementation": false,
@@ -678,7 +753,30 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setComponentNameAndServiceForBindServiceForIntent(android.content.Intent,android.content.ComponentName,android.os.IBinder)"
+      "name": "setComponentNameAndServiceForBindServiceForIntent(android.content.Intent,android.content.ComponentName,android.os.IBinder)",
+      "documentation": "Set the IBinder implementation that will be returned when the service is bound using the\nspecified Intent. The IBinder can implement the methods to simulate a bound Service. Useful for\ntesting the ServiceConnection implementation.\n\n@param intent The exact Intent used in Context#bindService(...)\n@param name The ComponentName of the Service\n@param service The IBinder implementation to return when the service is bound.\n"
+    },
+    "setThrowInBindService(java.lang.SecurityException)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "e"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setThrowInBindService(java.lang.SecurityException)"
+    },
+    "setUnbindServiceCallsOnServiceDisconnected(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "flag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUnbindServiceCallsOnServiceDisconnected(boolean)"
     },
     "setUnbindServiceShouldThrowIllegalArgument(boolean)": {
       "isImplementation": false,
@@ -782,9 +880,11 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.P",
+    "com.google.common.base.Preconditions.checkNotNull",
     "com.google.common.util.concurrent.Futures.immediateFuture",
     "com.google.common.util.concurrent.MoreExecutors.directExecutor",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.annotation.Nullable",
     "android.app.Activity",
     "android.app.ActivityThread",
     "android.app.Fragment",
@@ -805,7 +905,9 @@
     "android.os.Looper",
     "android.os.Process",
     "android.os.UserHandle",
+    "android.text.TextUtils",
     "android.util.Pair",
+    "com.google.common.collect.ImmutableList",
     "com.google.common.util.concurrent.AsyncFunction",
     "com.google.common.util.concurrent.Futures",
     "com.google.common.util.concurrent.ListenableFuture",
@@ -821,6 +923,7 @@
     "java.util.Set",
     "java.util.concurrent.ExecutionException",
     "java.util.concurrent.atomic.AtomicBoolean",
+    "javax.annotation.concurrent.GuardedBy",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
@@ -828,11 +931,13 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowApplication.Wrapper",
+    "org.robolectric.util.Logger",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.WithType",
     "org.robolectric.shadows.ShadowInstrumentation._Instrumentation_",
     "org.robolectric.shadows.ShadowInstrumentation.BroadcastResultHolder",
-    "org.robolectric.shadows.ShadowInstrumentation.ServiceConnectionDataWrapper"
+    "org.robolectric.shadows.ShadowInstrumentation.ServiceConnectionDataWrapper",
+    "org.robolectric.shadows.ShadowInstrumentation.TargetAndRequestCode"
   ],
   "name": "org.robolectric.shadows.ShadowInstrumentation"
 }

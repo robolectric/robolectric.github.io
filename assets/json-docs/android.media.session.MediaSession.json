@@ -12,29 +12,12 @@
       "returnType": "void",
       "exceptions": [],
       "name": "__constructor__(android.content.Context,java.lang.String)"
-    },
-    "__constructor__(android.content.Context,java.lang.String,android.os.Bundle)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "context",
-        "tag",
-        "bundle"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 10000,
-      "name": "__constructor__(android.content.Context,java.lang.String,android.os.Bundle)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.content.Context",
     "android.media.session.MediaSession",
-    "android.os.Build.VERSION_CODES",
-    "android.os.Bundle",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

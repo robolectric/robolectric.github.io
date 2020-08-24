@@ -1,0 +1,55 @@
+{
+  "methods": {
+    "addHeldRole(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "roleName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addHeldRole(java.lang.String)",
+      "documentation": "Add a role that would be held by the calling app when invoking {@link\nRoleManager#isRoleHeld(String)}.\n"
+    },
+    "isRoleHeld(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "roleName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isRoleHeld(java.lang.String)",
+      "documentation": "Check whether the calling application is holding a particular role.\n\n\u003cp\u003eCallers can add held roles via {@link #addHeldRole(String)}\n\n@param roleName the name of the role to check for\n@return whether the calling application is holding the role\n"
+    },
+    "removeHeldRole(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "roleName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeHeldRole(java.lang.String)"
+    }
+  },
+  "imports": [
+    "android.app.role.RoleManager",
+    "android.os.Build",
+    "androidx.annotation.NonNull",
+    "android.util.ArraySet",
+    "com.android.internal.util.Preconditions",
+    "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
+  "name": "org.robolectric.shadows.ShadowRoleManager",
+  "documentation": "A shadow implementation of {@link android.app.role.RoleManager}. "
+}

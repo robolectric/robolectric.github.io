@@ -97,6 +97,20 @@
       "name": "addActivityIfNotPresent(android.content.ComponentName)",
       "documentation": "Makes sure that given activity exists.\n\nIf the activity doesn\u0027t exist yet, it will be created with {@code applicationInfo} set to an\nexisting application, or if it doesn\u0027t exist, a new package will be created.\n\n@return existing or newly created activity info.\n"
     },
+    "addCanonicalName(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "currentName",
+        "canonicalName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addCanonicalName(java.lang.String,java.lang.String)",
+      "documentation": "Adds a canonical package name for a package.\n\n\u003cp\u003eThis will be reflected when calling {@link\nPackageManager#currentToCanonicalPackageNames(String[])} or {@link\nPackageManager#canonicalToCurrentPackageNames(String[])} (String[])}.\n"
+    },
     "addChangedPackage(int,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -653,6 +667,19 @@
       "exceptions": [],
       "name": "createTempDir(java.lang.String)"
     },
+    "deleteModule(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "deleteModule(java.lang.String)",
+      "documentation": "Deletes a module when given the module\u0027s package name {@link ModuleInfo} be sure to give the\ncorrect name as this method does not ensure existence of the module before deletion. Since\nmodule installation ensures that a package exists in the device, also delete the package for\nfull deletion.\n\n@param packageName should be the value of {@link ModuleInfo#getPackageName}.\n@return deleted module of {@code null} if no module with this name exists.\n"
+    },
     "deletePackage(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -740,6 +767,19 @@
       "exceptions": [],
       "name": "getDeletedPackages()",
       "documentation": "Returns package names successfully deleted with {@link PackageManager#deletePackage(String,\nIPackageDeleteObserver, int)} Note that like real {@link PackageManager} the calling context\nmust have {@link android.Manifest.permission#DELETE_PACKAGES} permission set.\n"
+    },
+    "getDistractingPackageRestrictions(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pkg"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDistractingPackageRestrictions(java.lang.String)",
+      "documentation": "Returns the last value provided to {@code setDistractingPackageRestrictions} for {@code pkg}.\n\nDefaults to {@code PackageManager.RESTRICTION_NONE} if {@code\nsetDistractingPackageRestrictions} has not been called for {@code pkg}.\n"
     },
     "getIntentFiltersForActivity(android.content.ComponentName)": {
       "isImplementation": false,
@@ -947,6 +987,19 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getVerificationResult(int)"
+    },
+    "installModule(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "moduleInfoObject"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "installModule(java.lang.Object)",
+      "documentation": "Installs a module with the {@link PackageManager} as long as it is not {@code null}\n\n\u003cp\u003eIn order to create ModuleInfo objects in a valid state please use {@link ModuleInfoBuilder}.\n"
     },
     "installPackage(android.content.pm.PackageInfo)": {
       "isImplementation": false,
@@ -1220,7 +1273,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setShouldShowActivityChooser(boolean)",
-      "documentation": "If this method has been called with `true`, then in cases where many activities match a filter,\nan activity chooser will be resolved instead of just the first pick.\n"
+      "documentation": "If this method has been called with true, then in cases where many activities match a filter,\nan activity chooser will be resolved instead of just the first pick.\n"
     },
     "setShouldShowRequestPermissionRationale(java.lang.String,boolean)": {
       "isImplementation": false,
@@ -1319,6 +1372,7 @@
     "android.content.pm.FeatureInfo",
     "android.content.pm.IPackageDataObserver",
     "android.content.pm.IPackageDeleteObserver",
+    "android.content.pm.ModuleInfo",
     "android.content.pm.PackageInfo",
     "android.content.pm.PackageManager",
     "android.content.pm.PackageManager.NameNotFoundException",
@@ -1364,6 +1418,7 @@
     "java.util.Set",
     "java.util.SortedMap",
     "java.util.TreeMap",
+    "java.util.concurrent.ConcurrentHashMap",
     "java.util.function.BiConsumer",
     "javax.annotation.Nullable",
     "org.robolectric.RuntimeEnvironment",

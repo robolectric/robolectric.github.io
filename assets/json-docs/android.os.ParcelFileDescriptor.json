@@ -123,6 +123,7 @@
     "java.io.IOException",
     "java.io.RandomAccessFile",
     "java.lang.reflect.Constructor",
+    "java.util.UUID",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

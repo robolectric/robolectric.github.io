@@ -13,6 +13,31 @@
       "exceptions": [],
       "name": "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener)"
     },
+    "addLanguageAvailability(java.util.Locale)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "locale"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addLanguageAvailability(java.util.Locale)",
+      "documentation": "Make {@link Locale} an available language returned by {@link\nTextToSpeech#isLanguageAvailable(Locale)}. The value returned by {@link\n#isLanguageAvailable(Locale)} will vary depending on language, country, and variant.\n"
+    },
+    "clearLanguageAvailabilities()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLanguageAvailabilities()"
+    },
     "clearLastSpokenText()": {
       "isImplementation": false,
       "modifiers": [
@@ -33,6 +58,17 @@
       "exceptions": [],
       "name": "getContext()"
     },
+    "getCurrentLanguage()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Locale",
+      "exceptions": [],
+      "name": "getCurrentLanguage()",
+      "documentation": "Returns {@link Locale} set using {@link TextToSpeech#setLanguage(Locale)} or null if not set.\n"
+    },
     "getLastSpokenText()": {
       "isImplementation": false,
       "modifiers": [
@@ -42,6 +78,17 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getLastSpokenText()"
+    },
+    "getLastSynthesizeToFileText()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLastSynthesizeToFileText()",
+      "documentation": "Returns last text {@link CharSequence} passed to {@link\nTextToSpeech#synthesizeToFile(CharSequence, Bundle, File, String)}.\n"
     },
     "getOnInitListener()": {
       "isImplementation": false,
@@ -73,6 +120,18 @@
       "exceptions": [],
       "name": "getUtteranceProgressListener()"
     },
+    "isLanguageAvailable(java.util.Locale)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "lang"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "isLanguageAvailable(java.util.Locale)"
+    },
     "isShutdown()": {
       "isImplementation": false,
       "modifiers": [
@@ -93,6 +152,18 @@
       "exceptions": [],
       "name": "isStopped()",
       "documentation": "@return {@code true} if the TTS is stopped. "
+    },
+    "setLanguage(java.util.Locale)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "locale"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "setLanguage(java.util.Locale)"
     },
     "shutdown()": {
       "isImplementation": true,
@@ -144,6 +215,23 @@
       "returnType": "int",
       "exceptions": [],
       "name": "stop()"
+    },
+    "synthesizeToFile(java.lang.CharSequence,android.os.Bundle,java.io.File,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "text",
+        "params",
+        "file",
+        "utteranceId"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "synthesizeToFile(java.lang.CharSequence,android.os.Bundle,java.io.File,java.lang.String)",
+      "documentation": "Stores {@code text} and returns {@link TextToSpeech#SUCCESS}.\n\n@see #getLastSynthesizeToFileText()\n"
     }
   },
   "imports": [
@@ -156,11 +244,16 @@
     "android.speech.tts.TextToSpeech",
     "android.speech.tts.TextToSpeech.Engine",
     "android.speech.tts.UtteranceProgressListener",
+    "java.io.File",
     "java.util.HashMap",
+    "java.util.HashSet",
+    "java.util.Locale",
+    "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],

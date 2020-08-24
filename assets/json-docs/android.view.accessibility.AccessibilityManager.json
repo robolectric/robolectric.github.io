@@ -88,6 +88,17 @@
       ],
       "name": "getInstance(android.content.Context)"
     },
+    "getSentAccessibilityEvents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003candroid.view.accessibility.AccessibilityEvent\u003e",
+      "exceptions": [],
+      "name": "getSentAccessibilityEvents()",
+      "documentation": "Returns a list of all {@linkplain AccessibilityEvent accessibility events} that have been\nsent via {@link #sendAccessibilityEvent}.\n"
+    },
     "isAccessibilityButtonSupported()": {
       "isImplementation": true,
       "modifiers": [
@@ -99,7 +110,7 @@
       "exceptions": [],
       "minSdk": 27,
       "name": "isAccessibilityButtonSupported()",
-      "documentation": "Returns {@code true} by default, or the value specified via {@link\n#setAccessibilityButtonSupported(boolean)}\n"
+      "documentation": "Returns {@code true} by default, or the value specified via {@link\n#setAccessibilityButtonSupported(boolean)}.\n"
     },
     "isEnabled()": {
       "isImplementation": true,
@@ -154,6 +165,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "sendAccessibilityEvent(android.view.accessibility.AccessibilityEvent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "event"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendAccessibilityEvent(android.view.accessibility.AccessibilityEvent)"
     },
     "setAccessibilityButtonSupported(boolean)": {
       "isImplementation": false,
@@ -242,8 +265,11 @@
     "android.os.Looper",
     "android.os.Message",
     "android.util.Log",
+    "android.view.accessibility.AccessibilityEvent",
     "android.view.accessibility.AccessibilityManager",
     "android.view.accessibility.IAccessibilityManager",
+    "com.google.common.collect.ImmutableList",
+    "java.util.ArrayList",
     "java.util.List",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",

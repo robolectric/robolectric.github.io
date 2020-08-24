@@ -1,5 +1,100 @@
 {
   "methods": {
+    "__constructor__(java.lang.String,boolean,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "name",
+        "nameIsType",
+        "encoder"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(java.lang.String,boolean,boolean)"
+    },
+    "addDecoder(java.lang.String,org.robolectric.shadows.ShadowMediaCodec.CodecConfig)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "type",
+        "config"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addDecoder(java.lang.String,org.robolectric.shadows.ShadowMediaCodec.CodecConfig)",
+      "documentation": "Add a fake decoding codec to the Shadow. "
+    },
+    "addEncoder(java.lang.String,org.robolectric.shadows.ShadowMediaCodec.CodecConfig)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "type",
+        "config"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addEncoder(java.lang.String,org.robolectric.shadows.ShadowMediaCodec.CodecConfig)",
+      "documentation": "Add a fake encoding codec to the Shadow. "
+    },
+    "clearCodecs()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearCodecs()",
+      "documentation": "Clears any previously added encoders and decoders. "
+    },
+    "codecOwnsInputBuffer(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "codecOwnsInputBuffer(int)"
+    },
+    "configure(java.lang.String[],java.lang.Object[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "keys",
+        "values"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "configure(java.lang.String[],java.lang.Object[])"
+    },
+    "copyBufferInfo(android.media.MediaCodec.BufferInfo,android.media.MediaCodec.BufferInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "from",
+        "to"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "copyBufferInfo(android.media.MediaCodec.BufferInfo,android.media.MediaCodec.BufferInfo)"
+    },
     "freeByteBuffer(java.nio.ByteBuffer)": {
       "isImplementation": true,
       "modifiers": [
@@ -41,6 +136,17 @@
       "exceptions": [],
       "name": "getBuffers(boolean)",
       "documentation": "Returns the shadow buffers used for input or output. "
+    },
+    "getOutputFormat()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.media.MediaFormat",
+      "exceptions": [],
+      "name": "getOutputFormat()",
+      "documentation": "Returns a default {@link MediaFormat} if not set via {@link #getOutputFormat()}. "
     },
     "invalidateByteBuffer(java.nio.ByteBuffer[],int)": {
       "isImplementation": true,
@@ -95,6 +201,80 @@
       "returnType": "void",
       "exceptions": [],
       "name": "makeOutputBufferAvailable(int,android.media.MediaCodec.BufferInfo)"
+    },
+    "native_configure(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "keys",
+        "values",
+        "surface",
+        "crypto",
+        "descramblerBinder",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "native_configure(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
+    "native_configure(java.lang.String[],java.lang.Object[],android.view.Surface,android.media.MediaCrypto,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "keys",
+        "values",
+        "surface",
+        "crypto",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 25,
+      "name": "native_configure(java.lang.String[],java.lang.Object[],android.view.Surface,android.media.MediaCrypto,int)"
+    },
+    "native_dequeueInputBuffer(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "timeoutUs"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "native_dequeueInputBuffer(long)"
+    },
+    "native_dequeueOutputBuffer(android.media.MediaCodec.BufferInfo,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "info",
+        "timeoutUs"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "native_dequeueOutputBuffer(android.media.MediaCodec.BufferInfo,long)"
+    },
+    "native_flush()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "native_flush()",
+      "documentation": "Flushes the available output buffers. "
     },
     "native_queueInputBuffer(int,int,int,long,int)": {
       "isImplementation": true,
@@ -155,22 +335,19 @@
       "exceptions": [],
       "name": "postFakeNativeEvent(int,int,int,java.lang.Object)"
     },
-    "releaseOutputBuffer(int,boolean,boolean,long)": {
-      "isImplementation": true,
+    "recreateMediaFormatFromKeysValues(java.lang.String[],java.lang.Object[])": {
+      "isImplementation": false,
       "modifiers": [
-        "protected"
+        "private",
+        "static"
       ],
       "params": [
-        "index",
-        "render",
-        "updatePTS",
-        "timeNs"
+        "keys",
+        "values"
       ],
-      "returnType": "void",
+      "returnType": "android.media.MediaFormat",
       "exceptions": [],
-      "minSdk": 21,
-      "name": "releaseOutputBuffer(int,boolean,boolean,long)",
-      "documentation": "Triggers presentation of the corresponding input buffer for the given output buffer, if end of\nstream has not yet been signaled.\n"
+      "name": "recreateMediaFormatFromKeysValues(java.lang.String[],java.lang.Object[])"
     },
     "revalidateByteBuffer(java.nio.ByteBuffer[],int)": {
       "isImplementation": true,
@@ -186,6 +363,22 @@
       "minSdk": 21,
       "name": "revalidateByteBuffer(java.nio.ByteBuffer[],int)",
       "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. "
+    },
+    "throwCodecException(int,int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "errorCode",
+        "actionCode",
+        "message"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "throwCodecException(int,int,java.lang.String)",
+      "documentation": "Reflectively throws a {@link CodecException}. "
     },
     "validateInputByteBuffer(java.nio.ByteBuffer[],int)": {
       "isImplementation": true,
@@ -222,18 +415,35 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
+    "com.google.common.base.Preconditions.checkState",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.ReflectionHelpers.callConstructor",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
     "android.media.MediaCodec",
     "android.media.MediaCodec.BufferInfo",
+    "android.media.MediaCodec.CodecException",
+    "android.media.MediaCrypto",
+    "android.media.MediaFormat",
+    "android.view.Surface",
+    "java.nio.Buffer",
     "java.nio.ByteBuffer",
+    "java.nio.ByteOrder",
     "java.util.HashMap",
+    "java.util.Map",
+    "java.util.concurrent.BlockingQueue",
+    "java.util.concurrent.LinkedBlockingDeque",
+    "java.util.concurrent.TimeUnit",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadows.ShadowMediaCodec.ShadowCodecBuffer"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadows.ShadowMediaCodec.ShadowCodecBuffer",
+    "org.robolectric.shadows.ShadowMediaCodec.CodecConfig"
   ],
   "name": "org.robolectric.shadows.ShadowMediaCodec",
-  "documentation": "Implementation of {@link android.media.MediaCodec} which only supports a passthrough asynchronous\nencoding pipeline.\n\n\u003cp\u003eOnce the pipeline is started, a format change will be reported, switching to an empty\n{@link android.media.MediaFormat} with fake codec-specific info. Following this, the\nimplementation will present an input buffer, which will be directly copied to an output buffer\nonce queued, which will be subsequently presented to the callback handler.\n"
+  "documentation": "Implementation of {@link android.media.MediaCodec} which supports both asynchronous and\nsynchronous modes.\n\n\u003cp\u003eBy default for any encoded required, a 1 to 1 mapping will be used between the input and\noutput buffers. Data from a queued input buffer will be copied to the output buffer. In the case\nthat is it necessary so simulate some form of data compression, a custom encoder or decoder can\nbe added via {@link #addEncoder(String, CodecConfig)} and {@link #addDecoder(String,\nCodecConfig)} respectively.\n\n\u003cp\u003eAsynchronous mode: Once the codec is started, a format change will be reported, switching to\nan empty {@link android.media.MediaFormat} with fake codec-specific info. Following this, the\nimplementation will present an input buffer, which will be copied to an output buffer once\nqueued, which will be subsequently presented to the callback handler.\n"
 }

@@ -60,6 +60,34 @@
       "exceptions": [],
       "name": "setMode(int,java.lang.Object)"
     },
+    "setModifiedTime(long,java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "modifiedTime",
+        "structStat"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setModifiedTime(long,java.lang.Object)"
+    },
+    "setSize(long,java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "size",
+        "structStat"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSize(long,java.lang.Object)"
+    },
     "stat(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -82,7 +110,7 @@
     "android.system.StructStat",
     "java.io.File",
     "java.io.FileDescriptor",
-    "java.lang.reflect.Field",
+    "java.time.Duration",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

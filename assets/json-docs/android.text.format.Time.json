@@ -63,6 +63,20 @@
       "maxSdk": 20,
       "name": "before(android.text.format.Time)"
     },
+    "checkChar(java.lang.String,int,char)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "s",
+        "spos",
+        "expected"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkChar(java.lang.String,int,char)"
+    },
     "clear(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -138,6 +152,21 @@
       "exceptions": [],
       "name": "getCalendar()"
     },
+    "getChar(java.lang.String,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "s",
+        "spos",
+        "mul"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getChar(java.lang.String,int,int)"
+    },
     "getCurrentTimezone()": {
       "isImplementation": true,
       "modifiers": [
@@ -179,6 +208,19 @@
       "maxSdk": 20,
       "name": "isEpoch(android.text.format.Time)"
     },
+    "nativeParse3339(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "s"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "nativeParse3339(java.lang.String)"
+    },
     "parse(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -191,19 +233,6 @@
       "exceptions": [],
       "maxSdk": 20,
       "name": "parse(java.lang.String)"
-    },
-    "parse3339(java.lang.String)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "rfc3339String"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "maxSdk": 20,
-      "name": "parse3339(java.lang.String)"
     },
     "set(android.text.format.Time)": {
       "isImplementation": true,
@@ -304,7 +333,8 @@
     "throwTimeFormatException(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "private",
+        "static"
       ],
       "params": [
         "optionalMessage"

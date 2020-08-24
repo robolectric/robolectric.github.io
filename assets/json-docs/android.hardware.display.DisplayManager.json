@@ -39,7 +39,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "changeDisplay(int,java.lang.String)",
-      "documentation": "Changes properties of a simulated display. If `qualifiersStr` starts with a plus (`+`) sign,\nthe display\u0027s previous configuration is modified with the given qualifiers; otherwise defaults\nare applied as described [here](http://robolectric.org/device-configuration/).\n\n\u003cp\u003eIdles the main looper to ensure all listeners are notified.\n\n@param displayId the display id to change\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display\n"
+      "documentation": "Changes properties of a simulated display. If {@param qualifiersStr} starts with a plus (\u0027+\u0027)\nsign, the display\u0027s previous configuration is modified with the given qualifiers; otherwise\ndefaults are applied as described \u003ca\nhref\u003d\"http://robolectric.org/device-configuration/\"\u003ehere\u003c/a\u003e.\n\n\u003cp\u003eIdles the main looper to ensure all listeners are notified.\n\n@param displayId the display id to change\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display\n"
     },
     "changeDisplay(int,org.robolectric.util.Consumer\u003corg.robolectric.android.internal.DisplayConfig\u003e)": {
       "isImplementation": false,
@@ -53,7 +53,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "changeDisplay(int,org.robolectric.util.Consumer\u003corg.robolectric.android.internal.DisplayConfig\u003e)",
-      "documentation": "Changes properties of a simulated display. The original properties will be passed to the\n`consumer`, which may modify them in place. The display will be updated with the new\nproperties.\n\n@param displayId the display id to change\n@param consumer a function which modifies the display properties\n"
+      "documentation": "Changes properties of a simulated display. The original properties will be passed to the\n{@param consumer}, which may modify them in place. The display will be updated with the new\nproperties.\n\n@param displayId the display id to change\n@param consumer a function which modifies the display properties\n"
     },
     "configureDefaultDisplay(android.content.res.Configuration,android.util.DisplayMetrics)": {
       "isImplementation": false,
@@ -147,6 +147,62 @@
       "name": "removeDisplay(int)",
       "documentation": "Removes a simulated display and idles the main looper to ensure all listeners are notified.\n\n@param displayId the display id to remove\n"
     },
+    "setBrightnessConfiguration(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "config"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "setBrightnessConfiguration(java.lang.Object)"
+    },
+    "setBrightnessConfigurationForUser(java.lang.Object,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "config",
+        "userId",
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "setBrightnessConfigurationForUser(java.lang.Object,int,java.lang.String)"
+    },
+    "setBrightnessEvents(java.util.List\u003candroid.hardware.display.BrightnessChangeEvent\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "events"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBrightnessEvents(java.util.List\u003candroid.hardware.display.BrightnessChangeEvent\u003e)",
+      "documentation": "Set the slider events the system has seen. "
+    },
+    "setDefaultBrightnessConfiguration(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "config"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultBrightnessConfiguration(java.lang.Object)",
+      "documentation": "Set the default brightness configuration for this device. "
+    },
     "setSaturationLevel(float)": {
       "isImplementation": false,
       "modifiers": [
@@ -163,12 +219,14 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.P",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.extract",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
     "android.content.Context",
     "android.content.res.Configuration",
+    "android.hardware.display.BrightnessChangeEvent",
     "android.hardware.display.DisplayManager",
     "android.hardware.display.DisplayManagerGlobal",
     "android.os.Build",
@@ -176,9 +234,11 @@
     "android.view.Display",
     "android.view.DisplayInfo",
     "android.view.Surface",
+    "java.util.List",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.android.Bootstrap",
     "org.robolectric.android.internal.DisplayConfig",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

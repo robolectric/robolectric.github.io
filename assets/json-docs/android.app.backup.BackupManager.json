@@ -36,6 +36,16 @@
       "exceptions": [],
       "name": "beginRestoreSession()"
     },
+    "dataChanged()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dataChanged()"
+    },
     "enforceBackupPermission(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -47,6 +57,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "enforceBackupPermission(java.lang.String)"
+    },
+    "getDataChangedCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDataChangedCount()",
+      "documentation": "Returns number of times {@link #dataChanged()} was called. "
     },
     "getPackageRestoreToken(java.lang.String)": {
       "isImplementation": false,
@@ -71,6 +92,17 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "isBackupEnabled()"
+    },
+    "isDataChanged()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isDataChanged()",
+      "documentation": "Returns whether {@link #dataChanged()} was called. "
     },
     "reset()": {
       "isImplementation": false,

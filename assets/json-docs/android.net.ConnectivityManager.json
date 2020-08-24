@@ -201,6 +201,20 @@
       "exceptions": [],
       "name": "getNetworkPreference()"
     },
+    "getProxyForNetwork(android.net.Network)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "network"
+      ],
+      "returnType": "android.net.ProxyInfo",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getProxyForNetwork(android.net.Network)",
+      "documentation": "Returns a proxy for a given {@link Network}.\n\n\u003cp\u003eIn order {@link ConnectivityManager#getDefaultProxy()} to work the default network should be\nset using {@link ConnectivityManager#bindProcessToNetwork(Network)}.\n"
+    },
     "getReportedNetworkConnectivity()": {
       "isImplementation": false,
       "modifiers": [
@@ -212,6 +226,18 @@
       "name": "getReportedNetworkConnectivity()",
       "documentation": "@return networks and their connectivity status which was reported with {@link\n    #reportNetworkConnectivity}.\n"
     },
+    "getRestrictBackgroundStatus()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getRestrictBackgroundStatus()",
+      "documentation": "Gets the RESTRICT_BACKGROUND_STATUS value. Default value is 1\n(RESTRICT_BACKGROUND_STATUS_DISABLED).\n"
+    },
     "isActiveNetworkMetered()": {
       "isImplementation": true,
       "modifiers": [
@@ -221,7 +247,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isActiveNetworkMetered()",
-      "documentation": "Counts {@link ConnectivityManager#TYPE_MOBILE} networks as metered. Other types will be\nconsidered unmetered.\n\n@return `true` if the active network is metered, otherwise `false`.\n@see #setActiveNetworkInfo(NetworkInfo)\n@see #setDefaultNetworkActive(boolean)\n"
+      "documentation": "Counts {@link ConnectivityManager#TYPE_MOBILE} networks as metered. Other types will be\nconsidered unmetered.\n\n@return true if the active network is metered, otherwise false.\n@see #setActiveNetworkInfo(NetworkInfo)\n@see #setDefaultNetworkActive(boolean)\n"
     },
     "isDefaultNetworkActive()": {
       "isImplementation": true,
@@ -233,7 +259,7 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "isDefaultNetworkActive()",
-      "documentation": "@return `true` by default, or the value specifed via {@link #setDefaultNetworkActive(boolean)}\n@see #setDefaultNetworkActive(boolean)\n"
+      "documentation": "@return true by default, or the value specifed via {@link #setDefaultNetworkActive(boolean)}\n@see #setDefaultNetworkActive(boolean)\n"
     },
     "registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
@@ -407,7 +433,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setLinkProperties(android.net.Network,android.net.LinkProperties)",
-      "documentation": "Sets the LinkProperties for the given Network.\n\n\u003cp\u003eA LinkProperties can be constructed by\n`org.robolectric.util.ReflectionHelpers.callConstructor` in tests.\n"
+      "documentation": "Sets the LinkProperties for the given Network.\n\n\u003cp\u003eA LinkProperties can be constructed by {@code\norg.robolectric.util.ReflectionHelpers.callConstructor} in tests.\n"
     },
     "setNetworkCapabilities(android.net.Network,android.net.NetworkCapabilities)": {
       "isImplementation": false,
@@ -448,6 +474,33 @@
       "exceptions": [],
       "name": "setNetworkPreference(int)"
     },
+    "setProxyForNetwork(android.net.Network,android.net.ProxyInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "network",
+        "proxyInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProxyForNetwork(android.net.Network,android.net.ProxyInfo)",
+      "documentation": "Sets a proxy for a given {@link Network}.\n\n@param network The network.\n@param proxyInfo The proxy info.\n"
+    },
+    "setRestrictBackgroundStatus(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "status"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRestrictBackgroundStatus(int)",
+      "documentation": "Sets the next return value for {@link ConnectivityManager#getRestrictBackgroundStatus()}. "
+    },
     "unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
       "modifiers": [
@@ -469,6 +522,7 @@
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.Shadows.shadowOf",
     "android.net.ConnectivityManager",
     "android.net.ConnectivityManager.OnNetworkActiveListener",
     "android.net.LinkProperties",
@@ -476,6 +530,7 @@
     "android.net.NetworkCapabilities",
     "android.net.NetworkInfo",
     "android.net.NetworkRequest",
+    "android.net.ProxyInfo",
     "android.os.Handler",
     "java.util.HashMap",
     "java.util.HashSet",

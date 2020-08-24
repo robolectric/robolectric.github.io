@@ -56,6 +56,22 @@
       "exceptions": [],
       "name": "create(android.graphics.Typeface,int)"
     },
+    "create(android.graphics.Typeface,int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "family",
+        "weight",
+        "italic"
+      ],
+      "returnType": "android.graphics.Typeface",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "create(android.graphics.Typeface,int,boolean)"
+    },
     "create(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -220,6 +236,18 @@
       "exceptions": [],
       "name": "createUnderlyingTypeface(java.lang.String,int)"
     },
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "o"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)"
+    },
     "findById(long)": {
       "isImplementation": false,
       "modifiers": [
@@ -255,6 +283,16 @@
       "exceptions": [],
       "name": "getStyle()"
     },
+    "hashCode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "hashCode()"
+    },
     "initSystemDefaultTypefaces(java.lang.Object,java.lang.Object,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
@@ -268,8 +306,24 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "initSystemDefaultTypefaces(java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
+    "nativeCreateFromArray(long[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "familyArray",
+        "weight",
+        "italic"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nativeCreateFromArray(long[],int,int)"
     },
     "reset()": {
       "isImplementation": false,
@@ -291,6 +345,7 @@
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.Shadows.shadowOf",
     "android.annotation.SuppressLint",
     "android.content.res.AssetManager",
     "android.graphics.FontFamily",
@@ -304,6 +359,7 @@
     "java.util.Collection",
     "java.util.HashMap",
     "java.util.Map",
+    "java.util.Objects",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

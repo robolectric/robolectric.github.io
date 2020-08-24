@@ -13,7 +13,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "canDrawOverlays(android.content.Context)",
-      "documentation": "@return `false` by default, or the value specified via {@link #setCanDrawOverlays(boolean)} "
+      "documentation": "@return false by default, or the value specified via {@link #setCanDrawOverlays(boolean)} "
     },
     "reset()": {
       "isImplementation": false,
@@ -114,6 +114,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.P",
@@ -122,11 +123,13 @@
     "android.location.LocationManager",
     "android.os.Build",
     "android.provider.Settings",
+    "android.provider.Settings.Secure",
     "android.text.TextUtils",
     "java.util.Arrays",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.Map",
+    "java.util.Objects",
     "java.util.Set",
     "java.util.WeakHashMap",
     "org.robolectric.RuntimeEnvironment",

@@ -20,7 +20,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isEnabled()",
-      "documentation": "For tests, returns the value set via {@link #disableKeyguard()} or {@link reenableKeyguard},\nor `true` by default.\n\n@see #setKeyguardLocked(boolean)\n"
+      "documentation": "For tests, returns the value set via {@link #disableKeyguard()} or {@link\n#reenableKeyguard()}, or true by default.\n\n@see #setKeyguardLocked(boolean)\n"
     },
     "reenableKeyguard()": {
       "isImplementation": true,
@@ -47,10 +47,9 @@
     "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock",
-  "documentation": "An implementation of {@link KeyguardManager#KeyguardLock}, for use in tests. "
+  "documentation": "An implementation of {@link KeyguardManager.KeyguardLock}, for use in tests. "
 }

@@ -50,8 +50,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "callOnActivityResult(int,int,android.content.Intent)",
-      "documentation": "For internal use only. Not for public use. "
+      "name": "callOnActivityResult(int,int,android.content.Intent)"
     },
     "clickMenuItem(int)": {
       "isImplementation": false,
@@ -143,6 +142,16 @@
       "returnType": "android.content.ComponentName",
       "exceptions": [],
       "name": "getCallingActivity()"
+    },
+    "getCallingPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getCallingPackage()"
     },
     "getContentView()": {
       "isImplementation": false,
@@ -313,6 +322,17 @@
       "exceptions": [],
       "name": "getPendingTransitionExitAnimationResourceId()"
     },
+    "getReportFullyDrawn()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getReportFullyDrawn()",
+      "documentation": "@return whether {@code ReportFullyDrawn()} methods has been called.\n"
+    },
     "getRequestedOrientation()": {
       "isImplementation": true,
       "modifiers": [
@@ -386,6 +406,22 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "hasCancelledPendingTransitions()"
+    },
+    "internalCallDispatchActivityResult(java.lang.String,int,int,android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "who",
+        "requestCode",
+        "resultCode",
+        "data"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "internalCallDispatchActivityResult(java.lang.String,int,int,android.content.Intent)",
+      "documentation": "For internal use only. Not for public use. "
     },
     "isFinishing()": {
       "isImplementation": false,
@@ -514,6 +550,17 @@
       "exceptions": [],
       "name": "removeDialog(int)"
     },
+    "reportFullyDrawn()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "reportFullyDrawn()"
+    },
     "requestPermissions(java.lang.String[],int)": {
       "isImplementation": true,
       "modifiers": [
@@ -574,6 +621,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCallingActivity(android.content.ComponentName)"
+    },
+    "setCallingPackage(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCallingPackage(java.lang.String)"
     },
     "setCurrentFocus(android.view.View)": {
       "isImplementation": false,
@@ -838,6 +897,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
@@ -857,6 +917,8 @@
     "android.content.pm.PackageManager",
     "android.content.pm.PackageManager.NameNotFoundException",
     "android.database.Cursor",
+    "android.os.Build.VERSION",
+    "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.text.Selection",
     "android.text.SpannableStringBuilder",
@@ -882,6 +944,7 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.fakes.RoboMenuItem",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowInstrumentation.TargetAndRequestCode",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.WithType",

@@ -24,6 +24,19 @@
       "minSdk": 24,
       "name": "areNotificationsEnabled()"
     },
+    "canNotifyAsPackage(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "pkg"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "canNotifyAsPackage(java.lang.String)"
+    },
     "cancel(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -218,7 +231,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "getCurrentInterruptionFilter()",
-      "documentation": "@return {@link NotificationManager#INTERRUPTION_FILTER_ALL} by default, or the value specified\n        via {@link #setInterruptionFilter(int)}\n"
+      "documentation": "@return {@link NotificationManager#INTERRUPTION_FILTER_ALL} by default, or the value specified\n    via {@link #setInterruptionFilter(int)}\n"
     },
     "getNotification(int)": {
       "isImplementation": false,
@@ -292,6 +305,17 @@
       "minSdk": 26,
       "name": "getNotificationChannels()"
     },
+    "getNotificationDelegate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getNotificationDelegate()"
+    },
     "getNotificationPolicy()": {
       "isImplementation": true,
       "modifiers": [
@@ -303,7 +327,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "getNotificationPolicy()",
-      "documentation": "@return the value specified via {@link #setNotificationPolicy(Policy)}\n"
+      "documentation": "@return the value specified via {@link #setNotificationPolicy(Policy)} "
     },
     "isChannelDeleted(java.lang.String)": {
       "isImplementation": false,
@@ -329,7 +353,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "isNotificationPolicyAccessGranted()",
-      "documentation": "@return the value specified via {@link #setNotificationPolicyAccessGranted(boolean)}\n"
+      "documentation": "@return the value specified via {@link #setNotificationPolicyAccessGranted(boolean)} "
     },
     "notify(int,android.app.Notification)": {
       "isImplementation": true,
@@ -371,6 +395,33 @@
       "minSdk": 24,
       "name": "removeAutomaticZenRule(java.lang.String)"
     },
+    "setCanNotifyAsPackage(java.lang.String,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "otherPackage",
+        "canNotify"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCanNotifyAsPackage(java.lang.String,boolean)",
+      "documentation": "Sets notification delegate for the package provided.\n\n\u003cp\u003e{@link #canNotifyAsPackage(String)} will be returned based on this value.\n\n@param otherPackage the package for which the current package can notify on behalf\n@param canNotify whether the current package is set as notification delegate for \u0027otherPackage\u0027\n"
+    },
+    "setEnforceMaxNotificationLimit(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "enforceMaxNotificationLimit"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEnforceMaxNotificationLimit(boolean)",
+      "documentation": "Ensures a notification limit is applied before posting the notification.\n\n\u003cp\u003eWhen set to true a maximum notification limit of 25 is applied. Notifications past this\nlimit are dropped and are not posted or enqueued.\n\n\u003cp\u003eWhen set to false no limit is applied and all notifications are posted or enqueued. This is\nthe default behavior.\n"
+    },
     "setInterruptionFilter(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -385,6 +436,19 @@
       "minSdk": 23,
       "name": "setInterruptionFilter(int)",
       "documentation": "Currently does not support checking for granted policy access.\n\n@see NotificationManager#getCurrentInterruptionFilter()\n"
+    },
+    "setNotificationDelegate(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "delegate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setNotificationDelegate(java.lang.String)"
     },
     "setNotificationPolicy(android.app.NotificationManager.Policy)": {
       "isImplementation": true,
@@ -455,6 +519,7 @@
     "android.app.NotificationManager.INTERRUPTION_FILTER_ALL",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.Q",
     "android.app.AutomaticZenRule",
     "android.app.Notification",
     "android.app.NotificationManager",
@@ -462,19 +527,23 @@
     "android.os.Build",
     "android.os.Parcel",
     "android.service.notification.StatusBarNotification",
+    "androidx.annotation.NonNull",
     "com.google.common.base.Preconditions",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.ImmutableMap",
+    "com.google.common.collect.Sets",
     "java.util.ArrayList",
-    "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.Set",
     "java.util.UUID",
+    "java.util.concurrent.ConcurrentHashMap",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadows.ShadowNotificationManager.Key"
+    "org.robolectric.shadows.ShadowNotificationManager.Key",
+    "org.robolectric.shadows.ShadowNotificationManager.PostedNotification"
   ],
   "name": "org.robolectric.shadows.ShadowNotificationManager"
 }

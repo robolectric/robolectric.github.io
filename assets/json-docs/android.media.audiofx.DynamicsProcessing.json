@@ -1,0 +1,39 @@
+{
+  "methods": {
+    "getDefaultParameter(java.nio.ByteBuffer)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "parameter"
+      ],
+      "returnType": "java.util.Optional\u003cjava.nio.ByteBuffer\u003e",
+      "exceptions": [],
+      "name": "getDefaultParameter(java.nio.ByteBuffer)"
+    },
+    "intToByteBuffer(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "java.nio.ByteBuffer",
+      "exceptions": [],
+      "name": "intToByteBuffer(int)"
+    }
+  },
+  "imports": [
+    "android.media.audiofx.AudioEffect",
+    "android.media.audiofx.DynamicsProcessing",
+    "com.google.common.collect.ImmutableMap",
+    "java.nio.ByteBuffer",
+    "java.util.Optional",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowDynamicsProcessing",
+  "documentation": "Implements {@link DynamicsProcessing} by relying on {@link ShadowAudioEffect}. "
+}

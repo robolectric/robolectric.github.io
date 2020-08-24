@@ -9,7 +9,7 @@
       "returnType": "android.os.Bundle",
       "exceptions": [],
       "name": "getApplicationRestrictions()",
-      "documentation": "@return `null` by default, or the value specified via {@link #setApplicationRestrictions(Bundle)}\n"
+      "documentation": "@return null by default, or the value specified via {@link #setApplicationRestrictions(Bundle)}\n"
     },
     "setApplicationRestrictions(android.os.Bundle)": {
       "isImplementation": false,

@@ -12,6 +12,32 @@
       "exceptions": [],
       "name": "disableForegroundDispatch(android.app.Activity)"
     },
+    "disableReaderMode(android.app.Activity)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "activity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "disableReaderMode(android.app.Activity)"
+    },
+    "dispatchTagDiscovered(android.nfc.Tag)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "tag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dispatchTagDiscovered(android.nfc.Tag)",
+      "documentation": "Dispatches the tag onto any registered readers. "
+    },
     "enableForegroundDispatch(android.app.Activity,android.app.PendingIntent,android.content.IntentFilter[],java.lang.String[][])": {
       "isImplementation": true,
       "modifiers": [
@@ -26,6 +52,22 @@
       "returnType": "void",
       "exceptions": [],
       "name": "enableForegroundDispatch(android.app.Activity,android.app.PendingIntent,android.content.IntentFilter[],java.lang.String[][])"
+    },
+    "enableReaderMode(android.app.Activity,android.nfc.NfcAdapter.ReaderCallback,int,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "activity",
+        "callback",
+        "flags",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "enableReaderMode(android.app.Activity,android.nfc.NfcAdapter.ReaderCallback,int,android.os.Bundle)"
     },
     "getDisabledActivity()": {
       "isImplementation": false,
@@ -132,6 +174,17 @@
       "exceptions": [],
       "name": "isEnabled()"
     },
+    "isInReaderMode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isInReaderMode()",
+      "documentation": "Returns true if NFC is in reader mode. "
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -220,8 +273,13 @@
     "android.app.PendingIntent",
     "android.content.Context",
     "android.content.IntentFilter",
+    "android.content.pm.PackageManager",
     "android.nfc.NdefMessage",
     "android.nfc.NfcAdapter",
+    "android.nfc.Tag",
+    "android.os.Build",
+    "android.os.Bundle",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
