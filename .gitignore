@@ -8,3 +8,5 @@ build
 *.ipr
 *.iws
 vendor
+.jekyll-cache
+.jekyll-metadata
