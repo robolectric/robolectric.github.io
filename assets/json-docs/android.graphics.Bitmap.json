@@ -227,6 +227,20 @@
       "exceptions": [],
       "name": "extractAlpha()"
     },
+    "extractAlpha(android.graphics.Paint,int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "paint",
+        "offsetXY"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "extractAlpha(android.graphics.Paint,int[])",
+      "documentation": "This shadow implementation ignores the given paint and offsetXY and simply calls {@link\n#extractAlpha()}.\n"
+    },
     "getAllocationByteCount()": {
       "isImplementation": true,
       "modifiers": [
@@ -820,6 +834,7 @@
     "android.graphics.Bitmap",
     "android.graphics.Color",
     "android.graphics.Matrix",
+    "android.graphics.Paint",
     "android.graphics.RectF",
     "android.os.Build",
     "android.os.Parcel",

@@ -737,6 +737,22 @@
       "name": "setCurrentPosition(int)",
       "documentation": "Sets the current position, bypassing the normal state checking. Use with\ncare.\n\n@param position\n         the new playback position.\n"
     },
+    "setDataSource(android.content.Context,android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "uri"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "maxSdk": 25,
+      "name": "setDataSource(android.content.Context,android.net.Uri)"
+    },
     "setDataSource(android.content.Context,android.net.Uri,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
@@ -751,7 +767,42 @@
       "exceptions": [
         "java.io.IOException"
       ],
+      "minSdk": 14,
+      "maxSdk": 25,
       "name": "setDataSource(android.content.Context,android.net.Uri,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)"
+    },
+    "setDataSource(android.content.Context,android.net.Uri,java.util.Map\u003cjava.lang.String,java.lang.String\u003e,java.util.List\u003cjava.net.HttpCookie\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "uri",
+        "headers",
+        "cookies"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 26,
+      "name": "setDataSource(android.content.Context,android.net.Uri,java.util.Map\u003cjava.lang.String,java.lang.String\u003e,java.util.List\u003cjava.net.HttpCookie\u003e)"
+    },
+    "setDataSource(android.content.res.AssetFileDescriptor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "assetFileDescriptor"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 24,
+      "name": "setDataSource(android.content.res.AssetFileDescriptor)"
     },
     "setDataSource(android.media.MediaDataSource)": {
       "isImplementation": true,
@@ -839,7 +890,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setInvalidStateBehavior(org.robolectric.shadows.ShadowMediaPlayer.InvalidStateBehavior)",
-      "documentation": "Specifies how the media player should behave when a method is invoked in an\ninvalid state. Three modes are supported (as defined by the\n{@link InvalidStateBehavior} enum):\n\n### {@link InvalidStateBehavior#SILENT}\nNo invalid state checking is done at all. All methods can be\ninvoked from any state without throwing any exceptions or invoking the\nerror listener.\n\nThis mode is provided primarily for backwards compatibility, and for this\nreason it is the default. For proper testing one of the other two modes is\nprobably preferable.\n\n### {@link InvalidStateBehavior#EMULATE}\nThe shadow will attempt to emulate the behavior of the actual\n{@link MediaPlayer} implementation. This is based on a reading of the\ndocumentation and on actual experiments done on a Jelly Bean device. The\nofficial documentation is not all that clear, but basically methods fall\ninto three categories:\n* Those that log an error when invoked in an invalid state but don\u0027t\n  throw an exception or invoke {@code onError()}. An example is\n  {@link #getVideoHeight()}.\n* Synchronous error handling: methods always throw an exception (usually\n  {@link IllegalStateException} but don\u0027t invoke {@code onError()}.\n  Examples are {@link #prepare()} and {@link #setDataSource(String)}.\n* Asynchronous error handling: methods don\u0027t throw an exception but\n  invoke {@code onError()}.\n\nAdditionally, all three methods behave synchronously (throwing\n{@link IllegalStateException} when invoked from the END state.\n\nTo complicate matters slightly, the official documentation sometimes\ncontradicts observed behavior. For example, the documentation says it is\nillegal to call {@link #setDataSource} from the ERROR state - however, in\npractice it works fine. Conversely, the documentation says that it is legal\nto invoke {@link #getCurrentPosition()} from the INITIALIZED state, however\ntesting showed that this caused an error. Wherever there is a discrepancy\nbetween documented and observed behavior, this implementation has gone with\nthe most conservative implementation (ie, it is illegal to invoke\n{@link #setDataSource} from the ERROR state and likewise illegal to invoke\n{@link #getCurrentPosition()} from the INITIALIZED state.\n\n### {@link InvalidStateBehavior#ASSERT}\nThe shadow will raise an assertion any time that a method is\ninvoked in an invalid state. The philosophy behind this mode is that to\ninvoke a method in an invalid state is a programming error - a bug, pure\nand simple. As such it should be discovered and eliminated at development and\ntesting time, rather than anticipated and handled at runtime. Asserting is\na way of testing for these bugs during testing.\n\n@param invalidStateBehavior\n         the behavior mode for this shadow to use during testing.\n@see #getInvalidStateBehavior()\n"
+      "documentation": "Specifies how the media player should behave when a method is invoked in an invalid state.\nThree modes are supported (as defined by the {@link InvalidStateBehavior} enum):\n\n\u003ch3\u003e{@link InvalidStateBehavior#SILENT SILENT}\u003c/h3\u003e\n\nNo invalid state checking is done at all. All methods can be invoked from any state without\nthrowing any exceptions or invoking the error listener.\n\n\u003cp\u003eThis mode is provided primarily for backwards compatibility, and for this reason it is the\ndefault. For proper testing one of the other two modes is probably preferable.\n\n\u003ch3\u003e{@link InvalidStateBehavior#EMULATE EMULATE}\u003c/h3\u003e\n\nThe shadow will attempt to emulate the behavior of the actual {@link MediaPlayer}\nimplementation. This is based on a reading of the documentation and on actual experiments done\non a Jelly Bean device. The official documentation is not all that clear, but basically methods\nfall into three categories:\n\n\u003cul\u003e\n  \u003cli\u003eThose that log an error when invoked in an invalid state but don\u0027t throw an exception or\n      invoke {@code onError()}. An example is {@link #getVideoHeight()}.\n  \u003cli\u003eSynchronous error handling: methods always throw an exception (usually {@link\n      IllegalStateException} but don\u0027t invoke {@code onError()}. Examples are {@link\n      #prepare()} and {@link #setDataSource(String)}.\n  \u003cli\u003eAsynchronous error handling: methods don\u0027t throw an exception but invoke {@code\n      onError()}.\n\u003c/ul\u003e\n\nAdditionally, all three methods behave synchronously (throwing {@link IllegalStateException}\nwhen invoked from the END state.\n\n\u003cp\u003eTo complicate matters slightly, the official documentation sometimes contradicts observed\nbehavior. For example, the documentation says it is illegal to call {@link #setDataSource} from\nthe ERROR state - however, in practice it works fine. Conversely, the documentation says that\nit is legal to invoke {@link #getCurrentPosition()} from the INITIALIZED state, however testing\nshowed that this caused an error. Wherever there is a discrepancy between documented and\nobserved behavior, this implementation has gone with the most conservative implementation (ie,\nit is illegal to invoke {@link #setDataSource} from the ERROR state and likewise illegal to\ninvoke {@link #getCurrentPosition()} from the INITIALIZED state.\n\n\u003ch3\u003e{@link InvalidStateBehavior#ASSERT ASSERT}\u003c/h3\u003e\n\nThe shadow will raise an assertion any time that a method is invoked in an invalid state. The\nphilosophy behind this mode is that to invoke a method in an invalid state is a programming\nerror - a bug, pure and simple. As such it should be discovered and eliminated at development\nand testing time, rather than anticipated and handled at runtime. Asserting is a way of testing\nfor these bugs during testing.\n\n@param invalidStateBehavior the behavior mode for this shadow to use during testing.\n@see #getInvalidStateBehavior()\n"
     },
     "setLooping(boolean)": {
       "isImplementation": true,
@@ -965,7 +1016,10 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadows.ShadowMediaPlayer.State.END",
     "org.robolectric.shadows.ShadowMediaPlayer.State.ERROR",
@@ -979,6 +1033,7 @@
     "org.robolectric.shadows.ShadowMediaPlayer.State.STOPPED",
     "org.robolectric.shadows.util.DataSource.toDataSource",
     "android.content.Context",
+    "android.content.res.AssetFileDescriptor",
     "android.media.MediaDataSource",
     "android.media.MediaPlayer",
     "android.net.Uri",
@@ -988,10 +1043,12 @@
     "android.os.SystemClock",
     "java.io.FileDescriptor",
     "java.io.IOException",
+    "java.net.HttpCookie",
     "java.util.ArrayList",
     "java.util.EnumSet",
     "java.util.HashMap",
     "java.util.Iterator",
+    "java.util.List",
     "java.util.Map",
     "java.util.Map.Entry",
     "java.util.Random",
@@ -1011,5 +1068,5 @@
     "org.robolectric.shadows.ShadowMediaPlayer.ErrorCallback"
   ],
   "name": "org.robolectric.shadows.ShadowMediaPlayer",
-  "documentation": "Automated testing of media playback can be a difficult thing - especially\ntesting that your code properly handles asynchronous errors and events. This\nnear impossible task is made quite straightforward using this implementation\nof {@link MediaPlayer} with Robolectric.\n\nThis shadow implementation provides much of the functionality needed to\nemulate {@link MediaPlayer} initialization and playback behavior without having\nto play actual media files. A summary of the features included are:\n\n* Construction-time callback hook {@link CreateListener} so that\n  newly-created {@link MediaPlayer} instances can have their shadows configured\n  before they are used.\n* Emulation of the {@link android.media.MediaPlayer.OnCompletionListener\n  OnCompletionListener}, {@link android.media.MediaPlayer.OnErrorListener\n  OnErrorListener}, {@link android.media.MediaPlayer.OnInfoListener\n  OnInfoListener}, {@link android.media.MediaPlayer.OnPreparedListener\n  OnPreparedListener} and\n  {@link android.media.MediaPlayer.OnSeekCompleteListener\n  OnSeekCompleteListener}.\n* Full support of the {@link MediaPlayer} internal states and their\n  transition map.\n* Configure time parameters such as playback duration, preparation delay\n  and (@link #setSeekDelay seek delay}.\n* Emulation of asynchronous callback events during playback through\n  Robolectric\u0027s scheduling system using the {@link MediaInfo} inner class.\n* Emulation of error behavior when methods are called from invalid states,\n  or to throw assertions when methods are invoked in invalid states (using\n  {@link #setInvalidStateBehavior}).\n* Emulation of different playback behaviors based on the current data\n  source, as passed in to {@link #setDataSource(String) setDataSource()}, using\n  {@link #addMediaInfo}.\n* Emulation of exceptions when calling {@link #setDataSource} using\n  {@link #addException}.\n\n\u003cb\u003eNote\u003c/b\u003e: One gotcha with this shadow is that you need to either configure an\nexception or a {@link ShadowMediaPlayer.MediaInfo} instance for that data source\n(using {@link #addException(DataSource, IOException)} or\n{@link #addMediaInfo(DataSource, MediaInfo)} respectively) \u003ci\u003ebefore\u003c/i\u003e\ncalling {@link #setDataSource}, otherwise you\u0027ll get an\n{@link IllegalArgumentException}.\n\nThe current features of {@code ShadowMediaPlayer} were focused on development\nfor testing playback of audio tracks. Thus support for emulating timed text and\nvideo events is incomplete. None of these features would be particularly onerous\nto add/fix - contributions welcome, of course!\n\n@author Fr Jeremy Krieg, Holy Monastery of St Nectarios, Adelaide, Australia\n"
+  "documentation": "Automated testing of media playback can be a difficult thing - especially testing that your code\nproperly handles asynchronous errors and events. This near impossible task is made quite\nstraightforward using this implementation of {@link MediaPlayer} with Robolectric.\n\n\u003cp\u003eThis shadow implementation provides much of the functionality needed to emulate {@link\nMediaPlayer} initialization and playback behavior without having to play actual media files. A\nsummary of the features included are:\n\n\u003cul\u003e\n  \u003cli\u003eConstruction-time callback hook {@link CreateListener} so that newly-created {@link\n      MediaPlayer} instances can have their shadows configured before they are used.\n  \u003cli\u003eEmulation of the {@link android.media.MediaPlayer.OnCompletionListener\n      OnCompletionListener}, {@link android.media.MediaPlayer.OnErrorListener OnErrorListener},\n      {@link android.media.MediaPlayer.OnInfoListener OnInfoListener}, {@link\n      android.media.MediaPlayer.OnPreparedListener OnPreparedListener} and {@link\n      android.media.MediaPlayer.OnSeekCompleteListener OnSeekCompleteListener}.\n  \u003cli\u003eFull support of the {@link MediaPlayer} internal states and their transition map.\n  \u003cli\u003eConfigure time parameters such as playback duration, preparation delay and {@link\n      #setSeekDelay(int)}.\n  \u003cli\u003eEmulation of asynchronous callback events during playback through Robolectric\u0027s scheduling\n      system using the {@link MediaInfo} inner class.\n  \u003cli\u003eEmulation of error behavior when methods are called from invalid states, or to throw\n      assertions when methods are invoked in invalid states (using {@link\n      #setInvalidStateBehavior}).\n  \u003cli\u003eEmulation of different playback behaviors based on the current data source, as passed in to\n      {@link #setDataSource(String) setDataSource()}, using {@link #addMediaInfo}.\n  \u003cli\u003eEmulation of exceptions when calling {@link #setDataSource} using {@link #addException}.\n\u003c/ul\u003e\n\n\u003cb\u003eNote\u003c/b\u003e: One gotcha with this shadow is that you need to either configure an exception or a\n{@link ShadowMediaPlayer.MediaInfo} instance for that data source (using {@link\n#addException(DataSource, IOException)} or {@link #addMediaInfo(DataSource, MediaInfo)}\nrespectively) \u003ci\u003ebefore\u003c/i\u003e calling {@link #setDataSource}, otherwise you\u0027ll get an {@link\nIllegalArgumentException}.\n\n\u003cp\u003eThe current features of {@code ShadowMediaPlayer} were focused on development for testing\nplayback of audio tracks. Thus support for emulating timed text and video events is incomplete.\nNone of these features would be particularly onerous to add/fix - contributions welcome, of\ncourse!\n\n@author Fr Jeremy Krieg, Holy Monastery of St Nectarios, Adelaide, Australia\n"
 }

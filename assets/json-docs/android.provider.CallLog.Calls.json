@@ -1,0 +1,52 @@
+{
+  "methods": {
+    "getLastOutgoingCall(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLastOutgoingCall(android.content.Context)",
+      "documentation": "Gets the last outgoing call String set by {@link #setLastOutgoingCall(String)}.\n\n@param context A Context object not used\n@return The last outgoing call set by {@link #setLastOutgoingCall(String)}\n"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setLastOutgoingCall(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "lastCall"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLastOutgoingCall(java.lang.String)",
+      "documentation": "Sets a last outgoing call that can later be retrieved by {@link #getLastOutgoingCall(Context)}.\n\n@param lastCall The last outgoing call String.\n"
+    }
+  },
+  "imports": [
+    "android.content.Context",
+    "android.provider.CallLog",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter"
+  ],
+  "name": "org.robolectric.shadows.ShadowCallLogCalls",
+  "documentation": "Shadow for the system\u0027s CallLog.Call class that allows tests to configure the most recent call.\n"
+}

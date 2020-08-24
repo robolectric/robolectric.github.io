@@ -346,7 +346,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "switchUser(android.os.UserHandle)"
     },
     "switchUser(int)": {

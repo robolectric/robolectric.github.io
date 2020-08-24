@@ -83,6 +83,17 @@
       "name": "getCarrierConfig()",
       "documentation": "Returns a new empty {@link PersistableBundle} by default, or the value specified via {@link\n#setCarrierConfig(PersistableBundle)}.\n"
     },
+    "getCarrierIdFromSimMccMnc()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getCarrierIdFromSimMccMnc()"
+    },
     "getCarrierPackageNamesForIntent(android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
@@ -132,6 +143,29 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "getCurrentPhoneType(int)"
+    },
+    "getDataNetworkType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getDataNetworkType()",
+      "documentation": "Returns whatever value was set by the last call to {@link #setDataNetworkType}, defaulting to\n{@link TelephonyManager#NETWORK_TYPE_UNKNOWN} if it was never called.\n"
+    },
+    "getDataState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDataState()",
+      "documentation": "Data state may be specified via {@link #setDataState(int)}. If no override is set, this\ndefaults to {@link TelephonyManager#DATA_DISCONNECTED}.\n"
     },
     "getDeviceId()": {
       "isImplementation": true,
@@ -227,7 +261,7 @@
     "getListenersForFlags(int)": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "protected"
       ],
       "params": [
         "flags"
@@ -322,6 +356,17 @@
       "exceptions": [],
       "name": "getPhoneType()"
     },
+    "getSentDialerSpecialCodes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getSentDialerSpecialCodes()",
+      "documentation": "Returns immutable list of special codes sent using {@link\nTelephonyManager#sendDialerSpecialCode(String)}. Special codes contained in the list are in the\norder they were sent.\n"
+    },
     "getServiceState()": {
       "isImplementation": true,
       "modifiers": [
@@ -378,6 +423,18 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "getSimCountryIso(int)"
+    },
+    "getSimLocale()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.Locale",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getSimLocale()",
+      "documentation": "Returns sim locale set by {@link #setSimLocale}. "
     },
     "getSimOperator()": {
       "isImplementation": true,
@@ -517,7 +574,7 @@
     "initListener(android.telephony.PhoneStateListener,int)": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "protected"
       ],
       "params": [
         "listener",
@@ -526,33 +583,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "initListener(android.telephony.PhoneStateListener,int)"
-    },
-    "isCurrentEmergencyNumber(java.lang.String)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "number"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "minSdk": 10000,
-      "name": "isCurrentEmergencyNumber(java.lang.String)",
-      "documentation": "Cribbed from {@link android.telephony.PhoneNumberUtils#isEmergencyNumberInternal}.\n\nTODO(b/122324733) need better implementation\n"
-    },
-    "isCurrentPotentialEmergencyNumber(java.lang.String)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "number"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "minSdk": 10000,
-      "name": "isCurrentPotentialEmergencyNumber(java.lang.String)"
     },
     "isDataEnabled()": {
       "isImplementation": true,
@@ -566,6 +596,32 @@
       "name": "isDataEnabled()",
       "documentation": "Implementation for {@link TelephonyManager#isDataEnabled}.\n@return False by default, unless set with {@link TelephonyManager#setDataEnabled}.\n"
     },
+    "isEmergencyNumber(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "number"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isEmergencyNumber(java.lang.String)",
+      "documentation": "Cribbed from {@link android.telephony.PhoneNumberUtils#isEmergencyNumberInternal}.\n\nTODO(b/122324733) need better implementation\n"
+    },
+    "isHearingAidCompatibilitySupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isHearingAidCompatibilitySupported()",
+      "documentation": "Implementation for {@link TelephonyManager#isHearingAidCompatibilitySupported()}.\n\n@return False by default, unless set with {@link\n    #setHearingAidCompatibilitySupported(boolean)}.\n"
+    },
     "isNetworkRoaming()": {
       "isImplementation": true,
       "modifiers": [
@@ -577,6 +633,31 @@
       "name": "isNetworkRoaming()",
       "documentation": "Returns {@code false} by default or the value specified via {@link\n#setIsNetworkRoaming(boolean)}\n"
     },
+    "isPotentialEmergencyNumber(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "number"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isPotentialEmergencyNumber(java.lang.String)"
+    },
+    "isRttSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isRttSupported()",
+      "documentation": "Implementation for {@link TelephonyManager#isRttSupported}.\n\n@return False by default, unless set with {@link #setRttSupported(boolean)}.\n"
+    },
     "isSmsCapable()": {
       "isImplementation": true,
       "modifiers": [
@@ -586,7 +667,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isSmsCapable()",
-      "documentation": "@return `true` by default, or the value specified via {@link #setIsSmsCapable(boolean)} "
+      "documentation": "@return true by default, or the value specified via {@link #setIsSmsCapable(boolean)} "
+    },
+    "isVoiceCapable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 22,
+      "name": "isVoiceCapable()",
+      "documentation": "Returns {@code true} by default or the value specified via {@link #setVoiceCapable(boolean)}.\n"
     },
     "isVoicemailVibrationEnabled(android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
@@ -615,6 +708,21 @@
       "exceptions": [],
       "name": "listen(android.telephony.PhoneStateListener,int)"
     },
+    "requestCellInfoUpdate(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cellInfoExecutor",
+        "cellInfoCallback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "requestCellInfoUpdate(java.lang.Object,java.lang.Object)",
+      "documentation": "Returns the value set by {@link #setCallbackCellInfos}, defaulting to calling the real {@link\nTelephonyManager#NETWORK_TYPE_UNKNOWN} if it was never called.\n"
+    },
     "resetSimCountryIsos()": {
       "isImplementation": false,
       "modifiers": [
@@ -636,6 +744,20 @@
       "exceptions": [],
       "name": "resetSimStates()",
       "documentation": "Clears {@code slotIndex} to state mapping and resets to default state. "
+    },
+    "sendDialerSpecialCode(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "inputCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "sendDialerSpecialCode(java.lang.String)",
+      "documentation": "Implementation for {@link TelephonyManager#sendDialerSpecialCode(String)}.\n\n@param inputCode special code to be sent.\n"
     },
     "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)": {
       "isImplementation": false,
@@ -676,6 +798,19 @@
       "name": "setCallState(int,java.lang.String)",
       "documentation": "Sets the current call state with the option to specify an incoming phone number for the\nCALL_STATE_RINGING state. The incoming phone number will be ignored for all other cases.\n"
     },
+    "setCallbackCellInfos(java.util.List\u003candroid.telephony.CellInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callbackCellInfos"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCallbackCellInfos(java.util.List\u003candroid.telephony.CellInfo\u003e)",
+      "documentation": "Sets the value to be returned by calls to {@link requestCellInfoUpdate}. Note that it does not\nset the value to be returned by calls to {@link getAllCellInfo}; for that, see\n{@link setAllCellInfo}.\n"
+    },
     "setCarrierConfig(android.os.PersistableBundle)": {
       "isImplementation": false,
       "modifiers": [
@@ -688,6 +823,19 @@
       "exceptions": [],
       "name": "setCarrierConfig(android.os.PersistableBundle)",
       "documentation": "Sets the value returned by {@link TelephonyManager#getCarrierConfig()}.\n\n@param carrierConfig\n"
+    },
+    "setCarrierIdFromSimMccMnc(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "carrierIdFromSimMccMnc"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCarrierIdFromSimMccMnc(int)",
+      "documentation": "Sets the value to be returned by {@link #getCarrierIdFromSimMccMnc()}. "
     },
     "setCarrierPackageNamesForPhone(int,java.util.List\u003cjava.lang.String\u003e)": {
       "isImplementation": false,
@@ -732,7 +880,7 @@
     "setDataEnabled(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "protected"
+        "public"
       ],
       "params": [
         "enabled"
@@ -741,7 +889,33 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "setDataEnabled(boolean)",
-      "documentation": "Implementation for {@link TelephonyManager#setDataEnabled}. "
+      "documentation": "Implementation for {@link TelephonyManager#setDataEnabled}. Marked as public in order to allow\nit to be used as a test API.\n"
+    },
+    "setDataNetworkType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dataNetworkType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDataNetworkType(int)",
+      "documentation": "Sets the value to be returned by calls to {@link #getDataNetworkType}. This \u003cb\u003eshould\u003c/b\u003e\ncorrespond to one of the {@code NETWORK_TYPE_*} constants defined on {@link TelephonyManager},\nbut this is not enforced.\n"
+    },
+    "setDataState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dataState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDataState(int)",
+      "documentation": "Sets the data state returned by {@link #getDataState()}. "
     },
     "setDeviceId(int,java.lang.String)": {
       "isImplementation": false,
@@ -780,6 +954,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setGroupIdLevel1(java.lang.String)"
+    },
+    "setHearingAidCompatibilitySupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHearingAidCompatibilitySupported(boolean)",
+      "documentation": "Sets the value to be returned by {@link #isHearingAidCompatibilitySupported()}. "
     },
     "setImei(int,java.lang.String)": {
       "isImplementation": false,
@@ -919,7 +1106,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setNetworkType(int)"
+      "name": "setNetworkType(int)",
+      "documentation": "@deprecated {@link TelephonyManager#getNetworkType()} was replaced with {@link\n    TelephonyManager#getDataNetworkType()} in Android N, and has been deprecated in Android R.\n    Use {@link #setDataNetworkType instead}.\n"
     },
     "setPhoneCount(int)": {
       "isImplementation": false,
@@ -957,6 +1145,33 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setReadPhoneStatePermission(boolean)"
+    },
+    "setRequestCellInfoUpdateErrorValues(int,java.lang.Throwable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "errorCode",
+        "detail"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRequestCellInfoUpdateErrorValues(int,java.lang.Throwable)",
+      "documentation": "Sets the values to be returned by a presumed error condition in {@link requestCellInfoUpdate}.\nThese values will persist until cleared: to clear, set (0, null) using this method.\n"
+    },
+    "setRttSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isRttSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRttSupported(boolean)",
+      "documentation": "Sets the value to be returned by {@link #isRttSupported()} "
     },
     "setServiceState(android.telephony.ServiceState)": {
       "isImplementation": false,
@@ -1022,6 +1237,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSimCountryIso(java.lang.String)"
+    },
+    "setSimLocale(java.util.Locale)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "simLocale"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSimLocale(java.util.Locale)",
+      "documentation": "Sets the sim locale returned by {@link #getSimLocale()}. "
     },
     "setSimOperator(java.lang.String)": {
       "isImplementation": false,
@@ -1154,6 +1382,19 @@
       "name": "setVisualVoicemailPackageName(java.lang.String)",
       "documentation": "Sets the value to be returned by {@link #getVisualVoicemailPackageName()}. "
     },
+    "setVoiceCapable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "voiceCapable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVoiceCapable(boolean)",
+      "documentation": "Sets the value returned by {@link #isVoiceCapable()}. "
+    },
     "setVoiceMailAlphaTag(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -1228,16 +1469,19 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
     "android.telephony.PhoneStateListener.LISTEN_CALL_STATE",
     "android.telephony.PhoneStateListener.LISTEN_CELL_INFO",
     "android.telephony.PhoneStateListener.LISTEN_CELL_LOCATION",
     "android.telephony.PhoneStateListener.LISTEN_NONE",
     "android.telephony.TelephonyManager.CALL_STATE_IDLE",
     "android.telephony.TelephonyManager.CALL_STATE_RINGING",
+    "android.annotation.CallSuper",
     "android.content.Context",
     "android.content.Intent",
     "android.net.Uri",
@@ -1253,20 +1497,25 @@
     "android.telephony.SignalStrength",
     "android.telephony.SubscriptionManager",
     "android.telephony.TelephonyManager",
+    "android.telephony.TelephonyManager.CellInfoCallback",
     "android.text.TextUtils",
     "android.util.SparseArray",
     "android.util.SparseIntArray",
     "com.google.common.base.Predicate",
+    "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Iterables",
+    "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Locale",
     "java.util.Map",
+    "java.util.concurrent.Executor",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowTelephonyManager"

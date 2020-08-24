@@ -64,6 +64,21 @@
       "name": "createSensorEvent(int)",
       "documentation": "Creates a {@link SensorEvent} with the given value array size, which the caller should set\nbased on the type of {@link Sensor} which is being emulated.\n\n\u003cp\u003eCallers can then specify individual values for the event. For example, for a proximity event\na caller may wish to specify the distance value:\n\n\u003cpre\u003e{@code\nevent.values[0] \u003d distance;\n}\u003c/pre\u003e\n\n\u003cp\u003eSee {@link SensorEvent#values} for more information about values.\n"
     },
+    "createSensorEvent(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "valueArraySize",
+        "sensorType"
+      ],
+      "returnType": "android.hardware.SensorEvent",
+      "exceptions": [],
+      "name": "createSensorEvent(int,int)",
+      "documentation": "Creates a {@link SensorEvent} for the given {@link Sensor} type with the given value array\nsize, which the caller should set based on the type of sensor which is being emulated.\n\n\u003cp\u003eCallers can then specify individual values for the event. For example, for a proximity event\na caller may wish to specify the distance value:\n\n\u003cpre\u003e{@code\nevent.values[0] \u003d distance;\n}\u003c/pre\u003e\n\n\u003cp\u003eSee {@link SensorEvent#values} for more information about values.\n"
+    },
     "getDefaultSensor(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -109,7 +124,22 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "hasListener(android.hardware.SensorEventListener)"
+      "name": "hasListener(android.hardware.SensorEventListener)",
+      "documentation": "Tests if the sensor manager has a registration for the given listener. "
+    },
+    "hasListener(android.hardware.SensorEventListener,android.hardware.Sensor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener",
+        "sensor"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasListener(android.hardware.SensorEventListener,android.hardware.Sensor)",
+      "documentation": "Tests if the sensor manager has a registration for the given listener for the given sensor. "
     },
     "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int)": {
       "isImplementation": true,
@@ -157,6 +187,24 @@
       "name": "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,int)",
       "documentation": "@param maxLatency is ignored. "
     },
+    "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,int,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener",
+        "sensor",
+        "rate",
+        "maxLatency",
+        "handler"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,int,android.os.Handler)",
+      "documentation": "@param maxLatency is ignored.\n@param handler is ignored\n"
+    },
     "sendSensorEventToListeners(android.hardware.SensorEvent)": {
       "isImplementation": false,
       "modifiers": [
@@ -197,6 +245,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.O",
     "com.google.common.base.Preconditions.checkArgument",
     "android.hardware.Sensor",
@@ -206,12 +255,14 @@
     "android.hardware.SensorManager",
     "android.os.Handler",
     "android.os.MemoryFile",
+    "com.google.common.collect.HashMultimap",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.Multimap",
+    "com.google.common.collect.Multimaps",
     "java.util.ArrayList",
-    "java.util.Collections",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
-    "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

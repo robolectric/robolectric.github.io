@@ -12,6 +12,20 @@
       "exceptions": [],
       "name": "addNetwork(android.net.wifi.WifiConfiguration)"
     },
+    "addOnWifiUsabilityStatsListener(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "executorObject",
+        "listenerObject"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "addOnWifiUsabilityStatsListener(java.lang.Object,java.lang.Object)"
+    },
     "calculateSignalLevel(int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -35,6 +49,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "checkAccessWifiStatePermission()"
+    },
+    "clearUsabilityScores()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearUsabilityScores()",
+      "documentation": "Clears wifi usability scores previous passed to {@link WifiManager#updateWifiUsabilityScore}\n"
     },
     "connect(android.net.wifi.WifiConfiguration,android.net.wifi.WifiManager.ActionListener)": {
       "isImplementation": true,
@@ -101,6 +126,18 @@
       "exceptions": [],
       "name": "createWifiLock(java.lang.String)"
     },
+    "disableNetwork(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "netId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "disableNetwork(int)"
+    },
     "enableNetwork(int,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -108,7 +145,7 @@
       ],
       "params": [
         "netId",
-        "disableOthers"
+        "attemptConnect"
       ],
       "returnType": "boolean",
       "exceptions": [],
@@ -144,6 +181,16 @@
       "returnType": "android.net.wifi.WifiInfo",
       "exceptions": [],
       "name": "getConnectionInfo()"
+    },
+    "getContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getContext()"
     },
     "getDhcpInfo()": {
       "isImplementation": true,
@@ -196,6 +243,17 @@
       "exceptions": [],
       "name": "getScanResults()"
     },
+    "getUsabilityScores()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowWifiManager.WifiUsabilityScore\u003e",
+      "exceptions": [],
+      "name": "getUsabilityScores()",
+      "documentation": "Returns wifi usability scores previous passed to {@link WifiManager#updateWifiUsabilityScore}\n"
+    },
     "getWifiConfiguration(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -228,6 +286,19 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "is5GHzBandSupported()"
+    },
+    "isNetworkEnabled(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "netId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isNetworkEnabled(int)",
+      "documentation": "Whether the network is enabled or not. "
     },
     "isQuoted(java.lang.String)": {
       "isImplementation": false,
@@ -276,6 +347,21 @@
       "exceptions": [],
       "name": "makeCopy(android.net.wifi.WifiConfiguration,int)"
     },
+    "postUsabilityStats(int,boolean,org.robolectric.shadows.WifiUsabilityStatsEntryBuilder)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "seqNum",
+        "isSameBssidAndFreq",
+        "statsBuilder"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "postUsabilityStats(int,boolean,org.robolectric.shadows.WifiUsabilityStatsEntryBuilder)",
+      "documentation": "Post Wifi stats to any listeners registered with {@link\nWifiManager#addOnWifiUsabilityStatsListener}\n"
+    },
     "reconnect()": {
       "isImplementation": true,
       "modifiers": [
@@ -297,6 +383,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "removeNetwork(int)"
+    },
+    "removeOnWifiUsabilityStatsListener(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listenerObject"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "removeOnWifiUsabilityStatsListener(java.lang.Object)"
     },
     "saveConfiguration()": {
       "isImplementation": true,
@@ -510,6 +609,21 @@
       "name": "updateNetwork(android.net.wifi.WifiConfiguration)",
       "documentation": "Adds or updates a network which can later be retrieved with {@link #getWifiConfiguration(int)}\nmethod. A null {@param config}, or one with a networkId less than 0, or a networkId that had\nits updatePermission removed using the {@link #setUpdateNetworkPermission(int, boolean)} will\nreturn -1, which indicates a failure to update.\n"
     },
+    "updateWifiUsabilityScore(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "seqNum",
+        "score",
+        "predictionHorizonSec"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "updateWifiUsabilityScore(int,int,int)"
+    },
     "wasConfigurationSaved()": {
       "isImplementation": false,
       "modifiers": [
@@ -525,6 +639,7 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.Q",
     "android.content.Context",
     "android.net.ConnectivityManager",
     "android.net.DhcpInfo",
@@ -534,12 +649,20 @@
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiManager",
     "android.net.wifi.WifiManager.MulticastLock",
+    "android.net.wifi.WifiUsabilityStatsEntry",
+    "android.provider.Settings",
+    "android.util.ArraySet",
     "android.util.Pair",
+    "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.BitSet",
+    "java.util.HashSet",
     "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.Set",
+    "java.util.concurrent.ConcurrentHashMap",
+    "java.util.concurrent.Executor",
     "java.util.concurrent.atomic.AtomicInteger",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
@@ -549,8 +672,9 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock",
-    "org.robolectric.shadows.ShadowWifiManager.ShadowMulticastLock"
+    "org.robolectric.shadows.ShadowWifiManager.ShadowMulticastLock",
+    "org.robolectric.shadows.ShadowWifiManager.WifiUsabilityScore"
   ],
   "name": "org.robolectric.shadows.ShadowWifiManager",
-  "documentation": "Shadow for {@link android.net.wifi.WifiManager}.\n"
+  "documentation": "Shadow for {@link android.net.wifi.WifiManager}. "
 }

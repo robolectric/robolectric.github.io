@@ -1,0 +1,128 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    },
+    "addCall(android.telecom.Call)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "call"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addCall(android.telecom.Call)"
+    },
+    "canAddCall()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "canAddCall()"
+    },
+    "getBluetoothAudio()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothDevice",
+      "exceptions": [],
+      "name": "getBluetoothAudio()",
+      "documentation": "@return the last value provided to {@code requestBluetoothAudio()}. "
+    },
+    "getCallAudioState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.telecom.CallAudioState",
+      "exceptions": [],
+      "name": "getCallAudioState()"
+    },
+    "requestBluetoothAudio(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bluetoothDevice"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "requestBluetoothAudio(android.bluetooth.BluetoothDevice)"
+    },
+    "setAudioRoute(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioRoute"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAudioRoute(int)"
+    },
+    "setCanAddCall(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "canAddCall"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCanAddCall(boolean)",
+      "documentation": "Set the value that {@code canAddCall()} method should return. "
+    },
+    "setMuted(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "muted"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMuted(boolean)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.P",
+    "android.annotation.TargetApi",
+    "android.bluetooth.BluetoothDevice",
+    "android.os.Build.VERSION",
+    "android.telecom.Call",
+    "android.telecom.CallAudioState",
+    "android.telecom.InCallAdapter",
+    "android.telecom.InCallService",
+    "android.telecom.Phone",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowInCallService",
+  "documentation": "Shadow for {@link android.telecom.InCallService}. "
+}

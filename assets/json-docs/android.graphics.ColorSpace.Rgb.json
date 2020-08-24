@@ -8,7 +8,7 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "getNativeInstance()"
     }
   },

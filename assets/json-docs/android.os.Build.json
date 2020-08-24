@@ -35,6 +35,20 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "setBrand(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "brand"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBrand(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#BRAND} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
     "setDevice(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -47,7 +61,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDevice(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build#DEVICE} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build#DEVICE} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setFingerprint(java.lang.String)": {
       "isImplementation": false,
@@ -61,7 +75,21 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setFingerprint(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build#FINGERPRINT} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build#FINGERPRINT} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
+    "setHardware(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "hardware"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHardware(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#HARDWARE} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setId(java.lang.String)": {
       "isImplementation": false,
@@ -75,7 +103,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setId(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build#ID} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build#ID} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setManufacturer(java.lang.String)": {
       "isImplementation": false,
@@ -89,7 +117,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setManufacturer(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build#MANUFACTURER} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build#MANUFACTURER} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setModel(java.lang.String)": {
       "isImplementation": false,
@@ -103,7 +131,21 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setModel(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build#MODEL} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build#MODEL} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
+    "setProduct(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "product"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProduct(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#PRODUCT} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setRadioVersion(java.lang.String)": {
       "isImplementation": false,
@@ -145,7 +187,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setTags(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build#TAGS} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build#TAGS} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setType(java.lang.String)": {
       "isImplementation": false,
@@ -159,7 +201,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setType(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build#TYPE} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build#TYPE} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setVersionCodename(java.lang.String)": {
       "isImplementation": false,
@@ -173,7 +215,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setVersionCodename(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build.VERSION#CODENAME} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build.VERSION#CODENAME} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setVersionIncremental(java.lang.String)": {
       "isImplementation": false,
@@ -187,7 +229,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setVersionIncremental(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build.VERSION#INCREMENTAL} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build.VERSION#INCREMENTAL} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setVersionRelease(java.lang.String)": {
       "isImplementation": false,
@@ -201,11 +243,26 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setVersionRelease(java.lang.String)",
-      "documentation": "Sets the value of the {@link Build.VERSION#RELEASE} field.\n\nIt will be reset for the next test.\n"
+      "documentation": "Sets the value of the {@link Build.VERSION#RELEASE} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
+    "setVersionSecurityPatch(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "securityPatch"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVersionSecurityPatch(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build.VERSION#SECURITY_PATCH} field. Available in Android M+.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",

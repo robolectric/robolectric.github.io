@@ -85,6 +85,24 @@
       "minSdk": 21,
       "name": "addUserRestriction(android.content.ComponentName,java.lang.String)"
     },
+    "bindDeviceAdminServiceAsUser(android.content.ComponentName,android.content.Intent,android.content.ServiceConnection,int,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "serviceIntent",
+        "conn",
+        "flags",
+        "targetUser"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "bindDeviceAdminServiceAsUser(android.content.ComponentName,android.content.Intent,android.content.ServiceConnection,int,android.os.UserHandle)",
+      "documentation": "Bind to the same package in another user.\n\n\u003cp\u003eThis validates that the targetUser is one from {@link\n#getBindDeviceAdminTargetUsers(ComponentName)} but does not actually bind to a different user,\ninstead binding to the same user.\n\n\u003cp\u003eIt also does not validate the service being bound to.\n"
+    },
     "clearPackagePersistentPreferredActivities(android.content.ComponentName,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -210,6 +228,19 @@
       "exceptions": [],
       "name": "getActiveAdmins()"
     },
+    "getAffiliationIds(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "java.util.Set\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getAffiliationIds(android.content.ComponentName)"
+    },
     "getApplicationRestrictions(android.content.ComponentName,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -247,6 +278,20 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "getAutoTimeRequired()"
+    },
+    "getBindDeviceAdminTargetUsers(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "java.util.List\u003candroid.os.UserHandle\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getBindDeviceAdminTargetUsers(android.content.ComponentName)",
+      "documentation": "Returns the list of target users that the calling device or profile owner can use when calling\n{@link #bindDeviceAdminServiceAsUser}.\n\n@see #setBindDeviceAdminTargetUsers(List)\n"
     },
     "getCameraDisabled(android.content.ComponentName)": {
       "isImplementation": true,
@@ -309,6 +354,19 @@
       "minSdk": 21,
       "name": "getLockTaskPackages(android.content.ComponentName)"
     },
+    "getLongSupportMessage(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getLongSupportMessage(android.content.ComponentName)"
+    },
     "getMaximumFailedPasswordsForWipe(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -368,7 +426,7 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "getPasswordComplexity()"
     },
     "getPasswordExpiration(android.content.ComponentName)": {
@@ -518,6 +576,19 @@
       "minSdk": 23,
       "name": "getPermissionGrantState(android.content.ComponentName,java.lang.String,java.lang.String)"
     },
+    "getPermissionPolicy(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getPermissionPolicy(android.content.ComponentName)"
+    },
     "getPermittedAccessibilityServices(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -568,7 +639,7 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "getProfileOwnerNameAsUser(int)",
-      "documentation": "Returns the human-readable name of the profile owner for a user if set using\n{@link #setProfileOwnerName}, otherwise `null`.\n"
+      "documentation": "Returns the human-readable name of the profile owner for a user if set using {@link\n#setProfileOwnerName}, otherwise null.\n"
     },
     "getShadowUserManager()": {
       "isImplementation": false,
@@ -579,6 +650,19 @@
       "returnType": "org.robolectric.shadows.ShadowUserManager",
       "exceptions": [],
       "name": "getShadowUserManager()"
+    },
+    "getShortSupportMessage(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "java.lang.CharSequence",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getShortSupportMessage(android.content.ComponentName)"
     },
     "getStorageEncryption(android.content.ComponentName)": {
       "isImplementation": true,
@@ -602,6 +686,17 @@
       "exceptions": [],
       "name": "getStorageEncryptionStatus()",
       "documentation": "@return the previously set status; default is {@link\n    DevicePolicyManager#ENCRYPTION_STATUS_UNSUPPORTED}\n@see #setStorageEncryptionStatus(int)\n"
+    },
+    "getSystemUpdatePolicy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.app.admin.SystemUpdatePolicy",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getSystemUpdatePolicy()"
     },
     "getUserProvisioningState()": {
       "isImplementation": true,
@@ -724,6 +819,28 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "isDeviceOwnerApp(java.lang.String)"
+    },
+    "isDeviceProvisioned()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "isDeviceProvisioned()"
+    },
+    "isDeviceProvisioningConfigApplied()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "isDeviceProvisioningConfigApplied()"
     },
     "isLockTaskPermitted(java.lang.String)": {
       "isImplementation": true,
@@ -911,6 +1028,20 @@
       "name": "setActivePasswordSufficient(boolean)",
       "documentation": "Sets if the password meets the current requirements.\n\n@param sufficient indicates the password meets the current requirements\n"
     },
+    "setAffiliationIds(android.content.ComponentName,java.util.Set\u003cjava.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "ids"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setAffiliationIds(android.content.ComponentName,java.util.Set\u003cjava.lang.String\u003e)"
+    },
     "setApplicationHidden(android.content.ComponentName,java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -969,6 +1100,19 @@
       "minSdk": 21,
       "name": "setAutoTimeRequired(android.content.ComponentName,boolean)"
     },
+    "setBindDeviceAdminTargetUsers(java.util.List\u003candroid.os.UserHandle\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bindDeviceAdminTargetUsers"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBindDeviceAdminTargetUsers(java.util.List\u003candroid.os.UserHandle\u003e)",
+      "documentation": "Set the list of target users that the calling device or profile owner can use when calling\n{@link #bindDeviceAdminServiceAsUser}.\n\n@see #getBindDeviceAdminTargetUsers(ComponentName)\n"
+    },
     "setCameraDisabled(android.content.ComponentName,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -994,6 +1138,30 @@
       "exceptions": [],
       "name": "setDeviceOwner(android.content.ComponentName)",
       "documentation": "Sets the admin as active admin and device owner.\n\n@see DevicePolicyManager#getDeviceOwner()\n"
+    },
+    "setDeviceProvisioned(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isProvisioned"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDeviceProvisioned(boolean)",
+      "documentation": "Sets whether the device is provisioned. "
+    },
+    "setDeviceProvisioningConfigApplied()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setDeviceProvisioningConfigApplied()"
     },
     "setKeyguardDisabledFeatures(android.content.ComponentName,int)": {
       "isImplementation": true,
@@ -1022,6 +1190,20 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "setLockTaskPackages(android.content.ComponentName,java.lang.String[])"
+    },
+    "setLongSupportMessage(android.content.ComponentName,java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "message"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setLongSupportMessage(android.content.ComponentName,java.lang.CharSequence)"
     },
     "setMaximumFailedPasswordsForWipe(android.content.ComponentName,int)": {
       "isImplementation": true,
@@ -1266,6 +1448,20 @@
       "minSdk": 23,
       "name": "setPermissionGrantState(android.content.ComponentName,java.lang.String,java.lang.String,int)"
     },
+    "setPermissionPolicy(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "policy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setPermissionPolicy(android.content.ComponentName,int)"
+    },
     "setPermittedAccessibilityServices(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
       "modifiers": [
@@ -1336,6 +1532,20 @@
       "minSdk": 26,
       "name": "setResetPasswordToken(android.content.ComponentName,byte[])"
     },
+    "setShortSupportMessage(android.content.ComponentName,java.lang.CharSequence)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "message"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setShortSupportMessage(android.content.ComponentName,java.lang.CharSequence)"
+    },
     "setStorageEncryption(android.content.ComponentName,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -1361,6 +1571,33 @@
       "exceptions": [],
       "name": "setStorageEncryptionStatus(int)",
       "documentation": "Setter for {@link DevicePolicyManager#getStorageEncryptionStatus()}. "
+    },
+    "setSystemUpdatePolicy(android.app.admin.SystemUpdatePolicy)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "policy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSystemUpdatePolicy(android.app.admin.SystemUpdatePolicy)",
+      "documentation": "Sets the system update policy.\n\n@see #setSystemUpdatePolicy(ComponentName, SystemUpdatePolicy)\n"
+    },
+    "setSystemUpdatePolicy(android.content.ComponentName,android.app.admin.SystemUpdatePolicy)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "policy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setSystemUpdatePolicy(android.content.ComponentName,android.app.admin.SystemUpdatePolicy)"
     },
     "setUninstallBlocked(android.content.ComponentName,java.lang.String,boolean)": {
       "isImplementation": true,
@@ -1433,25 +1670,32 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
+    "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
+    "android.annotation.RequiresPermission",
     "android.annotation.SuppressLint",
+    "android.annotation.SystemApi",
     "android.app.ApplicationPackageManager",
     "android.app.KeyguardManager",
     "android.app.admin.DeviceAdminReceiver",
     "android.app.admin.DevicePolicyManager",
     "android.app.admin.DevicePolicyManager.PasswordComplexity",
     "android.app.admin.IDevicePolicyManager",
+    "android.app.admin.SystemUpdatePolicy",
     "android.content.ComponentName",
     "android.content.Context",
+    "android.content.Intent",
     "android.content.IntentFilter",
+    "android.content.ServiceConnection",
     "android.content.pm.PackageInfo",
     "android.content.pm.PackageManager",
     "android.content.pm.PackageManager.NameNotFoundException",
@@ -1460,7 +1704,9 @@
     "android.os.Bundle",
     "android.os.Handler",
     "android.os.Process",
+    "android.os.UserHandle",
     "android.text.TextUtils",
+    "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.Collection",

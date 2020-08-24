@@ -36,8 +36,8 @@
       "name": "areThereUnrecycledWindows(boolean)",
       "documentation": "Check for leaked objects that were {@code obtain}ed but never\n{@code recycle}d.\n\n@param printUnrecycledWindowsToSystemErr - if true, stack traces of calls\n       to {@code obtain} that lack matching calls to {@code recycle} are\n       dumped to System.err.\n@return {@code true} if there are unrecycled windows\n"
     },
-    "equals(java.lang.Object)": {
-      "isImplementation": true,
+    "deepEquals(java.lang.Object)": {
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -46,7 +46,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "equals(java.lang.Object)"
+      "name": "deepEquals(java.lang.Object)"
     },
     "getBoundsInScreen(android.graphics.Rect)": {
       "isImplementation": true,
@@ -348,11 +348,22 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setType(int)"
+    },
+    "toString()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "toString()"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.graphics.Rect",
     "android.view.accessibility.AccessibilityNodeInfo",
     "android.view.accessibility.AccessibilityWindowInfo",

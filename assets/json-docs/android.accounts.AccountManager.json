@@ -123,6 +123,23 @@
       "exceptions": [],
       "name": "addOnAccountsUpdatedListener(android.accounts.OnAccountsUpdateListener,android.os.Handler,boolean)"
     },
+    "addOnAccountsUpdatedListener(android.accounts.OnAccountsUpdateListener,android.os.Handler,boolean,java.lang.String[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener",
+        "handler",
+        "updateImmediately",
+        "accountTypes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "addOnAccountsUpdatedListener(android.accounts.OnAccountsUpdateListener,android.os.Handler,boolean,java.lang.String[])",
+      "documentation": "Based on {@link AccountManager#addOnAccountsUpdatedListener(OnAccountsUpdateListener, Handler,\nboolean, String[])}. {@link Handler} is ignored.\n"
+    },
     "blockingGetAuthToken(android.accounts.Account,java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -263,6 +280,16 @@
       "exceptions": [],
       "name": "getAuthenticatorTypes()"
     },
+    "getListeners()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Map\u003candroid.accounts.OnAccountsUpdateListener,java.util.Set\u003cjava.lang.String\u003e\u003e",
+      "exceptions": [],
+      "name": "getListeners()"
+    },
     "getNextAddAccountOptions()": {
       "isImplementation": false,
       "modifiers": [
@@ -341,15 +368,32 @@
       "exceptions": [],
       "name": "invalidateAuthToken(java.lang.String,java.lang.String)"
     },
-    "notifyListeners()": {
+    "notifyListener(android.accounts.OnAccountsUpdateListener,java.util.Set\u003cjava.lang.String\u003e,android.accounts.Account[])": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
-      "params": [],
+      "params": [
+        "listener",
+        "accountTypesToReportOn",
+        "allAccounts"
+      ],
       "returnType": "void",
       "exceptions": [],
-      "name": "notifyListeners()"
+      "name": "notifyListener(android.accounts.OnAccountsUpdateListener,java.util.Set\u003cjava.lang.String\u003e,android.accounts.Account[])",
+      "documentation": "Based off of private method postToHandler(Handler, OnAccountsUpdateListener, Account[]) in\n{@link AccountManager}\n"
+    },
+    "notifyListeners(android.accounts.Account)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "changedAccount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyListeners(android.accounts.Account)"
     },
     "peekAuthToken(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
@@ -543,6 +587,7 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.O",
     "android.accounts.Account",
     "android.accounts.AccountManager",
     "android.accounts.AccountManagerCallback",
@@ -557,6 +602,7 @@
     "android.content.Intent",
     "android.os.Bundle",
     "android.os.Handler",
+    "androidx.annotation.Nullable",
     "java.io.IOException",
     "java.util.ArrayList",
     "java.util.Arrays",

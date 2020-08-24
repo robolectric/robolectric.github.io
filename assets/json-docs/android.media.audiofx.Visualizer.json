@@ -1,0 +1,140 @@
+{
+  "methods": {
+    "native_getCaptureSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 9,
+      "name": "native_getCaptureSize()"
+    },
+    "native_getEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 9,
+      "name": "native_getEnabled()"
+    },
+    "native_getFft(byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "fft"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 9,
+      "name": "native_getFft(byte[])"
+    },
+    "native_getSamplingRate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 9,
+      "name": "native_getSamplingRate()"
+    },
+    "native_getWaveForm(byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "waveform"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 9,
+      "name": "native_getWaveForm(byte[])"
+    },
+    "native_setCaptureSize(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "size"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 9,
+      "name": "native_setCaptureSize(int)"
+    },
+    "native_setEnabled(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 9,
+      "name": "native_setEnabled(boolean)"
+    },
+    "setDataCaptureListener(android.media.audiofx.Visualizer.OnDataCaptureListener,int,boolean,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener",
+        "rate",
+        "waveform",
+        "fft"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 9,
+      "name": "setDataCaptureListener(android.media.audiofx.Visualizer.OnDataCaptureListener,int,boolean,boolean)"
+    },
+    "setSource(org.robolectric.shadows.ShadowVisualizer.VisualizerSource)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "source"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSource(org.robolectric.shadows.ShadowVisualizer.VisualizerSource)"
+    },
+    "triggerDataCapture()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerDataCapture()",
+      "documentation": "Trigger calls to the existing {@link OnDataCaptureListener}.\n\n\u003cp\u003eThis is a no-op if the listener has not been set.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.GINGERBREAD",
+    "android.media.audiofx.Visualizer",
+    "android.media.audiofx.Visualizer.OnDataCaptureListener",
+    "java.util.concurrent.atomic.AtomicReference",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadows.ShadowVisualizer.VisualizerSource"
+  ],
+  "name": "org.robolectric.shadows.ShadowVisualizer",
+  "documentation": "Shadow for the {@link Visualizer} class. "
+}

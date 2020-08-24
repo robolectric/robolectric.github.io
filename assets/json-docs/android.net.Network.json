@@ -12,7 +12,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "bindSocket(java.io.FileDescriptor)",
-      "documentation": "No-ops. We cannot assume that a Network represents a real network interface on the device\nrunning this test, so we have nothing to bind the socket to.\n"
+      "documentation": "Simulates a socket bind. isSocketBound can be called to verify that the fd was bound to\nthis network interface, and boundSocketCount() will increment for any unique socket.\n"
     },
     "bindSocket(java.net.DatagramSocket)": {
       "isImplementation": true,
@@ -26,7 +26,7 @@
       "exceptions": [],
       "minSdk": 22,
       "name": "bindSocket(java.net.DatagramSocket)",
-      "documentation": "No-ops. We cannot assume that a Network represents a real network interface on the device\nrunning this test, so we have nothing to bind the socket to.\n"
+      "documentation": "Simulates a socket bind. isSocketBound can be called to verify that the socket was bound to\nthis network interface, and boundSocketCount() will increment for any unique socket.\n"
     },
     "bindSocket(java.net.Socket)": {
       "isImplementation": true,
@@ -39,7 +39,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "bindSocket(java.net.Socket)",
-      "documentation": "No-ops. We cannot assume that a Network represents a real network interface on the device\nrunning this test, so we have nothing to bind the socket to.\n"
+      "documentation": "Simulates a socket bind. isSocketBound can be called to verify that the socket was bound to\nthis network interface, and boundSocketCount() will increment for any unique socket.\n"
+    },
+    "boundSocketCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "boundSocketCount()",
+      "documentation": "Returns the total number of sockets bound to this network interface. "
     },
     "getNetId()": {
       "isImplementation": false,
@@ -51,6 +62,45 @@
       "exceptions": [],
       "name": "getNetId()",
       "documentation": "Allows to get the stored netId.\n\n@return The netId.\n"
+    },
+    "isSocketBound(java.io.FileDescriptor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "fd"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isSocketBound(java.io.FileDescriptor)",
+      "documentation": "Checks if the {@code fileDescriptor} was previously bound to this network. "
+    },
+    "isSocketBound(java.net.DatagramSocket)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "socket"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isSocketBound(java.net.DatagramSocket)",
+      "documentation": "Checks if the {@code datagramSocket} was previously bound to this network. "
+    },
+    "isSocketBound(java.net.Socket)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "socket"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isSocketBound(java.net.Socket)",
+      "documentation": "Checks if the {@code socket} was previously bound to this network. "
     },
     "newInstance(int)": {
       "isImplementation": false,
@@ -75,6 +125,8 @@
     "java.io.FileDescriptor",
     "java.net.DatagramSocket",
     "java.net.Socket",
+    "java.util.HashSet",
+    "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

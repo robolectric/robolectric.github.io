@@ -73,7 +73,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearRegisteredReceivers()",
-      "documentation": "Removes all registered receivers. "
+      "documentation": "Clears the list of {@link Wrapper}s for registered receivers "
     },
     "clearWakeLocks()": {
       "isImplementation": false,
@@ -96,6 +96,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "declareActionUnbindable(java.lang.String)"
+    },
+    "declareComponentUnbindable(android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "component"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "declareComponentUnbindable(android.content.ComponentName)",
+      "documentation": "Configures the ShadowApplication so that bindService calls for the given ComponentName return\nfalse and do not call onServiceConnected.\n"
     },
     "getAppWidgetManager()": {
       "isImplementation": false,
@@ -160,7 +173,7 @@
       "returnType": "org.robolectric.shadows.ShadowApplication",
       "exceptions": [],
       "name": "getInstance()",
-      "documentation": "@deprecated Use\n    `shadowOf({@link androidx.test.core.app.ApplicationProvider#getApplicationContext})`\n    instead.\n"
+      "documentation": "@deprecated Use {@code shadowOf({@link ApplicationProvider#getApplicationContext()})} instead.\n"
     },
     "getLatestAlertDialog()": {
       "isImplementation": false,
@@ -244,10 +257,10 @@
         "public"
       ],
       "params": [],
-      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
+      "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
       "exceptions": [],
       "name": "getRegisteredReceivers()",
-      "documentation": "@return list of {@link Wrapper}s for registered receivers\n"
+      "documentation": "@return list of {@link Wrapper}s for registered receivers "
     },
     "getShownToasts()": {
       "isImplementation": false,
@@ -381,6 +394,20 @@
       "exceptions": [],
       "name": "setLatestPopupWindow(android.widget.PopupWindow)"
     },
+    "setProcessName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "processName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProcessName(java.lang.String)",
+      "documentation": "Configures the value to be returned by {@link Application#getProcessName()}. "
+    },
     "setSystemService(java.lang.String,java.lang.Object)": {
       "isImplementation": false,
       "modifiers": [
@@ -394,6 +421,32 @@
       "exceptions": [],
       "name": "setSystemService(java.lang.String,java.lang.Object)",
       "documentation": "@deprecated Do not depend on this method to override services as it will be removed in a future\nupdate. The preferered method is use the shadow of the corresponding service.\n"
+    },
+    "setThrowInBindService(java.lang.SecurityException)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "e"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setThrowInBindService(java.lang.SecurityException)",
+      "documentation": "Configures the ShadowApplication so that calls to bindService will throw the given\nSecurityException.\n"
+    },
+    "setUnbindServiceCallsOnServiceDisconnected(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUnbindServiceCallsOnServiceDisconnected(boolean)",
+      "documentation": " Sets whether or not calls to unbindService should call onServiceDisconnected().\n\nThe default for this is currently {@code true} because that is the historical behavior.\nHowever, this does not correctly mirror Android\u0027s actual behavior. This value will eventually\ndefault to {@code false} once users have had a chance to migrate, and eventually the option\nwill be removed altogether.\n"
     },
     "setUnbindServiceShouldThrowIllegalArgument(boolean)": {
       "isImplementation": false,
@@ -428,6 +481,7 @@
     "android.widget.ListPopupWindow",
     "android.widget.PopupWindow",
     "android.widget.Toast",
+    "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
@@ -437,8 +491,11 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowActivityThread._ActivityThread_",
+    "org.robolectric.shadows.ShadowActivityThread._AppBindData_",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.Scheduler",
+    "org.robolectric.util.reflector.Reflector",
     "org.robolectric.shadows.ShadowApplication.Wrapper"
   ],
   "name": "org.robolectric.shadows.ShadowApplication"

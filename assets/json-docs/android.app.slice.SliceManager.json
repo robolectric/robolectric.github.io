@@ -39,6 +39,18 @@
       "exceptions": [],
       "name": "getPinnedSlices()"
     },
+    "getPinnedSpecs(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "java.util.Set\u003candroid.app.slice.SliceSpec\u003e",
+      "exceptions": [],
+      "name": "getPinnedSpecs(android.net.Uri)"
+    },
     "getUidForPackage(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -65,6 +77,19 @@
       "exceptions": [],
       "name": "grantSlicePermission(java.lang.String,android.net.Uri)"
     },
+    "pinSlice(android.net.Uri,java.util.Set\u003candroid.app.slice.SliceSpec\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uri",
+        "specs"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "pinSlice(android.net.Uri,java.util.Set\u003candroid.app.slice.SliceSpec\u003e)"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -90,22 +115,37 @@
       "returnType": "void",
       "exceptions": [],
       "name": "revokeSlicePermission(java.lang.String,android.net.Uri)"
+    },
+    "unpinSlice(android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unpinSlice(android.net.Uri)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.P",
     "android.app.slice.SliceManager",
+    "android.app.slice.SliceSpec",
     "android.content.Context",
     "android.content.pm.PackageManager",
     "android.content.pm.PackageManager.NameNotFoundException",
     "android.net.Uri",
     "android.os.Handler",
-    "com.google.common.collect.ImmutableList",
+    "androidx.annotation.NonNull",
+    "com.google.common.collect.ImmutableSet",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter"

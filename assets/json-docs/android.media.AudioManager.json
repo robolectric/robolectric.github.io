@@ -39,7 +39,34 @@
       "returnType": "void",
       "exceptions": [],
       "name": "adjustStreamVolume(int,int,int)",
-      "documentation": "Implements {@link AudioManager#adjustStreamVolume(int, int, int)}.\n\n\u003cp\u003eCurrently supports only the directions {@link AudioManager#ADJUST_MUTE} and {@link\nAudioManager#ADJUST_UNMUTE}.\n"
+      "documentation": "Implements {@link AudioManager#adjustStreamVolume(int, int, int)}.\n\n\u003cp\u003eCurrently supports only the directions {@link AudioManager#ADJUST_MUTE}, {@link\nAudioManager#ADJUST_UNMUTE}, {@link AudioManager#ADJUST_LOWER} and {@link\nAudioManager#ADJUST_RAISE}.\n"
+    },
+    "createActiveRecordingConfiguration(int,int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId",
+        "audioSource",
+        "clientPackageName"
+      ],
+      "returnType": "android.media.AudioRecordingConfiguration",
+      "exceptions": [],
+      "name": "createActiveRecordingConfiguration(int,int,java.lang.String)",
+      "documentation": "Creates simple active recording configuration. The resulting configuration will return {@code\nnull} for {@link android.media.AudioRecordingConfiguration#getAudioDevice}.\n"
+    },
+    "generateAudioSessionId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "generateAudioSessionId()",
+      "documentation": "Provides a mock like interface for the {@link AudioManager#generateAudioSessionId} method by\nreturning positive distinct values, or {@link AudioManager#ERROR} if all possible values have\nalready been returned.\n"
     },
     "getActivePlaybackConfigurations()": {
       "isImplementation": true,
@@ -51,6 +78,31 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "getActivePlaybackConfigurations()"
+    },
+    "getActiveRecordingConfigurations()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.media.AudioRecordingConfiguration\u003e",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getActiveRecordingConfigurations()",
+      "documentation": "Returns list of active recording configurations that was set by {@link\n#setActiveRecordingConfigurations} or empty list otherwise.\n"
+    },
+    "getIdForAudioPolicy(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "audioPolicy"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getIdForAudioPolicy(java.lang.Object)"
     },
     "getLastAbandonedAudioFocusListener()": {
       "isImplementation": false,
@@ -152,6 +204,17 @@
       "exceptions": [],
       "name": "getStreamVolume(int)"
     },
+    "isAnyAudioPolicyRegistered()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isAnyAudioPolicyRegistered()",
+      "documentation": "Returns true if at least one audio policy is registered with this manager, and false otherwise.\n"
+    },
     "isBluetoothA2dpOn()": {
       "isImplementation": true,
       "modifiers": [
@@ -161,6 +224,16 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isBluetoothA2dpOn()"
+    },
+    "isBluetoothScoAvailableOffCall()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isBluetoothScoAvailableOffCall()"
     },
     "isBluetoothScoOn()": {
       "isImplementation": true,
@@ -238,6 +311,50 @@
       "exceptions": [],
       "name": "isWiredHeadsetOn()"
     },
+    "registerAudioPlaybackCallback(android.media.AudioManager.AudioPlaybackCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cb",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "registerAudioPlaybackCallback(android.media.AudioManager.AudioPlaybackCallback,android.os.Handler)",
+      "documentation": "Registers callback that will receive changes made to the list of active playback configurations\nby {@link setActivePlaybackConfigurationsFor}.\n"
+    },
+    "registerAudioPolicy(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioPolicy"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "registerAudioPolicy(java.lang.Object)",
+      "documentation": "Registers an {@link AudioPolicy} to allow that policy to control audio routing and audio focus.\n\n\u003cp\u003eNote: this implementation does NOT ensure that we have the permissions necessary to register\nthe given {@link AudioPolicy}.\n\n@return {@link AudioManager.ERROR} if the given policy has already been registered, and {@link\n    AudioManager.SUCCESS} otherwise.\n"
+    },
+    "registerAudioRecordingCallback(android.media.AudioManager.AudioRecordingCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cb",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "registerAudioRecordingCallback(android.media.AudioManager.AudioRecordingCallback,android.os.Handler)",
+      "documentation": "Registers callback that will receive changes made to the list of active recording\nconfigurations by {@link setActiveRecordingConfigurations}.\n"
+    },
     "requestAudioFocus(android.media.AudioFocusRequest)": {
       "isImplementation": true,
       "modifiers": [
@@ -279,6 +396,34 @@
       "name": "setActivePlaybackConfigurationsFor(java.util.List\u003candroid.media.AudioAttributes\u003e)",
       "documentation": "Sets active playback configurations that will be served by {@link\nAudioManager#getActivePlaybackConfigurations}.\n\n\u003cp\u003eNote that there is no public {@link AudioPlaybackConfiguration} constructor, so the\nconfigurations returned are specified by their audio attributes only.\n"
     },
+    "setActivePlaybackConfigurationsFor(java.util.List\u003candroid.media.AudioAttributes\u003e,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "audioAttributes",
+        "notifyCallbackListeners"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActivePlaybackConfigurationsFor(java.util.List\u003candroid.media.AudioAttributes\u003e,boolean)",
+      "documentation": "Same as {@link #setActivePlaybackConfigurationsFor(List)}, but also notifies callbacks if\nnotifyCallbackListeners is true.\n"
+    },
+    "setActiveRecordingConfigurations(java.util.List\u003candroid.media.AudioRecordingConfiguration\u003e,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "activeRecordingConfigurations",
+        "notifyCallbackListeners"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActiveRecordingConfigurations(java.util.List\u003candroid.media.AudioRecordingConfiguration\u003e,boolean)",
+      "documentation": "Sets active recording configurations that will be served by {@link\nAudioManager#getActiveRecordingConfigurations} and notifies callback listeners about that\nchange.\n"
+    },
     "setBluetoothA2dpOn(boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -302,6 +447,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setBluetoothScoOn(boolean)"
+    },
+    "setIsBluetoothScoAvailableOffCall(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isBluetoothScoAvailableOffCall"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsBluetoothScoAvailableOffCall(boolean)"
     },
     "setIsMusicActive(boolean)": {
       "isImplementation": false,
@@ -449,22 +606,90 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setWiredHeadsetOn(boolean)"
+    },
+    "unregisterAudioPlaybackCallback(android.media.AudioManager.AudioPlaybackCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cb"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "unregisterAudioPlaybackCallback(android.media.AudioManager.AudioPlaybackCallback)",
+      "documentation": "Unregisters callback listening to changes made to list of active playback configurations. "
+    },
+    "unregisterAudioPolicy(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioPolicy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "unregisterAudioPolicy(java.lang.Object)"
+    },
+    "unregisterAudioRecordingCallback(android.media.AudioManager.AudioRecordingCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cb"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "unregisterAudioRecordingCallback(android.media.AudioManager.AudioRecordingCallback)",
+      "documentation": "Unregisters callback listening to changes made to list of active recording configurations. "
+    },
+    "writeMono16BitAudioFormatToParcel(android.os.Parcel)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "p"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writeMono16BitAudioFormatToParcel(android.os.Parcel)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.annotation.NonNull",
+    "android.annotation.RequiresPermission",
     "android.annotation.TargetApi",
     "android.media.AudioAttributes",
+    "android.media.AudioFormat",
     "android.media.AudioManager",
     "android.media.AudioPlaybackConfiguration",
+    "android.media.AudioRecordingConfiguration",
+    "android.media.audiopolicy.AudioPolicy",
     "android.os.Build.VERSION_CODES",
+    "android.os.Handler",
     "android.os.Parcel",
+    "com.android.internal.util.Preconditions",
+    "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.List",
     "java.util.Map",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers",

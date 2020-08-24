@@ -1,0 +1,43 @@
+{
+  "methods": {
+    "getLastRespondToCallInput()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Optional\u003corg.robolectric.shadows.ShadowCallScreeningService.RespondToCallInput\u003e",
+      "exceptions": [],
+      "name": "getLastRespondToCallInput()",
+      "documentation": "If {@link CallScreeningService} has called {@link #respondToCall}, returns the values of its\nparameters. Returns an empty optional otherwise.\n"
+    },
+    "respondToCall(android.telecom.Call.Details,android.telecom.CallScreeningService.CallResponse)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "callDetails",
+        "response"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "respondToCall(android.telecom.Call.Details,android.telecom.CallScreeningService.CallResponse)",
+      "documentation": "Shadows {@link CallScreeningService#respondToCall}. "
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.N",
+    "android.telecom.Call",
+    "android.telecom.CallScreeningService",
+    "android.telecom.CallScreeningService.CallResponse",
+    "java.util.Optional",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowCallScreeningService.RespondToCallInput"
+  ],
+  "name": "org.robolectric.shadows.ShadowCallScreeningService",
+  "documentation": "Shadow for {@link android.telecom.CallScreeningService}. "
+}

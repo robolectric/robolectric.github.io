@@ -120,6 +120,34 @@
       "exceptions": [],
       "name": "getVisibleInDownloadsUi()"
     },
+    "setDestinationFromBase(java.io.File,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "base",
+        "subPath"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDestinationFromBase(java.io.File,java.lang.String)"
+    },
+    "setDestinationInExternalPublicDir(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dirType",
+        "subPath"
+      ],
+      "returnType": "android.app.DownloadManager.Request",
+      "exceptions": [
+        "java.lang.Exception"
+      ],
+      "name": "setDestinationInExternalPublicDir(java.lang.String,java.lang.String)"
+    },
     "setStatus(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -137,7 +165,11 @@
     "android.app.DownloadManager",
     "android.database.Cursor",
     "android.net.Uri",
+    "android.os.Build",
+    "android.os.Environment",
     "android.util.Pair",
+    "com.android.internal.util.ArrayUtils",
+    "java.io.File",
     "java.util.ArrayList",
     "java.util.List",
     "java.util.Map",

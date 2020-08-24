@@ -347,6 +347,19 @@
       "name": "isServiceIntent()",
       "documentation": "@return {@code true} iff sending this PendingIntent will start a service\n"
     },
+    "readPendingIntentOrNullFromParcel(android.os.Parcel)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "in"
+      ],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "readPendingIntentOrNullFromParcel(android.os.Parcel)"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -485,6 +498,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCreatorPackage(java.lang.String)"
+    },
+    "writePendingIntentOrNullToParcel(android.app.PendingIntent,android.os.Parcel)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "sender",
+        "out"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writePendingIntentOrNullToParcel(android.app.PendingIntent,android.os.Parcel)"
     }
   },
   "imports": [
@@ -508,11 +535,13 @@
     "android.os.Bundle",
     "android.os.Handler",
     "android.os.IBinder",
+    "android.os.Parcel",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.Iterator",
     "java.util.List",
     "java.util.Objects",
+    "javax.annotation.Nullable",
     "javax.annotation.concurrent.GuardedBy",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",

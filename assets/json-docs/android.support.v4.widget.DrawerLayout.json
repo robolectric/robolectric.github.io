@@ -53,8 +53,8 @@
   },
   "imports": [
     "org.robolectric.shadow.api.Shadow.directlyOn",
-    "android.support.v4.widget.DrawerLayout",
     "android.view.View",
+    "android.support.v4.widget.DrawerLayout",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

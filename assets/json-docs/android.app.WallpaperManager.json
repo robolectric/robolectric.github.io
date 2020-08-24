@@ -1,17 +1,92 @@
 {
   "methods": {
-    "getInstance(android.content.Context)": {
-      "isImplementation": true,
+    "createParcelFileDescriptorFromBitmap(android.graphics.Bitmap,java.lang.String)": {
+      "isImplementation": false,
       "modifiers": [
-        "protected",
+        "private",
         "static"
       ],
       "params": [
-        "context"
+        "image",
+        "fileName"
       ],
-      "returnType": "android.app.WallpaperManager",
+      "returnType": "android.os.ParcelFileDescriptor",
       "exceptions": [],
-      "name": "getInstance(android.content.Context)"
+      "name": "createParcelFileDescriptorFromBitmap(android.graphics.Bitmap,java.lang.String)",
+      "documentation": "Returns an open, readable file descriptor to the given {@code image} or {@code null} if there\nis an {@link IOException}.\n"
+    },
+    "enforceWallpaperComponentPermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enforceWallpaperComponentPermission()",
+      "documentation": "Throws {@link SecurityException} if the caller doesn\u0027t have {@link\npermission.SET_WALLPAPER_COMPONENT}.\n"
+    },
+    "getBitmap(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "which"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "getBitmap(int)",
+      "documentation": "Returns the memory cached {@link Bitmap} associated with {@code which}.\n\n@param which either {@link WallpaperManager#FLAG_LOCK} or {WallpaperManager#FLAG_SYSTEM}.\n@return The memory cached {@link Bitmap} associated with {@code which}. {@code null} if no\n    bitmap was set.\n"
+    },
+    "getWallpaperFile(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "which"
+      ],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getWallpaperFile(int)",
+      "documentation": "Gets a wallpaper file associated with {@code which}.\n\n@param which either {@link WallpaperManager#FLAG_LOCK} or {WallpaperManager#FLAG_SYSTEM}\n@return An open, readable file descriptor to the requested wallpaper image file; {@code null}\n    if no such wallpaper is configured.\n"
+    },
+    "getWallpaperInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.app.WallpaperInfo",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getWallpaperInfo()",
+      "documentation": "Returns the information about the wallpaper if the current wallpaper is a live wallpaper\ncomponent. Otherwise, if the wallpaper is a static image, this returns null.\n"
+    },
+    "isSetWallpaperAllowed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isSetWallpaperAllowed()"
+    },
+    "isWallpaperSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isWallpaperSupported()"
     },
     "sendWallpaperCommand(android.os.IBinder,java.lang.String,int,int,int,android.os.Bundle)": {
       "isImplementation": true,
@@ -29,16 +104,112 @@
       "returnType": "void",
       "exceptions": [],
       "name": "sendWallpaperCommand(android.os.IBinder,java.lang.String,int,int,int,android.os.Bundle)"
+    },
+    "setBitmap(android.graphics.Bitmap,android.graphics.Rect,boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "fullImage",
+        "visibleCropHint",
+        "allowBackup",
+        "which"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "setBitmap(android.graphics.Bitmap,android.graphics.Rect,boolean,int)",
+      "documentation": "Caches {@code fullImage} in the memory based on {@code which}.\n\n\u003cp\u003eAfter a success call, any previously set live wallpaper is removed,\n\n@param fullImage the bitmap image to be cached in the memory\n@param visibleCropHint not used\n@param allowBackup not used\n@param which either {@link WallpaperManager#FLAG_LOCK} or {WallpaperManager#FLAG_SYSTEM}\n@return 0 if fails to cache. Otherwise, 1.\n"
+    },
+    "setIsSetWallpaperAllowed(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "allowed"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsSetWallpaperAllowed(boolean)"
+    },
+    "setIsWallpaperSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsWallpaperSupported(boolean)"
+    },
+    "setStream(java.io.InputStream,android.graphics.Rect,boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bitmapData",
+        "visibleCropHint",
+        "allowBackup",
+        "which"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setStream(java.io.InputStream,android.graphics.Rect,boolean,int)",
+      "documentation": "Caches {@code bitmapData} in the memory based on {@code which}.\n\n@param bitmapData the input stream which contains a bitmap image to be cached in the memory\n@param visibleCropHint not used\n@param allowBackup not used\n@param which either {@link WallpaperManager#FLAG_LOCK} or {WallpaperManager#FLAG_SYSTEM}\n@return 0 if fails to cache. Otherwise, 1.\n"
+    },
+    "setWallpaperComponent(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "wallpaperService"
+      ],
+      "returnType": "boolean",
+      "exceptions": [
+        "java.io.IOException",
+        "org.xmlpull.v1.XmlPullParserException"
+      ],
+      "minSdk": 23,
+      "name": "setWallpaperComponent(android.content.ComponentName)",
+      "documentation": "Sets a live wallpaper, {@code wallpaperService}, as the current wallpaper.\n\n\u003cp\u003eThis only caches the live wallpaper info in the memory. Calling this will remove any\npreviously set static wallpaper.\n"
     }
   },
   "imports": [
+    "android.Manifest.permission",
+    "android.annotation.RequiresPermission",
+    "android.annotation.SystemApi",
+    "android.app.WallpaperInfo",
     "android.app.WallpaperManager",
-    "android.content.Context",
+    "android.content.ComponentName",
+    "android.content.Intent",
+    "android.content.pm.PackageManager",
+    "android.content.pm.ResolveInfo",
+    "android.graphics.Bitmap",
+    "android.graphics.Bitmap.CompressFormat",
+    "android.graphics.BitmapFactory",
+    "android.graphics.Rect",
+    "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.os.IBinder",
+    "android.os.ParcelFileDescriptor",
+    "java.io.File",
+    "java.io.FileOutputStream",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.util.List",
+    "javax.annotation.Nullable",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.util.Logger",
+    "org.xmlpull.v1.XmlPullParserException"
   ],
   "name": "org.robolectric.shadows.ShadowWallpaperManager"
 }

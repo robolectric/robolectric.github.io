@@ -155,7 +155,20 @@
       "exceptions": [],
       "name": "isLoggable(java.lang.String,int)"
     },
-    "logToStream(java.io.PrintStream,int,java.lang.String,java.lang.String,java.lang.Throwable)": {
+    "levelToChar(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "level"
+      ],
+      "returnType": "char",
+      "exceptions": [],
+      "name": "levelToChar(int)"
+    },
+    "logToStream(java.io.PrintStream,java.lang.String,int,java.lang.String,java.lang.String,java.lang.Throwable)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -163,6 +176,7 @@
       ],
       "params": [
         "ps",
+        "timeString",
         "level",
         "tag",
         "msg",
@@ -170,7 +184,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "logToStream(java.io.PrintStream,int,java.lang.String,java.lang.String,java.lang.Throwable)"
+      "name": "logToStream(java.io.PrintStream,java.lang.String,int,java.lang.String,java.lang.String,java.lang.Throwable)"
     },
     "println_native(int,int,java.lang.String,java.lang.String)": {
       "isImplementation": true,
@@ -213,6 +227,20 @@
       "exceptions": [],
       "name": "setLoggable(java.lang.String,int)",
       "documentation": "Sets the log level of a given tag, that {@link #isLoggable} will follow.\n@param tag A log tag\n@param level A log level, from {@link android.util.Log}\n"
+    },
+    "setTimeSupplier(java.util.function.Supplier\u003cjava.lang.String\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "supplier"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTimeSupplier(java.util.function.Supplier\u003cjava.lang.String\u003e)",
+      "documentation": "Sets supplier that can be used to get time to add to logs. "
     },
     "setWtfIsFatal(boolean)": {
       "isImplementation": false,
@@ -353,6 +381,7 @@
     "java.util.Map",
     "java.util.Queue",
     "java.util.concurrent.ConcurrentLinkedQueue",
+    "java.util.function.Supplier",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",

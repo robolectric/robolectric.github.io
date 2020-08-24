@@ -1,5 +1,18 @@
 {
   "methods": {
+    "addCapability(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "capability"
+      ],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "name": "addCapability(int)",
+      "documentation": "Adds {@code capability} to the NetworkCapabilities. "
+    },
     "addTransportType(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -23,6 +36,19 @@
       "returnType": "android.net.NetworkCapabilities",
       "exceptions": [],
       "name": "newInstance()"
+    },
+    "removeCapability(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "capability"
+      ],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "name": "removeCapability(int)",
+      "documentation": "Removes {@code capability} from the NetworkCapabilities. "
     },
     "removeTransportType(int)": {
       "isImplementation": true,

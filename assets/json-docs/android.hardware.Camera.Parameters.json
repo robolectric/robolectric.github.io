@@ -42,6 +42,18 @@
       "name": "addSupportedPreviewSize(int,int)",
       "documentation": "Add custom preview sizes to supportedPreviewSizes. "
     },
+    "get(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "key"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "get(java.lang.String)"
+    },
     "getExposureCompensation()": {
       "isImplementation": true,
       "modifiers": [
@@ -72,6 +84,16 @@
       "exceptions": [],
       "name": "getFlashMode()"
     },
+    "getFocusAreas()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.hardware.Camera.Area\u003e",
+      "exceptions": [],
+      "name": "getFocusAreas()"
+    },
     "getFocusMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -91,6 +113,36 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getMaxExposureCompensation()"
+    },
+    "getMaxNumFocusAreas()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMaxNumFocusAreas()"
+    },
+    "getMaxNumMeteringAreas()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getMaxNumMeteringAreas()"
+    },
+    "getMeteringAreas()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.hardware.Camera.Area\u003e",
+      "exceptions": [],
+      "name": "getMeteringAreas()"
     },
     "getMinExposureCompensation()": {
       "isImplementation": true,
@@ -285,6 +337,19 @@
       "name": "initSupportedPreviewSizes()",
       "documentation": "Explicitly initialize custom preview sizes array, to switch from default values to\nindividually added.\n"
     },
+    "set(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "key",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "set(java.lang.String,java.lang.String)"
+    },
     "setExposureCompensation(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -309,6 +374,18 @@
       "exceptions": [],
       "name": "setFlashMode(java.lang.String)"
     },
+    "setFocusAreas(java.util.List\u003candroid.hardware.Camera.Area\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "focusAreas"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFocusAreas(java.util.List\u003candroid.hardware.Camera.Area\u003e)"
+    },
     "setFocusMode(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -320,6 +397,44 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setFocusMode(java.lang.String)"
+    },
+    "setMaxNumFocusAreas(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "maxNumFocusAreas"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaxNumFocusAreas(int)",
+      "documentation": "Allows test cases to set the maximum number of focus areas. See {@link\nCamera.Parameters#getMaxNumFocusAreas}.\n"
+    },
+    "setMaxNumMeteringAreas(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "maxNumMeteringAreas"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMaxNumMeteringAreas(int)",
+      "documentation": "Allows test cases to set the maximum number of metering areas. See {@link\nCamera.Parameters#getMaxNumMeteringAreas}.\n"
+    },
+    "setMeteringAreas(java.util.List\u003candroid.hardware.Camera.Area\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "meteringAreas"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMeteringAreas(java.util.List\u003candroid.hardware.Camera.Area\u003e)"
     },
     "setPictureSize(int,int)": {
       "isImplementation": true,

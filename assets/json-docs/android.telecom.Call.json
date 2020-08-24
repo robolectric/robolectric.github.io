@@ -1,0 +1,9 @@
+{
+  "methods": {},
+  "imports": [
+    "android.telecom.Call",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowCall",
+  "documentation": "Robolectric test for {@link android.telecom.Call}. "
+}

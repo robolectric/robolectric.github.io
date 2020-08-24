@@ -161,7 +161,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "bulkInsert(android.net.Uri,android.content.ContentValues[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#bulkInsert(Uri, ContentValues[])} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\n\u003cp\u003eIf no appropriate {@link ContentProvider} is found, no action will be taken and the number\nof rows in {@code values} will be returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#bulkInsert(Uri, ContentValues[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and the number\nof rows in {@code values} will be returned.\n"
     },
     "call(android.net.Uri,java.lang.String,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
@@ -192,6 +192,19 @@
       "exceptions": [],
       "name": "cancelSync(android.accounts.Account,java.lang.String)"
     },
+    "clearRegisterContentProviderException(android.net.Uri)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearRegisterContentProviderException(android.net.Uri)",
+      "documentation": "Clears an exception previously set with {@link #setRegisterContentProviderException(Uri,\nRuntimeException)}.\n"
+    },
     "createAndInitialize(android.content.pm.ProviderInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -219,7 +232,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "delete(android.net.Uri,java.lang.String,java.lang.String[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#delete(Uri, String, String[])} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getDeleteStatements()} or {@link\n#getDeletedUris()}.\n\n\u003cp\u003eIf no appropriate {@link ContentProvider} is found, no action will be taken and {@code 1}\nwill be returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#delete(Uri, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getDeleteStatements()} or {@link\n#getDeletedUris()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and {@code 1}\nwill be returned.\n"
     },
     "getContentObservers(android.net.Uri)": {
       "isImplementation": false,
@@ -280,7 +293,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.DeleteStatement\u003e",
       "exceptions": [],
       "name": "getDeleteStatements()",
-      "documentation": "Returns the list of {@link DeleteStatement}s for corresponding calls to\n{@link ContentResolver#delete(Uri, String, String[])}.\n\n@return a list of delete statements\n"
+      "documentation": "Returns the list of {@link DeleteStatement}s for corresponding calls to {@link\nContentResolver#delete(Uri, String, String[])}.\n\n@return a list of delete statements\n"
     },
     "getDeletedUris()": {
       "isImplementation": false,
@@ -301,7 +314,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.InsertStatement\u003e",
       "exceptions": [],
       "name": "getInsertStatements()",
-      "documentation": "Returns the list of {@link InsertStatement}s for corresponding calls to\n{@link ContentResolver#insert(Uri, ContentValues)} or\n{@link ContentResolver#bulkInsert(Uri, ContentValues[])}.\n\n@return a list of insert statements\n"
+      "documentation": "Returns the list of {@link InsertStatement}s for corresponding calls to {@link\nContentResolver#insert(Uri, ContentValues)} or {@link ContentResolver#bulkInsert(Uri,\nContentValues[])}.\n\n@return a list of insert statements\n@deprecated This method does not work with {@link\n    android.content.ContentResolver#acquireContentProviderClient}\n"
     },
     "getIsSyncable(android.accounts.Account,java.lang.String)": {
       "isImplementation": true,
@@ -399,7 +412,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.Statement\u003e",
       "exceptions": [],
       "name": "getStatements()",
-      "documentation": "Returns the list of {@link InsertStatement}s, {@link UpdateStatement}s, and\n{@link DeleteStatement}s invoked on this {@link ContentResolver}.\n\n@return a list of statements\n"
+      "documentation": "Returns the list of {@link InsertStatement}s, {@link UpdateStatement}s, and {@link\nDeleteStatement}s invoked on this {@link ContentResolver}.\n\n@return a list of statements\n@deprecated This method does not work with {@link\n    android.content.ContentResolver#acquireContentProviderClient}\n"
     },
     "getStatus(android.accounts.Account,java.lang.String)": {
       "isImplementation": false,
@@ -477,7 +490,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowContentResolver.UpdateStatement\u003e",
       "exceptions": [],
       "name": "getUpdateStatements()",
-      "documentation": "Returns the list of {@link UpdateStatement}s for corresponding calls to\n{@link ContentResolver#update(Uri, ContentValues, String, String[])}.\n\n@return a list of update statements\n"
+      "documentation": "Returns the list of {@link UpdateStatement}s for corresponding calls to {@link\nContentResolver#update(Uri, ContentValues, String, String[])}.\n\n@return a list of update statements\n@deprecated This method does not work with {@link\n    android.content.ContentResolver#acquireContentProviderClient}\n"
     },
     "insert(android.net.Uri,android.content.ContentValues)": {
       "isImplementation": true,
@@ -492,7 +505,7 @@
       "returnType": "android.net.Uri",
       "exceptions": [],
       "name": "insert(android.net.Uri,android.content.ContentValues)",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#insert(Uri, ContentValues)} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\n\u003cp\u003eIf no appropriate {@link ContentProvider} is found, no action will be taken and a {@link\nUri} including the incremented value set with {@link #setNextDatabaseIdForInserts(int)} will\nreturned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#insert(Uri, ContentValues)} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and a {@link\nUri} including the incremented value set with {@link #setNextDatabaseIdForInserts(int)} will\nreturned.\n"
     },
     "isBundleEqual(android.os.Bundle,android.os.Bundle)": {
       "isImplementation": false,
@@ -575,6 +588,23 @@
       "exceptions": [],
       "name": "openOutputStream(android.net.Uri)"
     },
+    "query(android.net.Uri,java.lang.String[],android.os.Bundle,android.os.CancellationSignal)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "uri",
+        "projection",
+        "queryArgs",
+        "cancellationSignal"
+      ],
+      "returnType": "android.database.Cursor",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "query(android.net.Uri,java.lang.String[],android.os.Bundle,android.os.CancellationSignal)"
+    },
     "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -652,6 +682,19 @@
       "exceptions": [],
       "name": "registerInputStream(android.net.Uri,java.io.InputStream)"
     },
+    "registerInputStreamSupplier(android.net.Uri,java.util.function.Supplier\u003cjava.io.InputStream\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "supplier"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerInputStreamSupplier(android.net.Uri,java.util.function.Supplier\u003cjava.io.InputStream\u003e)"
+    },
     "registerOutputStream(android.net.Uri,java.io.OutputStream)": {
       "isImplementation": false,
       "modifiers": [
@@ -664,6 +707,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "registerOutputStream(android.net.Uri,java.io.OutputStream)"
+    },
+    "registerOutputStreamSupplier(android.net.Uri,java.util.function.Supplier\u003cjava.io.OutputStream\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "supplier"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerOutputStreamSupplier(android.net.Uri,java.util.function.Supplier\u003cjava.io.OutputStream\u003e)"
     },
     "registerProviderInternal(java.lang.String,android.content.ContentProvider)": {
       "isImplementation": false,
@@ -679,7 +735,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "registerProviderInternal(java.lang.String,android.content.ContentProvider)",
-      "documentation": "Internal-only method, do not use!\n\nInstead, use\n```java\nProviderInfo info \u003d new ProviderInfo();\ninfo.authority \u003d authority;\nRobolectric.buildContentProvider(ContentProvider.class).create(info);\n```\n"
+      "documentation": "Internal-only method, do not use!\n\n\u003cp\u003eInstead, use\n\n\u003cpre\u003e\nProviderInfo info \u003d new ProviderInfo();\ninfo.authority \u003d authority;\nRobolectric.buildContentProvider(ContentProvider.class).create(info);\n\u003c/pre\u003e\n"
     },
     "releasePersistableUriPermission(android.net.Uri,int)": {
       "isImplementation": true,
@@ -760,7 +816,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setCursor(android.net.Uri,org.robolectric.fakes.BaseCursor)"
+      "name": "setCursor(android.net.Uri,org.robolectric.fakes.BaseCursor)",
+      "documentation": "@deprecated This method does not work with {@link\n    android.content.ContentResolver#acquireContentProviderClient}\n"
     },
     "setCursor(org.robolectric.fakes.BaseCursor)": {
       "isImplementation": false,
@@ -772,7 +829,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setCursor(org.robolectric.fakes.BaseCursor)"
+      "name": "setCursor(org.robolectric.fakes.BaseCursor)",
+      "documentation": "@deprecated This method affects all calls, and does not work with {@link\n    android.content.ContentResolver#acquireContentProviderClient}\n"
     },
     "setIsSyncable(android.accounts.Account,java.lang.String,int)": {
       "isImplementation": true,
@@ -812,7 +870,22 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setNextDatabaseIdForInserts(int)"
+      "name": "setNextDatabaseIdForInserts(int)",
+      "documentation": "@deprecated This method affects all calls, and does not work with {@link\n    android.content.ContentResolver#acquireContentProviderClient}\n"
+    },
+    "setRegisterContentProviderException(android.net.Uri,java.lang.RuntimeException)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uri",
+        "exception"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRegisterContentProviderException(android.net.Uri,java.lang.RuntimeException)",
+      "documentation": "Makes {@link #registerContentObserver} throw the specified exception for the specified URI. "
     },
     "setSyncAdapterTypes(android.content.SyncAdapterType[])": {
       "isImplementation": false,
@@ -883,7 +956,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its\n{@link ContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or\n{@link #getUpdateStatements()}.\n\n@return If no appropriate {@link ContentProvider} is found, no action will be taken and 1 will\nbe returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or {@link\n#getUpdateStatements()}.\n\n@return If no appropriate {@link ContentProvider} is found, no action will be taken and 1 will\n    be returned.\n"
     },
     "validateSyncExtrasBundle(android.os.Bundle)": {
       "isImplementation": true,
@@ -900,8 +973,12 @@
     }
   },
   "imports": [
+    "android.content.ContentResolver.QUERY_ARG_SQL_SELECTION",
+    "android.content.ContentResolver.QUERY_ARG_SQL_SELECTION_ARGS",
+    "android.content.ContentResolver.QUERY_ARG_SQL_SORT_ORDER",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.O",
     "android.accounts.Account",
     "android.annotation.NonNull",
     "android.annotation.SuppressLint",
@@ -935,6 +1012,7 @@
     "java.util.Map",
     "java.util.Objects",
     "java.util.concurrent.CopyOnWriteArrayList",
+    "java.util.function.Supplier",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

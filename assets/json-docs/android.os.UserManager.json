@@ -55,7 +55,7 @@
       "returnType": "long",
       "exceptions": [],
       "name": "addUserProfile(android.os.UserHandle)",
-      "documentation": "Adds a profile associated for the user that the calling process is running on.\n\nThe user is assigned an arbitrary unique serial number.\n\n@return the user\u0027s serial number\n"
+      "documentation": "Adds a profile associated for the user that the calling process is running on.\n\n\u003cp\u003eThe user is assigned an arbitrary unique serial number.\n\n@return the user\u0027s serial number\n@deprecated use either addUser() or addProfile()\n"
     },
     "canSwitchUsers()": {
       "isImplementation": true,
@@ -66,8 +66,9 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 29,
       "name": "canSwitchUsers()",
-      "documentation": "Returns {@code false} by default, or the value specified via {@link\n#setCanSwitchUser(boolean)}.\n"
+      "documentation": "Returns {@code true} by default, or the value specified via {@link #setCanSwitchUser(boolean)}.\n"
     },
     "checkPermissions()": {
       "isImplementation": false,
@@ -118,6 +119,19 @@
       "name": "getApplicationRestrictions(java.lang.String)",
       "documentation": "Compared to real Android, there is no check that the package name matches the application\npackage name and the method returns instantly.\n\n@see #setApplicationRestrictions(String, Bundle)\n"
     },
+    "getProfileParent(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userId"
+      ],
+      "returnType": "android.content.pm.UserInfo",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getProfileParent(int)"
+    },
     "getProfiles(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -140,7 +154,7 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "getSeedAccountType()"
     },
     "getSerialNumberForUser(android.os.UserHandle)": {
@@ -154,7 +168,7 @@
       "returnType": "long",
       "exceptions": [],
       "name": "getSerialNumberForUser(android.os.UserHandle)",
-      "documentation": "@see #addUserProfile(UserHandle)\n"
+      "documentation": "@see #addProfile(int, int, String, int)\n@see #addUser(int, String, int)\n"
     },
     "getUserForSerialNumber(long)": {
       "isImplementation": true,
@@ -167,7 +181,21 @@
       "returnType": "android.os.UserHandle",
       "exceptions": [],
       "name": "getUserForSerialNumber(long)",
-      "documentation": "@see #addUserProfile(UserHandle)\n"
+      "documentation": "@see #addProfile(int, int, String, int)\n@see #addUser(int, String, int)\n"
+    },
+    "getUserHandle(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "serialNumber"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "getUserHandle(int)",
+      "documentation": "@return user id for given user serial number. "
     },
     "getUserInfo(int)": {
       "isImplementation": true,
@@ -180,6 +208,18 @@
       "returnType": "android.content.pm.UserInfo",
       "exceptions": [],
       "name": "getUserInfo(int)"
+    },
+    "getUserName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getUserName()",
+      "documentation": "Returns the name of the user.\n\nOn real Android, if a UserHandle.USER_SYSTEM user is found but does not have a name, it will\nreturn a name like \"Owner\". In Robolectric, the USER_SYSTEM user always has a name.\n"
     },
     "getUserProfiles()": {
       "isImplementation": true,
@@ -228,7 +268,18 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getUserSerialNumber(int)",
-      "documentation": "@see #addUserProfile(UserHandle) "
+      "documentation": "@see #addProfile(int, int, String, int)\n@see #addUser(int, String, int)\n"
+    },
+    "getUserSwitchability()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getUserSwitchability()"
     },
     "getUsers()": {
       "isImplementation": true,
@@ -249,6 +300,16 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "hasManageUsersPermission()"
+    },
+    "hasModifyQuietModePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasModifyQuietModePermission()"
     },
     "hasUserRestriction(java.lang.String,android.os.UserHandle)": {
       "isImplementation": true,
@@ -274,7 +335,7 @@
       "exceptions": [],
       "minSdk": 25,
       "name": "isDemoUser()",
-      "documentation": "@return `false` by default, or the value specified via {@link #setIsDemoUser(boolean)}\n"
+      "documentation": "@return false by default, or the value specified via {@link #setIsDemoUser(boolean)} "
     },
     "isLinkedUser()": {
       "isImplementation": true,
@@ -298,16 +359,58 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "isManagedProfile()",
-      "documentation": "If permissions are enforced (see {@link #enforcePermissionChecks(boolean)}) and the application\ndoesn\u0027t have the {@link android.Manifest.permission#MANAGE_USERS} permission, throws a\n{@link SecurityManager} exception.\n\n@return `false` by default, or the value specified via {@link #setManagedProfile(boolean)}\n@see #enforcePermissionChecks(boolean)\n@see #setManagedProfile(boolean)\n"
+      "documentation": "If permissions are enforced (see {@link #enforcePermissionChecks(boolean)}) and the application\ndoesn\u0027t have the {@link android.Manifest.permission#MANAGE_USERS} permission, throws a {@link\nSecurityManager} exception.\n\n@return false by default, or the value specified via {@link #setManagedProfile(boolean)}\n@see #enforcePermissionChecks(boolean)\n@see #setManagedProfile(boolean)\n"
     },
-    "isRestrictedProfile()": {
+    "isManagedProfile(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isManagedProfile(int)",
+      "documentation": "If permissions are enforced (see {@link #enforcePermissionChecks(boolean)}) and the application\ndoesn\u0027t have the {@link android.Manifest.permission#MANAGE_USERS} permission, throws a {@link\nSecurityManager} exception.\n\n@return true if the profile added has FLAG_MANAGED_PROFILE\n@see #enforcePermissionChecks(boolean)\n@see #addProfile(int, int, String, int)\n@see #addUser(int, String, int)\n"
+    },
+    "isManagedProfileWithoutPermission(android.os.UserHandle)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "private"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isManagedProfileWithoutPermission(android.os.UserHandle)",
+      "documentation": "Check if a profile is managed, not checking permissions.\n\n\u003cp\u003eThis is useful to implement other methods.\n"
+    },
+    "isQuietModeEnabled(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "isQuietModeEnabled(android.os.UserHandle)",
+      "documentation": "Query whether the quiet mode is enabled for a managed profile.\n\n\u003cp\u003eThis method checks whether the user handle corresponds to a managed profile, and then query\nits state. When quiet, the user is not running.\n"
+    },
+    "isRestrictedProfile()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 28,
       "name": "isRestrictedProfile()",
       "documentation": "Returns \u0027false\u0027 by default, or the value specified via {@link\n#setIsRestrictedProfile(boolean)}.\n"
     },
@@ -360,6 +463,20 @@
       "minSdk": 24,
       "name": "isUserUnlocked()"
     },
+    "isUserUnlocked(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "handle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isUserUnlocked(android.os.UserHandle)",
+      "documentation": "@see #setUserState(UserHandle, UserState) "
+    },
     "removeUser(android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -370,7 +487,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 29,
       "name": "removeUser(android.os.UserHandle)"
     },
     "removeUser(int)": {
@@ -386,6 +503,21 @@
       "minSdk": 17,
       "name": "removeUser(int)"
     },
+    "requestQuietModeEnabled(boolean,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "enableQuietMode",
+        "userHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "requestQuietModeEnabled(boolean,android.os.UserHandle)",
+      "documentation": "Request the quiet mode.\n\nThis will succeed unless {@link #setProfileIsLocked(UserHandle, boolean)} is called with\n{@code true} for the managed profile, in which case it will always fail.\n"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -396,6 +528,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "sendQuietModeBroadcast(java.lang.String,android.os.UserHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "action",
+        "profileHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendQuietModeBroadcast(java.lang.String,android.os.UserHandle)",
+      "documentation": "If the current application has the necessary rights, it will receive the background action too.\n"
     },
     "setApplicationRestrictions(java.lang.String,android.os.Bundle)": {
       "isImplementation": false,
@@ -422,7 +568,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCanSwitchUser(boolean)",
-      "documentation": "Sets whether switching users is allowed or not; controls the return value of {@link\nUserManager#canSwitchUsers()}\n"
+      "documentation": "Sets whether switching users is allowed or not; controls the return value of {@link\nUserManager#canSwitchUser()}\n\n@deprecated use {@link #setUserSwitchability} instead\n"
     },
     "setIsDemoUser(boolean)": {
       "isImplementation": false,
@@ -515,6 +661,19 @@
       "name": "setManagedProfile(boolean)",
       "documentation": "Setter for {@link UserManager#isManagedProfile()}.\n"
     },
+    "setProfileIsLocked(android.os.UserHandle,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "profileHandle",
+        "isLocked"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProfileIsLocked(android.os.UserHandle,boolean)"
+    },
     "setSeedAccountType(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -540,7 +699,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSerialNumberForUser(android.os.UserHandle,long)",
-      "documentation": "@deprecated prefer {@link #addUserProfile(UserHandle)} to ensure consistency of profiles known\nto the {@link UserManager}. Furthermore, calling this method for the current user, i.e: {@link\nProcess#myUserHandle()} is no longer necessary as this user is always known to UserManager and\nhas a preassigned serial number.\n"
+      "documentation": "{@link #addUser} uses UserHandle for serialNumber. setSerialNumberForUser() allows assigning an\narbitary serialNumber. Some test use serialNumber!\u003d0 as secondary user check, so it\u0027s necessary\nto \"fake\" the serialNumber to a non-zero value.\n"
     },
     "setSupportsMultipleUsers(boolean)": {
       "isImplementation": false,
@@ -583,6 +742,19 @@
       "name": "setUserState(android.os.UserHandle,org.robolectric.shadows.ShadowUserManager.UserState)",
       "documentation": "Sets the current state for a given user, see {@link UserManager#isUserRunning(UserHandle)}\nand {@link UserManager#isUserRunningOrStopping(UserHandle)}\n"
     },
+    "setUserSwitchability(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "switchability"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUserSwitchability(int)",
+      "documentation": "Sets the user switchability for all users. "
+    },
     "setUserUnlocked(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -594,7 +766,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setUserUnlocked(boolean)",
-      "documentation": "Setter for {@link UserManager#isUserUnlocked()}\n"
+      "documentation": "Setter for {@link UserManager#isUserUnlocked()} "
     },
     "supportsMultipleUsers()": {
       "isImplementation": true,
@@ -629,11 +801,16 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.Manifest.permission",
     "android.annotation.UserIdInt",
     "android.content.Context",
+    "android.content.Intent",
     "android.content.pm.PackageManager",
     "android.content.pm.UserInfo",
     "android.os.Build",
@@ -642,6 +819,7 @@
     "android.os.Process",
     "android.os.UserHandle",
     "android.os.UserManager",
+    "com.google.common.base.Preconditions",
     "com.google.common.collect.BiMap",
     "com.google.common.collect.HashBiMap",
     "com.google.common.collect.ImmutableList",
@@ -649,12 +827,11 @@
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
-    "java.util.Map.Entry",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowUserManager.UserState"
   ],
   "name": "org.robolectric.shadows.ShadowUserManager",

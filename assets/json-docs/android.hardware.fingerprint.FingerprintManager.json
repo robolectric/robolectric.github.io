@@ -40,6 +40,16 @@
       "name": "authenticationSucceeds()",
       "documentation": "Simulates a successful fingerprint authentication. An authentication request must have been\nissued with {@link FingerprintManager#authenticate(CryptoObject, CancellationSignal, int, AuthenticationCallback, Handler)} and not cancelled.\n"
     },
+    "createAuthenticationResult()": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.hardware.fingerprint.FingerprintManager.AuthenticationResult",
+      "exceptions": [],
+      "name": "createAuthenticationResult()"
+    },
     "getEnrolledFingerprints()": {
       "isImplementation": true,
       "modifiers": [
@@ -87,7 +97,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "isHardwareDetected()",
-      "documentation": "@return `false` by default, or the value specified via {@link #setIsHardwareDetected(boolean)}\n"
+      "documentation": "@return false by default, or the value specified via {@link #setIsHardwareDetected(boolean)}\n"
     },
     "setDefaultFingerprints(int)": {
       "isImplementation": false,
