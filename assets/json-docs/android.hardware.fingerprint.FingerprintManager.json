@@ -155,6 +155,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.R",
     "android.hardware.fingerprint.Fingerprint",
     "android.hardware.fingerprint.FingerprintManager",
     "android.hardware.fingerprint.FingerprintManager.AuthenticationCallback",

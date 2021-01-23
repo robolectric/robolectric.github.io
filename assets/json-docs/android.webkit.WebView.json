@@ -157,6 +157,17 @@
       "exceptions": [],
       "name": "findAddress(java.lang.String)"
     },
+    "getBackgroundColor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBackgroundColor()",
+      "documentation": "Returns the {@link android.graphics.Color} int that has been set by {@link\n#setBackgroundColor}.\n"
+    },
     "getClassNamed(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -181,6 +192,39 @@
       "minSdk": 26,
       "name": "getCurrentWebViewPackage()",
       "documentation": "Overrides the system implementation for getting the WebView package.\n\n\u003cp\u003eReturns null by default, but this can be changed with {@code #setCurrentWebviewPackage()}.\n"
+    },
+    "getDownloadListener()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.webkit.DownloadListener",
+      "exceptions": [],
+      "name": "getDownloadListener()",
+      "documentation": "Returns the {@link DownloadListener} set with {@link #setDownloadListener}, if any. "
+    },
+    "getFactory()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.webkit.WebViewFactoryProvider",
+      "exceptions": [],
+      "name": "getFactory()"
+    },
+    "getFavicon()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "getFavicon()",
+      "documentation": "Gets the favicon for the current page set by {@link #setFavicon}. "
     },
     "getGoBackInvocations()": {
       "isImplementation": false,
@@ -586,6 +630,19 @@
       "exceptions": [],
       "name": "saveState(android.os.Bundle)"
     },
+    "setBackgroundColor(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "backgroundColor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBackgroundColor(int)",
+      "documentation": "Sets the {@link android.graphics.Color} int that should be returned from {@link\n#getBackgroundColor}.\n\n\u003cp\u003eWebView uses the background color set by the {@link\nandroid.webkit.WebView#setBackgroundColor} method to internally tint the background color of\nweb pages until they are drawn. The way this API works is completely independent of the {@link\nandroid.view.View#setBackgroundColor} method and it interacts directly with WebView renderers.\nTests can access the set background color using the {@link #getBackgroundColor} method.\n"
+    },
     "setCanGoBack(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -612,6 +669,31 @@
       "exceptions": [],
       "name": "setCurrentWebViewPackage(android.content.pm.PackageInfo)",
       "documentation": "Sets the value to return from {@code #getCurrentWebviewPackage()}. "
+    },
+    "setDownloadListener(android.webkit.DownloadListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "downloadListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDownloadListener(android.webkit.DownloadListener)"
+    },
+    "setFavicon(android.graphics.Bitmap)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "favicon"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFavicon(android.graphics.Bitmap)",
+      "documentation": "Sets the favicon to return from {@link #getFavicon}. "
     },
     "setHitTestResult(android.webkit.WebView.HitTestResult)": {
       "isImplementation": false,
@@ -747,6 +829,7 @@
     }
   },
   "imports": [
+    "android.annotation.ColorInt",
     "android.content.pm.PackageInfo",
     "android.graphics.Bitmap",
     "android.os.Build",
@@ -755,6 +838,7 @@
     "android.os.Handler",
     "android.os.Looper",
     "android.view.ViewGroup.LayoutParams",
+    "android.webkit.DownloadListener",
     "android.webkit.ValueCallback",
     "android.webkit.WebBackForwardList",
     "android.webkit.WebChromeClient",
@@ -763,6 +847,7 @@
     "android.webkit.WebView",
     "android.webkit.WebView.HitTestResult",
     "android.webkit.WebViewClient",
+    "android.webkit.WebViewFactoryProvider",
     "java.lang.reflect.Field",
     "java.lang.reflect.InvocationHandler",
     "java.lang.reflect.Method",

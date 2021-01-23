@@ -56,6 +56,19 @@
       "exceptions": [],
       "name": "startActivityAndCollapse(android.content.Intent)",
       "documentation": "Starts an activity without collapsing the quick settings panel. "
+    },
+    "unlockAndRun(java.lang.Runnable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "runnable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unlockAndRun(java.lang.Runnable)"
     }
   },
   "imports": [

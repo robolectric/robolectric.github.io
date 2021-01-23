@@ -105,7 +105,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addMediaInfo(org.robolectric.shadows.util.DataSource,org.robolectric.shadows.ShadowMediaPlayer.MediaInfo)"
+      "name": "addMediaInfo(org.robolectric.shadows.util.DataSource,org.robolectric.shadows.ShadowMediaPlayer.MediaInfo)",
+      "documentation": "Adds a {@link MediaInfo} for a {@link DataSource}.\n\n\u003cp\u003eThis overrides any {@link MediaInfoProvider} previously set by calling {@link\n#setMediaInfoProvider}, i.e., the provider will not be used for any {@link DataSource}.\n"
     },
     "attachAuxEffect(int)": {
       "isImplementation": true,
@@ -131,7 +132,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "checkStateError(java.lang.String,java.util.EnumSet\u003corg.robolectric.shadows.ShadowMediaPlayer.State\u003e)",
-      "documentation": "Checks states for methods that asynchronously invoke\n{@link android.media.MediaPlayer.OnErrorListener#onError(MediaPlayer, int, int)\nonError()} when invoked in an illegal state. Such methods always throw\n{@link IllegalStateException} rather than invoke {@code onError()} if\nthey are invoked from the END state.\n\nThis method will either emulate this behavior by posting an\n{@code onError()} callback to the current thread\u0027s message queue (or\nthrow an {@link IllegalStateException} if invoked from the END state), or\nelse it will generate an assertion if {@link #setAssertOnError\nassertOnError} is set.\n\n@param method\n         the name of the method being tested.\n@param allowedStates\n         the states that this method is allowed to be called from.\n@see #getHandler\n@see #setAssertOnError\n@see #checkStateLog(String, EnumSet)\n@see #checkStateException(String, EnumSet)\n"
+      "documentation": "Checks states for methods that asynchronously invoke {@link\nandroid.media.MediaPlayer.OnErrorListener#onError(MediaPlayer, int, int) onError()} when\ninvoked in an illegal state. Such methods always throw {@link IllegalStateException} rather\nthan invoke {@code onError()} if they are invoked from the END state.\n\n\u003cp\u003eThis method will either emulate this behavior by posting an {@code onError()} callback to\nthe current thread\u0027s message queue (or throw an {@link IllegalStateException} if invoked from\nthe END state), or else it will generate an assertion if {@link #setAssertOnError\nassertOnError} is set.\n\n@param method the name of the method being tested.\n@param allowedStates the states that this method is allowed to be called from.\n@see #getHandler\n@see #setAssertOnError\n@see #checkStateLog(String, EnumSet)\n@see #checkStateException(String, EnumSet)\n"
     },
     "checkStateException(java.lang.String,java.util.EnumSet\u003corg.robolectric.shadows.ShadowMediaPlayer.State\u003e)": {
       "isImplementation": false,
@@ -145,7 +146,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "checkStateException(java.lang.String,java.util.EnumSet\u003corg.robolectric.shadows.ShadowMediaPlayer.State\u003e)",
-      "documentation": "Checks states for methods that synchronously throw an exception when\ninvoked in an illegal state. This method will likewise throw an\n{@link IllegalArgumentException} if it determines that the method has been\ninvoked from a disallowed state, or else it will generate an assertion if\n{@link #setAssertOnError assertOnError} is set.\n\n@param method\n         the name of the method being tested.\n@param allowedStates\n         the states that this method is allowed to be called from.\n@see #setAssertOnError\n@see #checkStateLog(String, EnumSet)\n@see #checkStateError(String, EnumSet)\n"
+      "documentation": "Checks states for methods that synchronously throw an exception when invoked in an illegal\nstate. This method will likewise throw an {@link IllegalArgumentException} if it determines\nthat the method has been invoked from a disallowed state, or else it will generate an assertion\nif {@link #setAssertOnError assertOnError} is set.\n\n@param method the name of the method being tested.\n@param allowedStates the states that this method is allowed to be called from.\n@see #setAssertOnError\n@see #checkStateLog(String, EnumSet)\n@see #checkStateError(String, EnumSet)\n"
     },
     "checkStateLog(java.lang.String,java.util.EnumSet\u003corg.robolectric.shadows.ShadowMediaPlayer.State\u003e)": {
       "isImplementation": false,
@@ -159,7 +160,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "checkStateLog(java.lang.String,java.util.EnumSet\u003corg.robolectric.shadows.ShadowMediaPlayer.State\u003e)",
-      "documentation": "Checks states for methods that only log when there is an error. Such\nmethods throw an {@link IllegalArgumentException} when invoked in the END\nstate, but log an error in other disallowed states. This method will either\nemulate this behavior or else will generate an assertion if invoked from a\ndisallowed state if {@link #setAssertOnError assertOnError} is set.\n\n@param method\n         the name of the method being tested.\n@param allowedStates\n         the states that this method is allowed to be called from.\n@see #setAssertOnError\n@see #checkStateError(String, EnumSet)\n@see #checkStateException(String, EnumSet)\n"
+      "documentation": "Checks states for methods that only log when there is an error. Such methods throw an {@link\nIllegalArgumentException} when invoked in the END state, but log an error in other disallowed\nstates. This method will either emulate this behavior or else will generate an assertion if\ninvoked from a disallowed state if {@link #setAssertOnError assertOnError} is set.\n\n@param method the name of the method being tested.\n@param allowedStates the states that this method is allowed to be called from.\n@see #setAssertOnError\n@see #checkStateError(String, EnumSet)\n@see #checkStateException(String, EnumSet)\n"
     },
     "create(android.content.Context,android.net.Uri)": {
       "isImplementation": true,
@@ -211,7 +212,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "doStart()",
-      "documentation": "Starts simulated playback. Until this method is called, the player is not\n\"really playing\" (see {@link #isReallyPlaying} for a definition of\n\"really playing\").\n\nThis method is used internally by the various shadow method implementations\nof the MediaPlayer public API, but may also be called directly by the test\nsuite if you wish to simulate an internal pause. For example, to simulate\na buffer underrun (player is in PLAYING state but isn\u0027t actually advancing\nthe current position through the media), you could call {@link #doStop()} to\nmark the start of the buffer underrun and {@link #doStart()} to mark its\nend and restart normal playback (which is what\n{@link ShadowMediaPlayer.MediaInfo#scheduleBufferUnderrunAtOffset(int, int) scheduleBufferUnderrunAtOffset()}\ndoes).\n\n@see #isReallyPlaying()\n@see #doStop()\n"
+      "documentation": "Starts simulated playback. Until this method is called, the player is not \"really playing\" (see\n{@link #isReallyPlaying} for a definition of \"really playing\").\n\n\u003cp\u003eThis method is used internally by the various shadow method implementations of the\nMediaPlayer public API, but may also be called directly by the test suite if you wish to\nsimulate an internal pause. For example, to simulate a buffer underrun (player is in PLAYING\nstate but isn\u0027t actually advancing the current position through the media), you could call\n{@link #doStop()} to mark the start of the buffer underrun and {@link #doStart()} to mark its\nend and restart normal playback (which is what {@link\nShadowMediaPlayer.MediaInfo#scheduleBufferUnderrunAtOffset(int, int)\nscheduleBufferUnderrunAtOffset()} does).\n\n@see #isReallyPlaying()\n@see #doStop()\n"
     },
     "doStop()": {
       "isImplementation": false,
@@ -222,7 +223,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "doStop()",
-      "documentation": "Pauses simulated playback. After this method is called, the player is no\nlonger \"really playing\" (see {@link #isReallyPlaying} for a definition of\n\"really playing\").\n\nThis method is used internally by the various shadow method implementations\nof the MediaPlayer public API, but may also be called directly by the test\nsuite if you wish to simulate an internal pause.\n\n@see #isReallyPlaying()\n@see #doStart()\n"
+      "documentation": "Pauses simulated playback. After this method is called, the player is no longer \"really\nplaying\" (see {@link #isReallyPlaying} for a definition of \"really playing\").\n\n\u003cp\u003eThis method is used internally by the various shadow method implementations of the\nMediaPlayer public API, but may also be called directly by the test suite if you wish to\nsimulate an internal pause.\n\n@see #isReallyPlaying()\n@see #doStart()\n"
     },
     "getAudioSessionId()": {
       "isImplementation": true,
@@ -265,7 +266,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getCurrentPositionRaw()",
-      "documentation": "Retrieves the current position without doing the state checking that the\nemulated version of {@link #getCurrentPosition()} does.\n\n@return The current playback position within the current clip.\n"
+      "documentation": "Retrieves the current position without doing the state checking that the emulated version of\n{@link #getCurrentPosition()} does.\n\n@return The current playback position within the current clip.\n"
     },
     "getDataSource()": {
       "isImplementation": false,
@@ -276,7 +277,7 @@
       "returnType": "org.robolectric.shadows.util.DataSource",
       "exceptions": [],
       "name": "getDataSource()",
-      "documentation": "Retrieves the data source (if any) that was passed in to\n{@link #setDataSource(DataSource)}.\n\nUseful for assertions.\n\n@return The source passed in to {@code setDataSource}.\n"
+      "documentation": "Retrieves the data source (if any) that was passed in to {@link #setDataSource(DataSource)}.\n\n\u003cp\u003eUseful for assertions.\n\n@return The source passed in to {@code setDataSource}.\n"
     },
     "getDuration()": {
       "isImplementation": true,
@@ -298,7 +299,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getDurationRaw()",
-      "documentation": "Retrieves the current duration without doing the state checking that the\nemulated version does.\n\n@return The duration of the current clip loaded by the player.\n"
+      "documentation": "Retrieves the current duration without doing the state checking that the emulated version does.\n\n@return The duration of the current clip loaded by the player.\n"
     },
     "getHandler()": {
       "isImplementation": false,
@@ -309,7 +310,7 @@
       "returnType": "android.os.Handler",
       "exceptions": [],
       "name": "getHandler()",
-      "documentation": "Retrieves the {@link Handler} object used by this\n{@code ShadowMediaPlayer}. Can be used for posting custom asynchronous\nevents to the thread (eg, asynchronous errors). Use this for scheduling\nevents to take place at a particular \"real\" time (ie, time as measured by\nthe scheduler). For scheduling events to occur at a particular playback\noffset (no matter how long playback may be paused for, or where you seek\nto, etc), see {@link MediaInfo#scheduleEventAtOffset(int, ShadowMediaPlayer.MediaEvent)} and\nits various helpers.\n\n@return Handler object that can be used to schedule asynchronous events on\n        this media player.\n"
+      "documentation": "Retrieves the {@link Handler} object used by this {@code ShadowMediaPlayer}. Can be used for\nposting custom asynchronous events to the thread (eg, asynchronous errors). Use this for\nscheduling events to take place at a particular \"real\" time (ie, time as measured by the\nscheduler). For scheduling events to occur at a particular playback offset (no matter how long\nplayback may be paused for, or where you seek to, etc), see {@link\nMediaInfo#scheduleEventAtOffset(int, ShadowMediaPlayer.MediaEvent)} and its various helpers.\n\n@return Handler object that can be used to schedule asynchronous events on this media player.\n"
     },
     "getHandler(android.os.Looper)": {
       "isImplementation": false,
@@ -332,7 +333,7 @@
       "returnType": "org.robolectric.shadows.ShadowMediaPlayer.InvalidStateBehavior",
       "exceptions": [],
       "name": "getInvalidStateBehavior()",
-      "documentation": "Retrieves current flag specifying the behavior of the media player when a\nmethod is invoked in an invalid state. See\n{@link #setInvalidStateBehavior(InvalidStateBehavior)} for a discussion of\nthe available modes and their associated behaviors.\n\n@return The current invalid state behavior mode.\n@see #setInvalidStateBehavior\n"
+      "documentation": "Retrieves current flag specifying the behavior of the media player when a method is invoked in\nan invalid state. See {@link #setInvalidStateBehavior(InvalidStateBehavior)} for a discussion\nof the available modes and their associated behaviors.\n\n@return The current invalid state behavior mode.\n@see #setInvalidStateBehavior\n"
     },
     "getLeftVolume()": {
       "isImplementation": false,
@@ -354,7 +355,7 @@
       "returnType": "org.robolectric.shadows.ShadowMediaPlayer.MediaInfo",
       "exceptions": [],
       "name": "getMediaInfo()",
-      "documentation": "Retrieves the currently selected {@link MediaInfo}. This instance is used\nto define current duration, preparation delay, exceptions for\n{@code setDataSource()}, playback events, etc.\n\n@return The currently selected {@link MediaInfo}.\n@see #addMediaInfo\n@see #doSetDataSource(DataSource)\n"
+      "documentation": "Retrieves the currently selected {@link MediaInfo}. This instance is used to define current\nduration, preparation delay, exceptions for {@code setDataSource()}, playback events, etc.\n\n@return The currently selected {@link MediaInfo}.\n@see #addMediaInfo\n@see #setMediaInfoProvider\n@see #doSetDataSource(DataSource)\n"
     },
     "getMediaInfo(org.robolectric.shadows.util.DataSource)": {
       "isImplementation": false,
@@ -400,7 +401,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getPendingSeek()",
-      "documentation": "Retrieves the pending seek setting.\n\n@return The position to which the shadow player is seeking for the seek in\n        progress (ie, after the call to {@link #seekTo} but before a call\n        to {@link #invokeSeekCompleteListener()}). Returns {@code -1}\n        if no seek is in progress.\n"
+      "documentation": "Retrieves the pending seek setting.\n\n@return The position to which the shadow player is seeking for the seek in progress (ie, after\n    the call to {@link #seekTo} but before a call to {@link #invokeSeekCompleteListener()}).\n    Returns {@code -1} if no seek is in progress.\n"
     },
     "getRightVolume()": {
       "isImplementation": false,
@@ -433,7 +434,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getSourceResId()",
-      "documentation": "Retrieves the resource ID used in the call to {@link #create(Context, int)}\n(if any).\n\n@return The resource ID passed in to {@code create()}, or\n        {@code -1} if a different method of setting the source was\n        used.\n"
+      "documentation": "Retrieves the resource ID used in the call to {@link #create(Context, int)} (if any).\n\n@return The resource ID passed in to {@code create()}, or {@code -1} if a different method of\n    setting the source was used.\n"
     },
     "getSourceUri()": {
       "isImplementation": false,
@@ -444,7 +445,7 @@
       "returnType": "android.net.Uri",
       "exceptions": [],
       "name": "getSourceUri()",
-      "documentation": "Retrieves the source path (if any) that was passed in to\n{@link MediaPlayer#setDataSource(Context, Uri, Map)} or\n{@link MediaPlayer#setDataSource(Context, Uri)}.\n\n@return The source Uri passed in to {@code setDataSource}.\n"
+      "documentation": "Retrieves the source path (if any) that was passed in to {@link\nMediaPlayer#setDataSource(Context, Uri, Map)} or {@link MediaPlayer#setDataSource(Context,\nUri)}.\n\n@return The source Uri passed in to {@code setDataSource}.\n"
     },
     "getState()": {
       "isImplementation": false,
@@ -455,7 +456,7 @@
       "returnType": "org.robolectric.shadows.ShadowMediaPlayer.State",
       "exceptions": [],
       "name": "getState()",
-      "documentation": "Retrieves the current state of the {@link MediaPlayer}. Uses the states as\ndefined in the {@link MediaPlayer} documentation.\n\n@return The current state of the {@link MediaPlayer}, as defined in the\n        MediaPlayer documentation.\n@see #setState\n@see MediaPlayer\n"
+      "documentation": "Retrieves the current state of the {@link MediaPlayer}. Uses the states as defined in the\n{@link MediaPlayer} documentation.\n\n@return The current state of the {@link MediaPlayer}, as defined in the MediaPlayer\n    documentation.\n@see #setState\n@see MediaPlayer\n"
     },
     "getTheAudioStreamType()": {
       "isImplementation": false,
@@ -466,7 +467,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getTheAudioStreamType()",
-      "documentation": "Note: This has a funny name at the\nmoment to avoid having to produce an API-specific shadow -\nif it were called {@code getAudioStreamType()} then\nthe {@code RobolectricWiringTest} will inform us that\nit should be annotated with {@link Implementation}, because\nthere is a private method in the later API versions with\nthe same name, however this would fail on earlier versions.\n\n@return audioStreamType\n"
+      "documentation": "Note: This has a funny name at the moment to avoid having to produce an API-specific shadow -\nif it were called {@code getAudioStreamType()} then the {@code RobolectricWiringTest} will\ninform us that it should be annotated with {@link Implementation}, because there is a private\nmethod in the later API versions with the same name, however this would fail on earlier\nversions.\n\n@return audioStreamType\n"
     },
     "getVideoHeight()": {
       "isImplementation": true,
@@ -511,7 +512,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "invokeErrorListener(int,int)",
-      "documentation": "Allows test cases to directly simulate invocation of the OnError event.\n\n@param what\n         parameter to pass in to {@code what} in\n         {@link MediaPlayer.OnErrorListener#onError(MediaPlayer, int, int)}.\n@param extra\n         parameter to pass in to {@code extra} in\n         {@link MediaPlayer.OnErrorListener#onError(MediaPlayer, int, int)}.\n"
+      "documentation": "Allows test cases to directly simulate invocation of the OnError event.\n\n@param what parameter to pass in to {@code what} in {@link\n    MediaPlayer.OnErrorListener#onError(MediaPlayer, int, int)}.\n@param extra parameter to pass in to {@code extra} in {@link\n    MediaPlayer.OnErrorListener#onError(MediaPlayer, int, int)}.\n"
     },
     "invokeInfoListener(int,int)": {
       "isImplementation": false,
@@ -525,7 +526,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "invokeInfoListener(int,int)",
-      "documentation": "Allows test cases to directly simulate invocation of the OnInfo event.\n\n@param what\n         parameter to pass in to {@code what} in\n         {@link MediaPlayer.OnInfoListener#onInfo(MediaPlayer, int, int)}.\n@param extra\n         parameter to pass in to {@code extra} in\n         {@link MediaPlayer.OnInfoListener#onInfo(MediaPlayer, int, int)}.\n"
+      "documentation": "Allows test cases to directly simulate invocation of the OnInfo event.\n\n@param what parameter to pass in to {@code what} in {@link\n    MediaPlayer.OnInfoListener#onInfo(MediaPlayer, int, int)}.\n@param extra parameter to pass in to {@code extra} in {@link\n    MediaPlayer.OnInfoListener#onInfo(MediaPlayer, int, int)}.\n"
     },
     "invokePreparedListener()": {
       "isImplementation": false,
@@ -578,7 +579,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isPrepared()",
-      "documentation": "Tests to see if the player is in the PREPARED state.\nThis is mainly used for backward compatibility.\n{@link #getState} may be more useful for new testing applications.\n\n@return {@code true} if the MediaPlayer is in the PREPARED state,\n        false otherwise.\n"
+      "documentation": "Tests to see if the player is in the PREPARED state. This is mainly used for backward\ncompatibility. {@link #getState} may be more useful for new testing applications.\n\n@return {@code true} if the MediaPlayer is in the PREPARED state, false otherwise.\n"
     },
     "isReallyPlaying()": {
       "isImplementation": false,
@@ -589,7 +590,20 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isReallyPlaying()",
-      "documentation": "Tests to see if the player is really playing.\n\nThe player is defined as \"really playing\" if simulated playback events\n(including playback completion) are being scheduled and invoked and\n{@link #getCurrentPosition currentPosition} is being updated as time\npasses. Note that while the player will normally be really playing if in\nthe STARTED state, this is not always the case - for example, if a pending\nseek is in progress, or perhaps a buffer underrun is being simulated.\n\n@return {@code true} if the player is really playing or\n        {@code false} if the player is internally paused.\n@see #doStart\n@see #doStop\n"
+      "documentation": "Tests to see if the player is really playing.\n\n\u003cp\u003eThe player is defined as \"really playing\" if simulated playback events (including playback\ncompletion) are being scheduled and invoked and {@link #getCurrentPosition currentPosition} is\nbeing updated as time passes. Note that while the player will normally be really playing if in\nthe STARTED state, this is not always the case - for example, if a pending seek is in progress,\nor perhaps a buffer underrun is being simulated.\n\n@return {@code true} if the player is really playing or {@code false} if the player is\n    internally paused.\n@see #doStart\n@see #doStop\n"
+    },
+    "native_setOutputDevice(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "preferredDeviceId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "native_setOutputDevice(int)"
     },
     "postEvent(org.robolectric.shadows.ShadowMediaPlayer.MediaEvent)": {
       "isImplementation": false,
@@ -722,7 +736,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCreateListener(org.robolectric.shadows.ShadowMediaPlayer.CreateListener)",
-      "documentation": "Sets a listener that is invoked whenever a new shadowed {@link MediaPlayer}\nobject is constructed.\n\nRegistering a listener gives you a chance to\ncustomize the shadowed object appropriately without needing to modify the\napplication-under-test to provide access to the instance at the appropriate\npoint in its life cycle. This is useful because normally a new\n{@link MediaPlayer} is created and {@link #setDataSource setDataSource()}\nis invoked soon after, without a break in the code. Using this callback\nmeans you don\u0027t have to change this common pattern just so that you can\ncustomize the shadow for testing.\n\n@param createListener\n         the listener to be invoked\n"
+      "documentation": "Sets a listener that is invoked whenever a new shadowed {@link MediaPlayer} object is\nconstructed.\n\n\u003cp\u003eRegistering a listener gives you a chance to customize the shadowed object appropriately\nwithout needing to modify the application-under-test to provide access to the instance at the\nappropriate point in its life cycle. This is useful because normally a new {@link MediaPlayer}\nis created and {@link #setDataSource setDataSource()} is invoked soon after, without a break in\nthe code. Using this callback means you don\u0027t have to change this common pattern just so that\nyou can customize the shadow for testing.\n\n@param createListener the listener to be invoked\n"
     },
     "setCurrentPosition(int)": {
       "isImplementation": false,
@@ -735,7 +749,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCurrentPosition(int)",
-      "documentation": "Sets the current position, bypassing the normal state checking. Use with\ncare.\n\n@param position\n         the new playback position.\n"
+      "documentation": "Sets the current position, bypassing the normal state checking. Use with care.\n\n@param position the new playback position.\n"
     },
     "setDataSource(android.content.Context,android.net.Uri)": {
       "isImplementation": true,
@@ -904,6 +918,20 @@
       "exceptions": [],
       "name": "setLooping(boolean)"
     },
+    "setMediaInfoProvider(org.robolectric.shadows.ShadowMediaPlayer.MediaInfoProvider)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "mediaInfoProvider"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMediaInfoProvider(org.robolectric.shadows.ShadowMediaPlayer.MediaInfoProvider)",
+      "documentation": "Sets a {@link MediaInfoProvider} to be used to get {@link MediaInfo} for any {@link\nDataSource}.\n\n\u003cp\u003eThis overrides any {@link MediaInfo} previously set by calling {@link #addMediaInfo}, i.e.,\n{@link MediaInfo} provided by this {@link MediaInfoProvider} will be used instead.\n"
+    },
     "setOnCompletionListener(android.media.MediaPlayer.OnCompletionListener)": {
       "isImplementation": true,
       "modifiers": [
@@ -975,7 +1003,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSeekDelay(int)",
-      "documentation": "Sets the length of time (ms) that seekTo() will delay before completing.\nDefault is 0. If set to -1, then seekTo() will not call the\nOnSeekCompleteListener automatically; you will need to call\ninvokeSeekCompleteListener() manually.\n\n@param seekDelay\n         length of time to delay (ms)\n"
+      "documentation": "Sets the length of time (ms) that seekTo() will delay before completing. Default is 0. If set\nto -1, then seekTo() will not call the OnSeekCompleteListener automatically; you will need to\ncall invokeSeekCompleteListener() manually.\n\n@param seekDelay length of time to delay (ms)\n"
     },
     "setState(org.robolectric.shadows.ShadowMediaPlayer.State)": {
       "isImplementation": false,
@@ -988,7 +1016,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setState(org.robolectric.shadows.ShadowMediaPlayer.State)",
-      "documentation": "Forces the @link MediaPlayer} into the specified state. Uses the states as\ndefined in the {@link MediaPlayer} documentation.\n\nNote that by invoking this method directly you can get the player into an\ninconsistent state that a real player could not be put in (eg, in the END\nstate but with playback events still happening). Use with care.\n\n@param state\n         the new state of the {@link MediaPlayer}, as defined in the\n         MediaPlayer documentation.\n@see #getState\n@see MediaPlayer\n"
+      "documentation": "Forces the @link MediaPlayer} into the specified state. Uses the states as defined in the\n{@link MediaPlayer} documentation.\n\n\u003cp\u003eNote that by invoking this method directly you can get the player into an inconsistent state\nthat a real player could not be put in (eg, in the END state but with playback events still\nhappening). Use with care.\n\n@param state the new state of the {@link MediaPlayer}, as defined in the MediaPlayer\n    documentation.\n@see #getState\n@see MediaPlayer\n"
     },
     "setVolume(float,float)": {
       "isImplementation": true,
@@ -1021,6 +1049,7 @@
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
     "org.robolectric.shadows.ShadowMediaPlayer.State.END",
     "org.robolectric.shadows.ShadowMediaPlayer.State.ERROR",
     "org.robolectric.shadows.ShadowMediaPlayer.State.IDLE",
@@ -1059,6 +1088,7 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.util.DataSource",
+    "org.robolectric.shadows.ShadowMediaPlayer.MediaInfoProvider",
     "org.robolectric.shadows.ShadowMediaPlayer.State",
     "org.robolectric.shadows.ShadowMediaPlayer.InvalidStateBehavior",
     "org.robolectric.shadows.ShadowMediaPlayer.RunList",
@@ -1068,5 +1098,5 @@
     "org.robolectric.shadows.ShadowMediaPlayer.ErrorCallback"
   ],
   "name": "org.robolectric.shadows.ShadowMediaPlayer",
-  "documentation": "Automated testing of media playback can be a difficult thing - especially testing that your code\nproperly handles asynchronous errors and events. This near impossible task is made quite\nstraightforward using this implementation of {@link MediaPlayer} with Robolectric.\n\n\u003cp\u003eThis shadow implementation provides much of the functionality needed to emulate {@link\nMediaPlayer} initialization and playback behavior without having to play actual media files. A\nsummary of the features included are:\n\n\u003cul\u003e\n  \u003cli\u003eConstruction-time callback hook {@link CreateListener} so that newly-created {@link\n      MediaPlayer} instances can have their shadows configured before they are used.\n  \u003cli\u003eEmulation of the {@link android.media.MediaPlayer.OnCompletionListener\n      OnCompletionListener}, {@link android.media.MediaPlayer.OnErrorListener OnErrorListener},\n      {@link android.media.MediaPlayer.OnInfoListener OnInfoListener}, {@link\n      android.media.MediaPlayer.OnPreparedListener OnPreparedListener} and {@link\n      android.media.MediaPlayer.OnSeekCompleteListener OnSeekCompleteListener}.\n  \u003cli\u003eFull support of the {@link MediaPlayer} internal states and their transition map.\n  \u003cli\u003eConfigure time parameters such as playback duration, preparation delay and {@link\n      #setSeekDelay(int)}.\n  \u003cli\u003eEmulation of asynchronous callback events during playback through Robolectric\u0027s scheduling\n      system using the {@link MediaInfo} inner class.\n  \u003cli\u003eEmulation of error behavior when methods are called from invalid states, or to throw\n      assertions when methods are invoked in invalid states (using {@link\n      #setInvalidStateBehavior}).\n  \u003cli\u003eEmulation of different playback behaviors based on the current data source, as passed in to\n      {@link #setDataSource(String) setDataSource()}, using {@link #addMediaInfo}.\n  \u003cli\u003eEmulation of exceptions when calling {@link #setDataSource} using {@link #addException}.\n\u003c/ul\u003e\n\n\u003cb\u003eNote\u003c/b\u003e: One gotcha with this shadow is that you need to either configure an exception or a\n{@link ShadowMediaPlayer.MediaInfo} instance for that data source (using {@link\n#addException(DataSource, IOException)} or {@link #addMediaInfo(DataSource, MediaInfo)}\nrespectively) \u003ci\u003ebefore\u003c/i\u003e calling {@link #setDataSource}, otherwise you\u0027ll get an {@link\nIllegalArgumentException}.\n\n\u003cp\u003eThe current features of {@code ShadowMediaPlayer} were focused on development for testing\nplayback of audio tracks. Thus support for emulating timed text and video events is incomplete.\nNone of these features would be particularly onerous to add/fix - contributions welcome, of\ncourse!\n\n@author Fr Jeremy Krieg, Holy Monastery of St Nectarios, Adelaide, Australia\n"
+  "documentation": "Automated testing of media playback can be a difficult thing - especially testing that your code\nproperly handles asynchronous errors and events. This near impossible task is made quite\nstraightforward using this implementation of {@link MediaPlayer} with Robolectric.\n\n\u003cp\u003eThis shadow implementation provides much of the functionality needed to emulate {@link\nMediaPlayer} initialization and playback behavior without having to play actual media files. A\nsummary of the features included are:\n\n\u003cul\u003e\n  \u003cli\u003eConstruction-time callback hook {@link CreateListener} so that newly-created {@link\n      MediaPlayer} instances can have their shadows configured before they are used.\n  \u003cli\u003eEmulation of the {@link android.media.MediaPlayer.OnCompletionListener\n      OnCompletionListener}, {@link android.media.MediaPlayer.OnErrorListener OnErrorListener},\n      {@link android.media.MediaPlayer.OnInfoListener OnInfoListener}, {@link\n      android.media.MediaPlayer.OnPreparedListener OnPreparedListener} and {@link\n      android.media.MediaPlayer.OnSeekCompleteListener OnSeekCompleteListener}.\n  \u003cli\u003eFull support of the {@link MediaPlayer} internal states and their transition map.\n  \u003cli\u003eConfigure time parameters such as playback duration, preparation delay and {@link\n      #setSeekDelay(int)}.\n  \u003cli\u003eEmulation of asynchronous callback events during playback through Robolectric\u0027s scheduling\n      system using the {@link MediaInfo} inner class.\n  \u003cli\u003eEmulation of error behavior when methods are called from invalid states, or to throw\n      assertions when methods are invoked in invalid states (using {@link\n      #setInvalidStateBehavior}).\n  \u003cli\u003eEmulation of different playback behaviors based on the current data source, as passed in to\n      {@link #setDataSource(String) setDataSource()}, using {@link #addMediaInfo} or {@link\n      #setMediaInfoProvider(MediaInfoProvider)}.\n  \u003cli\u003eEmulation of exceptions when calling {@link #setDataSource} using {@link #addException}.\n\u003c/ul\u003e\n\n\u003cb\u003eNote\u003c/b\u003e: One gotcha with this shadow is that you need to either configure an exception using\n{@link #addException(DataSource, IOException)} or a {@link ShadowMediaPlayer.MediaInfo} instance\nfor that data source using {@link #addMediaInfo(DataSource, MediaInfo)} or {@link\n#setMediaInfoProvider(MediaInfoProvider)} \u003ci\u003ebefore\u003c/i\u003e calling {@link #setDataSource}, otherwise\nyou\u0027ll get an {@link IllegalArgumentException}.\n\n\u003cp\u003eThe current features of {@code ShadowMediaPlayer} were focused on development for testing\nplayback of audio tracks. Thus support for emulating timed text and video events is incomplete.\nNone of these features would be particularly onerous to add/fix - contributions welcome, of\ncourse!\n\n@author Fr Jeremy Krieg, Holy Monastery of St Nectarios, Adelaide, Australia\n"
 }

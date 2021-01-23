@@ -26,6 +26,44 @@
       "name": "addTargetUserProfile(android.os.UserHandle)",
       "documentation": "Adds {@code userHandle} to the list of accessible handles. "
     },
+    "canConfigureInteractAcrossProfiles(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "canConfigureInteractAcrossProfiles(java.lang.String)",
+      "documentation": "Unlike the real system, we will assume a package can always configure its own cross profile\ninteraction.\n"
+    },
+    "canInteractAcrossProfiles()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "canInteractAcrossProfiles()",
+      "documentation": "Checks if the current application can interact across profile.\n\n\u003cp\u003eThis checks for the existence of a target user profile, and if the app has\nINTERACT_ACROSS_USERS, INTERACT_ACROSS_USERS_FULL or INTERACT_ACROSS_PROFILES permission.\nImportantly, the {@code interact_across_profiles} AppOps is only checked through the value set\nby {@link #setInteractAcrossProfilesAppOp(int)} or by {@link\n#setInteractAcrossProfilesAppOp(String, int)}, if the application has the needed permissions.\n"
+    },
+    "canRequestInteractAcrossProfiles()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "canRequestInteractAcrossProfiles()",
+      "documentation": "Returns whether the calling package can request to navigate the user to the relevant settings\npage to request user consent to interact across profiles.\n\n\u003cp\u003eThis checks for the existence of a target user profile, and if the app has requested the\nINTERACT_ACROSS_PROFILES permission in its manifest. As Robolectric doesn\u0027t interpret the\npermissions in the manifest, whether or not the app has requested this is defined by {@link\n#setHasRequestedInteractAcrossProfiles(boolean)}.\n\n\u003cp\u003eIf the test uses {@link #setInteractAcrossProfilesAppOp(int)}, it implies the app has\nrequested the AppOps.\n\n\u003cp\u003eIn short, compared to {@link #canInteractAcrossProfiles()}, it doesn\u0027t check if the user has\nthe AppOps or not.\n"
+    },
     "clearNextStartedActivities()": {
       "isImplementation": false,
       "modifiers": [
@@ -47,6 +85,18 @@
       "exceptions": [],
       "name": "clearTargetUserProfiles()",
       "documentation": "Clears the list of accessible handles. "
+    },
+    "createRequestInteractAcrossProfilesIntent()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "createRequestInteractAcrossProfilesIntent()",
+      "documentation": "Returns an intent with the same action as the one returned by system when requesting the same.\n\n\u003cp\u003eNote: Currently, the system will also set the package name as a URI, but as this is not\nspecified in the main doc, we shouldn\u0027t rely on it. The purpose is only to make an intent can\nthat be recognised in a test.\n\n@throws SecurityException if this is called while {@link\n    CrossProfileApps#canRequestInteractAcrossProfiles()} returns false.\n"
     },
     "getNextStartedActivity()": {
       "isImplementation": false,
@@ -96,6 +146,31 @@
       "name": "getTargetUserProfiles()",
       "documentation": "Returns a list of {@link UserHandle}s currently accessible. This list is populated from calls\nto {@link #addTargetUserProfile(UserHandle)}.\n"
     },
+    "hasPermission(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "permission"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasPermission(java.lang.String)"
+    },
+    "isRequestInteractAcrossProfilesIntent(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isRequestInteractAcrossProfilesIntent(android.content.Intent)",
+      "documentation": "Checks whether the given intent will redirect toward the screen allowing the user to change the\ninteract across profiles AppOps.\n"
+    },
     "peekNextStartedActivity()": {
       "isImplementation": false,
       "modifiers": [
@@ -130,6 +205,47 @@
       "exceptions": [],
       "name": "removeTargetUserProfile(android.os.UserHandle)",
       "documentation": "Removes {@code userHandle} from the list of accessible handles, if present. "
+    },
+    "setHasRequestedInteractAcrossProfiles(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHasRequestedInteractAcrossProfiles(boolean)",
+      "documentation": "Sets whether or not the current application has requested the interact across profile\npermission in its manifest.\n"
+    },
+    "setInteractAcrossProfilesAppOp(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "newMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInteractAcrossProfilesAppOp(int)",
+      "documentation": "Forces the {code interact_across_profile} AppOps for the current package.\n\n\u003cp\u003eIf the value changes, this also sends the {@link\nCrossProfileApps#ACTION_CAN_INTERACT_ACROSS_PROFILES_CHANGED} broadcast.\n"
+    },
+    "setInteractAcrossProfilesAppOp(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "newMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "setInteractAcrossProfilesAppOp(java.lang.String,int)",
+      "documentation": "Checks permission and changes the AppOps value stored in {@link ShadowCrossProfileApps}.\n\n\u003cp\u003eIn the real implementation, if there is no target profile, the AppOps is not changed, as it\nwill be set during the profile\u0027s initialization. The real implementation also really changes\nthe AppOps for all profiles the package is installed in.\n"
     },
     "startActivity(android.content.ComponentName,android.os.UserHandle)": {
       "isImplementation": true,
@@ -203,10 +319,13 @@
     "android.content.pm.PackageManager.MATCH_DIRECT_BOOT_UNAWARE",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "com.google.common.base.Preconditions.checkNotNull",
     "android.Manifest.permission",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
+    "android.app.AppOpsManager",
+    "android.app.AppOpsManager.Mode",
     "android.content.ComponentName",
     "android.content.Context",
     "android.content.Intent",
@@ -218,6 +337,7 @@
     "android.graphics.drawable.Drawable",
     "android.os.Process",
     "android.os.UserHandle",
+    "android.provider.Settings",
     "android.text.TextUtils",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Iterables",
@@ -228,6 +348,7 @@
     "java.util.Objects",
     "java.util.Set",
     "javax.annotation.Nullable",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadows.ShadowCrossProfileApps.StartedMainActivity",

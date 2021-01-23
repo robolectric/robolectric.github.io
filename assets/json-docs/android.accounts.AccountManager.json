@@ -154,6 +154,23 @@
       "exceptions": [],
       "name": "blockingGetAuthToken(android.accounts.Account,java.lang.String,boolean)"
     },
+    "finishSession(android.os.Bundle,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "sessionBundle",
+        "activity",
+        "callback",
+        "handler"
+      ],
+      "returnType": "android.accounts.AccountManagerFuture\u003candroid.os.Bundle\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "finishSession(android.os.Bundle,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)",
+      "documentation": "Returns sessionBundle as the result of finishSession.\n\n@param sessionBundle is returned as the result bundle.\n@param activity is ignored.\n@param callback if not null, will be called with result bundle.\n@param handler is ignored.\n"
+    },
     "get(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [
@@ -581,6 +598,26 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setUserData(android.accounts.Account,java.lang.String,java.lang.String)"
+    },
+    "startAddAccountSession(java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "accountType",
+        "authTokenType",
+        "requiredFeatures",
+        "options",
+        "activity",
+        "callback",
+        "handler"
+      ],
+      "returnType": "android.accounts.AccountManagerFuture\u003candroid.os.Bundle\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "startAddAccountSession(java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)",
+      "documentation": "Returns a bundle that contains the account session bundle under {@link\nAccountManager#KEY_ACCOUNT_SESSION_BUNDLE} to later be passed on to {@link\nAccountManager#finishSession(Bundle,Activity,AccountManagerCallback\u003cBundle\u003e,Handler)}. The\nsession bundle simply propagates the given {@code accountType} so as not to be empty and is not\nencrypted as it would be in the real implementation. If an activity isn\u0027t provided, resulting\nbundle will only have a dummy {@link Intent} under {@link AccountManager#KEY_INTENT}.\n\n@param accountType An authenticator must exist for the accountType, or else {@link\n    AuthenticatorException} is thrown.\n@param authTokenType is ignored.\n@param requiredFeatures is ignored.\n@param options is ignored.\n@param activity if null, only {@link AccountManager#KEY_INTENT} will be present in result.\n@param callback if not null, will be called with result bundle.\n@param handler is ignored.\n@return future for bundle containing {@link AccountManager#KEY_ACCOUNT_SESSION_BUNDLE} if\n    activity is provided, or {@link AccountManager#KEY_INTENT} otherwise.\n"
     }
   },
   "imports": [

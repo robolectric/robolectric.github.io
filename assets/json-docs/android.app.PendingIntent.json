@@ -1,5 +1,16 @@
 {
   "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    },
     "cancel()": {
       "isImplementation": true,
       "modifiers": [
@@ -217,7 +228,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getSavedIntent()",
-      "documentation": "This returns the last Intent in the Intent[] to be delivered when the PendingIntent is sent.\nThis method is particularly useful for PendingIntents created with a single Intent:\n\u003cul\u003e\n  \u003cli\u003e{@link #getActivity(Context, int, Intent, int)}\u003c/li\u003e\n  \u003cli\u003e{@link #getActivity(Context, int, Intent, int, Bundle)}\u003c/li\u003e\n  \u003cli\u003e{@link #getBroadcast(Context, int, Intent, int)}\u003c/li\u003e\n  \u003cli\u003e{@link #getService(Context, int, Intent, int)}\u003c/li\u003e\n\u003c/ul\u003e\n\n@return the final Intent to be delivered when the PendingIntent is sent\n"
+      "documentation": "This returns the last Intent in the Intent[] to be delivered when the PendingIntent is sent.\nThis method is particularly useful for PendingIntents created with a single Intent:\n\n\u003cul\u003e\n  \u003cli\u003e{@link #getActivity(Context, int, Intent, int)}\n  \u003cli\u003e{@link #getActivity(Context, int, Intent, int, Bundle)}\n  \u003cli\u003e{@link #getBroadcast(Context, int, Intent, int)}\n  \u003cli\u003e{@link #getService(Context, int, Intent, int)}\n\u003c/ul\u003e\n\n@return the final Intent to be delivered when the PendingIntent is sent\n"
     },
     "getSavedIntents()": {
       "isImplementation": false,
@@ -512,6 +523,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "writePendingIntentOrNullToParcel(android.app.PendingIntent,android.os.Parcel)"
+    },
+    "writeToParcel(android.os.Parcel,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writeToParcel(android.os.Parcel,int)"
     }
   },
   "imports": [
@@ -522,6 +546,7 @@
     "android.app.PendingIntent.FLAG_UPDATE_CURRENT",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "android.annotation.NonNull",
     "android.annotation.SuppressLint",
@@ -529,6 +554,7 @@
     "android.app.ActivityThread",
     "android.app.PendingIntent",
     "android.app.PendingIntent.CanceledException",
+    "android.app.PendingIntent.OnMarshaledListener",
     "android.content.Context",
     "android.content.Intent",
     "android.content.IntentSender",
@@ -536,6 +562,7 @@
     "android.os.Handler",
     "android.os.IBinder",
     "android.os.Parcel",
+    "android.os.Parcelable.Creator",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.Iterator",

@@ -1,5 +1,15 @@
 {
   "methods": {
+    "abortAnimation()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "abortAnimation()"
+    },
     "computeScrollOffset()": {
       "isImplementation": true,
       "modifiers": [

@@ -48,17 +48,38 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "verifyInputEvent(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "inputEvent"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "verifyInputEvent(java.lang.Object)",
+      "documentation": "Provides a local java implementation, since the real implementation is in system server +\nnative code.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.R",
+    "java.util.concurrent.TimeUnit.MILLISECONDS",
     "android.hardware.input.InputManager",
     "android.view.InputDevice",
     "android.view.InputEvent",
+    "android.view.KeyEvent",
+    "android.view.MotionEvent",
+    "android.view.VerifiedKeyEvent",
+    "android.view.VerifiedMotionEvent",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowInputManager"
+  "name": "org.robolectric.shadows.ShadowInputManager",
+  "documentation": "Shadow for {@link InputManager} "
 }

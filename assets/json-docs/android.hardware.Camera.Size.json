@@ -16,6 +16,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "org.robolectric.shadow.api.Shadow.newInstanceOf",
     "android.graphics.ImageFormat",
     "android.hardware.Camera",

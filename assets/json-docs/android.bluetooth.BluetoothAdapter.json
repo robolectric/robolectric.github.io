@@ -68,6 +68,17 @@
       "exceptions": [],
       "name": "getAddress()"
     },
+    "getBluetoothLeAdvertiser()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.le.BluetoothLeAdvertiser",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getBluetoothLeAdvertiser()"
+    },
     "getBluetoothLeScanner()": {
       "isImplementation": true,
       "modifiers": [
@@ -344,6 +355,18 @@
       "name": "setBleScanAlwaysAvailable(boolean)",
       "documentation": "Sets the value for {@link isBleScanAlwaysAvailable}. If true, {@link getLeState} will always\nreturn true.\n"
     },
+    "setBluetoothLeAdvertiser(android.bluetooth.le.BluetoothLeAdvertiser)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "advertiser"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBluetoothLeAdvertiser(android.bluetooth.le.BluetoothLeAdvertiser)"
+    },
     "setBondedDevices(java.util.Set\u003candroid.bluetooth.BluetoothDevice\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -483,6 +506,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "maxSdk": 29,
       "name": "setScanMode(int,int)"
     },
     "setState(int)": {
@@ -553,6 +577,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothAdapter.LeScanCallback",
@@ -560,6 +585,7 @@
     "android.bluetooth.BluetoothProfile",
     "android.bluetooth.BluetoothServerSocket",
     "android.bluetooth.BluetoothSocket",
+    "android.bluetooth.le.BluetoothLeAdvertiser",
     "android.bluetooth.le.BluetoothLeScanner",
     "android.content.Context",
     "android.os.Build",

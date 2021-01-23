@@ -49,6 +49,21 @@
       "name": "createForSubscriptionId(int)",
       "documentation": "Returns {@code null} by default or the value specified via {@link\n#setTelephonyManagerForSubscriptionId(int, TelephonyManager)}\n"
     },
+    "createTelephonyDisplayInfo(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "networkType",
+        "overrideNetworkType"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "createTelephonyDisplayInfo(int,int)",
+      "documentation": "Creates a {@link TelephonyDisplayInfo}.\n\n@param networkType The packet-switching cellular network type (see {@link NetworkType})\n@param overrideNetworkType The override network type (see {@link OverrideNetworkType})\n"
+    },
     "getAllCellInfo()": {
       "isImplementation": true,
       "modifiers": [
@@ -422,6 +437,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 29,
       "name": "getSimCountryIso(int)"
     },
     "getSimLocale()": {
@@ -583,6 +599,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "initListener(android.telephony.PhoneStateListener,int)"
+    },
+    "isDataConnectionAllowed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "isDataConnectionAllowed()"
     },
     "isDataEnabled()": {
       "isImplementation": true,
@@ -995,6 +1022,18 @@
       "name": "setImei(java.lang.String)",
       "documentation": "Set the IMEI returned by getImei(). "
     },
+    "setIsDataConnectionAllowed(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isDataConnectionAllowed"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsDataConnectionAllowed(boolean)"
+    },
     "setIsNetworkRoaming(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -1328,6 +1367,19 @@
       "name": "setSubscriberId(java.lang.String)",
       "documentation": "Sets the value to be returned by {@link #getSubscriberId()}. "
     },
+    "setTelephonyDisplayInfo(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "telephonyDisplayInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTelephonyDisplayInfo(java.lang.Object)",
+      "documentation": "Sets the current {@link TelephonyDisplayInfo}, and notifies all the {@link PhoneStateListener}s\nthat were registered with the {@link PhoneStateListener#LISTEN_DISPLAY_INFO_CHANGED} flag.\n\n@param telephonyDisplayInfo The {@link TelephonyDisplayInfo} to set. May not be null.\n@throws NullPointerException if telephonyDisplayInfo is null.\n"
+    },
     "setTelephonyManagerForHandle(android.telecom.PhoneAccountHandle,android.telephony.TelephonyManager)": {
       "isImplementation": false,
       "modifiers": [
@@ -1475,6 +1527,7 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "android.telephony.PhoneStateListener.LISTEN_CALL_STATE",
     "android.telephony.PhoneStateListener.LISTEN_CELL_INFO",
     "android.telephony.PhoneStateListener.LISTEN_CELL_LOCATION",
@@ -1490,17 +1543,21 @@
     "android.os.PersistableBundle",
     "android.os.SystemProperties",
     "android.telecom.PhoneAccountHandle",
+    "android.telephony.Annotation.NetworkType",
+    "android.telephony.Annotation.OverrideNetworkType",
     "android.telephony.CellInfo",
     "android.telephony.CellLocation",
     "android.telephony.PhoneStateListener",
     "android.telephony.ServiceState",
     "android.telephony.SignalStrength",
     "android.telephony.SubscriptionManager",
+    "android.telephony.TelephonyDisplayInfo",
     "android.telephony.TelephonyManager",
     "android.telephony.TelephonyManager.CellInfoCallback",
     "android.text.TextUtils",
     "android.util.SparseArray",
     "android.util.SparseIntArray",
+    "com.google.common.base.Preconditions",
     "com.google.common.base.Predicate",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Iterables",

@@ -32,6 +32,17 @@
       "exceptions": [],
       "name": "reenableKeyguard()",
       "documentation": "Sets the value to be returned by {@link #isEnabled()} to true.\n\n@see #isEnabled()\n"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     }
   },
   "imports": [
@@ -47,8 +58,7 @@
     "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.annotation.Resetter"
   ],
   "name": "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock",
   "documentation": "An implementation of {@link KeyguardManager.KeyguardLock}, for use in tests. "

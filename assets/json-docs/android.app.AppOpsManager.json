@@ -59,6 +59,23 @@
       "minSdk": 19,
       "name": "checkPackage(int,java.lang.String)"
     },
+    "finishOp(java.lang.String,int,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName",
+        "attributionTag"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "finishOp(java.lang.String,int,java.lang.String,java.lang.String)",
+      "documentation": "Removes a fake long-running operation from the set. "
+    },
     "getAudioRestrictionKey(int,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -131,6 +148,21 @@
       "minSdk": 19,
       "name": "getOpsForPackage(int,java.lang.String,int[])"
     },
+    "getOpsForPackage(int,java.lang.String,java.lang.String[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uid",
+        "packageName",
+        "ops"
+      ],
+      "returnType": "java.util.List\u003candroid.app.AppOpsManager.PackageOps\u003e",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getOpsForPackage(int,java.lang.String,java.lang.String[])"
+    },
     "getRestriction(int,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -143,6 +175,22 @@
       "returnType": "org.robolectric.shadows.ShadowAppOpsManager.ModeAndException",
       "exceptions": [],
       "name": "getRestriction(int,int)"
+    },
+    "isOpActive(java.lang.String,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "isOpActive(java.lang.String,int,java.lang.String)",
+      "documentation": "Checks whether the given op is active, i.e. did someone call {@link #startOp(String, int,\nString, String, String)} without {@link #finishOp(String, int, String, String)} yet.\n"
     },
     "noteOp(int,int,java.lang.String)": {
       "isImplementation": true,
@@ -159,6 +207,23 @@
       "minSdk": 19,
       "name": "noteOp(int,int,java.lang.String)"
     },
+    "noteOp(int,int,java.lang.String,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName",
+        "attributionTag",
+        "message"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "noteOp(int,int,java.lang.String,java.lang.String,java.lang.String)"
+    },
     "noteOpNoThrow(int,int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -174,6 +239,23 @@
       "minSdk": 19,
       "name": "noteOpNoThrow(int,int,java.lang.String)"
     },
+    "noteOpNoThrow(int,int,java.lang.String,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName",
+        "attributionTag",
+        "message"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "noteOpNoThrow(int,int,java.lang.String,java.lang.String,java.lang.String)"
+    },
     "noteProxyOpNoThrow(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -186,7 +268,19 @@
       "returnType": "int",
       "exceptions": [],
       "minSdk": 23,
+      "maxSdk": 29,
       "name": "noteProxyOpNoThrow(int,java.lang.String)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "setMode(int,int,java.lang.String,int)": {
       "isImplementation": true,
@@ -238,6 +332,24 @@
       "minSdk": 21,
       "name": "setRestriction(int,int,int,java.lang.String[])",
       "documentation": "Sets audio restrictions.\n\n\u003cp\u003eThis method is public for testing, as the original method is {@code @hide}.\n"
+    },
+    "startOp(java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName",
+        "attributionTag",
+        "message"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "startOp(java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)",
+      "documentation": "Stores a fake long-running operation. It does not throw if a wrong uid is passed. "
     },
     "startWatchingMode(int,java.lang.String,android.app.AppOpsManager.OnOpChangedListener)": {
       "isImplementation": true,
@@ -331,13 +443,17 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "android.annotation.Nullable",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
     "android.app.AppOpsManager",
+    "android.app.AppOpsManager.AttributedOpEntry",
+    "android.app.AppOpsManager.NoteOpEvent",
     "android.app.AppOpsManager.OnOpChangedListener",
     "android.app.AppOpsManager.OpEntry",
+    "android.app.AppOpsManager.OpEventProxyInfo",
     "android.app.AppOpsManager.PackageOps",
     "android.content.Context",
     "android.content.pm.PackageManager.NameNotFoundException",
@@ -366,6 +482,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",

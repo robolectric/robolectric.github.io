@@ -57,6 +57,16 @@
       "name": "checkedPerformClick()",
       "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\nIf running with LooperMode PAUSED will also idle the main Looper.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.\n@deprecated - Please use Espresso for View interactions.\n"
     },
+    "clearAnimation()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearAnimation()"
+    },
     "clearWasInvalidated()": {
       "isImplementation": false,
       "modifiers": [
@@ -204,19 +214,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "dumpIndent(java.io.PrintStream,int)"
-    },
-    "getAccessibilityChecker()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static",
-        "synchronized"
-      ],
-      "params": [],
-      "returnType": "org.robolectric.pluginapi.AccessibilityChecker",
-      "exceptions": [],
-      "name": "getAccessibilityChecker()",
-      "documentation": "Remove after 4.4.\n@deprecated Transitional use only.\n"
     },
     "getAttachInfo()": {
       "isImplementation": false,
@@ -819,12 +816,10 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.pluginapi.AccessibilityChecker",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.TimeUtils",
-    "org.robolectric.util.inject.Injector",
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowView.AnimationRunner",

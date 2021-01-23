@@ -1,5 +1,19 @@
 {
   "methods": {
+    "addOnFrameMetricsAvailableListener(android.view.Window.OnFrameMetricsAvailableListener,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "addOnFrameMetricsAvailableListener(android.view.Window.OnFrameMetricsAvailableListener,android.os.Handler)"
+    },
     "create(android.content.Context)": {
       "isImplementation": false,
       "modifiers": [
@@ -77,6 +91,46 @@
       "exceptions": [],
       "name": "getTitle()"
     },
+    "removeOnFrameMetricsAvailableListener(android.view.Window.OnFrameMetricsAvailableListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "removeOnFrameMetricsAvailableListener(android.view.Window.OnFrameMetricsAvailableListener)"
+    },
+    "reportOnFrameMetricsAvailable(android.view.FrameMetrics)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "frameMetrics"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reportOnFrameMetricsAvailable(android.view.FrameMetrics)",
+      "documentation": "Calls {@link Window.OnFrameMetrisAvailableListener#onFrameMetricsAvailable()} on each current\nlistener with 0 as the dropCountSinceLastInvocation.\n"
+    },
+    "reportOnFrameMetricsAvailable(android.view.FrameMetrics,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "frameMetrics",
+        "dropCountSinceLastInvocation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reportOnFrameMetricsAvailable(android.view.FrameMetrics,int)",
+      "documentation": "Calls {@link Window.OnFrameMetrisAvailableListener#onFrameMetricsAvailable()} on each current\nlistener.\n\n@param frameMetrics the {@link FrameMetrics} instance passed to the listeners.\n@param dropCountSinceLastInvocation the dropCountSinceLastInvocation passed to the listeners.\n"
+    },
     "setFlags(int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -105,12 +159,18 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.content.Context",
     "android.graphics.drawable.Drawable",
+    "android.os.Handler",
+    "android.view.FrameMetrics",
     "android.view.Window",
+    "android.view.Window.OnFrameMetricsAvailableListener",
     "android.widget.ProgressBar",
+    "java.util.HashSet",
+    "java.util.Set",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

@@ -72,6 +72,30 @@
       "name": "getTimesRebooted()",
       "documentation": "Returns the number of times {@link #reboot(String)} was called. "
     },
+    "isAmbientDisplayAvailable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "isAmbientDisplayAvailable()",
+      "documentation": "Returns true by default, or the value specified via {@link\n#setAmbientDisplayAvailable(boolean)}.\n"
+    },
+    "isAmbientDisplaySuppressed()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "isAmbientDisplaySuppressed()",
+      "documentation": "Returns true if {@link #suppressAmbientDisplay(String, boolean)} has been called with any\ntoken.\n"
+    },
     "isDeviceIdleMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -130,6 +154,18 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "isPowerSaveMode()"
+    },
+    "isRebootingUserspaceSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "isRebootingUserspaceSupported()",
+      "documentation": "Returns last value specified in {@link #setIsRebootingUserspaceSupported(boolean)} or {@code\nfalse} by default.\n"
     },
     "isScreenOn()": {
       "isImplementation": true,
@@ -204,6 +240,19 @@
       "exceptions": [],
       "name": "reset()",
       "documentation": "Discards the most recent {@code PowerManager.WakeLock}s "
+    },
+    "setAmbientDisplayAvailable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "available"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAmbientDisplayAvailable(boolean)",
+      "documentation": "Sets the value returned by {@link #isAmbientDisplayAvailable()}. "
     },
     "setCurrentThermalStatus(int)": {
       "isImplementation": false,
@@ -281,6 +330,19 @@
       "exceptions": [],
       "name": "setIsPowerSaveMode(boolean)"
     },
+    "setIsRebootingUserspaceSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsRebootingUserspaceSupported(boolean)",
+      "documentation": "Sets the value returned by {@link #isRebootingUserspaceSupported()}. "
+    },
     "setIsScreenOn(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -318,6 +380,21 @@
       "exceptions": [],
       "name": "setLocationPowerSaveMode(int)",
       "documentation": "Sets the value returned by {@link #getLocationPowerSaveMode()} when battery saver is on. "
+    },
+    "suppressAmbientDisplay(java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "token",
+        "suppress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "suppressAmbientDisplay(java.lang.String,boolean)",
+      "documentation": "If true, suppress the device\u0027s ambient display. Ambient display is defined as anything visible\non the display when {@link PowerManager#isInteractive} is false.\n\n@param token An identifier for the ambient display suppression.\n@param suppress If {@code true}, suppresses the ambient display. Otherwise, unsuppresses the\n    ambient display for the given token.\n"
     }
   },
   "imports": [
@@ -327,12 +404,18 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "com.google.common.base.Preconditions.checkState",
     "org.robolectric.shadows.ShadowApplication.getInstance",
+    "android.Manifest.permission",
+    "android.annotation.RequiresPermission",
+    "android.annotation.SystemApi",
+    "android.os.Binder",
     "android.os.PowerManager",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
+    "java.util.Collections",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.List",

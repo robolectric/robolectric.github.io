@@ -40,6 +40,17 @@
       "name": "getBitmap(int)",
       "documentation": "Returns the memory cached {@link Bitmap} associated with {@code which}.\n\n@param which either {@link WallpaperManager#FLAG_LOCK} or {WallpaperManager#FLAG_SYSTEM}.\n@return The memory cached {@link Bitmap} associated with {@code which}. {@code null} if no\n    bitmap was set.\n"
     },
+    "getWallpaperCommandRecords()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowWallpaperManager.WallpaperCommandRecord\u003e",
+      "exceptions": [],
+      "name": "getWallpaperCommandRecords()",
+      "documentation": "Returns all the invocation records to {@link WallpaperManager#sendWallpaperCommand} "
+    },
     "getWallpaperFile(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -203,13 +214,16 @@
     "java.io.FileOutputStream",
     "java.io.IOException",
     "java.io.InputStream",
+    "java.util.ArrayList",
+    "java.util.Collections",
     "java.util.List",
     "javax.annotation.Nullable",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.Logger",
-    "org.xmlpull.v1.XmlPullParserException"
+    "org.xmlpull.v1.XmlPullParserException",
+    "org.robolectric.shadows.ShadowWallpaperManager.WallpaperCommandRecord"
   ],
   "name": "org.robolectric.shadows.ShadowWallpaperManager"
 }

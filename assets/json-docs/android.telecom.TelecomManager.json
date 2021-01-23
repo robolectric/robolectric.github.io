@@ -122,6 +122,19 @@
       "minSdk": 22,
       "name": "clearAccountsForPackage(java.lang.String)"
     },
+    "createLaunchEmergencyDialerIntent(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "number"
+      ],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "createLaunchEmergencyDialerIntent(java.lang.String)"
+    },
     "denyIncomingCall(org.robolectric.shadows.ShadowTelecomManager.IncomingCallRecord)": {
       "isImplementation": false,
       "modifiers": [
@@ -579,6 +592,23 @@
       "minSdk": 22,
       "name": "isVoiceMailNumber(android.telecom.PhoneAccountHandle,java.lang.String)"
     },
+    "newCallAudioState(boolean,int,int,android.bluetooth.BluetoothDevice,java.util.Collection\u003candroid.bluetooth.BluetoothDevice\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "muted",
+        "route",
+        "supportedRouteMask",
+        "activeBluetoothDevice",
+        "supportedBluetoothDevices"
+      ],
+      "returnType": "android.telecom.CallAudioState",
+      "exceptions": [],
+      "name": "newCallAudioState(boolean,int,int,android.bluetooth.BluetoothDevice,java.util.Collection\u003candroid.bluetooth.BluetoothDevice\u003e)",
+      "documentation": "Creates a new {@link CallAudioState}. The real constructor of {@link CallAudioState} is hidden.\n"
+    },
     "placeCall(android.net.Uri,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
@@ -709,6 +739,19 @@
       "name": "setSystemDialerPackage(java.lang.String)",
       "documentation": "Set returned value of {@link #getSystemDialerPackage()}. "
     },
+    "setTtySupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTtySupported(boolean)",
+      "documentation": "Sets the value to be returned by {@link #isTtySupported()}. "
+    },
     "setUserSelectedOutgoingPhoneAccount(android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -774,13 +817,18 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.R",
     "com.google.common.base.Verify.verifyNotNull",
+    "android.annotation.SystemApi",
     "android.annotation.TargetApi",
+    "android.bluetooth.BluetoothDevice",
     "android.content.ComponentName",
     "android.content.Context",
+    "android.content.Intent",
+    "android.content.pm.ResolveInfo",
     "android.net.Uri",
     "android.os.Bundle",
-    "androidx.annotation.Nullable",
+    "android.telecom.CallAudioState",
     "android.telecom.Connection",
     "android.telecom.ConnectionRequest",
     "android.telecom.ConnectionService",
@@ -788,10 +836,13 @@
     "android.telecom.PhoneAccountHandle",
     "android.telecom.TelecomManager",
     "android.telecom.VideoProfile",
+    "android.text.TextUtils",
     "android.util.ArrayMap",
+    "androidx.annotation.Nullable",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Iterables",
     "java.util.ArrayList",
+    "java.util.Collection",
     "java.util.HashSet",
     "java.util.LinkedHashMap",
     "java.util.List",

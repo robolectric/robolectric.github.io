@@ -41,6 +41,22 @@
       "exceptions": [],
       "name": "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)"
     },
+    "create(java.lang.String,android.graphics.Rect,android.graphics.BitmapFactory.Options,android.graphics.Point)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "name",
+        "outPadding",
+        "options",
+        "widthAndHeight"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "create(java.lang.String,android.graphics.Rect,android.graphics.BitmapFactory.Options,android.graphics.Point)"
+    },
     "decodeByteArray(byte[],int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -284,6 +300,7 @@
     "android.graphics.Point",
     "android.graphics.Rect",
     "android.net.Uri",
+    "android.os.Build",
     "android.util.TypedValue",
     "java.io.BufferedInputStream",
     "java.io.ByteArrayInputStream",

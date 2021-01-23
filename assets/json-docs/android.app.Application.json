@@ -282,6 +282,14 @@
       "exceptions": [],
       "name": "getUnboundServiceConnections()"
     },
+    "getUserManagerState()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowUserManager.UserManagerState",
+      "exceptions": [],
+      "name": "getUserManagerState()"
+    },
     "hasReceiverForIntent(android.content.Intent)": {
       "isImplementation": false,
       "modifiers": [
@@ -306,6 +314,19 @@
       "exceptions": [],
       "name": "runBackgroundTasks()",
       "documentation": "Runs any background tasks previously queued by {@link android.os.AsyncTask#execute(Object[])}.\n\nNote: calling this method does not pause or un-pause the scheduler.\n"
+    },
+    "setBindServiceCallsOnServiceConnectedDirectly(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callDirectly"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBindServiceCallsOnServiceConnectedDirectly(boolean)",
+      "documentation": "Configures the ShadowApplication so that calls to bindService will call\nServiceConnection#onServiceConnected before returning.\n"
     },
     "setComponentNameAndServiceForBindService(android.content.ComponentName,android.os.IBinder)": {
       "isImplementation": false,
@@ -493,6 +514,7 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowActivityThread._ActivityThread_",
     "org.robolectric.shadows.ShadowActivityThread._AppBindData_",
+    "org.robolectric.shadows.ShadowUserManager.UserManagerState",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.Scheduler",
     "org.robolectric.util.reflector.Reflector",

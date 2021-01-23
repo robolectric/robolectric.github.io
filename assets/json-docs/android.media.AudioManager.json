@@ -91,6 +91,20 @@
       "name": "getActiveRecordingConfigurations()",
       "documentation": "Returns list of active recording configurations that was set by {@link\n#setActiveRecordingConfigurations} or empty list otherwise.\n"
     },
+    "getDevicesForAttributes(android.media.AudioAttributes)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "attributes"
+      ],
+      "returnType": "java.util.List\u003cjava.lang.Object\u003e",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getDevicesForAttributes(android.media.AudioAttributes)",
+      "documentation": "Returns the devices associated with the given audio stream.\n\n\u003cp\u003eIn this shadow-implementation the devices returned are either\n\n\u003col\u003e\n  \u003cli\u003edevices set through {@link #setDevicesForAttributes}, or\n  \u003cli\u003edevices set through {@link #setDefaultDevicesForAttributes}, or\n  \u003cli\u003ean empty list.\n\u003c/ol\u003e\n"
+    },
     "getIdForAudioPolicy(java.lang.Object)": {
       "isImplementation": false,
       "modifiers": [
@@ -203,6 +217,21 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getStreamVolume(int)"
+    },
+    "getStreamVolumeDb(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "streamType",
+        "index",
+        "deviceType"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getStreamVolumeDb(int,int,int)"
     },
     "isAnyAudioPolicyRegistered()": {
       "isImplementation": false,
@@ -448,6 +477,33 @@
       "exceptions": [],
       "name": "setBluetoothScoOn(boolean)"
     },
+    "setDefaultDevicesForAttributes(com.google.common.collect.ImmutableList\u003cjava.lang.Object\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "devices"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultDevicesForAttributes(com.google.common.collect.ImmutableList\u003cjava.lang.Object\u003e)",
+      "documentation": "Sets the devices to use as default for all audio streams. "
+    },
+    "setDevicesForAttributes(android.media.AudioAttributes,com.google.common.collect.ImmutableList\u003cjava.lang.Object\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "attributes",
+        "devices"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDevicesForAttributes(android.media.AudioAttributes,com.google.common.collect.ImmutableList\u003cjava.lang.Object\u003e)",
+      "documentation": "Sets the devices associated with the given audio stream. "
+    },
     "setIsBluetoothScoAvailableOffCall(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -669,6 +725,7 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "android.annotation.NonNull",
     "android.annotation.RequiresPermission",
     "android.annotation.TargetApi",

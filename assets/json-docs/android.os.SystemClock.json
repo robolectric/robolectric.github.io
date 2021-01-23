@@ -14,6 +14,21 @@
       "name": "advanceBy(java.time.Duration)",
       "documentation": "A convenience method for advancing the clock via {@link SystemClock#setCurrentTimeMillis(long)}\n\n@param duration The interval by which to advance.\n"
     },
+    "advanceBy(long,java.util.concurrent.TimeUnit)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "time",
+        "unit"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "advanceBy(long,java.util.concurrent.TimeUnit)",
+      "documentation": "An alternate to {@link #advanceBy(Duration)} for older Android code bases where Duration is not\navailable.\n"
+    },
     "currentGnssTimeClock()": {
       "isImplementation": true,
       "modifiers": [
@@ -112,6 +127,7 @@
     "android.os.SystemClock",
     "java.time.DateTimeException",
     "java.time.Duration",
+    "java.util.concurrent.TimeUnit",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",

@@ -79,16 +79,19 @@
       "name": "isReferenceCounted()",
       "documentation": "Retrieves if the wake lock is reference counted or not\n\n@return Is the wake lock reference counted?\n"
     },
-    "release()": {
+    "release(int)": {
       "isImplementation": true,
       "modifiers": [
         "protected",
         "synchronized"
       ],
-      "params": [],
+      "params": [
+        "flags"
+      ],
       "returnType": "void",
       "exceptions": [],
-      "name": "release()"
+      "name": "release(int)",
+      "documentation": "Releases the wake lock. The {@code flags} are ignored. "
     },
     "setReferenceCounted(boolean)": {
       "isImplementation": true,
@@ -136,12 +139,18 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "com.google.common.base.Preconditions.checkState",
     "org.robolectric.shadows.ShadowApplication.getInstance",
+    "android.Manifest.permission",
+    "android.annotation.RequiresPermission",
+    "android.annotation.SystemApi",
+    "android.os.Binder",
     "android.os.PowerManager",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
+    "java.util.Collections",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.List",

@@ -32,7 +32,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.PersistableBundle",
     "android.telephony.CarrierConfigManager",
-    "android.util.SparseArray",
+    "java.util.HashMap",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

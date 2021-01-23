@@ -419,16 +419,6 @@
       "name": "getCreatedFromY()",
       "documentation": "Vertical offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.\n\n@return Vertical offset within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s content, or -1.\n"
     },
-    "getDensity()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getDensity()"
-    },
     "getDescription()": {
       "isImplementation": false,
       "modifiers": [
@@ -665,18 +655,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCreatedFromResId(int,java.lang.String)"
-    },
-    "setDensity(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "density"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setDensity(int)"
     },
     "setDescription(java.lang.String)": {
       "isImplementation": false,

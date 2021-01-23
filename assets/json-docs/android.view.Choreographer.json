@@ -52,14 +52,16 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setPostFrameCallbackDelay(int)",
-      "documentation": "Allows application to specify a fixed amount of delay when {@link\n#postFrameCallback(FrameCallback)} is invoked. The default delay value is 0. This can be used\nto avoid infinite animation tasks to be spawned when the Robolectric {@link\norg.robolectric.util.Scheduler} is in {@link org.robolectric.util.Scheduler.IdleState#PAUSED}\nmode.\n\n\u003cp\u003eOnly supported in {@link LooperMode.Mode.LEGACY}\n"
+      "documentation": "Allows application to specify a fixed amount of delay when {@link\n#postFrameCallback(FrameCallback)} is invoked. The default delay value is 0. This can be used\nto avoid infinite animation tasks to be spawned when in LooperMode PAUSED or {@link\norg.robolectric.util.Scheduler.IdleState#PAUSED} and displaying an animation.\n"
     }
   },
   "imports": [
+    "org.robolectric.shadows.ShadowLooper.looperMode",
     "android.view.Choreographer",
     "android.view.Choreographer.FrameCallback",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
+    "org.robolectric.annotation.LooperMode.Mode",
     "org.robolectric.shadows.ShadowChoreographer.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowChoreographer",

@@ -85,6 +85,19 @@
       "name": "getBroadcastIntentsForUser(android.os.UserHandle)",
       "documentation": "Returns the broadcast intents sent to the given user. "
     },
+    "getBroadcastOptions(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getBroadcastOptions(android.content.Intent)",
+      "documentation": "Returns the broadcast options when the intent was last sent. "
+    },
     "getNextStartedActivity()": {
       "isImplementation": false,
       "modifiers": [
@@ -131,7 +144,9 @@
     },
     "getShadowInstrumentation()": {
       "isImplementation": false,
-      "modifiers": [],
+      "modifiers": [
+        "static"
+      ],
       "params": [],
       "returnType": "org.robolectric.shadows.ShadowInstrumentation",
       "exceptions": [],
@@ -217,6 +232,7 @@
     "android.content.Context",
     "android.content.ContextWrapper",
     "android.content.Intent",
+    "android.os.Bundle",
     "android.os.UserHandle",
     "java.util.List",
     "org.robolectric.RuntimeEnvironment",

@@ -161,6 +161,17 @@
       "exceptions": [],
       "name": "getState()"
     },
+    "getSurface()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.view.Surface",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getSurface()"
+    },
     "getVideoEncoder()": {
       "isImplementation": false,
       "modifiers": [
@@ -490,9 +501,12 @@
     }
   },
   "imports": [
+    "android.graphics.SurfaceTexture",
     "android.hardware.Camera",
     "android.media.MediaRecorder",
+    "android.os.Build.VERSION_CODES",
     "android.view.Surface",
+    "com.google.common.base.Preconditions",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

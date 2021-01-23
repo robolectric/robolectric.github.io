@@ -42,8 +42,8 @@
   "imports": [
     "android.app.role.RoleManager",
     "android.os.Build",
-    "androidx.annotation.NonNull",
     "android.util.ArraySet",
+    "androidx.annotation.NonNull",
     "com.android.internal.util.Preconditions",
     "java.util.Set",
     "org.robolectric.annotation.Implementation",

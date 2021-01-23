@@ -143,7 +143,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setThreadPriority(int,int)",
-      "documentation": "Stores priority for the given thread, but doesn\u0027t actually change it to not mess up with test\nrunner. Unlike real implementation does not throw any exceptions.\n\n@param tid The identifier of the thread. If equals zero, the identifier of the calling thread\n    will be used.\n"
+      "documentation": "Stores priority for the given thread, but doesn\u0027t actually change it to not mess up with test\nrunner. Unlike real implementation does not throw any exceptions.\n\n@param tid The identifier of the thread. If equals zero, the identifier of the calling thread\n    will be used.\n@param priority The priority to be set for the thread. The range of values accepted is\n    specified by {@link android.os.Process#setThreadPriority(int, int)}, which is [-20,19].\n"
     },
     "setUid(int)": {
       "isImplementation": false,

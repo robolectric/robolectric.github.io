@@ -70,6 +70,19 @@
       "exceptions": [],
       "name": "clearCameraInfo()"
     },
+    "enableShutterSound(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "enableShutterSound(boolean)"
+    },
     "getAddedCallbackBuffers()": {
       "isImplementation": false,
       "modifiers": [
@@ -211,6 +224,17 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isReleased()"
+    },
+    "isShutterSoundEnabled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isShutterSoundEnabled()",
+      "documentation": "Returns {@code true} if the default shutter sound is played when taking a picture. "
     },
     "open()": {
       "isImplementation": true,
@@ -374,6 +398,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "org.robolectric.shadow.api.Shadow.newInstanceOf",
     "android.graphics.ImageFormat",
     "android.hardware.Camera",

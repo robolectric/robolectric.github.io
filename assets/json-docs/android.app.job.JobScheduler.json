@@ -89,12 +89,30 @@
       "returnType": "int",
       "exceptions": [],
       "name": "schedule(android.app.job.JobInfo)"
+    },
+    "scheduleAsPackage(android.app.job.JobInfo,java.lang.String,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "abstract"
+      ],
+      "params": [
+        "job",
+        "packageName",
+        "userId",
+        "tag"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "scheduleAsPackage(android.app.job.JobInfo,java.lang.String,int,java.lang.String)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
+    "android.annotation.SystemApi",
     "android.app.JobSchedulerImpl",
     "android.app.job.JobInfo",
     "android.app.job.JobScheduler",

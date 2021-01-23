@@ -1,5 +1,34 @@
 {
   "methods": {
+    "addApplicationExitInfo(java.lang.String,int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "processName",
+        "pid",
+        "reason",
+        "status"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addApplicationExitInfo(java.lang.String,int,int,int)",
+      "documentation": "Adds an {@link ApplicationExitInfo} with the given information "
+    },
+    "clearApplicationUserData(java.lang.String,android.content.pm.IPackageDataObserver)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "observer"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "clearApplicationUserData(java.lang.String,android.content.pm.IPackageDataObserver)"
+    },
     "fillInProcessInfo(android.app.ActivityManager.RunningAppProcessInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -34,7 +63,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getBackgroundPackage()",
-      "documentation": "@return Get the package name of the last background processes killed.\n"
+      "documentation": "@return Get the package name of the last background processes killed. "
     },
     "getCurrentUser()": {
       "isImplementation": true,
@@ -57,6 +86,22 @@
       "returnType": "android.content.pm.ConfigurationInfo",
       "exceptions": [],
       "name": "getDeviceConfigurationInfo()"
+    },
+    "getHistoricalProcessExitReasons(java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "pid",
+        "maxNum"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getHistoricalProcessExitReasons(java.lang.Object,java.lang.Object,java.lang.Object)",
+      "documentation": "Returns the matched {@link ApplicationExitInfo} added by {@link #addApplicationExitInfo}.\n{@code packageName} is ignored.\n"
     },
     "getLockTaskModeState()": {
       "isImplementation": true,
@@ -151,6 +196,17 @@
       "minSdk": 26,
       "name": "getService()"
     },
+    "isApplicationUserDataCleared()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isApplicationUserDataCleared()",
+      "documentation": "Returns true after clearing application user data was requested by calling {@link\nActivityManager#clearApplicationUserData()}.\n"
+    },
     "isBackgroundRestricted()": {
       "isImplementation": true,
       "modifiers": [
@@ -161,7 +217,7 @@
       "exceptions": [],
       "minSdk": 28,
       "name": "isBackgroundRestricted()",
-      "documentation": "Returns the background restricion state set by {@link #setBackgroundRestricted}.\n"
+      "documentation": "Returns the background restriction state set by {@link #setBackgroundRestricted}. "
     },
     "isInLockTaskMode()": {
       "isImplementation": true,
@@ -243,7 +299,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setBackgroundRestricted(boolean)",
-      "documentation": "Sets the background restriction state reported by\n{@link ActivityManager#isBackgroundRestricted}, but has no effect otherwise.\n"
+      "documentation": "Sets the background restriction state reported by {@link\nActivityManager#isBackgroundRestricted}, but has no effect otherwise.\n"
+    },
+    "setDeviceConfigurationInfo(android.content.pm.ConfigurationInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "configurationInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDeviceConfigurationInfo(android.content.pm.ConfigurationInfo)",
+      "documentation": "Sets the {@link android.content.pm.ConfigurationInfo} returned by {@link\nActivityManager#getDeviceConfigurationInfo()}, but has no effect otherwise.\n"
     },
     "setIsLowRamDevice(boolean)": {
       "isImplementation": false,
@@ -256,7 +325,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setIsLowRamDevice(boolean)",
-      "documentation": "Override the return value of isLowRamDevice().\n"
+      "documentation": "Override the return value of isLowRamDevice(). "
     },
     "setLockTaskModeState(int)": {
       "isImplementation": false,
@@ -282,7 +351,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setMemoryClass(int)",
-      "documentation": "@param memoryClass Set the application\u0027s memory class.\n"
+      "documentation": "@param memoryClass Set the application\u0027s memory class. "
     },
     "setMemoryInfo(android.app.ActivityManager.MemoryInfo)": {
       "isImplementation": false,
@@ -295,7 +364,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setMemoryInfo(android.app.ActivityManager.MemoryInfo)",
-      "documentation": "@param memoryInfo Set the application\u0027s memory info.\n"
+      "documentation": "@param memoryInfo Set the application\u0027s memory info. "
     },
     "setProcesses(java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e)": {
       "isImplementation": false,
@@ -308,7 +377,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setProcesses(java.util.List\u003candroid.app.ActivityManager.RunningAppProcessInfo\u003e)",
-      "documentation": "@param processes List of running processes.\n"
+      "documentation": "@param processes List of running processes. "
     },
     "setServices(java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e)": {
       "isImplementation": false,
@@ -321,7 +390,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setServices(java.util.List\u003candroid.app.ActivityManager.RunningServiceInfo\u003e)",
-      "documentation": "@param services List of running services.\n"
+      "documentation": "@param services List of running services. "
     },
     "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)": {
       "isImplementation": false,
@@ -334,7 +403,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)",
-      "documentation": "@param tasks List of running tasks.\n"
+      "documentation": "@param tasks List of running tasks. "
     },
     "switchUser(android.os.UserHandle)": {
       "isImplementation": true,
@@ -369,15 +438,23 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.R",
+    "java.util.stream.Collectors.toCollection",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.annotation.RequiresPermission",
     "android.app.ActivityManager",
+    "android.app.ApplicationExitInfo",
     "android.app.IActivityManager",
     "android.content.Context",
     "android.content.pm.ConfigurationInfo",
+    "android.content.pm.IPackageDataObserver",
+    "android.content.pm.PackageManager",
     "android.os.Build.VERSION_CODES",
     "android.os.Process",
     "android.os.UserHandle",
+    "java.util.ArrayDeque",
+    "java.util.ArrayList",
+    "java.util.Deque",
     "java.util.List",
     "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.RuntimeEnvironment",
@@ -389,5 +466,6 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowActivityManager"
+  "name": "org.robolectric.shadows.ShadowActivityManager",
+  "documentation": "Shadow for {@link android.app.ActivityManager} "
 }

@@ -78,6 +78,30 @@
       "exceptions": [],
       "name": "dismissDialog(int)"
     },
+    "enterPictureInPictureMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "enterPictureInPictureMode()"
+    },
+    "enterPictureInPictureMode(android.app.PictureInPictureParams)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "params"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "enterPictureInPictureMode(android.app.PictureInPictureParams)"
+    },
     "findViewById(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -445,6 +469,17 @@
       "minSdk": 24,
       "name": "isInMultiWindowMode()"
     },
+    "isInPictureInPictureMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isInPictureInPictureMode()"
+    },
     "isLockTask()": {
       "isImplementation": false,
       "modifiers": [
@@ -466,6 +501,18 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isTaskRoot()"
+    },
+    "moveTaskToBack(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "nonRoot"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "moveTaskToBack(boolean)"
     },
     "onBackPressed()": {
       "isImplementation": true,
@@ -901,6 +948,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.Activity",
@@ -909,6 +957,7 @@
     "android.app.Application",
     "android.app.Dialog",
     "android.app.Instrumentation",
+    "android.app.PictureInPictureParams",
     "android.content.ComponentName",
     "android.content.Context",
     "android.content.Intent",

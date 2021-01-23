@@ -88,6 +88,17 @@
       "name": "isWindowShowing()",
       "documentation": "Returns whether the UI window from {@link VoiceInteractionSession} is currently showing. "
     },
+    "isWindowVisible()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isWindowVisible()",
+      "documentation": "Returns whether the window from {@link VoiceInteractionSession} is currently visible. Although\nwindow is visible this method does not check whether UI content of window is also showed.\n"
+    },
     "setStartVoiceActivityException(java.lang.RuntimeException)": {
       "isImplementation": false,
       "modifiers": [

@@ -38,6 +38,18 @@
       "exceptions": [],
       "name": "native_getCodecCount()"
     },
+    "native_getGlobalSettings()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.Map\u003cjava.lang.String,java.lang.Object\u003e",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "native_getGlobalSettings()"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -52,13 +64,16 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.Q",
     "android.annotation.TargetApi",
     "android.media.MediaCodecInfo",
     "android.media.MediaCodecList",
     "java.util.ArrayList",
     "java.util.Collections",
+    "java.util.HashMap",
     "java.util.List",
+    "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",

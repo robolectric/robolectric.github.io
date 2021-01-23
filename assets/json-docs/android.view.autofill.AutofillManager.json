@@ -89,8 +89,8 @@
     "android.os.Build.VERSION_CODES.P",
     "android.content.ComponentName",
     "android.service.autofill.FillEventHistory",
-    "androidx.annotation.Nullable",
     "android.view.autofill.AutofillManager",
+    "androidx.annotation.Nullable",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

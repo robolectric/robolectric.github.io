@@ -42,6 +42,19 @@
       "name": "addUsageStats(int,android.app.usage.UsageStats)",
       "documentation": "Adds an aggregated {@code UsageStats} object, to be returned by {@link #queryUsageStats}.\nConstruct these objects with {@link UsageStatsBuilder}, and set the firstTimestamp and\nlastTimestamp fields to make time filtering work in {@link #queryUsageStats}.\n\n@param intervalType An interval type constant, e.g. {@link UsageStatsManager#INTERVAL_WEEKLY}.\n"
     },
+    "createUsageEvents(java.util.List\u003candroid.app.usage.UsageEvents.Event\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "results"
+      ],
+      "returnType": "android.app.usage.UsageEvents",
+      "exceptions": [],
+      "name": "createUsageEvents(java.util.List\u003candroid.app.usage.UsageEvents.Event\u003e)"
+    },
     "getAppStandbyBucket()": {
       "isImplementation": true,
       "modifiers": [
@@ -135,6 +148,20 @@
       "returnType": "android.app.usage.UsageEvents",
       "exceptions": [],
       "name": "queryEvents(long,long)"
+    },
+    "queryEventsForSelf(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "beginTime",
+        "endTime"
+      ],
+      "returnType": "android.app.usage.UsageEvents",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "queryEventsForSelf(long,long)"
     },
     "queryUsageStats(int,long,long)": {
       "isImplementation": true,

@@ -203,6 +203,7 @@
       "returnType": "android.graphics.Typeface",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 28,
       "name": "createFromResources(android.content.res.AssetManager,java.lang.String,int)"
     },
     "createFromResources(java.lang.Object,java.lang.Object,java.lang.Object)": {
@@ -219,7 +220,6 @@
       "returnType": "android.graphics.Typeface",
       "exceptions": [],
       "minSdk": 26,
-      "maxSdk": 27,
       "name": "createFromResources(java.lang.Object,java.lang.Object,java.lang.Object)"
     },
     "createUnderlyingTypeface(java.lang.String,int)": {
@@ -292,6 +292,20 @@
       "returnType": "int",
       "exceptions": [],
       "name": "hashCode()"
+    },
+    "init()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 26,
+      "name": "init()",
+      "documentation": "Avoid spurious error message about /system/etc/fonts.xml "
     },
     "initSystemDefaultTypefaces(java.lang.Object,java.lang.Object,java.lang.Object)": {
       "isImplementation": true,

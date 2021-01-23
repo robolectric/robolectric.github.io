@@ -100,19 +100,6 @@
       "name": "isKeyguardSecure()",
       "documentation": "For tests, returns the value set by {@link #setIsKeyguardSecure(boolean)}, or false by default.\n\n@see #setIsKeyguardSecure(boolean)\n"
     },
-    "newKeyguardLock(java.lang.String)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "tag"
-      ],
-      "returnType": "android.app.KeyguardManager.KeyguardLock",
-      "exceptions": [],
-      "name": "newKeyguardLock(java.lang.String)",
-      "documentation": "For tests, returns a {@link ShadowKeyguardLock}.\n\n@see ShadowKeyguardLock\n"
-    },
     "requestDismissKeyguard(android.app.Activity,android.app.KeyguardManager.KeyguardDismissCallback)": {
       "isImplementation": true,
       "modifiers": [
@@ -272,7 +259,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowKeyguardManager.ShadowKeyguardLock"
   ],
   "name": "org.robolectric.shadows.ShadowKeyguardManager"

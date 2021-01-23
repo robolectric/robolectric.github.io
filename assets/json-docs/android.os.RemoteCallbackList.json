@@ -44,6 +44,17 @@
       "exceptions": [],
       "name": "getBroadcastItem(int)"
     },
+    "getRegisteredCallbackCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "getRegisteredCallbackCount()"
+    },
     "kill()": {
       "isImplementation": true,
       "modifiers": [

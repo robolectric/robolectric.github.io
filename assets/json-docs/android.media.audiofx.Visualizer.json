@@ -35,6 +35,19 @@
       "minSdk": 9,
       "name": "native_getFft(byte[])"
     },
+    "native_getPeakRms(android.media.audiofx.Visualizer.MeasurementPeakRms)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "measurement"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "native_getPeakRms(android.media.audiofx.Visualizer.MeasurementPeakRms)"
+    },
     "native_getSamplingRate()": {
       "isImplementation": true,
       "modifiers": [
@@ -58,6 +71,17 @@
       "exceptions": [],
       "minSdk": 9,
       "name": "native_getWaveForm(byte[])"
+    },
+    "native_release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 9,
+      "name": "native_release()"
     },
     "native_setCaptureSize(int)": {
       "isImplementation": true,
@@ -101,6 +125,19 @@
       "minSdk": 9,
       "name": "setDataCaptureListener(android.media.audiofx.Visualizer.OnDataCaptureListener,int,boolean,boolean)"
     },
+    "setErrorCode(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "errorCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setErrorCode(int)",
+      "documentation": "Sets the error code to override setter methods in this class.\n\n\u003cp\u003eWhen the error code is set to anything other than {@link Visualizer.SUCCESS} setters in the\nVisualizer will early-out and return that error code.\n"
+    },
     "setSource(org.robolectric.shadows.ShadowVisualizer.VisualizerSource)": {
       "isImplementation": false,
       "modifiers": [
@@ -112,6 +149,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSource(org.robolectric.shadows.ShadowVisualizer.VisualizerSource)"
+    },
+    "setState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "newState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setState(int)",
+      "documentation": "Updates the state of the {@link Visualizer} itself.\n\n\u003cp\u003eThis can be used e.g. to put the Visualizer in an unexpected state and cause an exception\nthe next time the Visualizer is used.\n"
     },
     "triggerDataCapture()": {
       "isImplementation": false,
@@ -127,13 +177,19 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.GINGERBREAD",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.media.audiofx.Visualizer",
+    "android.media.audiofx.Visualizer.MeasurementPeakRms",
     "android.media.audiofx.Visualizer.OnDataCaptureListener",
     "java.util.concurrent.atomic.AtomicReference",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadows.ShadowVisualizer.VisualizerSource"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowVisualizer.VisualizerSource",
+    "org.robolectric.shadows.ShadowVisualizer.ReflectorVisualizer"
   ],
   "name": "org.robolectric.shadows.ShadowVisualizer",
   "documentation": "Shadow for the {@link Visualizer} class. "

@@ -1,17 +1,20 @@
 {
   "methods": {
-    "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener)": {
+    "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener,java.lang.String,java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
         "protected"
       ],
       "params": [
         "context",
-        "listener"
+        "listener",
+        "engine",
+        "packageName",
+        "useFallback"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener)"
+      "name": "__constructor__(android.content.Context,android.speech.tts.TextToSpeech.OnInitListener,java.lang.String,java.lang.String,boolean)"
     },
     "addLanguageAvailability(java.util.Locale)": {
       "isImplementation": false,
@@ -25,18 +28,21 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addLanguageAvailability(java.util.Locale)",
-      "documentation": "Make {@link Locale} an available language returned by {@link\nTextToSpeech#isLanguageAvailable(Locale)}. The value returned by {@link\n#isLanguageAvailable(Locale)} will vary depending on language, country, and variant.\n"
+      "documentation": "Makes {@link Locale} an available language returned by {@link\nTextToSpeech#isLanguageAvailable(Locale)}. The value returned by {@link\n#isLanguageAvailable(Locale)} will vary depending on language, country, and variant.\n"
     },
-    "clearLanguageAvailabilities()": {
+    "addVoice(android.speech.tts.Voice)": {
       "isImplementation": false,
       "modifiers": [
         "public",
         "static"
       ],
-      "params": [],
+      "params": [
+        "voice"
+      ],
       "returnType": "void",
       "exceptions": [],
-      "name": "clearLanguageAvailabilities()"
+      "name": "addVoice(android.speech.tts.Voice)",
+      "documentation": "Makes {@link Voice} an available voice returned by {@link TextToSpeech#getVoices()}. "
     },
     "clearLastSpokenText()": {
       "isImplementation": false,
@@ -69,6 +75,17 @@
       "name": "getCurrentLanguage()",
       "documentation": "Returns {@link Locale} set using {@link TextToSpeech#setLanguage(Locale)} or null if not set.\n"
     },
+    "getCurrentVoice()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.speech.tts.Voice",
+      "exceptions": [],
+      "name": "getCurrentVoice()",
+      "documentation": "Returns {@link Voice} set using {@link TextToSpeech#setVoice(Voice)}, or null if not set. "
+    },
     "getLastSpokenText()": {
       "isImplementation": false,
       "modifiers": [
@@ -90,6 +107,18 @@
       "name": "getLastSynthesizeToFileText()",
       "documentation": "Returns last text {@link CharSequence} passed to {@link\nTextToSpeech#synthesizeToFile(CharSequence, Bundle, File, String)}.\n"
     },
+    "getLastTextToSpeechInstance()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.speech.tts.TextToSpeech",
+      "exceptions": [],
+      "name": "getLastTextToSpeechInstance()",
+      "documentation": "Returns the most recently instantiated {@link TextToSpeech} or null if none exist. "
+    },
     "getOnInitListener()": {
       "isImplementation": false,
       "modifiers": [
@@ -110,15 +139,47 @@
       "exceptions": [],
       "name": "getQueueMode()"
     },
+    "getSpokenTextList()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getSpokenTextList()",
+      "documentation": "Returns list of all the text spoken by {@link #speak}. "
+    },
     "getUtteranceProgressListener()": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "public"
       ],
       "params": [],
       "returnType": "android.speech.tts.UtteranceProgressListener",
       "exceptions": [],
       "name": "getUtteranceProgressListener()"
+    },
+    "getVoices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003candroid.speech.tts.Voice\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getVoices()"
+    },
+    "initTts()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "initTts()"
     },
     "isLanguageAvailable(java.util.Locale)": {
       "isImplementation": true,
@@ -153,6 +214,17 @@
       "name": "isStopped()",
       "documentation": "@return {@code true} if the TTS is stopped. "
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "setLanguage(java.util.Locale)": {
       "isImplementation": true,
       "modifiers": [
@@ -164,6 +236,19 @@
       "returnType": "int",
       "exceptions": [],
       "name": "setLanguage(java.util.Locale)"
+    },
+    "setVoice(android.speech.tts.Voice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "voice"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setVoice(android.speech.tts.Voice)"
     },
     "shutdown()": {
       "isImplementation": true,
@@ -244,9 +329,13 @@
     "android.speech.tts.TextToSpeech",
     "android.speech.tts.TextToSpeech.Engine",
     "android.speech.tts.UtteranceProgressListener",
+    "android.speech.tts.Voice",
+    "com.google.common.collect.ImmutableList",
     "java.io.File",
+    "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.HashSet",
+    "java.util.List",
     "java.util.Locale",
     "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
@@ -255,7 +344,8 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
   "name": "org.robolectric.shadows.ShadowTextToSpeech"
 }

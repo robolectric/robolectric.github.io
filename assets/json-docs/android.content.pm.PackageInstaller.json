@@ -36,6 +36,16 @@
       "exceptions": [],
       "name": "getAllSessions()"
     },
+    "getMySessions()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.pm.PackageInstaller.SessionInfo\u003e",
+      "exceptions": [],
+      "name": "getMySessions()"
+    },
     "getSessionInfo(int)": {
       "isImplementation": true,
       "modifiers": [

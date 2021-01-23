@@ -533,6 +533,18 @@
       "exceptions": [],
       "name": "setWifiEnabled(boolean)"
     },
+    "setWifiState(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "wifiState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWifiState(int)"
+    },
     "shadowOf(android.net.wifi.WifiManager)": {
       "isImplementation": false,
       "modifiers": [

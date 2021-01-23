@@ -1,8 +1,22 @@
 {
   "methods": {},
   "imports": [
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "android.os.Build.VERSION_CODES",
     "android.telecom.Call",
-    "org.robolectric.annotation.Implements"
+    "android.telecom.Call.RttCall",
+    "android.telecom.InCallAdapter",
+    "android.util.Log",
+    "java.io.IOException",
+    "java.io.InputStreamReader",
+    "java.io.OutputStreamWriter",
+    "java.io.PipedInputStream",
+    "java.io.PipedOutputStream",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadows.ShadowCall.ShadowRttCall"
   ],
   "name": "org.robolectric.shadows.ShadowCall",
   "documentation": "Robolectric test for {@link android.telecom.Call}. "

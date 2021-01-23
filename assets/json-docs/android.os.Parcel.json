@@ -494,7 +494,36 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 29,
       "name": "nativeReadString(long)"
+    },
+    "nativeReadString16(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "nativeReadString16(long)"
+    },
+    "nativeReadString8(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "nativeReadString8(long)"
     },
     "nativeReadStrongBinder(int)": {
       "isImplementation": true,
@@ -727,6 +756,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 30,
       "name": "nativeWriteDouble(long,double)"
     },
     "nativeWriteFileDescriptor(long,java.io.FileDescriptor)": {
@@ -742,6 +772,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 23,
+      "maxSdk": 30,
       "name": "nativeWriteFileDescriptor(long,java.io.FileDescriptor)"
     },
     "nativeWriteFloat(int,float)": {
@@ -772,6 +803,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 30,
       "name": "nativeWriteFloat(long,float)"
     },
     "nativeWriteInt(int,int)": {
@@ -802,6 +834,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 30,
       "name": "nativeWriteInt(long,int)"
     },
     "nativeWriteInterfaceToken(int,java.lang.String)": {
@@ -862,6 +895,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 30,
       "name": "nativeWriteLong(long,long)"
     },
     "nativeWriteString(int,java.lang.String)": {
@@ -892,7 +926,38 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 29,
       "name": "nativeWriteString(long,java.lang.String)"
+    },
+    "nativeWriteString16(long,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "nativeWriteString16(long,java.lang.String)"
+    },
+    "nativeWriteString8(long,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "nativeWriteString8(long,java.lang.String)"
     },
     "nativeWriteStrongBinder(int,android.os.IBinder)": {
       "isImplementation": true,
@@ -1007,6 +1072,8 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "org.robolectric.RuntimeEnvironment.castNativePtr",
     "android.os.BadParcelableException",
     "android.os.IBinder",

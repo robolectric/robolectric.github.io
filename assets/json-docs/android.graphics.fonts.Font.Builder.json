@@ -1,0 +1,87 @@
+{
+  "methods": {
+    "createBuffer(android.content.res.AssetManager,java.lang.String,boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "am",
+        "path",
+        "isAsset",
+        "cookie"
+      ],
+      "returnType": "java.nio.ByteBuffer",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 30,
+      "name": "createBuffer(android.content.res.AssetManager,java.lang.String,boolean,int)",
+      "documentation": "Re-implement to avoid call to DirectByteBuffer#array, which is not supported on JDK "
+    },
+    "nGetAssetBuffer(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeAsset"
+      ],
+      "returnType": "java.nio.ByteBuffer",
+      "exceptions": [],
+      "maxSdk": 29,
+      "name": "nGetAssetBuffer(long)"
+    },
+    "nGetNativeAsset(android.content.res.AssetManager,java.lang.String,boolean,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "assetMgr",
+        "path",
+        "isAsset",
+        "cookie"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "maxSdk": 29,
+      "name": "nGetNativeAsset(android.content.res.AssetManager,java.lang.String,boolean,int)"
+    },
+    "nGetReleaseNativeAssetFunc()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "maxSdk": 29,
+      "name": "nGetReleaseNativeAssetFunc()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
+    "android.content.res.AssetManager",
+    "android.graphics.fonts.Font",
+    "com.google.common.base.Preconditions",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.nio.ByteBuffer",
+    "java.nio.ByteOrder",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.res.android.ApkAssetsCookie",
+    "org.robolectric.res.android.Asset",
+    "org.robolectric.res.android.Asset.AccessMode",
+    "org.robolectric.res.android.CppAssetManager2",
+    "org.robolectric.res.android.Registries"
+  ],
+  "name": "org.robolectric.shadows.ShadowFontBuilder",
+  "documentation": "Shadow for {@link android.graphics.fonts.Font.Builder} "
+}

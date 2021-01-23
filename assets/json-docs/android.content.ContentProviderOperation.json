@@ -21,7 +21,8 @@
       "params": [],
       "returnType": "android.content.ContentValues",
       "exceptions": [],
-      "name": "getContentValues()"
+      "name": "getContentValues()",
+      "documentation": "@deprecated implementation detail - use public Android APIs instead "
     },
     "getExpectedCount()": {
       "isImplementation": false,
@@ -31,7 +32,8 @@
       "params": [],
       "returnType": "java.lang.Integer",
       "exceptions": [],
-      "name": "getExpectedCount()"
+      "name": "getExpectedCount()",
+      "documentation": "@deprecated implementation detail - use public Android APIs instead "
     },
     "getSelection()": {
       "isImplementation": false,
@@ -41,7 +43,8 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "getSelection()"
+      "name": "getSelection()",
+      "documentation": "@deprecated implementation detail - use public Android APIs instead "
     },
     "getSelectionArgs()": {
       "isImplementation": false,
@@ -51,7 +54,8 @@
       "params": [],
       "returnType": "java.lang.String[]",
       "exceptions": [],
-      "name": "getSelectionArgs()"
+      "name": "getSelectionArgs()",
+      "documentation": "@deprecated implementation detail - use public Android APIs instead "
     },
     "getSelectionArgsBackReferences()": {
       "isImplementation": false,
@@ -61,7 +65,8 @@
       "params": [],
       "returnType": "java.util.Map\u003cjava.lang.Integer,java.lang.Integer\u003e",
       "exceptions": [],
-      "name": "getSelectionArgsBackReferences()"
+      "name": "getSelectionArgsBackReferences()",
+      "documentation": "@deprecated implementation detail - use public Android APIs instead "
     },
     "getType()": {
       "isImplementation": true,
@@ -71,7 +76,8 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "name": "getType()"
+      "name": "getType()",
+      "documentation": "@deprecated implementation detail - use public Android APIs instead "
     },
     "getValuesBackReferences()": {
       "isImplementation": false,
@@ -81,13 +87,16 @@
       "params": [],
       "returnType": "android.content.ContentValues",
       "exceptions": [],
-      "name": "getValuesBackReferences()"
+      "name": "getValuesBackReferences()",
+      "documentation": "@deprecated implementation detail - use public Android APIs instead "
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.R",
     "android.content.ContentProviderOperation",
     "android.content.ContentValues",
     "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

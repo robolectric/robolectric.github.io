@@ -377,6 +377,7 @@
     "android.os.Looper",
     "android.os.Process",
     "android.os.UserHandle",
+    "android.util.Pair",
     "androidx.annotation.NonNull",
     "androidx.annotation.Nullable",
     "com.google.common.collect.HashMultimap",
@@ -390,7 +391,6 @@
     "java.util.stream.Collectors",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.util.Pair",
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowLauncherApps.ReflectorShortcutQuery"

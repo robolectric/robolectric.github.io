@@ -1,5 +1,52 @@
 {
   "methods": {
+    "addAudioDataListener(org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addAudioDataListener(org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener)",
+      "documentation": "Registers an {@link OnAudioDataWrittenListener} to the {@link ShadowAudioTrack}.\n\n@param listener The {@link OnAudioDataWrittenListener} to be registered.\n"
+    },
+    "flush()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "flush()"
+    },
+    "getPlaybackHeadPosition()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPlaybackHeadPosition()"
+    },
+    "native_get_FCC_8()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "maxSdk": 28,
+      "name": "native_get_FCC_8()"
+    },
     "native_get_min_buff_size(int,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -34,6 +81,31 @@
       "minSdk": 23,
       "name": "native_write_byte(byte[],int,int,int,boolean)",
       "documentation": "Always return the number of bytes to write. This method returns immedidately even with {@link\nAudioTrack#WRITE_BLOCKING}\n"
+    },
+    "removeAudioDataListener(org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeAudioDataListener(org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener)",
+      "documentation": "Removes an {@link OnAudioDataWrittenListener} from the {@link ShadowAudioTrack}.\n\n@param listener The {@link OnAudioDataWrittenListener} to be removed.\n"
+    },
+    "resetTest()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetTest()"
     },
     "setMinBufferSize(int)": {
       "isImplementation": false,
@@ -72,14 +144,21 @@
     "android.media.AudioTrack.WRITE_NON_BLOCKING",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.P",
+    "android.annotation.NonNull",
+    "android.media.AudioFormat",
     "android.media.AudioTrack",
     "android.media.AudioTrack.WriteMode",
-    "androidx.annotation.NonNull",
     "android.util.Log",
-    "java.nio.Buffer",
     "java.nio.ByteBuffer",
+    "java.util.List",
+    "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener"
   ],
   "name": "org.robolectric.shadows.ShadowAudioTrack",
   "documentation": "Implementation of a couple methods in {@link AudioTrack}. Only a couple methods are supported,\nother methods are expected run through the real class. The two {@link WriteMode} are treated the\nsame.\n"

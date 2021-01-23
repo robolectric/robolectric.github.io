@@ -620,6 +620,17 @@
       "exceptions": [],
       "name": "isFocused()"
     },
+    "isImportantForAccessibility()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "isImportantForAccessibility()"
+    },
     "isLongClickable()": {
       "isImplementation": true,
       "modifiers": [
@@ -1095,6 +1106,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setFocused(boolean)"
+    },
+    "setImportantForAccessibility(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "important"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setImportantForAccessibility(boolean)"
     },
     "setInputType(int)": {
       "isImplementation": true,

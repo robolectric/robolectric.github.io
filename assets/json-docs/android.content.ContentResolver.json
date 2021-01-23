@@ -562,6 +562,22 @@
       "exceptions": [],
       "name": "notifyChange(android.net.Uri,android.database.ContentObserver,boolean)"
     },
+    "onDbCorruption(java.lang.String,java.lang.String,java.lang.Throwable)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "tag",
+        "message",
+        "stacktrace"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "onDbCorruption(java.lang.String,java.lang.String,java.lang.Throwable)"
+    },
     "openInputStream(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
@@ -979,6 +995,7 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.Q",
     "android.accounts.Account",
     "android.annotation.NonNull",
     "android.annotation.SuppressLint",
@@ -1000,6 +1017,7 @@
     "android.net.Uri",
     "android.os.Bundle",
     "android.os.CancellationSignal",
+    "com.google.common.base.Splitter",
     "java.io.IOException",
     "java.io.InputStream",
     "java.io.OutputStream",

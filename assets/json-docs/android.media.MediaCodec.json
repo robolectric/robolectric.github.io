@@ -44,6 +44,18 @@
       "name": "addEncoder(java.lang.String,org.robolectric.shadows.ShadowMediaCodec.CodecConfig)",
       "documentation": "Add a fake encoding codec to the Shadow. "
     },
+    "canQueueInputBuffer(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "canQueueInputBuffer(int)"
+    },
     "clearCodecs()": {
       "isImplementation": false,
       "modifiers": [
@@ -68,18 +80,21 @@
       "exceptions": [],
       "name": "codecOwnsInputBuffer(int)"
     },
-    "configure(java.lang.String[],java.lang.Object[])": {
+    "configure(java.lang.String[],java.lang.Object[],android.view.Surface,android.media.MediaCrypto,int)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
       "params": [
         "keys",
-        "values"
+        "values",
+        "surface",
+        "mediaCrypto",
+        "flags"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "configure(java.lang.String[],java.lang.Object[])"
+      "name": "configure(java.lang.String[],java.lang.Object[],android.view.Surface,android.media.MediaCrypto,int)"
     },
     "copyBufferInfo(android.media.MediaCodec.BufferInfo,android.media.MediaCodec.BufferInfo)": {
       "isImplementation": false,
@@ -349,6 +364,44 @@
       "exceptions": [],
       "name": "recreateMediaFormatFromKeysValues(java.lang.String[],java.lang.Object[])"
     },
+    "releaseOutputBuffer(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "releaseOutputBuffer(int)"
+    },
+    "releaseOutputBuffer(int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "index",
+        "renderer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "releaseOutputBuffer(int,boolean)"
+    },
+    "releaseOutputBuffer(int,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "index",
+        "renderTimestampNs"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "releaseOutputBuffer(int,long)"
+    },
     "revalidateByteBuffer(java.nio.ByteBuffer[],int)": {
       "isImplementation": true,
       "modifiers": [
@@ -418,6 +471,7 @@
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
     "com.google.common.base.Preconditions.checkState",
+    "java.util.concurrent.TimeUnit.MICROSECONDS",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.callConstructor",
     "android.annotation.NonNull",
@@ -428,14 +482,17 @@
     "android.media.MediaCrypto",
     "android.media.MediaFormat",
     "android.view.Surface",
+    "com.google.common.annotations.VisibleForTesting",
     "java.nio.Buffer",
     "java.nio.ByteBuffer",
     "java.nio.ByteOrder",
+    "java.util.ArrayList",
+    "java.util.Collections",
     "java.util.HashMap",
+    "java.util.List",
     "java.util.Map",
     "java.util.concurrent.BlockingQueue",
     "java.util.concurrent.LinkedBlockingDeque",
-    "java.util.concurrent.TimeUnit",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

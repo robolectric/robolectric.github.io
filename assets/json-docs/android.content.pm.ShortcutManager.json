@@ -122,6 +122,20 @@
       "exceptions": [],
       "name": "getPinnedShortcuts()"
     },
+    "getShortcuts(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "matchFlags"
+      ],
+      "returnType": "java.util.List\u003candroid.content.pm.ShortcutInfo\u003e",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getShortcuts(int)",
+      "documentation": "In Robolectric, ShadowShortcutManager doesn\u0027t perform any caching so long lived shortcuts are\nreturned on place of shortcuts cached when shown in notifications.\n"
+    },
     "isRateLimitingActive()": {
       "isImplementation": true,
       "modifiers": [
@@ -142,6 +156,20 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "isRequestPinShortcutSupported()"
+    },
+    "pushDynamicShortcut(android.content.pm.ShortcutInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "shortcut"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "pushDynamicShortcut(android.content.pm.ShortcutInfo)",
+      "documentation": "In Robolectric, ShadowShortcutManager doesn\u0027t handle rate limiting or shortcut count limits.\nSo, pushDynamicShortcut is similar to {@link #addDynamicShortcuts(List)} but with only one\n{@link ShortcutInfo}.\n"
     },
     "removeAllDynamicShortcuts()": {
       "isImplementation": true,
@@ -203,6 +231,32 @@
       "exceptions": [],
       "name": "setDynamicShortcuts(java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)"
     },
+    "setIconMaxHeight(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIconMaxHeight(int)",
+      "documentation": "Sets the value returned by {@link #getIconMaxHeight()}. "
+    },
+    "setIconMaxWidth(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "width"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIconMaxWidth(int)",
+      "documentation": "Sets the value returned by {@link #getIconMaxWidth()}. "
+    },
     "setIsRequestPinShortcutSupported(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -255,6 +309,12 @@
     }
   },
   "imports": [
+    "android.content.pm.ShortcutManager.FLAG_MATCH_CACHED",
+    "android.content.pm.ShortcutManager.FLAG_MATCH_DYNAMIC",
+    "android.content.pm.ShortcutManager.FLAG_MATCH_MANIFEST",
+    "android.content.pm.ShortcutManager.FLAG_MATCH_PINNED",
+    "android.os.Build.VERSION_CODES.R",
+    "java.util.stream.Collectors.toCollection",
     "android.content.Intent",
     "android.content.IntentSender",
     "android.content.IntentSender.SendIntentException",
@@ -262,10 +322,14 @@
     "android.content.pm.ShortcutManager",
     "android.os.Build",
     "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.Lists",
     "java.util.ArrayList",
+    "java.util.Arrays",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.List",
     "java.util.Map",
+    "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"

@@ -23,7 +23,19 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 29,
       "name": "focusIn(android.view.View)"
+    },
+    "getEnabledInputMethodList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.view.inputmethod.InputMethodInfo\u003e",
+      "exceptions": [],
+      "name": "getEnabledInputMethodList()",
+      "documentation": "Returns the list of {@link InputMethodInfo} that are enabled.\n\n\u003cp\u003eThis method differs from Android implementation by allowing the list to be set using {@link\n#setEnabledInputMethodInfoList(List)}.\n"
     },
     "hideSoftInputFromWindow(android.os.IBinder,int)": {
       "isImplementation": true,
@@ -105,6 +117,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 23,
+      "maxSdk": 29,
       "name": "onViewDetachedFromWindow(android.view.View)"
     },
     "peekInstance()": {
@@ -141,6 +154,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "restartInput(android.view.View)"
+    },
+    "setEnabledInputMethodInfoList(java.util.List\u003candroid.view.inputmethod.InputMethodInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "inputMethodInfoList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEnabledInputMethodInfoList(java.util.List\u003candroid.view.inputmethod.InputMethodInfo\u003e)",
+      "documentation": "Sets the list of {@link InputMethodInfo} that are marked as enabled. See {@link\n#getEnabledInputMethodList()}.\n"
     },
     "setSoftInputVisibility(boolean)": {
       "isImplementation": false,
@@ -226,6 +252,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.os.Build.VERSION_CODES",
@@ -235,8 +262,11 @@
     "android.util.SparseArray",
     "android.view.View",
     "android.view.inputmethod.CompletionInfo",
+    "android.view.inputmethod.InputMethodInfo",
     "android.view.inputmethod.InputMethodManager",
     "com.google.common.base.Optional",
+    "com.google.common.collect.ImmutableList",
+    "java.util.List",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

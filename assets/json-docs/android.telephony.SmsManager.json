@@ -72,6 +72,19 @@
       "minSdk": 21,
       "name": "downloadMultimediaMessage(android.content.Context,java.lang.String,android.net.Uri,android.os.Bundle,android.app.PendingIntent)"
     },
+    "getDefaultSmsSubscriptionId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getDefaultSmsSubscriptionId()",
+      "documentation": "Returns {@code -1} by default or the value specified in {@link\n#setDefaultSmsSubscriptionId(int)}.\n"
+    },
     "getLastDownloadedMultimediaMessageParams()": {
       "isImplementation": false,
       "modifiers": [
@@ -126,6 +139,18 @@
       "exceptions": [],
       "name": "getLastSentTextMessageParams()",
       "documentation": "@return Parameters for last call to {@link #sendTextMessage}. "
+    },
+    "getSmscAddress()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getSmscAddress()",
+      "documentation": "Returns {@code null} by default or the value specified via {@link #setSmscAddress(String)}.\nRequired permission is set by {@link #setSmscAddressPermission(boolean)}.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -188,6 +213,24 @@
       "exceptions": [],
       "name": "sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.ArrayList\u003cjava.lang.String\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e)"
     },
+    "sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.List\u003cjava.lang.String\u003e,java.util.List\u003candroid.app.PendingIntent\u003e,java.util.List\u003candroid.app.PendingIntent\u003e,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "destinationAddress",
+        "scAddress",
+        "parts",
+        "sentIntents",
+        "deliveryIntents",
+        "messageId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.List\u003cjava.lang.String\u003e,java.util.List\u003candroid.app.PendingIntent\u003e,java.util.List\u003candroid.app.PendingIntent\u003e,long)"
+    },
     "sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
@@ -203,19 +246,78 @@
       "returnType": "void",
       "exceptions": [],
       "name": "sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)"
+    },
+    "sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "destinationAddress",
+        "scAddress",
+        "text",
+        "sentIntent",
+        "deliveryIntent",
+        "messageId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent,long)"
+    },
+    "setDefaultSmsSubscriptionId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDefaultSmsSubscriptionId(int)",
+      "documentation": "Sets the value to be returned by {@link #getDefaultSmsSubscriptionId()}. "
+    },
+    "setSmscAddress(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "smscAddress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSmscAddress(java.lang.String)",
+      "documentation": "Sets the value returned by {@link SmsManager#getSmscAddress()}. "
+    },
+    "setSmscAddressPermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "smscAddressPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSmscAddressPermission(boolean)",
+      "documentation": "Sets a boolean value to simulate whether or not the required permissions to call {@link\n#getSmscAddress()} have been granted.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.R",
     "android.app.PendingIntent",
     "android.content.Context",
     "android.net.Uri",
     "android.os.Bundle",
-    "androidx.annotation.Nullable",
     "android.telephony.SmsManager",
     "android.text.TextUtils",
+    "androidx.annotation.Nullable",
     "java.util.ArrayList",
     "java.util.List",
     "java.util.Map",

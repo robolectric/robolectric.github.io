@@ -67,9 +67,11 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.util.FloatMath",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowFloatMath"
+  "name": "org.robolectric.shadows.ShadowFloatMath",
+  "documentation": "Shadow for {@link FloatMath}. Prior to SDK 23, this was implemented using native methods. "
 }

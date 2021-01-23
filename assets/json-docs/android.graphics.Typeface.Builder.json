@@ -43,5 +43,6 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter"
   ],
-  "name": "org.robolectric.shadows.ShadowTypeface.ShadowBuilder"
+  "name": "org.robolectric.shadows.ShadowTypeface.ShadowBuilder",
+  "documentation": "Shadow for {@link Typeface.Builder} "
 }

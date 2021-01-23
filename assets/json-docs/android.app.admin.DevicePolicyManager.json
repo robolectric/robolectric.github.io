@@ -855,6 +855,18 @@
       "minSdk": 21,
       "name": "isLockTaskPermitted(java.lang.String)"
     },
+    "isOrganizationOwnedDeviceWithManagedProfile()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "isOrganizationOwnedDeviceWithManagedProfile()",
+      "documentation": "Returns the value stored using in the shadow, while the real method returns the value store on\nthe device.\n\n\u003cp\u003eThe value can be set by {@link #setOrganizationOwnedDeviceWithManagedProfile} and is {@code\nfalse} by default.\n"
+    },
     "isPackageSuspended(android.content.ComponentName,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -1259,6 +1271,19 @@
       "minSdk": 24,
       "name": "setOrganizationName(android.content.ComponentName,java.lang.CharSequence)",
       "documentation": "Sets organization name.\n\n\u003cp\u003eThe API can only be called by profile owner since Android N and can be called by both of\nprofile owner and device owner since Android O.\n"
+    },
+    "setOrganizationOwnedDeviceWithManagedProfile(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOrganizationOwnedDeviceWithManagedProfile(boolean)",
+      "documentation": "Sets the return value of the {@link\nDevicePolicyManager#isOrganizationOwnedDeviceWithManagedProfile} method (only for Android R+).\n"
     },
     "setPackagesSuspended(android.content.ComponentName,java.lang.String[],boolean)": {
       "isImplementation": true,
@@ -1676,6 +1701,7 @@
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",

@@ -117,6 +117,7 @@
       "exceptions": [
         "java.lang.ReflectiveOperationException"
       ],
+      "maxSdk": 29,
       "name": "getAliasName()"
     },
     "getBluetoothClass()": {
@@ -414,6 +415,7 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.bluetooth.BluetoothClass",
     "android.bluetooth.BluetoothDevice",

@@ -52,6 +52,19 @@
       "exceptions": [],
       "name": "addInstalledProvider(android.appwidget.AppWidgetProviderInfo)"
     },
+    "addInstalledProvidersForProfile(android.os.UserHandle,android.appwidget.AppWidgetProviderInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "appWidgetProviderInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addInstalledProvidersForProfile(android.os.UserHandle,android.appwidget.AppWidgetProviderInfo)"
+    },
     "bindAppWidgetId(int,android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -177,6 +190,19 @@
       "exceptions": [],
       "name": "getInstalledProviders()"
     },
+    "getInstalledProvidersForProfile(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "profile"
+      ],
+      "returnType": "java.util.List\u003candroid.appwidget.AppWidgetProviderInfo\u003e",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getInstalledProvidersForProfile(android.os.UserHandle)"
+    },
     "getViewFor(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -283,16 +309,21 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.L",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.appwidget.AppWidgetManager",
     "android.appwidget.AppWidgetProvider",
     "android.appwidget.AppWidgetProviderInfo",
     "android.content.ComponentName",
     "android.content.Context",
+    "android.os.UserHandle",
     "android.view.LayoutInflater",
     "android.view.View",
     "android.widget.RemoteViews",
     "com.android.internal.appwidget.IAppWidgetService",
+    "com.google.common.collect.HashMultimap",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.Multimap",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",

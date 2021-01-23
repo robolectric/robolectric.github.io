@@ -13,6 +13,18 @@
       "exceptions": [],
       "name": "assertLooperMode(org.robolectric.annotation.LooperMode.Mode)"
     },
+    "clearLooperMode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearLooperMode()"
+    },
     "getAllLoopers()": {
       "isImplementation": false,
       "modifiers": [
@@ -567,11 +579,13 @@
     "android.os.Looper.getMainLooper",
     "org.robolectric.annotation.LooperMode.Mode.LEGACY",
     "android.os.Looper",
+    "com.google.errorprone.annotations.concurrent.GuardedBy",
     "java.time.Duration",
     "java.util.Collection",
     "java.util.concurrent.TimeUnit",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.config.ConfigurationRegistry",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.Scheduler",

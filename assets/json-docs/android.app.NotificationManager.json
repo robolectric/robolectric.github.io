@@ -271,6 +271,21 @@
       "minSdk": 26,
       "name": "getNotificationChannel(java.lang.String)"
     },
+    "getNotificationChannel(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "channelId",
+        "conversationId"
+      ],
+      "returnType": "android.app.NotificationChannel",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getNotificationChannel(java.lang.String,java.lang.String)",
+      "documentation": "Returns a NotificationChannel that has the given parent and conversation ID. "
+    },
     "getNotificationChannelGroup(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -520,8 +535,10 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "android.app.AutomaticZenRule",
     "android.app.Notification",
+    "android.app.NotificationChannel",
     "android.app.NotificationManager",
     "android.app.NotificationManager.Policy",
     "android.os.Build",

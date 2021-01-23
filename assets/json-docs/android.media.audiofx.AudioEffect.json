@@ -125,7 +125,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "native_getParameter(int,byte[],int,byte[])",
-      "documentation": "Gets the value of the parameter with key {@code param}, by putting its value in {@code value}.\n\n\u003cp\u003eNote: Sub-classes of {@link ShadowAudioEffect} can declare default values for any\nparameters. Note: If the given parameter has not been set, and there is no default value for\nthat parameter, then we \"return\" (set {@code value} to) a single integer 0.\n\n@return the size of the returned value, in bytes.\n"
+      "documentation": "Gets the value of the parameter with key {@code param}, by putting its value in {@code value}.\n\n\u003cp\u003eNote: Sub-classes of {@link ShadowAudioEffect} can declare default values for any\nparameters. Note: If the given parameter has not been set, and there is no default value for\nthat parameter, then we \"return\" (set {@code value} to) a single integer 0.\n\n@return the size of the returned value, in bytes, or an error code in case of failure.\n"
     },
     "native_release()": {
       "isImplementation": true,
@@ -230,11 +230,40 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "setErrorCode(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "errorCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setErrorCode(int)",
+      "documentation": "Sets the error code to override setter methods in this class.\n\n\u003cp\u003eWhen the error code is set to anything other than {@link SUCCESS} setters in the AudioEffect\nwill early-out and return that error code.\n"
+    },
+    "setInitialized(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "initialized"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInitialized(boolean)",
+      "documentation": "Updates the state of the {@link AudioEffect} itself.\n\n\u003cp\u003eThis can be used e.g. to put the AudioEffect in an unexpected state and cause an exception\nthe next time the Visualizer is used.\n"
     }
   },
   "imports": [
+    "android.media.audiofx.AudioEffect.STATE_INITIALIZED",
+    "android.media.audiofx.AudioEffect.STATE_UNINITIALIZED",
     "android.media.audiofx.AudioEffect.SUCCESS",
     "com.google.common.base.Preconditions.checkArgument",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.media.audiofx.AudioEffect",
     "android.os.Build.VERSION_CODES",
     "com.google.common.collect.ImmutableList",
@@ -248,7 +277,10 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.Resetter"
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowAudioEffect.ReflectorAudioEffect"
   ],
   "name": "org.robolectric.shadows.ShadowAudioEffect",
   "documentation": "Implements {@link AudioEffect} by shadowing its native methods. "

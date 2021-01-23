@@ -137,6 +137,19 @@
       "exceptions": [],
       "name": "getShadowInstrumentation()"
     },
+    "getSharedPreferences(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "name",
+        "mode"
+      ],
+      "returnType": "android.content.SharedPreferences",
+      "exceptions": [],
+      "name": "getSharedPreferences(java.lang.String,int)"
+    },
     "getSystemService(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -527,6 +540,7 @@
     "android.content.IntentFilter",
     "android.content.IntentSender",
     "android.content.ServiceConnection",
+    "android.content.SharedPreferences",
     "android.os.Build",
     "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
@@ -534,6 +548,7 @@
     "android.os.FileUtils",
     "android.os.Handler",
     "android.os.UserHandle",
+    "com.google.common.base.Strings",
     "java.io.File",
     "java.nio.file.Paths",
     "java.util.HashMap",

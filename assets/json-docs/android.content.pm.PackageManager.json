@@ -313,8 +313,7 @@
     "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)": {
       "isImplementation": false,
       "modifiers": [
-        "public",
-        "synchronized"
+        "public"
       ],
       "params": [
         "packageInfo",
@@ -323,7 +322,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)",
-      "documentation": "Installs a package with its stats with the {@link PackageManager}.\n\nThis method doesn\u0027t add any defaults to the {@code packageInfo} parameters. You should make\nsure it is valid (see {@link #installPackage(PackageInfo)}).\n"
+      "documentation": "Installs a package with its stats with the {@link PackageManager}.\n\n\u003cp\u003eThis method doesn\u0027t add any defaults to the {@code packageInfo} parameters. You should make\nsure it is valid (see {@link #installPackage(PackageInfo)}).\n"
     },
     "addPackage(java.lang.String)": {
       "isImplementation": false,
@@ -1421,6 +1420,7 @@
     "java.util.concurrent.ConcurrentHashMap",
     "java.util.function.BiConsumer",
     "javax.annotation.Nullable",
+    "javax.annotation.concurrent.GuardedBy",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

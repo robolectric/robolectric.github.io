@@ -272,7 +272,7 @@
       "minSdk": 21,
       "name": "execStartActivityFromAppTask(android.content.Context,android.os.IBinder,java.lang.Object,android.content.Intent,android.os.Bundle)"
     },
-    "getAppropriateWrappers(android.content.Context,android.os.UserHandle,android.content.Intent,java.lang.String)": {
+    "getAppropriateWrappers(android.content.Context,android.os.UserHandle,android.content.Intent,java.lang.String,android.os.Bundle)": {
       "isImplementation": false,
       "modifiers": [
         "private"
@@ -281,11 +281,12 @@
         "context",
         "userHandle",
         "intent",
-        "receiverPermission"
+        "receiverPermission",
+        "broadcastOptions"
       ],
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
       "exceptions": [],
-      "name": "getAppropriateWrappers(android.content.Context,android.os.UserHandle,android.content.Intent,java.lang.String)",
+      "name": "getAppropriateWrappers(android.content.Context,android.os.UserHandle,android.content.Intent,java.lang.String,android.os.Bundle)",
       "documentation": "Returns the BroadcaseReceivers wrappers, matching intent\u0027s action and permissions. "
     },
     "getBoundServiceConnections()": {
@@ -315,6 +316,16 @@
       "returnType": "java.util.List\u003candroid.content.Intent\u003e",
       "exceptions": [],
       "name": "getBroadcastIntentsForUser(android.os.UserHandle)"
+    },
+    "getBroadcastOptions(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "intent"
+      ],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getBroadcastOptions(android.content.Intent)"
     },
     "getInstrumentation()": {
       "isImplementation": false,
@@ -663,7 +674,7 @@
       "name": "sendBroadcastWithPermission(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.Context)",
       "documentation": "Broadcasts the {@code Intent} by iterating through the registered receivers, invoking their\nfilters including permissions, and calling {@code onReceive(Application, Intent)} as\nappropriate. Does not enqueue the {@code Intent} for later inspection.\n\n@param context\n@param intent the {@code Intent} to broadcast todo: enqueue the Intent for later inspection\n"
     },
-    "sendBroadcastWithPermission(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.Context,int)": {
+    "sendBroadcastWithPermission(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.Context,android.os.Bundle,int)": {
       "isImplementation": false,
       "modifiers": [],
       "params": [
@@ -671,11 +682,26 @@
         "userHandle",
         "receiverPermission",
         "context",
+        "broadcastOptions",
         "resultCode"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "sendBroadcastWithPermission(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.Context,int)"
+      "name": "sendBroadcastWithPermission(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.Context,android.os.Bundle,int)"
+    },
+    "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context,android.os.Bundle,int)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "intent",
+        "receiverPermission",
+        "context",
+        "broadcastOptions",
+        "resultCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context,android.os.Bundle,int)"
     },
     "sendBroadcastWithPermission(android.content.Intent,java.lang.String,android.content.Context,int)": {
       "isImplementation": false,
@@ -730,6 +756,16 @@
       "returnType": "void",
       "exceptions": [],
       "name": "sendStickyBroadcast(android.content.Intent,android.content.Context)"
+    },
+    "setBindServiceCallsOnServiceConnectedDirectly(boolean)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "bindServiceCallsOnServiceConnectedInline"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBindServiceCallsOnServiceConnectedDirectly(boolean)"
     },
     "setComponentNameAndServiceForBindService(android.content.ComponentName,android.os.IBinder)": {
       "isImplementation": false,
