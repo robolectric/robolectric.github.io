@@ -45,6 +45,8 @@ Essentially the IntelliJ default Java style, but with two-space indents and Goog
 5. No `'m'` or `'s'` prefixes before instance or static variables.
 6. Import Google's [java imports style](https://google.github.io/styleguide/javaguide.html#s3.3-import-statements) ([IntelliJ style file here](https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml)).
 
+If your changes break the code style, the CI will fail, and your CL will be blocked. You can use [google-java-format](https://github.com/google/google-java-format) to format your code locally before you push your changes for reviewing.
+
 ### Writing Tests
 
 Robolectric is a unit testing framework and it is important that Robolectric itself be very well tested. All classes should have unit test classes. All public methods should have unit tests. Those classes and methods should have their possible states well tested. Pull requests without tests will be sent back to the submitter.
