@@ -26,11 +26,11 @@ Create a feature branch to make your changes:
 
     git checkout -b my-feature-name
 
-Perform a full build of all shadows:
+Robolectric is built using Gradle. Both IntelliJ and Android Studio can import the top-level build.gradle file and will automatically generate their project files from it.
 
-    ./gradlew clean assemble install compileTest
+Robolectric supports running tests against multiple Android API levels. The work it must do to support each API level is slightly different, so its shadows are built separately for each. To build shadows for every API version, run:
 
-We develop Robolectric on Mac and Linux. You might be able to figure out how to get it to work on Windows if you really want to for some reason. Good luck.
+    ./gradlew clean assemble testClasses --parallel
 
 ## Contribution Requirements
 
