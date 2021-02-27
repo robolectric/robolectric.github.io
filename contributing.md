@@ -25,10 +25,6 @@ Set Android environment variables:
 Create a feature branch to make your changes:
 
     git checkout -b my-feature-name
-    
-Copy all required Android dependencies to your local Maven repository:
-
-    ./scripts/install-dependencies.rb
 
 Perform a full build of all shadows:
 
