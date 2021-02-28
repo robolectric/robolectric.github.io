@@ -28,7 +28,7 @@ public class MyActivityTest {
 
 ### Test APIs & Isolation
 
-Unlike traditional emulator-based Android tests, Robolectric tests run inside a sandbox which allows allows the Android environment to be precisely configured to the desired conditions for each test, isolates each test from its neighbors, and extends the Android framework with test APIs which provide minute control over the Android framework's behavior and visibility of state for assertions.
+Unlike traditional emulator-based Android tests, Robolectric tests run inside a sandbox which allows the Android environment to be precisely configured to the desired conditions for each test, isolates each test from its neighbors, and extends the Android framework with test APIs which provide minute control over the Android framework's behavior and visibility of state for assertions.
 
 While much of the Android framework will work as expected inside a Robolectric test, some Android components' regular behavior doesn't translate well to unit tests: hardware sensors need to be simulated, system services need to be loaded with test fixture data. In those cases, Robolectric provides a [test double](https://en.wikipedia.org/wiki/Test_double) that's suitable for most unit testing scenarios.
 
