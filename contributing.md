@@ -25,16 +25,12 @@ Set Android environment variables:
 Create a feature branch to make your changes:
 
     git checkout -b my-feature-name
-    
-Copy all required Android dependencies to your local Maven repository:
 
-    ./scripts/install-dependencies.rb
+Robolectric is built using Gradle. Both IntelliJ and Android Studio can import the top-level build.gradle file and will automatically generate their project files from it.
 
-Perform a full build of all shadows:
+Robolectric supports running tests against multiple Android API levels. To build shadows for every API version, run:
 
-    ./gradlew clean assemble install compileTest
-
-We develop Robolectric on Mac and Linux. You might be able to figure out how to get it to work on Windows if you really want to for some reason. Good luck.
+    ./gradlew clean assemble testClasses --parallel
 
 ## Contribution Requirements
 
@@ -48,6 +44,8 @@ Essentially the IntelliJ default Java style, but with two-space indents and Goog
 4. One line of white space between methods.
 5. No `'m'` or `'s'` prefixes before instance or static variables.
 6. Import Google's [java imports style](https://google.github.io/styleguide/javaguide.html#s3.3-import-statements) ([IntelliJ style file here](https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml)).
+
+If your changes break the code style, the CI will fail, and your CL will be blocked. You can use [google-java-format](https://github.com/google/google-java-format) to format your code locally before you push your changes for reviewing. The [wiki's Running google java format section](https://github.com/robolectric/robolectric/wiki/Running-google-java-format) is a tutorial for it.
 
 ### Writing Tests
 
