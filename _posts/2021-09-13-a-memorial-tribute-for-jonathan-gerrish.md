@@ -1,5 +1,3 @@
-# A memorial tribute for Jonathan Gerrish
-
 In late August, 2021, we were incredibly saddened to learn of the tragic
 passing of Jonathan Gerrish and his family while they were hiking near
 Mariposa, CA.  Jonathan was a long-time Robolectric maintainer and active
