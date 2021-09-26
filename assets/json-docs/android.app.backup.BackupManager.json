@@ -58,6 +58,19 @@
       "exceptions": [],
       "name": "enforceBackupPermission(java.lang.String)"
     },
+    "getAvailableRestoreToken(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getAvailableRestoreToken(java.lang.String)"
+    },
     "getDataChangedCount()": {
       "isImplementation": false,
       "modifiers": [
@@ -131,6 +144,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.app.backup.BackupManager",
     "android.app.backup.IBackupManagerMonitor",
     "android.app.backup.IRestoreObserver",

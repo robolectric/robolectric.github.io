@@ -186,7 +186,7 @@
       "returnType": "android.view.View",
       "exceptions": [],
       "name": "getContentView()",
-      "documentation": "@return the {@code contentView} set by one of the {@code setContentView()} methods\n"
+      "documentation": "@return the {@code contentView} set by one of the {@code setContentView()} methods "
     },
     "getCurrentFocus()": {
       "isImplementation": true,
@@ -261,7 +261,7 @@
       "returnType": "java.lang.Integer",
       "exceptions": [],
       "name": "getLastShownDialogId()",
-      "documentation": "@return the dialog resource id passed into\n        {@code Activity.showDialog(int, Bundle)} or {@code Activity.showDialog(int)}\n"
+      "documentation": "@return the dialog resource id passed into {@code Activity.showDialog(int, Bundle)} or {@code\n    Activity.showDialog(int)}\n"
     },
     "getLayoutInflater()": {
       "isImplementation": true,
@@ -302,7 +302,7 @@
       "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
       "exceptions": [],
       "name": "getNextStartedActivityForResult()",
-      "documentation": "Consumes and returns the next {@code Intent} on the\nstarted activities for results stack.\n\n@return the next started {@code Intent} for an activity, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
+      "documentation": "Consumes and returns the next {@code Intent} on the started activities for results stack.\n\n@return the next started {@code Intent} for an activity, wrapped in an {@link\n    ShadowActivity.IntentForResult} object\n"
     },
     "getOptionsMenu()": {
       "isImplementation": false,
@@ -313,7 +313,7 @@
       "returnType": "android.view.Menu",
       "exceptions": [],
       "name": "getOptionsMenu()",
-      "documentation": "Return the options menu.\n\n@return  Options menu.\n"
+      "documentation": "Return the options menu.\n\n@return Options menu.\n"
     },
     "getParent()": {
       "isImplementation": true,
@@ -355,7 +355,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "getReportFullyDrawn()",
-      "documentation": "@return whether {@code ReportFullyDrawn()} methods has been called.\n"
+      "documentation": "@return whether {@code ReportFullyDrawn()} methods has been called. "
     },
     "getRequestedOrientation()": {
       "isImplementation": true,
@@ -376,7 +376,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getResultCode()",
-      "documentation": "@return the {@code resultCode} set by one of the {@code setResult()} methods\n"
+      "documentation": "@return the {@code resultCode} set by one of the {@code setResult()} methods "
     },
     "getResultIntent()": {
       "isImplementation": false,
@@ -387,7 +387,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getResultIntent()",
-      "documentation": "@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)}\n"
+      "documentation": "@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)} "
     },
     "getTaskId()": {
       "isImplementation": true,
@@ -430,6 +430,17 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "hasCancelledPendingTransitions()"
+    },
+    "initializeVoiceInteractor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "initializeVoiceInteractor()",
+      "documentation": "Initializes the associated Activity with an {@link android.app.VoiceInteractor} instance.\nSubsequent {@link android.app.Activity#getVoiceInteractor()} calls on the associated activity\nwill return a {@link android.app.VoiceInteractor} instance\n"
     },
     "internalCallDispatchActivityResult(java.lang.String,int,int,android.content.Intent)": {
       "isImplementation": false,
@@ -536,6 +547,16 @@
       "exceptions": [],
       "name": "onCreateOptionsMenu(android.view.Menu)"
     },
+    "onDestroy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onDestroy()"
+    },
     "overridePendingTransition(int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -558,7 +579,7 @@
       "returnType": "org.robolectric.shadows.ShadowActivity.IntentForResult",
       "exceptions": [],
       "name": "peekNextStartedActivityForResult()",
-      "documentation": "Returns the most recent {@code Intent} started by\n{@link Activity#startActivityForResult(Intent, int)} without consuming it.\n\n@return the most recently started {@code Intent}, wrapped in\n        an {@link ShadowActivity.IntentForResult} object\n"
+      "documentation": "Returns the most recent {@code Intent} started by {@link\nActivity#startActivityForResult(Intent, int)} without consuming it.\n\n@return the most recently started {@code Intent}, wrapped in an {@link\n    ShadowActivity.IntentForResult} object\n"
     },
     "receiveResult(android.content.Intent,int,android.content.Intent)": {
       "isImplementation": false,
@@ -667,7 +688,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setCallingActivity(android.content.ComponentName)"
+      "name": "setCallingActivity(android.content.ComponentName)",
+      "documentation": "Sets the calling activity that will be reflected in {@link Activity#getCallingActivity} and\n{@link Activity#getCallingPackage}.\n"
     },
     "setCallingPackage(java.lang.String)": {
       "isImplementation": false,
@@ -679,7 +701,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setCallingPackage(java.lang.String)"
+      "name": "setCallingPackage(java.lang.String)",
+      "documentation": "Sets the calling package that will be reflected in {@link Activity#getCallingActivity} and\n{@link Activity#getCallingPackage}.\n\n\u003cp\u003eActivity name defaults to some default value.\n"
     },
     "setCurrentFocus(android.view.View)": {
       "isImplementation": false,
@@ -692,7 +715,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCurrentFocus(android.view.View)",
-      "documentation": "@param view View to focus.\n"
+      "documentation": "@param view View to focus. "
     },
     "setDefaultKeyMode(int)": {
       "isImplementation": true,
@@ -717,7 +740,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setInMultiWindowMode(boolean)",
-      "documentation": "Changes state of {@link #isInMultiWindowMode} method.\n"
+      "documentation": "Changes state of {@link #isInMultiWindowMode} method. "
     },
     "setIsTaskRoot(boolean)": {
       "isImplementation": false,
@@ -969,6 +992,7 @@
     "android.os.Build.VERSION",
     "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
+    "android.os.IBinder",
     "android.text.Selection",
     "android.text.SpannableStringBuilder",
     "android.view.LayoutInflater",
@@ -977,6 +1001,7 @@
     "android.view.View",
     "android.view.ViewGroup",
     "android.view.Window",
+    "com.android.internal.app.IVoiceInteractor",
     "java.lang.reflect.InvocationTargetException",
     "java.lang.reflect.Method",
     "java.util.ArrayList",

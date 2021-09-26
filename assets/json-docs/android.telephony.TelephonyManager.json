@@ -1532,6 +1532,7 @@
     "android.telephony.PhoneStateListener.LISTEN_CELL_INFO",
     "android.telephony.PhoneStateListener.LISTEN_CELL_LOCATION",
     "android.telephony.PhoneStateListener.LISTEN_NONE",
+    "android.telephony.PhoneStateListener.LISTEN_SERVICE_STATE",
     "android.telephony.TelephonyManager.CALL_STATE_IDLE",
     "android.telephony.TelephonyManager.CALL_STATE_RINGING",
     "android.annotation.CallSuper",
@@ -1572,7 +1573,6 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowTelephonyManager"

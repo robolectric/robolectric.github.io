@@ -14,6 +14,34 @@
       "minSdk": 19,
       "name": "__constructor__(android.content.Context,com.android.internal.app.IAppOpsService)"
     },
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "__staticInitializer__()"
+    },
+    "checkOp(java.lang.String,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "checkOp(java.lang.String,int,java.lang.String)",
+      "documentation": "Checks whether op was previously set using {@link #setMode} "
+    },
     "checkOpNoThrow(int,int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -59,6 +87,23 @@
       "minSdk": 19,
       "name": "checkPackage(int,java.lang.String)"
     },
+    "finishOp(int,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "maxSdk": 29,
+      "name": "finishOp(int,int,java.lang.String)",
+      "documentation": "Removes a fake long-running operation from the set. "
+    },
     "finishOp(java.lang.String,int,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -90,49 +135,6 @@
       "exceptions": [],
       "name": "getAudioRestrictionKey(int,int)"
     },
-    "getInternalKey(int,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "uid",
-        "packageName"
-      ],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "getInternalKey(int,java.lang.String)"
-    },
-    "getListenerKey(int,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "op",
-        "packageName"
-      ],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "getListenerKey(int,java.lang.String)"
-    },
-    "getOpMapKey(int,java.lang.String,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "uid",
-        "packageName",
-        "opInt"
-      ],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "getOpMapKey(int,java.lang.String,int)"
-    },
     "getOpsForPackage(int,java.lang.String,int[])": {
       "isImplementation": true,
       "modifiers": [
@@ -162,6 +164,34 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "getOpsForPackage(int,java.lang.String,java.lang.String[])"
+    },
+    "getPackagesForOps(int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "ops"
+      ],
+      "returnType": "java.util.List\u003candroid.app.AppOpsManager.PackageOps\u003e",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getPackagesForOps(int[])",
+      "documentation": "Returns app op details for all packages for which one of {@link #setMode} methods was used to\nset the value of one of the given app ops (it does return those set to \u0027default\u0027 mode, while\nthe true implementation usually doesn\u0027t). Also, we don\u0027t enforce any permission checks which\nmight be needed in the true implementation.\n\n@param ops The set of operations you are interested in, or null if you want all of them.\n@return app ops information about each package, containing only ops that were specified as an\n    argument\n"
+    },
+    "getPackagesForOps(java.lang.String[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "ops"
+      ],
+      "returnType": "java.util.List\u003candroid.app.AppOpsManager.PackageOps\u003e",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getPackagesForOps(java.lang.String[])",
+      "documentation": "Returns app op details for all packages for which one of {@link #setMode} methods was used to\nset the value of one of the given app ops (it does return those set to \u0027default\u0027 mode, while\nthe true implementation usually doesn\u0027t). Also, we don\u0027t enforce any permission checks which\nmight be needed in the true implementation.\n\n@param ops The set of operations you are interested in, or null if you want all of them.\n@return app ops information about each package, containing only ops that were specified as an\n    argument\n"
     },
     "getRestriction(int,int)": {
       "isImplementation": false,
@@ -271,6 +301,39 @@
       "maxSdk": 29,
       "name": "noteProxyOpNoThrow(int,java.lang.String)"
     },
+    "noteProxyOpNoThrow(int,java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "proxiedPackageName",
+        "proxiedUid"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 29,
+      "maxSdk": 29,
+      "name": "noteProxyOpNoThrow(int,java.lang.String,int)"
+    },
+    "noteProxyOpNoThrow(int,java.lang.String,int,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "proxiedPackageName",
+        "proxiedUid",
+        "proxiedAttributionTag",
+        "message"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "noteProxyOpNoThrow(int,java.lang.String,int,java.lang.String,java.lang.String)"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -351,6 +414,41 @@
       "name": "startOp(java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)",
       "documentation": "Stores a fake long-running operation. It does not throw if a wrong uid is passed. "
     },
+    "startOpNoThrow(int,int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "maxSdk": 29,
+      "name": "startOpNoThrow(int,int,java.lang.String)",
+      "documentation": "Stores a fake long-running operation. It does not throw if a wrong uid is passed. "
+    },
+    "startOpNoThrow(java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName",
+        "attributionTag",
+        "message"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "startOpNoThrow(java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)",
+      "documentation": "Stores a fake long-running operation. It does not throw if a wrong uid is passed. "
+    },
     "startWatchingMode(int,java.lang.String,android.app.AppOpsManager.OnOpChangedListener)": {
       "isImplementation": true,
       "modifiers": [
@@ -379,17 +477,18 @@
       "minSdk": 19,
       "name": "stopWatchingMode(android.app.AppOpsManager.OnOpChangedListener)"
     },
-    "toOpEntry(java.lang.Integer)": {
+    "toOpEntry(java.lang.Integer,int)": {
       "isImplementation": false,
       "modifiers": [
         "protected"
       ],
       "params": [
-        "op"
+        "op",
+        "mode"
       ],
       "returnType": "android.app.AppOpsManager.OpEntry",
       "exceptions": [],
-      "name": "toOpEntry(java.lang.Integer)"
+      "name": "toOpEntry(java.lang.Integer,int)"
     },
     "unsafeCheckOpNoThrow(java.lang.String,int,java.lang.String)": {
       "isImplementation": true,
@@ -444,7 +543,9 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "java.util.stream.Collectors.toSet",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "android.annotation.NonNull",
     "android.annotation.Nullable",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
@@ -463,13 +564,16 @@
     "android.util.LongSparseArray",
     "android.util.LongSparseLongArray",
     "com.android.internal.app.IAppOpsService",
+    "com.google.auto.value.AutoValue",
     "com.google.common.collect.BiMap",
     "com.google.common.collect.HashBiMap",
     "com.google.common.collect.HashMultimap",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Multimap",
+    "com.google.common.collect.MultimapBuilder",
     "java.util.ArrayList",
     "java.util.Arrays",
+    "java.util.Collection",
     "java.util.Collections",
     "java.util.HashMap",
     "java.util.HashSet",
@@ -477,6 +581,7 @@
     "java.util.Map",
     "java.util.Objects",
     "java.util.Set",
+    "java.util.stream.IntStream",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
@@ -486,6 +591,7 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadows.ShadowAppOpsManager.Key",
     "org.robolectric.shadows.ShadowAppOpsManager.ModeAndException"
   ],
   "name": "org.robolectric.shadows.ShadowAppOpsManager"

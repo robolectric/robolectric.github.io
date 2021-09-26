@@ -174,6 +174,28 @@
       "exceptions": [],
       "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle)"
     },
+    "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "who",
+        "contextThread",
+        "token",
+        "resultWho",
+        "intent",
+        "requestCode",
+        "options",
+        "user"
+      ],
+      "returnType": "android.app.Instrumentation.ActivityResult",
+      "exceptions": [],
+      "minSdk": 17,
+      "maxSdk": 25,
+      "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle,android.os.UserHandle)",
+      "documentation": "Behaves as {@link #execStartActivity(Context, IBinder, IBinder, Activity, Intent, int, Bundle).\n\n\u003cp\u003eCurrently ignores the user.\n"
+    },
     "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Fragment,android.content.Intent,int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
@@ -229,31 +251,9 @@
       ],
       "returnType": "android.app.Instrumentation.ActivityResult",
       "exceptions": [],
-      "minSdk": 17,
+      "minSdk": 26,
       "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,java.lang.String,android.content.Intent,int,android.os.Bundle,android.os.UserHandle)",
       "documentation": "Behaves as {@link #execStartActivity(Context, IBinder, IBinder, String, Intent, int, Bundle).\n\n\u003cp\u003eCurrently ignores the user.\n"
-    },
-    "execStartActivityAsCaller(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle,boolean,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "who",
-        "contextThread",
-        "token",
-        "target",
-        "intent",
-        "requestCode",
-        "options",
-        "ignoreTargetSecurity",
-        "userId"
-      ],
-      "returnType": "android.app.Instrumentation.ActivityResult",
-      "exceptions": [],
-      "minSdk": 23,
-      "maxSdk": 28,
-      "name": "execStartActivityAsCaller(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle,boolean,int)"
     },
     "execStartActivityFromAppTask(android.content.Context,android.os.IBinder,java.lang.Object,android.content.Intent,android.os.Bundle)": {
       "isImplementation": true,
@@ -271,6 +271,15 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "execStartActivityFromAppTask(android.content.Context,android.os.IBinder,java.lang.Object,android.content.Intent,android.os.Bundle)"
+    },
+    "getAllStartedServices()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.Intent\u003e",
+      "exceptions": [],
+      "name": "getAllStartedServices()",
+      "documentation": "Returns all {@code Intent} started by {@link #startService(android.content.Intent)} without\nconsuming them.\n\n@return the list of {@code Intent}\n"
     },
     "getAppropriateWrappers(android.content.Context,android.os.UserHandle,android.content.Intent,java.lang.String,android.os.Bundle)": {
       "isImplementation": false,
@@ -915,6 +924,8 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "com.google.common.base.Preconditions.checkNotNull",
     "com.google.common.util.concurrent.Futures.immediateFuture",

@@ -22,6 +22,20 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "setDurationScale(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "duration"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDurationScale(float)",
+      "documentation": "Sets the duration scale for value animator. Calling this method with {@code duration} set to\nzero will make all {@link ValueAnimator} based animations have zero duration.\n"
+    },
     "setRepeatCount(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -38,6 +52,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.animation.AnimationHandler",
     "android.animation.ValueAnimator",
     "org.robolectric.RuntimeEnvironment",
@@ -45,7 +60,11 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowValueAnimator.ValueAnimatorReflector"
   ],
   "name": "org.robolectric.shadows.ShadowValueAnimator"
 }

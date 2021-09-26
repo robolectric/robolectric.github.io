@@ -117,11 +117,13 @@
     }
   },
   "imports": [
+    "android.os.Build",
     "android.os.Build.VERSION_CODES",
     "android.util.EventLog",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.List",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",

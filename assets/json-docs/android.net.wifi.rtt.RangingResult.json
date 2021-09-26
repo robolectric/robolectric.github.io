@@ -1,6 +1,6 @@
 {
   "methods": {
-    "asRangingResult(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],long)": {
+    "asRangingResultP(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],long)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -16,18 +16,67 @@
         "numSuccessfulMeasurements",
         "lci",
         "lcr",
-        "timestamp"
+        "timestampMillis"
       ],
       "returnType": "android.net.wifi.rtt.RangingResult",
       "exceptions": [],
-      "name": "asRangingResult(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],long)"
+      "name": "asRangingResultP(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],long)"
+    },
+    "asRangingResultQ(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],android.net.wifi.rtt.ResponderLocation,long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "status",
+        "mac",
+        "distanceMm",
+        "distanceStdDevMm",
+        "rssi",
+        "numAttemptedMeasurements",
+        "numSuccessfulMeasurements",
+        "lci",
+        "lcr",
+        "unverifiedResponderLocation",
+        "timestampMillis"
+      ],
+      "returnType": "android.net.wifi.rtt.RangingResult",
+      "exceptions": [],
+      "name": "asRangingResultQ(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],android.net.wifi.rtt.ResponderLocation,long)"
+    },
+    "asRangingResultS(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],android.net.wifi.rtt.ResponderLocation,long,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "status",
+        "mac",
+        "distanceMm",
+        "distanceStdDevMm",
+        "rssi",
+        "numAttemptedMeasurements",
+        "numSuccessfulMeasurements",
+        "lci",
+        "lcr",
+        "unverifiedResponderLocation",
+        "timestamp",
+        "is80211mcMeasurement"
+      ],
+      "returnType": "android.net.wifi.rtt.RangingResult",
+      "exceptions": [],
+      "name": "asRangingResultS(int,android.net.MacAddress,int,int,int,int,int,byte[],byte[],android.net.wifi.rtt.ResponderLocation,long,boolean)"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.P",
     "android.net.MacAddress",
     "android.net.wifi.rtt.RangingResult",
-    "org.robolectric.annotation.Config",
+    "android.net.wifi.rtt.ResponderLocation",
+    "android.os.Build",
+    "android.os.Build.VERSION_CODES",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowRangingResult.Builder"

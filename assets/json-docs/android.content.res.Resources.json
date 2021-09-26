@@ -254,6 +254,7 @@
     "java.util.List",
     "java.util.Locale",
     "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.android.Bootstrap",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

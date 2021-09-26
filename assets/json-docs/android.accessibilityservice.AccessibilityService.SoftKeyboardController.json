@@ -1,0 +1,86 @@
+{
+  "methods": {
+    "addOnShowModeChangedListener(android.accessibilityservice.AccessibilityService.SoftKeyboardController.OnShowModeChangedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addOnShowModeChangedListener(android.accessibilityservice.AccessibilityService.SoftKeyboardController.OnShowModeChangedListener)"
+    },
+    "addOnShowModeChangedListener(android.accessibilityservice.AccessibilityService.SoftKeyboardController.OnShowModeChangedListener,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addOnShowModeChangedListener(android.accessibilityservice.AccessibilityService.SoftKeyboardController.OnShowModeChangedListener,android.os.Handler)"
+    },
+    "getShowMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getShowMode()"
+    },
+    "notifyOnShowModeChangedListeners()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyOnShowModeChangedListeners()"
+    },
+    "removeOnShowModeChangedListener(android.accessibilityservice.AccessibilityService.SoftKeyboardController.OnShowModeChangedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "removeOnShowModeChangedListener(android.accessibilityservice.AccessibilityService.SoftKeyboardController.OnShowModeChangedListener)"
+    },
+    "setShowMode(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "showMode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setShowMode(int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.N",
+    "android.accessibilityservice.AccessibilityService",
+    "android.accessibilityservice.AccessibilityService.SoftKeyboardController",
+    "android.os.Handler",
+    "android.os.Looper",
+    "java.util.HashMap",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
+  ],
+  "name": "org.robolectric.shadows.ShadowSoftKeyboardController",
+  "documentation": "Shadow of SoftKeyboardController. "
+}

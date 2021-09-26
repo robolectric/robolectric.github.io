@@ -33,7 +33,10 @@
     }
   },
   "imports": [
+    "java.nio.charset.StandardCharsets.UTF_8",
+    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.os.Build.VERSION_CODES",
     "android.telecom.Call",
     "android.telecom.Call.RttCall",
@@ -47,7 +50,9 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType"
   ],
   "name": "org.robolectric.shadows.ShadowCall.ShadowRttCall",
   "documentation": "Robolectric test for {@link android.telecom.Call.RttCall}. "

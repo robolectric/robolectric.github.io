@@ -144,7 +144,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDensity(float)",
-      "documentation": "Changes the density for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
+      "documentation": "Changes the density for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setDensityDpi(int)": {
       "isImplementation": false,
@@ -157,7 +157,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDensityDpi(int)",
-      "documentation": "Changes the density for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
+      "documentation": "Changes the density for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
+    },
+    "setDisplayCutout(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "displayCutout"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDisplayCutout(java.lang.Object)",
+      "documentation": "Changes the display cutout for this display.\n\n@throws UnsupportedOperationException if the method is called below Android version Q.\n"
     },
     "setDisplayHdrCapabilities(int,float,float,float,int...)": {
       "isImplementation": false,
@@ -187,7 +200,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDisplayId(int)",
-      "documentation": "Changes the ID for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@deprecated This method is deprecated and will be removed in Robolectric 3.7.\n"
+      "documentation": "Changes the ID for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@deprecated This method is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "setFlags(int)": {
       "isImplementation": false,
@@ -200,7 +213,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setFlags(int)",
-      "documentation": "Changes the flags for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
+      "documentation": "Changes the flags for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setHeight(int)": {
       "isImplementation": false,
@@ -213,7 +226,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setHeight(int)",
-      "documentation": "Changes the height available to the application for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param height new height in pixels\n"
+      "documentation": "Changes the height available to the application for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param height new height in pixels\n"
     },
     "setName(java.lang.String)": {
       "isImplementation": false,
@@ -226,7 +239,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setName(java.lang.String)",
-      "documentation": "Changes the name for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
+      "documentation": "Changes the name for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setPixelFormat(int)": {
       "isImplementation": false,
@@ -252,7 +265,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setRealHeight(int)",
-      "documentation": "Changes the simulated physical height for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param height the new height in pixels\n"
+      "documentation": "Changes the simulated physical height for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param height the new height in pixels\n"
     },
     "setRealWidth(int)": {
       "isImplementation": false,
@@ -265,7 +278,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setRealWidth(int)",
-      "documentation": "Changes the simulated physical width for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param width the new width in pixels\n"
+      "documentation": "Changes the simulated physical width for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param width the new width in pixels\n"
     },
     "setRefreshRate(float)": {
       "isImplementation": false,
@@ -278,7 +291,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setRefreshRate(float)",
-      "documentation": "Changes the refresh rate for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
+      "documentation": "Changes the refresh rate for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setRotation(int)": {
       "isImplementation": false,
@@ -291,7 +304,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setRotation(int)",
-      "documentation": "Changes the rotation for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param rotation one of {@link Surface#ROTATION_0}, {@link Surface#ROTATION_90},\n                {@link Surface#ROTATION_180}, {@link Surface#ROTATION_270}\n\n"
+      "documentation": "Changes the rotation for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param rotation one of {@link Surface#ROTATION_0}, {@link Surface#ROTATION_90}, {@link\n    Surface#ROTATION_180}, {@link Surface#ROTATION_270}\n"
     },
     "setScaledDensity(float)": {
       "isImplementation": false,
@@ -317,7 +330,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setState(int)",
-      "documentation": "Changes the simulated state for this display, such as whether it is on or off\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param state the new state: one of {@link Display#STATE_OFF}, {@link Display#STATE_ON},\n       {@link Display#STATE_DOZE}, {@link Display#STATE_DOZE_SUSPEND}, or\n       {@link Display#STATE_UNKNOWN}.\n"
+      "documentation": "Changes the simulated state for this display, such as whether it is on or off\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param state the new state: one of {@link Display#STATE_OFF}, {@link Display#STATE_ON}, {@link\n    Display#STATE_DOZE}, {@link Display#STATE_DOZE_SUSPEND}, or {@link Display#STATE_UNKNOWN}.\n"
     },
     "setWidth(int)": {
       "isImplementation": false,
@@ -330,7 +343,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setWidth(int)",
-      "documentation": "Changes the width available to the application for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param width the new width in pixels\n"
+      "documentation": "Changes the width available to the application for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@param width the new width in pixels\n"
     },
     "setXdpi(float)": {
       "isImplementation": false,
@@ -343,7 +356,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setXdpi(float)",
-      "documentation": "Changes the horizontal DPI for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
+      "documentation": "Changes the horizontal DPI for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     },
     "setYdpi(float)": {
       "isImplementation": false,
@@ -356,7 +369,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setYdpi(float)",
-      "documentation": "Changes the vertical DPI for this display.\n\nAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
+      "documentation": "Changes the vertical DPI for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
     }
   },
   "imports": [

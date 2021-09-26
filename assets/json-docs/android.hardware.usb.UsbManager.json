@@ -273,7 +273,6 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
-    "org.robolectric.RuntimeEnvironment.application",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "org.robolectric.util.ReflectionHelpers.callConstructor",
     "org.robolectric.util.ReflectionHelpers.getStaticField",

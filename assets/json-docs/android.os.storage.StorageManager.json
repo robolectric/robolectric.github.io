@@ -119,7 +119,6 @@
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
-    "org.robolectric.RuntimeEnvironment.application",
     "android.os.UserManager",
     "android.os.storage.StorageManager",
     "android.os.storage.StorageVolume",
@@ -127,6 +126,7 @@
     "java.io.File",
     "java.util.ArrayList",
     "java.util.List",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

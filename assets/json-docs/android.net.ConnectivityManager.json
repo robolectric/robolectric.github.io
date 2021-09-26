@@ -357,6 +357,52 @@
       "minSdk": 21,
       "name": "requestNetwork(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)"
     },
+    "requestNetwork(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "networkCallback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "requestNetwork(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,android.os.Handler)"
+    },
+    "requestNetwork(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,android.os.Handler,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "networkCallback",
+        "handler",
+        "timeoutMs"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "requestNetwork(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,android.os.Handler,int)"
+    },
+    "requestNetwork(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "networkCallback",
+        "timeoutMs"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "requestNetwork(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,int)"
+    },
     "setActiveNetworkInfo(android.net.NetworkInfo)": {
       "isImplementation": false,
       "modifiers": [

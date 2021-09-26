@@ -225,7 +225,7 @@
     "createUnderlyingTypeface(java.lang.String,int)": {
       "isImplementation": false,
       "modifiers": [
-        "private",
+        "protected",
         "static"
       ],
       "params": [
@@ -321,6 +321,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 29,
+      "maxSdk": 30,
       "name": "initSystemDefaultTypefaces(java.lang.Object,java.lang.Object,java.lang.Object)"
     },
     "nativeCreateFromArray(long[],int,int)": {
@@ -337,6 +338,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 30,
       "name": "nativeCreateFromArray(long[],int,int)"
     },
     "reset()": {
@@ -365,15 +367,18 @@
     "android.graphics.FontFamily",
     "android.graphics.Typeface",
     "android.os.Build",
+    "android.os.Build.VERSION_CODES",
     "android.util.ArrayMap",
     "java.io.File",
     "java.io.IOException",
     "java.nio.file.Files",
     "java.nio.file.Path",
     "java.util.Collection",
+    "java.util.Collections",
     "java.util.HashMap",
     "java.util.Map",
     "java.util.Objects",
+    "java.util.concurrent.atomic.AtomicLong",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

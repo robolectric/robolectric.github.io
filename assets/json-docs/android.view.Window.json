@@ -25,7 +25,7 @@
       ],
       "returnType": "android.view.Window",
       "exceptions": [
-        "java.lang.Exception"
+        "java.lang.ClassNotFoundException"
       ],
       "name": "create(android.content.Context)"
     },

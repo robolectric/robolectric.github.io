@@ -3,7 +3,7 @@
     "disableCarMode(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "flags"
@@ -15,19 +15,34 @@
     "enableCarMode(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "flags"
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 29,
       "name": "enableCarMode(int)"
+    },
+    "enableCarMode(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "priority",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "enableCarMode(int,int)"
     },
     "getCurrentModeType()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -37,7 +52,7 @@
     "getNightMode()": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -47,7 +62,7 @@
     "setNightMode(int)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "mode"
@@ -60,6 +75,7 @@
   "imports": [
     "android.app.UiModeManager",
     "android.content.res.Configuration",
+    "android.os.Build.VERSION_CODES",
     "com.google.common.collect.ImmutableSet",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"

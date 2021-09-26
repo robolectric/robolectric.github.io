@@ -193,6 +193,19 @@
       "exceptions": [],
       "name": "drawPath(android.graphics.Path,android.graphics.Paint)"
     },
+    "drawRect(android.graphics.Rect,android.graphics.Paint)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "r",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawRect(android.graphics.Rect,android.graphics.Paint)"
+    },
     "drawRect(float,float,float,float,android.graphics.Paint)": {
       "isImplementation": true,
       "modifiers": [
@@ -715,6 +728,7 @@
     "android.graphics.RectF",
     "java.util.ArrayList",
     "java.util.List",
+    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.shadow.api.Shadow",

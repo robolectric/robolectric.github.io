@@ -12,6 +12,16 @@
       "exceptions": [],
       "name": "appendDescription(java.lang.String)"
     },
+    "checkBitmapMutable()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkBitmapMutable()"
+    },
     "compress(android.graphics.Bitmap.CompressFormat,int,java.io.OutputStream)": {
       "isImplementation": true,
       "modifiers": [
@@ -74,36 +84,6 @@
       "minSdk": 23,
       "name": "createAshmemBitmap()"
     },
-    "createBitmap(android.graphics.Bitmap)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "src"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "createBitmap(android.graphics.Bitmap)"
-    },
-    "createBitmap(android.graphics.Bitmap,int,int,int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "src",
-        "x",
-        "y",
-        "width",
-        "height"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "createBitmap(android.graphics.Bitmap,int,int,int,int)"
-    },
     "createBitmap(android.graphics.Bitmap,int,int,int,int,android.graphics.Matrix,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -158,6 +138,26 @@
       "minSdk": 17,
       "name": "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config,boolean)"
     },
+    "createBitmap(android.util.DisplayMetrics,int[],int,int,int,int,android.graphics.Bitmap.Config)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "displayMetrics",
+        "colors",
+        "offset",
+        "stride",
+        "width",
+        "height",
+        "config"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "createBitmap(android.util.DisplayMetrics,int[],int,int,int,int,android.graphics.Bitmap.Config)"
+    },
     "createBitmap(int,int,android.graphics.Bitmap.Config)": {
       "isImplementation": true,
       "modifiers": [
@@ -173,7 +173,7 @@
       "exceptions": [],
       "name": "createBitmap(int,int,android.graphics.Bitmap.Config)"
     },
-    "createBitmap(int[],int,int,android.graphics.Bitmap.Config)": {
+    "createBitmap(int[],int,int,int,int,android.graphics.Bitmap.Config)": {
       "isImplementation": true,
       "modifiers": [
         "protected",
@@ -181,13 +181,31 @@
       ],
       "params": [
         "colors",
+        "offset",
+        "stride",
         "width",
         "height",
         "config"
       ],
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
-      "name": "createBitmap(int[],int,int,android.graphics.Bitmap.Config)"
+      "name": "createBitmap(int[],int,int,int,int,android.graphics.Bitmap.Config)"
+    },
+    "createBitmap(java.awt.image.BufferedImage,int,int,android.graphics.Bitmap.Config)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "bufferedImage",
+        "width",
+        "height",
+        "config"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "createBitmap(java.awt.image.BufferedImage,int,int,android.graphics.Bitmap.Config)"
     },
     "createScaledBitmap(android.graphics.Bitmap,int,int,boolean)": {
       "isImplementation": true,
@@ -204,6 +222,29 @@
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
       "name": "createScaledBitmap(android.graphics.Bitmap,int,int,boolean)"
+    },
+    "drawBitmap(android.graphics.Bitmap,int,int)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "source",
+        "left",
+        "top"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawBitmap(android.graphics.Bitmap,int,int)"
+    },
+    "drawRect(android.graphics.Rect,android.graphics.Paint)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "r",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawRect(android.graphics.Rect,android.graphics.Paint)"
     },
     "eraseColor(int)": {
       "isImplementation": true,
@@ -252,6 +293,14 @@
       "exceptions": [],
       "minSdk": 19,
       "name": "getAllocationByteCount()"
+    },
+    "getBufferedImage()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "java.awt.image.BufferedImage",
+      "exceptions": [],
+      "name": "getBufferedImage()"
     },
     "getByteCount()": {
       "isImplementation": true,
@@ -630,6 +679,16 @@
       "exceptions": [],
       "name": "sameAs(android.graphics.Bitmap)"
     },
+    "setBufferedImage(java.awt.image.BufferedImage)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "bufferedImage"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBufferedImage(java.awt.image.BufferedImage)"
+    },
     "setConfig(android.graphics.Bitmap.Config)": {
       "isImplementation": true,
       "modifiers": [
@@ -751,6 +810,22 @@
       "exceptions": [],
       "name": "setPixels(int[],int,int,int,int,int,int)"
     },
+    "setPixelsInternal(int[],int,int,int,int,int,int)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "pixels",
+        "offset",
+        "stride",
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPixelsInternal(int[],int,int,int,int,int,int)"
+    },
     "setPremultiplied(boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -809,20 +884,29 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.M",
+    "java.lang.Integer.max",
+    "java.lang.Integer.min",
     "android.graphics.Bitmap",
-    "android.graphics.Color",
+    "android.graphics.Bitmap.Config",
     "android.graphics.Matrix",
     "android.graphics.Paint",
+    "android.graphics.Rect",
     "android.graphics.RectF",
     "android.os.Build",
     "android.os.Parcel",
     "android.util.DisplayMetrics",
+    "java.awt.image.BufferedImage",
+    "java.awt.image.ColorModel",
+    "java.awt.image.DataBufferInt",
+    "java.awt.image.WritableRaster",
     "java.io.FileDescriptor",
     "java.io.InputStream",
     "java.io.OutputStream",
     "java.nio.Buffer",
     "java.nio.ByteBuffer",
+    "java.nio.IntBuffer",
     "java.util.Arrays",
+    "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

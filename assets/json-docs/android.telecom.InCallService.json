@@ -22,6 +22,18 @@
       "exceptions": [],
       "name": "addCall(android.telecom.Call)"
     },
+    "addCall(android.telecom.ParcelableCall)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "parcelableCall"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addCall(android.telecom.ParcelableCall)"
+    },
     "canAddCall()": {
       "isImplementation": true,
       "modifiers": [
@@ -52,6 +64,28 @@
       "returnType": "android.telecom.CallAudioState",
       "exceptions": [],
       "name": "getCallAudioState()"
+    },
+    "getHandler()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.os.Handler",
+      "exceptions": [],
+      "name": "getHandler()"
+    },
+    "removeCall(android.telecom.Call)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "call"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeCall(android.telecom.Call)"
     },
     "requestBluetoothAudio(android.bluetooth.BluetoothDevice)": {
       "isImplementation": true,
@@ -91,6 +125,18 @@
       "name": "setCanAddCall(boolean)",
       "documentation": "Set the value that {@code canAddCall()} method should return. "
     },
+    "setInCallAdapter(com.android.internal.telecom.IInCallAdapter)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "inCallAdapter"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInCallAdapter(com.android.internal.telecom.IInCallAdapter)"
+    },
     "setMuted(boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -102,26 +148,46 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setMuted(boolean)"
+    },
+    "updateCall(android.telecom.ParcelableCall)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "parcelableCall"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "updateCall(android.telecom.ParcelableCall)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.P",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.TargetApi",
     "android.bluetooth.BluetoothDevice",
     "android.os.Build.VERSION",
+    "android.os.Handler",
     "android.telecom.Call",
     "android.telecom.CallAudioState",
     "android.telecom.InCallAdapter",
     "android.telecom.InCallService",
+    "android.telecom.ParcelableCall",
     "android.telecom.Phone",
+    "com.android.internal.telecom.IInCallAdapter",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowInCallService.ReflectorInCallService"
   ],
   "name": "org.robolectric.shadows.ShadowInCallService",
   "documentation": "Shadow for {@link android.telecom.InCallService}. "

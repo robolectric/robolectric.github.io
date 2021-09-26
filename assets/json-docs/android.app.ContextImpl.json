@@ -423,7 +423,7 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "startActivityAsUser(android.content.Intent,android.os.Bundle,android.os.UserHandle)",
-      "documentation": "Behaves as {@link #startActivity}. The user parameter is ignored.\n"
+      "documentation": "Behaves as {@link android.app.ContextImpl#startActivity(Intent, Bundle)}. The user parameter is\nignored.\n"
     },
     "startForegroundService(android.content.Intent)": {
       "isImplementation": true,
@@ -563,6 +563,7 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.Static",
     "org.robolectric.shadows.ShadowContextImpl._ContextImpl_"

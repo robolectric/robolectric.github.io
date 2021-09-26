@@ -27,7 +27,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addProfile(int,int,java.lang.String,int)",
-      "documentation": "Add a profile to be returned by {@link #getProfiles(int)}."
+      "documentation": "Add a profile to be returned by {@link #getProfiles(int)}.* "
     },
     "addUser(int,java.lang.String,int)": {
       "isImplementation": false,
@@ -102,7 +102,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearUserRestrictions(android.os.UserHandle)",
-      "documentation": "Removes all user restrictions set of a user identified by {@code userHandle}.\n"
+      "documentation": "Removes all user restrictions set of a user identified by {@code userHandle}. "
     },
     "createProfile(java.lang.String,java.lang.String,java.util.Set\u003cjava.lang.String\u003e)": {
       "isImplementation": true,
@@ -217,7 +217,7 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "getProfiles(int)",
-      "documentation": "If any profiles have been added using {@link #addProfile}, return those profiles.\n\nOtherwise follow real android behaviour.\n"
+      "documentation": "If any profiles have been added using {@link #addProfile}, return those profiles.\n\n\u003cp\u003eOtherwise follow real android behaviour.\n"
     },
     "getSeedAccountName()": {
       "isImplementation": true,
@@ -264,6 +264,19 @@
       "exceptions": [],
       "name": "getSerialNumberForUser(android.os.UserHandle)",
       "documentation": "@see #addProfile(int, int, String, int)\n@see #addUser(int, String, int)\n"
+    },
+    "getSerialNumbersOfUsers(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "excludeDying"
+      ],
+      "returnType": "long[]",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getSerialNumbersOfUsers(boolean)"
     },
     "getUserForSerialNumber(long)": {
       "isImplementation": true,
@@ -325,7 +338,7 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "getUserName()",
-      "documentation": "Returns the name of the user.\n\nOn real Android, if a UserHandle.USER_SYSTEM user is found but does not have a name, it will\nreturn a name like \"Owner\". In Robolectric, the USER_SYSTEM user always has a name.\n"
+      "documentation": "Returns the name of the user.\n\n\u003cp\u003eOn real Android, if a UserHandle.USER_SYSTEM user is found but does not have a name, it will\nreturn a name like \"Owner\". In Robolectric, the USER_SYSTEM user always has a name.\n"
     },
     "getUserName(int)": {
       "isImplementation": false,
@@ -499,7 +512,7 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "isLinkedUser()",
-      "documentation": "@return \u0027false\u0027 by default, or the value specified via {@link #setIsLinkedUser(boolean)}\n"
+      "documentation": "@return \u0027false\u0027 by default, or the value specified via {@link #setIsLinkedUser(boolean)} "
     },
     "isManagedProfile()": {
       "isImplementation": true,
@@ -601,7 +614,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "isSystemUser()",
-      "documentation": "@return \u0027true\u0027 by default, or the value specified via {@link #setIsSystemUser(boolean)}\n"
+      "documentation": "@return \u0027true\u0027 by default, or the value specified via {@link #setIsSystemUser(boolean)} "
     },
     "isUserOfType(java.lang.String)": {
       "isImplementation": true,
@@ -627,7 +640,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isUserRunning(android.os.UserHandle)",
-      "documentation": "@see #setUserState(UserHandle, UserState)\n"
+      "documentation": "@see #setUserState(UserHandle, UserState) "
     },
     "isUserRunningOrStopping(android.os.UserHandle)": {
       "isImplementation": true,
@@ -640,7 +653,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isUserRunningOrStopping(android.os.UserHandle)",
-      "documentation": "@see #setUserState(UserHandle, UserState)\n"
+      "documentation": "@see #setUserState(UserHandle, UserState) "
     },
     "isUserUnlocked()": {
       "isImplementation": true,
@@ -720,7 +733,7 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "requestQuietModeEnabled(boolean,android.os.UserHandle)",
-      "documentation": "Request the quiet mode.\n\nThis will succeed unless {@link #setProfileIsLocked(UserHandle, boolean)} is called with\n{@code true} for the managed profile, in which case it will always fail.\n"
+      "documentation": "Request the quiet mode.\n\n\u003cp\u003eThis will succeed unless {@link #setProfileIsLocked(UserHandle, boolean)} is called with\n{@code true} for the managed profile, in which case it will always fail.\n"
     },
     "requestQuietModeEnabled(boolean,android.os.UserHandle,int)": {
       "isImplementation": true,
@@ -775,7 +788,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setApplicationRestrictions(java.lang.String,android.os.Bundle)",
-      "documentation": "Sets the value returned by {@link UserManager#getApplicationRestrictions(String)}.\n"
+      "documentation": "Sets the value returned by {@link UserManager#getApplicationRestrictions(String)}. "
     },
     "setCanSwitchUser(boolean)": {
       "isImplementation": false,
@@ -892,7 +905,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setManagedProfile(boolean)",
-      "documentation": "Setter for {@link UserManager#isManagedProfile()}.\n"
+      "documentation": "Setter for {@link UserManager#isManagedProfile()}. "
     },
     "setMaxSupportedUsers(int)": {
       "isImplementation": false,
@@ -1023,7 +1036,24 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setUserRestriction(android.os.UserHandle,java.lang.String,boolean)"
+      "name": "setUserRestriction(android.os.UserHandle,java.lang.String,boolean)",
+      "documentation": "@deprecated When possible, please use the real Android framework API {@link\n    UserManager#setUserRestriction()}.\n"
+    },
+    "setUserRestriction(java.lang.String,boolean,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "key",
+        "value",
+        "userHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "setUserRestriction(java.lang.String,boolean,android.os.UserHandle)",
+      "documentation": "Shadows UserManager.setUserRestriction() API. This allows UserManager.hasUserRestriction() to\nreturn meaningful results in test environment; thus, allowing test to verify the invoking of\nUserManager.setUserRestriction().\n"
     },
     "setUserState(android.os.UserHandle,org.robolectric.shadows.ShadowUserManager.UserState)": {
       "isImplementation": false,
@@ -1037,7 +1067,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setUserState(android.os.UserHandle,org.robolectric.shadows.ShadowUserManager.UserState)",
-      "documentation": "Sets the current state for a given user, see {@link UserManager#isUserRunning(UserHandle)}\nand {@link UserManager#isUserRunningOrStopping(UserHandle)}\n"
+      "documentation": "Sets the current state for a given user, see {@link UserManager#isUserRunning(UserHandle)} and\n{@link UserManager#isUserRunningOrStopping(UserHandle)}\n"
     },
     "setUserSwitchability(int)": {
       "isImplementation": false,
@@ -1155,5 +1185,5 @@
     "org.robolectric.shadows.ShadowUserManager.UserState"
   ],
   "name": "org.robolectric.shadows.ShadowUserManager",
-  "documentation": "Robolectric implementation of {@link android.os.UserManager}.\n"
+  "documentation": "Robolectric implementation of {@link android.os.UserManager}. "
 }

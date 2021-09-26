@@ -26,6 +26,40 @@
       "minSdk": 24,
       "name": "addNmeaListener(android.location.OnNmeaMessageListener,android.os.Handler)"
     },
+    "addNmeaListener(java.util.concurrent.Executor,android.location.OnNmeaMessageListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "executor",
+        "listener"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "addNmeaListener(java.util.concurrent.Executor,android.location.OnNmeaMessageListener)"
+    },
+    "createRealProperties(boolean,boolean,boolean,boolean,boolean,boolean,boolean,int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "requiresNetwork",
+        "requiresSatellite",
+        "requiresCell",
+        "hasMonetaryCost",
+        "supportsAltitude",
+        "supportsSpeed",
+        "supportsBearing",
+        "powerRequirement",
+        "accuracy"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "createRealProperties(boolean,boolean,boolean,boolean,boolean,boolean,boolean,int,int)"
+    },
     "distanceBetween(android.location.Location,android.location.Location)": {
       "isImplementation": false,
       "modifiers": [
@@ -73,6 +107,37 @@
       "returnType": "android.content.Context",
       "exceptions": [],
       "name": "getContext()"
+    },
+    "getCurrentLocation(java.lang.String,android.os.CancellationSignal,java.util.concurrent.Executor,java.util.function.Consumer\u003candroid.location.Location\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "provider",
+        "cancellationSignal",
+        "executor",
+        "consumer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getCurrentLocation(java.lang.String,android.os.CancellationSignal,java.util.concurrent.Executor,java.util.function.Consumer\u003candroid.location.Location\u003e)"
+    },
+    "getCurrentLocationInternal(java.lang.String,android.os.CancellationSignal,java.util.concurrent.Executor,java.util.function.Consumer\u003candroid.location.Location\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "provider",
+        "cancellationSignal",
+        "executor",
+        "consumer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getCurrentLocationInternal(java.lang.String,android.os.CancellationSignal,java.util.concurrent.Executor,java.util.function.Consumer\u003candroid.location.Location\u003e)"
     },
     "getGpsStatusListeners()": {
       "isImplementation": false,
@@ -274,6 +339,60 @@
       "exceptions": [],
       "name": "isProviderEnabled(java.lang.String)"
     },
+    "loadLocationProviderConstructor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.reflect.Constructor\u003candroid.location.LocationProvider\u003e",
+      "exceptions": [
+        "java.lang.ReflectiveOperationException"
+      ],
+      "name": "loadLocationProviderConstructor()"
+    },
+    "registerAntennaInfoListener(java.util.concurrent.Executor,android.location.GnssAntennaInfo.Listener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "executor",
+        "listener"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "registerAntennaInfoListener(java.util.concurrent.Executor,android.location.GnssAntennaInfo.Listener)"
+    },
+    "registerGnssMeasurementsCallback(android.location.GnssMeasurementsEvent.Callback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback",
+        "handler"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "registerGnssMeasurementsCallback(android.location.GnssMeasurementsEvent.Callback,android.os.Handler)"
+    },
+    "registerGnssMeasurementsCallback(java.util.concurrent.Executor,android.location.GnssMeasurementsEvent.Callback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "executor",
+        "callback"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "registerGnssMeasurementsCallback(java.util.concurrent.Executor,android.location.GnssMeasurementsEvent.Callback)"
+    },
     "registerGnssStatusCallback(android.location.GnssStatus.Callback,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
@@ -288,6 +407,20 @@
       "minSdk": 24,
       "name": "registerGnssStatusCallback(android.location.GnssStatus.Callback,android.os.Handler)"
     },
+    "registerGnssStatusCallback(java.util.concurrent.Executor,android.location.GnssStatus.Callback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "executor",
+        "callback"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "registerGnssStatusCallback(java.util.concurrent.Executor,android.location.GnssStatus.Callback)"
+    },
     "removeGpsStatusListener(android.location.GpsStatus.Listener)": {
       "isImplementation": true,
       "modifiers": [
@@ -300,18 +433,17 @@
       "exceptions": [],
       "name": "removeGpsStatusListener(android.location.GpsStatus.Listener)"
     },
-    "removeListener(android.location.LocationListener,android.app.PendingIntent)": {
+    "removeListenerInternal(java.lang.Object)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
       "params": [
-        "locationListener",
-        "pendingIntent"
+        "key"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "removeListener(android.location.LocationListener,android.app.PendingIntent)"
+      "name": "removeListenerInternal(java.lang.Object)"
     },
     "removeNmeaListener(android.location.OnNmeaMessageListener)": {
       "isImplementation": true,
@@ -381,8 +513,8 @@
         "protected"
       ],
       "params": [
-        "oRequest",
-        "intent"
+        "request",
+        "pendingIntent"
       ],
       "returnType": "void",
       "exceptions": [],
@@ -395,9 +527,9 @@
         "protected"
       ],
       "params": [
-        "oRequest",
-        "listener",
-        "looper"
+        "request",
+        "executorOrListener",
+        "listenerOrLooper"
       ],
       "returnType": "void",
       "exceptions": [],
@@ -413,7 +545,7 @@
         "provider",
         "minTime",
         "minDistance",
-        "intent"
+        "pendingIntent"
       ],
       "returnType": "void",
       "exceptions": [],
@@ -450,6 +582,23 @@
       "exceptions": [],
       "name": "requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener,android.os.Looper)"
     },
+    "requestLocationUpdates(java.lang.String,long,float,java.util.concurrent.Executor,android.location.LocationListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "provider",
+        "minTime",
+        "minDistance",
+        "executor",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "requestLocationUpdates(java.lang.String,long,float,java.util.concurrent.Executor,android.location.LocationListener)"
+    },
     "requestLocationUpdates(long,float,android.location.Criteria,android.app.PendingIntent)": {
       "isImplementation": true,
       "modifiers": [
@@ -459,7 +608,7 @@
         "minTime",
         "minDistance",
         "criteria",
-        "intent"
+        "pendingIntent"
       ],
       "returnType": "void",
       "exceptions": [],
@@ -481,20 +630,51 @@
       "exceptions": [],
       "name": "requestLocationUpdates(long,float,android.location.Criteria,android.location.LocationListener,android.os.Looper)"
     },
-    "requestLocationUpdates(org.robolectric.shadows.ShadowLocationManager.LocationRequest,android.location.LocationListener,android.os.Looper,android.app.PendingIntent)": {
+    "requestLocationUpdates(long,float,android.location.Criteria,java.util.concurrent.Executor,android.location.LocationListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "minTime",
+        "minDistance",
+        "criteria",
+        "executor",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "requestLocationUpdates(long,float,android.location.Criteria,java.util.concurrent.Executor,android.location.LocationListener)"
+    },
+    "requestLocationUpdatesInternal(java.lang.String,org.robolectric.shadows.ShadowLocationManager.LocationRequest,android.app.PendingIntent)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
       "params": [
+        "provider",
         "request",
-        "locationListener",
-        "looper",
         "pendingIntent"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "requestLocationUpdates(org.robolectric.shadows.ShadowLocationManager.LocationRequest,android.location.LocationListener,android.os.Looper,android.app.PendingIntent)"
+      "name": "requestLocationUpdatesInternal(java.lang.String,org.robolectric.shadows.ShadowLocationManager.LocationRequest,android.app.PendingIntent)"
+    },
+    "requestLocationUpdatesInternal(java.lang.String,org.robolectric.shadows.ShadowLocationManager.LocationRequest,java.util.concurrent.Executor,android.location.LocationListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "provider",
+        "request",
+        "executor",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "requestLocationUpdatesInternal(java.lang.String,org.robolectric.shadows.ShadowLocationManager.LocationRequest,java.util.concurrent.Executor,android.location.LocationListener)"
     },
     "requestSingleUpdate(android.location.Criteria,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -503,7 +683,7 @@
       ],
       "params": [
         "criteria",
-        "intent"
+        "pendingIntent"
       ],
       "returnType": "void",
       "exceptions": [],
@@ -530,7 +710,7 @@
       ],
       "params": [
         "provider",
-        "intent"
+        "pendingIntent"
       ],
       "returnType": "void",
       "exceptions": [],
@@ -549,6 +729,43 @@
       "returnType": "void",
       "exceptions": [],
       "name": "requestSingleUpdate(java.lang.String,android.location.LocationListener,android.os.Looper)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "sendGnssAntennaInfo(java.util.List\u003candroid.location.GnssAntennaInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "antennaInfos"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendGnssAntennaInfo(java.util.List\u003candroid.location.GnssAntennaInfo\u003e)",
+      "documentation": "Sends a GNSS measurement event to all registered {@link GnssMeasurementsEvent.Callback}s. "
+    },
+    "sendGnssMeasurementsEvent(android.location.GnssMeasurementsEvent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "event"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendGnssMeasurementsEvent(android.location.GnssMeasurementsEvent)",
+      "documentation": "Sends a GNSS measurement event to all registered {@link GnssMeasurementsEvent.Callback}s. "
     },
     "sendGnssStatus(android.location.GnssStatus)": {
       "isImplementation": false,
@@ -684,6 +901,32 @@
       "name": "simulateLocation(android.location.Location)",
       "documentation": "Delivers a new location to the appropriate listeners and updates state accordingly. Delivery\nwill ignore the enabled/disabled state of providers, unlike location on a real device.\n"
     },
+    "unregisterAntennaInfoListener(android.location.GnssAntennaInfo.Listener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "unregisterAntennaInfoListener(android.location.GnssAntennaInfo.Listener)"
+    },
+    "unregisterGnssMeasurementsCallback(android.location.GnssMeasurementsEvent.Callback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "unregisterGnssMeasurementsCallback(android.location.GnssMeasurementsEvent.Callback)"
+    },
     "unregisterGnssStatusCallback(android.location.GnssStatus.Callback)": {
       "isImplementation": true,
       "modifiers": [
@@ -707,17 +950,21 @@
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "android.provider.Settings.Secure.LOCATION_MODE",
     "android.provider.Settings.Secure.LOCATION_MODE_BATTERY_SAVING",
     "android.provider.Settings.Secure.LOCATION_MODE_HIGH_ACCURACY",
     "android.provider.Settings.Secure.LOCATION_MODE_OFF",
     "android.provider.Settings.Secure.LOCATION_MODE_SENSORS_ONLY",
     "android.provider.Settings.Secure.LOCATION_PROVIDERS_ALLOWED",
+    "java.util.concurrent.TimeUnit.NANOSECONDS",
     "android.app.PendingIntent",
     "android.app.PendingIntent.CanceledException",
     "android.content.Context",
     "android.content.Intent",
     "android.location.Criteria",
+    "android.location.GnssAntennaInfo",
+    "android.location.GnssMeasurementsEvent",
     "android.location.GnssStatus",
     "android.location.GpsStatus",
     "android.location.Location",
@@ -725,9 +972,12 @@
     "android.location.LocationManager",
     "android.location.LocationProvider",
     "android.location.OnNmeaMessageListener",
+    "android.os.Bundle",
+    "android.os.CancellationSignal",
     "android.os.Handler",
     "android.os.Looper",
     "android.os.Process",
+    "android.os.SystemClock",
     "android.os.UserHandle",
     "android.provider.Settings.Secure",
     "android.text.TextUtils",
@@ -743,15 +993,24 @@
     "java.util.Map",
     "java.util.Objects",
     "java.util.concurrent.CopyOnWriteArraySet",
+    "java.util.concurrent.Executor",
+    "java.util.concurrent.RejectedExecutionException",
+    "java.util.function.Consumer",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadows.ShadowSettings.ShadowSecure",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowLocationManager.ProviderProperties",
     "org.robolectric.shadows.ShadowLocationManager.ProviderEntry",
-    "org.robolectric.shadows.ShadowLocationManager.LocationRequest"
+    "org.robolectric.shadows.ShadowLocationManager.LocationRequest",
+    "org.robolectric.shadows.ShadowLocationManager.LocationTransport",
+    "org.robolectric.shadows.ShadowLocationManager.ListenerTransport",
+    "org.robolectric.shadows.ShadowLocationManager.PendingIntentTransport",
+    "org.robolectric.shadows.ShadowLocationManager.CancellableLocationListener",
+    "org.robolectric.shadows.ShadowLocationManager.HandlerExecutor"
   ],
   "name": "org.robolectric.shadows.ShadowLocationManager",
   "documentation": "Shadow for {@link LocationManager}. Note that the default state of location on Android devices is\nlocation on, gps provider enabled, network provider disabled.\n"

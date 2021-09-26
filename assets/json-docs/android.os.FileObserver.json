@@ -1,0 +1,142 @@
+{
+  "methods": {
+    "__constructor__(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path",
+        "mask"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(java.lang.String,int)"
+    },
+    "__constructor__(java.util.List\u003cjava.io.File\u003e,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "files",
+        "mask"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "__constructor__(java.util.List\u003cjava.io.File\u003e,int)"
+    },
+    "addFile(java.io.File)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "file"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addFile(java.io.File)"
+    },
+    "addFiles(java.util.List\u003cjava.io.File\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "files"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addFiles(java.util.List\u003cjava.io.File\u003e)"
+    },
+    "fileObserverEventFromWatcherEvent(java.nio.file.WatchEvent.Kind\u003c?\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "kind"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "fileObserverEventFromWatcherEvent(java.nio.file.WatchEvent.Kind\u003c?\u003e)"
+    },
+    "finalize()": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.lang.Throwable"
+      ],
+      "name": "finalize()"
+    },
+    "setMask(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "mask"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMask(int)"
+    },
+    "startWatching()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "synchronized"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "startWatching()"
+    },
+    "stopWatching()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopWatching()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.FileObserver",
+    "java.io.File",
+    "java.io.IOException",
+    "java.nio.file.FileSystems",
+    "java.nio.file.Files",
+    "java.nio.file.Path",
+    "java.nio.file.StandardWatchEventKinds",
+    "java.nio.file.WatchEvent",
+    "java.nio.file.WatchKey",
+    "java.nio.file.WatchService",
+    "java.util.ArrayList",
+    "java.util.HashMap",
+    "java.util.HashSet",
+    "java.util.List",
+    "java.util.Map",
+    "java.util.Set",
+    "javax.annotation.concurrent.GuardedBy",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadows.ShadowFileObserver.WatchedDirectory",
+    "org.robolectric.shadows.ShadowFileObserver.WatcherRunnable"
+  ],
+  "name": "org.robolectric.shadows.ShadowFileObserver",
+  "documentation": "A shadow implementation of FileObserver that uses java.nio.file.WatchService.\n\n\u003cp\u003eCurrently only supports MODIFY, DELETE and CREATE (CREATE will encompass also events that\nwould normally register as MOVED_FROM, and DELETE will encompass also events that would normally\nregister as MOVED_TO). Other event types will be silently ignored.\n"
+}

@@ -14,6 +14,42 @@
       "name": "addThermalStatusListener(java.lang.Object)",
       "documentation": "This function adds a listener for thermal status change. "
     },
+    "addWakeLock(android.os.PowerManager.WakeLock)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "wl"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addWakeLock(android.os.PowerManager.WakeLock)",
+      "documentation": "Controls result from {@link #getLatestWakeLock()}\n\n@deprecated do not use\n"
+    },
+    "clearWakeLocks()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearWakeLocks()",
+      "documentation": "Clears most recent recorded wakelock. "
+    },
+    "getAdaptivePowerSaveEnabled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getAdaptivePowerSaveEnabled()",
+      "documentation": "Gets the value set by {@link #setAdaptivePowerSaveEnabled(boolean)}. "
+    },
     "getCurrentThermalStatus()": {
       "isImplementation": true,
       "modifiers": [
@@ -241,6 +277,20 @@
       "name": "reset()",
       "documentation": "Discards the most recent {@code PowerManager.WakeLock}s "
     },
+    "setAdaptivePowerSaveEnabled(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setAdaptivePowerSaveEnabled(boolean)",
+      "documentation": "Sets whether Adaptive Power Saver is enabled.\n\n\u003cp\u003eThis has no effect, other than the value of {@link #getAdaptivePowerSaveEnabled()} is\nchanged, which can be used to ensure this method is called correctly.\n\n@return true if the value has changed.\n"
+    },
     "setAmbientDisplayAvailable(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -406,12 +456,12 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "com.google.common.base.Preconditions.checkState",
-    "org.robolectric.shadows.ShadowApplication.getInstance",
     "android.Manifest.permission",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
     "android.os.Binder",
     "android.os.PowerManager",
+    "android.os.PowerManager.WakeLock",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
