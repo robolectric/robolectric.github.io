@@ -56,6 +56,18 @@
       "name": "createActiveRecordingConfiguration(int,int,java.lang.String)",
       "documentation": "Creates simple active recording configuration. The resulting configuration will return {@code\nnull} for {@link android.media.AudioRecordingConfiguration#getAudioDevice}.\n"
     },
+    "createAudioPlaybackConfiguration(android.media.AudioAttributes)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioAttributes"
+      ],
+      "returnType": "android.media.AudioPlaybackConfiguration",
+      "exceptions": [],
+      "name": "createAudioPlaybackConfiguration(android.media.AudioAttributes)"
+    },
     "generateAudioSessionId()": {
       "isImplementation": true,
       "modifiers": [
@@ -726,6 +738,7 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.annotation.NonNull",
     "android.annotation.RequiresPermission",
     "android.annotation.TargetApi",
@@ -734,6 +747,8 @@
     "android.media.AudioManager",
     "android.media.AudioPlaybackConfiguration",
     "android.media.AudioRecordingConfiguration",
+    "android.media.IPlayer",
+    "android.media.PlayerBase",
     "android.media.audiopolicy.AudioPolicy",
     "android.os.Build.VERSION_CODES",
     "android.os.Handler",
@@ -746,6 +761,7 @@
     "java.util.HashSet",
     "java.util.List",
     "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

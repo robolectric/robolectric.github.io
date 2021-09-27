@@ -54,14 +54,31 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setHost(android.appwidget.AppWidgetHost)"
+    },
+    "updateAppWidget(android.widget.RemoteViews)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "remoteViews"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "updateAppWidget(android.widget.RemoteViews)"
     }
   },
   "imports": [
     "android.appwidget.AppWidgetHost",
     "android.appwidget.AppWidgetHostView",
     "android.appwidget.AppWidgetProviderInfo",
+    "android.content.Context",
+    "android.view.LayoutInflater",
+    "android.view.View",
+    "android.widget.RemoteViews",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject"
   ],
   "name": "org.robolectric.shadows.ShadowAppWidgetHostView"
 }

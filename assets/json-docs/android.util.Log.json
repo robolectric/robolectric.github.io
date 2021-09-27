@@ -93,10 +93,10 @@
         "static"
       ],
       "params": [],
-      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
+      "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
       "exceptions": [],
       "name": "getLogs()",
-      "documentation": "Returns ordered list of all log entries.\n@return List of log items\n"
+      "documentation": "Returns ordered list of all log entries.\n\n@return List of log items\n"
     },
     "getLogsForTag(java.lang.String)": {
       "isImplementation": false,
@@ -107,7 +107,7 @@
       "params": [
         "tag"
       ],
-      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
+      "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowLog.LogItem\u003e",
       "exceptions": [],
       "name": "getLogsForTag(java.lang.String)",
       "documentation": "Returns ordered list of all log items for a specific tag.\n\n@param tag The tag to get logs for\n@return The list of log items for the tag or an empty list if no logs for that tag exist.\n"
@@ -371,13 +371,14 @@
   },
   "imports": [
     "android.util.Log",
+    "com.google.common.base.Ascii",
+    "com.google.common.base.Throwables",
+    "com.google.common.collect.ImmutableList",
     "java.io.FileOutputStream",
     "java.io.IOException",
     "java.io.PrintStream",
-    "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
-    "java.util.List",
     "java.util.Map",
     "java.util.Queue",
     "java.util.concurrent.ConcurrentLinkedQueue",
@@ -388,5 +389,6 @@
     "org.robolectric.shadows.ShadowLog.LogItem",
     "org.robolectric.shadows.ShadowLog.TerribleFailure"
   ],
-  "name": "org.robolectric.shadows.ShadowLog"
+  "name": "org.robolectric.shadows.ShadowLog",
+  "documentation": "Controls the behavior of {@link android.util.Log} and provides access to log messages. "
 }

@@ -233,6 +233,17 @@
       "name": "getCurrentInterruptionFilter()",
       "documentation": "@return {@link NotificationManager#INTERRUPTION_FILTER_ALL} by default, or the value specified\n    via {@link #setInterruptionFilter(int)}\n"
     },
+    "getImportance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getImportance()"
+    },
     "getNotification(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -357,6 +368,21 @@
       "name": "isChannelDeleted(java.lang.String)",
       "documentation": "Checks whether a channel is considered a \"deleted\" channel by Android. This is a channel that\nwas created but later deleted. If a channel is created that was deleted before, it recreates\nthe channel with the old settings.\n"
     },
+    "isNotificationListenerAccessGranted(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "componentName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 27,
+      "name": "isNotificationListenerAccessGranted(android.content.ComponentName)",
+      "documentation": "@return the value specified for the given {@link ComponentName} via {@link\n    #setNotificationListenerAccessGranted(ComponentName, boolean)} or false if unset.\n"
+    },
     "isNotificationPolicyAccessGranted()": {
       "isImplementation": true,
       "modifiers": [
@@ -437,6 +463,18 @@
       "name": "setEnforceMaxNotificationLimit(boolean)",
       "documentation": "Ensures a notification limit is applied before posting the notification.\n\n\u003cp\u003eWhen set to true a maximum notification limit of 25 is applied. Notifications past this\nlimit are dropped and are not posted or enqueued.\n\n\u003cp\u003eWhen set to false no limit is applied and all notifications are posted or enqueued. This is\nthe default behavior.\n"
     },
+    "setImportance(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "importance"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setImportance(int)"
+    },
     "setInterruptionFilter(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -464,6 +502,20 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "setNotificationDelegate(java.lang.String)"
+    },
+    "setNotificationListenerAccessGranted(android.content.ComponentName,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "componentName",
+        "granted"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNotificationListenerAccessGranted(android.content.ComponentName,boolean)",
+      "documentation": "Sets the value returned by {@link\nNotificationManager#isNotificationListenerAccessGranted(ComponentName)} for the provided {@link\nComponentName}.\n"
     },
     "setNotificationPolicy(android.app.NotificationManager.Policy)": {
       "isImplementation": true,
@@ -534,6 +586,7 @@
     "android.app.NotificationManager.INTERRUPTION_FILTER_ALL",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.app.AutomaticZenRule",
@@ -541,11 +594,13 @@
     "android.app.NotificationChannel",
     "android.app.NotificationManager",
     "android.app.NotificationManager.Policy",
+    "android.content.ComponentName",
     "android.os.Build",
     "android.os.Parcel",
     "android.service.notification.StatusBarNotification",
     "androidx.annotation.NonNull",
     "com.google.common.base.Preconditions",
+    "com.google.common.base.Strings",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.ImmutableMap",
     "com.google.common.collect.Sets",

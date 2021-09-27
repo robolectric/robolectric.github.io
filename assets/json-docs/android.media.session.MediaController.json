@@ -48,6 +48,17 @@
       "name": "getMetadata()",
       "documentation": "Gets the mediaMetadata set via {@link #setMetadata}. "
     },
+    "getPlaybackInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.media.session.MediaController.PlaybackInfo",
+      "exceptions": [],
+      "name": "getPlaybackInfo()",
+      "documentation": "Gets the playbackInfo set via {@link #setPlaybackInfo}. "
+    },
     "getPlaybackState()": {
       "isImplementation": true,
       "modifiers": [
@@ -58,6 +69,17 @@
       "exceptions": [],
       "name": "getPlaybackState()",
       "documentation": "Gets the playbackState set via {@link #setPlaybackState}. "
+    },
+    "getRatingType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRatingType()",
+      "documentation": "Gets the rating type set via {@link #setRatingType}. "
     },
     "registerCallback(android.media.session.MediaController.Callback)": {
       "isImplementation": true,
@@ -98,6 +120,19 @@
       "name": "setPackageName(java.lang.String)",
       "documentation": "Saves the package name for use inside the shadow. "
     },
+    "setPlaybackInfo(android.media.session.MediaController.PlaybackInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "playbackInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPlaybackInfo(android.media.session.MediaController.PlaybackInfo)",
+      "documentation": "Saves the playbackInfo to control the return value of {@link\nMediaController#getPlaybackInfo()}.\n\n\u003cp\u003e{@link PlaybackInfoBuilder} can be used to create PlaybackInfo instances.\n"
+    },
     "setPlaybackState(android.media.session.PlaybackState)": {
       "isImplementation": false,
       "modifiers": [
@@ -110,6 +145,19 @@
       "exceptions": [],
       "name": "setPlaybackState(android.media.session.PlaybackState)",
       "documentation": "Saves the playbackState to control the return value of {@link\nMediaController#getPlaybackState()}.\n"
+    },
+    "setRatingType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "ratingType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRatingType(int)",
+      "documentation": "Saves the rating type to control the return value of {@link MediaController#getRatingType()}.\n"
     },
     "unregisterCallback(android.media.session.MediaController.Callback)": {
       "isImplementation": true,
@@ -130,8 +178,10 @@
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "android.annotation.NonNull",
     "android.media.MediaMetadata",
+    "android.media.Rating",
     "android.media.session.MediaController",
     "android.media.session.MediaController.Callback",
+    "android.media.session.MediaController.PlaybackInfo",
     "android.media.session.PlaybackState",
     "android.os.Bundle",
     "java.util.ArrayList",

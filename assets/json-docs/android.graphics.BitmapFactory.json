@@ -24,7 +24,8 @@
       ],
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
-      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options)"
+      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options)",
+      "documentation": "@deprecated Use {@link Bitmap#createBitmap(int, int, Config)} to create a simple Bitmap or any\n    of the BitmapFactory.decode methods with real image data.\n"
     },
     "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)": {
       "isImplementation": false,
@@ -39,9 +40,25 @@
       ],
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
-      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)"
+      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)",
+      "documentation": "@deprecated Use {@link Bitmap#createBitmap(int, int, Config)} to create a simple Bitmap or any\n    of the BitmapFactory.decode methods with real image data.\n"
     },
-    "create(java.lang.String,android.graphics.Rect,android.graphics.BitmapFactory.Options,android.graphics.Point)": {
+    "create(java.lang.String,android.graphics.BitmapFactory.Options,org.robolectric.shadows.ImageUtil.RobolectricBufferedImage)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "name",
+        "options",
+        "image"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options,org.robolectric.shadows.ImageUtil.RobolectricBufferedImage)"
+    },
+    "create(java.lang.String,android.graphics.Rect,android.graphics.BitmapFactory.Options,android.graphics.Point,org.robolectric.shadows.ImageUtil.RobolectricBufferedImage)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -51,11 +68,12 @@
         "name",
         "outPadding",
         "options",
-        "widthAndHeight"
+        "widthAndHeightOverride",
+        "image"
       ],
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
-      "name": "create(java.lang.String,android.graphics.Rect,android.graphics.BitmapFactory.Options,android.graphics.Point)"
+      "name": "create(java.lang.String,android.graphics.Rect,android.graphics.BitmapFactory.Options,android.graphics.Point,org.robolectric.shadows.ImageUtil.RobolectricBufferedImage)"
     },
     "decodeByteArray(byte[],int,int)": {
       "isImplementation": true,
@@ -203,7 +221,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "provideWidthAndHeightHints(android.net.Uri,int,int)"
+      "name": "provideWidthAndHeightHints(android.net.Uri,int,int)",
+      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data. "
     },
     "provideWidthAndHeightHints(int,int,int)": {
       "isImplementation": false,
@@ -218,7 +237,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "provideWidthAndHeightHints(int,int,int)"
+      "name": "provideWidthAndHeightHints(int,int,int)",
+      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data. "
     },
     "provideWidthAndHeightHints(java.io.FileDescriptor,int,int)": {
       "isImplementation": false,
@@ -233,7 +253,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "provideWidthAndHeightHints(java.io.FileDescriptor,int,int)"
+      "name": "provideWidthAndHeightHints(java.io.FileDescriptor,int,int)",
+      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data. "
     },
     "provideWidthAndHeightHints(java.lang.String,int,int)": {
       "isImplementation": false,
@@ -248,7 +269,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "provideWidthAndHeightHints(java.lang.String,int,int)"
+      "name": "provideWidthAndHeightHints(java.lang.String,int,int)",
+      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data. "
     },
     "reset()": {
       "isImplementation": false,
@@ -261,7 +283,7 @@
       "exceptions": [],
       "name": "reset()"
     },
-    "selectWidthAndHeight(java.lang.String,android.graphics.Point)": {
+    "selectWidthAndHeight(java.lang.String,android.graphics.Point,org.robolectric.shadows.ImageUtil.RobolectricBufferedImage)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -269,11 +291,26 @@
       ],
       "params": [
         "name",
-        "widthAndHeight"
+        "widthAndHeightOverride",
+        "robolectricBufferedImage"
       ],
       "returnType": "android.graphics.Point",
       "exceptions": [],
-      "name": "selectWidthAndHeight(java.lang.String,android.graphics.Point)"
+      "name": "selectWidthAndHeight(java.lang.String,android.graphics.Point,org.robolectric.shadows.ImageUtil.RobolectricBufferedImage)"
+    },
+    "setAllowInvalidImageData(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "allowInvalidImageData"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAllowInvalidImageData(boolean)",
+      "documentation": "Whether the BitmapFactory.decode methods, such as {@link\nBitmapFactory#decodeStream(InputStream, Rect, Options)} should allow invalid image data and\nalways return Bitmap objects. If set to false, BitmapFactory.decode methods will be consistent\nwith real Android, and return null Bitmap values and set {@link BitmapFactory.Options#outWidth}\nand {@link BitmapFactory.Options#outHeight} to -1.\n\n@param allowInvalidImageData whether invalid bitmap data is allowed and BitmapFactory should\n    always return Bitmap objects.\n"
     },
     "stringify(android.graphics.BitmapFactory.Options)": {
       "isImplementation": false,
@@ -292,16 +329,19 @@
   "imports": [
     "java.nio.charset.StandardCharsets.UTF_8",
     "org.robolectric.shadow.api.Shadow.directlyOn",
-    "org.robolectric.shadows.ImageUtil.getImageSizeFromStream",
+    "org.robolectric.shadows.ImageUtil.getImageFromStream",
     "android.content.res.AssetManager.AssetInputStream",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
+    "android.graphics.Bitmap.Config",
     "android.graphics.BitmapFactory",
     "android.graphics.Point",
     "android.graphics.Rect",
     "android.net.Uri",
     "android.os.Build",
     "android.util.TypedValue",
+    "java.awt.Graphics2D",
+    "java.awt.image.BufferedImage",
     "java.io.BufferedInputStream",
     "java.io.ByteArrayInputStream",
     "java.io.File",
@@ -309,7 +349,6 @@
     "java.io.FileInputStream",
     "java.io.IOException",
     "java.io.InputStream",
-    "java.net.URLConnection",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
@@ -319,6 +358,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ImageUtil.RobolectricBufferedImage",
     "org.robolectric.util.Join",
     "org.robolectric.util.Logger",
     "org.robolectric.util.NamedStream",

@@ -963,6 +963,19 @@
       "exceptions": [],
       "name": "getPreferredActivitiesInternal(java.util.List\u003candroid.content.IntentFilter\u003e,java.util.List\u003candroid.content.ComponentName\u003e,java.lang.String,java.util.SortedMap\u003candroid.content.ComponentName,java.util.List\u003candroid.content.IntentFilter\u003e\u003e)"
     },
+    "getShadowPackageArchiveInfo(java.lang.String,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "archiveFilePath",
+        "flags"
+      ],
+      "returnType": "android.content.pm.PackageInfo",
+      "exceptions": [],
+      "name": "getShadowPackageArchiveInfo(java.lang.String,int)"
+    },
     "getVerificationExtendedTimeout(int)": {
       "isImplementation": false,
       "modifiers": [

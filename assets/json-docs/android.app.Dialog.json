@@ -173,7 +173,7 @@
         "static"
       ],
       "params": [
-        "latestDialog"
+        "dialog"
       ],
       "returnType": "void",
       "exceptions": [],

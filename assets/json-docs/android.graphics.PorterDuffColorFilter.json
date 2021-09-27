@@ -11,19 +11,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 19,
       "name": "__constructor__(int,android.graphics.PorterDuff.Mode)"
-    },
-    "equals(java.lang.Object)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "object"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "equals(java.lang.Object)"
     },
     "getColor()": {
       "isImplementation": false,
@@ -46,56 +35,20 @@
       "exceptions": [],
       "name": "getMode()",
       "documentation": "@return Returns the Porter-Duff mode used to composite this color filter\u0027s\ncolor with the source pixel when this filter is applied.\n"
-    },
-    "hashCode()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "hashCode()"
-    },
-    "setColor(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "color"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 21,
-      "maxSdk": 28,
-      "name": "setColor(int)"
-    },
-    "setMode(android.graphics.PorterDuff.Mode)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "mode"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 21,
-      "maxSdk": 28,
-      "name": "setMode(android.graphics.PorterDuff.Mode)"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.PorterDuff",
     "android.graphics.PorterDuffColorFilter",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowPorterDuffColorFilter.PorterDuffColorFilterReflector"
   ],
   "name": "org.robolectric.shadows.ShadowPorterDuffColorFilter"
 }

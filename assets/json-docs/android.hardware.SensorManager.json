@@ -205,6 +205,18 @@
       "name": "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,int,android.os.Handler)",
       "documentation": "@param maxLatency is ignored.\n@param handler is ignored\n"
     },
+    "removeSensor(android.hardware.Sensor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sensor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeSensor(android.hardware.Sensor)"
+    },
     "sendSensorEventToListeners(android.hardware.SensorEvent)": {
       "isImplementation": false,
       "modifiers": [
@@ -248,6 +260,7 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.O",
     "com.google.common.base.Preconditions.checkArgument",
+    "com.google.common.base.Preconditions.checkNotNull",
     "android.hardware.Sensor",
     "android.hardware.SensorDirectChannel",
     "android.hardware.SensorEvent",

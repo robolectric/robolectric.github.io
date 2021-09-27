@@ -272,6 +272,16 @@
       "exceptions": [],
       "name": "getContentProviderOperations(java.lang.String)"
     },
+    "getContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getContext()"
+    },
     "getCursor(android.net.Uri)": {
       "isImplementation": false,
       "modifiers": [
@@ -389,19 +399,33 @@
       "exceptions": [],
       "name": "getProvider(android.net.Uri)"
     },
-    "getProvider(java.lang.String)": {
+    "getProvider(android.net.Uri,android.content.Context)": {
       "isImplementation": false,
       "modifiers": [
         "private",
-        "static",
-        "synchronized"
+        "static"
       ],
       "params": [
-        "authority"
+        "uri",
+        "context"
       ],
       "returnType": "android.content.ContentProvider",
       "exceptions": [],
-      "name": "getProvider(java.lang.String)"
+      "name": "getProvider(android.net.Uri,android.content.Context)"
+    },
+    "getProvider(java.lang.String,android.content.Context)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "authority",
+        "context"
+      ],
+      "returnType": "android.content.ContentProvider",
+      "exceptions": [],
+      "name": "getProvider(java.lang.String,android.content.Context)"
     },
     "getStatements()": {
       "isImplementation": false,
@@ -741,8 +765,7 @@
       "isImplementation": false,
       "modifiers": [
         "public",
-        "static",
-        "synchronized"
+        "static"
       ],
       "params": [
         "authority",
@@ -801,8 +824,7 @@
       "isImplementation": false,
       "modifiers": [
         "public",
-        "static",
-        "synchronized"
+        "static"
       ],
       "params": [],
       "returnType": "void",
@@ -996,6 +1018,7 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.accounts.Account",
     "android.annotation.NonNull",
     "android.annotation.SuppressLint",
@@ -1005,6 +1028,7 @@
     "android.content.ContentProviderResult",
     "android.content.ContentResolver",
     "android.content.ContentValues",
+    "android.content.Context",
     "android.content.IContentProvider",
     "android.content.Intent",
     "android.content.OperationApplicationException",
@@ -1024,6 +1048,7 @@
     "java.lang.reflect.InvocationTargetException",
     "java.util.ArrayList",
     "java.util.Collection",
+    "java.util.Collections",
     "java.util.HashMap",
     "java.util.Iterator",
     "java.util.List",
@@ -1041,6 +1066,8 @@
     "org.robolectric.util.NamedStream",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowContentResolver.ContentObserverEntry",
     "org.robolectric.shadows.ShadowContentResolver.NotifiedUri",
     "org.robolectric.shadows.ShadowContentResolver.Status",
@@ -1048,7 +1075,8 @@
     "org.robolectric.shadows.ShadowContentResolver.InsertStatement",
     "org.robolectric.shadows.ShadowContentResolver.UpdateStatement",
     "org.robolectric.shadows.ShadowContentResolver.DeleteStatement",
-    "org.robolectric.shadows.ShadowContentResolver.UnregisteredInputStream"
+    "org.robolectric.shadows.ShadowContentResolver.UnregisteredInputStream",
+    "org.robolectric.shadows.ShadowContentResolver.ContentResolverReflector"
   ],
   "name": "org.robolectric.shadows.ShadowContentResolver"
 }

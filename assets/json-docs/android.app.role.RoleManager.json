@@ -1,5 +1,18 @@
 {
   "methods": {
+    "addAvailableRole(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "roleName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addAvailableRole(java.lang.String)",
+      "documentation": "Add a role that will be recognized as available when invoking {@link\nRoleManager#isRoleAvailable(String)}.\n"
+    },
     "addHeldRole(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -13,10 +26,23 @@
       "name": "addHeldRole(java.lang.String)",
       "documentation": "Add a role that would be held by the calling app when invoking {@link\nRoleManager#isRoleHeld(String)}.\n"
     },
+    "isRoleAvailable(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "roleName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isRoleAvailable(java.lang.String)",
+      "documentation": "Check whether a particular role is available on the device.\n\n\u003cp\u003eCallers can add available roles via {@link #addAvailableRole(String)}\n\n@param roleName the name of the role to check for\n@return whether the role is available\n"
+    },
     "isRoleHeld(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public"
+        "protected"
       ],
       "params": [
         "roleName"
@@ -25,6 +51,18 @@
       "exceptions": [],
       "name": "isRoleHeld(java.lang.String)",
       "documentation": "Check whether the calling application is holding a particular role.\n\n\u003cp\u003eCallers can add held roles via {@link #addHeldRole(String)}\n\n@param roleName the name of the role to check for\n@return whether the calling application is holding the role\n"
+    },
+    "removeAvailableRole(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "roleName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeAvailableRole(java.lang.String)"
     },
     "removeHeldRole(java.lang.String)": {
       "isImplementation": false,

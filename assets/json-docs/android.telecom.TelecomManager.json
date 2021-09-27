@@ -135,6 +135,18 @@
       "minSdk": 30,
       "name": "createLaunchEmergencyDialerIntent(java.lang.String)"
     },
+    "createManageBlockedNumbersIntent()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "createManageBlockedNumbersIntent()",
+      "documentation": "Returns the intent set by {@link ShadowTelecomManager#setManageBlockNumbersIntent(Intent)} ()}\n"
+    },
     "denyIncomingCall(org.robolectric.shadows.ShadowTelecomManager.IncomingCallRecord)": {
       "isImplementation": false,
       "modifiers": [
@@ -714,6 +726,19 @@
       "name": "setIsInCall(boolean)",
       "documentation": "Sets the return value for {@link TelecomManager#isInCall}. "
     },
+    "setManageBlockNumbersIntent(android.content.Intent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setManageBlockNumbersIntent(android.content.Intent)",
+      "documentation": "Sets the BlockNumbersIntent to be returned by {@link\nShadowTelecomManager#createManageBlockedNumbersIntent()}\n"
+    },
     "setSimCallManager(android.telecom.PhoneAccountHandle)": {
       "isImplementation": false,
       "modifiers": [
@@ -816,6 +841,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.R",
     "com.google.common.base.Verify.verifyNotNull",

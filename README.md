@@ -26,6 +26,4 @@ your pull request is accepted, the docs will be automatically built and pushed t
 
 ## Javadocs
 
-When Robolectric is released, the `source/javadocs` directory needs to be updated. They can be generated with:
-
-    ./gradlew aggregateJavadocs
+When Robolectric is released, the `source/javadocs` directory needs to be updated. We can get latest steps to generate javadocs at [Robolectric Wiki's release part](https://github.com/robolectric/robolectric/wiki/Performing-a-Release#release).

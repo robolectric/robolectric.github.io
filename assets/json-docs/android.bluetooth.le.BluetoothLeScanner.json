@@ -1,14 +1,15 @@
 {
   "methods": {
-    "getInstance()": {
+    "getActiveScans()": {
       "isImplementation": false,
       "modifiers": [
-        "static"
+        "public"
       ],
       "params": [],
-      "returnType": "android.bluetooth.le.BluetoothLeScanner",
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowBluetoothLeScanner.ScanParams\u003e",
       "exceptions": [],
-      "name": "getInstance()"
+      "name": "getActiveScans()",
+      "documentation": "Returns all {@link ScanParams}s representing active scans. "
     },
     "getScanCallbacks()": {
       "isImplementation": false,
@@ -21,16 +22,21 @@
       "name": "getScanCallbacks()",
       "documentation": "Returns all currently active {@link ScanCallback}s. "
     },
-    "newInstance()": {
-      "isImplementation": false,
+    "startScan(java.util.List\u003candroid.bluetooth.le.ScanFilter\u003e,android.bluetooth.le.ScanSettings,android.app.PendingIntent)": {
+      "isImplementation": true,
       "modifiers": [
-        "private",
-        "static"
+        "protected"
       ],
-      "params": [],
-      "returnType": "android.bluetooth.le.BluetoothLeScanner",
+      "params": [
+        "filters",
+        "settings",
+        "pendingIntent"
+      ],
+      "returnType": "int",
       "exceptions": [],
-      "name": "newInstance()"
+      "minSdk": 26,
+      "name": "startScan(java.util.List\u003candroid.bluetooth.le.ScanFilter\u003e,android.bluetooth.le.ScanSettings,android.app.PendingIntent)",
+      "documentation": "Tracks ongoing scans. Use {@link #getScanCallbacks} to get a list of any currently registered\n{@link ScanCallback}s.\n"
     },
     "startScan(java.util.List\u003candroid.bluetooth.le.ScanFilter\u003e,android.bluetooth.le.ScanSettings,android.bluetooth.le.ScanCallback)": {
       "isImplementation": true,
@@ -47,6 +53,19 @@
       "name": "startScan(java.util.List\u003candroid.bluetooth.le.ScanFilter\u003e,android.bluetooth.le.ScanSettings,android.bluetooth.le.ScanCallback)",
       "documentation": "Tracks ongoing scans. Use {@link #getScanCallbacks} to get a list of any currently registered\n{@link ScanCallback}s.\n"
     },
+    "stopScan(android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "pendingIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "stopScan(android.app.PendingIntent)"
+    },
     "stopScan(android.bluetooth.le.ScanCallback)": {
       "isImplementation": true,
       "modifiers": [
@@ -62,20 +81,27 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "android.os.Build.VERSION_CODES.Q",
-    "android.annotation.SuppressLint",
+    "android.os.Build.VERSION_CODES.O",
+    "java.util.Collections.unmodifiableList",
+    "android.app.PendingIntent",
     "android.bluetooth.le.BluetoothLeScanner",
     "android.bluetooth.le.ScanCallback",
     "android.bluetooth.le.ScanFilter",
     "android.bluetooth.le.ScanSettings",
-    "android.os.Build",
+    "com.google.auto.value.AutoValue",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.Iterables",
+    "com.google.common.collect.Lists",
+    "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashSet",
     "java.util.List",
+    "java.util.Objects",
     "java.util.Set",
+    "javax.annotation.Nullable",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadows.ShadowBluetoothLeScanner.ScanParams"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothLeScanner",
   "documentation": "Adds Robolectric support for BLE scanning. "

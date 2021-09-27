@@ -130,7 +130,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()",
-      "documentation": "Resets the tracking of the most recently created {@code AlertDialog}\n"
+      "documentation": "Resets the tracking of the most recently created {@code AlertDialog} "
     },
     "show()": {
       "isImplementation": false,
@@ -150,9 +150,9 @@
     "android.widget.Adapter",
     "android.widget.FrameLayout",
     "com.android.internal.app.AlertController",
-    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowAlertDialog.ShadowBuilder"

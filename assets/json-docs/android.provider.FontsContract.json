@@ -13,15 +13,33 @@
       "exceptions": [],
       "name": "getFontSync(android.provider.FontRequest)",
       "documentation": "Returns a stub typeface immediately. "
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.O",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.content.Context",
     "android.graphics.Typeface",
     "android.provider.FontRequest",
     "android.provider.FontsContract",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowFontsContract.FontsContractReflector"
   ],
   "name": "org.robolectric.shadows.ShadowFontsContract"
 }

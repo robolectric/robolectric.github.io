@@ -1,5 +1,31 @@
 {
   "methods": {
+    "__constructor__(android.content.Context,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__(android.content.Context,android.os.Handler)"
+    },
+    "addApplicationExitInfo(android.app.ApplicationExitInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addApplicationExitInfo(android.app.ApplicationExitInfo)",
+      "documentation": "Adds given {@link ApplicationExitInfo}, see {@link ApplicationExitInfoBuilder} "
+    },
     "addApplicationExitInfo(java.lang.String,int,int,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -14,7 +40,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addApplicationExitInfo(java.lang.String,int,int,int)",
-      "documentation": "Adds an {@link ApplicationExitInfo} with the given information "
+      "documentation": "Adds an {@link ApplicationExitInfo} with the given information\n\n@deprecated Prefer using overload with {@link ApplicationExitInfoBuilder}\n"
     },
     "clearApplicationUserData(java.lang.String,android.content.pm.IPackageDataObserver)": {
       "isImplementation": true,
@@ -450,6 +476,7 @@
     "android.content.pm.IPackageDataObserver",
     "android.content.pm.PackageManager",
     "android.os.Build.VERSION_CODES",
+    "android.os.Handler",
     "android.os.Process",
     "android.os.UserHandle",
     "java.util.ArrayDeque",
@@ -464,7 +491,9 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadows.ShadowActivityManager.ApplicationExitInfoBuilder"
   ],
   "name": "org.robolectric.shadows.ShadowActivityManager",
   "documentation": "Shadow for {@link android.app.ActivityManager} "

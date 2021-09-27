@@ -14,6 +14,34 @@
       "exceptions": [],
       "name": "__constructor__(android.content.Context,android.util.AttributeSet,int)"
     },
+    "addGlobalPerformClickListener(android.view.View.OnClickListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addGlobalPerformClickListener(android.view.View.OnClickListener)",
+      "documentation": "Registers an {@link View.OnClickListener} to the {@link ShadowView}.\n\n@param listener The {@link View.OnClickListener} to be registered.\n"
+    },
+    "addGlobalPerformLongClickListener(android.view.View.OnLongClickListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addGlobalPerformLongClickListener(android.view.View.OnLongClickListener)",
+      "documentation": "Registers an {@link View.OnLongClickListener} to the {@link ShadowView}.\n\n@param listener The {@link View.OnLongClickListener} to be registered.\n"
+    },
     "addOnAttachStateChangeListener(android.view.View.OnAttachStateChangeListener)": {
       "isImplementation": true,
       "modifiers": [
@@ -474,6 +502,16 @@
       "exceptions": [],
       "name": "onTouchEvent(android.view.MotionEvent)"
     },
+    "performClick()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "performClick()"
+    },
     "performHapticFeedback(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -485,6 +523,16 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "performHapticFeedback(int)"
+    },
+    "performLongClick()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "performLongClick()"
     },
     "post(java.lang.Runnable)": {
       "isImplementation": true,
@@ -535,6 +583,34 @@
       "exceptions": [],
       "name": "removeCallbacks(java.lang.Runnable)"
     },
+    "removeGlobalPerformClickListener(android.view.View.OnClickListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeGlobalPerformClickListener(android.view.View.OnClickListener)",
+      "documentation": "Removes an {@link View.OnClickListener} from the {@link ShadowView}.\n\n@param listener The {@link View.OnClickListener} to be removed.\n"
+    },
+    "removeGlobalPerformLongClickListener(android.view.View.OnLongClickListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeGlobalPerformLongClickListener(android.view.View.OnLongClickListener)",
+      "documentation": "Removes an {@link View.OnLongClickListener} from the {@link ShadowView}.\n\n@param listener The {@link View.OnLongClickListener} to be removed.\n"
+    },
     "removeOnAttachStateChangeListener(android.view.View.OnAttachStateChangeListener)": {
       "isImplementation": true,
       "modifiers": [
@@ -556,6 +632,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "requestLayout()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "scrollBy(int,int)": {
       "isImplementation": true,
@@ -808,14 +895,18 @@
     "android.view.WindowId",
     "android.view.animation.Animation",
     "android.view.animation.Transformation",
+    "android.widget.ImageView",
     "java.io.PrintStream",
     "java.lang.reflect.Method",
     "java.util.HashSet",
+    "java.util.List",
     "java.util.Set",
+    "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",

@@ -1,0 +1,236 @@
+{
+  "methods": {
+    "createEglConfig()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.opengl.EGLConfig",
+      "exceptions": [],
+      "name": "createEglConfig()"
+    },
+    "createEglContext(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "version"
+      ],
+      "returnType": "android.opengl.EGLContext",
+      "exceptions": [],
+      "name": "createEglContext(int)"
+    },
+    "createEglDisplay()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.opengl.EGLDisplay",
+      "exceptions": [],
+      "name": "createEglDisplay()"
+    },
+    "createEglSurface()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.opengl.EGLSurface",
+      "exceptions": [],
+      "name": "createEglSurface()"
+    },
+    "eglChooseConfig(android.opengl.EGLDisplay,int[],int,android.opengl.EGLConfig[],int,int,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "dpy",
+        "attribList",
+        "attribListOffset",
+        "configs",
+        "configsOffset",
+        "configSize",
+        "numConfig",
+        "numConfigOffset"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "eglChooseConfig(android.opengl.EGLDisplay,int[],int,android.opengl.EGLConfig[],int,int,int[],int)"
+    },
+    "eglCreateContext(android.opengl.EGLDisplay,android.opengl.EGLConfig,android.opengl.EGLContext,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "dpy",
+        "config",
+        "shareContext",
+        "attribList",
+        "offset"
+      ],
+      "returnType": "android.opengl.EGLContext",
+      "exceptions": [],
+      "name": "eglCreateContext(android.opengl.EGLDisplay,android.opengl.EGLConfig,android.opengl.EGLContext,int[],int)"
+    },
+    "eglCreatePbufferSurface(android.opengl.EGLDisplay,android.opengl.EGLConfig,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "dpy",
+        "config",
+        "attribList",
+        "offset"
+      ],
+      "returnType": "android.opengl.EGLSurface",
+      "exceptions": [],
+      "name": "eglCreatePbufferSurface(android.opengl.EGLDisplay,android.opengl.EGLConfig,int[],int)"
+    },
+    "eglCreateWindowSurface(android.opengl.EGLDisplay,android.opengl.EGLConfig,java.lang.Object,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "dpy",
+        "config",
+        "win",
+        "attribList",
+        "offset"
+      ],
+      "returnType": "android.opengl.EGLSurface",
+      "exceptions": [],
+      "name": "eglCreateWindowSurface(android.opengl.EGLDisplay,android.opengl.EGLConfig,java.lang.Object,int[],int)"
+    },
+    "eglGetDisplay(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "displayId"
+      ],
+      "returnType": "android.opengl.EGLDisplay",
+      "exceptions": [],
+      "name": "eglGetDisplay(int)"
+    },
+    "eglGetError()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "eglGetError()"
+    },
+    "eglInitialize(android.opengl.EGLDisplay,int[],int,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "dpy",
+        "major",
+        "majorOffset",
+        "minor",
+        "minorOffset"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "eglInitialize(android.opengl.EGLDisplay,int[],int,int[],int)"
+    },
+    "eglMakeCurrent(android.opengl.EGLDisplay,android.opengl.EGLSurface,android.opengl.EGLSurface,android.opengl.EGLContext)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "dpy",
+        "draw",
+        "read",
+        "ctx"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "eglMakeCurrent(android.opengl.EGLDisplay,android.opengl.EGLSurface,android.opengl.EGLSurface,android.opengl.EGLContext)"
+    },
+    "eglQueryContext(android.opengl.EGLDisplay,android.opengl.EGLContext,int,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "dpy",
+        "ctx",
+        "attribute",
+        "value",
+        "offset"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "eglQueryContext(android.opengl.EGLDisplay,android.opengl.EGLContext,int,int[],int)"
+    },
+    "eglSwapBuffers(android.opengl.EGLDisplay,android.opengl.EGLSurface)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "dpy",
+        "surface"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "eglSwapBuffers(android.opengl.EGLDisplay,android.opengl.EGLSurface)"
+    },
+    "getAttribValue(int[],int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "attribList",
+        "attribute"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAttribValue(int[],int)"
+    }
+  },
+  "imports": [
+    "android.opengl.EGL14",
+    "android.opengl.EGLConfig",
+    "android.opengl.EGLContext",
+    "android.opengl.EGLDisplay",
+    "android.opengl.EGLSurface",
+    "android.os.Build.VERSION_CODES",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+  ],
+  "name": "org.robolectric.shadows.ShadowEGL14",
+  "documentation": "Shadow for EGL14. Currently doesn\u0027t handle real graphics work, but avoids crashing when run. "
+}

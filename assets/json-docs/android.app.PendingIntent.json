@@ -11,6 +11,22 @@
       "exceptions": [],
       "name": "__staticInitializer__()"
     },
+    "callLastOnFinished(android.content.Intent,int,java.lang.String,android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "resultCode",
+        "resultData",
+        "resultExtras"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "callLastOnFinished(android.content.Intent,int,java.lang.String,android.os.Bundle)",
+      "documentation": "Calls {@link PendingIntent.OnFinished#onSendFinished} on the last {@link\nPendingIntent.OnFinished} passed with {@link #send()}.\n\n\u003cp\u003e{@link PendingIntent.OnFinished#onSendFinished} is called on the {@link Handler} passed with\n{@link #send()} (if any). If no {@link Handler} was provided it\u0027s invoked on the calling\nthread.\n\n@return false if no {@link PendingIntent.OnFinished} callback was passed with the last {@link\n    #send()} call, true otherwise.\n"
+    },
     "cancel()": {
       "isImplementation": true,
       "modifiers": [
@@ -548,6 +564,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.NonNull",
     "android.annotation.SuppressLint",
     "android.app.Activity",
@@ -556,6 +573,7 @@
     "android.app.PendingIntent.CanceledException",
     "android.app.PendingIntent.OnMarshaledListener",
     "android.content.Context",
+    "android.content.IIntentSender",
     "android.content.Intent",
     "android.content.IntentSender",
     "android.os.Bundle",
@@ -578,7 +596,10 @@
     "org.robolectric.fakes.RoboIntentSender",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadows.ShadowPendingIntent.Type"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowPendingIntent.Type",
+    "org.robolectric.shadows.ShadowPendingIntent.PendingIntentReflector"
   ],
   "name": "org.robolectric.shadows.ShadowPendingIntent"
 }

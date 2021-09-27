@@ -62,6 +62,16 @@
       "exceptions": [],
       "name": "startListening(android.content.Intent)"
     },
+    "triggerOnEndOfSpeech()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerOnEndOfSpeech()"
+    },
     "triggerOnError(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -117,13 +127,14 @@
     "android.content.ComponentName",
     "android.content.Context",
     "android.content.Intent",
-    "android.os.Binder",
     "android.os.Bundle",
-    "android.provider.Settings",
+    "android.os.Handler",
+    "android.os.Looper",
+    "android.os.Message",
     "android.speech.IRecognitionService",
     "android.speech.RecognitionListener",
-    "android.speech.RecognitionService",
     "android.speech.SpeechRecognizer",
+    "java.util.Queue",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

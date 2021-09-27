@@ -193,6 +193,20 @@
       "exceptions": [],
       "name": "removeDynamicShortcuts(java.util.List\u003cjava.lang.String\u003e)"
     },
+    "removeLongLivedShortcuts(java.util.List\u003cjava.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "shortcutIds"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "removeLongLivedShortcuts(java.util.List\u003cjava.lang.String\u003e)",
+      "documentation": "No-op on Robolectric. The real implementation calls out to a service, which will NPE on\nRobolectric.\n"
+    },
     "reportShortcutUsed(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -321,6 +335,7 @@
     "android.content.pm.ShortcutInfo",
     "android.content.pm.ShortcutManager",
     "android.os.Build",
+    "android.os.Build.VERSION_CODES",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Lists",
     "java.util.ArrayList",

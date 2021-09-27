@@ -1,5 +1,16 @@
 {
   "methods": {
+    "getLastSessionBundle()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getLastSessionBundle()",
+      "documentation": "Returns the last Bundle object set via {@link #setUiHints(Bundle bundle)} or null if there\nwasn\u0027t any.\n"
+    },
     "getLastUiHintBundle()": {
       "isImplementation": false,
       "modifiers": [
@@ -84,15 +95,31 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "setUiHints(android.os.Bundle)"
+    },
+    "showSession(android.os.Bundle,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "args",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "showSession(android.os.Bundle,int)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.Q",
     "android.content.ComponentName",
     "android.content.Context",
     "android.os.Bundle",
     "android.service.voice.VoiceInteractionService",
+    "com.google.common.collect.Iterables",
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.List",

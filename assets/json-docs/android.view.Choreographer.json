@@ -1,5 +1,18 @@
 {
   "methods": {
+    "doFrame(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "frameTimeNanos",
+        "frame"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "doFrame(long,int)"
+    },
     "getFrameInterval()": {
       "isImplementation": false,
       "modifiers": [
@@ -57,12 +70,21 @@
   },
   "imports": [
     "org.robolectric.shadows.ShadowLooper.looperMode",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.view.Choreographer",
     "android.view.Choreographer.FrameCallback",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.LooperMode.Mode",
-    "org.robolectric.shadows.ShadowChoreographer.Picker"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.PerfStatsCollector",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowChoreographer.Picker",
+    "org.robolectric.shadows.ShadowChoreographer.ChoreographerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowChoreographer",
   "documentation": "The shadow API for {@link android.view.Choreographer}.\n\n\u003cp\u003eDifferent shadow implementations will be used depending on the current {@link LooperMode}. See\n{@link ShadowLegacyChoreographer} and {@link ShadowPausedChoreographer} for details.\n"

@@ -31,7 +31,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearStartedServices()",
-      "documentation": "Clears all {@code Intent} started by\n{@link android.content.Context#startService(android.content.Intent)}.\n"
+      "documentation": "Clears all {@code Intent} started by {@link\nandroid.content.Context#startService(android.content.Intent)}.\n"
     },
     "denyPermissions(int,int,java.lang.String...)": {
       "isImplementation": false,
@@ -59,7 +59,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "denyPermissions(java.lang.String...)",
-      "documentation": "Revoke the given permissions for the current process and user.\n\nHas no effect if permissions were not previously granted.\n"
+      "documentation": "Revoke the given permissions for the current process and user.\n\n\u003cp\u003eHas no effect if permissions were not previously granted.\n"
+    },
+    "getAllStartedServices()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.Intent\u003e",
+      "exceptions": [],
+      "name": "getAllStartedServices()",
+      "documentation": "Returns all {@code Intent} started by {@link #startService(android.content.Intent)} without\nconsuming them.\n\n@return the list of {@code Intent}\n"
     },
     "getBroadcastIntents()": {
       "isImplementation": false,
@@ -140,7 +151,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getNextStoppedService()",
-      "documentation": "Consumes the {@code Intent} requested to stop a service by\n{@link android.content.Context#stopService(android.content.Intent)}\nfrom the bottom of the stack of stop requests.\n"
+      "documentation": "Consumes the {@code Intent} requested to stop a service by {@link\nandroid.content.Context#stopService(android.content.Intent)} from the bottom of the stack of\nstop requests.\n"
     },
     "getShadowInstrumentation()": {
       "isImplementation": false,
@@ -211,7 +222,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "peekNextStartedService()",
-      "documentation": "Returns the most recent {@code Intent} started by\n{@link android.content.Context#startService(android.content.Intent)} without consuming it.\n\n@return the most recently started {@code Intent}\n"
+      "documentation": "Returns the most recent {@code Intent} started by {@link\nandroid.content.Context#startService(android.content.Intent)} without consuming it.\n\n@return the most recently started {@code Intent}\n"
     },
     "removeSystemService(java.lang.String)": {
       "isImplementation": false,

@@ -1,0 +1,35 @@
+{
+  "methods": {
+    "getDirectActionsInvalidationCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDirectActionsInvalidationCount()",
+      "documentation": "Returns the number of times {@code notifyDirectActionsChanged} was called on the {@link\nandroid.app.VoiceInteractor} instance associated with this shadow\n"
+    },
+    "notifyDirectActionsChanged()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "notifyDirectActionsChanged()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.app.VoiceInteractor",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowVoiceInteractor",
+  "documentation": "Shadow implementation of {@link android.app.VoiceInteractor}. "
+}

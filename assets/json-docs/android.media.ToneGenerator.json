@@ -1,0 +1,56 @@
+{
+  "methods": {
+    "getPlayedTones()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowToneGenerator.Tone\u003e",
+      "exceptions": [],
+      "name": "getPlayedTones()",
+      "documentation": "This function returns the list of tones that the application requested to be played. Note that\nthis will return all tones requested by all ToneGenerators.\n\n@return A defensive copy of the list of tones played by all tone generators.\n"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "startTone(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "toneType",
+        "durationMs"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "startTone(int,int)",
+      "documentation": "This method will intercept calls to startTone and record the played tone into a static list.\n\n\u003cp\u003eNote in the original {@link ToneGenerator}, this function will start a tone. Subsequent\ncalls to this function will cancel the currently playing tone and play a new tone instead.\nSince no tone is actually played and no process is started, this tone cannot be interrupted.\n"
+    }
+  },
+  "imports": [
+    "android.media.ToneGenerator",
+    "androidx.annotation.VisibleForTesting",
+    "com.google.auto.value.AutoValue",
+    "com.google.common.collect.ImmutableList",
+    "java.time.Duration",
+    "java.util.ArrayDeque",
+    "java.util.Deque",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadows.ShadowToneGenerator.Tone"
+  ],
+  "name": "org.robolectric.shadows.ShadowToneGenerator",
+  "documentation": "Shadow of ToneGenerator.\n\n\u003cp\u003eRecords all tones that were passed to the class.\n\n\u003cp\u003eThis class uses _static_ state to store the tones that were passed to it. This is because\nusers of the original class are expected to instantiate new instances of ToneGenerator on demand\nand clean up the instance after use. This makes it messy to grab the correct instance of\nToneGenerator to properly shadow.\n\n\u003cp\u003eAdditionally, there is a maximum number of tones that this class can support. Tones are stored\nin a first-in-first-out basis.\n"
+}

@@ -68,28 +68,6 @@
       "exceptions": [],
       "name": "getAddress()"
     },
-    "getBluetoothLeAdvertiser()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "android.bluetooth.le.BluetoothLeAdvertiser",
-      "exceptions": [],
-      "minSdk": 21,
-      "name": "getBluetoothLeAdvertiser()"
-    },
-    "getBluetoothLeScanner()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "android.bluetooth.le.BluetoothLeScanner",
-      "exceptions": [],
-      "minSdk": 21,
-      "name": "getBluetoothLeScanner()"
-    },
     "getBondedDevices()": {
       "isImplementation": true,
       "modifiers": [
@@ -120,6 +98,17 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getDiscoverableTimeout()"
+    },
+    "getLeMaximumAdvertisingDataLength()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getLeMaximumAdvertisingDataLength()"
     },
     "getLeScanCallbacks()": {
       "isImplementation": false,
@@ -365,7 +354,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setBluetoothLeAdvertiser(android.bluetooth.le.BluetoothLeAdvertiser)"
+      "name": "setBluetoothLeAdvertiser(android.bluetooth.le.BluetoothLeAdvertiser)",
+      "documentation": "@deprecated use real BluetoothLeAdvertiser instead "
     },
     "setBondedDevices(java.util.Set\u003candroid.bluetooth.BluetoothDevice\u003e)": {
       "isImplementation": false,
@@ -401,7 +391,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setEnabled(boolean)"
+      "name": "setEnabled(boolean)",
+      "documentation": "@deprecated Use {@link BluetoothAdapter#enable()} or {@link BluetoothAdapter#disable()}. "
     },
     "setIsBluetoothSupported(boolean)": {
       "isImplementation": false,
@@ -509,6 +500,20 @@
       "maxSdk": 29,
       "name": "setScanMode(int,int)"
     },
+    "setScanMode(int,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "scanMode",
+        "durationMillis"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "setScanMode(int,long)"
+    },
     "setState(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -578,7 +583,9 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothAdapter.LeScanCallback",
     "android.bluetooth.BluetoothDevice",
@@ -589,6 +596,7 @@
     "android.bluetooth.le.BluetoothLeScanner",
     "android.content.Context",
     "android.os.Build",
+    "android.os.Build.VERSION_CODES",
     "android.os.ParcelUuid",
     "android.provider.Settings",
     "java.io.IOException",
@@ -603,7 +611,11 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.Resetter"
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowBluetoothAdapter.BluetoothAdapterReflector"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothAdapter"
 }

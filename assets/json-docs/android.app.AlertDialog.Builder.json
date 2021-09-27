@@ -7,9 +7,9 @@
     "android.widget.Adapter",
     "android.widget.FrameLayout",
     "com.android.internal.app.AlertController",
-    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
