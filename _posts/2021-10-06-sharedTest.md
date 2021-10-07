@@ -3,10 +3,10 @@ title:  "sharedTest pattern: sharing tests and speeding up development"
 author: utzcoz
 ---
 
-After [Robolectric's 4.0 released][2], `Robolectric` supports the [`AndroidJUnit4` test runner][3], [`ActivityTestRule`][5], and [Espresso][4] for interacting with UI components. As we know, we also can run those tests with official Emulator. This article will show a missed but widely-used pattern called sharedTest to share tests between local and instrumentation tests, and speed up your development with more quickly test response.
+After [Robolectric's 4.0 released][2], `Robolectric` supports the [`AndroidJUnit4` test runner][3], [`ActivityScenario`][5], and [Espresso][4] for interacting with UI components. As we know, we also can run those tests with official Emulator. This article will show a missed but widely-used pattern called sharedTest to share tests between local and instrumentation tests, and speed up your development with a quicker test response.
 
 ## Using sharedTest steps by steps
-The first thing that sharedTest needs is [`AndroidJUnit4` test runner][3]. It is the test runner both of `Robolectric` and [`androidx-test`][13] support. There is a sample class, called [`SampleFragmentTest.kt`][14] from [FragmentScenarioSample][15] that uses [`AndroidJUnit4` test runner][3]:
+The first thing that sharedTest needs is [`AndroidJUnit4` test runner][3]. It is a test runner that supports both `Robolectric` and [`androidx.test`][13]. There is a sample class, called [`SampleFragmentTest.kt`][14] from [FragmentScenarioSample][15] that uses [`AndroidJUnit4` test runner][3]:
 
 ```kotlin
 import androidx.fragment.app.testing.launchFragmentInContainer
@@ -89,11 +89,11 @@ private static String getRunnerClassName() {
 }
 ```
 
-If it finds current running environment has `RobolectricTestRunner`, it will delegate tests to `Robolectric`'s `RobolectricTestRunner`; otherwise to [`androidx-test`][13]'s `AndroidJUnit4ClassRunner`. It's the magic.
+If it finds current running environment has `RobolectricTestRunner`, it will delegate tests to `Robolectric`'s `RobolectricTestRunner`; otherwise to [`androidx.test`][13]'s `AndroidJUnit4ClassRunner`. It's the magic.
 
 ## Not only sharing code, but also speeding up development
 
-With sharedTest pattern, we can share test code as much as possible. Is it the only benefit to encourage you to use sharedTest pattern? Not yet. Actually, `Robolectric` is an virtual device, with limited simulation of Android than Emulator. But `Robolectric` has better speed to establish and destroy tests environment, and developers can get test result more quickly. It can help developers to speed up [TDD cycles](https://developer.android.com/training/testing/fundamentals#create-test-iteratively):
+With sharedTest pattern, we can share test code as much as possible. Is it the only benefit to encourage you to use sharedTest pattern? Not yet. Actually, `Robolectric` is a simulated Android environment inside a JVM. It has better speed to establish and destroy tests environment, and developers can get test result more quickly. It can help developers to speed up [TDD cycles](https://developer.android.com/training/testing/fundamentals#create-test-iteratively):
 
 ![The two cycles associated with iterative, test-driven development](https://developer.android.com/images/training/testing/testing-workflow.png)
 
@@ -119,15 +119,15 @@ There are some Google's projects have used sharedTest pattern to sharing test co
 [2]: http://robolectric.org/blog/2018/10/25/robolectric-4-0/ "Robolectric 4.0 released"
 [3]: https://developer.android.com/training/testing/junit-runner "AndroidJUnit4 test runner"
 [4]: https://developer.android.com/training/testing/espresso/ "Espresso"
-[5]: https://developer.android.com/training/testing/junit-rules " JUnit4 rules with AndroidX Test"
+[5]: https://developer.android.com/reference/androidx/test/core/app/ActivityScenario "ActivityScenario"
 [6]: https://proandroiddev.com/sharing-code-between-local-and-instrumentation-tests-c0b57ebd3200 "Sharing code between local and instrumentation tests by Alex Zhukovich"
 [7]: https://medium.com/wirex/powerful-approaches-to-develop-shared-android-tests-15c508e3ce8a "Powerful Approaches to Develop Shared Android Tests by Oleksandr Hrybuk"
 [8]: https://blog.danlew.net/2015/11/02/sharing-code-between-unit-tests-and-instrumentation-tests-on-android/ "Sharing code between unit tests and instrumentation tests on Android by Dan Lew"
 [9]: https://github.com/robolectric/robolectric/pull/6570 "Add ctesque common tests to android test"
 [10]: https://github.com/google/accompanist/pull/180 "[All] Share tests to run on Robolectric & Emulators by chrisbanes"
-[11]: https://github.com/android/testing-samples/blob/main/ui/espresso/FragmentScenarioSample/app/build.gradle "FragmentScenarioSample of androidx-test with sharedTest pattern"
+[11]: https://github.com/android/testing-samples/blob/main/ui/espresso/FragmentScenarioSample/app/build.gradle "FragmentScenarioSample of androidx.test with sharedTest pattern"
 [12]: https://www.raywenderlich.com/books/android-test-driven-development-by-tutorials/ "Android Test-Driven Development by Tutorials, by Fernando Sproviero, Victoria Gonda and Lance Gleason, Razeware LLC (July 20, 2021)"
-[13]: https://github.com/android/android-test "androidx-test"
+[13]: https://github.com/android/android-test "androidx.test"
 [14]: https://github.com/android/testing-samples/blob/main/ui/espresso/FragmentScenarioSample/app/src/sharedTest/java/com/example/android/testing/espresso/fragmentscenario/SampleFragmentTest.kt "SampleFragmentTest.kt of FragmentScenarioSample"
 [15]: https://github.com/android/testing-samples/tree/main/ui/espresso/FragmentScenarioSample "FragmentScenarioSample of testing-samples"
 [16]: https://github.com/android/testing-samples/tree/main/ui/espresso/FragmentScenarioSample/app/src/sharedTest "sharedTest directory of FragmentScenarioSample"
