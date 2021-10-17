@@ -3,10 +3,10 @@ title:  "sharedTest pattern: sharing tests and speeding up development"
 author: utzcoz
 ---
 
-After [Robolectric's 4.0 release][2], `Robolectric` supports the [`AndroidJUnit4` test runner][3], [`ActivityScenario`][5], and [Espresso][4] for interacting with UI components. As we know, we also can run those tests with an official emulator. This article will show an often overlooked but widely-used pattern called sharedTest to share tests between local and instrumentation tests. This will provide the benefit of fast unit testing while ensuring that tests are high-fidelity by enabling them to be run in an emulator.
+After [Robolectric's 4.0 release][2], Robolectric supports the [`AndroidJUnit4` test runner][3], [`ActivityScenario`][5], and [Espresso][4] for interacting with UI components. As we know, we also can run those tests with an official emulator. This article will show an often overlooked but widely-used pattern called sharedTest to share tests between local and instrumentation tests. This will provide the benefit of fast unit testing while ensuring that tests are high-fidelity by enabling them to be run in an emulator.
 
 ## Using sharedTest steps by steps
-The first thing that sharedTest needs is [`AndroidJUnit4` test runner][3]. It is a test runner that supports both `Robolectric` and [`androidx.test`][13]. There is a sample class, called [`SampleFragmentTest.kt`][14] from [FragmentScenarioSample][15] that uses [`AndroidJUnit4` test runner][3]:
+The first thing that sharedTest needs is [`AndroidJUnit4` test runner][3]. It is a test runner that supports both Robolectric and [`androidx.test`][13]. There is a sample class, called [`SampleFragmentTest.kt`][14] from [FragmentScenarioSample][15] that uses [`AndroidJUnit4` test runner][3]:
 
 ```kotlin
 import androidx.fragment.app.testing.launchFragmentInContainer
@@ -54,7 +54,7 @@ sourceSets {
 }
 ```
 
-If you want to share resources too, you can check [`Robolectric`'s PR: Add ctesque common tests to android test][9] that used to reuse tests to improve CI fidelity with sharedTest pattern:
+If you want to share resources too, you can check [Robolectric's PR: Add ctesque common tests to android test][9] that used to reuse tests to improve CI fidelity with sharedTest pattern:
 
 ```groovy
 sourceSets {
@@ -68,7 +68,7 @@ sourceSets {
 }
 ```
 
-The last thing is to test it with `./gradlew test` for local tests on `Robolectric` and `./gradlew connectedCheck` for instrumentation tests on Emulator.
+The last thing is to test it with `./gradlew test` for local tests on Robolectric and `./gradlew connectedCheck` for instrumentation tests on Emulator.
 
 ## Why `AndroidJUnit4` test runner?
 
@@ -89,11 +89,11 @@ private static String getRunnerClassName() {
 }
 ```
 
-If it finds current running environment has `RobolectricTestRunner`, it will delegate tests to `Robolectric`'s `RobolectricTestRunner`; otherwise to [`androidx.test`][13]'s `AndroidJUnit4ClassRunner`.
+If it finds current running environment has `RobolectricTestRunner`, it will delegate tests to Robolectric's `RobolectricTestRunner`; otherwise to [`androidx.test`][13]'s `AndroidJUnit4ClassRunner`.
 
 ## Not only sharing code, but also speeding up development
 
-With sharedTest pattern, we can share test code as much as possible. Is it the only benefit to encourage you to use sharedTest pattern? Not yet. Actually, `Robolectric` is a simulated Android environment inside a JVM. It has better speed to establish and destroy tests environment, and developers can get test result more quickly. It can help developers to speed up [TDD cycles](https://developer.android.com/training/testing/fundamentals#create-test-iteratively):
+With sharedTest pattern, we can share test code as much as possible. Is it the only benefit to encourage you to use sharedTest pattern? Not yet. Actually, Robolectric is a simulated Android environment inside a JVM. It has better speed to establish and destroy tests environment, and developers can get test result more quickly. It can help developers to speed up [TDD cycles](https://developer.android.com/training/testing/fundamentals#create-test-iteratively):
 
 ![The two cycles associated with iterative, test-driven development](https://developer.android.com/images/training/testing/testing-workflow.png)
 
