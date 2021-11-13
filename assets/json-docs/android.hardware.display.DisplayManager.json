@@ -220,10 +220,10 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.P",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.extract",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.Context",
     "android.content.res.Configuration",
     "android.hardware.display.BrightnessChangeEvent",
@@ -244,7 +244,10 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.res.Qualifiers",
     "org.robolectric.util.Consumer",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowDisplayManager.DisplayManagerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowDisplayManager",
   "documentation": "For tests, display properties may be changed and devices may be added or removed\nprogrammatically.\n"

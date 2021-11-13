@@ -48,6 +48,17 @@
       "exceptions": [],
       "name": "deepEquals(java.lang.Object)"
     },
+    "getAnchor()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.view.accessibility.AccessibilityNodeInfo",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getAnchor()"
+    },
     "getBoundsInScreen(android.graphics.Rect)": {
       "isImplementation": true,
       "modifiers": [
@@ -264,6 +275,18 @@
       "exceptions": [],
       "name": "setActive(boolean)"
     },
+    "setAnchor(android.view.accessibility.AccessibilityNodeInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "anchor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAnchor(android.view.accessibility.AccessibilityNodeInfo)"
+    },
     "setBoundsInScreen(android.graphics.Rect)": {
       "isImplementation": false,
       "modifiers": [
@@ -363,7 +386,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Rect",
     "android.view.accessibility.AccessibilityNodeInfo",
     "android.view.accessibility.AccessibilityWindowInfo",
@@ -376,7 +399,10 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadows.ShadowAccessibilityWindowInfo.StrictEqualityWindowWrapper"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowAccessibilityWindowInfo.StrictEqualityWindowWrapper",
+    "org.robolectric.shadows.ShadowAccessibilityWindowInfo.AccessibilityWindowInfoReflector"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityWindowInfo",
   "documentation": "Shadow of {@link android.view.accessibility.AccessibilityWindowInfo} that allows a test to set\nproperties that are locked in the original class.\n"

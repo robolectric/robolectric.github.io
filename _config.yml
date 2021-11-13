@@ -63,6 +63,8 @@ menu:
         url: /javadoc/4.5/
       - title: "4.6"
         url: /javadoc/4.6/
+      - title: "4.7"
+        url: /javadoc/4.7/
         class: italic
     - title: Issues
       url: https://github.com/robolectric/robolectric/issues/

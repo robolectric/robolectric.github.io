@@ -175,7 +175,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.NonNull",
     "android.media.MediaMetadata",
     "android.media.Rating",
@@ -190,7 +190,10 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowMediaController.MediaControllerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowMediaController",
   "documentation": "Implementation of {@link android.media.session.MediaController}.\n"

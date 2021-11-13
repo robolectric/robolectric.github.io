@@ -1147,9 +1147,9 @@
     "android.os.UserManager.USER_TYPE_FULL_GUEST",
     "android.os.UserManager.USER_TYPE_FULL_RESTRICTED",
     "android.os.UserManager.USER_TYPE_FULL_SECONDARY",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest.permission",
     "android.annotation.UserIdInt",
     "android.app.Application",
@@ -1181,8 +1181,11 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowUserManager.UserManagerState",
-    "org.robolectric.shadows.ShadowUserManager.UserState"
+    "org.robolectric.shadows.ShadowUserManager.UserState",
+    "org.robolectric.shadows.ShadowUserManager.UserManagerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowUserManager",
   "documentation": "Robolectric implementation of {@link android.os.UserManager}. "

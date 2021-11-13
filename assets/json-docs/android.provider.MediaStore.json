@@ -1,13 +1,47 @@
 {
-  "methods": {},
+  "methods": {
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "setStubBitmapForThumbnails(android.graphics.Bitmap)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "bitmap"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStubBitmapForThumbnails(android.graphics.Bitmap)"
+    }
+  },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ContentResolver",
     "android.graphics.Bitmap",
+    "android.graphics.BitmapFactory.Options",
     "android.net.Uri",
     "android.provider.MediaStore",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadows.ShadowMediaStore.ShadowImages"
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowMediaStore.ShadowImages",
+    "org.robolectric.shadows.ShadowMediaStore.ShadowVideo",
+    "org.robolectric.shadows.ShadowMediaStore.ImagesThumbnailsReflector",
+    "org.robolectric.shadows.ShadowMediaStore.VideoThumbnailsReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowMediaStore"
+  "name": "org.robolectric.shadows.ShadowMediaStore",
+  "documentation": "Shadow for {@link MediaStore}. "
 }

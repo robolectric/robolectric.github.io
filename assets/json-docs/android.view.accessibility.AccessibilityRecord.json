@@ -42,6 +42,18 @@
       "name": "getWindowId()",
       "documentation": "Returns the id of the window from which the event comes. "
     },
+    "init(android.view.accessibility.AccessibilityRecord)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "model"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "init(android.view.accessibility.AccessibilityRecord)"
+    },
     "setSource(android.view.View)": {
       "isImplementation": true,
       "modifiers": [
@@ -95,6 +107,7 @@
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.view.View",
     "android.view.accessibility.AccessibilityNodeInfo",
     "android.view.accessibility.AccessibilityRecord",
@@ -102,7 +115,9 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowAccessibilityRecord.AccessibilityRecordReflector"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityRecord",
   "documentation": "Shadow of {@link android.view.accessibility.AccessibilityRecord}.\n"

@@ -181,6 +181,18 @@
       "exceptions": [],
       "name": "setDetailedState(android.net.NetworkInfo.DetailedState)"
     },
+    "setExtraInfo(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "extraInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setExtraInfo(java.lang.String)"
+    },
     "setSubType(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -195,10 +207,15 @@
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.net.NetworkInfo",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowNetworkInfo.NetworkInfoReflector"
   ],
   "name": "org.robolectric.shadows.ShadowNetworkInfo"
 }

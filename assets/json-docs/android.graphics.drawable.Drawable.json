@@ -227,6 +227,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
     "android.graphics.BitmapFactory",
@@ -246,7 +247,10 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowDrawable.DrawableReflector"
   ],
   "name": "org.robolectric.shadows.ShadowDrawable"
 }

@@ -26,11 +26,14 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ContentProvider",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowContentProvider.ContentProviderReflector"
   ],
   "name": "org.robolectric.shadows.ShadowContentProvider"
 }

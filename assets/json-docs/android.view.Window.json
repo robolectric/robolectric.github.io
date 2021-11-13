@@ -14,6 +14,33 @@
       "minSdk": 24,
       "name": "addOnFrameMetricsAvailableListener(android.view.Window.OnFrameMetricsAvailableListener,android.os.Handler)"
     },
+    "addPrivateFlags(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "maxSdk": 30,
+      "name": "addPrivateFlags(int)"
+    },
+    "addSystemFlags(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "addSystemFlags(int)"
+    },
     "create(android.content.Context)": {
       "isImplementation": false,
       "modifiers": [
@@ -51,25 +78,18 @@
       "exceptions": [],
       "name": "getFlag(int)"
     },
-    "getIndeterminateProgressBar()": {
+    "getPrivateFlag(int)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
-      "params": [],
-      "returnType": "android.widget.ProgressBar",
-      "exceptions": [],
-      "name": "getIndeterminateProgressBar()"
-    },
-    "getProgressBar()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
+      "params": [
+        "flag"
       ],
-      "params": [],
-      "returnType": "android.widget.ProgressBar",
+      "returnType": "boolean",
       "exceptions": [],
-      "name": "getProgressBar()"
+      "name": "getPrivateFlag(int)",
+      "documentation": "Return the value from a private flag (a.k.a system flag).\n\n\u003cp\u003ePrivate flags can be set via either {@link #addPrivateFlags} (SDK 19-30) or {@link\n#addSystemFlags} (SDK 29+) methods.\n"
     },
     "getSoftInputMode()": {
       "isImplementation": false,
@@ -158,24 +178,30 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.Context",
     "android.graphics.drawable.Drawable",
     "android.os.Handler",
     "android.view.FrameMetrics",
     "android.view.Window",
     "android.view.Window.OnFrameMetricsAvailableListener",
-    "android.widget.ProgressBar",
     "java.util.HashSet",
     "java.util.Set",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowWindow.WindowReflector"
   ],
   "name": "org.robolectric.shadows.ShadowWindow"
 }

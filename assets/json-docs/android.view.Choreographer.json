@@ -11,6 +11,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 30,
       "name": "doFrame(long,int)"
     },
     "getFrameInterval()": {
@@ -69,6 +70,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.R",
     "org.robolectric.shadows.ShadowLooper.looperMode",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.view.Choreographer",

@@ -738,6 +738,7 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "android.annotation.NonNull",
     "android.annotation.RequiresPermission",

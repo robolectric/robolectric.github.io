@@ -1,5 +1,17 @@
 {
   "methods": {
+    "closeCurrentInput()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "closeCurrentInput()",
+      "documentation": "The framework implementation does a blocking call to system server. This will deadlock on\nRobolectric, so just stub out the method.\n"
+    },
     "displayCompletions(android.view.View,android.view.inputmethod.CompletionInfo[])": {
       "isImplementation": true,
       "modifiers": [
@@ -86,6 +98,22 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "hideSoftInputFromWindow(android.os.IBinder,int,android.os.ResultReceiver)"
+    },
+    "hideSoftInputFromWindow(android.os.IBinder,int,android.os.ResultReceiver,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "windowToken",
+        "flags",
+        "resultReceiver",
+        "ignoredReason"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "hideSoftInputFromWindow(android.os.IBinder,int,android.os.ResultReceiver,int)"
     },
     "isActive()": {
       "isImplementation": true,
@@ -296,6 +324,22 @@
       "maxSdk": 30,
       "name": "showSoftInput(android.view.View,int,android.os.ResultReceiver)"
     },
+    "showSoftInput(android.view.View,int,android.os.ResultReceiver,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view",
+        "flags",
+        "resultReceiver",
+        "ignoredReason"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "showSoftInput(android.view.View,int,android.os.ResultReceiver,int)"
+    },
     "startInputInner(int,android.os.IBinder,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -328,11 +372,15 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "org.robolectric.util.reflector.Reflector.reflector",
-    "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.os.IBinder",
     "android.os.Looper",
@@ -353,6 +401,7 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.Static",
     "org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler",

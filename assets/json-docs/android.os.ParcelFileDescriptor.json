@@ -115,6 +115,7 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.SuppressLint",
     "android.os.ParcelFileDescriptor",
     "java.io.File",
@@ -129,7 +130,10 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowParcelFileDescriptor.ParcelFileDescriptorReflector"
   ],
   "name": "org.robolectric.shadows.ShadowParcelFileDescriptor"
 }

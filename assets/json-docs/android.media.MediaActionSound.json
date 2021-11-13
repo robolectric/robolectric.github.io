@@ -52,6 +52,7 @@
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.media.MediaActionSound",
     "android.os.Build",
     "java.util.HashMap",
@@ -61,7 +62,9 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowMediaActionSound.MediaActionSoundReflector"
   ],
   "name": "org.robolectric.shadows.ShadowMediaActionSound",
   "documentation": "A shadow implementation of {@link android.media.MediaActionSound}. "

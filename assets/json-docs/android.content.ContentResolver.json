@@ -612,7 +612,9 @@
         "uri"
       ],
       "returnType": "java.io.InputStream",
-      "exceptions": [],
+      "exceptions": [
+        "java.io.FileNotFoundException"
+      ],
       "name": "openInputStream(android.net.Uri)"
     },
     "openOutputStream(android.net.Uri)": {
@@ -1042,6 +1044,7 @@
     "android.os.Bundle",
     "android.os.CancellationSignal",
     "com.google.common.base.Splitter",
+    "java.io.FileNotFoundException",
     "java.io.IOException",
     "java.io.InputStream",
     "java.io.OutputStream",
@@ -1067,6 +1070,7 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowContentResolver.ContentObserverEntry",
     "org.robolectric.shadows.ShadowContentResolver.NotifiedUri",

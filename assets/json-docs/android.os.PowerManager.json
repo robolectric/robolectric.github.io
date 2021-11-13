@@ -50,6 +50,28 @@
       "name": "getAdaptivePowerSaveEnabled()",
       "documentation": "Gets the value set by {@link #setAdaptivePowerSaveEnabled(boolean)}. "
     },
+    "getBatteryDischargePrediction()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.time.Duration",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getBatteryDischargePrediction()",
+      "documentation": "Returns the current battery life remaining estimate.\n\n\u003cp\u003eDiffers from real implementation as the time that {@link #setBatteryDischargePrediction} was\ncalled is not taken into account.\n\n@return The estimated battery life remaining as a {@link Duration}. Will be {@code null} if the\n    prediction has not been set.\n"
+    },
+    "getContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getContext()"
+    },
     "getCurrentThermalStatus()": {
       "isImplementation": true,
       "modifiers": [
@@ -131,6 +153,18 @@
       "minSdk": 30,
       "name": "isAmbientDisplaySuppressed()",
       "documentation": "Returns true if {@link #suppressAmbientDisplay(String, boolean)} has been called with any\ntoken.\n"
+    },
+    "isBatteryDischargePredictionPersonalized()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isBatteryDischargePredictionPersonalized()",
+      "documentation": "Returns whether the current battery life remaining estimate is personalized based on device\nusage history or not. This value does not take a device\u0027s powered or charging state into\naccount.\n\n@return A boolean indicating if the current discharge estimate is personalized based on\n    historical device usage or not.\n"
     },
     "isDeviceIdleMode()": {
       "isImplementation": true,
@@ -304,6 +338,21 @@
       "name": "setAmbientDisplayAvailable(boolean)",
       "documentation": "Sets the value returned by {@link #isAmbientDisplayAvailable()}. "
     },
+    "setBatteryDischargePrediction(java.time.Duration,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "timeRemaining",
+        "isPersonalized"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "setBatteryDischargePrediction(java.time.Duration,boolean)",
+      "documentation": "Differs from real implementation as device charging state is not checked.\n\n@param timeRemaining The time remaining as a {@link Duration}.\n@param isPersonalized true if personalized based on device usage history, false otherwise.\n"
+    },
     "setCurrentThermalStatus(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -353,7 +402,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setIsInteractive(boolean)"
+      "name": "setIsInteractive(boolean)",
+      "documentation": "@deprecated Prefer {@link #turnScreenOn(boolean)} instead. "
     },
     "setIsLightDeviceIdleMode(boolean)": {
       "isImplementation": false,
@@ -403,7 +453,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setIsScreenOn(boolean)"
+      "name": "setIsScreenOn(boolean)",
+      "documentation": "@deprecated Use {@link #setIsInteractive(boolean)} instead. "
     },
     "setIsWakeLockLevelSupported(int,boolean)": {
       "isImplementation": false,
@@ -445,9 +496,24 @@
       "minSdk": 30,
       "name": "suppressAmbientDisplay(java.lang.String,boolean)",
       "documentation": "If true, suppress the device\u0027s ambient display. Ambient display is defined as anything visible\non the display when {@link PowerManager#isInteractive} is false.\n\n@param token An identifier for the ambient display suppression.\n@param suppress If {@code true}, suppresses the ambient display. Otherwise, unsuppresses the\n    ambient display for the given token.\n"
+    },
+    "turnScreenOn(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "screenOn"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "turnScreenOn(boolean)",
+      "documentation": "Emulates turning the screen on/off if the screen is not already on/off. "
     }
   },
   "imports": [
+    "android.content.Intent.ACTION_SCREEN_OFF",
+    "android.content.Intent.ACTION_SCREEN_ON",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
@@ -455,15 +521,23 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "com.google.common.base.Preconditions.checkState",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest.permission",
+    "android.annotation.NonNull",
+    "android.annotation.Nullable",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
+    "android.content.Context",
+    "android.content.Intent",
     "android.os.Binder",
+    "android.os.Build.VERSION_CODES",
     "android.os.PowerManager",
     "android.os.PowerManager.WakeLock",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
+    "java.time.Duration",
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
@@ -475,9 +549,13 @@
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.shadows.ShadowPowerManager.ShadowWakeLock"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowPowerManager.ShadowWakeLock",
+    "org.robolectric.shadows.ShadowPowerManager.ReflectorPowerManager"
   ],
   "name": "org.robolectric.shadows.ShadowPowerManager",
   "documentation": "Shadow of PowerManager "

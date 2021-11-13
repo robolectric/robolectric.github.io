@@ -258,6 +258,7 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.accessibilityservice.AccessibilityServiceInfo",
     "android.content.Context",
     "android.content.pm.ServiceInfo",
@@ -279,7 +280,10 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "org.robolectric.shadows.ShadowAccessibilityManager.MyHandler"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowAccessibilityManager.MyHandler",
+    "org.robolectric.shadows.ShadowAccessibilityManager.AccessibilityManagerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityManager"
 }

@@ -328,8 +328,8 @@
   },
   "imports": [
     "java.nio.charset.StandardCharsets.UTF_8",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadows.ImageUtil.getImageFromStream",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.res.AssetManager.AssetInputStream",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
@@ -363,7 +363,11 @@
     "org.robolectric.util.Logger",
     "org.robolectric.util.NamedStream",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowBitmapFactory.BitmapFactoryReflector"
   ],
   "name": "org.robolectric.shadows.ShadowBitmapFactory"
 }

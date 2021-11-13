@@ -1,5 +1,18 @@
 {
   "methods": {
+    "createForCardId(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cardId"
+      ],
+      "returnType": "android.telephony.euicc.EuiccManager",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "createForCardId(int)"
+    },
     "getEid()": {
       "isImplementation": true,
       "modifiers": [
@@ -34,6 +47,20 @@
       "name": "setEid(java.lang.String)",
       "documentation": "Set the value to be returned by {@link EuiccManager#getEid}. "
     },
+    "setEuiccManagerForCardId(int,android.telephony.euicc.EuiccManager)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cardId",
+        "euiccManager"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEuiccManagerForCardId(int,android.telephony.euicc.EuiccManager)",
+      "documentation": "Sets the value returned by {@link EuiccManager#createForCardId(int)}. "
+    },
     "setIsEnabled(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -50,7 +77,10 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
     "android.telephony.euicc.EuiccManager",
+    "java.util.HashMap",
+    "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

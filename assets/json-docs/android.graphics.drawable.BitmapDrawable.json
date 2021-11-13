@@ -68,7 +68,7 @@
     }
   },
   "imports": [
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.ColorFilter",
@@ -80,7 +80,10 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowBitmapDrawable.BitmapDrawableReflector"
   ],
   "name": "org.robolectric.shadows.ShadowBitmapDrawable"
 }

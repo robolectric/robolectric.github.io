@@ -25,18 +25,32 @@
       "exceptions": [],
       "name": "callAttach(android.content.Intent)"
     },
-    "callAttach(android.content.Intent,java.lang.Object)": {
+    "callAttach(android.content.Intent,android.os.Bundle)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
       "params": [
         "intent",
+        "activityOptions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callAttach(android.content.Intent,android.os.Bundle)"
+    },
+    "callAttach(android.content.Intent,android.os.Bundle,java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "activityOptions",
         "lastNonConfigurationInstances"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "callAttach(android.content.Intent,java.lang.Object)"
+      "name": "callAttach(android.content.Intent,android.os.Bundle,java.lang.Object)"
     },
     "callOnActivityResult(int,int,android.content.Intent)": {
       "isImplementation": false,
@@ -972,14 +986,15 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.Activity",
     "android.app.ActivityManager",
+    "android.app.ActivityOptions",
     "android.app.ActivityThread",
     "android.app.Application",
     "android.app.Dialog",
     "android.app.Instrumentation",
+    "android.app.LoadedApk",
     "android.app.PictureInPictureParams",
     "android.content.ComponentName",
     "android.content.Context",
@@ -995,6 +1010,7 @@
     "android.os.IBinder",
     "android.text.Selection",
     "android.text.SpannableStringBuilder",
+    "android.view.Display",
     "android.view.LayoutInflater",
     "android.view.Menu",
     "android.view.MenuInflater",
@@ -1018,14 +1034,17 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.fakes.RoboMenuItem",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowContextImpl._ContextImpl_",
     "org.robolectric.shadows.ShadowInstrumentation.TargetAndRequestCode",
+    "org.robolectric.shadows.ShadowLoadedApk._LoadedApk_",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.WithType",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowActivity.ActivityInvoker",
     "org.robolectric.shadows.ShadowActivity.PermissionsRequest",
-    "org.robolectric.shadows.ShadowActivity.IntentSenderRequest"
+    "org.robolectric.shadows.ShadowActivity.IntentSenderRequest",
+    "org.robolectric.shadows.ShadowActivity.DirectActivityReflector"
   ],
   "name": "org.robolectric.shadows.ShadowActivity"
 }

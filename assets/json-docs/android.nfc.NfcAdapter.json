@@ -1,5 +1,15 @@
 {
   "methods": {
+    "disable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "disable()"
+    },
     "disableForegroundDispatch(android.app.Activity)": {
       "isImplementation": true,
       "modifiers": [
@@ -37,6 +47,16 @@
       "exceptions": [],
       "name": "dispatchTagDiscovered(android.nfc.Tag)",
       "documentation": "Dispatches the tag onto any registered readers. "
+    },
+    "enable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "enable()"
     },
     "enableForegroundDispatch(android.app.Activity,android.app.PendingIntent,android.content.IntentFilter[],java.lang.String[][])": {
       "isImplementation": true,
@@ -250,7 +270,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNfcHardwareExists(boolean)",
-      "documentation": "Modifies behavior of {@link #getNfcAdapter(Context)} to return {@code null}, to simulate\nabsence of NFC hardware.\n"
+      "documentation": "Modifies the behavior of {@link #getNfcAdapter(Context)} to return {@code null}, to simulate\nabsence of NFC hardware.\n"
     },
     "setOnNdefPushCompleteCallback(android.nfc.NfcAdapter.OnNdefPushCompleteCallback,android.app.Activity,android.app.Activity...)": {
       "isImplementation": true,
@@ -269,6 +289,7 @@
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.Activity",
     "android.app.PendingIntent",
     "android.content.Context",
@@ -279,12 +300,18 @@
     "android.nfc.Tag",
     "android.os.Build",
     "android.os.Bundle",
+    "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowNfcAdapter.NfcAdapterReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowNfcAdapter"
+  "name": "org.robolectric.shadows.ShadowNfcAdapter",
+  "documentation": "Shadow implementation of {@link NfcAdapter}. "
 }

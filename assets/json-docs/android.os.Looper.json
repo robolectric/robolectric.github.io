@@ -124,7 +124,8 @@
     "idle(long)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "final"
       ],
       "params": [
         "intervalMillis"
@@ -132,12 +133,13 @@
       "returnType": "void",
       "exceptions": [],
       "name": "idle(long)",
-      "documentation": "Causes {@link Runnable}s that have been scheduled to run within the next {@code intervalMillis}\nmilliseconds to run while advancing the scheduler\u0027s clock.\n\n@deprecated Use {@link #idle(long, TimeUnit)}.\n"
+      "documentation": "Causes {@link Runnable}s that have been scheduled to run within the next {@code intervalMillis}\nmilliseconds to run while advancing the scheduler\u0027s clock.\n\n@deprecated Use {@link #idleFor(Duration)}.\n"
     },
     "idle(long,java.util.concurrent.TimeUnit)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "final"
       ],
       "params": [
         "amount",
@@ -146,7 +148,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "idle(long,java.util.concurrent.TimeUnit)",
-      "documentation": "Causes {@link Runnable}s that have been scheduled to run within the next specified amount of\ntime to run while advancing the clock.\n\n@deprecated use {@link idleFor(amount, unit)}\n"
+      "documentation": "Causes {@link Runnable}s that have been scheduled to run within the next specified amount of\ntime to run while advancing the clock.\n\n@deprecated use {@link #idleFor(long, TimeUnit)}\n"
     },
     "idleConstantly(boolean)": {
       "isImplementation": false,
@@ -577,8 +579,10 @@
   },
   "imports": [
     "android.os.Looper.getMainLooper",
+    "java.util.concurrent.TimeUnit.MILLISECONDS",
     "org.robolectric.annotation.LooperMode.Mode.LEGACY",
     "android.os.Looper",
+    "com.google.errorprone.annotations.InlineMe",
     "com.google.errorprone.annotations.concurrent.GuardedBy",
     "java.time.Duration",
     "java.util.Collection",

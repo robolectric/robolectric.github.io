@@ -1,5 +1,17 @@
 {
   "methods": {
+    "assertHasPermission(java.lang.String...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "permissions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "assertHasPermission(java.lang.String...)"
+    },
     "disableCarMode(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -39,6 +51,26 @@
       "minSdk": 30,
       "name": "enableCarMode(int,int)"
     },
+    "getActiveProjectionTypes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003cjava.lang.Integer\u003e",
+      "exceptions": [],
+      "name": "getActiveProjectionTypes()"
+    },
+    "getApplicationNightMode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getApplicationNightMode()"
+    },
     "getCurrentModeType()": {
       "isImplementation": true,
       "modifiers": [
@@ -59,6 +91,57 @@
       "exceptions": [],
       "name": "getNightMode()"
     },
+    "releaseProjection(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "projectionType"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "releaseProjection(int)"
+    },
+    "requestProjection(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "projectionType"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "requestProjection(int)"
+    },
+    "setApplicationNightMode(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "mode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "setApplicationNightMode(int)"
+    },
+    "setFailOnProjectionToggle(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "failOnProjectionToggle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setFailOnProjectionToggle(boolean)"
+    },
     "setNightMode(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -73,10 +156,17 @@
     }
   },
   "imports": [
+    "android.annotation.SystemApi",
     "android.app.UiModeManager",
+    "android.content.Context",
+    "android.content.pm.PackageManager",
     "android.content.res.Configuration",
     "android.os.Build.VERSION_CODES",
     "com.google.common.collect.ImmutableSet",
+    "java.util.HashSet",
+    "java.util.Set",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

@@ -254,6 +254,16 @@
       "name": "getUsabilityScores()",
       "documentation": "Returns wifi usability scores previous passed to {@link WifiManager#updateWifiUsabilityScore}\n"
     },
+    "getWifiApConfiguration()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.net.wifi.WifiConfiguration",
+      "exceptions": [],
+      "name": "getWifiApConfiguration()"
+    },
     "getWifiConfiguration(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -520,6 +530,18 @@
       "exceptions": [],
       "name": "setUpdateNetworkPermission(int,boolean)",
       "documentation": "Prevents a networkId from being updated using the {@link updateNetwork(WifiConfiguration)}\nmethod. This is to simulate the case where a separate application creates a network, and the\nAndroid security model prevents your application from updating it.\n"
+    },
+    "setWifiApConfiguration(android.net.wifi.WifiConfiguration)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "apConfig"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setWifiApConfiguration(android.net.wifi.WifiConfiguration)"
     },
     "setWifiEnabled(boolean)": {
       "isImplementation": true,

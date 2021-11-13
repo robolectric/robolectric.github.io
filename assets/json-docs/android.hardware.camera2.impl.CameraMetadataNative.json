@@ -1,0 +1,39 @@
+{
+  "methods": {
+    "nativeAllocate()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 29,
+      "name": "nativeAllocate()"
+    },
+    "nativeAllocateCopy(android.hardware.camera2.impl.CameraMetadataNative)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "other"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 29,
+      "name": "nativeAllocateCopy(android.hardware.camera2.impl.CameraMetadataNative)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.hardware.camera2.impl.CameraMetadataNative",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowCameraMetadataNative",
+  "documentation": "Shadow class for {@link CameraMetadataNative} "
+}

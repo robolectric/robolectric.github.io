@@ -66,14 +66,16 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.net.NetworkCapabilities",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowNetworkCapabilities.NetworkCapabilitiesReflector"
   ],
   "name": "org.robolectric.shadows.ShadowNetworkCapabilities",
   "documentation": "Robolectic provides overrides for fetching and updating transport. "

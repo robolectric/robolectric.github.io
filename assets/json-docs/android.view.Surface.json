@@ -12,6 +12,19 @@
       "exceptions": [],
       "name": "__constructor__(android.graphics.SurfaceTexture)"
     },
+    "finalize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.lang.Throwable"
+      ],
+      "minSdk": 17,
+      "name": "finalize()"
+    },
     "getSurfaceTexture()": {
       "isImplementation": false,
       "modifiers": [
@@ -24,13 +37,21 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.SurfaceTexture",
     "android.view.Surface",
+    "dalvik.system.CloseGuard",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowSurface.SurfaceReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowSurface"
+  "name": "org.robolectric.shadows.ShadowSurface",
+  "documentation": "Shadow for {@link android.view.Surface} "
 }

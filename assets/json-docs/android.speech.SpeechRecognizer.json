@@ -14,6 +14,17 @@
       "exceptions": [],
       "name": "createSpeechRecognizer(android.content.Context,android.content.ComponentName)"
     },
+    "getLastRecognizerIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getLastRecognizerIntent()",
+      "documentation": "Returns the argument passed to the last call to {@link SpeechRecognizer#startListening}. "
+    },
     "getLatestSpeechRecognizer()": {
       "isImplementation": false,
       "modifiers": [
@@ -122,7 +133,6 @@
     }
   },
   "imports": [
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ComponentName",
     "android.content.Context",
@@ -140,9 +150,10 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
     "org.robolectric.shadows.ShadowSpeechRecognizer.SpeechRecognizerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowSpeechRecognizer",
