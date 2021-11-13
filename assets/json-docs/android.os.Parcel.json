@@ -743,6 +743,21 @@
       "maxSdk": 20,
       "name": "nativeWriteDouble(int,double)"
     },
+    "nativeWriteDouble(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nativeWriteDouble(java.lang.Object,java.lang.Object)"
+    },
     "nativeWriteDouble(long,double)": {
       "isImplementation": true,
       "modifiers": [
@@ -758,6 +773,21 @@
       "minSdk": 21,
       "maxSdk": 30,
       "name": "nativeWriteDouble(long,double)"
+    },
+    "nativeWriteFileDescriptor(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nativeWriteFileDescriptor(java.lang.Object,java.lang.Object)"
     },
     "nativeWriteFileDescriptor(long,java.io.FileDescriptor)": {
       "isImplementation": true,
@@ -790,6 +820,21 @@
       "maxSdk": 20,
       "name": "nativeWriteFloat(int,float)"
     },
+    "nativeWriteFloat(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nativeWriteFloat(java.lang.Object,java.lang.Object)"
+    },
     "nativeWriteFloat(long,float)": {
       "isImplementation": true,
       "modifiers": [
@@ -820,6 +865,21 @@
       "exceptions": [],
       "maxSdk": 20,
       "name": "nativeWriteInt(int,int)"
+    },
+    "nativeWriteInt(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nativeWriteInt(java.lang.Object,java.lang.Object)"
     },
     "nativeWriteInt(long,int)": {
       "isImplementation": true,
@@ -881,6 +941,21 @@
       "exceptions": [],
       "maxSdk": 20,
       "name": "nativeWriteLong(int,long)"
+    },
+    "nativeWriteLong(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "val"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nativeWriteLong(java.lang.Object,java.lang.Object)"
     },
     "nativeWriteLong(long,long)": {
       "isImplementation": true,
@@ -1074,6 +1149,7 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "org.robolectric.RuntimeEnvironment.castNativePtr",
     "android.os.BadParcelableException",
     "android.os.IBinder",

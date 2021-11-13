@@ -73,7 +73,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearNextStartedActivities()",
-      "documentation": "Clears all records of {@link StartedActivity}s from calls to {@link\nCrossProfileApps#startActivity(ComponentName, UserHandle)} or {@link\nCrossProfileApps#startMainActivity(ComponentName, UserHandle)}.\n"
+      "documentation": "Clears all records of {@link StartedActivity}s from calls to {@link\nCrossProfileApps#startActivity(ComponentName, UserHandle)} or {@link\nCrossProfileApps#startMainActivity(ComponentName, UserHandle)}, {@link #startActivity(Intent,\nUserHandle, Activity)}, {@link #startActivity(Intent, UserHandle, Activity, Bundle)}.\n"
     },
     "clearTargetUserProfiles()": {
       "isImplementation": false,
@@ -107,7 +107,7 @@
       "returnType": "org.robolectric.shadows.ShadowCrossProfileApps.StartedActivity",
       "exceptions": [],
       "name": "getNextStartedActivity()",
-      "documentation": "Consumes the most recent {@link ComponentName}, {@link UserHandle} pair started by {@link\nCrossProfileApps#startMainActivity(ComponentName, UserHandle)} or {@link\nCrossProfileApps#startActivity(ComponentName, UserHandle)}, and returns it wrapped in {@link\nStartedActivity}.\n"
+      "documentation": "Consumes the most recent {@link ComponentName}, {@link UserHandle} pair started by {@link\nCrossProfileApps#startMainActivity(ComponentName, UserHandle)} or {@link\nCrossProfileApps#startActivity(ComponentName, UserHandle)}, {@link #startActivity(Intent,\nUserHandle, Activity)}, {@link #startActivity(Intent, UserHandle, Activity, Bundle)}, and\nreturns it wrapped in {@link StartedActivity}.\n"
     },
     "getProfileSwitchingIconDrawable(android.os.UserHandle)": {
       "isImplementation": true,
@@ -180,7 +180,7 @@
       "returnType": "org.robolectric.shadows.ShadowCrossProfileApps.StartedActivity",
       "exceptions": [],
       "name": "peekNextStartedActivity()",
-      "documentation": "Returns the most recent {@link ComponentName}, {@link UserHandle} pair started by {@link\nCrossProfileApps#startMainActivity(ComponentName, UserHandle)} or {@link\nCrossProfileApps#startActivity(ComponentName, UserHandle)}, wrapped in {@link StartedActivity}.\n"
+      "documentation": "Returns the most recent {@link ComponentName}, {@link UserHandle} pair started by {@link\nCrossProfileApps#startMainActivity(ComponentName, UserHandle)} or {@link\nCrossProfileApps#startActivity(ComponentName, UserHandle)}, {@link #startActivity(Intent,\nUserHandle, Activity)}, {@link #startActivity(Intent, UserHandle, Activity, Bundle)}, wrapped\nin {@link StartedActivity}.\n"
     },
     "peekNextStartedMainActivity()": {
       "isImplementation": false,
@@ -260,7 +260,40 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "startActivity(android.content.ComponentName,android.os.UserHandle)",
-      "documentation": "Simulates starting the activity specified in the specified profile, performing the same\nsecurity checks done by the real {@link CrossProfileApps}.\n\n\u003cp\u003eThe most recent main activity started can be queried by {@link #peekNextStartedActivity()}\n()}.\n"
+      "documentation": "Simulates starting the activity specified in the specified profile, performing the same\nsecurity checks done by the real {@link CrossProfileApps}.\n\n\u003cp\u003eThe most recent main activity started can be queried by {@link #peekNextStartedActivity()}.\n"
+    },
+    "startActivity(android.content.Intent,android.os.UserHandle,android.app.Activity)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "targetUser",
+        "activity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "startActivity(android.content.Intent,android.os.UserHandle,android.app.Activity)",
+      "documentation": "Simulates starting the activity specified in the specified profile, performing the same\nsecurity checks done by the real {@link CrossProfileApps}.\n\n\u003cp\u003eThe most recent main activity started can be queried by {@link #peekNextStartedActivity()}.\n"
+    },
+    "startActivity(android.content.Intent,android.os.UserHandle,android.app.Activity,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "targetUser",
+        "activity",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "startActivity(android.content.Intent,android.os.UserHandle,android.app.Activity,android.os.Bundle)",
+      "documentation": "Simulates starting the activity specified in the specified profile, performing the same\nsecurity checks done by the real {@link CrossProfileApps}.\n\n\u003cp\u003eThe most recent main activity started can be queried by {@link #peekNextStartedActivity()}.\n"
     },
     "startMainActivity(android.content.ComponentName,android.os.UserHandle)": {
       "isImplementation": true,
@@ -274,7 +307,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "startMainActivity(android.content.ComponentName,android.os.UserHandle)",
-      "documentation": "Simulates starting the main activity specified in the specified profile, performing the same\nsecurity checks done by the real {@link CrossProfileApps}.\n\n\u003cp\u003eThe most recent main activity started can be queried by {@link #peekNextStartedActivity()}\n()}.\n"
+      "documentation": "Simulates starting the main activity specified in the specified profile, performing the same\nsecurity checks done by the real {@link CrossProfileApps}.\n\n\u003cp\u003eThe most recent main activity started can be queried by {@link #peekNextStartedActivity()}.\n"
     },
     "verifyActivityInManifest(android.content.ComponentName,boolean)": {
       "isImplementation": false,
@@ -324,6 +357,7 @@
     "android.Manifest.permission",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
+    "android.app.Activity",
     "android.app.AppOpsManager",
     "android.app.AppOpsManager.Mode",
     "android.content.ComponentName",
@@ -335,6 +369,7 @@
     "android.content.pm.PackageManager",
     "android.graphics.drawable.ColorDrawable",
     "android.graphics.drawable.Drawable",
+    "android.os.Bundle",
     "android.os.Process",
     "android.os.UserHandle",
     "android.provider.Settings",

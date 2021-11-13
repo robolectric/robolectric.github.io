@@ -1684,7 +1684,6 @@
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
     "org.robolectric.RuntimeEnvironment.castNativePtr",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "org.robolectric.util.reflector.Reflector.reflector",
@@ -1753,7 +1752,10 @@
     "org.robolectric.shadows.ShadowAssetManager.Picker",
     "org.robolectric.util.Logger",
     "org.robolectric.util.TempDirectory",
-    "org.robolectric.shadows.ShadowLegacyAssetManager.NativeTheme"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowLegacyAssetManager.NativeTheme",
+    "org.robolectric.shadows.ShadowLegacyAssetManager.AssetManagerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowLegacyAssetManager"
 }

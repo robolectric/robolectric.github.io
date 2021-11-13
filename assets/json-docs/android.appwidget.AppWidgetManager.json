@@ -123,6 +123,19 @@
       "name": "bindAppWidgetIdIfAllowed(int,android.content.ComponentName,android.os.Bundle)",
       "documentation": "Create an internal presentation of the widget locally and store the options {@link Bundle} with\nit. This implementation doesn\u0027t trigger {@code AppWidgetProvider.onUpdate}\n"
     },
+    "canReapplyRemoteViews(org.robolectric.shadows.ShadowAppWidgetManager.WidgetInfo,android.widget.RemoteViews)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "widgetInfo",
+        "views"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "canReapplyRemoteViews(org.robolectric.shadows.ShadowAppWidgetManager.WidgetInfo,android.widget.RemoteViews)"
+    },
     "createWidget(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -136,18 +149,6 @@
       "exceptions": [],
       "name": "createWidget(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int)",
       "documentation": "Creates a widget by inflating its layout.\n\n@param appWidgetProviderClass the app widget provider class\n@param widgetLayoutId id of the layout to inflate\n@return the ID of the new widget\n"
-    },
-    "createWidgetView(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "widgetLayoutId"
-      ],
-      "returnType": "android.view.View",
-      "exceptions": [],
-      "name": "createWidgetView(int)"
     },
     "createWidgets(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int,int)": {
       "isImplementation": false,
@@ -262,6 +263,18 @@
       "minSdk": 21,
       "name": "getInstalledProvidersForProfile(android.os.UserHandle)"
     },
+    "getRemoteViewsToApply(android.widget.RemoteViews)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "views"
+      ],
+      "returnType": "android.widget.RemoteViews",
+      "exceptions": [],
+      "name": "getRemoteViewsToApply(android.widget.RemoteViews)"
+    },
     "getViewFor(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -274,6 +287,19 @@
       "exceptions": [],
       "name": "getViewFor(int)",
       "documentation": "@param widgetId id of the desired widget\n@return the widget associated with {@code widgetId}\n"
+    },
+    "hasLandscapeAndPortraitLayouts(android.widget.RemoteViews)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "views"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasLandscapeAndPortraitLayouts(android.widget.RemoteViews)"
     },
     "isRequestPinAppWidgetSupported()": {
       "isImplementation": true,
@@ -312,6 +338,18 @@
       "exceptions": [],
       "name": "reconstructWidgetViewAsIfPhoneWasRotated(int)",
       "documentation": "Triggers a reapplication of the most recent set of actions against the widget, which is what\nhappens when the phone is rotated. Does not attempt to simulate a change in screen geometry.\n\n@param appWidgetId the ID of the widget to be affected\n"
+    },
+    "removeInstalledProvider(android.appwidget.AppWidgetProviderInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appWidgetProviderInfo"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "removeInstalledProvider(android.appwidget.AppWidgetProviderInfo)"
     },
     "requestPinAppWidget(android.content.ComponentName,android.os.Bundle,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -426,6 +464,7 @@
     "android.os.Build.VERSION_CODES.L",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.Nullable",
     "android.app.PendingIntent",
     "android.app.PendingIntent.CanceledException",
@@ -435,10 +474,11 @@
     "android.content.ComponentName",
     "android.content.Context",
     "android.content.Intent",
+    "android.os.Build.VERSION",
     "android.os.Bundle",
     "android.os.UserHandle",
-    "android.view.LayoutInflater",
     "android.view.View",
+    "android.widget.FrameLayout",
     "android.widget.RemoteViews",
     "com.android.internal.appwidget.IAppWidgetService",
     "com.google.common.collect.HashMultimap",
@@ -449,13 +489,15 @@
     "java.util.List",
     "java.util.Map",
     "java.util.stream.Collectors",
-    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.shadows.ShadowAppWidgetManager.WidgetInfo"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowAppWidgetManager.WidgetInfo",
+    "org.robolectric.shadows.ShadowAppWidgetManager.RemoteViewsReflector"
   ],
   "name": "org.robolectric.shadows.ShadowAppWidgetManager"
 }

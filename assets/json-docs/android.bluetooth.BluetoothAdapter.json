@@ -168,7 +168,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "getProfileProxy(android.content.Context,android.bluetooth.BluetoothProfile.ServiceListener,int)",
-      "documentation": "Overrides behavior of {@link getProfileProxy} if {@link ShadowBluetoothAdapter#setProfileProxy}\nhas been previously called.\n\nIf active (non-null) proxy has been set by {@link setProfileProxy} for the given {@code\nprofile}, {@link getProfileProxy} will immediately call {@code onServiceConnected} of the given\nBluetoothProfile.ServiceListener {@code listener}.\n\n@return \u0027true\u0027 if a proxy object has been set by {@link setProfileProxy} for the given\n    BluetoothProfile {@code profile}\n"
+      "documentation": "Overrides behavior of {@link getProfileProxy} if {@link ShadowBluetoothAdapter#setProfileProxy}\nhas been previously called.\n\n\u003cp\u003eIf active (non-null) proxy has been set by {@link setProfileProxy} for the given {@code\nprofile}, {@link getProfileProxy} will immediately call {@code onServiceConnected} of the given\nBluetoothProfile.ServiceListener {@code listener}.\n\n@return \u0027true\u0027 if a proxy object has been set by {@link setProfileProxy} for the given\n    BluetoothProfile {@code profile}\n"
     },
     "getScanMode()": {
       "isImplementation": true,
@@ -584,7 +584,6 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothAdapter.LeScanCallback",
@@ -613,6 +612,7 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.Static",
     "org.robolectric.shadows.ShadowBluetoothAdapter.BluetoothAdapterReflector"

@@ -1,13 +1,20 @@
 {
   "methods": {},
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ContentResolver",
     "android.graphics.Bitmap",
+    "android.graphics.BitmapFactory.Options",
     "android.net.Uri",
     "android.provider.MediaStore",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadows.ShadowMediaStore.ShadowImages.ShadowMedia"
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowMediaStore.ShadowImages.ShadowMedia",
+    "org.robolectric.shadows.ShadowMediaStore.ShadowImages.ShadowThumbnails"
   ],
-  "name": "org.robolectric.shadows.ShadowMediaStore.ShadowImages"
+  "name": "org.robolectric.shadows.ShadowMediaStore.ShadowImages",
+  "documentation": "Shadow for {@link MediaStore.Images}. "
 }

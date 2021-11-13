@@ -78,7 +78,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.view.Choreographer",
     "android.view.Choreographer.FrameCallback",
     "android.view.RenderNodeAnimator",
@@ -87,7 +87,10 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowRenderNodeAnimator.RenderNodeAnimatorReflector"
   ],
   "name": "org.robolectric.shadows.ShadowRenderNodeAnimator"
 }

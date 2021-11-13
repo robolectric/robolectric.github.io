@@ -13,7 +13,7 @@
       "exceptions": [],
       "name": "__constructor__(android.content.Context,android.os.Handler)"
     },
-    "addApplicationExitInfo(android.app.ApplicationExitInfo)": {
+    "addApplicationExitInfo(java.lang.Object)": {
       "isImplementation": false,
       "modifiers": [
         "public"
@@ -23,7 +23,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addApplicationExitInfo(android.app.ApplicationExitInfo)",
+      "name": "addApplicationExitInfo(java.lang.Object)",
       "documentation": "Adds given {@link ApplicationExitInfo}, see {@link ApplicationExitInfoBuilder} "
     },
     "addApplicationExitInfo(java.lang.String,int,int,int)": {
@@ -41,6 +41,20 @@
       "exceptions": [],
       "name": "addApplicationExitInfo(java.lang.String,int,int,int)",
       "documentation": "Adds an {@link ApplicationExitInfo} with the given information\n\n@deprecated Prefer using overload with {@link ApplicationExitInfoBuilder}\n"
+    },
+    "addOnUidImportanceListener(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener",
+        "importanceCutpoint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "addOnUidImportanceListener(java.lang.Object,java.lang.Object)"
     },
     "clearApplicationUserData(java.lang.String,android.content.pm.IPackageDataObserver)": {
       "isImplementation": true,
@@ -176,6 +190,19 @@
       "name": "getMyMemoryState(android.app.ActivityManager.RunningAppProcessInfo)",
       "documentation": "Returns information seeded by {@link #setProcesses}. "
     },
+    "getPackageImportance(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getPackageImportance(java.lang.String)"
+    },
     "getRunningAppProcesses()": {
       "isImplementation": true,
       "modifiers": [
@@ -221,6 +248,19 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "getService()"
+    },
+    "getUidImportance(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uid"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getUidImportance(int)"
     },
     "isApplicationUserDataCleared()": {
       "isImplementation": false,
@@ -289,6 +329,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "killBackgroundProcesses(java.lang.String)"
+    },
+    "removeOnUidImportanceListener(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "removeOnUidImportanceListener(java.lang.Object)"
     },
     "reset()": {
       "isImplementation": false,
@@ -431,6 +484,19 @@
       "name": "setTasks(java.util.List\u003candroid.app.ActivityManager.RunningTaskInfo\u003e)",
       "documentation": "@param tasks List of running tasks. "
     },
+    "setUidImportance(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uid",
+        "importance"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUidImportance(int,int)"
+    },
     "switchUser(android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -459,14 +525,16 @@
     }
   },
   "imports": [
+    "android.app.ActivityManager.RunningAppProcessInfo.IMPORTANCE_GONE",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.R",
     "java.util.stream.Collectors.toCollection",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.RequiresPermission",
     "android.app.ActivityManager",
     "android.app.ApplicationExitInfo",
@@ -475,10 +543,15 @@
     "android.content.pm.ConfigurationInfo",
     "android.content.pm.IPackageDataObserver",
     "android.content.pm.PackageManager",
+    "android.content.pm.PackageManager.NameNotFoundException",
     "android.os.Build.VERSION_CODES",
     "android.os.Handler",
     "android.os.Process",
     "android.os.UserHandle",
+    "android.util.ArrayMap",
+    "android.util.SparseIntArray",
+    "androidx.annotation.RequiresApi",
+    "com.google.common.base.Preconditions",
     "java.util.ArrayDeque",
     "java.util.ArrayList",
     "java.util.Deque",
@@ -493,7 +566,11 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "org.robolectric.shadows.ShadowActivityManager.ApplicationExitInfoBuilder"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowActivityManager.ApplicationExitInfoBuilder",
+    "org.robolectric.shadows.ShadowActivityManager.ActivityManagerReflector",
+    "org.robolectric.shadows.ShadowActivityManager.ImportanceListener"
   ],
   "name": "org.robolectric.shadows.ShadowActivityManager",
   "documentation": "Shadow for {@link android.app.ActivityManager} "

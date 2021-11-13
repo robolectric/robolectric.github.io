@@ -309,6 +309,21 @@
       "name": "setMaxShortcutCountPerActivity(int)",
       "documentation": "Sets the value returned by {@link #getMaxShortcutCountPerActivity()} . "
     },
+    "updateShortcutVisibility(java.lang.String,byte[],boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "certificate",
+        "visible"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "updateShortcutVisibility(java.lang.String,byte[],boolean)",
+      "documentation": "No-op on Robolectric. The real implementation calls out to a service, which will NPE on\nRobolectric.\n"
+    },
     "updateShortcuts(java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)": {
       "isImplementation": true,
       "modifiers": [

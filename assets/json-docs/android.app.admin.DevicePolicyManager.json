@@ -391,6 +391,28 @@
       "exceptions": [],
       "name": "getMaximumTimeToLock(android.content.ComponentName)"
     },
+    "getNearbyAppStreamingPolicy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getNearbyAppStreamingPolicy()"
+    },
+    "getNearbyNotificationStreamingPolicy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getNearbyNotificationStreamingPolicy()"
+    },
     "getOrganizationColor(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -1243,6 +1265,32 @@
       "exceptions": [],
       "name": "setMaximumTimeToLock(android.content.ComponentName,long)"
     },
+    "setNearbyAppStreamingPolicy(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "policy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "setNearbyAppStreamingPolicy(int)"
+    },
+    "setNearbyNotificationStreamingPolicy(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "policy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "setNearbyNotificationStreamingPolicy(int)"
+    },
     "setOrganizationColor(android.content.ComponentName,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -1702,6 +1750,7 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
@@ -1714,6 +1763,7 @@
     "android.app.KeyguardManager",
     "android.app.admin.DeviceAdminReceiver",
     "android.app.admin.DevicePolicyManager",
+    "android.app.admin.DevicePolicyManager.NearbyStreamingPolicy",
     "android.app.admin.DevicePolicyManager.PasswordComplexity",
     "android.app.admin.IDevicePolicyManager",
     "android.app.admin.SystemUpdatePolicy",

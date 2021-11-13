@@ -38,10 +38,13 @@
     }
   },
   "imports": [
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.net.wifi.p2p.WifiP2pGroup",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowWifiP2pGroup.WifiP2pGroupReflector"
   ],
   "name": "org.robolectric.shadows.ShadowWifiP2pGroup"
 }

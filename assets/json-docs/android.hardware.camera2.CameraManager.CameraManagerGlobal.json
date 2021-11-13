@@ -35,6 +35,7 @@
     "java.util.WeakHashMap",
     "java.util.concurrent.Executor",
     "javax.annotation.Nullable",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

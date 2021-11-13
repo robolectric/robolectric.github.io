@@ -149,6 +149,18 @@
       "exceptions": [],
       "name": "setMuted(boolean)"
     },
+    "setSupportedRouteMask(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "mask"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupportedRouteMask(int)"
+    },
     "updateCall(android.telecom.ParcelableCall)": {
       "isImplementation": false,
       "modifiers": [

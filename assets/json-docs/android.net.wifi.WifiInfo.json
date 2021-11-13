@@ -135,9 +135,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
-    "android.os.Build.VERSION_CODES.KITKAT",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.net.wifi.SupplicantState",
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiSsid",
@@ -146,7 +144,10 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.WithType",
+    "org.robolectric.shadows.ShadowWifiInfo.WifiInfoReflector"
   ],
   "name": "org.robolectric.shadows.ShadowWifiInfo"
 }

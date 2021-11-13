@@ -24,6 +24,17 @@
       "exceptions": [],
       "name": "__constructor__(long)"
     },
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    },
     "buildSystemFallback(java.lang.String,java.lang.String,android.util.ArrayMap\u003cjava.lang.String,android.graphics.Typeface\u003e,android.util.ArrayMap\u003cjava.lang.String,android.graphics.FontFamily[]\u003e)": {
       "isImplementation": true,
       "modifiers": [
@@ -303,7 +314,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
-      "maxSdk": 26,
+      "maxSdk": 27,
       "name": "init()",
       "documentation": "Avoid spurious error message about /system/etc/fonts.xml "
     },
@@ -341,6 +352,38 @@
       "maxSdk": 30,
       "name": "nativeCreateFromArray(long[],int,int)"
     },
+    "nativeCreateFromArray(long[],long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "familyArray",
+        "fallbackTypeface",
+        "weight",
+        "italic"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nativeCreateFromArray(long[],long,int,int)"
+    },
+    "nativeForceSetStaticFinalField(java.lang.String,android.graphics.Typeface)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fieldname",
+        "typeface"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nativeForceSetStaticFinalField(java.lang.String,android.graphics.Typeface)"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -360,14 +403,15 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf",
     "android.annotation.SuppressLint",
     "android.content.res.AssetManager",
     "android.graphics.FontFamily",
     "android.graphics.Typeface",
-    "android.os.Build",
-    "android.os.Build.VERSION_CODES",
     "android.util.ArrayMap",
     "java.io.File",
     "java.io.IOException",
@@ -379,6 +423,7 @@
     "java.util.Map",
     "java.util.Objects",
     "java.util.concurrent.atomic.AtomicLong",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

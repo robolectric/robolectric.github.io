@@ -37,28 +37,19 @@
       "exceptions": [],
       "name": "openDrawer(android.view.View,boolean)",
       "documentation": "Drawer animations are disabled in unit tests. "
-    },
-    "setDrawerListener(android.support.v4.widget.DrawerLayout.DrawerListener)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "drawerListener"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setDrawerListener(android.support.v4.widget.DrawerLayout.DrawerListener)"
     }
   },
   "imports": [
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.view.View",
     "android.support.v4.widget.DrawerLayout",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadows.ShadowViewGroup"
+    "org.robolectric.shadows.ShadowViewGroup",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.support.v4.ShadowDrawerLayout.DrawerLayoutReflector"
   ],
   "name": "org.robolectric.shadows.support.v4.ShadowDrawerLayout"
 }

@@ -495,6 +495,21 @@
       "name": "addServiceIfNotPresent(android.content.ComponentName)",
       "documentation": "Makes sure that given service exists.\n\nIf the service doesn\u0027t exist yet, it will be created with {@code applicationInfo} set to an\nexisting application, or if it doesn\u0027t exist, a new package will be created.\n\n@return existing or newly created service info.\n"
     },
+    "addStringResource(java.lang.String,int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName",
+        "resId",
+        "text"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addStringResource(java.lang.String,int,java.lang.String)",
+      "documentation": "Adds a String resource with {@code resId} corresponding to {@code packageName}. This is\nretrieved in shadow implementation of {@link PackageManager#getText(String, int,\nApplicationInfo)}.\n"
+    },
     "addSystemAvailableFeature(android.content.pm.FeatureInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -945,7 +960,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getPersistentPreferredActivities(java.util.List\u003candroid.content.IntentFilter\u003e,java.util.List\u003candroid.content.ComponentName\u003e,java.lang.String)",
-      "documentation": "Method to retrieve persistent preferred activities as set by {@link\nandroid.app.admin.DevicePolicyManager#addPersistentPreferredActivity}.\n\nWorks the same way as analogous {@link PackageManager#getPreferredActivities} for regular\npreferred activities.\n"
+      "documentation": "Method to retrieve persistent preferred activities as set by {@link\nandroid.app.admin.DevicePolicyManager#addPersistentPreferredActivity}.\n\n\u003cp\u003eWorks the same way as analogous {@link PackageManager#getPreferredActivities} for regular\npreferred activities.\n"
     },
     "getPreferredActivitiesInternal(java.util.List\u003candroid.content.IntentFilter\u003e,java.util.List\u003candroid.content.ComponentName\u003e,java.lang.String,java.util.SortedMap\u003candroid.content.ComponentName,java.util.List\u003candroid.content.IntentFilter\u003e\u003e)": {
       "isImplementation": false,
@@ -1182,6 +1197,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setApplicationIcon(java.lang.String,android.graphics.drawable.Drawable)"
+    },
+    "setAutoRevokeWhitelisted(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "whitelisted"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAutoRevokeWhitelisted(boolean)",
+      "documentation": "Set value to be returned by {@link PackageManager#isAutoRevokeWhitelisted}. "
     },
     "setCanRequestPackageInstalls(boolean)": {
       "isImplementation": false,
@@ -1431,6 +1459,7 @@
     "java.util.SortedMap",
     "java.util.TreeMap",
     "java.util.concurrent.ConcurrentHashMap",
+    "java.util.concurrent.CopyOnWriteArraySet",
     "java.util.function.BiConsumer",
     "javax.annotation.Nullable",
     "javax.annotation.concurrent.GuardedBy",
@@ -1439,12 +1468,14 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowPackageParser._PackageParser_",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowPackageManager.PackageSetting",
     "org.robolectric.shadows.ShadowPackageManager.IntentComparator",
     "org.robolectric.shadows.ShadowPackageManager.ResolveInfoComparator",
-    "org.robolectric.shadows.ShadowPackageManager.ComponentState"
+    "org.robolectric.shadows.ShadowPackageManager.ComponentState",
+    "org.robolectric.shadows.ShadowPackageManager.PackageManagerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowPackageManager"
 }

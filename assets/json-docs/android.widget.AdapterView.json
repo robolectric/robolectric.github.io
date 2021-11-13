@@ -94,7 +94,7 @@
     }
   },
   "imports": [
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.view.View",
     "android.widget.Adapter",
     "android.widget.AdapterView",
@@ -103,7 +103,9 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowAdapterView.AdapterViewReflector"
   ],
   "name": "org.robolectric.shadows.ShadowAdapterView"
 }

@@ -1,0 +1,240 @@
+{
+  "methods": {
+    "addTrack(org.robolectric.shadows.util.DataSource,android.media.MediaFormat,byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "dataSource",
+        "format",
+        "sampleData"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addTrack(org.robolectric.shadows.util.DataSource,android.media.MediaFormat,byte[])",
+      "documentation": "Adds a track of data to an associated {@link org.robolectric.shadows.util.DataSource}.\n\n@param format the format which will be returned by {@link MediaExtractor#getTrackFormat(int)}\n@param sampleData the data which will be iterated upon and returned by {@link\n    MediaExtractor#readSampleData(ByteBuffer, int)}.\n"
+    },
+    "advance()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "advance()"
+    },
+    "getSampleTrackIndex()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getSampleTrackIndex()"
+    },
+    "getTrackCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTrackCount()"
+    },
+    "getTrackFormat(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "android.media.MediaFormat",
+      "exceptions": [],
+      "name": "getTrackFormat(int)"
+    },
+    "readSampleData(java.nio.ByteBuffer,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "byteBuf",
+        "offset"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "readSampleData(java.nio.ByteBuffer,int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "selectTrack(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "selectTrack(int)"
+    },
+    "setDataSource(android.content.Context,android.net.Uri,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "uri",
+        "headers"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDataSource(android.content.Context,android.net.Uri,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)"
+    },
+    "setDataSource(android.content.res.AssetFileDescriptor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "assetFileDescriptor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setDataSource(android.content.res.AssetFileDescriptor)"
+    },
+    "setDataSource(android.media.MediaDataSource)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "mediaDataSource"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setDataSource(android.media.MediaDataSource)"
+    },
+    "setDataSource(java.io.FileDescriptor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "fileDescriptor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDataSource(java.io.FileDescriptor)"
+    },
+    "setDataSource(java.io.FileDescriptor,long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "fileDescriptor",
+        "offset",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDataSource(java.io.FileDescriptor,long,long)"
+    },
+    "setDataSource(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDataSource(java.lang.String)"
+    },
+    "setDataSource(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "path",
+        "headers"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDataSource(java.lang.String,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)"
+    },
+    "setDataSource(org.robolectric.shadows.util.DataSource)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "dataSource"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDataSource(org.robolectric.shadows.util.DataSource)"
+    },
+    "unselectTrack(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "index"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unselectTrack(int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "java.lang.Math.min",
+    "org.robolectric.shadows.util.DataSource.toDataSource",
+    "android.content.Context",
+    "android.content.res.AssetFileDescriptor",
+    "android.media.MediaDataSource",
+    "android.media.MediaExtractor",
+    "android.media.MediaFormat",
+    "android.net.Uri",
+    "java.io.FileDescriptor",
+    "java.nio.ByteBuffer",
+    "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.HashMap",
+    "java.util.List",
+    "java.util.Map",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadows.util.DataSource",
+    "org.robolectric.shadows.ShadowMediaExtractor.TrackInfo"
+  ],
+  "name": "org.robolectric.shadows.ShadowMediaExtractor",
+  "documentation": "A shadow for the MediaExtractor class.\n\n\u003cp\u003eReturns data previously injected by {@link #addTrack(DataSource, MediaFormat, byte[])}.\n\n\u003cp\u003eNote several limitations, due to not using actual media codecs for decoding:\n\n\u003cul\u003e\n  \u003cli\u003eOnly one track may be selected at a time; multi-track selection is not supported.\n  \u003cli\u003e{@link #advance()} will advance by the size of the last read (i.e. the return value of the\n      last call to {@link #readSampleData(ByteBuffer, int)}).\n  \u003cli\u003e{@link MediaExtractor#getSampleTime()} and {@link MediaExtractor#getSampleSize()} are\n      unimplemented.\n  \u003cli\u003e{@link MediaExtractor#seekTo()} is unimplemented.\n\u003c/ul\u003e\n"
+}

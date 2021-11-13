@@ -133,6 +133,8 @@
     }
   },
   "imports": [
+    "android.content.Intent.ACTION_SCREEN_OFF",
+    "android.content.Intent.ACTION_SCREEN_ON",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
@@ -140,15 +142,23 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "com.google.common.base.Preconditions.checkState",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest.permission",
+    "android.annotation.NonNull",
+    "android.annotation.Nullable",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
+    "android.content.Context",
+    "android.content.Intent",
     "android.os.Binder",
+    "android.os.Build.VERSION_CODES",
     "android.os.PowerManager",
     "android.os.PowerManager.WakeLock",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
+    "java.time.Duration",
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
@@ -160,8 +170,11 @@
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType"
   ],
   "name": "org.robolectric.shadows.ShadowPowerManager.ShadowWakeLock"
 }

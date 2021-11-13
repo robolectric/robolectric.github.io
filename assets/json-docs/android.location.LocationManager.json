@@ -351,7 +351,7 @@
       ],
       "name": "loadLocationProviderConstructor()"
     },
-    "registerAntennaInfoListener(java.util.concurrent.Executor,android.location.GnssAntennaInfo.Listener)": {
+    "registerAntennaInfoListener(java.lang.Object,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
         "protected"
@@ -363,7 +363,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 30,
-      "name": "registerAntennaInfoListener(java.util.concurrent.Executor,android.location.GnssAntennaInfo.Listener)"
+      "name": "registerAntennaInfoListener(java.lang.Object,java.lang.Object)"
     },
     "registerGnssMeasurementsCallback(android.location.GnssMeasurementsEvent.Callback,android.os.Handler)": {
       "isImplementation": true,
@@ -741,7 +741,7 @@
       "exceptions": [],
       "name": "reset()"
     },
-    "sendGnssAntennaInfo(java.util.List\u003candroid.location.GnssAntennaInfo\u003e)": {
+    "sendGnssAntennaInfo(java.util.List\u003c?\u003e)": {
       "isImplementation": false,
       "modifiers": [
         "public"
@@ -751,8 +751,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "sendGnssAntennaInfo(java.util.List\u003candroid.location.GnssAntennaInfo\u003e)",
-      "documentation": "Sends a GNSS measurement event to all registered {@link GnssMeasurementsEvent.Callback}s. "
+      "name": "sendGnssAntennaInfo(java.util.List\u003c?\u003e)",
+      "documentation": "Sends a GNSS antenna info to all registered {@link GnssAntennaInfo.Listener}s. "
     },
     "sendGnssMeasurementsEvent(android.location.GnssMeasurementsEvent)": {
       "isImplementation": false,
@@ -901,7 +901,7 @@
       "name": "simulateLocation(android.location.Location)",
       "documentation": "Delivers a new location to the appropriate listeners and updates state accordingly. Delivery\nwill ignore the enabled/disabled state of providers, unlike location on a real device.\n"
     },
-    "unregisterAntennaInfoListener(android.location.GnssAntennaInfo.Listener)": {
+    "unregisterAntennaInfoListener(java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
         "protected"
@@ -912,7 +912,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 30,
-      "name": "unregisterAntennaInfoListener(android.location.GnssAntennaInfo.Listener)"
+      "name": "unregisterAntennaInfoListener(java.lang.Object)"
     },
     "unregisterGnssMeasurementsCallback(android.location.GnssMeasurementsEvent.Callback)": {
       "isImplementation": true,
@@ -983,6 +983,7 @@
     "android.text.TextUtils",
     "androidx.annotation.GuardedBy",
     "androidx.annotation.Nullable",
+    "com.google.common.base.Preconditions",
     "java.lang.reflect.Constructor",
     "java.util.ArrayList",
     "java.util.Arrays",
@@ -1003,6 +1004,7 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadows.ShadowSettings.ShadowSecure",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowLocationManager.ProviderProperties",
     "org.robolectric.shadows.ShadowLocationManager.ProviderEntry",
     "org.robolectric.shadows.ShadowLocationManager.LocationRequest",

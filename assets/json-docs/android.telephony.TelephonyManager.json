@@ -1,5 +1,23 @@
 {
   "methods": {
+    "bootstrapAuthenticationRequest(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appType",
+        "nafId",
+        "securityProtocol",
+        "forceBootStrapping",
+        "e",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "bootstrapAuthenticationRequest(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
     "checkReadPhoneStatePermission()": {
       "isImplementation": false,
       "modifiers": [
@@ -74,6 +92,27 @@
       "exceptions": [],
       "minSdk": 17,
       "name": "getAllCellInfo()"
+    },
+    "getBootstrapAuthenticationCallback()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getBootstrapAuthenticationCallback()"
+    },
+    "getCallComposerStatus()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getCallComposerStatus()"
     },
     "getCallState()": {
       "isImplementation": true,
@@ -621,7 +660,7 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "isDataEnabled()",
-      "documentation": "Implementation for {@link TelephonyManager#isDataEnabled}.\n@return False by default, unless set with {@link TelephonyManager#setDataEnabled}.\n"
+      "documentation": "Implementation for {@link TelephonyManager#isDataEnabled}.\n\n@return False by default, unless set with {@link TelephonyManager#setDataEnabled}.\n"
     },
     "isEmergencyNumber(java.lang.String)": {
       "isImplementation": true,
@@ -635,7 +674,7 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "isEmergencyNumber(java.lang.String)",
-      "documentation": "Cribbed from {@link android.telephony.PhoneNumberUtils#isEmergencyNumberInternal}.\n\nTODO(b/122324733) need better implementation\n"
+      "documentation": "Cribbed from {@link android.telephony.PhoneNumberUtils#isEmergencyNumberInternal}.\n\n\u003cp\u003eTODO(b/122324733) need better implementation\n"
     },
     "isHearingAidCompatibilitySupported()": {
       "isImplementation": true,
@@ -750,6 +789,17 @@
       "name": "requestCellInfoUpdate(java.lang.Object,java.lang.Object)",
       "documentation": "Returns the value set by {@link #setCallbackCellInfos}, defaulting to calling the real {@link\nTelephonyManager#NETWORK_TYPE_UNKNOWN} if it was never called.\n"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "resetSimCountryIsos()": {
       "isImplementation": false,
       "modifiers": [
@@ -798,6 +848,19 @@
       "exceptions": [],
       "name": "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)"
     },
+    "setCallComposerStatus(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "callComposerStatus"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCallComposerStatus(int)"
+    },
     "setCallState(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -836,7 +899,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCallbackCellInfos(java.util.List\u003candroid.telephony.CellInfo\u003e)",
-      "documentation": "Sets the value to be returned by calls to {@link requestCellInfoUpdate}. Note that it does not\nset the value to be returned by calls to {@link getAllCellInfo}; for that, see\n{@link setAllCellInfo}.\n"
+      "documentation": "Sets the value to be returned by calls to {@link requestCellInfoUpdate}. Note that it does not\nset the value to be returned by calls to {@link getAllCellInfo}; for that, see {@link\nsetAllCellInfo}.\n"
     },
     "setCarrierConfig(android.os.PersistableBundle)": {
       "isImplementation": false,
@@ -1528,6 +1591,7 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "android.telephony.PhoneStateListener.LISTEN_CALL_STATE",
     "android.telephony.PhoneStateListener.LISTEN_CELL_INFO",
     "android.telephony.PhoneStateListener.LISTEN_CELL_LOCATION",
@@ -1573,6 +1637,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowTelephonyManager"

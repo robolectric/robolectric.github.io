@@ -37,13 +37,15 @@
     }
   },
   "imports": [
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.widget.AbsSpinner",
     "android.widget.SpinnerAdapter",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowAbsSpinner.AbsSpinnerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowAbsSpinner"
 }

@@ -24,12 +24,14 @@
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.preference.Preference",
     "android.preference.PreferenceManager",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowPreference.PreferenceReflector"
   ],
   "name": "org.robolectric.shadows.ShadowPreference"
 }

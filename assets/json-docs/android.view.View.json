@@ -130,16 +130,6 @@
       "exceptions": [],
       "name": "didRequestLayout()"
     },
-    "directly()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [],
-      "returnType": "android.view.View",
-      "exceptions": [],
-      "name": "directly()"
-    },
     "draw(android.graphics.Canvas)": {
       "isImplementation": true,
       "modifiers": [
@@ -869,7 +859,6 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.N",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
     "org.robolectric.util.ReflectionHelpers.getField",
@@ -912,6 +901,7 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.TimeUtils",
     "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowView.AnimationRunner",
     "org.robolectric.shadows.ShadowView._View_",

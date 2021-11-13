@@ -12,7 +12,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addActivity(android.os.UserHandle,android.content.pm.LauncherActivityInfo)",
-      "documentation": "Add an {@link LauncherActivityInfo} to be got by {@link #getActivityList(String, UserHandle)}.\n\n@param userHandle the user handle to be added.\n@param activityInfo the {@link LauncherActivityInfo} to be added.\n"
+      "documentation": "Adds a {@link LauncherActivityInfo} to be retrieved by {@link #getActivityList(String,\nUserHandle)}.\n\n@param userHandle the user handle to be added.\n@param activityInfo the {@link LauncherActivityInfo} to be added.\n"
     },
     "addDynamicShortcut(android.content.pm.ShortcutInfo)": {
       "isImplementation": false,
@@ -40,6 +40,20 @@
       "exceptions": [],
       "name": "addEnabledPackage(android.os.UserHandle,java.lang.String)",
       "documentation": "Adds an enabled package to be checked by {@link #isPackageEnabled(String, UserHandle)}.\n\n@param userHandle the user handle to be added.\n@param packageName the package name to be added.\n"
+    },
+    "addShortcutConfigActivity(android.os.UserHandle,android.content.pm.LauncherActivityInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "activityInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addShortcutConfigActivity(android.os.UserHandle,android.content.pm.LauncherActivityInfo)",
+      "documentation": "Adds a {@link LauncherActivityInfo} to be retrieved by {@link\n#getShortcutConfigActivityList(String, UserHandle)}.\n\n@param userHandle the user handle to be added.\n@param activityInfo the {@link LauncherActivityInfo} to be added.\n"
     },
     "getActivityList(java.lang.String,android.os.UserHandle)": {
       "isImplementation": true,
@@ -158,6 +172,18 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isPackageEnabled(java.lang.String,android.os.UserHandle)"
+    },
+    "matchesPackage(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "java.util.function.Predicate\u003candroid.content.pm.LauncherActivityInfo\u003e",
+      "exceptions": [],
+      "name": "matchesPackage(java.lang.String)"
     },
     "notifyPackageAdded(java.lang.String)": {
       "isImplementation": false,

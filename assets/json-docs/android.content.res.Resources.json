@@ -227,8 +227,8 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.shadows.ShadowAssetManager.legacyShadowOf",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.res.AssetFileDescriptor",
     "android.content.res.AssetManager",
     "android.content.res.Configuration",
@@ -269,10 +269,12 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowLegacyResourcesImpl.ShadowLegacyThemeImpl",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowResources.ShadowTheme",
     "org.robolectric.shadows.ShadowResources.ShadowLegacyTheme",
-    "org.robolectric.shadows.ShadowResources.ShadowNotFoundException"
+    "org.robolectric.shadows.ShadowResources.ShadowNotFoundException",
+    "org.robolectric.shadows.ShadowResources.ResourcesReflector"
   ],
   "name": "org.robolectric.shadows.ShadowResources"
 }

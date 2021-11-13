@@ -10,28 +10,19 @@
       "exceptions": [],
       "name": "getOnRefreshListener()",
       "documentation": "@return OnRefreshListener that was previously set.\n"
-    },
-    "setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "listener"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener)"
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.support.v4.widget.SwipeRefreshLayout",
     "android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener",
-    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.shadows.ShadowViewGroup"
+    "org.robolectric.shadows.ShadowViewGroup",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.support.v4.ShadowSwipeRefreshLayout.SwipeRefreshLayoutReflector"
   ],
-  "name": "org.robolectric.shadows.support.v4.ShadowSwipeRefreshLayout"
+  "name": "org.robolectric.shadows.support.v4.ShadowSwipeRefreshLayout",
+  "documentation": "Deprecated. Use SwipeRefreshLayout#setRefreshing to trigger a OnRefreshListener.onRefresh call\ninstead.\n"
 }

@@ -1,0 +1,26 @@
+{
+  "methods": {
+    "nGetPackedStyle(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fontPtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetPackedStyle(long)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.S",
+    "android.graphics.fonts.Font",
+    "android.graphics.fonts.FontStyle",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowFont",
+  "documentation": "Shadow for {@link Font} for Android S "
+}

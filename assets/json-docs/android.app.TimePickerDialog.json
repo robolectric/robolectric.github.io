@@ -27,6 +27,16 @@
       "exceptions": [],
       "name": "getHourOfDay()"
     },
+    "getIs24HourView()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getIs24HourView()"
+    },
     "getMinute()": {
       "isImplementation": false,
       "modifiers": [
@@ -39,13 +49,18 @@
     }
   },
   "imports": [
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.TimePickerDialog",
     "android.content.Context",
+    "android.widget.TimePicker",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowTimePickerDialog.TimePickerDialogProvider"
   ],
   "name": "org.robolectric.shadows.ShadowTimePickerDialog"
 }

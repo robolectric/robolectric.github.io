@@ -105,7 +105,25 @@
         "android.hardware.camera2.CameraAccessException"
       ],
       "minSdk": 28,
+      "maxSdk": 30,
       "name": "openCameraDeviceUserAsync(java.lang.String,android.hardware.camera2.CameraDevice.StateCallback,java.util.concurrent.Executor,int)"
+    },
+    "openCameraDeviceUserAsync(java.lang.String,android.hardware.camera2.CameraDevice.StateCallback,java.util.concurrent.Executor,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "cameraId",
+        "callback",
+        "executor",
+        "unusedClientUid",
+        "unusedOomScoreOffset"
+      ],
+      "returnType": "android.hardware.camera2.CameraDevice",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "openCameraDeviceUserAsync(java.lang.String,android.hardware.camera2.CameraDevice.StateCallback,java.util.concurrent.Executor,int,int)"
     },
     "removeCamera(java.lang.String)": {
       "isImplementation": false,
@@ -194,6 +212,7 @@
     "java.util.WeakHashMap",
     "java.util.concurrent.Executor",
     "javax.annotation.Nullable",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

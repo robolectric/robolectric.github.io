@@ -1,0 +1,59 @@
+{
+  "methods": {
+    "nCreateDisplayListCanvas()": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nCreateDisplayListCanvas()"
+    },
+    "nCreateDisplayListCanvas(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "width",
+        "height"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nCreateDisplayListCanvas(int,int)"
+    },
+    "nCreateDisplayListCanvas(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "node",
+        "width",
+        "height"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "maxSdk": 28,
+      "name": "nCreateDisplayListCanvas(long,int,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.R",
+    "org.robolectric.annotation.Config",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowDisplayListCanvas",
+  "documentation": "Shadow for {@link android.view.DisplayListCanvas} from API versions M to R "
+}

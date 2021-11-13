@@ -244,6 +244,16 @@
       "exceptions": [],
       "name": "newInstance(java.lang.String)"
     },
+    "removeBond()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "removeBond()"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -416,7 +426,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
-    "org.robolectric.shadow.api.Shadow.directlyOn",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.bluetooth.BluetoothClass",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothGatt",
@@ -435,7 +445,11 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowBluetoothDevice.BluetoothDeviceReflector"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothDevice"
 }

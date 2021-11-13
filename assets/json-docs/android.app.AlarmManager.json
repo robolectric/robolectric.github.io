@@ -1,5 +1,17 @@
 {
   "methods": {
+    "canScheduleExactAlarms()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "canScheduleExactAlarms()",
+      "documentation": "Returns the schedule exact alarm state set by {@link #setCanScheduleExactAlarms}. "
+    },
     "cancel(android.app.AlarmManager.OnAlarmListener)": {
       "isImplementation": true,
       "modifiers": [
@@ -45,7 +57,7 @@
       "returnType": "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm",
       "exceptions": [],
       "name": "getNextScheduledAlarm()",
-      "documentation": "@return the next scheduled alarm after consuming it\n"
+      "documentation": "@return the next scheduled alarm after consuming it "
     },
     "getScheduledAlarms()": {
       "isImplementation": false,
@@ -56,7 +68,7 @@
       "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm\u003e",
       "exceptions": [],
       "name": "getScheduledAlarms()",
-      "documentation": "@return all scheduled alarms\n"
+      "documentation": "@return all scheduled alarms "
     },
     "internalSet(int,long,android.app.AlarmManager.OnAlarmListener,android.os.Handler)": {
       "isImplementation": false,
@@ -98,7 +110,7 @@
       "returnType": "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm",
       "exceptions": [],
       "name": "peekNextScheduledAlarm()",
-      "documentation": "@return the most recently scheduled alarm without consuming it\n"
+      "documentation": "@return the most recently scheduled alarm without consuming it "
     },
     "reset()": {
       "isImplementation": false,
@@ -170,6 +182,20 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "setAndAllowWhileIdle(int,long,android.app.PendingIntent)"
+    },
+    "setCanScheduleExactAlarms(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "scheduleExactAlarms"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCanScheduleExactAlarms(boolean)",
+      "documentation": "Sets the schedule exact alarm state reported by {@link AlarmManager#canScheduleExactAlarms},\nbut has no effect otherwise.\n"
     },
     "setExact(int,long,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -301,6 +327,8 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.S",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.TargetApi",
     "android.app.AlarmManager",
     "android.app.AlarmManager.AlarmClockInfo",
@@ -317,7 +345,10 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowAlarmManager.ScheduledAlarm",
+    "org.robolectric.shadows.ShadowAlarmManager.AlarmManagerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowAlarmManager"
 }

@@ -72,6 +72,24 @@
       "minSdk": 21,
       "name": "downloadMultimediaMessage(android.content.Context,java.lang.String,android.net.Uri,android.os.Bundle,android.app.PendingIntent)"
     },
+    "downloadMultimediaMessage(android.content.Context,java.lang.String,android.net.Uri,android.os.Bundle,android.app.PendingIntent,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "locationUrl",
+        "contentUri",
+        "configOverrides",
+        "sentIntent",
+        "messageId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "downloadMultimediaMessage(android.content.Context,java.lang.String,android.net.Uri,android.os.Bundle,android.app.PendingIntent,long)"
+    },
     "getDefaultSmsSubscriptionId()": {
       "isImplementation": true,
       "modifiers": [
@@ -197,6 +215,24 @@
       "minSdk": 21,
       "name": "sendMultimediaMessage(android.content.Context,android.net.Uri,java.lang.String,android.os.Bundle,android.app.PendingIntent)"
     },
+    "sendMultimediaMessage(android.content.Context,android.net.Uri,java.lang.String,android.os.Bundle,android.app.PendingIntent,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "contentUri",
+        "locationUrl",
+        "configOverrides",
+        "sentIntent",
+        "messageId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "sendMultimediaMessage(android.content.Context,android.net.Uri,java.lang.String,android.os.Bundle,android.app.PendingIntent,long)"
+    },
     "sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.ArrayList\u003cjava.lang.String\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e,java.util.ArrayList\u003candroid.app.PendingIntent\u003e)": {
       "isImplementation": true,
       "modifiers": [
@@ -311,6 +347,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "android.app.PendingIntent",
     "android.content.Context",
     "android.net.Uri",

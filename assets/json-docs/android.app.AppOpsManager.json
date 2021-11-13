@@ -209,7 +209,7 @@
     "isOpActive(java.lang.String,int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected"
+        "public"
       ],
       "params": [
         "op",
@@ -254,6 +254,22 @@
       "minSdk": 30,
       "name": "noteOp(int,int,java.lang.String,java.lang.String,java.lang.String)"
     },
+    "noteOpInternal(int,int,java.lang.String,java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "op",
+        "uid",
+        "packageName",
+        "attributionTag",
+        "message"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "noteOpInternal(int,int,java.lang.String,java.lang.String,java.lang.String)"
+    },
     "noteOpNoThrow(int,int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -285,6 +301,22 @@
       "exceptions": [],
       "minSdk": 30,
       "name": "noteOpNoThrow(int,int,java.lang.String,java.lang.String,java.lang.String)"
+    },
+    "noteProxyOpNoThrow(int,android.content.AttributionSource,java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "attributionSource",
+        "message",
+        "ignoredSkipProxyOperation"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "noteProxyOpNoThrow(int,android.content.AttributionSource,java.lang.String,boolean)"
     },
     "noteProxyOpNoThrow(int,java.lang.String)": {
       "isImplementation": true,
@@ -332,6 +364,7 @@
       "returnType": "int",
       "exceptions": [],
       "minSdk": 30,
+      "maxSdk": 30,
       "name": "noteProxyOpNoThrow(int,java.lang.String,int,java.lang.String,java.lang.String)"
     },
     "reset()": {
@@ -464,6 +497,22 @@
       "minSdk": 19,
       "name": "startWatchingMode(int,java.lang.String,android.app.AppOpsManager.OnOpChangedListener)"
     },
+    "startWatchingMode(int,java.lang.String,int,android.app.AppOpsManager.OnOpChangedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "packageName",
+        "flags",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "startWatchingMode(int,java.lang.String,int,android.app.AppOpsManager.OnOpChangedListener)"
+    },
     "stopWatchingMode(android.app.AppOpsManager.OnOpChangedListener)": {
       "isImplementation": true,
       "modifiers": [
@@ -556,17 +605,18 @@
     "android.app.AppOpsManager.OpEntry",
     "android.app.AppOpsManager.OpEventProxyInfo",
     "android.app.AppOpsManager.PackageOps",
+    "android.app.SyncNotedAppOp",
+    "android.content.AttributionSource",
     "android.content.Context",
     "android.content.pm.PackageManager.NameNotFoundException",
     "android.media.AudioAttributes.AttributeUsage",
     "android.os.Binder",
     "android.os.Build",
+    "android.util.ArrayMap",
     "android.util.LongSparseArray",
     "android.util.LongSparseLongArray",
     "com.android.internal.app.IAppOpsService",
     "com.google.auto.value.AutoValue",
-    "com.google.common.collect.BiMap",
-    "com.google.common.collect.HashBiMap",
     "com.google.common.collect.HashMultimap",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Multimap",

@@ -1,5 +1,17 @@
 {
   "methods": {
+    "getForegroundServiceType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getForegroundServiceType()"
+    },
     "getLastForegroundNotification()": {
       "isImplementation": false,
       "modifiers": [
@@ -118,6 +130,22 @@
       "exceptions": [],
       "name": "startForeground(int,android.app.Notification)"
     },
+    "startForeground(int,android.app.Notification,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "id",
+        "notification",
+        "foregroundServiceType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "startForeground(int,android.app.Notification,int)"
+    },
     "stopForeground(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -180,10 +208,12 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.Q",
     "android.app.Notification",
     "android.app.NotificationManager",
     "android.app.Service",
     "android.content.Context",
+    "android.content.pm.ServiceInfo.ForegroundServiceType",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
