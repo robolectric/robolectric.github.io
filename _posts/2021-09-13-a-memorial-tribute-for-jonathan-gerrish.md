@@ -20,11 +20,8 @@ was possible. This allowed the same test to either be run in Robolectric or any
 physical or virtual Android device.
 
 More importantly, Jonathan had a great spirit and was beloved by friends and
-family. He was friendly, easy-going, and respectful. He had a great love of the
-outdoors and settled near Mariposa, CA to be closer to nature. While the
-circumstances of Jonathan’s passing are still under investigation, we would
-like to urge people to be extra cautious when spending time outdoors,
-especially in drought conditions.
+family. He was friendly, easy-going, and respectful. He settled near Mariposa, CA
+to be closer to nature and to enjoy the open space and fresh air.
 
 We miss you dearly Jon. You will always be remembered by the Robolectric
 community.
