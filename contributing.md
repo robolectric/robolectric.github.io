@@ -20,7 +20,7 @@ Set Android environment variables:
 
 [Fork](https://github.com/robolectric/robolectric) and clone the repo:
 
-    git clone git@github.com:username/robolectric.git
+    git clone --recurse-submodules git@github.com:username/robolectric.git
     
 Create a feature branch to make your changes:
 
