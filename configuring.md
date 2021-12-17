@@ -108,11 +108,11 @@ Some additional options can be configured globally by setting these system prope
 * **robolectric.enabledSdks** — Comma-separated list of SDK levels or names (e.g. `19, 21` or `KITKAT, LOLLIPOP`) which are enabled for this process. Only tests targetted at the listed SDKs will be run. By default, all SDKs are enabled.
 * **robolectric.offline** — Set to true to disable runtime fetching of jars.
 * **robolectric.dependency.dir** — When in offline mode, specifies a folder containing runtime dependencies.
-* **robolectric.dependency.repo.id** — Set the ID of the Maven repository to use for the runtime dependencies (default `sonatype`).
-* **robolectric.dependency.repo.url** — Set the URL of the Maven repository to use for the runtime dependencies (default `https://oss.sonatype.org/content/groups/public/`).
+* **robolectric.dependency.repo.id** — Set the ID of the Maven repository to use for the runtime dependencies (default `mavenCentral`).
+* **robolectric.dependency.repo.url** — Set the URL of the Maven repository to use for the runtime dependencies (default `https://repo.maven.apache.org/maven2/`).
 * **robolectric.logging.enabled** — Set to true to enable debug logging.
 
-When using Gradle, you can configure the System Properties for unit tests with the `all` block (see [here](http://tools.android.com/tech-docs/unit-testing-support)). For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Sonatype:
+When using Gradle, you can configure the System Properties for unit tests with the `all` block (see [here](http://tools.android.com/tech-docs/unit-testing-support)). For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Maven Central:
 
 ```groovy
 android {
