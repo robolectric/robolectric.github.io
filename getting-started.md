@@ -44,41 +44,55 @@ public class SandwichTest {
 ```
 
 ## Building with Bazel
+
 Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel integrates with Robolectric through the `android_local_test` rule. The Robolectric Java test code is the same for a Bazel project as a new Gradle project.
 
-Robolectric needs to be added as a dependency to your Bazel project. Add the following to your WORKSPACE file:
-```python
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+Robolectric needs to be added as a dependency to your Bazel project with [`rules_jvm_external`](https://github.com/bazelbuild/rules_jvm_external). Add the following to your WORKSPACE file:
 
+```python
 http_archive(
- name = "robolectric",
- urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.0.1.tar.gz"],
- strip_prefix = "robolectric-bazel-4.0.1",
- sha256 = "dff7a1f8e7bd8dc737f20b6bbfaf78d8b5851debe6a074757f75041029f0c43b",
+    name = "robolectric",
+    urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.7.3.tar.gz"],
+    strip_prefix = "robolectric-bazel-4.7.3",
 )
 load("@robolectric//bazel:robolectric.bzl", "robolectric_repositories")
 robolectric_repositories()
+
+http_archive(
+    name = "rules_jvm_external",
+    strip_prefix = "rules_jvm_external-4.2",
+    sha256 = "cd1a77b7b02e8e008439ca76fd34f5b07aecb8c752961f9640dea15e9e5ba1ca",
+    url = "https://github.com/bazelbuild/rules_jvm_external/archive/4.2.zip",
+)
+load("@rules_jvm_external//:defs.bzl", "maven_install")
+maven_install(
+    artifacts = [
+        "org.robolectric:robolectric:4.7.3",
+    ],
+    repositories = [
+        "https://maven.google.com",
+        "https://repo1.maven.org/maven2",
+    ],
+)
 ```
 
-Add an android_local_test rule to your BUILD file:
+Add an `android_local_test` rule to your BUILD file:
+
 ```python
 android_local_test(
-  name = "MyTest",
-  srcs = ["MyTest.java"],
-  manifest = "TestManifest.xml",
-  deps = [
-    ":sample_test_lib",
-    "@robolectric//bazel:robolectric",
-  ],
-)
-
-android_library(
-    name = "sample_test_lib",
-    srcs = ["Lib.java"],
-    resource_files = glob(["res/**"]),
-    manifest = "AndroidManifest.xml",
+    name = "greeter_activity_test",
+    srcs = ["GreeterTest.java"],
+    manifest = "TestManifest.xml",
+    test_class = "com.example.bazel.GreeterTest",
+    deps = [
+        ":greeter_activity",
+        "@maven//:org_robolectric_robolectric",
+        "@robolectric//bazel:android-all",
+    ],
 )
 ```
+
+[robolectric-bazel](https://github.com/robolectric/robolectric-bazel) repository has latest integration manual for Bazel. If you have any question about Bazel integration, we recommend to check it firstly, and file an issue if it doesn't resolve your problem.
 
 ## Other Environments
 
