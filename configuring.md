@@ -110,6 +110,8 @@ Some additional options can be configured globally by setting these system prope
 * **robolectric.dependency.dir** — When in offline mode, specifies a folder containing runtime dependencies.
 * **robolectric.dependency.repo.id** — Set the ID of the Maven repository to use for the runtime dependencies (default `mavenCentral`).
 * **robolectric.dependency.repo.url** — Set the URL of the Maven repository to use for the runtime dependencies (default `https://repo.maven.apache.org/maven2/`).
+* **robolectric.dependency.repo.username** - Username of repository that you defined in **robolectric.dependency.repo.url**.
+* **robolectric.dependency.repo.password** - Password of repository that you defined in **robolectric.dependency.repo.url**.
 * **robolectric.logging.enabled** — Set to true to enable debug logging.
 
 When using Gradle, you can configure the System Properties for unit tests with the `all` block (see [here](http://tools.android.com/tech-docs/unit-testing-support)). For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Maven Central:
@@ -120,6 +122,10 @@ android {
     unitTests.all {
       systemProperty 'robolectric.dependency.repo.url', 'https://local-mirror/repo'
       systemProperty 'robolectric.dependency.repo.id', 'local'
+      // Username and password only needed when local repository
+      // needs account information.
+      systemProperty 'robolectric.dependency.repo.username', 'username'
+      systemProperty 'robolectric.dependency.repo.password', 'password'
     }
   }
 }
