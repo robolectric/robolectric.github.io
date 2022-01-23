@@ -25,6 +25,7 @@ android {
 }
 
 dependencies {
+  testImplementation 'junit:junit:4.13.2'
   testImplementation 'org.robolectric:robolectric:{{ site.robolectric.version.current | escape }}'
 }
 ```
