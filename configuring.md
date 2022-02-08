@@ -107,8 +107,7 @@ Some additional options can be configured globally by setting these system prope
 
 * **robolectric.enabledSdks** — Comma-separated list of SDK levels or names (e.g. `19, 21` or `KITKAT, LOLLIPOP`) which are enabled for this process. Only tests targetted at the listed SDKs will be run. By default, all SDKs are enabled.
 * **robolectric.offline** — Set to true to disable runtime fetching of jars.
-* **robolectric.usePreinstrumentedJars** — If true, Robolectric will be built
-  with instrumented jars to reduce build times. If changes are made to
+* **robolectric.usePreinstrumentedJars** — If true, Robolectric will use  instrumented jars to reduce instrumentation overhead. If changes are made to
   instrumentation, this can be set to false to ensure the changes are included
   when building Robolectric.
 * **robolectric.dependency.dir** — When in offline mode, specifies a folder containing runtime dependencies.
