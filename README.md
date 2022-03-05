@@ -24,6 +24,10 @@ Then run:
 This will build the docs and make them available at [localhost:4000](http://localhost:4000). Once
 your pull request is accepted, the docs will be automatically built and pushed to the web by GitHub.
 
+If you want to update jekyll's dependencies, you can run:
+
+    bundle update
+
 ## Javadocs
 
 When Robolectric is released, the `source/javadocs` directory needs to be updated. We can get latest steps to generate javadocs at [Robolectric Wiki's release part](https://github.com/robolectric/robolectric/wiki/Performing-a-Release#release).
