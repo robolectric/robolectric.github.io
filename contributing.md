@@ -57,6 +57,8 @@ Robolectric is a unit testing framework and it is important that Robolectric its
 
 If change is related to third-party tool, e.g. Mockito and Mockk, please consider to create related module or tests at [Robolectric's integration_tests](https://github.com/robolectric/robolectric/tree/master/integration_tests) to test third-party too's regression.
 
+If tests need to check that an exception is thrown, use JUnit's `assertThrows` instead of `@Test(expected = SomeException.class)`. Using assertThrows allows more precision to check exactly which line throws a particular exception.
+
 ### Documentation
 
 Robolectric uses javadoc to document API's behavior. There are special rules for javadoc on shadow classes:
