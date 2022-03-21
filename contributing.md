@@ -9,24 +9,13 @@ toc: true
 
 ## Getting Started
 
-Dependencies:
+The first step to contributing is to ensure that you are able to build Robolectric. Please visit [building Robolectric](/building-robolectric/) for more details and instructions on setting up an environment to build Robolectric.
 
-* Android SDK with Tools, Extras, and 'Google APIs' for latest API level installed.
-
-Set Android environment variables:
-
-    export ANDROID_HOME=/path-to-sdk-root
-    export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
-[Fork](https://github.com/robolectric/robolectric) and clone the repo:
-
-    git clone --recurse-submodules git@github.com:username/robolectric.git
-    
-Create a feature branch to make your changes:
+Once you are able to build Robolectric, create a feature branch to make your changes:
 
     git checkout -b my-feature-name
 
-Robolectric is built using Gradle. Both IntelliJ and Android Studio can import the top-level build.gradle file and will automatically generate their project files from it.
+Robolectric is built using Gradle. It is recommended to use IntelliJ to import the top-level build.gradle file, which will automatically generate their project files from it. It is also possible to use newer versions of Android Studio to build Robolectric as well. 
 
 Follow [Robolectric's README.md](https://github.com/robolectric/robolectric/blob/master/README.md#building-and-contributing) to install other build-tools outside of normal Android toolchain and run tests locally to test your changes before sending PR.
 
