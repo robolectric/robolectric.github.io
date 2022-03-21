@@ -1,3 +1,10 @@
+---
+title: Building Robolectric
+group: Contributing
+order: 1
+toc: true
+---
+
 # Building Robolectric
 
 This page describes how to set up a development environment to build Robolectric in the supported OSs (Linux, Mac, Windows).
