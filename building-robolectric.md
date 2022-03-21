@@ -29,7 +29,7 @@ This section contains instructions for an Ubuntu Linux system. Other Linux syste
 sudo apt-get update
 sudo apt-get install git openjdk-11-jdk clang make cmake ninja-build
 git clone --recurse-submodules https://github.com/robolectric/robolectric.git
-# If you forgot --recurse-submodules, you can also run `git submodule update --init` from the 'robolectric' directory.
+# If you forgot --recurse-submodules, you can also run `git submodule update --init --recursive` from the 'robolectric' directory.
 cd robolectric
 ./gradlew clean assemble
 ```
@@ -57,3 +57,26 @@ git clone --recurse-submodules https://github.com/robolectric/robolectric.git
 cd robolectric
 ./gradlew clean assemble
 ```
+
+## Windows
+
+### Install JDK 11
+
+By default Windows does not come with a JDK. It is  recommended to install [Adoptium Temurin 11](https://adoptium.net/?variant=openjdk11&jvmVariant=hotspot).
+
+### Install msys2 64 bit
+
+Install the 64 bit version of msys2. You can follow the instructions at https://www.msys2.org.
+
+### Building
+
+Open an msys2 window and run:
+
+```
+pacman -Syu # Update system
+pacman -Sy --needed base-devel mingw-w64-x86_64-toolchain # Install the ming64 group
+pacman -Sy git cmake ninja-build
+git clone --recurse-submodules https://github.com/robolectric/robolectric.git
+export ANDROID_SDK_ROOT=/c/Users/$USER/AppData/Local/Android/Sdk
+export JAVA_HOME=/c/Program\ Files/Eclipse\ Adoptium/jdk-11.0.14.101-hotspot # Will likely be a different version on your machine
+./gradlew clean assemble
