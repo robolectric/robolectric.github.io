@@ -74,9 +74,10 @@ Open an msys2 window and run:
 
 ```
 pacman -Syu # Update system
-pacman -Sy --needed base-devel mingw-w64-x86_64-toolchain # Install the ming64 group
+pacman -Sy base-devel mingw-w64-x86_64-toolchain # Install the ming-w64-x86_64 package group
 pacman -Sy git cmake ninja-build
 git clone --recurse-submodules https://github.com/robolectric/robolectric.git
 export ANDROID_SDK_ROOT=/c/Users/$USER/AppData/Local/Android/Sdk
 export JAVA_HOME=/c/Program\ Files/Eclipse\ Adoptium/jdk-11.0.14.101-hotspot # Will likely be a different version on your machine
 ./gradlew clean assemble
+```
