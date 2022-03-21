@@ -75,7 +75,7 @@ Open an msys2 terminal by running the "MSYS2 MinGW x64" shortcut. This will ensu
 ```
 pacman -Syu # Update system
 pacman -Sy base-devel mingw-w64-x86_64-toolchain # Install the ming-w64-x86_64 package group
-pacman -Sy git cmake ninja-build
+pacman -Sy git mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja
 git clone --recurse-submodules https://github.com/robolectric/robolectric.git
 export ANDROID_SDK_ROOT=/c/Users/$USER/AppData/Local/Android/Sdk
 export JAVA_HOME=/c/Program\ Files/Eclipse\ Adoptium/jdk-11.0.14.101-hotspot # Will likely be a different version on your machine
