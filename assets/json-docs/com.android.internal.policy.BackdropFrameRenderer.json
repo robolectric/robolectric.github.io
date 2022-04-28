@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "run()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "run()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.S",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.os.Looper",
+    "android.view.Choreographer",
+    "android.view.ThreadedRenderer",
+    "com.android.internal.policy.BackdropFrameRenderer",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowBackdropFrameRenderer.BackdropFrameRendererReflector"
+  ],
+  "name": "org.robolectric.shadows.ShadowBackdropFrameRenderer",
+  "documentation": "Shadow for {@link BackdropFrameRenderer} "
+}

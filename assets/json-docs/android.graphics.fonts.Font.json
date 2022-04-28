@@ -12,12 +12,25 @@
       "returnType": "int",
       "exceptions": [],
       "name": "nGetPackedStyle(long)"
+    },
+    "nNewByteBuffer(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "font"
+      ],
+      "returnType": "java.nio.ByteBuffer",
+      "exceptions": [],
+      "name": "nNewByteBuffer(long)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.S",
     "android.graphics.fonts.Font",
-    "android.graphics.fonts.FontStyle",
+    "java.nio.ByteBuffer",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

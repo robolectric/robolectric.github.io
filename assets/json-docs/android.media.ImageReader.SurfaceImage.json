@@ -1,0 +1,74 @@
+{
+  "methods": {
+    "getFormat()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getFormat()"
+    },
+    "getHeight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getHeight()"
+    },
+    "getWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "getWidth()"
+    },
+    "setTimeStamp(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "timestamp"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTimeStamp(long)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.graphics.Canvas",
+    "android.graphics.Rect",
+    "android.media.Image",
+    "android.media.ImageReader",
+    "android.media.ImageReader.OnImageAvailableListener",
+    "android.os.Handler",
+    "android.view.Surface",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Objects",
+    "java.util.concurrent.atomic.AtomicBoolean",
+    "java.util.concurrent.atomic.AtomicLong",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType"
+  ],
+  "name": "org.robolectric.shadows.ShadowImageReader.ShadowSurfaceImage",
+  "documentation": "Shadow for {@link android.media.Image} "
+}

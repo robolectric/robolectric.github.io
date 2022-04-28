@@ -476,6 +476,17 @@
       "exceptions": [],
       "name": "getPhoneAccountsSupportingScheme(java.lang.String)"
     },
+    "getSelfManagedPhoneAccounts()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.telecom.PhoneAccountHandle\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getSelfManagedPhoneAccounts()"
+    },
     "getSimCallManager()": {
       "isImplementation": true,
       "modifiers": [
@@ -740,7 +751,7 @@
       "documentation": "Sets the BlockNumbersIntent to be returned by {@link\nShadowTelecomManager#createManageBlockedNumbersIntent()}\n"
     },
     "setSimCallManager(android.telecom.PhoneAccountHandle)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -749,6 +760,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 22,
       "name": "setSimCallManager(android.telecom.PhoneAccountHandle)"
     },
     "setSystemDialerPackage(java.lang.String)": {

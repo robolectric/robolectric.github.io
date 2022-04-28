@@ -69,14 +69,62 @@
       "returnType": "android.net.Uri",
       "exceptions": [],
       "name": "getUri()"
+    },
+    "loadDrawableAsync(android.content.Context,android.graphics.drawable.Icon.OnDrawableLoadedListener,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "listener",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "loadDrawableAsync(android.content.Context,android.graphics.drawable.Icon.OnDrawableLoadedListener,android.os.Handler)"
+    },
+    "loadDrawableAsync(android.content.Context,android.os.Message)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "andThen"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "loadDrawableAsync(android.content.Context,android.os.Message)"
+    },
+    "overrideExecutor(java.util.concurrent.Executor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "executor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "overrideExecutor(java.util.concurrent.Executor)",
+      "documentation": "Set the executor where async drawable loading will run. "
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.content.Context",
     "android.graphics.Bitmap",
+    "android.graphics.drawable.Drawable",
     "android.graphics.drawable.Icon",
+    "android.graphics.drawable.Icon.OnDrawableLoadedListener",
     "android.net.Uri",
+    "android.os.Handler",
+    "android.os.Message",
+    "androidx.annotation.Nullable",
+    "java.util.concurrent.Executor",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

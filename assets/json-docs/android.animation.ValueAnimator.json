@@ -23,7 +23,7 @@
       "name": "reset()"
     },
     "setDurationScale(float)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public",
         "static"

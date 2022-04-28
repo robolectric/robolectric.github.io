@@ -14,6 +14,22 @@
       "exceptions": [],
       "name": "bindService(android.content.Intent,android.content.ServiceConnection,int)"
     },
+    "bindService(android.content.Intent,int,java.util.concurrent.Executor,android.content.ServiceConnection)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "service",
+        "flags",
+        "executor",
+        "conn"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "bindService(android.content.Intent,int,java.util.concurrent.Executor,android.content.ServiceConnection)"
+    },
     "bindServiceAsUser(android.content.Intent,android.content.ServiceConnection,int,android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -187,6 +203,21 @@
       "exceptions": [],
       "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)"
     },
+    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "receiver",
+        "filter",
+        "flags"
+      ],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int)"
+    },
     "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
@@ -201,6 +232,23 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)"
+    },
+    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "receiver",
+        "filter",
+        "broadcastPermission",
+        "scheduler",
+        "flags"
+      ],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int)"
     },
     "registerReceiverAsUser(android.content.BroadcastReceiver,android.os.UserHandle,android.content.IntentFilter,java.lang.String,android.os.Handler)": {
       "isImplementation": true,
@@ -506,15 +554,16 @@
       "name": "unregisterReceiver(android.content.BroadcastReceiver)"
     },
     "validateServiceIntent(android.content.Intent)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected"
       ],
       "params": [
         "service"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 19,
       "name": "validateServiceIntent(android.content.Intent)"
     }
   },
@@ -526,6 +575,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.Nullable",
@@ -553,12 +603,14 @@
     "android.os.IBinder",
     "android.os.UserHandle",
     "com.google.common.base.Strings",
+    "com.google.errorprone.annotations.concurrent.GuardedBy",
     "java.io.File",
     "java.nio.file.Paths",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.Map",
     "java.util.Set",
+    "java.util.concurrent.Executor",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

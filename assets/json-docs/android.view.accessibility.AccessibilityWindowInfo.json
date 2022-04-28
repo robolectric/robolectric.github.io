@@ -252,7 +252,7 @@
       "documentation": "Clear list of obtained instance objects. {@code areThereUnrecycledWindows} will always\nreturn false if called immediately afterwards.\n"
     },
     "setAccessibilityFocused(boolean)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -264,7 +264,7 @@
       "name": "setAccessibilityFocused(boolean)"
     },
     "setActive(boolean)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -288,7 +288,7 @@
       "name": "setAnchor(android.view.accessibility.AccessibilityNodeInfo)"
     },
     "setBoundsInScreen(android.graphics.Rect)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -297,10 +297,11 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 29,
       "name": "setBoundsInScreen(android.graphics.Rect)"
     },
     "setFocused(boolean)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -312,7 +313,7 @@
       "name": "setFocused(boolean)"
     },
     "setId(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -324,7 +325,7 @@
       "name": "setId(int)"
     },
     "setLayer(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -348,7 +349,7 @@
       "name": "setRoot(android.view.accessibility.AccessibilityNodeInfo)"
     },
     "setTitle(java.lang.CharSequence)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -357,11 +358,12 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 24,
       "name": "setTitle(java.lang.CharSequence)",
       "documentation": "Sets the title of this window.\n\n@param value The {@link CharSequence} to set as the title of this window\n"
     },
     "setType(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -386,6 +388,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Rect",
     "android.view.accessibility.AccessibilityNodeInfo",

@@ -1,0 +1,38 @@
+{
+  "methods": {
+    "getLastConnectionEvent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Optional\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getLastConnectionEvent()"
+    },
+    "sendConnectionEvent(java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "event",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendConnectionEvent(java.lang.String,android.os.Bundle)",
+      "documentation": "Records the event sent through sendConnectionEvent to be accessed later by tests. "
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Bundle",
+    "android.telecom.Connection",
+    "java.util.Optional",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowConnection",
+  "documentation": "Shadow for {@link Connection} that represents a phone call or connection to a remote endpoint\nthat carries voice and/or video traffic.\n"
+}

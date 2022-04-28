@@ -36,6 +36,8 @@
     "android.media.MediaCodec",
     "android.media.MediaCodec.BufferInfo",
     "android.media.MediaCodec.CodecException",
+    "android.media.MediaCodecInfo",
+    "android.media.MediaCodecList",
     "android.media.MediaCrypto",
     "android.media.MediaFormat",
     "android.view.Surface",

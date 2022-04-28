@@ -330,7 +330,7 @@
       "name": "isStreamMute(int)"
     },
     "isValidRingerMode(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public",
         "static"

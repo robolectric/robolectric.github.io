@@ -12,6 +12,17 @@
       "exceptions": [],
       "name": "appendDescription(java.lang.String)"
     },
+    "asShared()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "asShared()"
+    },
     "checkBitmapMutable()": {
       "isImplementation": false,
       "modifiers": [
@@ -173,6 +184,24 @@
       "exceptions": [],
       "name": "createBitmap(int,int,android.graphics.Bitmap.Config)"
     },
+    "createBitmap(int,int,android.graphics.Bitmap.Config,boolean,android.graphics.ColorSpace)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "width",
+        "height",
+        "config",
+        "hasAlpha",
+        "colorSpace"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "createBitmap(int,int,android.graphics.Bitmap.Config,boolean,android.graphics.ColorSpace)"
+    },
     "createBitmap(int[],int,int,int,int,android.graphics.Bitmap.Config)": {
       "isImplementation": true,
       "modifiers": [
@@ -245,6 +274,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "drawRect(android.graphics.Rect,android.graphics.Paint)"
+    },
+    "drawRect(android.graphics.RectF,android.graphics.Paint)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "r",
+        "paint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "drawRect(android.graphics.RectF,android.graphics.Paint)"
     },
     "eraseColor(int)": {
       "isImplementation": true,
@@ -325,6 +365,17 @@
       "exceptions": [],
       "name": "getBytesPerPixel(android.graphics.Bitmap.Config)"
     },
+    "getColorSpace()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.graphics.ColorSpace",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getColorSpace()"
+    },
     "getConfig()": {
       "isImplementation": true,
       "modifiers": [
@@ -367,7 +418,7 @@
       "returnType": "int[]",
       "exceptions": [],
       "name": "getCreatedFromColors()",
-      "documentation": "Color array from which this Bitmap was created. {@code null} if this Bitmap was not created\nfrom a color array.\n@return Color array from which this Bitmap was created.\n"
+      "documentation": "Color array from which this Bitmap was created. {@code null} if this Bitmap was not created\nfrom a color array.\n\n@return Color array from which this Bitmap was created.\n"
     },
     "getCreatedFromFilter()": {
       "isImplementation": false,
@@ -378,7 +429,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "getCreatedFromFilter()",
-      "documentation": "{@code true} if this Bitmap was created with filtering.\n@return {@code true} if this Bitmap was created with filtering.\n"
+      "documentation": "{@code true} if this Bitmap was created with filtering.\n\n@return {@code true} if this Bitmap was created with filtering.\n"
     },
     "getCreatedFromHeight()": {
       "isImplementation": false,
@@ -389,7 +440,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getCreatedFromHeight()",
-      "documentation": "Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n@return Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n"
+      "documentation": "Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n\n@return Height from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this\n    Bitmap\u0027s content, or -1.\n"
     },
     "getCreatedFromMatrix()": {
       "isImplementation": false,
@@ -400,7 +451,7 @@
       "returnType": "android.graphics.Matrix",
       "exceptions": [],
       "name": "getCreatedFromMatrix()",
-      "documentation": "Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.\n@return Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.\n"
+      "documentation": "Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.\n\n@return Matrix from which this Bitmap\u0027s content was transformed, or {@code null}.\n"
     },
     "getCreatedFromPath()": {
       "isImplementation": false,
@@ -422,7 +473,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getCreatedFromResId()",
-      "documentation": "Resource ID from which this Bitmap was created. {@code 0} if this Bitmap was not created\nfrom a resource.\n\n@return Resource ID from which this Bitmap was created.\n"
+      "documentation": "Resource ID from which this Bitmap was created. {@code 0} if this Bitmap was not created from a\nresource.\n\n@return Resource ID from which this Bitmap was created.\n"
     },
     "getCreatedFromStream()": {
       "isImplementation": false,
@@ -444,7 +495,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getCreatedFromWidth()",
-      "documentation": "Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n\n@return Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n"
+      "documentation": "Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this Bitmap\u0027s\ncontent, or -1.\n\n@return Width from {@link #getCreatedFromX()} within {@link #getCreatedFromBitmap()} of this\n    Bitmap\u0027s content, or -1.\n"
     },
     "getCreatedFromX()": {
       "isImplementation": false,
@@ -689,6 +740,19 @@
       "exceptions": [],
       "name": "setBufferedImage(java.awt.image.BufferedImage)"
     },
+    "setColorSpace(android.graphics.ColorSpace)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "colorSpace"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setColorSpace(android.graphics.ColorSpace)"
+    },
     "setConfig(android.graphics.Bitmap.Config)": {
       "isImplementation": true,
       "modifiers": [
@@ -884,10 +948,16 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.S",
+    "com.google.common.base.Preconditions.checkArgument",
+    "com.google.common.base.Preconditions.checkNotNull",
     "java.lang.Integer.max",
     "java.lang.Integer.min",
     "android.graphics.Bitmap",
     "android.graphics.Bitmap.Config",
+    "android.graphics.ColorSpace",
     "android.graphics.Matrix",
     "android.graphics.Paint",
     "android.graphics.Rect",
@@ -895,6 +965,9 @@
     "android.os.Build",
     "android.os.Parcel",
     "android.util.DisplayMetrics",
+    "java.awt.Color",
+    "java.awt.Graphics2D",
+    "java.awt.geom.Rectangle2D",
     "java.awt.image.BufferedImage",
     "java.awt.image.ColorModel",
     "java.awt.image.DataBufferInt",
@@ -906,6 +979,7 @@
     "java.nio.ByteBuffer",
     "java.nio.IntBuffer",
     "java.util.Arrays",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

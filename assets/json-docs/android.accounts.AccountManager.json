@@ -45,12 +45,12 @@
       ],
       "params": [
         "account",
-        "visibileToPackages"
+        "visibleToPackages"
       ],
       "returnType": "void",
       "exceptions": [],
       "name": "addAccount(android.accounts.Account,java.lang.String...)",
-      "documentation": "Adds an account to the AccountManager but when {@link AccountManager#getAccountsByTypeForPackage(String, String)}\nis called will be included if is in one of the #visibileToPackages\n\n@param account User account.\n"
+      "documentation": "Adds an account to the AccountManager but when {@link\nAccountManager#getAccountsByTypeForPackage(String, String)} is called will be included if is in\none of the #visibleToPackages\n\n@param account User account.\n"
     },
     "addAccount(java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle,android.app.Activity,android.accounts.AccountManagerCallback\u003candroid.os.Bundle\u003e,android.os.Handler)": {
       "isImplementation": true,

@@ -65,6 +65,8 @@ menu:
         url: /javadoc/4.6/
       - title: "4.7"
         url: /javadoc/4.7/
+      - title: "4.8"
+        url: /javadoc/4.8/
         class: italic
     - title: Issues
       url: https://github.com/robolectric/robolectric/issues/
@@ -97,6 +99,6 @@ defaults:
 
 robolectric:
   version:
-    current: "4.6"
-    preview: "4.6"
-    snapshot: "4.7-SNAPSHOT"
+    current: "4.8"
+    preview: "4.8"
+    snapshot: "4.9-SNAPSHOT"

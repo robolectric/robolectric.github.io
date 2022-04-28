@@ -30,6 +30,16 @@
       "exceptions": [],
       "name": "getAllowedOverRoaming()"
     },
+    "getBytesSoFar()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getBytesSoFar()"
+    },
     "getDescription()": {
       "isImplementation": false,
       "modifiers": [
@@ -100,6 +110,16 @@
       "exceptions": [],
       "name": "getTitle()"
     },
+    "getTotalSize()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getTotalSize()"
+    },
     "getUri()": {
       "isImplementation": false,
       "modifiers": [
@@ -120,10 +140,22 @@
       "exceptions": [],
       "name": "getVisibleInDownloadsUi()"
     },
-    "setDestinationFromBase(java.io.File,java.lang.String)": {
+    "setBytesSoFar(long)": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "public"
+      ],
+      "params": [
+        "bytesSoFar"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBytesSoFar(long)"
+    },
+    "setDestinationFromBase(java.io.File,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
       ],
       "params": [
         "base",
@@ -159,6 +191,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setStatus(int)"
+    },
+    "setTotalSize(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "totalSize"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTotalSize(long)"
     }
   },
   "imports": [
@@ -169,11 +213,16 @@
     "android.os.Environment",
     "android.util.Pair",
     "com.android.internal.util.ArrayUtils",
+    "com.google.common.base.Preconditions",
+    "com.google.common.base.Strings",
     "java.io.File",
     "java.util.ArrayList",
+    "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.Objects",
     "java.util.TreeMap",
+    "javax.annotation.Nullable",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

@@ -29,6 +29,7 @@
     "com.google.common.base.Preconditions",
     "java.util.Collections",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.LinkedHashMap",
     "java.util.Map",
     "java.util.Set",

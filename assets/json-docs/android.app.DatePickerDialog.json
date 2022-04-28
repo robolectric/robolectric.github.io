@@ -1,23 +1,5 @@
 {
   "methods": {
-    "__constructor__(android.content.Context,int,android.app.DatePickerDialog.OnDateSetListener,int,int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "context",
-        "theme",
-        "callBack",
-        "year",
-        "monthOfYear",
-        "dayOfMonth"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "maxSdk": 23,
-      "name": "__constructor__(android.content.Context,int,android.app.DatePickerDialog.OnDateSetListener,int,int,int)"
-    },
     "__constructor__(android.content.Context,int,android.app.DatePickerDialog.OnDateSetListener,java.util.Calendar,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -89,16 +71,25 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.N",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.TargetApi",
     "android.app.DatePickerDialog",
+    "android.app.DatePickerDialog.OnDateSetListener",
     "android.content.Context",
+    "androidx.annotation.RequiresApi",
     "java.util.Calendar",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowDatePickerDialog.DatePickerDialogReflector"
   ],
   "name": "org.robolectric.shadows.ShadowDatePickerDialog"
 }

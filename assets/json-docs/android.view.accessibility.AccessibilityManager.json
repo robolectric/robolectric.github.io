@@ -36,9 +36,7 @@
         "context"
       ],
       "returnType": "android.view.accessibility.AccessibilityManager",
-      "exceptions": [
-        "java.lang.Exception"
-      ],
+      "exceptions": [],
       "name": "createInstance(android.content.Context)"
     },
     "getAccessibilityServiceList()": {
@@ -97,7 +95,7 @@
       "returnType": "com.google.common.collect.ImmutableList\u003candroid.view.accessibility.AccessibilityEvent\u003e",
       "exceptions": [],
       "name": "getSentAccessibilityEvents()",
-      "documentation": "Returns a list of all {@linkplain AccessibilityEvent accessibility events} that have been\nsent via {@link #sendAccessibilityEvent}.\n"
+      "documentation": "Returns a list of all {@linkplain AccessibilityEvent accessibility events} that have been sent\nvia {@link #sendAccessibilityEvent}.\n"
     },
     "isAccessibilityButtonSupported()": {
       "isImplementation": true,
@@ -265,13 +263,18 @@
     "android.os.Handler",
     "android.os.Looper",
     "android.os.Message",
+    "android.util.ArrayMap",
     "android.util.Log",
     "android.view.accessibility.AccessibilityEvent",
     "android.view.accessibility.AccessibilityManager",
+    "android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener",
+    "android.view.accessibility.AccessibilityManager.TouchExplorationStateChangeListener",
     "android.view.accessibility.IAccessibilityManager",
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
+    "java.util.HashMap",
     "java.util.List",
+    "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
@@ -280,10 +283,12 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowAccessibilityManager.MyHandler",
-    "org.robolectric.shadows.ShadowAccessibilityManager.AccessibilityManagerReflector"
+    "org.robolectric.shadows.ShadowAccessibilityManager.AccessibilityManagerReflector",
+    "org.robolectric.shadows.ShadowAccessibilityManager.AccessibilityManagerReflectorN"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityManager"
 }

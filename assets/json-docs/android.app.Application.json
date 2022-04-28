@@ -24,7 +24,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addWakeLock(android.os.PowerManager.WakeLock)",
-      "documentation": "@deprecated use PowerManager APIs instead "
+      "documentation": "@deprecated use PowerManager APIs instead\n"
     },
     "assertNoBroadcastListenersOfActionRegistered(android.content.ContextWrapper,java.lang.String)": {
       "isImplementation": false,
@@ -85,7 +85,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearWakeLocks()",
-      "documentation": "@deprecated use ShadowPowerManager.clearWakeLocks "
+      "documentation": "@deprecated use ShadowPowerManager.clearWakeLocks\n"
     },
     "declareActionUnbindable(java.lang.String)": {
       "isImplementation": false,
@@ -144,7 +144,7 @@
       "returnType": "android.bluetooth.BluetoothAdapter",
       "exceptions": [],
       "name": "getBluetoothAdapter()",
-      "documentation": "@deprecated Use {@link BluetoothAdapter#getDefaultAdapter()} ()} instead. "
+      "documentation": "@deprecated Use {@link BluetoothAdapter#getDefaultAdapter()} ()} instead.\n"
     },
     "getBoundServiceConnections()": {
       "isImplementation": false,
@@ -188,7 +188,7 @@
       "returnType": "org.robolectric.shadows.ShadowAlertDialog",
       "exceptions": [],
       "name": "getLatestAlertDialog()",
-      "documentation": "@deprecated Use {@link ShadowAlertDialog#getLatestAlertDialog()} instead. "
+      "documentation": "@deprecated Use {@link ShadowAlertDialog#getLatestAlertDialog()} instead.\n"
     },
     "getLatestDialog()": {
       "isImplementation": false,
@@ -199,7 +199,7 @@
       "returnType": "org.robolectric.shadows.ShadowDialog",
       "exceptions": [],
       "name": "getLatestDialog()",
-      "documentation": "@deprecated Use {@link ShadowDialog#getLatestDialog()} instead. "
+      "documentation": "@deprecated Use {@link ShadowDialog#getLatestDialog()} instead.\n"
     },
     "getLatestListPopupWindow()": {
       "isImplementation": false,
@@ -220,7 +220,7 @@
       "returnType": "org.robolectric.shadows.ShadowPopupMenu",
       "exceptions": [],
       "name": "getLatestPopupMenu()",
-      "documentation": "@deprecated Use {@link ShadowPopupMenu#getLatestPopupMenu()} instead. "
+      "documentation": "@deprecated Use {@link ShadowPopupMenu#getLatestPopupMenu()} instead.\n"
     },
     "getLatestPopupWindow()": {
       "isImplementation": false,
@@ -241,7 +241,7 @@
       "returnType": "android.os.PowerManager.WakeLock",
       "exceptions": [],
       "name": "getLatestWakeLock()",
-      "documentation": "@deprecated use ShadowPowerManager.getLatestWakeLock "
+      "documentation": "@deprecated use ShadowPowerManager.getLatestWakeLock\n"
     },
     "getReceiversForIntent(android.content.Intent)": {
       "isImplementation": false,
@@ -254,7 +254,7 @@
       "returnType": "java.util.List\u003candroid.content.BroadcastReceiver\u003e",
       "exceptions": [],
       "name": "getReceiversForIntent(android.content.Intent)",
-      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead "
+      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead\n"
     },
     "getRegisteredReceivers()": {
       "isImplementation": false,
@@ -265,7 +265,7 @@
       "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
       "exceptions": [],
       "name": "getRegisteredReceivers()",
-      "documentation": "@return list of {@link Wrapper}s for registered receivers "
+      "documentation": "@return list of {@link Wrapper}s for registered receivers\n"
     },
     "getShownToasts()": {
       "isImplementation": false,
@@ -306,7 +306,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "hasReceiverForIntent(android.content.Intent)",
-      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead "
+      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead\n"
     },
     "runBackgroundTasks()": {
       "isImplementation": false,

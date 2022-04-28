@@ -1,22 +1,5 @@
 {
   "methods": {
-    "__constructor__(android.content.Context,int,android.app.TimePickerDialog.OnTimeSetListener,int,int,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "context",
-        "theme",
-        "callBack",
-        "hourOfDay",
-        "minute",
-        "is24HourView"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "__constructor__(android.content.Context,int,android.app.TimePickerDialog.OnTimeSetListener,int,int,boolean)"
-    },
     "getHourOfDay()": {
       "isImplementation": false,
       "modifiers": [
@@ -51,13 +34,9 @@
   "imports": [
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.TimePickerDialog",
-    "android.content.Context",
     "android.widget.TimePicker",
-    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowTimePickerDialog.TimePickerDialogProvider"

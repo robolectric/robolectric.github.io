@@ -19,11 +19,40 @@
       "params": [
         "intent",
         "serviceConnection",
-        "i"
+        "flags"
       ],
       "returnType": "boolean",
       "exceptions": [],
       "name": "bindService(android.content.Intent,android.content.ServiceConnection,int)"
+    },
+    "bindService(android.content.Intent,android.content.ServiceConnection,org.robolectric.shadows.ShadowInstrumentation.ServiceCallbackScheduler)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "intent",
+        "serviceConnection",
+        "serviceCallbackScheduler"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "bindService(android.content.Intent,android.content.ServiceConnection,org.robolectric.shadows.ShadowInstrumentation.ServiceCallbackScheduler)"
+    },
+    "bindService(android.content.Intent,int,java.util.concurrent.Executor,android.content.ServiceConnection)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "flags",
+        "executor",
+        "serviceConnection"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "bindService(android.content.Intent,int,java.util.concurrent.Executor,android.content.ServiceConnection)"
     },
     "broadcastReceiverMatchesIntent(android.content.Context,org.robolectric.shadows.ShadowApplication.Wrapper,android.content.Intent,java.lang.String)": {
       "isImplementation": false,
@@ -402,7 +431,7 @@
       "returnType": "java.util.List\u003candroid.content.BroadcastReceiver\u003e",
       "exceptions": [],
       "name": "getReceiversForIntent(android.content.Intent)",
-      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead "
+      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead\n"
     },
     "getRegisteredReceivers()": {
       "isImplementation": false,
@@ -411,7 +440,7 @@
       "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowApplication.Wrapper\u003e",
       "exceptions": [],
       "name": "getRegisteredReceivers()",
-      "documentation": "@return copy of the list of {@link Wrapper}s for registered receivers "
+      "documentation": "@return copy of the list of {@link Wrapper}s for registered receivers\n"
     },
     "getTargetAndRequestCodeForIntent(android.content.Intent)": {
       "isImplementation": false,
@@ -482,7 +511,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "hasReceiverForIntent(android.content.Intent)",
-      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead "
+      "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead\n"
     },
     "hasRequiredPermissionForBroadcast(android.content.Context,java.lang.String)": {
       "isImplementation": false,
@@ -618,19 +647,20 @@
       "exceptions": [],
       "name": "processStickyIntents(android.content.IntentFilter,android.content.BroadcastReceiver,android.content.Context)"
     },
-    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,android.content.Context)": {
+    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int,android.content.Context)": {
       "isImplementation": false,
       "modifiers": [],
       "params": [
         "receiver",
         "filter",
+        "flags",
         "context"
       ],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,android.content.Context)"
+      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,int,android.content.Context)"
     },
-    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,android.content.Context)": {
+    "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int,android.content.Context)": {
       "isImplementation": false,
       "modifiers": [],
       "params": [
@@ -638,13 +668,14 @@
         "filter",
         "broadcastPermission",
         "scheduler",
+        "flags",
         "context"
       ],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,android.content.Context)"
+      "name": "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int,android.content.Context)"
     },
-    "registerReceiverWithContext(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,android.content.Context)": {
+    "registerReceiverWithContext(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int,android.content.Context)": {
       "isImplementation": false,
       "modifiers": [],
       "params": [
@@ -652,11 +683,12 @@
         "filter",
         "broadcastPermission",
         "scheduler",
+        "flags",
         "context"
       ],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "name": "registerReceiverWithContext(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,android.content.Context)"
+      "name": "registerReceiverWithContext(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int,android.content.Context)"
     },
     "sendBroadcast(android.content.Intent,android.content.Context)": {
       "isImplementation": false,
@@ -800,6 +832,18 @@
       "exceptions": [],
       "name": "setComponentNameAndServiceForBindServiceForIntent(android.content.Intent,android.content.ComponentName,android.os.IBinder)",
       "documentation": "Set the IBinder implementation that will be returned when the service is bound using the\nspecified Intent. The IBinder can implement the methods to simulate a bound Service. Useful for\ntesting the ServiceConnection implementation.\n\n@param intent The exact Intent used in Context#bindService(...)\n@param name The ComponentName of the Service\n@param service The IBinder implementation to return when the service is bound.\n"
+    },
+    "setInTouchMode(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "inTouchMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInTouchMode(boolean)"
     },
     "setThrowInBindService(java.lang.SecurityException)": {
       "isImplementation": false,
@@ -969,6 +1013,7 @@
     "java.util.Map",
     "java.util.Set",
     "java.util.concurrent.ExecutionException",
+    "java.util.concurrent.Executor",
     "java.util.concurrent.atomic.AtomicBoolean",
     "javax.annotation.concurrent.GuardedBy",
     "org.robolectric.RuntimeEnvironment",
@@ -985,6 +1030,9 @@
     "org.robolectric.shadows.ShadowInstrumentation._Instrumentation_",
     "org.robolectric.shadows.ShadowInstrumentation.BroadcastResultHolder",
     "org.robolectric.shadows.ShadowInstrumentation.ServiceConnectionDataWrapper",
+    "org.robolectric.shadows.ShadowInstrumentation.ServiceCallbackScheduler",
+    "org.robolectric.shadows.ShadowInstrumentation.ExecutorServiceCallbackScheduler",
+    "org.robolectric.shadows.ShadowInstrumentation.HandlerCallbackScheduler",
     "org.robolectric.shadows.ShadowInstrumentation.TargetAndRequestCode"
   ],
   "name": "org.robolectric.shadows.ShadowInstrumentation"

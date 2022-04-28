@@ -503,6 +503,26 @@
       "exceptions": [],
       "name": "getLinePaintHistoryCount()"
     },
+    "getNativeCanvas()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowCanvas.NativeCanvas",
+      "exceptions": [],
+      "name": "getNativeCanvas()"
+    },
+    "getNativeId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getNativeId()"
+    },
     "getOvalPaintHistoryCount()": {
       "isImplementation": false,
       "modifiers": [
@@ -542,6 +562,17 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getRoundRectPaintHistoryCount()"
+    },
+    "getSaveCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 25,
+      "name": "getSaveCount()"
     },
     "getTextHistoryCount()": {
       "isImplementation": false,
@@ -583,6 +614,355 @@
       "exceptions": [],
       "name": "hasDrawnPath()"
     },
+    "initRaster(android.graphics.Bitmap)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "bitmap"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 23,
+      "maxSdk": 25,
+      "name": "initRaster(android.graphics.Bitmap)"
+    },
+    "initRaster(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "bitmapHandle"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "initRaster(int)"
+    },
+    "initRaster(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "bitmapHandle"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 22,
+      "name": "initRaster(long)"
+    },
+    "nGetSaveCount(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "canvasHandle"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nGetSaveCount(long)"
+    },
+    "nInitRaster(android.graphics.Bitmap)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "bitmap"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "maxSdk": 28,
+      "name": "nInitRaster(android.graphics.Bitmap)"
+    },
+    "nInitRaster(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "bitmapHandle"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "nInitRaster(long)"
+    },
+    "nRestore(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "canvasHandle"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nRestore(long)"
+    },
+    "nRestoreToCount(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "canvasHandle",
+        "saveCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nRestoreToCount(long,int)"
+    },
+    "nSave(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "canvasHandle",
+        "saveFlags"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nSave(long,int)"
+    },
+    "nSaveLayer(long,float,float,float,float,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "l",
+        "t",
+        "r",
+        "b",
+        "nativePaint"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nSaveLayer(long,float,float,float,float,long)"
+    },
+    "nSaveLayer(long,float,float,float,float,long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "l",
+        "t",
+        "r",
+        "b",
+        "nativePaint",
+        "layerFlags"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "maxSdk": 30,
+      "name": "nSaveLayer(long,float,float,float,float,long,int)"
+    },
+    "nSaveLayerAlpha(long,float,float,float,float,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "l",
+        "t",
+        "r",
+        "b",
+        "alpha"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nSaveLayerAlpha(long,float,float,float,float,int)"
+    },
+    "nSaveLayerAlpha(long,float,float,float,float,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "l",
+        "t",
+        "r",
+        "b",
+        "alpha",
+        "layerFlags"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "maxSdk": 30,
+      "name": "nSaveLayerAlpha(long,float,float,float,float,int,int)"
+    },
+    "native_saveLayer(int,android.graphics.RectF,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "bounds",
+        "paint",
+        "layerFlags"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "native_saveLayer(int,android.graphics.RectF,int,int)"
+    },
+    "native_saveLayer(int,float,float,float,float,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "l",
+        "t",
+        "r",
+        "b",
+        "paint",
+        "layerFlags"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "native_saveLayer(int,float,float,float,float,int,int)"
+    },
+    "native_saveLayer(long,float,float,float,float,long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "l",
+        "t",
+        "r",
+        "b",
+        "nativePaint",
+        "layerFlags"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 25,
+      "name": "native_saveLayer(long,float,float,float,float,long,int)"
+    },
+    "native_saveLayerAlpha(int,android.graphics.RectF,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "bounds",
+        "alpha",
+        "layerFlags"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "native_saveLayerAlpha(int,android.graphics.RectF,int,int)"
+    },
+    "native_saveLayerAlpha(int,float,float,float,float,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "l",
+        "t",
+        "r",
+        "b",
+        "alpha",
+        "layerFlags"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 20,
+      "name": "native_saveLayerAlpha(int,float,float,float,float,int,int)"
+    },
+    "native_saveLayerAlpha(long,float,float,float,float,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeCanvas",
+        "l",
+        "t",
+        "r",
+        "b",
+        "alpha",
+        "layerFlags"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "maxSdk": 25,
+      "name": "native_saveLayerAlpha(long,float,float,float,float,int,int)"
+    },
+    "release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "release()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "resetCanvasHistory()": {
       "isImplementation": false,
       "modifiers": [
@@ -601,7 +981,21 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 25,
       "name": "restore()"
+    },
+    "restoreToCount(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "saveCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 25,
+      "name": "restoreToCount(int)"
     },
     "save()": {
       "isImplementation": true,
@@ -611,6 +1005,7 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 25,
       "name": "save()"
     },
     "scale(float,float)": {
@@ -716,6 +1111,17 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.ColorFilter",
@@ -728,12 +1134,19 @@
     "android.graphics.RectF",
     "java.util.ArrayList",
     "java.util.List",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.Shadows",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.ReflectorObject",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.res.android.NativeObjRegistry",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.Join",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowCanvas.LinePaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.OvalPaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.RectPaintHistoryEvent",
@@ -741,8 +1154,10 @@
     "org.robolectric.shadows.ShadowCanvas.PathPaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.CirclePaintHistoryEvent",
     "org.robolectric.shadows.ShadowCanvas.ArcPaintHistoryEvent",
-    "org.robolectric.shadows.ShadowCanvas.TextHistoryEvent"
+    "org.robolectric.shadows.ShadowCanvas.TextHistoryEvent",
+    "org.robolectric.shadows.ShadowCanvas.CanvasReflector",
+    "org.robolectric.shadows.ShadowCanvas.NativeCanvas"
   ],
   "name": "org.robolectric.shadows.ShadowCanvas",
-  "documentation": "Broken. This implementation is very specific to the application for which it was developed.\nTodo: Reimplement. Consider using the same strategy of collecting a history of draw events\nand providing methods for writing queries based on type, number, and order of events.\n"
+  "documentation": "Broken. This implementation is very specific to the application for which it was developed. Todo:\nReimplement. Consider using the same strategy of collecting a history of draw events and\nproviding methods for writing queries based on type, number, and order of events.\n"
 }

@@ -293,6 +293,17 @@
       "exceptions": [],
       "name": "hashCode()"
     },
+    "isActivity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isActivity()"
+    },
     "isActivityIntent()": {
       "isImplementation": false,
       "modifiers": [
@@ -303,6 +314,17 @@
       "exceptions": [],
       "name": "isActivityIntent()",
       "documentation": "@return {@code true} iff sending this PendingIntent will start an activity\n"
+    },
+    "isBroadcast()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isBroadcast()"
     },
     "isBroadcastIntent()": {
       "isImplementation": false,
@@ -326,6 +348,17 @@
       "name": "isCanceled()",
       "documentation": "@return {@true} iff this PendingIntent has been canceled\n"
     },
+    "isForegroundService()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isForegroundService()"
+    },
     "isForegroundServiceIntent()": {
       "isImplementation": false,
       "modifiers": [
@@ -336,6 +369,17 @@
       "exceptions": [],
       "name": "isForegroundServiceIntent()",
       "documentation": "@return {@code true} iff sending this PendingIntent will start a foreground service "
+    },
+    "isImmutable()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isImmutable()"
     },
     "isMutable(int)": {
       "isImplementation": false,
@@ -362,6 +406,17 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isOneShot(int)"
+    },
+    "isService()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isService()"
     },
     "isServiceIntent()": {
       "isImplementation": false,
@@ -564,6 +619,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.S",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.NonNull",
     "android.annotation.SuppressLint",

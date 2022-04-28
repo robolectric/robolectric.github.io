@@ -958,6 +958,28 @@
       "minSdk": 21,
       "name": "isUninstallBlocked(android.content.ComponentName,java.lang.String)"
     },
+    "isUniqueDeviceAttestationSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "isUniqueDeviceAttestationSupported()"
+    },
+    "isUsbDataSignalingEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isUsbDataSignalingEnabled()"
+    },
     "lockNow()": {
       "isImplementation": true,
       "modifiers": [
@@ -1161,15 +1183,16 @@
       "name": "setCameraDisabled(android.content.ComponentName,boolean)"
     },
     "setDeviceOwner(android.content.ComponentName)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [
         "admin"
       ],
-      "returnType": "void",
+      "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 24,
       "name": "setDeviceOwner(android.content.ComponentName)",
       "documentation": "Sets the admin as active admin and device owner.\n\n@see DevicePolicyManager#getDeviceOwner()\n"
     },
@@ -1196,6 +1219,31 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "setDeviceProvisioningConfigApplied()"
+    },
+    "setIsUniqueDeviceAttestationSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsUniqueDeviceAttestationSupported(boolean)"
+    },
+    "setIsUsbDataSignalingEnabled(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isEnabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsUsbDataSignalingEnabled(boolean)",
+      "documentation": "Sets USB signaling device restriction. "
     },
     "setKeyguardDisabledFeatures(android.content.ComponentName,int)": {
       "isImplementation": true,
@@ -1700,6 +1748,21 @@
       "name": "setUserProvisioningState(int)",
       "documentation": "Sets the user provisioning state.\n\n@param state to store provisioning state\n"
     },
+    "transferOwnership(android.content.ComponentName,android.content.ComponentName,android.os.PersistableBundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "target",
+        "bundle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "transferOwnership(android.content.ComponentName,android.content.ComponentName,android.os.PersistableBundle)"
+    },
     "wasPackageEverHidden(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -1748,6 +1811,7 @@
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
@@ -1779,9 +1843,11 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.os.Handler",
+    "android.os.PersistableBundle",
     "android.os.Process",
     "android.os.UserHandle",
     "android.text.TextUtils",
+    "com.android.internal.util.Preconditions",
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.Arrays",
@@ -1791,6 +1857,7 @@
     "java.util.HashSet",
     "java.util.List",
     "java.util.Map",
+    "java.util.Objects",
     "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",

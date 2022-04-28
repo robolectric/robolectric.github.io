@@ -75,6 +75,21 @@
       "exceptions": [],
       "name": "getHandler()"
     },
+    "onConnectionEvent(java.lang.String,java.lang.String,android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callId",
+        "event",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "onConnectionEvent(java.lang.String,java.lang.String,android.os.Bundle)",
+      "documentation": "Exposes {@link IIInCallService.Stub#onConnectionEvent}. This is normally invoked by Telecom but\nin Robolectric, Telecom doesn\u0027t exist, so tests can invoke this to simulate Telecom\u0027s actions.\n"
+    },
     "removeCall(android.telecom.Call)": {
       "isImplementation": false,
       "modifiers": [
@@ -149,6 +164,20 @@
       "exceptions": [],
       "name": "setMuted(boolean)"
     },
+    "setPostDialWait(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callId",
+        "remaining"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPostDialWait(java.lang.String,java.lang.String)",
+      "documentation": "Exposes {@link IIInCallService.Stub#setPostDialWait}. This is normally invoked by Telecom but\nin Robolectric, Telecom doesn\u0027t exist, so tests can invoke this to simulate Telecom\u0027s actions.\n"
+    },
     "setSupportedRouteMask(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -183,6 +212,7 @@
     "android.annotation.TargetApi",
     "android.bluetooth.BluetoothDevice",
     "android.os.Build.VERSION",
+    "android.os.Bundle",
     "android.os.Handler",
     "android.telecom.Call",
     "android.telecom.CallAudioState",
@@ -190,6 +220,7 @@
     "android.telecom.InCallService",
     "android.telecom.ParcelableCall",
     "android.telecom.Phone",
+    "com.android.internal.os.SomeArgs",
     "com.android.internal.telecom.IInCallAdapter",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

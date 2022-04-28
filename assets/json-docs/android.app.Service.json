@@ -147,7 +147,7 @@
       "name": "startForeground(int,android.app.Notification,int)"
     },
     "stopForeground(boolean)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "protected"
       ],

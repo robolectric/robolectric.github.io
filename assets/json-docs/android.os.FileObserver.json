@@ -65,7 +65,7 @@
       "name": "fileObserverEventFromWatcherEvent(java.nio.file.WatchEvent.Kind\u003c?\u003e)"
     },
     "finalize()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "protected"
       ],

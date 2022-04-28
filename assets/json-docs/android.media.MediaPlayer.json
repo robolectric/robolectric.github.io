@@ -379,7 +379,7 @@
       "returnType": "android.media.MediaPlayer.OnCompletionListener",
       "exceptions": [],
       "name": "getOnCompletionListener()",
-      "documentation": "@return the OnCompletionListener\n"
+      "documentation": "@return the OnCompletionListener "
     },
     "getOnPreparedListener()": {
       "isImplementation": false,
@@ -390,7 +390,7 @@
       "returnType": "android.media.MediaPlayer.OnPreparedListener",
       "exceptions": [],
       "name": "getOnPreparedListener()",
-      "documentation": "@return the OnPreparedListener\n"
+      "documentation": "@return the OnPreparedListener "
     },
     "getPendingSeek()": {
       "isImplementation": false,
@@ -412,7 +412,7 @@
       "returnType": "float",
       "exceptions": [],
       "name": "getRightVolume()",
-      "documentation": "@return The right channel volume.\n"
+      "documentation": "@return The right channel volume. "
     },
     "getSeekDelay()": {
       "isImplementation": false,
@@ -423,7 +423,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getSeekDelay()",
-      "documentation": "@return seekDelay\n"
+      "documentation": "@return seekDelay "
     },
     "getSourceResId()": {
       "isImplementation": false,
@@ -498,7 +498,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "invokeCompletionListener()",
-      "documentation": "Simulates end-of-playback. Changes the player into PLAYBACK_COMPLETED state\nand calls\n{@link MediaPlayer.OnCompletionListener#onCompletion(MediaPlayer)\nonCompletion()} if a listener has been set.\n"
+      "documentation": "Simulates end-of-playback. Changes the player into PLAYBACK_COMPLETED state and calls {@link\nMediaPlayer.OnCompletionListener#onCompletion(MediaPlayer) onCompletion()} if a listener has\nbeen set.\n"
     },
     "invokeErrorListener(int,int)": {
       "isImplementation": false,
@@ -537,7 +537,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "invokePreparedListener()",
-      "documentation": "Allows test cases to simulate \u0027prepared\u0027 state by invoking callback. Sets\nthe player\u0027s state to PREPARED and invokes the\n{@link MediaPlayer.OnPreparedListener#onPrepared preparedListener()}\n"
+      "documentation": "Allows test cases to simulate \u0027prepared\u0027 state by invoking callback. Sets the player\u0027s state to\nPREPARED and invokes the {@link MediaPlayer.OnPreparedListener#onPrepared preparedListener()}\n"
     },
     "invokeSeekCompleteListener()": {
       "isImplementation": false,
@@ -548,7 +548,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "invokeSeekCompleteListener()",
-      "documentation": "Allows test cases to simulate seek completion by invoking callback.\n"
+      "documentation": "Allows test cases to simulate seek completion by invoking callback. "
     },
     "isLooping()": {
       "isImplementation": true,

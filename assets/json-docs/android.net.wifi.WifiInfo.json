@@ -25,7 +25,7 @@
       "name": "newInstance()"
     },
     "setBSSID(java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -37,7 +37,7 @@
       "name": "setBSSID(java.lang.String)"
     },
     "setFrequency(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -46,10 +46,11 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 21,
       "name": "setFrequency(int)"
     },
     "setInetAddress(java.net.InetAddress)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -61,7 +62,7 @@
       "name": "setInetAddress(java.net.InetAddress)"
     },
     "setLinkSpeed(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -73,7 +74,7 @@
       "name": "setLinkSpeed(int)"
     },
     "setMacAddress(java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -85,7 +86,7 @@
       "name": "setMacAddress(java.lang.String)"
     },
     "setNetworkId(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -97,7 +98,7 @@
       "name": "setNetworkId(int)"
     },
     "setRssi(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -109,7 +110,7 @@
       "name": "setRssi(int)"
     },
     "setSSID(java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -118,10 +119,11 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 16,
       "name": "setSSID(java.lang.String)"
     },
     "setSupplicantState(android.net.wifi.SupplicantState)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -135,12 +137,14 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.net.wifi.SupplicantState",
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiSsid",
     "java.net.InetAddress",
     "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",

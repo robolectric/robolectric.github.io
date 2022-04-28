@@ -80,22 +80,6 @@
       "exceptions": [],
       "name": "codecOwnsInputBuffer(int)"
     },
-    "configure(java.lang.String[],java.lang.Object[],android.view.Surface,android.media.MediaCrypto,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "keys",
-        "values",
-        "surface",
-        "mediaCrypto",
-        "flags"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "configure(java.lang.String[],java.lang.Object[],android.view.Surface,android.media.MediaCrypto,int)"
-    },
     "copyBufferInfo(android.media.MediaCodec.BufferInfo,android.media.MediaCodec.BufferInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -162,6 +146,22 @@
       "exceptions": [],
       "name": "getOutputFormat()",
       "documentation": "Returns a default {@link MediaFormat} if not set via {@link #getOutputFormat()}. "
+    },
+    "innerConfigure(java.lang.String[],java.lang.Object[],android.view.Surface,android.media.MediaCrypto,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "keys",
+        "values",
+        "surface",
+        "mediaCrypto",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "innerConfigure(java.lang.String[],java.lang.Object[],android.view.Surface,android.media.MediaCrypto,int)"
     },
     "invalidateByteBuffer(java.nio.ByteBuffer[],int)": {
       "isImplementation": true,
@@ -254,7 +254,7 @@
       "name": "native_configure(java.lang.String[],java.lang.Object[],android.view.Surface,android.media.MediaCrypto,int)"
     },
     "native_dequeueInputBuffer(long)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "protected"
       ],
@@ -263,6 +263,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 21,
       "name": "native_dequeueInputBuffer(long)"
     },
     "native_dequeueOutputBuffer(android.media.MediaCodec.BufferInfo,long)": {
@@ -479,6 +480,8 @@
     "android.media.MediaCodec",
     "android.media.MediaCodec.BufferInfo",
     "android.media.MediaCodec.CodecException",
+    "android.media.MediaCodecInfo",
+    "android.media.MediaCodecList",
     "android.media.MediaCrypto",
     "android.media.MediaFormat",
     "android.view.Surface",

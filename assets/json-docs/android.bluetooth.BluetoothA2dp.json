@@ -13,6 +13,18 @@
       "exceptions": [],
       "name": "addDevice(android.bluetooth.BluetoothDevice,int)"
     },
+    "getBufferLengthMillis(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "codec"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBufferLengthMillis(int)"
+    },
     "getConnectedDevices()": {
       "isImplementation": true,
       "modifiers": [
@@ -47,6 +59,17 @@
       "exceptions": [],
       "name": "getDevicesMatchingConnectionStates(int[])"
     },
+    "getDynamicBufferSupport()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getDynamicBufferSupport()"
+    },
     "removeDevice(android.bluetooth.BluetoothDevice)": {
       "isImplementation": false,
       "modifiers": [
@@ -58,10 +81,38 @@
       "returnType": "void",
       "exceptions": [],
       "name": "removeDevice(android.bluetooth.BluetoothDevice)"
+    },
+    "setBufferLengthMillis(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "codec",
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "setBufferLengthMillis(int,int)"
+    },
+    "setDynamicBufferSupport(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "type"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDynamicBufferSupport(int)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.S",
     "android.bluetooth.BluetoothA2dp",
+    "android.bluetooth.BluetoothCodecConfig",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothProfile",
     "com.google.common.collect.ImmutableList",

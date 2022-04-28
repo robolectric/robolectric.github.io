@@ -64,9 +64,9 @@
       "name": "before(android.text.format.Time)"
     },
     "checkChar(java.lang.String,int,char)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected"
       ],
       "params": [
         "s",
@@ -75,6 +75,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 21,
       "name": "checkChar(java.lang.String,int,char)"
     },
     "clear(java.lang.String)": {
@@ -153,9 +154,9 @@
       "name": "getCalendar()"
     },
     "getChar(java.lang.String,int,int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
-        "private",
+        "protected",
         "static"
       ],
       "params": [
@@ -165,6 +166,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 21,
       "name": "getChar(java.lang.String,int,int)"
     },
     "getCurrentTimezone()": {
@@ -359,7 +361,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.SystemClock",
     "android.text.format.Time",
     "android.util.TimeFormatException",

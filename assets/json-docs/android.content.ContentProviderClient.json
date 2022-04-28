@@ -222,16 +222,6 @@
       ],
       "name": "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)"
     },
-    "release()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "release()"
-    },
     "setContentProvider(android.content.ContentProvider)": {
       "isImplementation": false,
       "modifiers": [],
@@ -262,6 +252,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ContentProvider",
     "android.content.ContentProviderClient",
     "android.content.ContentProviderOperation",
@@ -271,16 +262,22 @@
     "android.content.res.AssetFileDescriptor",
     "android.database.Cursor",
     "android.net.Uri",
+    "android.os.Build",
     "android.os.Bundle",
     "android.os.CancellationSignal",
     "android.os.ParcelFileDescriptor",
     "android.os.RemoteException",
     "java.io.FileNotFoundException",
     "java.util.ArrayList",
+    "java.util.concurrent.atomic.AtomicBoolean",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowContentProviderClient.ContentProviderClientReflector"
   ],
   "name": "org.robolectric.shadows.ShadowContentProviderClient"
 }

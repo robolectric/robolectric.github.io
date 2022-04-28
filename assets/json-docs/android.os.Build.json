@@ -161,6 +161,20 @@
       "name": "setRadioVersion(java.lang.String)",
       "documentation": "Override return value from {@link Build#getRadioVersion()}\n\n@param radioVersion\n"
     },
+    "setSerial(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "serial"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSerial(java.lang.String)",
+      "documentation": "Override return value from {@link Build#getSerial()}. "
+    },
     "setSupported64BitAbis(java.lang.String[])": {
       "isImplementation": false,
       "modifiers": [
@@ -231,6 +245,20 @@
       "name": "setVersionIncremental(java.lang.String)",
       "documentation": "Sets the value of the {@link Build.VERSION#INCREMENTAL} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
+    "setVersionMediaPerformanceClass(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "performanceClass"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVersionMediaPerformanceClass(int)",
+      "documentation": "Sets the value of the {@link Build.VERSION#MEDIA_PERFORMANCE_CLASS} field. Available in Android\nS+.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
     "setVersionRelease(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -264,6 +292,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.S",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.TargetApi",
     "android.os.Build",

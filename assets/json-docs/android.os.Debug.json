@@ -12,9 +12,9 @@
       "name": "__staticInitializer__()"
     },
     "fixTracePath(java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
-        "private",
+        "protected",
         "static"
       ],
       "params": [
@@ -22,6 +22,7 @@
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
+      "minSdk": 24,
       "name": "fixTracePath(java.lang.String)"
     },
     "getNativeHeapAllocatedSize()": {
@@ -155,6 +156,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
     "android.os.Debug",
     "com.google.common.collect.ImmutableMap",
     "com.google.common.io.Files",

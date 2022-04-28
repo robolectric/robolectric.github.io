@@ -1,0 +1,14 @@
+{
+  "methods": {},
+  "imports": [
+    "android.graphics.SurfaceTexture",
+    "java.lang.ref.WeakReference",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowSurfaceTexture.SurfaceTextureReflector"
+  ],
+  "name": "org.robolectric.shadows.ShadowSurfaceTexture",
+  "documentation": "Shadow for {@link android.graphics.SurfaceTexture} "
+}

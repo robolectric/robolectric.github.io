@@ -75,6 +75,41 @@
       "exceptions": [],
       "name": "getInt(android.content.ContentResolver,java.lang.String,int)"
     },
+    "getIntForUser(android.content.ContentResolver,java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "userHandle"
+      ],
+      "returnType": "int",
+      "exceptions": [
+        "android.provider.Settings.SettingNotFoundException"
+      ],
+      "minSdk": 17,
+      "name": "getIntForUser(android.content.ContentResolver,java.lang.String,int)"
+    },
+    "getIntForUser(android.content.ContentResolver,java.lang.String,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "def",
+        "userHandle"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "getIntForUser(android.content.ContentResolver,java.lang.String,int,int)"
+    },
     "getLong(android.content.ContentResolver,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [

@@ -334,6 +334,18 @@
       "minSdk": 18,
       "name": "isScanAlwaysAvailable()"
     },
+    "isStaApConcurrencySupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "isStaApConcurrencySupported()",
+      "documentation": "Returns last value provided to #setStaApConcurrencySupported. "
+    },
     "isWifiEnabled()": {
       "isImplementation": true,
       "modifiers": [
@@ -503,6 +515,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSignalLevelInPercent(float)"
+    },
+    "setStaApConcurrencySupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isStaApConcurrencySupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStaApConcurrencySupported(boolean)",
+      "documentation": "Sets whether STA/AP concurrency is supported. "
     },
     "setStartScanSucceeds(boolean)": {
       "isImplementation": false,
@@ -674,7 +699,9 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "android.content.Context",
+    "android.content.Intent",
     "android.net.ConnectivityManager",
     "android.net.DhcpInfo",
     "android.net.NetworkInfo",
@@ -684,6 +711,8 @@
     "android.net.wifi.WifiManager",
     "android.net.wifi.WifiManager.MulticastLock",
     "android.net.wifi.WifiUsabilityStatsEntry",
+    "android.os.Handler",
+    "android.os.Looper",
     "android.provider.Settings",
     "android.util.ArraySet",
     "android.util.Pair",

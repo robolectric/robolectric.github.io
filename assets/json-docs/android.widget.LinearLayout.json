@@ -1,18 +1,21 @@
 {
   "methods": {
     "getGravity()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 24,
       "name": "getGravity()"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES",
     "android.widget.LinearLayout",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers"

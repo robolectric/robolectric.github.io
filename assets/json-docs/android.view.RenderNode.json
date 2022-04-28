@@ -10,6 +10,16 @@
       "exceptions": [],
       "name": "getAlpha()"
     },
+    "getBottom()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getBottom()"
+    },
     "getCameraDistance()": {
       "isImplementation": true,
       "modifiers": [
@@ -40,6 +50,50 @@
       "exceptions": [],
       "name": "getElevation()"
     },
+    "getHeight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHeight()"
+    },
+    "getInverseMatrix(android.graphics.Matrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "matrix"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getInverseMatrix(android.graphics.Matrix)"
+    },
+    "getLeft()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getLeft()"
+    },
+    "getMatrix(android.graphics.Matrix)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "matrix"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getMatrix(android.graphics.Matrix)"
+    },
     "getPivotX()": {
       "isImplementation": true,
       "modifiers": [
@@ -59,6 +113,16 @@
       "returnType": "float",
       "exceptions": [],
       "name": "getPivotY()"
+    },
+    "getRight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getRight()"
     },
     "getRotation()": {
       "isImplementation": true,
@@ -110,6 +174,16 @@
       "exceptions": [],
       "name": "getScaleY()"
     },
+    "getTop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTop()"
+    },
     "getTranslationX()": {
       "isImplementation": true,
       "modifiers": [
@@ -139,6 +213,26 @@
       "returnType": "float",
       "exceptions": [],
       "name": "getTranslationZ()"
+    },
+    "getWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getWidth()"
+    },
+    "hasIdentityMatrix()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasIdentityMatrix()"
     },
     "hasOverlappingRendering()": {
       "isImplementation": true,
@@ -170,6 +264,19 @@
       "exceptions": [],
       "name": "isValid()"
     },
+    "isZero(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isZero(float)"
+    },
     "nSetLayerPaint(long,long)": {
       "isImplementation": true,
       "modifiers": [
@@ -200,6 +307,40 @@
       "name": "nSetLayerType(long,int)",
       "documentation": "Implementation of native method nSetLayerType\n\n@param renderNode Ignored\n@param layerType Ignored\n@return Always true\n"
     },
+    "offsetLeftAndRight(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "offset"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "offsetLeftAndRight(int)"
+    },
+    "offsetTopAndBottom(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "offset"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "offsetTopAndBottom(int)"
+    },
+    "resetPivot()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "resetPivot()"
+    },
     "setAlpha(float)": {
       "isImplementation": true,
       "modifiers": [
@@ -211,6 +352,18 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "setAlpha(float)"
+    },
+    "setBottom(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bottom"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setBottom(int)"
     },
     "setCameraDistance(float)": {
       "isImplementation": true,
@@ -260,6 +413,33 @@
       "exceptions": [],
       "name": "setHasOverlappingRendering(boolean)"
     },
+    "setLeft(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setLeft(int)"
+    },
+    "setLeftTopRightBottom(int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setLeftTopRightBottom(int,int,int,int)"
+    },
     "setPivotX(float)": {
       "isImplementation": true,
       "modifiers": [
@@ -283,6 +463,45 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "setPivotY(float)"
+    },
+    "setPosition(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "position"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setPosition(android.graphics.Rect)"
+    },
+    "setPosition(int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setPosition(int,int,int,int)"
+    },
+    "setRight(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "right"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setRight(int)"
     },
     "setRotation(float)": {
       "isImplementation": true,
@@ -344,6 +563,18 @@
       "exceptions": [],
       "name": "setScaleY(float)"
     },
+    "setTop(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "top"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setTop(int)"
+    },
     "setTranslationX(float)": {
       "isImplementation": true,
       "modifiers": [
@@ -384,6 +615,9 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.P",
+    "android.graphics.Camera",
+    "android.graphics.Matrix",
+    "android.graphics.Rect",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

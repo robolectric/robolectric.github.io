@@ -302,22 +302,6 @@
       "minSdk": 30,
       "name": "noteOpNoThrow(int,int,java.lang.String,java.lang.String,java.lang.String)"
     },
-    "noteProxyOpNoThrow(int,android.content.AttributionSource,java.lang.String,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "op",
-        "attributionSource",
-        "message",
-        "ignoredSkipProxyOperation"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "minSdk": 31,
-      "name": "noteProxyOpNoThrow(int,android.content.AttributionSource,java.lang.String,boolean)"
-    },
     "noteProxyOpNoThrow(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -366,6 +350,22 @@
       "minSdk": 30,
       "maxSdk": 30,
       "name": "noteProxyOpNoThrow(int,java.lang.String,int,java.lang.String,java.lang.String)"
+    },
+    "noteProxyOpNoThrow(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "op",
+        "attributionSource",
+        "message",
+        "ignoredSkipProxyOperation"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "noteProxyOpNoThrow(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
     },
     "reset()": {
       "isImplementation": false,
@@ -513,6 +513,21 @@
       "minSdk": 29,
       "name": "startWatchingMode(int,java.lang.String,int,android.app.AppOpsManager.OnOpChangedListener)"
     },
+    "startWatchingModeImpl(int,java.lang.String,int,android.app.AppOpsManager.OnOpChangedListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "op",
+        "packageName",
+        "flags",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startWatchingModeImpl(int,java.lang.String,int,android.app.AppOpsManager.OnOpChangedListener)"
+    },
     "stopWatchingMode(android.app.AppOpsManager.OnOpChangedListener)": {
       "isImplementation": true,
       "modifiers": [
@@ -555,9 +570,9 @@
       "name": "unsafeCheckOpNoThrow(java.lang.String,int,java.lang.String)"
     },
     "unsafeCheckOpRawNoThrow(int,int,java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected"
       ],
       "params": [
         "op",
@@ -566,6 +581,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 29,
       "name": "unsafeCheckOpRawNoThrow(int,int,java.lang.String)"
     },
     "unsafeCheckOpRawNoThrow(java.lang.String,int,java.lang.String)": {
@@ -615,8 +631,10 @@
     "android.util.ArrayMap",
     "android.util.LongSparseArray",
     "android.util.LongSparseLongArray",
+    "androidx.annotation.RequiresApi",
     "com.android.internal.app.IAppOpsService",
     "com.google.auto.value.AutoValue",
+    "com.google.common.base.Preconditions",
     "com.google.common.collect.HashMultimap",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Multimap",

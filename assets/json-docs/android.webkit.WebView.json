@@ -100,6 +100,17 @@
       "name": "createHitTestResult(int,java.lang.String)",
       "documentation": "Creates an instance of {@link HitTestResult}. "
     },
+    "createWebMessageChannel()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.webkit.WebMessagePort[]",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "createWebMessageChannel()"
+    },
     "destroy()": {
       "isImplementation": true,
       "modifiers": [
@@ -179,6 +190,16 @@
       "returnType": "java.lang.Class\u003c?\u003e",
       "exceptions": [],
       "name": "getClassNamed(java.lang.String)"
+    },
+    "getCreatedPorts()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.fakes.RoboWebMessagePort[]\u003e",
+      "exceptions": [],
+      "name": "getCreatedPorts()"
     },
     "getCurrentWebViewPackage()": {
       "isImplementation": true,
@@ -279,7 +300,7 @@
       "returnType": "java.util.Map\u003cjava.lang.String,java.lang.String\u003e",
       "exceptions": [],
       "name": "getLastAdditionalHttpHeaders()",
-      "documentation": "@return the additional Http headers that in the same request with last loaded url "
+      "documentation": "@return the additional Http headers that in the same request with last loaded url\n"
     },
     "getLastEvaluatedJavascript()": {
       "isImplementation": false,
@@ -289,7 +310,19 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "name": "getLastEvaluatedJavascript()"
+      "name": "getLastEvaluatedJavascript()",
+      "documentation": "Returns the last evaluated Javascript value provided to {@link #evaluateJavascript(String,\nValueCallback)} or null if the method has not been called.\n"
+    },
+    "getLastEvaluatedJavascriptCallback()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.webkit.ValueCallback\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getLastEvaluatedJavascriptCallback()",
+      "documentation": "Returns the last callback value provided to {@link #evaluateJavascript(String, ValueCallback)}\nor null if the method has not been called.\n"
     },
     "getLastLoadData()": {
       "isImplementation": false,
@@ -320,7 +353,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getLastLoadedUrl()",
-      "documentation": "@return the last loaded url "
+      "documentation": "@return the last loaded url\n"
     },
     "getOriginalUrl()": {
       "isImplementation": true,
@@ -374,24 +407,26 @@
       "name": "getUrl()"
     },
     "getWebChromeClient()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [],
       "returnType": "android.webkit.WebChromeClient",
       "exceptions": [],
+      "minSdk": 26,
       "name": "getWebChromeClient()",
-      "documentation": "@return webChromeClient "
+      "documentation": "@return webChromeClient\n"
     },
     "getWebViewClient()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [],
       "returnType": "android.webkit.WebViewClient",
       "exceptions": [],
+      "minSdk": 26,
       "name": "getWebViewClient()"
     },
     "goBack()": {
@@ -733,7 +768,7 @@
       "name": "setWebChromeClient(android.webkit.WebChromeClient)"
     },
     "setWebContentsDebuggingEnabled(boolean)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public",
         "static"
@@ -743,6 +778,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 19,
       "name": "setWebContentsDebuggingEnabled(boolean)"
     },
     "setWebViewClient(android.webkit.WebViewClient)": {
@@ -834,6 +870,7 @@
     "android.graphics.Bitmap",
     "android.os.Build",
     "android.os.Build.VERSION",
+    "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.os.Handler",
     "android.os.Looper",
@@ -843,11 +880,13 @@
     "android.webkit.WebBackForwardList",
     "android.webkit.WebChromeClient",
     "android.webkit.WebHistoryItem",
+    "android.webkit.WebMessagePort",
     "android.webkit.WebSettings",
     "android.webkit.WebView",
     "android.webkit.WebView.HitTestResult",
     "android.webkit.WebViewClient",
     "android.webkit.WebViewFactoryProvider",
+    "com.google.common.collect.ImmutableList",
     "java.lang.reflect.Field",
     "java.lang.reflect.InvocationHandler",
     "java.lang.reflect.Method",
@@ -855,12 +894,14 @@
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
+    "java.util.List",
     "java.util.Map",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.fakes.RoboWebMessagePort",
     "org.robolectric.fakes.RoboWebSettings",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowWebView.LoadDataWithBaseURL",

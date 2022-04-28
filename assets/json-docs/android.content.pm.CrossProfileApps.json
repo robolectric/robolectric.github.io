@@ -324,15 +324,16 @@
       "documentation": "Ensures that {@code component} is present in the manifest as an exported and enabled activity.\nThis check and the error thrown are the same as the check done by the real {@link\nCrossProfileApps}.\n\n\u003cp\u003eIf {@code requireMainActivity} is true, then this also asserts that the activity is a\nlauncher activity.\n"
     },
     "verifyCanAccessUser(android.os.UserHandle)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected"
       ],
       "params": [
         "userHandle"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 28,
       "name": "verifyCanAccessUser(android.os.UserHandle)"
     },
     "verifyHasInteractAcrossProfilesPermission()": {

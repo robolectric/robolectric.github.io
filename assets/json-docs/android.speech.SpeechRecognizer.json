@@ -107,6 +107,18 @@
       "exceptions": [],
       "name": "triggerOnPartialResults(android.os.Bundle)"
     },
+    "triggerOnReadyForSpeech(android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bundle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerOnReadyForSpeech(android.os.Bundle)"
+    },
     "triggerOnResults(android.os.Bundle)": {
       "isImplementation": false,
       "modifiers": [
