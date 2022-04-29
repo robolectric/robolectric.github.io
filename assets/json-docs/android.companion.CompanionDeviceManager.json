@@ -1,0 +1,144 @@
+{
+  "methods": {
+    "addAssociation(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "newAssociation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addAssociation(java.lang.String)"
+    },
+    "associate(android.companion.AssociationRequest,android.companion.CompanionDeviceManager.Callback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "callback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "associate(android.companion.AssociationRequest,android.companion.CompanionDeviceManager.Callback,android.os.Handler)"
+    },
+    "checkHasAssociation()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkHasAssociation()"
+    },
+    "disassociate(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "deviceMacAddress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "disassociate(java.lang.String)"
+    },
+    "getAssociations()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getAssociations()"
+    },
+    "getLastAssociationCallback()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.companion.CompanionDeviceManager.Callback",
+      "exceptions": [],
+      "name": "getLastAssociationCallback()"
+    },
+    "getLastAssociationRequest()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.companion.AssociationRequest",
+      "exceptions": [],
+      "name": "getLastAssociationRequest()"
+    },
+    "getLastRequestedNotificationAccess()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.ComponentName",
+      "exceptions": [],
+      "name": "getLastRequestedNotificationAccess()"
+    },
+    "hasNotificationAccess(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "component"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasNotificationAccess(android.content.ComponentName)"
+    },
+    "requestNotificationAccess(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "component"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "requestNotificationAccess(android.content.ComponentName)"
+    },
+    "setNotificationAccess(android.content.ComponentName,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "component",
+        "hasAccess"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNotificationAccess(android.content.ComponentName,boolean)"
+    }
+  },
+  "imports": [
+    "android.companion.AssociationRequest",
+    "android.companion.CompanionDeviceManager",
+    "android.content.ComponentName",
+    "android.os.Build.VERSION_CODES",
+    "android.os.Handler",
+    "com.google.common.collect.ImmutableList",
+    "java.util.HashSet",
+    "java.util.List",
+    "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowCompanionDeviceManager",
+  "documentation": "Shadow for CompanionDeviceManager. "
+}

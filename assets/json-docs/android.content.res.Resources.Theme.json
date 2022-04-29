@@ -8,16 +8,6 @@
       "exceptions": [],
       "name": "getNativePtr()"
     },
-    "getResources()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [],
-      "returnType": "android.content.res.Resources",
-      "exceptions": [],
-      "name": "getResources()"
-    },
     "getShadowAssetManager()": {
       "isImplementation": false,
       "modifiers": [
@@ -27,6 +17,16 @@
       "returnType": "org.robolectric.shadows.ShadowLegacyAssetManager",
       "exceptions": [],
       "name": "getShadowAssetManager()"
+    },
+    "innerGetResources()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.res.Resources",
+      "exceptions": [],
+      "name": "innerGetResources()"
     },
     "obtainStyledAttributes(android.util.AttributeSet,int[],int,int)": {
       "isImplementation": true,
@@ -80,6 +80,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadows.ShadowAssetManager.legacyShadowOf",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.res.AssetFileDescriptor",
@@ -113,6 +114,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.internal.bytecode.ShadowedObject",
     "org.robolectric.res.Plural",
     "org.robolectric.res.PluralRules",
     "org.robolectric.res.ResName",
@@ -125,5 +127,6 @@
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType"
   ],
-  "name": "org.robolectric.shadows.ShadowResources.ShadowLegacyTheme"
+  "name": "org.robolectric.shadows.ShadowResources.ShadowLegacyTheme",
+  "documentation": "Shadow for {@link Resources.Theme}. "
 }

@@ -28,6 +28,19 @@
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
       "name": "createHardwareBitmap(java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
+    "nCreateTextureLayer(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeProxy"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nCreateTextureLayer(long)"
     }
   },
   "imports": [

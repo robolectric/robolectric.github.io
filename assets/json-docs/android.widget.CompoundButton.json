@@ -1,13 +1,14 @@
 {
   "methods": {
     "getButtonDrawable()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [],
       "returnType": "android.graphics.drawable.Drawable",
       "exceptions": [],
+      "minSdk": 23,
       "name": "getButtonDrawable()"
     },
     "getButtonDrawableId()": {
@@ -48,6 +49,7 @@
   "imports": [
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.drawable.Drawable",
+    "android.os.Build.VERSION_CODES",
     "android.widget.CompoundButton",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

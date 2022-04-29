@@ -40,7 +40,7 @@
       "documentation": "Returns the storage volumes configured via {@link #addStorageVolume()}.\n\n@return StorageVolume list\n"
     },
     "getVolumeList()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],

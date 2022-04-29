@@ -125,6 +125,20 @@
       "minSdk": 31,
       "name": "openCameraDeviceUserAsync(java.lang.String,android.hardware.camera2.CameraDevice.StateCallback,java.util.concurrent.Executor,int,int)"
     },
+    "registerAvailabilityCallback(android.hardware.camera2.CameraManager.AvailabilityCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "registerAvailabilityCallback(android.hardware.camera2.CameraManager.AvailabilityCallback,android.os.Handler)"
+    },
     "removeCamera(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -174,6 +188,45 @@
       "name": "triggerDisconnect()",
       "documentation": "Triggers a disconnect event, where any open camera will be disconnected (simulating the case\nwhere another app takes control of the camera).\n"
     },
+    "triggerOnCameraAvailable(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "cameraId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerOnCameraAvailable(java.lang.String)",
+      "documentation": "Calls all registered callbacks\u0027s onCameraAvailable method. This is a no-op if no callbacks are\nregistered.\n"
+    },
+    "triggerOnCameraUnavailable(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "cameraId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerOnCameraUnavailable(java.lang.String)",
+      "documentation": "Calls all registered callbacks\u0027s onCameraUnavailable method. This is a no-op if no callbacks\nare registered.\n"
+    },
+    "unregisterAvailabilityCallback(android.hardware.camera2.CameraManager.AvailabilityCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "unregisterAvailabilityCallback(android.hardware.camera2.CameraManager.AvailabilityCallback)"
+    },
     "updateCameraCallback(android.hardware.camera2.CameraDevice,android.hardware.camera2.CameraDevice.StateCallback,android.os.Handler,java.util.concurrent.Executor)": {
       "isImplementation": false,
       "modifiers": [
@@ -206,6 +259,7 @@
     "com.google.common.base.Preconditions",
     "java.util.Collections",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.LinkedHashMap",
     "java.util.Map",
     "java.util.Set",

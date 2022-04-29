@@ -298,7 +298,7 @@
       "documentation": "Returns a NotificationChannel that has the given parent and conversation ID. "
     },
     "getNotificationChannelGroup(java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -307,6 +307,7 @@
       ],
       "returnType": "java.lang.Object",
       "exceptions": [],
+      "minSdk": 28,
       "name": "getNotificationChannelGroup(java.lang.String)"
     },
     "getNotificationChannelGroups()": {
@@ -504,7 +505,7 @@
       "name": "setNotificationDelegate(java.lang.String)"
     },
     "setNotificationListenerAccessGranted(android.content.ComponentName,boolean)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -514,6 +515,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 27,
       "name": "setNotificationListenerAccessGranted(android.content.ComponentName,boolean)",
       "documentation": "Sets the value returned by {@link\nNotificationManager#isNotificationListenerAccessGranted(ComponentName)} for the provided {@link\nComponentName}.\n"
     },
@@ -587,6 +589,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O_MR1",
+    "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.app.AutomaticZenRule",
@@ -617,5 +620,6 @@
     "org.robolectric.shadows.ShadowNotificationManager.Key",
     "org.robolectric.shadows.ShadowNotificationManager.PostedNotification"
   ],
-  "name": "org.robolectric.shadows.ShadowNotificationManager"
+  "name": "org.robolectric.shadows.ShadowNotificationManager",
+  "documentation": "Shadows for NotificationManager. "
 }

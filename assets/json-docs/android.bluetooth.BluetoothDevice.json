@@ -1,5 +1,27 @@
 {
   "methods": {
+    "checkForBluetoothConnectPermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkForBluetoothConnectPermission()"
+    },
+    "checkPermission(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "permission"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "checkPermission(java.lang.String)"
+    },
     "connectGatt(android.bluetooth.BluetoothGattCallback)": {
       "isImplementation": false,
       "modifiers": [
@@ -71,6 +93,36 @@
       "exceptions": [],
       "name": "createBond()",
       "documentation": "Returns whether this device has been bonded with. "
+    },
+    "createInsecureL2capChannel(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "psm"
+      ],
+      "returnType": "android.bluetooth.BluetoothSocket",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 29,
+      "name": "createInsecureL2capChannel(int)"
+    },
+    "createL2capChannel(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "psm"
+      ],
+      "returnType": "android.bluetooth.BluetoothSocket",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 29,
+      "name": "createL2capChannel(int)"
     },
     "createRfcommSocketToServiceRecord(java.util.UUID)": {
       "isImplementation": true,
@@ -207,6 +259,16 @@
       "exceptions": [],
       "name": "getService()",
       "documentation": "Implements getService() in the same way the original method does, but ignores any Exceptions\nfrom invoking {@link android.bluetooth.BluetoothAdapter#getBluetoothService}.\n"
+    },
+    "getShadowInstrumentation()": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowInstrumentation",
+      "exceptions": [],
+      "name": "getShadowInstrumentation()"
     },
     "getType()": {
       "isImplementation": true,
@@ -366,6 +428,19 @@
       "exceptions": [],
       "name": "setPin(byte[])"
     },
+    "setShouldThrowSecurityExceptions(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "shouldThrow"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setShouldThrowSecurityExceptions(boolean)",
+      "documentation": "Sets if a runtime exception is thrown when bluetooth methods with BLUETOOTH_CONNECT permission\npre-requisites are accessed.\n\n\u003cp\u003eIntended to replicate what may happen if user has not enabled nearby device permissions.\n\n@param shouldThrow if methods should throw SecurityExceptions without enabled permissions when\n    called.\n"
+    },
     "setThrowOnGetAliasName(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -422,11 +497,13 @@
   },
   "imports": [
     "android.bluetooth.BluetoothDevice.BOND_NONE",
+    "android.content.pm.PackageManager.PERMISSION_GRANTED",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.app.ActivityThread",
     "android.bluetooth.BluetoothClass",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothGatt",
@@ -434,12 +511,15 @@
     "android.bluetooth.BluetoothSocket",
     "android.bluetooth.IBluetooth",
     "android.content.Context",
+    "android.os.Build.VERSION",
+    "android.os.Build.VERSION_CODES",
     "android.os.Handler",
     "android.os.ParcelUuid",
     "java.io.IOException",
     "java.util.ArrayList",
     "java.util.List",
     "java.util.UUID",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

@@ -12,6 +12,36 @@
       "exceptions": [],
       "name": "__constructor__(android.graphics.SurfaceTexture)"
     },
+    "checkNotLocked()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkNotLocked()"
+    },
+    "checkNotReleased()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkNotReleased()"
+    },
+    "checkNotReleasedOrLocked()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkNotReleasedOrLocked()"
+    },
     "finalize()": {
       "isImplementation": true,
       "modifiers": [
@@ -34,18 +64,81 @@
       "returnType": "android.graphics.SurfaceTexture",
       "exceptions": [],
       "name": "getSurfaceTexture()"
+    },
+    "isValid()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isValid()"
+    },
+    "lockCanvas(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "inOutDirty"
+      ],
+      "returnType": "android.graphics.Canvas",
+      "exceptions": [],
+      "name": "lockCanvas(android.graphics.Rect)"
+    },
+    "lockHardwareCanvas()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Canvas",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "lockHardwareCanvas()"
+    },
+    "release()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "release()"
+    },
+    "unlockCanvasAndPost(android.graphics.Canvas)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "canvas"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unlockCanvasAndPost(android.graphics.Canvas)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.M",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.graphics.Canvas",
+    "android.graphics.Rect",
     "android.graphics.SurfaceTexture",
     "android.view.Surface",
     "dalvik.system.CloseGuard",
+    "java.lang.ref.WeakReference",
+    "java.util.concurrent.atomic.AtomicBoolean",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowSurfaceTexture.SurfaceTextureReflector",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.Direct",

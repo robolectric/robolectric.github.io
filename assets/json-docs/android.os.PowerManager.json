@@ -119,6 +119,17 @@
       "name": "getRebootReasons()",
       "documentation": "Returns the list of reasons for each reboot, in chronological order. "
     },
+    "getThermalStatusListeners()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableSet\u003cjava.lang.Object\u003e",
+      "exceptions": [],
+      "name": "getThermalStatusListeners()",
+      "documentation": "This function gets listeners for thermal status change. "
+    },
     "getTimesRebooted()": {
       "isImplementation": false,
       "modifiers": [
@@ -176,7 +187,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "isDeviceIdleMode()",
-      "documentation": "@return false by default, or the value specified via {@link #setIsDeviceIdleMode(boolean)} "
+      "documentation": "@return false by default, or the value specified via {@link #setIsDeviceIdleMode(boolean)}\n"
     },
     "isIgnoringBatteryOptimizations(java.lang.String)": {
       "isImplementation": true,
@@ -403,7 +414,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setIsInteractive(boolean)",
-      "documentation": "@deprecated Prefer {@link #turnScreenOn(boolean)} instead. "
+      "documentation": "@deprecated Prefer {@link #turnScreenOn(boolean)} instead.\n"
     },
     "setIsLightDeviceIdleMode(boolean)": {
       "isImplementation": false,
@@ -454,7 +465,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setIsScreenOn(boolean)",
-      "documentation": "@deprecated Use {@link #setIsInteractive(boolean)} instead. "
+      "documentation": "@deprecated Use {@link #setIsInteractive(boolean)} instead.\n"
     },
     "setIsWakeLockLevelSupported(int,boolean)": {
       "isImplementation": false,
@@ -515,6 +526,7 @@
     "android.content.Intent.ACTION_SCREEN_OFF",
     "android.content.Intent.ACTION_SCREEN_ON",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
@@ -537,6 +549,7 @@
     "android.os.PowerManager.WakeLock",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.ImmutableSet",
     "java.time.Duration",
     "java.util.ArrayList",
     "java.util.Collections",

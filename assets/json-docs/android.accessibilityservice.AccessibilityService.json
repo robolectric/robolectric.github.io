@@ -74,6 +74,19 @@
       "name": "setCanDispatchGestures(boolean)",
       "documentation": "Sets whether the service is currently able to dispatch gestures.\n\nIf {@code false}, {@link AccessibilityService#dispatchGesture} will return {@code false}.\n"
     },
+    "setTakeScreenshotErrorCode(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "errorCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTakeScreenshotErrorCode(int)",
+      "documentation": "Sets {@link AccessibilityService#takeScreenshot(int, Executor, TakeScreenshotCallback)} to\nstart returning the given {@code errorCode}.\n\n@see #unsetTakeScreenshotErrorCode() to unset the error condition.\n"
+    },
     "setWindows(java.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -86,20 +99,57 @@
       "exceptions": [],
       "name": "setWindows(java.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e)",
       "documentation": "Sets the list of interactive windows shown on the device screen as reported by {@link\n#getWindows()}\n"
+    },
+    "takeScreenshot(int,java.util.concurrent.Executor,android.accessibilityservice.AccessibilityService.TakeScreenshotCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "displayId",
+        "executor",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "takeScreenshot(int,java.util.concurrent.Executor,android.accessibilityservice.AccessibilityService.TakeScreenshotCallback)"
+    },
+    "unsetTakeScreenshotErrorCode()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unsetTakeScreenshotErrorCode()",
+      "documentation": "Sets {@link AccessibilityService#takeScreenshot(int, Executor, TakeScreenshotCallback)} to\nstart returning successful results again.\n\n@see #setTakeScreenshotErrorCode(int) to set an error condition instead.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.R",
     "android.accessibilityservice.AccessibilityService",
     "android.accessibilityservice.AccessibilityService.GestureResultCallback",
+    "android.accessibilityservice.AccessibilityService.ScreenshotErrorCode",
+    "android.accessibilityservice.AccessibilityService.ScreenshotResult",
+    "android.accessibilityservice.AccessibilityService.TakeScreenshotCallback",
     "android.accessibilityservice.GestureDescription",
+    "android.graphics.ColorSpace",
+    "android.graphics.ColorSpace.Named",
+    "android.hardware.HardwareBuffer",
     "android.os.Handler",
+    "android.os.SystemClock",
     "android.view.accessibility.AccessibilityWindowInfo",
     "java.util.ArrayList",
     "java.util.List",
+    "java.util.concurrent.Executor",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowAccessibilityService.GestureDispatch"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityService",

@@ -1,5 +1,20 @@
 {
   "methods": {
+    "getAttributeSetSourceResId(android.util.AttributeSet)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "attrs"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getAttributeSetSourceResId(android.util.AttributeSet)",
+      "documentation": "Returns the layout resource id the attribute set was inflated from. Backwards compatible\nversion of {@link Resources#getAttributeSetSourceResId(AttributeSet)}, passes through to the\nunderlying implementation on API levels where it is supported.\n"
+    },
     "getQuantityString(int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -219,6 +234,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCreatedFromResId(android.content.res.Resources,int,android.graphics.drawable.Drawable)"
+    },
+    "setSourceResourceId(android.content.res.XmlResourceParser,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "parser",
+        "resourceId"
+      ],
+      "returnType": "android.content.res.XmlResourceParser",
+      "exceptions": [],
+      "name": "setSourceResourceId(android.content.res.XmlResourceParser,int)"
     }
   },
   "imports": [
@@ -227,6 +256,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.shadows.ShadowAssetManager.legacyShadowOf",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.res.AssetFileDescriptor",
@@ -260,6 +290,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.internal.bytecode.ShadowedObject",
     "org.robolectric.res.Plural",
     "org.robolectric.res.PluralRules",
     "org.robolectric.res.ResName",
@@ -276,5 +307,6 @@
     "org.robolectric.shadows.ShadowResources.ShadowNotFoundException",
     "org.robolectric.shadows.ShadowResources.ResourcesReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowResources"
+  "name": "org.robolectric.shadows.ShadowResources",
+  "documentation": "Shadow of {@link Resources}. "
 }

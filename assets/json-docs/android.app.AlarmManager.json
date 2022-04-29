@@ -101,6 +101,23 @@
       "exceptions": [],
       "name": "internalSet(int,long,long,android.app.PendingIntent,android.app.PendingIntent)"
     },
+    "internalSet(int,long,long,android.app.PendingIntent,android.app.PendingIntent,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "type",
+        "triggerAtTime",
+        "interval",
+        "operation",
+        "showIntent",
+        "allowWhileIdle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "internalSet(int,long,long,android.app.PendingIntent,android.app.PendingIntent,boolean)"
+    },
     "peekNextScheduledAlarm()": {
       "isImplementation": false,
       "modifiers": [

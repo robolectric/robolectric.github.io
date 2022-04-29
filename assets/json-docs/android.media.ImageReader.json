@@ -1,0 +1,80 @@
+{
+  "methods": {
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "close()"
+    },
+    "nativeGetSurface()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.view.Surface",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "nativeGetSurface()"
+    },
+    "nativeImageSetup(android.media.Image)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "image"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "nativeImageSetup(android.media.Image)"
+    },
+    "nativeReleaseImage(android.media.Image)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "i"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "nativeReleaseImage(android.media.Image)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.graphics.Canvas",
+    "android.graphics.Rect",
+    "android.media.Image",
+    "android.media.ImageReader",
+    "android.media.ImageReader.OnImageAvailableListener",
+    "android.os.Handler",
+    "android.view.Surface",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Objects",
+    "java.util.concurrent.atomic.AtomicBoolean",
+    "java.util.concurrent.atomic.AtomicLong",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowImageReader.FakeSurface",
+    "org.robolectric.shadows.ShadowImageReader.ShadowSurfaceImage",
+    "org.robolectric.shadows.ShadowImageReader.ImageReaderReflector"
+  ],
+  "name": "org.robolectric.shadows.ShadowImageReader",
+  "documentation": "Shadow for {@link android.media.ImageReader} "
+}

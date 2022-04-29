@@ -123,7 +123,7 @@
       "name": "getPortStatus(java.lang.Object)"
     },
     "getPortStatus(java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -132,6 +132,7 @@
       ],
       "returnType": "java.lang.Object",
       "exceptions": [],
+      "minSdk": 23,
       "name": "getPortStatus(java.lang.String)",
       "documentation": "Returns the {@link UsbPortStatus} corresponding to the {@link UsbPort} with given {@code\nportId} if present; otherwise returns {@code null}.\n"
     },

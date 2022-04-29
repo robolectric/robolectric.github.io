@@ -93,7 +93,7 @@
       "documentation": "Sets the {@link AccessibilityNodeInfo} of the event source.\n\n@param node The node to set\n"
     },
     "setWindowId(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -102,11 +102,13 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 17,
       "name": "setWindowId(int)",
       "documentation": "Sets the id of the window from which the event comes.\n\n@param id The id to set\n"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.view.View",
     "android.view.accessibility.AccessibilityNodeInfo",

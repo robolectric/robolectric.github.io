@@ -1,9 +1,9 @@
 {
   "methods": {
     "getSettingForType(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
-        "private",
+        "protected",
         "static"
       ],
       "params": [

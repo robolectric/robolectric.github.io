@@ -53,13 +53,14 @@
       "documentation": "Returns the total number of sockets bound to this network interface. "
     },
     "getNetId()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 30,
       "name": "getNetId()",
       "documentation": "Allows to get the stored netId.\n\n@return The netId.\n"
     },
@@ -121,6 +122,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.R",
     "android.net.Network",
     "java.io.FileDescriptor",
     "java.net.DatagramSocket",

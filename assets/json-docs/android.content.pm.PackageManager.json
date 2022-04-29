@@ -361,7 +361,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPackageNoDefaults(android.content.pm.PackageInfo)",
-      "documentation": "Adds a package to the {@link PackageManager}, but doesn\u0027t set any default values on it.\n\nRight now it will not set {@link ApplicationInfo#FLAG_INSTALLED} flag on its application, so\nif not set explicitly, it will be treated as not installed.\n"
+      "documentation": "Adds a package to the {@link PackageManager}, but doesn\u0027t set any default values on it.\n\n\u003cp\u003eRight now it will not set {@link ApplicationInfo#FLAG_INSTALLED} flag on its application, so\nif not set explicitly, it will be treated as not installed.\n"
     },
     "addPermissionGroupInfo(android.content.pm.PermissionGroupInfo)": {
       "isImplementation": false,
@@ -708,7 +708,7 @@
       "documentation": "Uninstalls the package from the system in a way, that will allow its discovery through {@link\nPackageManager#MATCH_UNINSTALLED_PACKAGES}.\n"
     },
     "deletePackage(java.lang.String,android.content.pm.IPackageDeleteObserver,int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "protected"
       ],
@@ -757,6 +757,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "freeStorageAndNotify(long,android.content.pm.IPackageDataObserver)"
+    },
+    "generatePackageInfo(android.content.pm.PackageParser.Package,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "appPackage",
+        "flags"
+      ],
+      "returnType": "android.content.pm.PackageInfo",
+      "exceptions": [],
+      "name": "generatePackageInfo(android.content.pm.PackageParser.Package,int)"
     },
     "getComponentEnabledSettingFlags(android.content.ComponentName)": {
       "isImplementation": false,
@@ -1224,6 +1237,21 @@
       "name": "setCanRequestPackageInstalls(boolean)",
       "documentation": "Sets if the {@link PackageManager} is allowed to request package installs through package\ninstaller.\n"
     },
+    "setInstallSourceInfo(java.lang.String,java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName",
+        "initiatingPackage",
+        "installerPackage"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInstallSourceInfo(java.lang.String,java.lang.String,java.lang.String)",
+      "documentation": "Adds install source information for a package. "
+    },
     "setNameForUid(int,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -1412,6 +1440,7 @@
     "android.content.pm.FeatureInfo",
     "android.content.pm.IPackageDataObserver",
     "android.content.pm.IPackageDeleteObserver",
+    "android.content.pm.InstallSourceInfo",
     "android.content.pm.ModuleInfo",
     "android.content.pm.PackageInfo",
     "android.content.pm.PackageManager",

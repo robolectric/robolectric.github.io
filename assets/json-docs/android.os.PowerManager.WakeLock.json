@@ -106,15 +106,16 @@
       "name": "setReferenceCounted(boolean)"
     },
     "setTag(java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
-        "private"
+        "protected"
       ],
       "params": [
         "tag"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 22,
       "name": "setTag(java.lang.String)",
       "documentation": "Sets the tag. "
     },
@@ -136,6 +137,7 @@
     "android.content.Intent.ACTION_SCREEN_OFF",
     "android.content.Intent.ACTION_SCREEN_ON",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
@@ -158,6 +160,7 @@
     "android.os.PowerManager.WakeLock",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.ImmutableSet",
     "java.time.Duration",
     "java.util.ArrayList",
     "java.util.Collections",

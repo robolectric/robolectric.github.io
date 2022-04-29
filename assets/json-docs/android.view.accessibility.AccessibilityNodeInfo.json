@@ -1506,6 +1506,7 @@
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Rect",
     "android.os.Bundle",
     "android.os.Parcel",
@@ -1533,10 +1534,13 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
     "org.robolectric.shadows.ShadowAccessibilityNodeInfo.StrictEqualityNodeWrapper",
     "org.robolectric.shadows.ShadowAccessibilityNodeInfo.ShadowAccessibilityAction",
-    "org.robolectric.shadows.ShadowAccessibilityNodeInfo.OnPerformActionListener"
+    "org.robolectric.shadows.ShadowAccessibilityNodeInfo.OnPerformActionListener",
+    "org.robolectric.shadows.ShadowAccessibilityNodeInfo.AccessibilityNodeInfoReflector"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo",
   "documentation": "Properties of {@link android.view.accessibility.AccessibilityNodeInfo} that are normally locked\nmay be changed using test APIs.\n\nCalls to {@code obtain()} and {@code recycle()} are tracked to help spot bugs.\n"

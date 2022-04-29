@@ -170,6 +170,19 @@
       "name": "getProfileProxy(android.content.Context,android.bluetooth.BluetoothProfile.ServiceListener,int)",
       "documentation": "Overrides behavior of {@link getProfileProxy} if {@link ShadowBluetoothAdapter#setProfileProxy}\nhas been previously called.\n\n\u003cp\u003eIf active (non-null) proxy has been set by {@link setProfileProxy} for the given {@code\nprofile}, {@link getProfileProxy} will immediately call {@code onServiceConnected} of the given\nBluetoothProfile.ServiceListener {@code listener}.\n\n@return \u0027true\u0027 if a proxy object has been set by {@link setProfileProxy} for the given\n    BluetoothProfile {@code profile}\n"
     },
+    "getRemoteDevice(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "synchronized"
+      ],
+      "params": [
+        "address"
+      ],
+      "returnType": "android.bluetooth.BluetoothDevice",
+      "exceptions": [],
+      "name": "getRemoteDevice(java.lang.String)"
+    },
     "getScanMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -482,7 +495,7 @@
       "params": [
         "scanMode"
       ],
-      "returnType": "boolean",
+      "returnType": "java.lang.Object",
       "exceptions": [],
       "name": "setScanMode(int)"
     },

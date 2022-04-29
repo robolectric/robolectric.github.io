@@ -65,6 +65,7 @@
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Rect",
     "android.os.Bundle",
     "android.os.Parcel",
@@ -92,7 +93,9 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static"
   ],
   "name": "org.robolectric.shadows.ShadowAccessibilityNodeInfo.ShadowAccessibilityAction",
   "documentation": "Shadow of AccessibilityAction.\n"

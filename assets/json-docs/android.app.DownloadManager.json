@@ -15,6 +15,45 @@
       "exceptions": [],
       "name": "\u003cT\u003egetFieldReflectively(java.lang.String,java.lang.Object,java.lang.Class\u003cT\u003e)"
     },
+    "addCompletedDownload(java.lang.String,java.lang.String,boolean,java.lang.String,java.lang.String,long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "title",
+        "description",
+        "isMediaScannerScannable",
+        "mimeType",
+        "path",
+        "length",
+        "showNotification"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "addCompletedDownload(java.lang.String,java.lang.String,boolean,java.lang.String,java.lang.String,long,boolean)"
+    },
+    "addCompletedDownload(java.lang.String,java.lang.String,boolean,java.lang.String,java.lang.String,long,boolean,android.net.Uri,android.net.Uri)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "title",
+        "description",
+        "isMediaScannerScannable",
+        "mimeType",
+        "path",
+        "length",
+        "showNotification",
+        "uri",
+        "referrer"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "addCompletedDownload(java.lang.String,java.lang.String,boolean,java.lang.String,java.lang.String,long,boolean,android.net.Uri,android.net.Uri)"
+    },
     "enqueue(android.app.DownloadManager.Request)": {
       "isImplementation": true,
       "modifiers": [
@@ -26,6 +65,28 @@
       "returnType": "long",
       "exceptions": [],
       "name": "enqueue(android.app.DownloadManager.Request)"
+    },
+    "getCompletedDownload(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowDownloadManager.CompletedDownload",
+      "exceptions": [],
+      "name": "getCompletedDownload(long)"
+    },
+    "getCompletedDownloadsCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getCompletedDownloadsCount()"
     },
     "getRequest(long)": {
       "isImplementation": false,
@@ -82,11 +143,16 @@
     "android.os.Environment",
     "android.util.Pair",
     "com.android.internal.util.ArrayUtils",
+    "com.google.common.base.Preconditions",
+    "com.google.common.base.Strings",
     "java.io.File",
     "java.util.ArrayList",
+    "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.Objects",
     "java.util.TreeMap",
+    "javax.annotation.Nullable",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
@@ -95,7 +161,8 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowDownloadManager.ShadowRequest",
     "org.robolectric.shadows.ShadowDownloadManager.ShadowQuery",
-    "org.robolectric.shadows.ShadowDownloadManager.ResultCursor"
+    "org.robolectric.shadows.ShadowDownloadManager.ResultCursor",
+    "org.robolectric.shadows.ShadowDownloadManager.CompletedDownload"
   ],
   "name": "org.robolectric.shadows.ShadowDownloadManager"
 }

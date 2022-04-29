@@ -182,7 +182,7 @@
       "name": "setDetailedState(android.net.NetworkInfo.DetailedState)"
     },
     "setExtraInfo(java.lang.String)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],

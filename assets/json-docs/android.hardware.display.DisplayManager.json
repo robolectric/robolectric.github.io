@@ -204,7 +204,7 @@
       "documentation": "Set the default brightness configuration for this device. "
     },
     "setSaturationLevel(float)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
@@ -213,8 +213,9 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 28,
       "name": "setSaturationLevel(float)",
-      "documentation": "Sets the current display saturation level.\n\nThis is a workaround for tests which cannot use the relevant hidden\n{@link android.annotation.SystemApi},\n{@link android.hardware.display.DisplayManager#setSaturationLevel(float)}.\n"
+      "documentation": "Sets the current display saturation level.\n\n\u003cp\u003eThis is a workaround for tests which cannot use the relevant hidden {@link\nandroid.annotation.SystemApi}, {@link\nandroid.hardware.display.DisplayManager#setSaturationLevel(float)}.\n"
     }
   },
   "imports": [

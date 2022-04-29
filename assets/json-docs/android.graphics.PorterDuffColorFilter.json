@@ -15,30 +15,33 @@
       "name": "__constructor__(int,android.graphics.PorterDuff.Mode)"
     },
     "getColor()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "minSdk": 21,
       "name": "getColor()",
-      "documentation": "@return Returns the ARGB color used to tint the source pixels when this filter\nis applied.\n"
+      "documentation": "@return Returns the ARGB color used to tint the source pixels when this filter is applied.\n"
     },
     "getMode()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [],
       "returnType": "android.graphics.PorterDuff.Mode",
       "exceptions": [],
+      "minSdk": 21,
       "name": "getMode()",
-      "documentation": "@return Returns the Porter-Duff mode used to composite this color filter\u0027s\ncolor with the source pixel when this filter is applied.\n"
+      "documentation": "@return Returns the Porter-Duff mode used to composite this color filter\u0027s color with the\n    source pixel when this filter is applied.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.PorterDuff",
     "android.graphics.PorterDuffColorFilter",

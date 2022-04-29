@@ -1,5 +1,18 @@
 {
   "methods": {
+    "areAllPrimitivesSupported(int...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "primitiveIds"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "areAllPrimitivesSupported(int...)"
+    },
     "getEffectId()": {
       "isImplementation": false,
       "modifiers": [
@@ -20,7 +33,7 @@
       "returnType": "long",
       "exceptions": [],
       "name": "getMilliseconds()",
-      "documentation": "Returns the last vibration duration in MS.\n"
+      "documentation": "Returns the last vibration duration in MS. "
     },
     "getPattern()": {
       "isImplementation": false,
@@ -31,7 +44,7 @@
       "returnType": "long[]",
       "exceptions": [],
       "name": "getPattern()",
-      "documentation": "Returns the last vibration pattern.\n"
+      "documentation": "Returns the last vibration pattern. "
     },
     "getRepeat()": {
       "isImplementation": false,
@@ -42,7 +55,29 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getRepeat()",
-      "documentation": "Returns the last vibration repeat times.\n"
+      "documentation": "Returns the last vibration repeat times. "
+    },
+    "getVibrationAttributesFromLastVibration()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.VibrationAttributes",
+      "exceptions": [],
+      "name": "getVibrationAttributesFromLastVibration()",
+      "documentation": "Returns the {@link VibrationAttributes} from the last vibration. "
+    },
+    "getVibrationEffectSegments()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.os.vibrator.VibrationEffectSegment\u003e",
+      "exceptions": [],
+      "name": "getVibrationEffectSegments()",
+      "documentation": "Returns the last list of {@link VibrationEffectSegment}. "
     },
     "isCancelled()": {
       "isImplementation": false,
@@ -53,18 +88,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isCancelled()",
-      "documentation": "Returns true if the Vibrator has been cancelled.\n"
+      "documentation": "Returns true if the Vibrator has been cancelled. "
     },
     "isVibrating()": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 30,
       "name": "isVibrating()",
-      "documentation": "Returns true if the Vibrator is currently vibrating as controlled by {@link Vibrator#vibrate(long)}\n"
+      "documentation": "Returns true if the Vibrator is currently vibrating as controlled by {@link\nVibrator#vibrate(long)}\n"
     },
     "setHasAmplitudeControl(boolean)": {
       "isImplementation": false,
@@ -77,7 +113,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setHasAmplitudeControl(boolean)",
-      "documentation": "Controls the return value of {@link Vibrator#hasAmplitudeControl()} the default is false.\n"
+      "documentation": "Controls the return value of {@link Vibrator#hasAmplitudeControl()} the default is false. "
     },
     "setHasVibrator(boolean)": {
       "isImplementation": false,
@@ -90,11 +126,33 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setHasVibrator(boolean)",
-      "documentation": "Controls the return value of {@link Vibrator#hasVibrator()} the default is true.\n"
+      "documentation": "Controls the return value of {@link Vibrator#hasVibrator()} the default is true. "
+    },
+    "setSupportedPrimitives(java.util.Collection\u003cjava.lang.Integer\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "primitives"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupportedPrimitives(java.util.Collection\u003cjava.lang.Integer\u003e)",
+      "documentation": "Adds supported vibration primitives. "
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.VibrationAttributes",
+    "android.os.VibrationEffect",
     "android.os.Vibrator",
+    "android.os.vibrator.VibrationEffectSegment",
+    "java.util.ArrayList",
+    "java.util.Collection",
+    "java.util.List",
+    "javax.annotation.Nullable",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowVibrator"

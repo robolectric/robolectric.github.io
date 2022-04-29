@@ -12,7 +12,24 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 19,
       "name": "__constructor__(android.content.Context,android.util.AttributeSet,int)"
+    },
+    "__constructor__(android.content.Context,android.util.AttributeSet,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "attributeSet",
+        "defStyleAttr",
+        "defStyleRes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 20,
+      "name": "__constructor__(android.content.Context,android.util.AttributeSet,int,int)"
     },
     "addGlobalPerformClickListener(android.view.View.OnClickListener)": {
       "isImplementation": false,
@@ -54,6 +71,18 @@
       "exceptions": [],
       "name": "addOnAttachStateChangeListener(android.view.View.OnAttachStateChangeListener)"
     },
+    "addOnLayoutChangeListener(android.view.View.OnLayoutChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "onLayoutChangeListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addOnLayoutChangeListener(android.view.View.OnLayoutChangeListener)"
+    },
     "callOnAttachedToWindow()": {
       "isImplementation": false,
       "modifiers": [
@@ -83,7 +112,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "checkedPerformClick()",
-      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when using the actual app.\n\nIf running with LooperMode PAUSED will also idle the main Looper.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not visible.\n@return Return value of the underlying click operation.\n@deprecated - Please use Espresso for View interactions.\n"
+      "documentation": "Utility method for clicking on views exposing testing scenarios that are not possible when\nusing the actual app.\n\n\u003cp\u003eIf running with LooperMode PAUSED will also idle the main Looper.\n\n@throws RuntimeException if the view is disabled or if the view or any of its parents are not\n    visible.\n@return Return value of the underlying click operation.\n@deprecated - Please use Espresso for View interactions.\n"
     },
     "clearAnimation()": {
       "isImplementation": true,
@@ -104,7 +133,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "clearWasInvalidated()",
-      "documentation": "Clears the wasInvalidated flag\n"
+      "documentation": "Clears the wasInvalidated flag "
     },
     "clickOn(android.view.View)": {
       "isImplementation": false,
@@ -118,7 +147,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "clickOn(android.view.View)",
-      "documentation": "Calls {@code performClick()} on a {@code View} after ensuring that it and its ancestors are visible and that it\nis enabled.\n\n@param view the view to click on\n@return true if {@code View.OnClickListener}s were found and fired, false otherwise.\n@throws RuntimeException if the preconditions are not met.\n@deprecated Please use Espresso for view interactions\n"
+      "documentation": "Calls {@code performClick()} on a {@code View} after ensuring that it and its ancestors are\nvisible and that it is enabled.\n\n@param view the view to click on\n@return true if {@code View.OnClickListener}s were found and fired, false otherwise.\n@throws RuntimeException if the preconditions are not met.\n@deprecated Please use Espresso for view interactions\n"
     },
     "didRequestLayout()": {
       "isImplementation": false,
@@ -151,7 +180,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "dump()",
-      "documentation": "Dumps the status of this {@code View} to {@code System.out}\n@deprecated - Please use {@link androidx.test.espresso.util.HumanReadables#describe(View)}\n"
+      "documentation": "Dumps the status of this {@code View} to {@code System.out}\n\n@deprecated - Please use {@link androidx.test.espresso.util.HumanReadables#describe(View)}\n"
     },
     "dump(android.view.View)": {
       "isImplementation": false,
@@ -179,7 +208,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "dump(java.io.PrintStream,int)",
-      "documentation": "Dumps the status of this {@code View} to {@code System.out} at the given indentation level\n@param out Output stream.\n@param indent Indentation level.\n@deprecated - Please use {@link androidx.test.espresso.util.HumanReadables#describe(View)}\n"
+      "documentation": "Dumps the status of this {@code View} to {@code System.out} at the given indentation level\n\n@param out Output stream.\n@param indent Indentation level.\n@deprecated - Please use {@link androidx.test.espresso.util.HumanReadables#describe(View)}\n"
     },
     "dumpAttribute(java.io.PrintStream,java.lang.String,java.lang.String)": {
       "isImplementation": false,
@@ -276,6 +305,18 @@
       "exceptions": [],
       "name": "getLayerType()"
     },
+    "getLocationOnScreen(int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "outLocation"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "getLocationOnScreen(int[])"
+    },
     "getOnAttachStateChangeListeners()": {
       "isImplementation": false,
       "modifiers": [
@@ -285,7 +326,7 @@
       "returnType": "java.util.Set\u003candroid.view.View.OnAttachStateChangeListener\u003e",
       "exceptions": [],
       "name": "getOnAttachStateChangeListeners()",
-      "documentation": "@return Returns the attached listeners, or the empty set if none are present. "
+      "documentation": "@return Returns the attached listeners, or the empty set if none are present.\n"
     },
     "getOnClickListener()": {
       "isImplementation": false,
@@ -309,14 +350,26 @@
       "name": "getOnCreateContextMenuListener()",
       "documentation": "@return Returns create ContextMenu listener, if set.\n"
     },
-    "getOnLongClickListener()": {
+    "getOnLayoutChangeListeners()": {
       "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003candroid.view.View.OnLayoutChangeListener\u003e",
+      "exceptions": [],
+      "name": "getOnLayoutChangeListeners()",
+      "documentation": "@return Returns the layout change listeners, or the empty set if none are present.\n"
+    },
+    "getOnLongClickListener()": {
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [],
       "returnType": "android.view.View.OnLongClickListener",
       "exceptions": [],
+      "minSdk": 30,
       "name": "getOnLongClickListener()",
       "documentation": "@return Returns long click listener, if set.\n"
     },
@@ -362,6 +415,18 @@
       "exceptions": [],
       "name": "getScrollY()"
     },
+    "getSourceLayoutResId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getSourceLayoutResId()",
+      "documentation": "Returns the layout resource id this view was inflated from. Backwards compatible version of\n{@link View#getSourceLayoutResId()}, passes through to the underlying implementation on API\nlevels where it is supported.\n"
+    },
     "getWindowDisplayFrame(android.graphics.Rect)": {
       "isImplementation": true,
       "modifiers": [
@@ -386,6 +451,16 @@
       "minSdk": 18,
       "name": "getWindowId()"
     },
+    "getWindowLocation()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "int[]",
+      "exceptions": [],
+      "name": "getWindowLocation()"
+    },
     "getWindowVisibleDisplayFrame(android.graphics.Rect)": {
       "isImplementation": true,
       "modifiers": [
@@ -398,6 +473,16 @@
       "exceptions": [],
       "name": "getWindowVisibleDisplayFrame(android.graphics.Rect)"
     },
+    "initialAwakenScrollBars()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "initialAwakenScrollBars()"
+    },
     "innerText()": {
       "isImplementation": false,
       "modifiers": [
@@ -407,7 +492,7 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "innerText()",
-      "documentation": "Returns a string representation of this {@code View}. Unless overridden, it will be an empty string.\n\nRobolectric extension.\n@return String representation of this view.\n"
+      "documentation": "Returns a string representation of this {@code View}. Unless overridden, it will be an empty\nstring.\n\n\u003cp\u003eRobolectric extension.\n\n@return String representation of this view.\n"
     },
     "innerText(android.view.View)": {
       "isImplementation": false,
@@ -453,6 +538,20 @@
       "returnType": "int",
       "exceptions": [],
       "name": "lastHapticFeedbackPerformed()"
+    },
+    "mapRectFromViewToScreenCoords(android.graphics.RectF,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rect",
+        "clipToParent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "mapRectFromViewToScreenCoords(android.graphics.RectF,boolean)"
     },
     "onLayout(boolean,int,int,int,int)": {
       "isImplementation": true,
@@ -612,6 +711,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "removeOnAttachStateChangeListener(android.view.View.OnAttachStateChangeListener)"
+    },
+    "removeOnLayoutChangeListener(android.view.View.OnLayoutChangeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "onLayoutChangeListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeOnLayoutChangeListener(android.view.View.OnLayoutChangeListener)"
     },
     "requestLayout()": {
       "isImplementation": true,
@@ -858,7 +969,11 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
     "org.robolectric.util.ReflectionHelpers.getField",
@@ -869,6 +984,7 @@
     "android.graphics.Paint",
     "android.graphics.Point",
     "android.graphics.Rect",
+    "android.graphics.RectF",
     "android.graphics.drawable.Drawable",
     "android.os.Looper",
     "android.os.RemoteException",
@@ -880,8 +996,10 @@
     "android.view.IWindowId",
     "android.view.MotionEvent",
     "android.view.View",
+    "android.view.ViewGroup.LayoutParams",
     "android.view.ViewParent",
     "android.view.WindowId",
+    "android.view.WindowManager",
     "android.view.animation.Animation",
     "android.view.animation.Transformation",
     "android.widget.ImageView",
@@ -891,10 +1009,12 @@
     "java.util.List",
     "java.util.Set",
     "java.util.concurrent.CopyOnWriteArrayList",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.ReflectorObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",

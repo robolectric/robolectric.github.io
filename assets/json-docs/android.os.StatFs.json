@@ -186,6 +186,34 @@
       "returnType": "void",
       "exceptions": [],
       "name": "restat(java.lang.String)"
+    },
+    "unregisterStats(java.io.File)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterStats(java.io.File)",
+      "documentation": "Unregister stats for a path. If the path is not registered, it will be a no-op.\n\n@param path path to the file\n"
+    },
+    "unregisterStats(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "path"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterStats(java.lang.String)",
+      "documentation": "Unregister stats for a path. If the path is not registered, it will be a no-op.\n\n@param path path to the file\n"
     }
   },
   "imports": [

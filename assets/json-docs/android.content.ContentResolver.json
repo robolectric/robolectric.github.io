@@ -161,7 +161,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "bulkInsert(android.net.Uri,android.content.ContentValues[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#bulkInsert(Uri, ContentValues[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and the number\nof rows in {@code values} will be returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#bulkInsert(Uri, ContentValues[])} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\n\u003cp\u003eIf no appropriate {@link ContentProvider} is found, no action will be taken and the number\nof rows in {@code values} will be returned.\n"
     },
     "call(android.net.Uri,java.lang.String,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
@@ -232,7 +232,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "delete(android.net.Uri,java.lang.String,java.lang.String[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#delete(Uri, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getDeleteStatements()} or {@link\n#getDeletedUris()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and {@code 1}\nwill be returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#delete(Uri, String, String[])} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getDeleteStatements()} or {@link\n#getDeletedUris()}.\n\n\u003cp\u003eIf no appropriate {@link ContentProvider} is found, no action will be taken and {@code 1}\nwill be returned.\n"
     },
     "getContentObservers(android.net.Uri)": {
       "isImplementation": false,
@@ -245,7 +245,7 @@
       "returnType": "java.util.Collection\u003candroid.database.ContentObserver\u003e",
       "exceptions": [],
       "name": "getContentObservers(android.net.Uri)",
-      "documentation": "Returns the content observers registered for updates under the given URI.\n\nWill be empty if no observer is registered.\n\n@param uri Given URI\n@return The content observers, or null\n"
+      "documentation": "Returns the content observers registered for updates under the given URI.\n\n\u003cp\u003eWill be empty if no observer is registered.\n\n@param uri Given URI\n@return The content observers, or null\n"
     },
     "getContentProviderClient(android.content.ContentProvider,boolean)": {
       "isImplementation": false,
@@ -281,6 +281,17 @@
       "returnType": "android.content.Context",
       "exceptions": [],
       "name": "getContext()"
+    },
+    "getCurrentSyncs()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.content.SyncInfo\u003e",
+      "exceptions": [],
+      "name": "getCurrentSyncs()"
     },
     "getCursor(android.net.Uri)": {
       "isImplementation": false,
@@ -529,7 +540,7 @@
       "returnType": "android.net.Uri",
       "exceptions": [],
       "name": "insert(android.net.Uri,android.content.ContentValues)",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#insert(Uri, ContentValues)} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\nIf no appropriate {@link ContentProvider} is found, no action will be taken and a {@link\nUri} including the incremented value set with {@link #setNextDatabaseIdForInserts(int)} will\nreturned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#insert(Uri, ContentValues)} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getStatements()} or {@link\n#getInsertStatements()}.\n\n\u003cp\u003eIf no appropriate {@link ContentProvider} is found, no action will be taken and a {@link\nUri} including the incremented value set with {@link #setNextDatabaseIdForInserts(int)} will\nreturned.\n"
     },
     "isBundleEqual(android.os.Bundle,android.os.Bundle)": {
       "isImplementation": false,
@@ -996,7 +1007,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])",
-      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\nTests can verify that this method was called using {@link #getStatements()} or {@link\n#getUpdateStatements()}.\n\n@return If no appropriate {@link ContentProvider} is found, no action will be taken and 1 will\n    be returned.\n"
+      "documentation": "If a {@link ContentProvider} is registered for the given {@link Uri}, its {@link\nContentProvider#update(Uri, ContentValues, String, String[])} method will be invoked.\n\n\u003cp\u003eTests can verify that this method was called using {@link #getStatements()} or {@link\n#getUpdateStatements()}.\n\n@return If no appropriate {@link ContentProvider} is found, no action will be taken and 1 will\n    be returned.\n"
     },
     "validateSyncExtrasBundle(android.os.Bundle)": {
       "isImplementation": true,
@@ -1036,6 +1047,7 @@
     "android.content.OperationApplicationException",
     "android.content.PeriodicSync",
     "android.content.SyncAdapterType",
+    "android.content.SyncInfo",
     "android.content.UriPermission",
     "android.content.pm.ProviderInfo",
     "android.database.ContentObserver",
