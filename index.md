@@ -16,11 +16,13 @@ public class MyActivityTest {
 
   @Test
   public void clickingButton_shouldChangeMessage() {
-    MyActivity activity = Robolectric.setupActivity(MyActivity.class);
+    try (ActivityController<MyActvitiy> controller = Robolectric.buildActivity(MyActvitiy.class)) {
+      controller.setup(); // Moves Activity to RESUMED state
+      MyActvitiy activity = controller.get();
 
-    activity.button.performClick();
-
-    assertThat(activity.message.getText()).isEqualTo("Robolectric Rocks!");
+      activity.findViewById(R.id.button).performClick();
+      assertEquals(((TextView) activity.findViewById(R.id.text)).getText(), "Robolectric Rocks!");
+    }
   }
 }
 ```
