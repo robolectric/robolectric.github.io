@@ -27,7 +27,7 @@ This section contains instructions for an Ubuntu Linux system. Other Linux syste
 ```
 # Install prerequisites
 sudo apt-get update
-sudo apt-get install git openjdk-11-jdk clang make cmake ninja-build
+sudo apt-get install git default-jdk openjdk-11-jdk clang make cmake ninja-build
 git clone --recurse-submodules https://github.com/robolectric/robolectric.git
 # If you forgot --recurse-submodules, you can also run `git submodule update --init --recursive` from the 'robolectric' directory.
 cd robolectric
