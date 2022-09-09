@@ -1,21 +1,21 @@
 ---
-title:  "GSoC 2022 final submission for ConscryptMode"
-author: Umesh-01
+title:  "GSoC 2022 - ConscryptMode"
+author: Umesh Singh
 ---
 
-My name is Umesh Singh and I was an open source contributor through Google Summer of Code this year. Google Summer of Code (GSoC) is a program where external participants can contribute to an open source project over a few months. We learn new computer science concepts, how to work on open source repositories, and create real code contributions to projects!
+My name is [Umesh Singh](https://github.com/Umesh-01) and I was an open source contributor through Google Summer of Code this year. Google Summer of Code (GSoC) is a program where external participants can contribute to an open source project over a few months. We learn new computer science concepts, how to work on open source repositories, and create real code contributions to projects!
 
 My project was `Switching Robolectric from BouncyCastle to Conscrypt as the default security provider`. Robolectric was using [BouncyCastle](https://www.bouncycastle.org/) as the Java Cryptography Extension (JCE) security provider. After the introduction of Android P, Android switched to using [Google Conscrypt](https://source.android.com/docs/core/architecture/modular-system/conscrypt) as the security provider. 
 To be more consistent with Android, Robolectric needed to be updated to use Conscrypt as the default security provider.
  
-When I encountered Robolectric in the GSOC organization list I know it would be a great fit. I had prior experience with Android development and was looking for growth opportunities in this area. Robolectric also offered a lot of learning opportunities in Java, security, and unit testing concepts. 
+When I encountered Robolectric in the GSoC organization list I know it would be a great fit. I had prior experience with Android development and was looking for growth opportunities in this area. Robolectric also offered a lot of learning opportunities in Java, security, and unit testing concepts. 
 
 The initial approach for this project was to drop BouncyCastle entirely and switch to Conscrypt. This seemed appealing due to the prior issues with BouncyCastle, such as [#5456](https://github.com/robolectric/robolectric/issues/5456). However, we discovered that we couldn't completely switch Robolectric to Conscrypt. Conscrypt only supports the security primitives provided by BoringSSL, and there were some legacy security primitives that were still being used in Android. Because of this we realized that BouncyCastle was needed as the fallback security provider. We settled on having a `@ConscryptMode` annotation that lets users choose whether Conscrypt will be installed or not. When Conscrypt is enabled, Robolectric will search for a requested security feature from Conscrypt first. If it does not support it, the other security providers will be queried. This is more consistent with how Android does it.
 
 - If ConscryptMode is `ON`, it will install Conscrypt and BouncyCastle.
 - If ConscryptMode is `OFF`, it will only install BouncyCastle.
 
-I have learned about unit testing like how to test whether a piece of code is working according to the expected behavior or not, writing tests for specific scenarios, and providing self-explanatory names to methods so that other developers can understand them easily in the future.
+I have learned a lot about about unit testing, such as how to test whether a piece of code is working according to the expected behavior, and about writing tests for specific scenarios . I have also learned about providing self-explanatory names to methods so that other developers can understand them easily in the future.
 
 I gained experience debugging a large, complex codebase like Robolectric, and how to find the root cause of errors and test case failures. I learned about defining new Java runtime annotations. These get compiled into the bytecode and can later be inspected in other parts of the project. 
 
