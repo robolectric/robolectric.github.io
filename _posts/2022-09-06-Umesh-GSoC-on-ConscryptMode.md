@@ -15,7 +15,7 @@ The initial approach for this project was to drop BouncyCastle entirely and swit
 - If ConscryptMode is `ON`, it will install Conscrypt and BouncyCastle.
 - If ConscryptMode is `OFF`, it will only install BouncyCastle.
 
-I have learned a lot about about unit testing, such as how to test whether a piece of code is working according to the expected behavior, and about writing tests for specific scenarios . I have also learned about providing self-explanatory names to methods so that other developers can understand them easily in the future.
+I have learned a lot about unit testing, such as how to test whether a piece of code is working according to the expected behavior, and about writing tests for specific scenarios. I have also learned about providing self-explanatory names to methods so that other developers can understand them easily in the future.
 
 I gained experience debugging a large, complex codebase like Robolectric, and how to find the root cause of errors and test case failures. I learned about defining new Java runtime annotations. These get compiled into the bytecode and can later be inspected in other parts of the project. 
 
