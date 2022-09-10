@@ -1,7 +1,5 @@
 # Robolectric
 
-[![Build Status](https://secure.travis-ci.org/robolectric/robolectric.github.io.png?branch=master)](http://travis-ci.org/robolectric/robolectric.github.io)
-
 This repository is the source for the docs that live at [robolectric.org](http://robolectric.org).
 
 ## Contributing
