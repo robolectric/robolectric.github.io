@@ -132,7 +132,7 @@ android {
 }
 ```
 
-# ConscryptMode 
+## ConscryptMode
 
 Starting in Robolectric 4.9, Robolectric can currently either use Conscrypt and BouncyCastle or just BouncyCastle as the security provider. 
 In order to migrate tests over time, there is a [ConscryptMode](https://github.com/robolectric/robolectric/blob/master/annotations/src/main/java/org/robolectric/annotation/ConscryptMode.java) annotation that controls whether Conscrypt is loaded as the default security provider with BouncyCastle as backup. 
