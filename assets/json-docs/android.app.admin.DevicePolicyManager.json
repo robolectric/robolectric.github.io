@@ -207,6 +207,20 @@
       "name": "failSetApplicationHiddenFor(java.util.Collection\u003cjava.lang.String\u003e)",
       "documentation": "Set package names for witch {@link DevicePolicyManager#setApplicationHidden} should fail.\n\n@param packagesToFail collection of package names or {@code null} to clear the packages.\n"
     },
+    "finalizeWorkProfileProvisioning(android.os.UserHandle,android.accounts.Account)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "managedProfileUser",
+        "migratedAccount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "finalizeWorkProfileProvisioning(android.os.UserHandle,android.accounts.Account)"
+    },
     "getAccountTypesWithManagementDisabled()": {
       "isImplementation": true,
       "modifiers": [
@@ -279,6 +293,19 @@
       "minSdk": 21,
       "name": "getAutoTimeRequired()"
     },
+    "getAutoTimeZoneEnabled(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getAutoTimeZoneEnabled(android.content.ComponentName)"
+    },
     "getBindDeviceAdminTargetUsers(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -316,6 +343,17 @@
       "minSdk": 18,
       "name": "getDeviceOwner()",
       "documentation": "@see #setDeviceOwner(ComponentName) "
+    },
+    "getDevicePolicyManagementRoleHolderPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getDevicePolicyManagementRoleHolderPackage()"
     },
     "getKeyguardDisabledFeatures(android.content.ComponentName)": {
       "isImplementation": true,
@@ -637,6 +675,20 @@
       "minSdk": 21,
       "name": "getPermittedInputMethods(android.content.ComponentName)"
     },
+    "getPolicyManagedProfiles(android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "userHandle"
+      ],
+      "returnType": "java.util.List\u003candroid.os.UserHandle\u003e",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getPolicyManagedProfiles(android.os.UserHandle)",
+      "documentation": "Returns the managed profiles set in {@link #setPolicyManagedProfiles(List)}. This value does\nnot take the user handle parameter into account.\n"
+    },
     "getProfileOwner()": {
       "isImplementation": true,
       "modifiers": [
@@ -720,6 +772,17 @@
       "minSdk": 23,
       "name": "getSystemUpdatePolicy()"
     },
+    "getTimeZone()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getTimeZone()",
+      "documentation": "Returns the time zone set by setTimeZone. "
+    },
     "getUserProvisioningState()": {
       "isImplementation": true,
       "modifiers": [
@@ -730,7 +793,20 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "getUserProvisioningState()",
-      "documentation": "@return Returns the provisioning state for the current user. "
+      "documentation": "Returns the provisioning state set in {@link #setUserProvisioningState(int)}, or {@link\nDevicePolicyManager#STATE_USER_UNMANAGED} if none is set.\n"
+    },
+    "getUserProvisioningStateForUser(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userId"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getUserProvisioningStateForUser(int)",
+      "documentation": "Returns the user provisioning state set by {@link #setUserProvisioningState(int, UserHandle)},\nor {@link DevicePolicyManager#STATE_USER_UNMANAGED} if none is set.\n"
     },
     "getWipeCalledTimes()": {
       "isImplementation": false,
@@ -980,6 +1056,20 @@
       "minSdk": 31,
       "name": "isUsbDataSignalingEnabled()"
     },
+    "isWorkProfileProvisioningFinalized(android.os.UserHandle,android.accounts.Account)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "migratedAccount"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isWorkProfileProvisioningFinalized(android.os.UserHandle,android.accounts.Account)",
+      "documentation": "Returns if {@link #finalizeWorkProfileProvisioning(UserHandle, Account)} was called with the\nprovided parameters.\n"
+    },
     "lockNow()": {
       "isImplementation": true,
       "modifiers": [
@@ -1156,6 +1246,20 @@
       "minSdk": 21,
       "name": "setAutoTimeRequired(android.content.ComponentName,boolean)"
     },
+    "setAutoTimeZoneEnabled(android.content.ComponentName,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "setAutoTimeZoneEnabled(android.content.ComponentName,boolean)"
+    },
     "setBindDeviceAdminTargetUsers(java.util.List\u003candroid.os.UserHandle\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -1193,8 +1297,22 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 32,
       "name": "setDeviceOwner(android.content.ComponentName)",
       "documentation": "Sets the admin as active admin and device owner.\n\n@see DevicePolicyManager#getDeviceOwner()\n"
+    },
+    "setDevicePolicyManagementRoleHolderPackage(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDevicePolicyManagementRoleHolderPackage(java.lang.String)",
+      "documentation": "Sets the package name of the device policy management role holder.\n\n@see #getDevicePolicyManagementRoleHolderPackage()\n"
     },
     "setDeviceProvisioned(boolean)": {
       "isImplementation": false,
@@ -1613,6 +1731,19 @@
       "name": "setPermittedInputMethods(android.content.ComponentName,java.util.List\u003cjava.lang.String\u003e)",
       "documentation": "Sets permitted input methods.\n\n\u003cp\u003eThe API can be called by either a profile or device owner.\n\n\u003cp\u003eThis method does not check already enabled non-system input methods, so will always set the\nrestriction and return true.\n"
     },
+    "setPolicyManagedProfiles(java.util.List\u003candroid.os.UserHandle\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "policyManagedProfiles"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPolicyManagedProfiles(java.util.List\u003candroid.os.UserHandle\u003e)",
+      "documentation": "Sets the value returned by {@link #getPolicyManagedProfiles(UserHandle)}. "
+    },
     "setProfileOwner(android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
@@ -1720,6 +1851,20 @@
       "minSdk": 23,
       "name": "setSystemUpdatePolicy(android.content.ComponentName,android.app.admin.SystemUpdatePolicy)"
     },
+    "setTimeZone(android.content.ComponentName,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "timeZone"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "setTimeZone(android.content.ComponentName,java.lang.String)"
+    },
     "setUninstallBlocked(android.content.ComponentName,java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -1747,6 +1892,20 @@
       "exceptions": [],
       "name": "setUserProvisioningState(int)",
       "documentation": "Sets the user provisioning state.\n\n@param state to store provisioning state\n"
+    },
+    "setUserProvisioningState(int,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "state",
+        "userHandle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "setUserProvisioningState(int,android.os.UserHandle)"
     },
     "transferOwnership(android.content.ComponentName,android.content.ComponentName,android.os.PersistableBundle)": {
       "isImplementation": true,
@@ -1815,9 +1974,12 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.S_V2",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "android.accounts.Account",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
     "android.annotation.RequiresPermission",
@@ -1829,6 +1991,7 @@
     "android.app.admin.DevicePolicyManager",
     "android.app.admin.DevicePolicyManager.NearbyStreamingPolicy",
     "android.app.admin.DevicePolicyManager.PasswordComplexity",
+    "android.app.admin.DevicePolicyManager.UserProvisioningState",
     "android.app.admin.IDevicePolicyManager",
     "android.app.admin.SystemUpdatePolicy",
     "android.content.ComponentName",

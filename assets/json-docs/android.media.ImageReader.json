@@ -33,7 +33,22 @@
       "returnType": "int",
       "exceptions": [],
       "minSdk": 19,
+      "maxSdk": 32,
       "name": "nativeImageSetup(android.media.Image)"
+    },
+    "nativeImageSetup(android.media.Image,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "image",
+        "useLegacyImageFormat"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "nativeImageSetup(android.media.Image,boolean)"
     },
     "nativeReleaseImage(android.media.Image)": {
       "isImplementation": true,
@@ -51,6 +66,8 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.S_V2",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Canvas",
     "android.graphics.Rect",

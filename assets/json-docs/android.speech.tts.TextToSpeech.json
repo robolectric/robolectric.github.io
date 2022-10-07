@@ -96,6 +96,17 @@
       "exceptions": [],
       "name": "getLastSpokenText()"
     },
+    "getLastSynthesizeToFile()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.io.File",
+      "exceptions": [],
+      "name": "getLastSynthesizeToFile()",
+      "documentation": "Returns last file {@link File} written to by {@link TextToSpeech#synthesizeToFile(CharSequence,\nBundle, File, String)}.\n"
+    },
     "getLastSynthesizeToFileText()": {
       "isImplementation": false,
       "modifiers": [
@@ -260,6 +271,19 @@
       "exceptions": [],
       "name": "shutdown()"
     },
+    "simulateSynthesizeToFileResult(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "result"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "simulateSynthesizeToFileResult(int)",
+      "documentation": "Sets up synthesizeToFile to succeed or fail in the synthesis operation.\n\n\u003cp\u003eThis controls calls the relevant callbacks but does not set the return value of\nsynthesizeToFile.\n\n@param result TextToSpeech enum (SUCCESS, ERROR, or one of the ERROR_ codes from TextToSpeech)\n"
+    },
     "speak(java.lang.CharSequence,int,android.os.Bundle,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -313,7 +337,9 @@
         "utteranceId"
       ],
       "returnType": "int",
-      "exceptions": [],
+      "exceptions": [
+        "java.io.IOException"
+      ],
       "minSdk": 21,
       "name": "synthesizeToFile(java.lang.CharSequence,android.os.Bundle,java.io.File,java.lang.String)",
       "documentation": "Stores {@code text} and returns {@link TextToSpeech#SUCCESS}.\n\n@see #getLastSynthesizeToFileText()\n"
@@ -322,6 +348,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "java.nio.charset.StandardCharsets.UTF_8",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.Context",
     "android.os.Bundle",
@@ -333,6 +360,8 @@
     "android.speech.tts.Voice",
     "com.google.common.collect.ImmutableList",
     "java.io.File",
+    "java.io.IOException",
+    "java.io.PrintWriter",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.HashSet",
@@ -345,6 +374,8 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowMediaPlayer.MediaInfo",
+    "org.robolectric.shadows.util.DataSource",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Direct",

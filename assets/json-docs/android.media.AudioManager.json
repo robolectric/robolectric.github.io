@@ -41,6 +41,17 @@
       "name": "adjustStreamVolume(int,int,int)",
       "documentation": "Implements {@link AudioManager#adjustStreamVolume(int, int, int)}.\n\n\u003cp\u003eCurrently supports only the directions {@link AudioManager#ADJUST_MUTE}, {@link\nAudioManager#ADJUST_UNMUTE}, {@link AudioManager#ADJUST_LOWER} and {@link\nAudioManager#ADJUST_RAISE}.\n"
     },
+    "clearCommunicationDevice()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "clearCommunicationDevice()"
+    },
     "createActiveRecordingConfiguration(int,int,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -103,6 +114,30 @@
       "name": "getActiveRecordingConfigurations()",
       "documentation": "Returns list of active recording configurations that was set by {@link\n#setActiveRecordingConfigurations} or empty list otherwise.\n"
     },
+    "getCommunicationDevice()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.media.AudioDeviceInfo",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getCommunicationDevice()"
+    },
+    "getDevices(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "android.media.AudioDeviceInfo[]",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getDevices(int)"
+    },
     "getDevicesForAttributes(android.media.AudioAttributes)": {
       "isImplementation": true,
       "modifiers": [
@@ -129,6 +164,16 @@
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getIdForAudioPolicy(java.lang.Object)"
+    },
+    "getInputDevices()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.media.AudioDeviceInfo\u003e",
+      "exceptions": [],
+      "name": "getInputDevices()"
     },
     "getLastAbandonedAudioFocusListener()": {
       "isImplementation": false,
@@ -169,6 +214,16 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getMode()"
+    },
+    "getOutputDevices()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.media.AudioDeviceInfo\u003e",
+      "exceptions": [],
+      "name": "getOutputDevices()"
     },
     "getParameter(java.lang.String)": {
       "isImplementation": false,
@@ -489,6 +544,19 @@
       "exceptions": [],
       "name": "setBluetoothScoOn(boolean)"
     },
+    "setCommunicationDevice(android.media.AudioDeviceInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "communicationDevice"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "setCommunicationDevice(android.media.AudioDeviceInfo)"
+    },
     "setDefaultDevicesForAttributes(com.google.common.collect.ImmutableList\u003cjava.lang.Object\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -515,6 +583,18 @@
       "exceptions": [],
       "name": "setDevicesForAttributes(android.media.AudioAttributes,com.google.common.collect.ImmutableList\u003cjava.lang.Object\u003e)",
       "documentation": "Sets the devices associated with the given audio stream. "
+    },
+    "setInputDevices(java.util.List\u003candroid.media.AudioDeviceInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "inputDevices"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInputDevices(java.util.List\u003candroid.media.AudioDeviceInfo\u003e)"
     },
     "setIsBluetoothScoAvailableOffCall(boolean)": {
       "isImplementation": false,
@@ -588,6 +668,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNextFocusRequestResponse(int)"
+    },
+    "setOutputDevices(java.util.List\u003candroid.media.AudioDeviceInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outputDevices"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOutputDevices(java.util.List\u003candroid.media.AudioDeviceInfo\u003e)"
     },
     "setParameters(java.lang.String)": {
       "isImplementation": true,
@@ -744,6 +836,7 @@
     "android.annotation.RequiresPermission",
     "android.annotation.TargetApi",
     "android.media.AudioAttributes",
+    "android.media.AudioDeviceInfo",
     "android.media.AudioFormat",
     "android.media.AudioManager",
     "android.media.AudioPlaybackConfiguration",

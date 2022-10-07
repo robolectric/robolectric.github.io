@@ -26,6 +26,17 @@
       "name": "executeOnPlaybackStateChanged(android.media.session.PlaybackState)",
       "documentation": "Executes all registered onPlaybackStateChanged callbacks. "
     },
+    "executeOnSessionDestroyed()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "executeOnSessionDestroyed()",
+      "documentation": "Executes all registered onSessionDestroyed callbacks. "
+    },
     "getCallbacks()": {
       "isImplementation": false,
       "modifiers": [
@@ -80,6 +91,17 @@
       "exceptions": [],
       "name": "getRatingType()",
       "documentation": "Gets the rating type set via {@link #setRatingType}. "
+    },
+    "getSessionActivity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.app.PendingIntent",
+      "exceptions": [],
+      "name": "getSessionActivity()",
+      "documentation": "Gets the playbackState set via {@link #setSessionActivity}. "
     },
     "registerCallback(android.media.session.MediaController.Callback)": {
       "isImplementation": true,
@@ -159,6 +181,19 @@
       "name": "setRatingType(int)",
       "documentation": "Saves the rating type to control the return value of {@link MediaController#getRatingType()}.\n"
     },
+    "setSessionActivity(android.app.PendingIntent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionActivity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSessionActivity(android.app.PendingIntent)",
+      "documentation": "Saves the sessionActivty to control the return value of {@link\nMediaController#getSessionActivity()}.\n"
+    },
     "unregisterCallback(android.media.session.MediaController.Callback)": {
       "isImplementation": true,
       "modifiers": [
@@ -177,6 +212,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.NonNull",
+    "android.app.PendingIntent",
     "android.media.MediaMetadata",
     "android.media.Rating",
     "android.media.session.MediaController",
@@ -196,5 +232,5 @@
     "org.robolectric.shadows.ShadowMediaController.MediaControllerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowMediaController",
-  "documentation": "Implementation of {@link android.media.session.MediaController}.\n"
+  "documentation": "Implementation of {@link android.media.session.MediaController}. "
 }

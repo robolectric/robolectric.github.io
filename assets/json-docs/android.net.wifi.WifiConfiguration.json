@@ -9,12 +9,51 @@
       "returnType": "android.net.wifi.WifiConfiguration",
       "exceptions": [],
       "name": "copy()"
+    },
+    "getSecurityTypes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003cjava.lang.Integer\u003e",
+      "exceptions": [],
+      "name": "getSecurityTypes()",
+      "documentation": "Returns the security type set by {@code setSecurityParams}. "
+    },
+    "setSecurityParams(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "securityType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "maxSdk": 30,
+      "name": "setSecurityParams(int)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.R",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.net.wifi.SecurityParams",
     "android.net.wifi.WifiConfiguration",
+    "com.google.common.collect.ImmutableSet",
+    "java.util.List",
+    "java.util.Set",
+    "java.util.stream.Collectors",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowWifiConfiguration.WifiConfigurationReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowWifiConfiguration"
+  "name": "org.robolectric.shadows.ShadowWifiConfiguration",
+  "documentation": "Shadow Implementation of {@link android.net.wifi.WifiConfiguration} "
 }

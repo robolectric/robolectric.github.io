@@ -26,17 +26,35 @@
       "minSdk": 24,
       "name": "respondToCall(android.telecom.Call.Details,android.telecom.CallScreeningService.CallResponse)",
       "documentation": "Shadows {@link CallScreeningService#respondToCall}. "
+    },
+    "shouldForwardResponseToRealObject()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "shouldForwardResponseToRealObject()",
+      "documentation": "The real {@link CallScreeningService} class forwards the response to an {@code\nICallScreeningAdapter}, which sends it across via IPC to the Telecom system service. In\nRobolectric, when interacting with a {@link CallScreeningService} via {@link\norg.robolectric.android.controller.ServiceController} as in\n\n\u003cpre\u003e{@code\nServiceController\u003c? extends CallScreeningService\u003e serviceController \u003d\n    Robolectric.buildService(MyCallScreeningServiceImpl.class, intent).create().bind();\nserviceController.onScreenCall(callDetails);\n}\u003c/pre\u003e\n\nthen no {@code ICallScreeningAdapter} is present and the response must not be forwarded to the\nreal object to avoid a NullPointerException.\n\n\u003cp\u003eTest code interacting with {@link CallScreeningService} may set up an {@code\nICallScreeningAdapter} by doing the following:\n\n\u003cpre\u003e{@code\nServiceController\u003c? extends CallScreeningService\u003e serviceController \u003d\n    Robolectric.buildService(MyCallScreeningServiceImpl.class, intent).create();\nICallScreeningService.Stub binder \u003d serviceController.get().onBind(intent);\nbinder.screenCall(callScreeningAdapter, parcelableCall);\n}\u003c/pre\u003e\n\nWhen this second approach is used, ShadowCallScreeningService will find that the {@code\nICallScreeningAdapter} instance is present and forward the response to it.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.telecom.Call",
     "android.telecom.CallScreeningService",
     "android.telecom.CallScreeningService.CallResponse",
+    "com.android.internal.telecom.ICallScreeningAdapter",
     "java.util.Optional",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadows.ShadowCallScreeningService.RespondToCallInput"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowCallScreeningService.RespondToCallInput",
+    "org.robolectric.shadows.ShadowCallScreeningService.CallScreeningServiceReflector"
   ],
   "name": "org.robolectric.shadows.ShadowCallScreeningService",
   "documentation": "Shadow for {@link android.telecom.CallScreeningService}. "

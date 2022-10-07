@@ -3,7 +3,7 @@
     "getConfigForSubId(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected"
+        "public"
       ],
       "params": [
         "subId"
@@ -11,7 +11,22 @@
       "returnType": "android.os.PersistableBundle",
       "exceptions": [],
       "name": "getConfigForSubId(int)",
-      "documentation": "Returns {@link android.os.PersistableBundle} previously set by {@link #setConfigForSubId(int)},\nor default values for an invalid {@code subId}.\n"
+      "documentation": "Returns {@link android.os.PersistableBundle} previously set by {@link #overrideConfig} or\n{@link #setConfigForSubId(int, PersistableBundle)}, or default values for an invalid {@code\nsubId}.\n"
+    },
+    "overrideConfig(int,android.os.PersistableBundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subId",
+        "config"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "overrideConfig(int,android.os.PersistableBundle)",
+      "documentation": "Overrides the carrier config of the provided subscription ID with the provided values.\n\n\u003cp\u003eThis method will NOT check if {@code overrideValues} contains valid values for specified\nconfig keys.\n"
     },
     "setConfigForSubId(int,android.os.PersistableBundle)": {
       "isImplementation": false,
@@ -30,9 +45,12 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.annotation.Nullable",
     "android.os.PersistableBundle",
     "android.telephony.CarrierConfigManager",
     "java.util.HashMap",
+    "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

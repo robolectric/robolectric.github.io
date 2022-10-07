@@ -37,7 +37,7 @@
       "exceptions": [],
       "name": "cancel()"
     },
-    "create(android.content.Context,android.content.Intent[],org.robolectric.shadows.ShadowPendingIntent.Type,int,int)": {
+    "create(android.content.Context,android.content.Intent[],org.robolectric.shadows.ShadowPendingIntent.Type,int,int,android.os.Bundle)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -48,11 +48,12 @@
         "intents",
         "type",
         "requestCode",
-        "flags"
+        "flags",
+        "options"
       ],
       "returnType": "android.app.PendingIntent",
       "exceptions": [],
-      "name": "create(android.content.Context,android.content.Intent[],org.robolectric.shadows.ShadowPendingIntent.Type,int,int)"
+      "name": "create(android.content.Context,android.content.Intent[],org.robolectric.shadows.ShadowPendingIntent.Type,int,int,android.os.Bundle)"
     },
     "equals(java.lang.Object)": {
       "isImplementation": true,
@@ -175,6 +176,17 @@
       "minSdk": 17,
       "name": "getCreatorPackage()"
     },
+    "getCreatorUid()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "getCreatorUid()"
+    },
     "getFlags()": {
       "isImplementation": false,
       "modifiers": [
@@ -212,6 +224,17 @@
       "returnType": "android.content.IntentSender",
       "exceptions": [],
       "name": "getIntentSender()"
+    },
+    "getOptions()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getOptions()",
+      "documentation": "@return the flags with which this PendingIntent was created\n"
     },
     "getRequestCode()": {
       "isImplementation": false,
@@ -255,7 +278,7 @@
       "returnType": "android.content.Intent[]",
       "exceptions": [],
       "name": "getSavedIntents()",
-      "documentation": "This method is particularly useful for PendingIntents created with multiple Intents:\n\u003cul\u003e\n  \u003cli\u003e{@link #getActivities(Context, int, Intent[], int)}\u003c/li\u003e\n  \u003cli\u003e{@link #getActivities(Context, int, Intent[], int, Bundle)}\u003c/li\u003e\n\u003c/ul\u003e\n\n@return all Intents to be delivered when the PendingIntent is sent\n"
+      "documentation": "This method is particularly useful for PendingIntents created with multiple Intents:\n\n\u003cul\u003e\n  \u003cli\u003e{@link #getActivities(Context, int, Intent[], int)}\n  \u003cli\u003e{@link #getActivities(Context, int, Intent[], int, Bundle)}\n\u003c/ul\u003e\n\n@return all Intents to be delivered when the PendingIntent is sent\n"
     },
     "getService(android.content.Context,int,android.content.Intent,int)": {
       "isImplementation": true,
@@ -302,7 +325,8 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 31,
-      "name": "isActivity()"
+      "name": "isActivity()",
+      "documentation": "Returns {@code true} if this {@code PendingIntent} was created with {@link #getActivity} or\n{@link #getActivities}.\n\n\u003cp\u003eThis method is intentionally left {@code public} rather than {@code protected} because it\nserves a secondary purpose as a utility shadow method for API levels \u003c 31.\n"
     },
     "isActivityIntent()": {
       "isImplementation": false,
@@ -313,7 +337,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isActivityIntent()",
-      "documentation": "@return {@code true} iff sending this PendingIntent will start an activity\n"
+      "documentation": "@return {@code true} iff sending this PendingIntent will start an activity\n@deprecated prefer {@link #isActivity} which was added to {@link PendingIntent} in API 31\n    (Android S).\n"
     },
     "isBroadcast()": {
       "isImplementation": true,
@@ -324,7 +348,8 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 31,
-      "name": "isBroadcast()"
+      "name": "isBroadcast()",
+      "documentation": "Returns {@code true} if this {@code PendingIntent} was created with {@link #getBroadcast}.\n\n\u003cp\u003eThis method is intentionally left {@code public} rather than {@code protected} because it\nserves a secondary purpose as a utility shadow method for API levels \u003c 31.\n"
     },
     "isBroadcastIntent()": {
       "isImplementation": false,
@@ -335,7 +360,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isBroadcastIntent()",
-      "documentation": "@return {@code true} iff sending this PendingIntent will broadcast an Intent\n"
+      "documentation": "@return {@code true} iff sending this PendingIntent will broadcast an Intent\n@deprecated prefer {@link #isBroadcast} which was added to {@link PendingIntent} in API 31\n    (Android S).\n"
     },
     "isCanceled()": {
       "isImplementation": false,
@@ -357,7 +382,8 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 31,
-      "name": "isForegroundService()"
+      "name": "isForegroundService()",
+      "documentation": "Returns {@code true} if this {@code PendingIntent} was created with {@link\n#getForegroundService}.\n\n\u003cp\u003eThis method is intentionally left {@code public} rather than {@code protected} because it\nserves a secondary purpose as a utility shadow method for API levels \u003c 31.\n"
     },
     "isForegroundServiceIntent()": {
       "isImplementation": false,
@@ -368,7 +394,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isForegroundServiceIntent()",
-      "documentation": "@return {@code true} iff sending this PendingIntent will start a foreground service "
+      "documentation": "@return {@code true} iff sending this PendingIntent will start a foreground service\n@deprecated prefer {@link #isForegroundService} which was added to {@link PendingIntent} in API\n    31 (Android S).\n"
     },
     "isImmutable()": {
       "isImplementation": true,
@@ -379,7 +405,8 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 31,
-      "name": "isImmutable()"
+      "name": "isImmutable()",
+      "documentation": "Returns {@code true} if this {@code PendingIntent} is marked with {@link\nPendingIntent#FLAG_IMMUTABLE}.\n\n\u003cp\u003eThis method is intentionally left {@code public} rather than {@code protected} because it\nserves a secondary purpose as a utility shadow method for API levels \u003c 31.\n"
     },
     "isMutable(int)": {
       "isImplementation": false,
@@ -416,7 +443,8 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 31,
-      "name": "isService()"
+      "name": "isService()",
+      "documentation": "Returns {@code true} if this {@code PendingIntent} was created with {@link #getService}.\n\n\u003cp\u003eThis method is intentionally left {@code public} rather than {@code protected} because it\nserves a secondary purpose as a utility shadow method for API levels \u003c 31.\n"
     },
     "isServiceIntent()": {
       "isImplementation": false,
@@ -427,7 +455,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isServiceIntent()",
-      "documentation": "@return {@code true} iff sending this PendingIntent will start a service\n"
+      "documentation": "@return {@code true} iff sending this PendingIntent will start a service\n@deprecated prefer {@link #isService} which was added to {@link PendingIntent} in API 31\n    (Android S).\n"
     },
     "readPendingIntentOrNullFromParcel(android.os.Parcel)": {
       "isImplementation": true,
@@ -539,6 +567,25 @@
       "minSdk": 23,
       "name": "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler,java.lang.String,android.os.Bundle)"
     },
+    "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler,java.lang.String,android.os.Bundle,int)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "context",
+        "code",
+        "intent",
+        "onFinished",
+        "handler",
+        "requiredPermission",
+        "options",
+        "requestCode"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.app.PendingIntent.CanceledException"
+      ],
+      "name": "send(android.content.Context,int,android.content.Intent,android.app.PendingIntent.OnFinished,android.os.Handler,java.lang.String,android.os.Bundle,int)"
+    },
     "send(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -580,6 +627,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCreatorPackage(java.lang.String)"
+    },
+    "setCreatorUid(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCreatorUid(int)"
     },
     "writePendingIntentOrNullToParcel(android.app.PendingIntent,android.os.Parcel)": {
       "isImplementation": true,

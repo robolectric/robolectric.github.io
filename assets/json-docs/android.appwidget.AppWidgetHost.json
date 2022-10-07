@@ -57,6 +57,17 @@
       "exceptions": [],
       "name": "getHostId()"
     },
+    "isListening()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isListening()",
+      "documentation": "Returns true if this host is listening for updates. "
+    },
     "setAppWidgetIdToAllocate(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -68,6 +79,26 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setAppWidgetIdToAllocate(int)"
+    },
+    "startListening()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startListening()"
+    },
+    "stopListening()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopListening()"
     }
   },
   "imports": [

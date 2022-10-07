@@ -14,6 +14,21 @@
       "name": "addActivity(android.os.UserHandle,android.content.pm.LauncherActivityInfo)",
       "documentation": "Adds a {@link LauncherActivityInfo} to be retrieved by {@link #getActivityList(String,\nUserHandle)}.\n\n@param userHandle the user handle to be added.\n@param activityInfo the {@link LauncherActivityInfo} to be added.\n"
     },
+    "addApplicationInfo(android.os.UserHandle,java.lang.String,android.content.pm.ApplicationInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "packageName",
+        "applicationInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addApplicationInfo(android.os.UserHandle,java.lang.String,android.content.pm.ApplicationInfo)",
+      "documentation": "Adds a {@link ApplicationInfo} to be retrieved by {@link #getApplicationInfo(String, int,\nUserHandle)}.\n\n@param userHandle the user handle to be added.\n@param packageName the package name to be added.\n@param applicationInfo the application info to be added.\n"
+    },
     "addDynamicShortcut(android.content.pm.ShortcutInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -79,6 +94,23 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "getAllPackageInstallerSessions()"
+    },
+    "getApplicationInfo(java.lang.String,int,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "flags",
+        "user"
+      ],
+      "returnType": "android.content.pm.ApplicationInfo",
+      "exceptions": [
+        "android.content.pm.PackageManager.NameNotFoundException"
+      ],
+      "minSdk": 26,
+      "name": "getApplicationInfo(java.lang.String,int,android.os.UserHandle)"
     },
     "getShortcutConfigActivityIntent(android.content.pm.LauncherActivityInfo)": {
       "isImplementation": true,
@@ -265,6 +297,19 @@
       "minSdk": 29,
       "name": "registerPackageInstallerSessionCallback(java.util.concurrent.Executor,android.content.pm.PackageInstaller.SessionCallback)"
     },
+    "setHasShortcutHostPermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "permission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHasShortcutHostPermission(boolean)",
+      "documentation": "Sets the return value of {@link #hasShortcutHostPermission()}. If this isn\u0027t explicitly set,\n{@link #hasShortcutHostPermission()} defaults to returning false.\n\n@param permission boolean to be returned\n"
+    },
     "shortcutsChanged(java.lang.String,java.util.List\u003candroid.content.pm.ShortcutInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -391,11 +436,13 @@
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ComponentName",
     "android.content.IntentSender",
+    "android.content.pm.ApplicationInfo",
     "android.content.pm.LauncherActivityInfo",
     "android.content.pm.LauncherApps",
     "android.content.pm.LauncherApps.ShortcutQuery",
     "android.content.pm.PackageInstaller.SessionCallback",
     "android.content.pm.PackageInstaller.SessionInfo",
+    "android.content.pm.PackageManager.NameNotFoundException",
     "android.content.pm.ShortcutInfo",
     "android.graphics.Rect",
     "android.os.Bundle",
@@ -411,7 +458,9 @@
     "com.google.common.collect.Lists",
     "com.google.common.collect.Multimap",
     "java.util.ArrayList",
+    "java.util.HashMap",
     "java.util.List",
+    "java.util.Map",
     "java.util.concurrent.Executor",
     "java.util.function.Predicate",
     "java.util.stream.Collectors",

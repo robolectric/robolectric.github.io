@@ -1,7 +1,25 @@
 {
-  "methods": {},
+  "methods": {
+    "getCurrentEdgeEffectBehavior()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getCurrentEdgeEffectBehavior()",
+      "documentation": "Disable edge effects for Android S and above. The problem with edge effects in S+ is that\nScrollView will intercept/swallow all touch events while edge effects are still running (in\n{@link android.widget.ScrollView#onInterceptTouchEvent(MotionEvent)}. {@link EdgeEffect}\ncompletion depends on a free-running clock and draw traversals being continuously performed. So\nfor Robolectric to ensure that edge effects are complete, it has to bump the uptime and then\nre-run draw traversals any time an edge effect starts.\n\n\u003cp\u003eBecause edge effects are not critical for unit testing, it is simpler to disable them.\n"
+    }
+  },
   "imports": [
+    "android.os.Build.VERSION_CODES.S",
+    "android.view.MotionEvent",
+    "android.widget.EdgeEffect",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowEdgeEffect"
+  "name": "org.robolectric.shadows.ShadowEdgeEffect",
+  "documentation": "Shadow for {@link android.widget.EdgeEffect} "
 }

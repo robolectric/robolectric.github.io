@@ -172,6 +172,17 @@
       "maxSdk": 29,
       "name": "getAliasName()"
     },
+    "getBatteryLevel()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 27,
+      "name": "getBatteryLevel()"
+    },
     "getBluetoothClass()": {
       "isImplementation": true,
       "modifiers": [
@@ -215,6 +226,19 @@
       "exceptions": [],
       "name": "getFetchUuidsWithSdpCount()",
       "documentation": "Returns the number of times fetchUuidsWithSdp has been called. "
+    },
+    "getMetadata(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "key"
+      ],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getMetadata(int)"
     },
     "getName()": {
       "isImplementation": true,
@@ -293,6 +317,17 @@
       "name": "getUuids()",
       "documentation": "Overrides behavior of {@link BluetoothDevice#getUuids} to return pre-set result.\n\n@return Value set by calling {@link ShadowBluetoothDevice#setUuids}. If setUuids has not\n    previously been called, will return null.\n"
     },
+    "isInSilenceMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isInSilenceMode()"
+    },
     "newInstance(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -339,6 +374,18 @@
       "exceptions": [],
       "name": "setAlias(java.lang.String)",
       "documentation": "Sets the alias name of the device.\n\n\u003cp\u003eAlias is the locally modified name of a remote device.\n\n\u003cp\u003eAlias Name is not part of the supported SDK, and accessed via reflection.\n\n@param alias alias name.\n"
+    },
+    "setBatteryLevel(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "batteryLevel"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBatteryLevel(int)"
     },
     "setBluetoothClass(android.bluetooth.BluetoothClass)": {
       "isImplementation": false,
@@ -392,6 +439,20 @@
       "name": "setFetchUuidsWithSdpResult(boolean)",
       "documentation": "Sets value of the return result for {@link BluetoothDevice#fetchUuidsWithSdp}. "
     },
+    "setMetadata(int,byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "key",
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setMetadata(int,byte[])"
+    },
     "setName(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -440,6 +501,19 @@
       "exceptions": [],
       "name": "setShouldThrowSecurityExceptions(boolean)",
       "documentation": "Sets if a runtime exception is thrown when bluetooth methods with BLUETOOTH_CONNECT permission\npre-requisites are accessed.\n\n\u003cp\u003eIntended to replicate what may happen if user has not enabled nearby device permissions.\n\n@param shouldThrow if methods should throw SecurityExceptions without enabled permissions when\n    called.\n"
+    },
+    "setSilenceMode(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isInSilenceMode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setSilenceMode(boolean)"
     },
     "setThrowOnGetAliasName(boolean)": {
       "isImplementation": false,
@@ -501,8 +575,10 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.IntRange",
     "android.app.ActivityThread",
     "android.bluetooth.BluetoothClass",
     "android.bluetooth.BluetoothDevice",
@@ -517,7 +593,9 @@
     "android.os.ParcelUuid",
     "java.io.IOException",
     "java.util.ArrayList",
+    "java.util.HashMap",
     "java.util.List",
+    "java.util.Map",
     "java.util.UUID",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",

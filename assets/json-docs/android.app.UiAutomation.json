@@ -1,0 +1,72 @@
+{
+  "methods": {
+    "setAnimationScale(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "scale"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "setAnimationScale(float)"
+    },
+    "setAnimationScaleCompat(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "scale"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAnimationScaleCompat(float)",
+      "documentation": "Sets the animation scale, see {@link UiAutomation#setAnimationScale(float)}. Provides backwards\ncompatible access to SDKs \u003c T.\n"
+    },
+    "setRotation(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rotation"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "setRotation(int)"
+    },
+    "throwIfNotConnectedLocked()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "throwIfNotConnectedLocked()"
+    }
+  },
+  "imports": [
+    "android.app.UiAutomation.ROTATION_FREEZE_0",
+    "android.app.UiAutomation.ROTATION_FREEZE_180",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "org.robolectric.Shadows.shadowOf",
+    "android.app.UiAutomation",
+    "android.content.ContentResolver",
+    "android.content.res.Configuration",
+    "android.content.res.Resources",
+    "android.provider.Settings",
+    "android.view.Display",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowUiAutomation",
+  "documentation": "Shadow for {@link UiAutomation}. "
+}

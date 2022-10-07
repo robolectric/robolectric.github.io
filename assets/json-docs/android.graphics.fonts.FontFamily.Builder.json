@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "build()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.graphics.fonts.FontFamily",
+      "exceptions": [],
+      "name": "build()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.Q",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.graphics.fonts.Font",
+    "android.graphics.fonts.FontFamily",
+    "java.util.ArrayList",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowFontsFontFamily.ShadowFontsFontFamilyBuilder.FontFamilyBuilderReflector"
+  ],
+  "name": "org.robolectric.shadows.ShadowFontsFontFamily.ShadowFontsFontFamilyBuilder",
+  "documentation": "Shadow for {@link FontFamily.Builder}. "
+}

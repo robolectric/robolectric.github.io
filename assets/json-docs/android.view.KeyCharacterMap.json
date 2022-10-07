@@ -13,6 +13,18 @@
       "exceptions": [],
       "name": "get(int,int)"
     },
+    "getDisplayLabel(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "keyCode"
+      ],
+      "returnType": "char",
+      "exceptions": [],
+      "name": "getDisplayLabel(int)"
+    },
     "getDownEvent(char)": {
       "isImplementation": false,
       "modifiers": [
@@ -70,6 +82,18 @@
       "returnType": "android.view.KeyEvent",
       "exceptions": [],
       "name": "getUpEvent(char)"
+    },
+    "isPrintingKey(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "keyCode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isPrintingKey(int)"
     },
     "load(int)": {
       "isImplementation": true,

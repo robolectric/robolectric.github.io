@@ -150,8 +150,10 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
     "org.robolectric.util.reflector.WithType",
-    "org.robolectric.shadows.ShadowWifiInfo.WifiInfoReflector"
+    "org.robolectric.shadows.ShadowWifiInfo.WifiInfoReflector",
+    "org.robolectric.shadows.ShadowWifiInfo.WifiSsidReflector"
   ],
   "name": "org.robolectric.shadows.ShadowWifiInfo"
 }

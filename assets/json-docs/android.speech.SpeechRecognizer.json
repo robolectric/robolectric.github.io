@@ -1,5 +1,34 @@
 {
   "methods": {
+    "checkRecognitionSupport(android.content.Intent,java.util.concurrent.Executor,android.speech.RecognitionSupportCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "recognizerIntent",
+        "executor",
+        "supportListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "checkRecognitionSupport(android.content.Intent,java.util.concurrent.Executor,android.speech.RecognitionSupportCallback)"
+    },
+    "createOnDeviceSpeechRecognizer(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.speech.SpeechRecognizer",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "createOnDeviceSpeechRecognizer(android.content.Context)"
+    },
     "createSpeechRecognizer(android.content.Context,android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -24,6 +53,16 @@
       "exceptions": [],
       "name": "getLastRecognizerIntent()",
       "documentation": "Returns the argument passed to the last call to {@link SpeechRecognizer#startListening}. "
+    },
+    "getLatestModelDownloadIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "getLatestModelDownloadIntent()"
     },
     "getLatestSpeechRecognizer()": {
       "isImplementation": false,
@@ -50,6 +89,20 @@
       "name": "handleChangeListener(android.speech.RecognitionListener)",
       "documentation": "Handles changing the listener and allows access to the internal listener to trigger events and\nsets the latest SpeechRecognizer.\n"
     },
+    "isOnDeviceRecognitionAvailable(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "isOnDeviceRecognitionAvailable(android.content.Context)"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -60,6 +113,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "setIsOnDeviceRecognitionAvailable(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "available"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsOnDeviceRecognitionAvailable(boolean)"
     },
     "startListening(android.content.Intent)": {
       "isImplementation": true,
@@ -72,6 +138,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "startListening(android.content.Intent)"
+    },
+    "triggerModelDownload(android.content.Intent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "recognizerIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "triggerModelDownload(android.content.Intent)"
     },
     "triggerOnEndOfSpeech()": {
       "isImplementation": false,
@@ -142,6 +221,30 @@
       "returnType": "void",
       "exceptions": [],
       "name": "triggerOnRmsChanged(float)"
+    },
+    "triggerSupportError(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "error"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerSupportError(int)"
+    },
+    "triggerSupportResult(android.speech.RecognitionSupport)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "recognitionSupport"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerSupportResult(android.speech.RecognitionSupport)"
     }
   },
   "imports": [
@@ -149,14 +252,20 @@
     "android.content.ComponentName",
     "android.content.Context",
     "android.content.Intent",
+    "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.os.Handler",
     "android.os.Looper",
     "android.os.Message",
     "android.speech.IRecognitionService",
     "android.speech.RecognitionListener",
+    "android.speech.RecognitionSupport",
+    "android.speech.RecognitionSupportCallback",
     "android.speech.SpeechRecognizer",
+    "androidx.annotation.Nullable",
+    "androidx.annotation.RequiresApi",
     "java.util.Queue",
+    "java.util.concurrent.Executor",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

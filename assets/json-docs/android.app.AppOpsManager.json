@@ -581,7 +581,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 29,
+      "minSdk": 30,
       "name": "unsafeCheckOpRawNoThrow(int,int,java.lang.String)"
     },
     "unsafeCheckOpRawNoThrow(java.lang.String,int,java.lang.String)": {

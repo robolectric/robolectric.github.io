@@ -208,13 +208,14 @@
       "returnType": "org.apache.http.HttpRequest",
       "exceptions": [],
       "name": "getSentHttpRequest(int)",
-      "documentation": "@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequestInfo(int)} instead.)\n@return HttpRequest\n"
+      "documentation": "Get the sent {@link HttpRequest} for the given index.\n\n@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequestInfo(int)} instead.)\n@return HttpRequest\n"
     },
     "getSentHttpRequestInfo(int)": {
       "isImplementation": false,
       "modifiers": [
         "public",
-        "static"
+        "static",
+        "final"
       ],
       "params": [
         "index"
@@ -222,7 +223,7 @@
       "returnType": "org.robolectric.shadows.httpclient.HttpRequestInfo",
       "exceptions": [],
       "name": "getSentHttpRequestInfo(int)",
-      "documentation": "@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequest(int)} instead.)\n@return HttpRequestInfo\n"
+      "documentation": "Get the sent {@link HttpRequestInfo} for the given index.\n\n@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequest(int)} instead.)\n@return HttpRequestInfo\n"
     },
     "getTargetAuthenticationHandler()": {
       "isImplementation": false,
@@ -269,6 +270,7 @@
     }
   },
   "imports": [
+    "com.google.errorprone.annotations.InlineMe",
     "java.io.ByteArrayInputStream",
     "java.io.IOException",
     "java.io.InputStream",

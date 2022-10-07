@@ -612,7 +612,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 22,
+      "minSdk": 23,
       "name": "isVoiceMailNumber(android.telecom.PhoneAccountHandle,java.lang.String)"
     },
     "newCallAudioState(boolean,int,int,android.bluetooth.BluetoothDevice,java.util.Collection\u003candroid.bluetooth.BluetoothDevice\u003e)": {
@@ -800,6 +800,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setUserSelectedOutgoingPhoneAccount(android.telecom.PhoneAccountHandle)"
+    },
+    "setVoicemailNumber(android.telecom.PhoneAccountHandle,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountHandle",
+        "number"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVoicemailNumber(android.telecom.PhoneAccountHandle,java.lang.String)"
     },
     "setupConnectionService(android.telecom.PhoneAccountHandle)": {
       "isImplementation": false,

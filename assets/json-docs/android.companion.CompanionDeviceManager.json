@@ -1,5 +1,17 @@
 {
   "methods": {
+    "addAssociation(android.companion.AssociationInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addAssociation(android.companion.AssociationInfo)"
+    },
     "addAssociation(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -26,6 +38,21 @@
       "exceptions": [],
       "name": "associate(android.companion.AssociationRequest,android.companion.CompanionDeviceManager.Callback,android.os.Handler)"
     },
+    "associate(android.companion.AssociationRequest,java.util.concurrent.Executor,android.companion.CompanionDeviceManager.Callback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "executor",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "associate(android.companion.AssociationRequest,java.util.concurrent.Executor,android.companion.CompanionDeviceManager.Callback)"
+    },
     "checkHasAssociation()": {
       "isImplementation": false,
       "modifiers": [
@@ -35,6 +62,44 @@
       "returnType": "void",
       "exceptions": [],
       "name": "checkHasAssociation()"
+    },
+    "createAssociationInfo(org.robolectric.shadows.ShadowCompanionDeviceManager.RoboAssociationInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "android.companion.AssociationInfo",
+      "exceptions": [],
+      "name": "createAssociationInfo(org.robolectric.shadows.ShadowCompanionDeviceManager.RoboAssociationInfo)",
+      "documentation": "Convert {@link RoboAssociationInfo} to actual {@link AssociationInfo}. "
+    },
+    "createShadowAssociationInfo(android.companion.AssociationInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "info"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowCompanionDeviceManager.RoboAssociationInfo",
+      "exceptions": [],
+      "name": "createShadowAssociationInfo(android.companion.AssociationInfo)"
+    },
+    "disassociate(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "associationId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "disassociate(int)"
     },
     "disassociate(java.lang.String)": {
       "isImplementation": true,
@@ -88,6 +153,17 @@
       "exceptions": [],
       "name": "getLastRequestedNotificationAccess()"
     },
+    "getMyAssociations()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.companion.AssociationInfo\u003e",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getMyAssociations()"
+    },
     "hasNotificationAccess(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -127,17 +203,27 @@
     }
   },
   "imports": [
+    "java.util.stream.Collectors.toCollection",
+    "java.util.stream.Collectors.toList",
+    "android.companion.AssociationInfo",
     "android.companion.AssociationRequest",
     "android.companion.CompanionDeviceManager",
     "android.content.ComponentName",
+    "android.net.MacAddress",
     "android.os.Build.VERSION_CODES",
     "android.os.Handler",
+    "androidx.annotation.Nullable",
+    "com.google.auto.value.AutoValue",
+    "com.google.common.base.Ascii",
     "com.google.common.collect.ImmutableList",
+    "java.util.ArrayList",
     "java.util.HashSet",
     "java.util.List",
     "java.util.Set",
+    "java.util.concurrent.Executor",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowCompanionDeviceManager.RoboAssociationInfo"
   ],
   "name": "org.robolectric.shadows.ShadowCompanionDeviceManager",
   "documentation": "Shadow for CompanionDeviceManager. "

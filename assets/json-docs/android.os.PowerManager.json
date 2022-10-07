@@ -189,6 +189,17 @@
       "name": "isDeviceIdleMode()",
       "documentation": "@return false by default, or the value specified via {@link #setIsDeviceIdleMode(boolean)}\n"
     },
+    "isDeviceLightIdleMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "isDeviceLightIdleMode()"
+    },
     "isIgnoringBatteryOptimizations(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -403,6 +414,19 @@
       "name": "setIsDeviceIdleMode(boolean)",
       "documentation": "Sets the value returned by {@link #isDeviceIdleMode()}. "
     },
+    "setIsDeviceLightIdleMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lightDeviceIdleMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsDeviceLightIdleMode(boolean)",
+      "documentation": "Sets the value returned by {@link #isDeviceLightIdleMode()}. "
+    },
     "setIsInteractive(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -534,6 +558,7 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "com.google.common.base.Preconditions.checkState",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest.permission",
@@ -547,6 +572,7 @@
     "android.os.Build.VERSION_CODES",
     "android.os.PowerManager",
     "android.os.PowerManager.WakeLock",
+    "android.os.SystemClock",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.ImmutableSet",
@@ -557,6 +583,7 @@
     "java.util.HashSet",
     "java.util.List",
     "java.util.Map",
+    "java.util.Optional",
     "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",

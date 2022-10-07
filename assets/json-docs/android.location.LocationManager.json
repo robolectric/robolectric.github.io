@@ -136,6 +136,28 @@
       "exceptions": [],
       "name": "getCurrentLocationInternal(java.lang.String,android.location.LocationRequest,android.os.CancellationSignal,java.util.concurrent.Executor,java.util.function.Consumer\u003candroid.location.Location\u003e)"
     },
+    "getGnssHardwareModelName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getGnssHardwareModelName()"
+    },
+    "getGnssYearOfHardware()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getGnssYearOfHardware()"
+    },
     "getGpsStatusListeners()": {
       "isImplementation": false,
       "modifiers": [
@@ -597,7 +619,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
+      "minSdk": 30,
       "name": "requestLocationUpdates(android.location.LocationRequest,java.util.concurrent.Executor,android.location.LocationListener)"
     },
     "requestLocationUpdates(java.lang.String,android.location.LocationRequest,android.app.PendingIntent)": {
@@ -889,6 +911,32 @@
       "exceptions": [],
       "name": "sendNmeaMessage(java.lang.String,long)",
       "documentation": "@deprecated Use {@link #simulateNmeaMessage(String, long)} instead.\n"
+    },
+    "setGnssHardwareModelName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "gnssHardwareModelName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGnssHardwareModelName(java.lang.String)",
+      "documentation": "Sets the GNSS hardware model name returned by {@link\nLocationManager#getGnssHardwareModelName()}.\n"
+    },
+    "setGnssYearOfHardware(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "gnssYearOfHardware"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGnssYearOfHardware(int)",
+      "documentation": "Sets the GNSS year of hardware returned by {@link LocationManager#getGnssYearOfHardware()}. "
     },
     "setLastKnownLocation(java.lang.String,android.location.Location)": {
       "isImplementation": false,

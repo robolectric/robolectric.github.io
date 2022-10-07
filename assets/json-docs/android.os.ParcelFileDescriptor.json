@@ -109,6 +109,25 @@
         "java.io.FileNotFoundException"
       ],
       "name": "open(java.io.File,int)"
+    },
+    "open(java.io.File,int,android.os.Handler,android.os.ParcelFileDescriptor.OnCloseListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "file",
+        "mode",
+        "handler",
+        "listener"
+      ],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 19,
+      "name": "open(java.io.File,int,android.os.Handler,android.os.ParcelFileDescriptor.OnCloseListener)"
     }
   },
   "imports": [
@@ -117,6 +136,7 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.SuppressLint",
+    "android.os.Handler",
     "android.os.ParcelFileDescriptor",
     "java.io.File",
     "java.io.FileDescriptor",

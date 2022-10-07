@@ -25,7 +25,7 @@
     "setDurationScale(float)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [
@@ -34,7 +34,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDurationScale(float)",
-      "documentation": "Sets the duration scale for value animator. Calling this method with {@code duration} set to\nzero will make all {@link ValueAnimator} based animations have zero duration.\n"
+      "documentation": "Sets the duration scale for value animator. To set this value use {@link\nUiAutomation#setAnimationScale(float)} or {@link\nShadowUiAutomation#setAnimationScaleCompat(float)}.\n"
     },
     "setRepeatCount(int)": {
       "isImplementation": true,
@@ -54,6 +54,7 @@
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.animation.AnimationHandler",
     "android.animation.ValueAnimator",
+    "android.app.UiAutomation",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

@@ -363,6 +363,17 @@
       "minSdk": 21,
       "name": "getUserProfiles()"
     },
+    "getUserRestrictions()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getUserRestrictions()"
+    },
     "getUserRestrictions(android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -489,6 +500,20 @@
       "exceptions": [],
       "minSdk": 30,
       "name": "hasUserRestrictionForUser(java.lang.String,android.os.UserHandle)"
+    },
+    "hasUserRestrictionForUser(java.lang.String,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "restrictionKey",
+        "userId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "hasUserRestrictionForUser(java.lang.String,int)"
     },
     "isDemoUser()": {
       "isImplementation": true,
@@ -1144,6 +1169,7 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "android.os.UserManager.USER_TYPE_FULL_GUEST",
     "android.os.UserManager.USER_TYPE_FULL_RESTRICTED",
     "android.os.UserManager.USER_TYPE_FULL_SECONDARY",
@@ -1181,6 +1207,7 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowUserManager.UserManagerState",

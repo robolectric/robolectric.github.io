@@ -303,18 +303,6 @@
       "exceptions": [],
       "name": "drawText(java.lang.String,int,int,float,float,android.graphics.Paint)"
     },
-    "formatColorMatric(android.graphics.ColorMatrix)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "colorMatrix"
-      ],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "formatColorMatric(android.graphics.ColorMatrix)"
-    },
     "getArcPaintHistoryCount()": {
       "isImplementation": false,
       "modifiers": [
@@ -334,6 +322,18 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getCirclePaintHistoryCount()"
+    },
+    "getClipBounds(android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bounds"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getClipBounds(android.graphics.Rect)"
     },
     "getDescription()": {
       "isImplementation": false,
@@ -1125,13 +1125,12 @@
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.ColorFilter",
-    "android.graphics.ColorMatrix",
-    "android.graphics.ColorMatrixColorFilter",
     "android.graphics.Matrix",
     "android.graphics.Paint",
     "android.graphics.Path",
     "android.graphics.Rect",
     "android.graphics.RectF",
+    "com.google.common.base.Preconditions",
     "java.util.ArrayList",
     "java.util.List",
     "org.robolectric.RuntimeEnvironment",
@@ -1143,7 +1142,6 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.res.android.NativeObjRegistry",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.Join",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",

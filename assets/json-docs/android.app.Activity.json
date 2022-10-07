@@ -416,6 +416,16 @@
       "name": "getResultIntent()",
       "documentation": "@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)} "
     },
+    "getShowWhenLocked()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getShowWhenLocked()"
+    },
     "getSplashScreen()": {
       "isImplementation": true,
       "modifiers": [
@@ -438,6 +448,16 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getTaskId()"
+    },
+    "getTurnScreenOn()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "getTurnScreenOn()"
     },
     "getVolumeControlStream()": {
       "isImplementation": true,
@@ -860,6 +880,19 @@
       "exceptions": [],
       "name": "setResult(int,android.content.Intent)"
     },
+    "setShowWhenLocked(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "showWhenLocked"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 27,
+      "name": "setShowWhenLocked(boolean)"
+    },
     "setThrowIntentSenderException(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -872,6 +905,19 @@
       "exceptions": [],
       "name": "setThrowIntentSenderException(boolean)",
       "documentation": "Sets if startIntentSenderForRequestCode will throw an IntentSender.SendIntentException. "
+    },
+    "setTurnScreenOn(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "turnScreenOn"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 27,
+      "name": "setTurnScreenOn(boolean)"
     },
     "setVolumeControlStream(int)": {
       "isImplementation": true,
@@ -1013,6 +1059,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.S",
     "org.robolectric.util.reflector.Reflector.reflector",
@@ -1025,6 +1072,7 @@
     "android.app.DirectAction",
     "android.app.Instrumentation",
     "android.app.LoadedApk",
+    "android.app.PendingIntent",
     "android.app.PictureInPictureParams",
     "android.content.ComponentName",
     "android.content.Context",
@@ -1038,7 +1086,9 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.os.CancellationSignal",
+    "android.os.Handler",
     "android.os.IBinder",
+    "android.os.Looper",
     "android.os.Parcel",
     "android.text.Selection",
     "android.text.SpannableStringBuilder",
@@ -1049,6 +1099,7 @@
     "android.view.View",
     "android.view.ViewGroup",
     "android.view.Window",
+    "androidx.annotation.RequiresApi",
     "com.android.internal.app.IVoiceInteractor",
     "java.util.ArrayList",
     "java.util.HashMap",
@@ -1063,6 +1114,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.fakes.RoboIntentSender",
     "org.robolectric.fakes.RoboMenuItem",
     "org.robolectric.fakes.RoboSplashScreen",
     "org.robolectric.shadow.api.Shadow",

@@ -175,11 +175,9 @@
         "filter"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "addIntentFilterForActivity(android.content.ComponentName,android.content.IntentFilter)",
-      "documentation": "Add intent filter for given activity.\n\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Add intent filter for given activity.\n\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "addIntentFilterForComponent(android.content.ComponentName,android.content.IntentFilter,java.util.Map\u003candroid.content.ComponentName,java.util.List\u003candroid.content.IntentFilter\u003e\u003e)": {
       "isImplementation": false,
@@ -192,9 +190,7 @@
         "filterMap"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "addIntentFilterForComponent(android.content.ComponentName,android.content.IntentFilter,java.util.Map\u003candroid.content.ComponentName,java.util.List\u003candroid.content.IntentFilter\u003e\u003e)"
     },
     "addIntentFilterForProvider(android.content.ComponentName,android.content.IntentFilter)": {
@@ -207,11 +203,9 @@
         "filter"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "addIntentFilterForProvider(android.content.ComponentName,android.content.IntentFilter)",
-      "documentation": "Add intent filter for given provider.\n\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Add intent filter for given provider.\n\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "addIntentFilterForReceiver(android.content.ComponentName,android.content.IntentFilter)": {
       "isImplementation": false,
@@ -223,11 +217,9 @@
         "filter"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "addIntentFilterForReceiver(android.content.ComponentName,android.content.IntentFilter)",
-      "documentation": "Add intent filter for given receiver.\n\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Add intent filter for given receiver.\n\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "addIntentFilterForService(android.content.ComponentName,android.content.IntentFilter)": {
       "isImplementation": false,
@@ -239,11 +231,9 @@
         "filter"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "addIntentFilterForService(android.content.ComponentName,android.content.IntentFilter)",
-      "documentation": "Add intent filter for given service.\n\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Add intent filter for given service.\n\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "addOrUpdateActivity(android.content.pm.ActivityInfo)": {
       "isImplementation": false,
@@ -544,11 +534,9 @@
         "componentName"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "clearIntentFilterForActivity(android.content.ComponentName)",
-      "documentation": "Clears intent filters for given activity.\n\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Clears intent filters for given activity.\n\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "clearIntentFilterForComponent(android.content.ComponentName,java.util.Map\u003candroid.content.ComponentName,java.util.List\u003candroid.content.IntentFilter\u003e\u003e)": {
       "isImplementation": false,
@@ -560,9 +548,7 @@
         "filterMap"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "clearIntentFilterForComponent(android.content.ComponentName,java.util.Map\u003candroid.content.ComponentName,java.util.List\u003candroid.content.IntentFilter\u003e\u003e)"
     },
     "clearIntentFilterForProvider(android.content.ComponentName)": {
@@ -574,11 +560,9 @@
         "componentName"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "clearIntentFilterForProvider(android.content.ComponentName)",
-      "documentation": "Clears intent filters for given provider.\n\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Clears intent filters for given provider.\n\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "clearIntentFilterForReceiver(android.content.ComponentName)": {
       "isImplementation": false,
@@ -589,11 +573,9 @@
         "componentName"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "clearIntentFilterForReceiver(android.content.ComponentName)",
-      "documentation": "Clears intent filters for given receiver.\n\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Clears intent filters for given receiver.\n\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "clearIntentFilterForService(android.content.ComponentName)": {
       "isImplementation": false,
@@ -604,11 +586,9 @@
         "componentName"
       ],
       "returnType": "void",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "clearIntentFilterForService(android.content.ComponentName)",
-      "documentation": "Clears intent filters for given service.\n\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Clears intent filters for given service.\n\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "clearPackagePersistentPreferredActivities(java.lang.String)": {
       "isImplementation": false,
@@ -817,11 +797,9 @@
         "componentName"
       ],
       "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "getIntentFiltersForActivity(android.content.ComponentName)",
-      "documentation": "Get list of intent filters defined for given activity.\n\n@param componentName Name of the activity whose intent filters are to be retrieved\n@return the activity\u0027s intent filters\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Get list of intent filters defined for given activity.\n\n@param componentName Name of the activity whose intent filters are to be retrieved\n@return the activity\u0027s intent filters\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "getIntentFiltersForComponent(android.content.ComponentName,java.util.Map\u003candroid.content.ComponentName,java.util.List\u003candroid.content.IntentFilter\u003e\u003e)": {
       "isImplementation": false,
@@ -833,9 +811,7 @@
         "filterMap"
       ],
       "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "getIntentFiltersForComponent(android.content.ComponentName,java.util.Map\u003candroid.content.ComponentName,java.util.List\u003candroid.content.IntentFilter\u003e\u003e)"
     },
     "getIntentFiltersForProvider(android.content.ComponentName)": {
@@ -847,11 +823,9 @@
         "componentName"
       ],
       "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "getIntentFiltersForProvider(android.content.ComponentName)",
-      "documentation": "Get list of intent filters defined for given provider.\n\n@param componentName Name of the provider whose intent filters are to be retrieved\n@return the provider\u0027s intent filters\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Get list of intent filters defined for given provider.\n\n@param componentName Name of the provider whose intent filters are to be retrieved\n@return the provider\u0027s intent filters\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "getIntentFiltersForReceiver(android.content.ComponentName)": {
       "isImplementation": false,
@@ -862,11 +836,9 @@
         "componentName"
       ],
       "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "getIntentFiltersForReceiver(android.content.ComponentName)",
-      "documentation": "Get list of intent filters defined for given receiver.\n\n@param componentName Name of the receiver whose intent filters are to be retrieved\n@return the receiver\u0027s intent filters\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Get list of intent filters defined for given receiver.\n\n@param componentName Name of the receiver whose intent filters are to be retrieved\n@return the receiver\u0027s intent filters\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "getIntentFiltersForService(android.content.ComponentName)": {
       "isImplementation": false,
@@ -877,11 +849,9 @@
         "componentName"
       ],
       "returnType": "java.util.List\u003candroid.content.IntentFilter\u003e",
-      "exceptions": [
-        "android.content.pm.PackageManager.NameNotFoundException"
-      ],
+      "exceptions": [],
       "name": "getIntentFiltersForService(android.content.ComponentName)",
-      "documentation": "Get list of intent filters defined for given service.\n\n@param componentName Name of the service whose intent filters are to be retrieved\n@return the service\u0027s intent filters\n@throws NameNotFoundException if component with given name doesn\u0027t exist.\n"
+      "documentation": "Get list of intent filters defined for given service.\n\n@param componentName Name of the service whose intent filters are to be retrieved\n@return the service\u0027s intent filters\n@throws IllegalArgumentException if component with given name doesn\u0027t exist.\n"
     },
     "getInternalMutablePackageInfo(java.lang.String)": {
       "isImplementation": false,
@@ -908,19 +878,6 @@
       "returnType": "android.content.pm.PackageInfo",
       "exceptions": [],
       "name": "getPackageArchiveInfo(java.lang.String,int)"
-    },
-    "getPackageInfoForTesting(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "packageName"
-      ],
-      "returnType": "android.content.pm.PackageInfo",
-      "exceptions": [],
-      "name": "getPackageInfoForTesting(java.lang.String)",
-      "documentation": "@deprecated Use {@link #getInternalMutablePackageInfo} instead. It has better name. "
     },
     "getPackageName(android.content.pm.ResolveInfo)": {
       "isImplementation": false,
@@ -1425,6 +1382,7 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "java.util.Arrays.asList",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest",
@@ -1444,7 +1402,6 @@
     "android.content.pm.ModuleInfo",
     "android.content.pm.PackageInfo",
     "android.content.pm.PackageManager",
-    "android.content.pm.PackageManager.NameNotFoundException",
     "android.content.pm.PackageParser",
     "android.content.pm.PackageParser.Component",
     "android.content.pm.PackageParser.IntentInfo",
@@ -1457,6 +1414,7 @@
     "android.content.pm.ResolveInfo",
     "android.content.pm.ServiceInfo",
     "android.content.pm.Signature",
+    "android.content.pm.pkg.FrameworkPackageUserState",
     "android.content.res.Resources",
     "android.graphics.drawable.Drawable",
     "android.net.Uri",

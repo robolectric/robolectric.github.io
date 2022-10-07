@@ -1,0 +1,21 @@
+{
+  "methods": {
+    "__constructor__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__constructor__()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.S_V2",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowImeTracingClientImpl"
+}

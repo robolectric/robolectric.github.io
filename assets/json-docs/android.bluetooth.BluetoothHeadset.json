@@ -13,6 +13,17 @@
       "name": "addConnectedDevice(android.bluetooth.BluetoothDevice)",
       "documentation": "Adds the given BluetoothDevice to the shadow\u0027s list of \"connected devices\" "
     },
+    "getActiveDevice()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothDevice",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getActiveDevice()"
+    },
     "getConnectedDevices()": {
       "isImplementation": true,
       "modifiers": [
@@ -91,6 +102,19 @@
       "name": "sendVendorSpecificResultCode(android.bluetooth.BluetoothDevice,java.lang.String,java.lang.String)",
       "documentation": "Overrides behavior of {@link sendVendorSpecificResultCode}.\n\n@return \u0027true\u0027 only if the given device has been previously added by a call to {@link\n    ShadowBluetoothHeadset#addConnectedDevice} and {@link\n    ShadowBluetoothHeadset#setAllowsSendVendorSpecificResultCode} has not been called with\n    \u0027false\u0027 argument.\n@throws IllegalArgumentException if \u0027command\u0027 argument is null, per Android API\n"
     },
+    "setActiveDevice(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bluetoothDevice"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "setActiveDevice(android.bluetooth.BluetoothDevice)"
+    },
     "setAllowsSendVendorSpecificResultCode(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -133,6 +157,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.P",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothHeadset",
     "android.bluetooth.BluetoothProfile",
@@ -140,6 +165,7 @@
     "java.util.ArrayList",
     "java.util.List",
     "java.util.Objects",
+    "javax.annotation.Nullable",
     "javax.annotation.concurrent.NotThreadSafe",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
