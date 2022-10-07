@@ -25,7 +25,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 require 'json'
-require 'open-uri'
-gh_versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+require 'net/http'
+gh_versions = JSON.parse(Net::HTTP.get(URI('https://pages.github.com/versions.json')))
 
 gem 'github-pages', gh_versions['github-pages']
+
+gem "webrick", "~> 1.7"
