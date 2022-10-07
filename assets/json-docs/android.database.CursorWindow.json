@@ -1,9 +1,26 @@
 {
-  "methods": {},
+  "methods": {
+    "dispose()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dispose()"
+    }
+  },
   "imports": [
     "android.database.CursorWindow",
+    "java.util.concurrent.atomic.AtomicBoolean",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadows.ShadowCursorWindow.Picker"
+    "org.robolectric.annotation.ReflectorObject",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowCursorWindow.Picker",
+    "org.robolectric.shadows.ShadowCursorWindow.CursorWindowReflector"
   ],
   "name": "org.robolectric.shadows.ShadowCursorWindow",
   "documentation": "The base shadow class for {@link CursorWindow}.\n\n\u003cp\u003eThe actual shadow class for {@link CursorWindow} will be selected during runtime by the\nPicker.\n"

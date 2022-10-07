@@ -36,6 +36,18 @@
       "exceptions": [],
       "name": "getGlobalActionsPerformed()"
     },
+    "getSystemActions()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.view.accessibility.AccessibilityNodeInfo.AccessibilityAction\u003e",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getSystemActions()"
+    },
     "getWindows()": {
       "isImplementation": true,
       "modifiers": [
@@ -73,6 +85,19 @@
       "exceptions": [],
       "name": "setCanDispatchGestures(boolean)",
       "documentation": "Sets whether the service is currently able to dispatch gestures.\n\nIf {@code false}, {@link AccessibilityService#dispatchGesture} will return {@code false}.\n"
+    },
+    "setSystemActions(java.util.List\u003candroid.view.accessibility.AccessibilityNodeInfo.AccessibilityAction\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [
+        "systemActions"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSystemActions(java.util.List\u003candroid.view.accessibility.AccessibilityNodeInfo.AccessibilityAction\u003e)"
     },
     "setTakeScreenshotErrorCode(int)": {
       "isImplementation": false,
@@ -131,6 +156,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "android.accessibilityservice.AccessibilityService",
     "android.accessibilityservice.AccessibilityService.GestureResultCallback",
     "android.accessibilityservice.AccessibilityService.ScreenshotErrorCode",
@@ -142,6 +168,7 @@
     "android.hardware.HardwareBuffer",
     "android.os.Handler",
     "android.os.SystemClock",
+    "android.view.accessibility.AccessibilityNodeInfo",
     "android.view.accessibility.AccessibilityWindowInfo",
     "java.util.ArrayList",
     "java.util.List",

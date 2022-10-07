@@ -1,17 +1,18 @@
 {
   "methods": {
-    "get(android.content.ContentResolver)": {
+    "\u003cT\u003eget(java.lang.Class\u003cT\u003e,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
         "private",
         "static"
       ],
       "params": [
-        "cr"
+        "type",
+        "name"
       ],
-      "returnType": "java.util.Map\u003cjava.lang.String,java.lang.Object\u003e",
+      "returnType": "java.util.Optional\u003cT\u003e",
       "exceptions": [],
-      "name": "get(android.content.ContentResolver)"
+      "name": "\u003cT\u003eget(java.lang.Class\u003cT\u003e,java.lang.String)"
     },
     "getFloat(android.content.ContentResolver,java.lang.String)": {
       "isImplementation": true,
@@ -171,6 +172,21 @@
       "minSdk": 17,
       "name": "getStringForUser(android.content.ContentResolver,java.lang.String,int)"
     },
+    "put(android.content.ContentResolver,java.lang.String,java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "cr",
+        "name",
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "put(android.content.ContentResolver,java.lang.String,java.lang.Object)"
+    },
     "putFloat(android.content.ContentResolver,java.lang.String,float)": {
       "isImplementation": true,
       "modifiers": [
@@ -248,6 +264,17 @@
       "exceptions": [],
       "name": "putString(android.content.ContentResolver,java.lang.String,java.lang.String)"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "setLocationProviderEnabled(android.content.ContentResolver,java.lang.String,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -314,14 +341,17 @@
     "android.os.Build",
     "android.provider.Settings",
     "android.provider.Settings.Secure",
+    "android.provider.Settings.SettingNotFoundException",
     "android.text.TextUtils",
+    "com.google.common.collect.ImmutableMap",
     "java.util.Arrays",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.Map",
     "java.util.Objects",
+    "java.util.Optional",
     "java.util.Set",
-    "java.util.WeakHashMap",
+    "java.util.concurrent.ConcurrentHashMap",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

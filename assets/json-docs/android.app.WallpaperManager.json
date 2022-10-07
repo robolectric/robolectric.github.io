@@ -51,6 +51,17 @@
       "name": "getWallpaperCommandRecords()",
       "documentation": "Returns all the invocation records to {@link WallpaperManager#sendWallpaperCommand} "
     },
+    "getWallpaperDimAmount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getWallpaperDimAmount()"
+    },
     "getWallpaperFile(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -76,6 +87,20 @@
       "minSdk": 23,
       "name": "getWallpaperInfo()",
       "documentation": "Returns the information about the wallpaper if the current wallpaper is a live wallpaper\ncomponent. Otherwise, if the wallpaper is a static image, this returns null.\n"
+    },
+    "hasResourceWallpaper(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "resid"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "hasResourceWallpaper(int)",
+      "documentation": "Returns whether the current wallpaper has been set through {@link #setResource(int)} or {@link\n#setResource(int, int)} with the same resource id.\n"
     },
     "isSetWallpaperAllowed()": {
       "isImplementation": true,
@@ -157,6 +182,34 @@
       "exceptions": [],
       "name": "setIsWallpaperSupported(boolean)"
     },
+    "setResource(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "resid"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 23,
+      "name": "setResource(int)",
+      "documentation": "Sets a resource id as the current wallpaper.\n\n\u003cp\u003eThis only caches the resource id in memory. Calling this will override any previously set\nresource and does not differentiate between users.\n"
+    },
+    "setResource(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "resid",
+        "which"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "setResource(int,int)"
+    },
     "setStream(java.io.InputStream,android.graphics.Rect,boolean,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -190,10 +243,24 @@
       "minSdk": 23,
       "name": "setWallpaperComponent(android.content.ComponentName)",
       "documentation": "Sets a live wallpaper, {@code wallpaperService}, as the current wallpaper.\n\n\u003cp\u003eThis only caches the live wallpaper info in the memory. Calling this will remove any\npreviously set static wallpaper.\n"
+    },
+    "setWallpaperDimAmount(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "dimAmount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "setWallpaperDimAmount(float)"
     }
   },
   "imports": [
     "android.Manifest.permission",
+    "android.annotation.FloatRange",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
     "android.app.WallpaperInfo",
@@ -210,6 +277,7 @@
     "android.os.Bundle",
     "android.os.IBinder",
     "android.os.ParcelFileDescriptor",
+    "android.util.MathUtils",
     "java.io.File",
     "java.io.FileOutputStream",
     "java.io.IOException",
@@ -217,6 +285,7 @@
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.List",
+    "java.util.concurrent.atomic.AtomicInteger",
     "javax.annotation.Nullable",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",

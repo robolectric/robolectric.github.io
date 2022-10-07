@@ -355,7 +355,6 @@
     "getBytesPerPixel(android.graphics.Bitmap.Config)": {
       "isImplementation": false,
       "modifiers": [
-        "public",
         "static"
       ],
       "params": [
@@ -580,16 +579,6 @@
       "exceptions": [],
       "name": "getPixels(int[],int,int,int,int,int,int)",
       "documentation": "Note that this method will return a RuntimeException unless: - {@code pixels} has the same\nlength as the number of pixels of the bitmap. - {@code x \u003d 0} - {@code y \u003d 0} - {@code width}\nand {@code height} height match the current bitmap\u0027s dimensions.\n"
-    },
-    "getRealBitmap()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "getRealBitmap()"
     },
     "getRowBytes()": {
       "isImplementation": true,

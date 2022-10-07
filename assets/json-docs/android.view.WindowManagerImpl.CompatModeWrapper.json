@@ -15,6 +15,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S_V2",
     "android.view.View.SYSTEM_UI_FLAG_VISIBLE",
     "android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING",
     "org.robolectric.RuntimeEnvironment.getApiLevel",

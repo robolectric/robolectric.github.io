@@ -63,6 +63,19 @@
       "exceptions": [],
       "name": "myPid()"
     },
+    "myProcessName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "myProcessName()",
+      "documentation": "Returns the name of the process. You can override this value by calling {@link\n#setProcessName(String)}.\n\n@return process name.\n"
+    },
     "myTid()": {
       "isImplementation": true,
       "modifiers": [
@@ -113,6 +126,20 @@
       "exceptions": [],
       "name": "setPid(int)",
       "documentation": "Sets the identifier of this process.\n"
+    },
+    "setProcessName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "processName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setProcessName(java.lang.String)",
+      "documentation": "Sets the process name returned by {@link #myProcessName()}.\n\n@param processName New process name to set. Cannot be null.\n"
     },
     "setThreadPriority(int)": {
       "isImplementation": true,
@@ -175,7 +202,9 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "com.google.common.base.Preconditions.checkArgument",
+    "androidx.annotation.NonNull",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.Map",

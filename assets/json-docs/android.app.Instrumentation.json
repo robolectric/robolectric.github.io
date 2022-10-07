@@ -284,23 +284,6 @@
       "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,java.lang.String,android.content.Intent,int,android.os.Bundle,android.os.UserHandle)",
       "documentation": "Behaves as {@link #execStartActivity(Context, IBinder, IBinder, String, Intent, int, Bundle).\n\n\u003cp\u003eCurrently ignores the user.\n"
     },
-    "execStartActivityFromAppTask(android.content.Context,android.os.IBinder,java.lang.Object,android.content.Intent,android.os.Bundle)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "who",
-        "contextThread",
-        "appTask",
-        "intent",
-        "options"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 21,
-      "name": "execStartActivityFromAppTask(android.content.Context,android.os.IBinder,java.lang.Object,android.content.Intent,android.os.Bundle)"
-    },
     "getAllStartedServices()": {
       "isImplementation": false,
       "modifiers": [],
@@ -451,6 +434,31 @@
       "returnType": "org.robolectric.shadows.ShadowInstrumentation.TargetAndRequestCode",
       "exceptions": [],
       "name": "getTargetAndRequestCodeForIntent(android.content.Intent)"
+    },
+    "getUiAutomation()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.app.UiAutomation",
+      "exceptions": [],
+      "minSdk": 18,
+      "maxSdk": 23,
+      "name": "getUiAutomation()"
+    },
+    "getUiAutomation(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "flags"
+      ],
+      "returnType": "android.app.UiAutomation",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getUiAutomation(int)"
     },
     "getUnbindableActions()": {
       "isImplementation": false,
@@ -965,9 +973,10 @@
     "android.content.pm.PackageManager.PERMISSION_DENIED",
     "android.content.pm.PackageManager.PERMISSION_GRANTED",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
@@ -975,12 +984,13 @@
     "com.google.common.util.concurrent.Futures.immediateFuture",
     "com.google.common.util.concurrent.MoreExecutors.directExecutor",
     "org.robolectric.util.reflector.Reflector.reflector",
-    "android.annotation.Nullable",
     "android.app.Activity",
     "android.app.ActivityThread",
     "android.app.Fragment",
+    "android.app.IUiAutomationConnection",
     "android.app.Instrumentation",
     "android.app.Instrumentation.ActivityResult",
+    "android.app.UiAutomation",
     "android.content.ActivityNotFoundException",
     "android.content.BroadcastReceiver",
     "android.content.ComponentName",
@@ -998,6 +1008,7 @@
     "android.os.UserHandle",
     "android.text.TextUtils",
     "android.util.Pair",
+    "androidx.annotation.Nullable",
     "com.google.common.collect.ImmutableList",
     "com.google.common.util.concurrent.AsyncFunction",
     "com.google.common.util.concurrent.Futures",
@@ -1011,6 +1022,7 @@
     "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Map",
+    "java.util.Objects",
     "java.util.Set",
     "java.util.concurrent.ExecutionException",
     "java.util.concurrent.Executor",
@@ -1024,6 +1036,8 @@
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
     "org.robolectric.shadows.ShadowApplication.Wrapper",
     "org.robolectric.util.Logger",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.WithType",

@@ -1,5 +1,18 @@
 {
   "methods": {
+    "addConfigurationChangeListener(org.robolectric.shadows.ShadowResources.OnConfigurationChangeListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addConfigurationChangeListener(org.robolectric.shadows.ShadowResources.OnConfigurationChangeListener)",
+      "documentation": "Add a listener to observe resource configuration changes. See {@link\nOnConfigurationChangeListener}.\n"
+    },
     "getAttributeSetSourceResId(android.util.AttributeSet)": {
       "isImplementation": true,
       "modifiers": [
@@ -210,6 +223,19 @@
       "name": "openRawResourceFd(int)",
       "documentation": "Since {@link AssetFileDescriptor}s are not yet supported by Robolectric, {@code null} will be\nreturned if the resource is found. If the resource cannot be found, {@link\nResources.NotFoundException} will be thrown.\n"
     },
+    "removeConfigurationChangeListener(org.robolectric.shadows.ShadowResources.OnConfigurationChangeListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeConfigurationChangeListener(org.robolectric.shadows.ShadowResources.OnConfigurationChangeListener)",
+      "documentation": "Remove a listener to observe resource configuration changes. See {@link\nOnConfigurationChangeListener}.\n"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -248,6 +274,20 @@
       "returnType": "android.content.res.XmlResourceParser",
       "exceptions": [],
       "name": "setSourceResourceId(android.content.res.XmlResourceParser,int)"
+    },
+    "updateConfiguration(android.content.res.Configuration,android.util.DisplayMetrics,android.content.res.CompatibilityInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "config",
+        "metrics",
+        "compat"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "updateConfiguration(android.content.res.Configuration,android.util.DisplayMetrics,android.content.res.CompatibilityInfo)"
     }
   },
   "imports": [
@@ -261,14 +301,13 @@
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.res.AssetFileDescriptor",
     "android.content.res.AssetManager",
+    "android.content.res.CompatibilityInfo",
     "android.content.res.Configuration",
     "android.content.res.Resources",
     "android.content.res.Resources.NotFoundException",
     "android.content.res.ResourcesImpl",
     "android.content.res.TypedArray",
     "android.content.res.XmlResourceParser",
-    "android.graphics.Bitmap",
-    "android.graphics.drawable.BitmapDrawable",
     "android.graphics.drawable.Drawable",
     "android.os.ParcelFileDescriptor",
     "android.util.AttributeSet",
@@ -281,8 +320,10 @@
     "java.lang.reflect.Field",
     "java.lang.reflect.Modifier",
     "java.util.ArrayList",
+    "java.util.HashSet",
     "java.util.List",
     "java.util.Locale",
+    "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.android.Bootstrap",
     "org.robolectric.annotation.HiddenApi",
@@ -302,6 +343,7 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowResources.OnConfigurationChangeListener",
     "org.robolectric.shadows.ShadowResources.ShadowTheme",
     "org.robolectric.shadows.ShadowResources.ShadowLegacyTheme",
     "org.robolectric.shadows.ShadowResources.ShadowNotFoundException",

@@ -13,6 +13,17 @@
       "exceptions": [],
       "name": "addDevice(android.bluetooth.BluetoothDevice,int)"
     },
+    "getActiveDevice()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothDevice",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getActiveDevice()"
+    },
     "getBufferLengthMillis(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -82,6 +93,19 @@
       "exceptions": [],
       "name": "removeDevice(android.bluetooth.BluetoothDevice)"
     },
+    "setActiveDevice(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bluetoothDevice"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "setActiveDevice(android.bluetooth.BluetoothDevice)"
+    },
     "setBufferLengthMillis(int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -110,16 +134,20 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.S",
     "android.bluetooth.BluetoothA2dp",
     "android.bluetooth.BluetoothCodecConfig",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothProfile",
+    "android.content.Intent",
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",
     "java.util.Map",
+    "javax.annotation.Nullable",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],

@@ -44,46 +44,28 @@
       "exceptions": [],
       "name": "getSource()"
     },
-    "mutate()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "android.graphics.drawable.Drawable",
-      "exceptions": [],
-      "name": "mutate()"
-    },
-    "setColorFilter(android.graphics.ColorFilter)": {
-      "isImplementation": true,
+    "setCreatedFromResId(int,java.lang.String)": {
+      "isImplementation": false,
       "modifiers": [
         "protected"
       ],
       "params": [
-        "colorFilter"
+        "createdFromResId",
+        "resourceName"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setColorFilter(android.graphics.ColorFilter)"
+      "name": "setCreatedFromResId(int,java.lang.String)"
     }
   },
   "imports": [
-    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
-    "android.graphics.ColorFilter",
-    "android.graphics.Paint",
     "android.graphics.drawable.BitmapDrawable",
-    "android.graphics.drawable.Drawable",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
-    "org.robolectric.util.reflector.Direct",
-    "org.robolectric.util.reflector.ForType",
-    "org.robolectric.shadows.ShadowBitmapDrawable.BitmapDrawableReflector"
+    "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowBitmapDrawable"
 }

@@ -1479,7 +1479,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.res.android.NativeObjRegistry",
-    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers"
   ],
   "name": "org.robolectric.shadows.ShadowMotionEvent",

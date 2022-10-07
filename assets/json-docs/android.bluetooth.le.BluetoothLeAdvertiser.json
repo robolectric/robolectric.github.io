@@ -1,0 +1,135 @@
+{
+  "methods": {
+    "__constructor__(android.bluetooth.BluetoothAdapter)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bluetoothAdapter"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "__constructor__(android.bluetooth.BluetoothAdapter)"
+    },
+    "__constructor__(android.bluetooth.IBluetoothManager)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bluetoothManager"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 30,
+      "name": "__constructor__(android.bluetooth.IBluetoothManager)"
+    },
+    "getAdvertisementRequestCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAdvertisementRequestCount()",
+      "documentation": "Returns the count of current ongoing Bluetooth LE advertising requests. "
+    },
+    "getByteLength(byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "array"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getByteLength(byte[])"
+    },
+    "getTotalBytes(android.bluetooth.le.AdvertiseData,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "data",
+        "isConnectable"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getTotalBytes(android.bluetooth.le.AdvertiseData,boolean)"
+    },
+    "startAdvertising(android.bluetooth.le.AdvertiseSettings,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "settings",
+        "advertiseData",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startAdvertising(android.bluetooth.le.AdvertiseSettings,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseCallback)",
+      "documentation": "Start Bluetooth LE Advertising. This method returns immediately, the operation status is\ndelivered through {@code callback}.\n\n@param settings Settings for Bluetooth LE advertising.\n@param advertiseData Advertisement data to be broadcasted.\n@param callback Callback for advertising status.\n"
+    },
+    "startAdvertising(android.bluetooth.le.AdvertiseSettings,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "settings",
+        "advertiseData",
+        "scanResponse",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "startAdvertising(android.bluetooth.le.AdvertiseSettings,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseCallback)",
+      "documentation": "Start Bluetooth LE Advertising. This method returns immediately, the operation status is\ndelivered through {@code callback}.\n\n@param settings Settings for Bluetooth LE advertising.\n@param advertiseData Advertisement data to be broadcasted.\n@param scanResponse Scan response associated with the advertisement data.\n@param callback Callback for advertising status.\n@throws IllegalArgumentException When {@code callback} is not present.\n"
+    },
+    "stopAdvertising(android.bluetooth.le.AdvertiseCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stopAdvertising(android.bluetooth.le.AdvertiseCallback)",
+      "documentation": "Stop Bluetooth LE advertising. The {@code callback} must be the same one use in {@link\nShadowBluetoothLeAdvertiser#startAdvertising}.\n\n@param callback {@link AdvertiseCallback} identifies the advertising instance to stop.\n@throws IllegalArgumentException When the {@code callback} is not a key present in {@code\n    advertisements}.\n"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
+    "android.bluetooth.BluetoothAdapter",
+    "android.bluetooth.BluetoothUuid",
+    "android.bluetooth.IBluetoothManager",
+    "android.bluetooth.le.AdvertiseCallback",
+    "android.bluetooth.le.AdvertiseData",
+    "android.bluetooth.le.AdvertiseSettings",
+    "android.bluetooth.le.BluetoothLeAdvertiser",
+    "android.os.ParcelUuid",
+    "java.util.HashSet",
+    "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.ReflectorObject",
+    "org.robolectric.util.PerfStatsCollector",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowBluetoothLeAdvertiser.BluetoothLeAdvertiserReflector"
+  ],
+  "name": "org.robolectric.shadows.ShadowBluetoothLeAdvertiser",
+  "documentation": "Shadow implementation of {@link BluetoothLeAdvertiser}. "
+}

@@ -55,6 +55,20 @@
       "name": "clearPorts()",
       "documentation": "Remove all added ports from UsbManager. "
     },
+    "createUsbDeviceConnection(android.hardware.usb.UsbDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "android.hardware.usb.UsbDeviceConnection",
+      "exceptions": [],
+      "name": "createUsbDeviceConnection(android.hardware.usb.UsbDevice)",
+      "documentation": "Helper method for creating a {@link UsbDeviceConnection}. "
+    },
     "createUsbPort(android.hardware.usb.UsbManager,java.lang.String,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -123,7 +137,7 @@
       "name": "getPortStatus(java.lang.Object)"
     },
     "getPortStatus(java.lang.String)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -132,7 +146,6 @@
       ],
       "returnType": "java.lang.Object",
       "exceptions": [],
-      "minSdk": 23,
       "name": "getPortStatus(java.lang.String)",
       "documentation": "Returns the {@link UsbPortStatus} corresponding to the {@link UsbPort} with given {@code\nportId} if present; otherwise returns {@code null}.\n"
     },
@@ -146,6 +159,19 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "getPorts()"
+    },
+    "grantPermission(android.hardware.usb.UsbAccessory)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accessory"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "grantPermission(android.hardware.usb.UsbAccessory)",
+      "documentation": "Grants permission for the accessory. "
     },
     "grantPermission(android.hardware.usb.UsbDevice)": {
       "isImplementation": true,
@@ -174,6 +200,19 @@
       "minSdk": 25,
       "name": "grantPermission(android.hardware.usb.UsbDevice,java.lang.String)"
     },
+    "hasPermission(android.hardware.usb.UsbAccessory)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "accessory"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasPermission(android.hardware.usb.UsbAccessory)",
+      "documentation": "Returns true if the caller has permission to access the accessory. "
+    },
     "hasPermission(android.hardware.usb.UsbDevice)": {
       "isImplementation": true,
       "modifiers": [
@@ -186,6 +225,20 @@
       "exceptions": [],
       "name": "hasPermission(android.hardware.usb.UsbDevice)",
       "documentation": "Returns true if the caller has permission to access the device. "
+    },
+    "hasPermissionForPackage(android.hardware.usb.UsbAccessory,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accessory",
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasPermissionForPackage(android.hardware.usb.UsbAccessory,java.lang.String)",
+      "documentation": "Returns true if the given package has permission to access the device. "
     },
     "hasPermissionForPackage(android.hardware.usb.UsbDevice,java.lang.String)": {
       "isImplementation": false,
@@ -214,6 +267,19 @@
       "name": "openAccessory(android.hardware.usb.UsbAccessory)",
       "documentation": "Opens a file descriptor from a temporary file. "
     },
+    "openDevice(android.hardware.usb.UsbDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "android.hardware.usb.UsbDeviceConnection",
+      "exceptions": [],
+      "name": "openDevice(android.hardware.usb.UsbDevice)",
+      "documentation": "Opens a file descriptor from a temporary file. "
+    },
     "removeUsbDevice(android.hardware.usb.UsbDevice)": {
       "isImplementation": false,
       "modifiers": [
@@ -226,6 +292,20 @@
       "exceptions": [],
       "name": "removeUsbDevice(android.hardware.usb.UsbDevice)",
       "documentation": "Removes a USB device from available USB devices map. "
+    },
+    "revokePermission(android.hardware.usb.UsbAccessory,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accessory",
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "revokePermission(android.hardware.usb.UsbAccessory,java.lang.String)",
+      "documentation": "Revokes permission to a USB accessory granted to a package. This method does nothing if the\npackage doesn\u0027t have permission to access the accessory.\n"
     },
     "revokePermission(android.hardware.usb.UsbDevice,java.lang.String)": {
       "isImplementation": false,
@@ -282,6 +362,7 @@
     "android.content.Intent",
     "android.hardware.usb.UsbAccessory",
     "android.hardware.usb.UsbDevice",
+    "android.hardware.usb.UsbDeviceConnection",
     "android.hardware.usb.UsbManager",
     "android.hardware.usb.UsbPort",
     "android.hardware.usb.UsbPortStatus",

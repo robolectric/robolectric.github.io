@@ -98,6 +98,49 @@
       "minSdk": 23,
       "name": "lockHardwareCanvas()"
     },
+    "nativeCreateFromSurfaceControl(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "surfaceControlNativeObject"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "nativeCreateFromSurfaceControl(java.lang.Object)"
+    },
+    "nativeCreateFromSurfaceTexture(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "surfaceTexture"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "nativeCreateFromSurfaceTexture(java.lang.Object)"
+    },
+    "nativeGetFromSurfaceControl(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "surfaceObject",
+        "surfaceControlNativeObject"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "nativeGetFromSurfaceControl(long,long)"
+    },
     "release()": {
       "isImplementation": true,
       "modifiers": [
@@ -107,6 +150,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "release()"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "unlockCanvasAndPost(android.graphics.Canvas)": {
       "isImplementation": true,
@@ -123,8 +177,10 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Canvas",
     "android.graphics.Rect",
@@ -133,10 +189,13 @@
     "dalvik.system.CloseGuard",
     "java.lang.ref.WeakReference",
     "java.util.concurrent.atomic.AtomicBoolean",
+    "java.util.concurrent.atomic.AtomicInteger",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.ReflectorObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowSurfaceTexture.SurfaceTextureReflector",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",

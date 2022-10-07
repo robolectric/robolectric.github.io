@@ -1,0 +1,189 @@
+{
+  "methods": {
+    "bulkTransfer(android.hardware.usb.UsbEndpoint,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "endpoint",
+        "buffer",
+        "length",
+        "timeout"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "bulkTransfer(android.hardware.usb.UsbEndpoint,byte[],int,int)"
+    },
+    "bulkTransfer(android.hardware.usb.UsbEndpoint,byte[],int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "endpoint",
+        "buffer",
+        "offset",
+        "length",
+        "timeout"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "bulkTransfer(android.hardware.usb.UsbEndpoint,byte[],int,int,int)"
+    },
+    "claimInterface(android.hardware.usb.UsbInterface,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intf",
+        "force"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "claimInterface(android.hardware.usb.UsbInterface,boolean)"
+    },
+    "controlTransfer(int,int,int,int,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "requestType",
+        "request",
+        "value",
+        "index",
+        "buffer",
+        "length",
+        "timeout"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "controlTransfer(int,int,int,int,byte[],int,int)"
+    },
+    "controlTransfer(int,int,int,int,byte[],int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "requestType",
+        "request",
+        "value",
+        "index",
+        "buffer",
+        "offset",
+        "length",
+        "timeout"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "controlTransfer(int,int,int,int,byte[],int,int,int)"
+    },
+    "readOutgoingData(byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "buffer"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "readOutgoingData(byte[])",
+      "documentation": "Fills the buffer with data that was written by UsbDeviceConnection#bulkTransfer. "
+    },
+    "registerDataListener(org.robolectric.shadows.ShadowUsbDeviceConnection.DataListener)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "dataListener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "registerDataListener(org.robolectric.shadows.ShadowUsbDeviceConnection.DataListener)"
+    },
+    "releaseInterface(android.hardware.usb.UsbInterface)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intf"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "releaseInterface(android.hardware.usb.UsbInterface)"
+    },
+    "requestWait()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.hardware.usb.UsbRequest",
+      "exceptions": [],
+      "name": "requestWait()"
+    },
+    "requestWait(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "timeout"
+      ],
+      "returnType": "android.hardware.usb.UsbRequest",
+      "exceptions": [
+        "java.util.concurrent.TimeoutException"
+      ],
+      "minSdk": 26,
+      "name": "requestWait(long)"
+    },
+    "unregisterDataListener()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "unregisterDataListener()"
+    },
+    "writeIncomingData(byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "data"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writeIncomingData(byte[])",
+      "documentation": "Passes data that can then be read by an initialized UsbRequest#queue(ByteBuffer). "
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.O",
+    "android.hardware.usb.UsbDeviceConnection",
+    "android.hardware.usb.UsbEndpoint",
+    "android.hardware.usb.UsbInterface",
+    "android.hardware.usb.UsbRequest",
+    "java.io.IOException",
+    "java.io.PipedInputStream",
+    "java.io.PipedOutputStream",
+    "java.util.concurrent.TimeoutException",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowUsbDeviceConnection.DataListener"
+  ],
+  "name": "org.robolectric.shadows.ShadowUsbDeviceConnection",
+  "documentation": "Robolectric implementation of {@link android.hardware.usb.UsbDeviceConnection}. "
+}

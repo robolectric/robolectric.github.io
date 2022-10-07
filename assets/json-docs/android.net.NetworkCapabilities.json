@@ -62,12 +62,75 @@
       "exceptions": [],
       "name": "removeTransportType(int)",
       "documentation": "Updates the transport types for this network capablities to remove {@code transportType}. "
+    },
+    "setLinkDownstreamBandwidthKbps(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "kbps"
+      ],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setLinkDownstreamBandwidthKbps(int)",
+      "documentation": "Sets the LinkDownstreamBandwidthKbps of the NetworkCapabilities. "
+    },
+    "setNetworkSpecifier(android.net.NetworkSpecifier)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkSpecifier"
+      ],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setNetworkSpecifier(android.net.NetworkSpecifier)",
+      "documentation": "Changes {@link NetworkSpecifier} for this network capabilities. Works only on Android O and\nhigher. For lower versions use {@link #setNetworkSpecifier(String)}\n"
+    },
+    "setNetworkSpecifier(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkSpecifier"
+      ],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "minSdk": 24,
+      "maxSdk": 25,
+      "name": "setNetworkSpecifier(java.lang.String)",
+      "documentation": "Changes {@link NetworkSpecifier} for this network capabilities. Works only on Android N_MR1 and\nlower. For higher versions use {@link #setNetworkSpecifier(NetworkSpecifier)}\n"
+    },
+    "setTransportInfo(android.net.TransportInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "transportInfo"
+      ],
+      "returnType": "android.net.NetworkCapabilities",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setTransportInfo(android.net.TransportInfo)",
+      "documentation": "Sets the {@code transportInfo} of the NetworkCapabilities. "
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.net.NetworkCapabilities",
+    "android.net.NetworkSpecifier",
+    "android.net.TransportInfo",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

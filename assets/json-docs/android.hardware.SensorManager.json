@@ -184,8 +184,9 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 19,
       "name": "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,int)",
-      "documentation": "@param maxLatency is ignored. "
+      "documentation": "@param maxLatency is ignored.\n"
     },
     "registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,int,android.os.Handler)": {
       "isImplementation": true,

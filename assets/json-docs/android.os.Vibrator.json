@@ -13,6 +13,17 @@
       "minSdk": 30,
       "name": "areAllPrimitivesSupported(int...)"
     },
+    "getAudioAttributesFromLastVibration()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.media.AudioAttributes",
+      "exceptions": [],
+      "name": "getAudioAttributesFromLastVibration()",
+      "documentation": "Returns the {@link AudioAttributes} from the last vibration. "
+    },
     "getEffectId()": {
       "isImplementation": false,
       "modifiers": [
@@ -45,6 +56,17 @@
       "exceptions": [],
       "name": "getPattern()",
       "documentation": "Returns the last vibration pattern. "
+    },
+    "getPrimitiveEffects()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowVibrator.PrimitiveEffect\u003e",
+      "exceptions": [],
+      "name": "getPrimitiveEffects()",
+      "documentation": "Returns the last list of {@link PrimitiveEffect}. "
     },
     "getRepeat()": {
       "isImplementation": false,
@@ -144,6 +166,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.R",
+    "android.media.AudioAttributes",
     "android.os.VibrationAttributes",
     "android.os.VibrationEffect",
     "android.os.Vibrator",
@@ -151,9 +174,11 @@
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.List",
+    "java.util.Objects",
     "javax.annotation.Nullable",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowVibrator.PrimitiveEffect"
   ],
   "name": "org.robolectric.shadows.ShadowVibrator"
 }

@@ -223,7 +223,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "provideWidthAndHeightHints(android.net.Uri,int,int)",
-      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data. "
+      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data.\n"
     },
     "provideWidthAndHeightHints(int,int,int)": {
       "isImplementation": false,
@@ -239,7 +239,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "provideWidthAndHeightHints(int,int,int)",
-      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data. "
+      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data.\n"
     },
     "provideWidthAndHeightHints(java.io.FileDescriptor,int,int)": {
       "isImplementation": false,
@@ -255,7 +255,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "provideWidthAndHeightHints(java.io.FileDescriptor,int,int)",
-      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data. "
+      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data.\n"
     },
     "provideWidthAndHeightHints(java.lang.String,int,int)": {
       "isImplementation": false,
@@ -271,7 +271,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "provideWidthAndHeightHints(java.lang.String,int,int)",
-      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data. "
+      "documentation": "@deprecated Use any of the BitmapFactory.decode methods with real image data.\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -329,6 +329,7 @@
     }
   },
   "imports": [
+    "java.lang.Math.round",
     "java.nio.charset.StandardCharsets.UTF_8",
     "org.robolectric.shadows.ImageUtil.getImageFromStream",
     "org.robolectric.util.reflector.Reflector.reflector",

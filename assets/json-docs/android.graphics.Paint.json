@@ -12,6 +12,18 @@
       "exceptions": [],
       "name": "__constructor__(android.graphics.Paint)"
     },
+    "applyTextScaleX(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "textWidth"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "applyTextScaleX(float)"
+    },
     "breakText(char[],float,float[])": {
       "isImplementation": false,
       "modifiers": [
@@ -114,6 +126,17 @@
       "returnType": "android.graphics.Paint.Join",
       "exceptions": [],
       "name": "getJoin()"
+    },
+    "getLetterSpacing()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "getLetterSpacing()"
     },
     "getPathEffect()": {
       "isImplementation": true,
@@ -229,6 +252,16 @@
       "exceptions": [],
       "name": "getTextAlign()"
     },
+    "getTextScaleX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getTextScaleX()"
+    },
     "getTextSize()": {
       "isImplementation": true,
       "modifiers": [
@@ -238,6 +271,16 @@
       "returnType": "float",
       "exceptions": [],
       "name": "getTextSize()"
+    },
+    "getTextSkewX()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "getTextSkewX()"
     },
     "getTypeface()": {
       "isImplementation": true,
@@ -258,6 +301,17 @@
       "returnType": "float",
       "exceptions": [],
       "name": "getWidth()"
+    },
+    "getWordSpacing()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getWordSpacing()"
     },
     "isAntiAlias()": {
       "isImplementation": true,
@@ -869,6 +923,19 @@
       "exceptions": [],
       "name": "setFlags(int)"
     },
+    "setLetterSpacing(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "letterSpacing"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setLetterSpacing(float)"
+    },
     "setPathEffect(android.graphics.PathEffect)": {
       "isImplementation": true,
       "modifiers": [
@@ -968,6 +1035,18 @@
       "exceptions": [],
       "name": "setTextAlign(android.graphics.Paint.Align)"
     },
+    "setTextScaleX(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "scaleX"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTextScaleX(float)"
+    },
     "setTextSize(float)": {
       "isImplementation": true,
       "modifiers": [
@@ -979,6 +1058,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setTextSize(float)"
+    },
+    "setTextSkewX(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "skewX"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTextSkewX(float)"
     },
     "setTypeface(android.graphics.Typeface)": {
       "isImplementation": true,
@@ -1003,6 +1094,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setUnderlineText(boolean)"
+    },
+    "setWordSpacing(float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "wordSpacing"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "setWordSpacing(float)"
     }
   },
   "imports": [
@@ -1010,6 +1114,7 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
+    "android.os.Build.VERSION_CODES.L",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
@@ -1018,6 +1123,7 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.annotation.TextLayoutMode.Mode.REALISTIC",
     "android.graphics.ColorFilter",
     "android.graphics.Paint",

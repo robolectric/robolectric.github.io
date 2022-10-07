@@ -71,6 +71,26 @@
       "exceptions": [],
       "name": "getApplicationNightMode()"
     },
+    "getContentResolver()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.ContentResolver",
+      "exceptions": [],
+      "name": "getContentResolver()"
+    },
+    "getContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getContext()"
+    },
     "getCurrentModeType()": {
       "isImplementation": true,
       "modifiers": [
@@ -90,6 +110,28 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getNightMode()"
+    },
+    "getNightModeCustomType()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getNightModeCustomType()"
+    },
+    "isNightModeOn()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isNightModeOn()",
+      "documentation": "Returns whether night mode is currently on when a custom night mode type is selected. "
     },
     "releaseProjection(int)": {
       "isImplementation": true,
@@ -153,23 +195,60 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNightMode(int)"
+    },
+    "setNightModeActivatedForCustomMode(int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "mode",
+        "active"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "setNightModeActivatedForCustomMode(int,boolean)"
+    },
+    "setNightModeCustomType(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "mode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "setNightModeCustomType(int)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.SystemApi",
     "android.app.UiModeManager",
+    "android.content.ContentResolver",
     "android.content.Context",
     "android.content.pm.PackageManager",
     "android.content.res.Configuration",
+    "android.os.Build.VERSION",
     "android.os.Build.VERSION_CODES",
+    "android.provider.Settings",
+    "androidx.annotation.GuardedBy",
     "com.google.common.collect.ImmutableSet",
     "java.util.HashSet",
     "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowUIModeManager.UiModeManagerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowUIModeManager",
-  "documentation": ""
+  "documentation": "Shadow for {@link UiModeManager}. "
 }

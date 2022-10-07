@@ -124,6 +124,17 @@
       "exceptions": [],
       "name": "clearAnimation()"
     },
+    "clearAnimations()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearAnimations()",
+      "documentation": "Resets the list returned by {@link #getAnimations()} to an empty list. "
+    },
     "clearWasInvalidated()": {
       "isImplementation": false,
       "modifiers": [
@@ -261,6 +272,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "dumpIndent(java.io.PrintStream,int)"
+    },
+    "getAnimations()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003candroid.view.animation.Animation\u003e",
+      "exceptions": [],
+      "name": "getAnimations()",
+      "documentation": "Returns a list of all animations that have been set on this view. "
     },
     "getAttachInfo()": {
       "isImplementation": false,
@@ -940,6 +962,16 @@
       "exceptions": [],
       "name": "setViewFocus(boolean)"
     },
+    "useRealGraphics()": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "useRealGraphics()"
+    },
     "visualize(android.view.View)": {
       "isImplementation": false,
       "modifiers": [
@@ -1002,9 +1034,9 @@
     "android.view.WindowManager",
     "android.view.animation.Animation",
     "android.view.animation.Transformation",
-    "android.widget.ImageView",
+    "com.google.common.collect.ImmutableList",
     "java.io.PrintStream",
-    "java.lang.reflect.Method",
+    "java.util.ArrayList",
     "java.util.HashSet",
     "java.util.List",
     "java.util.Set",
@@ -1017,7 +1049,6 @@
     "org.robolectric.annotation.ReflectorObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.TimeUtils",
     "org.robolectric.util.reflector.Accessor",

@@ -23,6 +23,16 @@
       "exceptions": [],
       "name": "acquire(long)"
     },
+    "acquireInternal()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "acquireInternal()"
+    },
     "getTag()": {
       "isImplementation": true,
       "modifiers": [
@@ -145,6 +155,7 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "com.google.common.base.Preconditions.checkState",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest.permission",
@@ -158,6 +169,7 @@
     "android.os.Build.VERSION_CODES",
     "android.os.PowerManager",
     "android.os.PowerManager.WakeLock",
+    "android.os.SystemClock",
     "android.os.WorkSource",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.ImmutableSet",
@@ -168,6 +180,7 @@
     "java.util.HashSet",
     "java.util.List",
     "java.util.Map",
+    "java.util.Optional",
     "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",

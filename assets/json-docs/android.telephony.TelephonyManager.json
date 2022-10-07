@@ -304,6 +304,16 @@
       "minSdk": 26,
       "name": "getImei(int)"
     },
+    "getLastSentVisualVoicemailSmsParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowTelephonyManager.VisualVoicemailSmsParams",
+      "exceptions": [],
+      "name": "getLastSentVisualVoicemailSmsParams()"
+    },
     "getLastTelephonyCallback()": {
       "isImplementation": false,
       "modifiers": [
@@ -458,6 +468,20 @@
       "name": "getServiceState()",
       "documentation": "Returns {@code null} by default or the value specified via {@link\n#setServiceState(ServiceState)}\n"
     },
+    "getServiceState(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "includeLocationData"
+      ],
+      "returnType": "android.telephony.ServiceState",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getServiceState(int)",
+      "documentation": "Returns {@code null} by default or the value specified via {@link\n#setServiceState(ServiceState)}\n"
+    },
     "getSignalStrength()": {
       "isImplementation": true,
       "modifiers": [
@@ -603,6 +627,17 @@
       "minSdk": 26,
       "name": "getVisualVoicemailPackageName()",
       "documentation": "Returns the value set by {@link #setVisualVoicemailPackageName(String)}. "
+    },
+    "getVisualVoicemailSmsFilterSettings()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.telephony.VisualVoicemailSmsFilterSettings",
+      "exceptions": [],
+      "name": "getVisualVoicemailSmsFilterSettings()",
+      "documentation": "Returns the last set {@link VisualVoicemailSmsFilterSettings}. "
     },
     "getVoiceMailAlphaTag()": {
       "isImplementation": true,
@@ -812,6 +847,21 @@
       "exceptions": [],
       "name": "listen(android.telephony.PhoneStateListener,int)"
     },
+    "registerTelephonyCallback(int,java.util.concurrent.Executor,android.telephony.TelephonyCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "includeLocationData",
+        "executor",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "registerTelephonyCallback(int,java.util.concurrent.Executor,android.telephony.TelephonyCallback)"
+    },
     "registerTelephonyCallback(java.util.concurrent.Executor,android.telephony.TelephonyCallback)": {
       "isImplementation": true,
       "modifiers": [
@@ -887,6 +937,22 @@
       "minSdk": 26,
       "name": "sendDialerSpecialCode(java.lang.String)",
       "documentation": "Implementation for {@link TelephonyManager#sendDialerSpecialCode(String)}.\n\n@param inputCode special code to be sent.\n"
+    },
+    "sendVisualVoicemailSms(java.lang.String,int,java.lang.String,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "number",
+        "port",
+        "text",
+        "sentIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "sendVisualVoicemailSms(java.lang.String,int,java.lang.String,android.app.PendingIntent)"
     },
     "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)": {
       "isImplementation": false,
@@ -1450,7 +1516,7 @@
       "documentation": "sets the serial number that will be returned by {@link #getSimSerialNumber}. "
     },
     "setSimState(int)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -1459,7 +1525,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 22,
       "name": "setSimState(int)",
       "documentation": "Sets the sim state of slot 0. "
     },
@@ -1556,6 +1621,20 @@
       "exceptions": [],
       "name": "setVisualVoicemailPackageName(java.lang.String)",
       "documentation": "Sets the value to be returned by {@link #getVisualVoicemailPackageName()}. "
+    },
+    "setVisualVoicemailSmsFilterSettings(android.telephony.VisualVoicemailSmsFilterSettings)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "settings"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setVisualVoicemailSmsFilterSettings(android.telephony.VisualVoicemailSmsFilterSettings)",
+      "documentation": "Implementation for {@link\nTelephonyManager#setVisualVoicemailSmsFilterSettings(VisualVoicemailSmsFilterSettings)}.\n\n@param settings The settings for the filter, or null to disable the filter.\n"
     },
     "setVoiceCapable(boolean)": {
       "isImplementation": false,
@@ -1665,6 +1744,7 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "android.telephony.PhoneStateListener.LISTEN_CALL_STATE",
     "android.telephony.PhoneStateListener.LISTEN_CELL_INFO",
     "android.telephony.PhoneStateListener.LISTEN_CELL_LOCATION",
@@ -1673,6 +1753,7 @@
     "android.telephony.TelephonyManager.CALL_STATE_IDLE",
     "android.telephony.TelephonyManager.CALL_STATE_RINGING",
     "android.annotation.CallSuper",
+    "android.app.PendingIntent",
     "android.content.Context",
     "android.content.Intent",
     "android.net.Uri",
@@ -1699,6 +1780,7 @@
     "android.telephony.TelephonyDisplayInfo",
     "android.telephony.TelephonyManager",
     "android.telephony.TelephonyManager.CellInfoCallback",
+    "android.telephony.VisualVoicemailSmsFilterSettings",
     "android.text.TextUtils",
     "android.util.SparseArray",
     "android.util.SparseIntArray",
@@ -1719,7 +1801,8 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowTelephonyManager.VisualVoicemailSmsParams"
   ],
   "name": "org.robolectric.shadows.ShadowTelephonyManager"
 }

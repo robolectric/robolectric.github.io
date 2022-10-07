@@ -13,7 +13,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "canDrawOverlays(android.content.Context)",
-      "documentation": "@return false by default, or the value specified via {@link #setCanDrawOverlays(boolean)} "
+      "documentation": "@return false by default, or the value specified via {@link #setCanDrawOverlays(boolean)}\n"
     },
     "reset()": {
       "isImplementation": false,
@@ -96,6 +96,32 @@
       "name": "setInstallNonMarketApps(boolean)",
       "documentation": "Sets the value of the {@link Settings.Global#INSTALL_NON_MARKET_APPS} setting or {@link\nSettings.Secure#INSTALL_NON_MARKET_APPS} depending on API level.\n\n@param installNonMarketApps new value for whether non-market apps are allowed to be installed\n"
     },
+    "setLockScreenAllowPrivateNotifications(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "lockScreenAllowPrivateNotifications"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLockScreenAllowPrivateNotifications(boolean)"
+    },
+    "setLockScreenShowNotifications(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "lockScreenShowNotifications"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLockScreenShowNotifications(boolean)"
+    },
     "setWifiOn(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -128,14 +154,17 @@
     "android.os.Build",
     "android.provider.Settings",
     "android.provider.Settings.Secure",
+    "android.provider.Settings.SettingNotFoundException",
     "android.text.TextUtils",
+    "com.google.common.collect.ImmutableMap",
     "java.util.Arrays",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.Map",
     "java.util.Objects",
+    "java.util.Optional",
     "java.util.Set",
-    "java.util.WeakHashMap",
+    "java.util.concurrent.ConcurrentHashMap",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

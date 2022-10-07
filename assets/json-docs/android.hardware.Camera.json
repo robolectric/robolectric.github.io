@@ -402,6 +402,7 @@
     "org.robolectric.shadow.api.Shadow.newInstanceOf",
     "android.graphics.ImageFormat",
     "android.hardware.Camera",
+    "android.os.Build",
     "android.view.SurfaceHolder",
     "java.util.ArrayList",
     "java.util.Arrays",

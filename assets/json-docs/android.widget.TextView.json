@@ -74,16 +74,6 @@
       "exceptions": [],
       "name": "getOnEditorActionListener()"
     },
-    "getPaintFlags()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getPaintFlags()"
-    },
     "getPreviousKeyCode(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -215,18 +205,6 @@
       "exceptions": [],
       "name": "setOnEditorActionListener(android.widget.TextView.OnEditorActionListener)"
     },
-    "setPaintFlags(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "paintFlags"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setPaintFlags(int)"
-    },
     "setTextAppearance(android.content.Context,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -244,15 +222,9 @@
   "imports": [
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.Context",
-    "android.graphics.Typeface",
-    "android.text.InputFilter",
-    "android.text.TextPaint",
     "android.text.TextWatcher",
-    "android.text.method.MovementMethod",
-    "android.text.method.TransformationMethod",
     "android.view.KeyEvent",
     "android.view.View",
-    "android.view.inputmethod.EditorInfo",
     "android.widget.TextView",
     "java.io.PrintStream",
     "java.util.ArrayList",

@@ -1,9 +1,22 @@
 {
   "methods": {
+    "equals(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "obj"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "equals(java.lang.Object)",
+      "documentation": "The real {@link Region#equals(Object)} calls into native code, which is a no-op in Robolectric,\nand will always return false no matter what is compared. We can special-case some simple\nscenarios here.\n"
+    },
     "nativeConstructor()": {
       "isImplementation": true,
       "modifiers": [
-        "public",
+        "protected",
         "static"
       ],
       "params": [],
@@ -13,11 +26,16 @@
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Region",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowRegion.RegionReflector"
   ],
   "name": "org.robolectric.shadows.ShadowRegion"
 }

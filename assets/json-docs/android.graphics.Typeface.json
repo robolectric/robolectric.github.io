@@ -10,6 +10,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 19,
       "name": "__constructor__(int)"
     },
     "__constructor__(long)": {
@@ -22,6 +23,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 21,
       "name": "__constructor__(long)"
     },
     "__staticInitializer__()": {
@@ -398,6 +400,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",

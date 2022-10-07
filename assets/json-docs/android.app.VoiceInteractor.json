@@ -11,6 +11,17 @@
       "name": "getDirectActionsInvalidationCount()",
       "documentation": "Returns the number of times {@code notifyDirectActionsChanged} was called on the {@link\nandroid.app.VoiceInteractor} instance associated with this shadow\n"
     },
+    "getVoiceInteractions()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "name": "getVoiceInteractions()",
+      "documentation": "Returns the voice interactions called on {@link VoiceInteractor} instance associated with this\nshadow.\n"
+    },
     "notifyDirectActionsChanged()": {
       "isImplementation": true,
       "modifiers": [
@@ -21,14 +32,70 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "notifyDirectActionsChanged()"
+    },
+    "processPrompt(android.app.VoiceInteractor.Prompt)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "prompt"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "processPrompt(android.app.VoiceInteractor.Prompt)"
+    },
+    "submitRequest(android.app.VoiceInteractor.Request)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "submitRequest(android.app.VoiceInteractor.Request)"
+    },
+    "submitRequest(android.app.VoiceInteractor.Request,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "name"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "submitRequest(android.app.VoiceInteractor.Request,java.lang.String)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.Q",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.VoiceInteractor",
+    "android.app.VoiceInteractor.AbortVoiceRequest",
+    "android.app.VoiceInteractor.CommandRequest",
+    "android.app.VoiceInteractor.CompleteVoiceRequest",
+    "android.app.VoiceInteractor.ConfirmationRequest",
+    "android.app.VoiceInteractor.PickOptionRequest",
+    "android.app.VoiceInteractor.Prompt",
+    "android.app.VoiceInteractor.Request",
+    "java.util.List",
+    "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowVoiceInteractor.ReflectorCompleteVoiceRequest",
+    "org.robolectric.shadows.ShadowVoiceInteractor.ReflectorConfirmationRequest",
+    "org.robolectric.shadows.ShadowVoiceInteractor.ReflectorAbortVoiceRequest",
+    "org.robolectric.shadows.ShadowVoiceInteractor.ReflectorCommandRequest",
+    "org.robolectric.shadows.ShadowVoiceInteractor.ReflectorPickOptionRequest"
   ],
   "name": "org.robolectric.shadows.ShadowVoiceInteractor",
   "documentation": "Shadow implementation of {@link android.app.VoiceInteractor}. "

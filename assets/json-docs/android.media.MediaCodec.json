@@ -401,6 +401,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 21,
       "name": "releaseOutputBuffer(int,long)"
     },
     "revalidateByteBuffer(java.nio.ByteBuffer[],int)": {
@@ -499,6 +500,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowMediaCodec.ShadowCodecBuffer",

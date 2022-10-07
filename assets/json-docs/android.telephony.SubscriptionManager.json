@@ -14,6 +14,16 @@
       "name": "addOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)",
       "documentation": "Adds a listener to a local list of listeners. Will be triggered by {@link\n#setActiveSubscriptionInfoList} when the local list of {@link SubscriptionInfo} is updated.\n"
     },
+    "checkReadPhoneStatePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkReadPhoneStatePermission()"
+    },
     "clearNetworkRoamingStatus()": {
       "isImplementation": false,
       "modifiers": [
@@ -438,6 +448,19 @@
       "exceptions": [],
       "name": "setNetworkRoamingStatus(int,boolean)",
       "documentation": "If isNetworkRoaming is set, it will mark the provided sim subscriptionId as roaming in a local\ncache. If isNetworkRoaming is unset it will remove the subscriptionId from the local cache. The\nlocal cache is used to provide roaming status returned by {@link #isNetworkRoaming}.\n"
+    },
+    "setReadPhoneStatePermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "readPhoneStatePermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setReadPhoneStatePermission(boolean)",
+      "documentation": "When set to false methods requiring {@link android.Manifest.permission.READ_PHONE_STATE}\npermission will throw a {@link SecurityException}. By default it\u0027s set to true for backwards\ncompatibility.\n"
     }
   },
   "imports": [

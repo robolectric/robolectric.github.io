@@ -13,6 +13,21 @@
       "maxSdk": 17,
       "name": "\u003cT\u003ereadParcelable(java.lang.ClassLoader)"
     },
+    "\u003cT\u003ereadParcelableCreatorInternal(java.lang.ClassLoader,java.lang.Class\u003cT\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "loader",
+        "clazz"
+      ],
+      "returnType": "android.os.Parcelable.Creator\u003cT\u003e",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "\u003cT\u003ereadParcelableCreatorInternal(java.lang.ClassLoader,java.lang.Class\u003cT\u003e)",
+      "documentation": "The goal of this shadow method is to workaround a JVM/ART incompatibility.\n\n\u003cp\u003eIn ART, a public field is visible regardless whether or not the enclosing class is public.\nOn the JVM, this is not the case. For compatibility, we need to use {@link\nField#setAccessible(boolean)} to simulate the same behavior.\n"
+    },
     "nativeAppendFrom(int,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -1064,6 +1079,18 @@
       "minSdk": 21,
       "name": "nativeWriteStrongBinder(long,android.os.IBinder)"
     },
+    "newBadTypeParcelableException(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "message"
+      ],
+      "returnType": "android.os.BadParcelableException",
+      "exceptions": [],
+      "name": "newBadTypeParcelableException(java.lang.String)"
+    },
     "openFileDescriptor(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -1093,6 +1120,17 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "readParcelableCreator(java.lang.ClassLoader)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "throwsIfOutOfBounds(int,int,int)": {
       "isImplementation": false,
@@ -1150,13 +1188,16 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.RuntimeEnvironment.castNativePtr",
     "android.os.BadParcelableException",
     "android.os.IBinder",
     "android.os.Parcel",
     "android.os.ParcelFileDescriptor",
     "android.os.Parcelable",
+    "android.os.Parcelable.Creator",
     "android.util.Log",
+    "android.util.Pair",
     "java.io.ByteArrayInputStream",
     "java.io.ByteArrayOutputStream",
     "java.io.FileDescriptor",
@@ -1169,6 +1210,7 @@
     "java.lang.reflect.Modifier",
     "java.util.ArrayList",
     "java.util.Arrays",
+    "java.util.HashMap",
     "java.util.List",
     "java.util.Locale",
     "java.util.Objects",
@@ -1176,6 +1218,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.res.android.NativeObjRegistry",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",

@@ -182,8 +182,7 @@
       ],
       "returnType": "android.accounts.AccountManager",
       "exceptions": [],
-      "name": "get(android.content.Context)",
-      "documentation": "@deprecated This method will be removed in Robolectric 3.4 Use {@link\n    AccountManager#get(Context)} instead.\n"
+      "name": "get(android.content.Context)"
     },
     "getAccounts()": {
       "isImplementation": true,
@@ -247,8 +246,6 @@
       ],
       "returnType": "android.os.Bundle",
       "exceptions": [
-        "android.accounts.OperationCanceledException",
-        "java.io.IOException",
         "android.accounts.AuthenticatorException"
       ],
       "name": "getAuthToken(android.accounts.Account,java.lang.String)"

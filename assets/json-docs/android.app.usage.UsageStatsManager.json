@@ -1,5 +1,17 @@
 {
   "methods": {
+    "addBroadcastResponseStats(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "statsObject"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addBroadcastResponseStats(java.lang.Object)"
+    },
     "addEvent(android.app.usage.UsageEvents.Event)": {
       "isImplementation": false,
       "modifiers": [
@@ -41,6 +53,33 @@
       "exceptions": [],
       "name": "addUsageStats(int,android.app.usage.UsageStats)",
       "documentation": "Adds an aggregated {@code UsageStats} object, to be returned by {@link #queryUsageStats}.\nConstruct these objects with {@link UsageStatsBuilder}, and set the firstTimestamp and\nlastTimestamp fields to make time filtering work in {@link #queryUsageStats}.\n\n@param intervalType An interval type constant, e.g. {@link UsageStatsManager#INTERVAL_WEEKLY}.\n"
+    },
+    "clearBroadcastResponseStats(java.lang.String,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "clearBroadcastResponseStats(java.lang.String,long)"
+    },
+    "clearBroadcastResponseStatsForId(java.util.Map\u003cjava.lang.Long,java.lang.Object\u003e,long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "idToResponseStats",
+        "idToRemove"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearBroadcastResponseStatsForId(java.util.Map\u003cjava.lang.Long,java.lang.Object\u003e,long)"
     },
     "createUsageEvents(java.util.List\u003candroid.app.usage.UsageEvents.Event\u003e)": {
       "isImplementation": false,
@@ -135,6 +174,34 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "getUsageSource()"
+    },
+    "queryBroadcastResponseStats(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "id"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "queryBroadcastResponseStats(java.lang.Object,java.lang.Object)",
+      "documentation": "Requires loose signatures because return value is a list of {@link BroadcastResponseStats},\nwhich is a hidden class introduced in Android T.\n"
+    },
+    "queryBroadcastResponseStatsForId(java.util.Map\u003cjava.lang.Long,java.lang.Object\u003e,long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "idToResponseStats",
+        "id"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "queryBroadcastResponseStatsForId(java.util.Map\u003cjava.lang.Long,java.lang.Object\u003e,long)"
     },
     "queryEvents(long,long)": {
       "isImplementation": true,
@@ -406,12 +473,14 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "com.google.common.base.Preconditions.checkNotNull",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
     "android.annotation.TargetApi",
     "android.app.PendingIntent",
     "android.app.PendingIntent.CanceledException",
+    "android.app.usage.BroadcastResponseStats",
     "android.app.usage.UsageEvents",
     "android.app.usage.UsageEvents.Event",
     "android.app.usage.UsageStats",

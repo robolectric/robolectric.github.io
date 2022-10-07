@@ -50,23 +50,6 @@
       "exceptions": [],
       "name": "createFromResourceId(int)"
     },
-    "createFromResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,java.lang.String,android.graphics.BitmapFactory.Options)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "res",
-        "value",
-        "is",
-        "srcName",
-        "opts"
-      ],
-      "returnType": "android.graphics.drawable.Drawable",
-      "exceptions": [],
-      "name": "createFromResourceStream(android.content.res.Resources,android.util.TypedValue,java.io.InputStream,java.lang.String,android.graphics.BitmapFactory.Options)"
-    },
     "createFromStream(java.io.InputStream,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -80,17 +63,6 @@
       "returnType": "android.graphics.drawable.Drawable",
       "exceptions": [],
       "name": "createFromStream(java.io.InputStream,java.lang.String)"
-    },
-    "getAlpha()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "minSdk": 19,
-      "name": "getAlpha()"
     },
     "getCreatedFromResId()": {
       "isImplementation": false,
@@ -142,17 +114,18 @@
       "exceptions": [],
       "name": "invalidateSelf()"
     },
-    "setAlpha(int)": {
-      "isImplementation": true,
+    "setCreatedFromResId(int,java.lang.String)": {
+      "isImplementation": false,
       "modifiers": [
         "protected"
       ],
       "params": [
-        "alpha"
+        "createdFromResId",
+        "resourceName"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setAlpha(int)"
+      "name": "setCreatedFromResId(int,java.lang.String)"
     },
     "setDefaultIntrinsicHeight(int)": {
       "isImplementation": false,
@@ -226,18 +199,10 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "org.robolectric.util.reflector.Reflector.reflector",
-    "android.content.res.Resources",
     "android.graphics.Bitmap",
-    "android.graphics.BitmapFactory",
-    "android.graphics.NinePatch",
-    "android.graphics.Rect",
     "android.graphics.drawable.BitmapDrawable",
     "android.graphics.drawable.Drawable",
-    "android.graphics.drawable.NinePatchDrawable",
-    "android.util.DisplayMetrics",
-    "android.util.TypedValue",
     "java.io.InputStream",
     "java.util.ArrayList",
     "java.util.List",
@@ -247,7 +212,6 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowDrawable.DrawableReflector"

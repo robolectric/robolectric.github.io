@@ -1,18 +1,5 @@
 {
   "methods": {
-    "addState(int,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "stateId",
-        "resId"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "addState(int,int)"
-    },
     "addState(int[],android.graphics.drawable.Drawable)": {
       "isImplementation": true,
       "modifiers": [
@@ -50,21 +37,10 @@
       "exceptions": [],
       "name": "getDrawableForState(int[])",
       "documentation": "Non Android accessor to retrieve drawable added for a specific state.\n\n@param stateSet Int array describing the state\n@return Drawable added via {@link #addState(int[], android.graphics.drawable.Drawable)}\n"
-    },
-    "getResourceIdForState(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "stateId"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getResourceIdForState(int)"
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.drawable.Drawable",
     "android.graphics.drawable.StateListDrawable",
     "android.util.StateSet",
@@ -73,7 +49,11 @@
     "java.util.List",
     "java.util.Map",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowStateListDrawable.StateListDrawableReflector"
   ],
   "name": "org.robolectric.shadows.ShadowStateListDrawable"
 }
