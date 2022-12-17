@@ -84,4 +84,3 @@ Additional test APIs are accessible as static methods on special classes called 
 ShadowDisplay.addDisplay("xlarge-port");
 ```
 
-You can find documentation for Robolectric's test APIs by installing the [Robolectric plugin for Chrome](https://chrome.google.com/webstore/detail/pjepcinimnfnaoopahdkpkefnefdkdgh) and visiting the [Android API Reference](https://developer.android.com/reference/packages).

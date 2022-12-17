@@ -34,8 +34,6 @@ Unlike traditional emulator-based Android tests, Robolectric tests run inside a 
 
 While much of the Android framework will work as expected inside a Robolectric test, some Android components' regular behavior doesn't translate well to unit tests: hardware sensors need to be simulated, system services need to be loaded with test fixture data. In those cases, Robolectric provides a [test double](https://en.wikipedia.org/wiki/Test_double) that's suitable for most unit testing scenarios.
 
-You can find documentation for Robolectric's test APIs by installing the [Robolectric plugin for Chrome](https://chrome.google.com/webstore/detail/pjepcinimnfnaoopahdkpkefnefdkdgh) and visiting the [Android API Reference](https://developer.android.com/reference/packages).
-
 ### Run Tests Outside of the Emulator
 
 Robolectric lets you run your tests on your workstation, or on your continuous integration environment in a regular JVM, without an emulator. Because of this, the dexing, packaging, and installing-on-the emulator steps aren't necessary, reducing test cycles from minutes to seconds so you can iterate quickly and refactor your code with confidence.
