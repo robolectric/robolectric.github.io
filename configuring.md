@@ -115,7 +115,7 @@ Some additional options can be configured globally by setting these system prope
 * **robolectric.dependency.repo.password** - Password of repository that you defined in **robolectric.dependency.repo.url**.
 * **robolectric.logging.enabled** — Set to true to enable debug logging.
 
-Since Robolectric **4.10**, you can now add these parameters :
+Since Robolectric **4.9.1**, you can now add these parameters :
 
 * **robolectric.dependency.proxy.host** — Set the host of the proxy to use for the runtime dependencies.
 * **robolectric.dependency.proxy.port** — Set the port number of the proxy to use for the runtime dependencies (default `0`).
@@ -133,7 +133,7 @@ android {
       systemProperty 'robolectric.dependency.repo.username', 'username'
       systemProperty 'robolectric.dependency.repo.password', 'password'
       
-      // Since Robolectric 4.10, these are available
+      // Since Robolectric 4.9.1, these are available
       systemProperty 'robolectric.dependency.proxy.host', project.findProperty("systemProp.https.proxyHost") ?: System.getenv("ROBOLECTRIC_PROXY_HOST")
       systemProperty 'robolectric.dependency.proxy.port', project.findProperty("systemProp.https.proxyPort") ?: System.getenv("ROBOLECTRIC_PROXY_PORT")
     }
