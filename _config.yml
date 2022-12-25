@@ -101,6 +101,6 @@ defaults:
 
 robolectric:
   version:
-    current: "4.8"
-    preview: "4.8"
-    snapshot: "4.9-SNAPSHOT"
+    current: "4.9"
+    preview: "4.9"
+    snapshot: "4.10-SNAPSHOT"
