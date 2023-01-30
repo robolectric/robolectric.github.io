@@ -30,4 +30,4 @@ gh_versions = JSON.parse(Net::HTTP.get(URI('https://pages.github.com/versions.js
 
 gem 'github-pages', gh_versions['github-pages']
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8"
