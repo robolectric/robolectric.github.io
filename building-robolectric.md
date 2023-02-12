@@ -70,7 +70,7 @@ Install the 64 bit version of msys2. You can follow the instructions at https://
 
 ### Building
 
-Open an msys2 terminal by running the "MSYS2 MinGW x64" shortcut. This will ensure that `/mingw64/bin` is on the PATH.
+Open an msys2 terminal by running the "MSYS2 MINGW64" shortcut. This will ensure that `/mingw64/bin` is on the PATH.
 
 ```
 pacman -Syu # Update system
