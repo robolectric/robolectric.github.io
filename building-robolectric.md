@@ -14,8 +14,8 @@ JDK 11 is currently recommended to build Robolectric. Newer versions of the JDK 
 ## Installing Android SDK Tools
 
 The first step is to install the Android SDK tools. The easiest way to do this is to install Android Studio, which also installs a copy of the
-Android SDK tools, and provides the SDK Manager UI to manage SDK versions. Alternatively is also possible to only download the Android command line tools without
-installing the entire Android Studio. However, it is recommended to install Android Studio if possible. Visit https://developer.android.com/studio#download to get started.
+Android SDK tools, and provides the SDK Manager UI to manage SDK versions. Alternatively it is also possible to only download the Android command line tools without
+installing the entire Android Studio. However, it is recommended to install Android Studio if possible. Visit [https://developer.android.com/studio#download](https://developer.android.com/studio#download) to get started.
 
 Many of Robolectric's [integration tests](https://github.com/robolectric/robolectric/tree/master/integration_tests)
 require the Android build tools to be installed and specific SDK versions to be installed.
