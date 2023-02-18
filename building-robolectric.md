@@ -34,6 +34,8 @@ cd robolectric
 ./gradlew clean assemble
 ```
 
+If you encounter `configure: error: Namespace support is required to build ICU` building error on Ubuntu 22.04 or other Linux variants, you can refer the issue: [nativeruntime/icu build failed on Ubuntu 22.04 with c++ namespace not supported error](https://github.com/robolectric/robolectric/issues/7977) to fix your Linux environments for building.
+
 ## Mac
 
 ### Install XCode command line tools
