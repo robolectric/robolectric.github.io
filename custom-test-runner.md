@@ -17,6 +17,7 @@ Let's say you've defined a FooApplication in your manifest:
 ```xml
 <application android:name=".FooApplication">
 ```
+## RoboGuice
 
 If you're using RoboGuice, you would initialize the injector in your Application class:
 
@@ -61,3 +62,7 @@ public class TestFooApplication extends FooApplication implements TestLifecycleA
 
 Robolectric will load the test version of the application which you can use to load a different set of bindings
 during tests.
+
+## Hilt
+
+If you're using Hilt, you can check the official [Robolectric testing integration](https://dagger.dev/hilt/robolectric-testing.html) guide from Hilt.
