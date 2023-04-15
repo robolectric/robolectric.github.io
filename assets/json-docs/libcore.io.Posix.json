@@ -33,8 +33,7 @@
     "mkdir(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
-        "static"
+        "public"
       ],
       "params": [
         "path",
@@ -116,5 +115,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers"
   ],
-  "name": "org.robolectric.shadows.ShadowPosix"
+  "name": "org.robolectric.shadows.ShadowPosix",
+  "documentation": "Shadow for {@link libcore.io.Posix} "
 }

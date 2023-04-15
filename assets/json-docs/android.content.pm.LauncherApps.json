@@ -70,6 +70,21 @@
       "name": "addShortcutConfigActivity(android.os.UserHandle,android.content.pm.LauncherActivityInfo)",
       "documentation": "Adds a {@link LauncherActivityInfo} to be retrieved by {@link\n#getShortcutConfigActivityList(String, UserHandle)}.\n\n@param userHandle the user handle to be added.\n@param activityInfo the {@link LauncherActivityInfo} to be added.\n"
     },
+    "addSuspendedPackageLauncherExtras(android.os.UserHandle,java.lang.String,android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "packageName",
+        "bundle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addSuspendedPackageLauncherExtras(android.os.UserHandle,java.lang.String,android.os.Bundle)",
+      "documentation": "Adds a {@link Bundle} to be retrieved by {@link #getSuspendedPackageLauncherExtras(String,\nUserHandle)}.\n\n@param userHandle the user handle to be added.\n@param packageName the package name to be added.\n@param bundle the bundle for the extras.\n"
+    },
     "getActivityList(java.lang.String,android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -164,7 +179,9 @@
         "user"
       ],
       "returnType": "android.os.Bundle",
-      "exceptions": [],
+      "exceptions": [
+        "android.content.pm.PackageManager.NameNotFoundException"
+      ],
       "minSdk": 28,
       "name": "getSuspendedPackageLauncherExtras(java.lang.String,android.os.UserHandle)"
     },

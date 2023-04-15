@@ -165,6 +165,18 @@
       "name": "createWidgets(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e,int,int)",
       "documentation": "Creates a bunch of widgets by inflating the same layout multiple times.\n\n@param appWidgetProviderClass the app widget provider class\n@param widgetLayoutId id of the layout to inflate\n@param howManyToCreate number of new widgets to create\n@return the IDs of the new widgets\n"
     },
+    "enableWidgetsIfNecessary(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "appWidgetProviderClass"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enableWidgetsIfNecessary(java.lang.Class\u003c? extends android.appwidget.AppWidgetProvider\u003e)"
+    },
     "getAlwaysRecreateViewsDuringUpdate()": {
       "isImplementation": false,
       "modifiers": [
@@ -174,7 +186,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "getAlwaysRecreateViewsDuringUpdate()",
-      "documentation": "@return the state of the{@code alwaysRecreateViewsDuringUpdate} flag "
+      "documentation": "@return the state of the{@code alwaysRecreateViewsDuringUpdate} flag\n"
     },
     "getAppWidgetIds(android.content.ComponentName)": {
       "isImplementation": true,
@@ -494,7 +506,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowAppWidgetManager.WidgetInfo",
     "org.robolectric.shadows.ShadowAppWidgetManager.RemoteViewsReflector"

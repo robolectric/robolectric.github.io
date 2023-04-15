@@ -11,21 +11,24 @@
       "minSdk": 19,
       "name": "getCallingPackage()"
     },
-    "setCallingPackage(java.lang.String)": {
-      "isImplementation": false,
+    "setCallingPackage(java.lang.Object)": {
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [
         "callingPackage"
       ],
-      "returnType": "void",
+      "returnType": "java.lang.Object",
       "exceptions": [],
-      "name": "setCallingPackage(java.lang.String)"
+      "minSdk": 29,
+      "maxSdk": 29,
+      "name": "setCallingPackage(java.lang.Object)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ContentProvider",
     "org.robolectric.annotation.Implementation",
@@ -35,5 +38,6 @@
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowContentProvider.ContentProviderReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowContentProvider"
+  "name": "org.robolectric.shadows.ShadowContentProvider",
+  "documentation": "Shadow for {@link ContentProvider}. "
 }

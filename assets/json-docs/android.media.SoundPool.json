@@ -16,7 +16,27 @@
       "returnType": "int",
       "exceptions": [],
       "minSdk": 23,
+      "maxSdk": 33,
       "name": "_play(int,float,float,int,int,float)"
+    },
+    "_play(int,float,float,int,int,float,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "soundID",
+        "leftVolume",
+        "rightVolume",
+        "priority",
+        "loop",
+        "rate",
+        "playerIId"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "_play(int,float,float,int,int,float,int)"
     },
     "clearPlayed()": {
       "isImplementation": false,
@@ -207,10 +227,12 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.CUR_DEVELOPMENT",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "android.content.Context",
     "android.media.IAudioService",
     "android.media.SoundPool",

@@ -11,6 +11,17 @@
       "name": "getDirectActionsInvalidationCount()",
       "documentation": "Returns the number of times {@code notifyDirectActionsChanged} was called on the {@link\nandroid.app.VoiceInteractor} instance associated with this shadow\n"
     },
+    "getPackageName()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getPackageName()"
+    },
     "getVoiceInteractions()": {
       "isImplementation": false,
       "modifiers": [
@@ -45,6 +56,18 @@
       "exceptions": [],
       "name": "processPrompt(android.app.VoiceInteractor.Prompt)"
     },
+    "setPackageName(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPackageName(java.lang.String)"
+    },
     "submitRequest(android.app.VoiceInteractor.Request)": {
       "isImplementation": true,
       "modifiers": [
@@ -76,6 +99,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.VoiceInteractor",
     "android.app.VoiceInteractor.AbortVoiceRequest",

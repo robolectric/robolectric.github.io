@@ -17,6 +17,25 @@
       "name": "getFromLocation(double,double,int)",
       "documentation": "Returns an empty list by default, or the last value set by {@link #setFromLocation(List)}\n\n\u003cp\u003e{@param latitude} and {@param longitude} are ignored by this implementation, except to check\nthat they are in appropriate bounds. {@param maxResults} determines the maximum number of\naddresses to return.\n"
     },
+    "getFromLocation(double,double,int,android.location.Geocoder.GeocodeListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "latitude",
+        "longitude",
+        "maxResults",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 33,
+      "name": "getFromLocation(double,double,int,android.location.Geocoder.GeocodeListener)",
+      "documentation": "Sets an empty list by default, or the last value set by {@link #setFromLocation(List)} in the\nprovided {@code listener}\n\n\u003cp\u003e{@code latitude} and {@code longitude} are ignored by this implementation, except to check\nthat they are in appropriate bounds. {@code maxResults} determines the maximum number of\naddresses to return.\n"
+    },
     "isPresent()": {
       "isImplementation": true,
       "modifiers": [
@@ -69,8 +88,10 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "android.location.Address",
     "android.location.Geocoder",
+    "android.location.Geocoder.GeocodeListener",
     "com.google.common.base.Preconditions",
     "java.io.IOException",
     "java.util.ArrayList",

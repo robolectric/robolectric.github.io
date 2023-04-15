@@ -299,6 +299,7 @@
     "android.nfc.NfcAdapter",
     "android.nfc.Tag",
     "android.os.Build",
+    "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "java.util.Map",
     "org.robolectric.RuntimeEnvironment",

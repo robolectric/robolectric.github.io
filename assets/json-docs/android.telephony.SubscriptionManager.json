@@ -58,6 +58,19 @@
       "name": "dispatchOnSubscriptionsChanged()",
       "documentation": "Notifies {@link OnSubscriptionsChangedListener} listeners that the list of {@link\nSubscriptionInfo} has been updated.\n"
     },
+    "getActiveDataSubscriptionId()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getActiveDataSubscriptionId()",
+      "documentation": "Returns value set with {@link #setActiveDataSubscriptionId(int)}. "
+    },
     "getActiveSubscriptionIdList()": {
       "isImplementation": true,
       "modifiers": [
@@ -262,6 +275,20 @@
       "name": "getPhoneId(int)",
       "documentation": "Uses the map of subscription IDs to phone IDs managed by {@link putPhoneId} and {@link\nremovePhoneId} to return the phone ID for a given subscription ID.\n"
     },
+    "getPhoneNumber(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subscriptionId"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getPhoneNumber(int)",
+      "documentation": "Returns the phone number for the given {@code subscriptionId}, or an empty string if not\navailable.\n\n\u003cp\u003eThe phone number can be set by {@link #setPhoneNumber(int, String)}\n"
+    },
     "isNetworkRoaming(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -330,6 +357,20 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "setActiveDataSubscriptionId(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "activeDataSubscriptionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActiveDataSubscriptionId(int)",
+      "documentation": "Sets the value that will be returned by {@link #getActiveDataSubscriptionId()}. "
+    },
     "setActiveSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -341,7 +382,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setActiveSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)",
-      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n@param list - The subscription info list, can be null.\n"
+      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n\n@param list - The subscription info list, can be null.\n"
     },
     "setActiveSubscriptionInfos(android.telephony.SubscriptionInfo...)": {
       "isImplementation": false,
@@ -449,6 +490,20 @@
       "name": "setNetworkRoamingStatus(int,boolean)",
       "documentation": "If isNetworkRoaming is set, it will mark the provided sim subscriptionId as roaming in a local\ncache. If isNetworkRoaming is unset it will remove the subscriptionId from the local cache. The\nlocal cache is used to provide roaming status returned by {@link #isNetworkRoaming}.\n"
     },
+    "setPhoneNumber(int,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "subscriptionId",
+        "phoneNumber"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPhoneNumber(int,java.lang.String)",
+      "documentation": "Sets the phone number returned by {@link #getPhoneNumber(int)}. "
+    },
     "setReadPhoneStatePermission(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -470,6 +525,8 @@
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "android.os.Build.VERSION",
     "android.telephony.SubscriptionInfo",
     "android.telephony.SubscriptionManager",

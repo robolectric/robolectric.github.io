@@ -131,6 +131,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.KITKAT",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
@@ -143,7 +144,6 @@
     "java.io.FileNotFoundException",
     "java.io.IOException",
     "java.io.RandomAccessFile",
-    "java.lang.reflect.Constructor",
     "java.util.UUID",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
@@ -151,6 +151,7 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowParcelFileDescriptor.ParcelFileDescriptorReflector"

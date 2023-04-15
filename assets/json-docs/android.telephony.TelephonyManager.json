@@ -31,6 +31,18 @@
       "minSdk": 31,
       "name": "bootstrapAuthenticationRequest(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
     },
+    "checkPermission(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "permission"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "checkPermission(java.lang.String)"
+    },
     "checkReadPhoneStatePermission()": {
       "isImplementation": false,
       "modifiers": [
@@ -40,6 +52,16 @@
       "returnType": "void",
       "exceptions": [],
       "name": "checkReadPhoneStatePermission()"
+    },
+    "checkReadPrivilegedPhoneStatePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkReadPrivilegedPhoneStatePermission()"
     },
     "clearPhoneTypes()": {
       "isImplementation": false,
@@ -94,6 +116,18 @@
       "exceptions": [],
       "name": "createTelephonyDisplayInfo(int,int)",
       "documentation": "Creates a {@link TelephonyDisplayInfo}.\n\n@param networkType The packet-switching cellular network type (see {@link NetworkType})\n@param overrideNetworkType The override network type (see {@link OverrideNetworkType})\n"
+    },
+    "getActiveModemCount()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getActiveModemCount()",
+      "documentation": "Returns 1 by default or the value specified via {@link #setActiveModemCount(int)}. "
     },
     "getAllCellInfo()": {
       "isImplementation": true,
@@ -258,6 +292,17 @@
       "name": "getDeviceId(int)",
       "documentation": "Returns {@code null} by default or the value specified via {@link #setDeviceId(int, String)}.\n"
     },
+    "getEmergencyCallbackMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getEmergencyCallbackMode()"
+    },
     "getEventFlags()": {
       "isImplementation": false,
       "modifiers": [
@@ -320,7 +365,7 @@
         "public"
       ],
       "params": [],
-      "returnType": "android.telephony.TelephonyCallback",
+      "returnType": "java.lang.Object",
       "exceptions": [],
       "name": "getLastTelephonyCallback()",
       "documentation": "Returns the most recent callback passed to #registerTelephonyCallback(). "
@@ -482,6 +527,16 @@
       "name": "getServiceState(int)",
       "documentation": "Returns {@code null} by default or the value specified via {@link\n#setServiceState(ServiceState)}\n"
     },
+    "getShadowInstrumentation()": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowInstrumentation",
+      "exceptions": [],
+      "name": "getShadowInstrumentation()"
+    },
     "getSignalStrength()": {
       "isImplementation": true,
       "modifiers": [
@@ -604,6 +659,18 @@
       "exceptions": [],
       "name": "getSubscriberId()"
     },
+    "getUiccCardsInfo()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "getUiccCardsInfo()",
+      "documentation": "Returns the UICC cards information set by {@link #setUiccCardsInfo}. "
+    },
     "getUiccSlotsInfo()": {
       "isImplementation": true,
       "modifiers": [
@@ -700,7 +767,7 @@
       "exceptions": [],
       "name": "initListener(android.telephony.PhoneStateListener,int)"
     },
-    "initTelephonyCallback(android.telephony.TelephonyCallback)": {
+    "initTelephonyCallback(java.lang.Object)": {
       "isImplementation": false,
       "modifiers": [
         "protected"
@@ -710,7 +777,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "initTelephonyCallback(android.telephony.TelephonyCallback)"
+      "name": "initTelephonyCallback(java.lang.Object)"
     },
     "isDataConnectionAllowed()": {
       "isImplementation": true,
@@ -847,7 +914,21 @@
       "exceptions": [],
       "name": "listen(android.telephony.PhoneStateListener,int)"
     },
-    "registerTelephonyCallback(int,java.util.concurrent.Executor,android.telephony.TelephonyCallback)": {
+    "registerTelephonyCallback(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "executor",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "registerTelephonyCallback(java.lang.Object,java.lang.Object)"
+    },
+    "registerTelephonyCallback(java.lang.Object,java.lang.Object,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
         "protected"
@@ -860,21 +941,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 33,
-      "name": "registerTelephonyCallback(int,java.util.concurrent.Executor,android.telephony.TelephonyCallback)"
-    },
-    "registerTelephonyCallback(java.util.concurrent.Executor,android.telephony.TelephonyCallback)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "executor",
-        "callback"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 31,
-      "name": "registerTelephonyCallback(java.util.concurrent.Executor,android.telephony.TelephonyCallback)"
+      "name": "registerTelephonyCallback(java.lang.Object,java.lang.Object,java.lang.Object)"
     },
     "requestCellInfoUpdate(java.lang.Object,java.lang.Object)": {
       "isImplementation": true,
@@ -954,6 +1021,19 @@
       "minSdk": 26,
       "name": "sendVisualVoicemailSms(java.lang.String,int,java.lang.String,android.app.PendingIntent)"
     },
+    "setActiveModemCount(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "activeModemCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActiveModemCount(int)",
+      "documentation": "Sets the value returned by {@link TelephonyManager#getActiveModemCount()}. "
+    },
     "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -967,16 +1047,16 @@
       "name": "setAllCellInfo(java.util.List\u003candroid.telephony.CellInfo\u003e)"
     },
     "setCallComposerStatus(int)": {
-      "isImplementation": false,
+      "isImplementation": true,
       "modifiers": [
-        "public",
-        "static"
+        "protected"
       ],
       "params": [
         "callComposerStatus"
       ],
       "returnType": "void",
       "exceptions": [],
+      "minSdk": 31,
       "name": "setCallComposerStatus(int)"
     },
     "setCallState(int)": {
@@ -1151,6 +1231,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDeviceId(java.lang.String)"
+    },
+    "setEmergencyCallbackMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "emergencyCallbackMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEmergencyCallbackMode(boolean)",
+      "documentation": "Emergency Callback Mode (ECBM) is typically set by the carrier, for a time window of 5 minutes\nafter the last outgoing emergency call. The user can exit ECBM via a system notification.\n\n@param emergencyCallbackMode whether the device is in ECBM or not.\n"
     },
     "setGroupIdLevel1(java.lang.String)": {
       "isImplementation": false,
@@ -1596,6 +1689,19 @@
       "name": "setTelephonyManagerForSubscriptionId(int,android.telephony.TelephonyManager)",
       "documentation": "Sets the value returned by {@link TelephonyManager#createForSubscriptionId(int)}. "
     },
+    "setUiccCardsInfo(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "uiccCardsInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUiccCardsInfo(java.lang.Object)",
+      "documentation": "Sets the UICC cards information returned by {@link #getUiccCardsInfo()}. "
+    },
     "setUiccSlotsInfo(java.lang.Object)": {
       "isImplementation": false,
       "modifiers": [
@@ -1718,7 +1824,7 @@
       "name": "setVoicemailVibrationEnabled(android.telecom.PhoneAccountHandle,boolean)",
       "documentation": "Sets the value returned by {@link\nTelephonyManager#isVoicemailVibrationEnabled(PhoneAccountHandle)}.\n"
     },
-    "unregisterTelephonyCallback(android.telephony.TelephonyCallback)": {
+    "unregisterTelephonyCallback(java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
         "public"
@@ -1729,10 +1835,11 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
-      "name": "unregisterTelephonyCallback(android.telephony.TelephonyCallback)"
+      "name": "unregisterTelephonyCallback(java.lang.Object)"
     }
   },
   "imports": [
+    "android.content.pm.PackageManager.PERMISSION_GRANTED",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
@@ -1752,7 +1859,9 @@
     "android.telephony.PhoneStateListener.LISTEN_SERVICE_STATE",
     "android.telephony.TelephonyManager.CALL_STATE_IDLE",
     "android.telephony.TelephonyManager.CALL_STATE_RINGING",
+    "android.Manifest.permission",
     "android.annotation.CallSuper",
+    "android.app.ActivityThread",
     "android.app.PendingIntent",
     "android.content.Context",
     "android.content.Intent",
@@ -1796,11 +1905,13 @@
     "java.util.Locale",
     "java.util.Map",
     "java.util.concurrent.Executor",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowTelephonyManager.VisualVoicemailSmsParams"
   ],

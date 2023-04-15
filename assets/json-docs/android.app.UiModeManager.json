@@ -172,6 +172,18 @@
       "minSdk": 31,
       "name": "setApplicationNightMode(int)"
     },
+    "setCurrentModeType(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "modeType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCurrentModeType(int)"
+    },
     "setFailOnProjectionToggle(boolean)": {
       "isImplementation": false,
       "modifiers": [

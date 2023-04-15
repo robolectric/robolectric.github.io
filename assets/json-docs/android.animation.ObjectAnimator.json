@@ -1,8 +1,0 @@
-{
-  "methods": {},
-  "imports": [
-    "android.animation.ObjectAnimator",
-    "org.robolectric.annotation.Implements"
-  ],
-  "name": "org.robolectric.shadows.ShadowObjectAnimator"
-}

@@ -52,6 +52,21 @@
       "exceptions": [],
       "name": "callAttach(android.content.Intent,android.os.Bundle,java.lang.Object)"
     },
+    "callAttach(android.content.Intent,android.os.Bundle,java.lang.Object,android.content.res.Configuration)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "intent",
+        "activityOptions",
+        "lastNonConfigurationInstances",
+        "overrideConfig"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "callAttach(android.content.Intent,android.os.Bundle,java.lang.Object,android.content.res.Configuration)"
+    },
     "callOnActivityResult(int,int,android.content.Intent)": {
       "isImplementation": false,
       "modifiers": [
@@ -213,7 +228,7 @@
       "returnType": "android.view.View",
       "exceptions": [],
       "name": "getContentView()",
-      "documentation": "@return the {@code contentView} set by one of the {@code setContentView()} methods "
+      "documentation": "@return the {@code contentView} set by one of the {@code setContentView()} methods\n"
     },
     "getCurrentFocus()": {
       "isImplementation": true,
@@ -382,7 +397,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "getReportFullyDrawn()",
-      "documentation": "@return whether {@code ReportFullyDrawn()} methods has been called. "
+      "documentation": "@return whether {@code ReportFullyDrawn()} methods has been called.\n"
     },
     "getRequestedOrientation()": {
       "isImplementation": true,
@@ -403,7 +418,7 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getResultCode()",
-      "documentation": "@return the {@code resultCode} set by one of the {@code setResult()} methods "
+      "documentation": "@return the {@code resultCode} set by one of the {@code setResult()} methods\n"
     },
     "getResultIntent()": {
       "isImplementation": false,
@@ -414,7 +429,7 @@
       "returnType": "android.content.Intent",
       "exceptions": [],
       "name": "getResultIntent()",
-      "documentation": "@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)} "
+      "documentation": "@return the {@code Intent} set by {@link #setResult(int, android.content.Intent)}\n"
     },
     "getShowWhenLocked()": {
       "isImplementation": false,
@@ -776,7 +791,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCurrentFocus(android.view.View)",
-      "documentation": "@param view View to focus. "
+      "documentation": "@param view View to focus.\n"
     },
     "setDefaultKeyMode(int)": {
       "isImplementation": true,
@@ -826,7 +841,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setLastNonConfigurationInstance(java.lang.Object)",
-      "documentation": "@deprecated use {@link ActivityController#recreate()}. "
+      "documentation": "@deprecated use {@link ActivityController#recreate()}.\n"
     },
     "setParent(android.app.Activity)": {
       "isImplementation": true,
@@ -1081,7 +1096,9 @@
     "android.content.pm.ActivityInfo",
     "android.content.pm.PackageManager",
     "android.content.pm.PackageManager.NameNotFoundException",
+    "android.content.res.Configuration",
     "android.database.Cursor",
+    "android.os.Binder",
     "android.os.Build.VERSION",
     "android.os.Build.VERSION_CODES",
     "android.os.Bundle",

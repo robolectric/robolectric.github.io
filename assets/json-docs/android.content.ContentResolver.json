@@ -570,6 +570,22 @@
       "exceptions": [],
       "name": "isSyncActive(android.accounts.Account,java.lang.String)"
     },
+    "newSyncInfo(int,android.accounts.Account,java.lang.String,long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "authorityId",
+        "account",
+        "authority",
+        "startTime"
+      ],
+      "returnType": "android.content.SyncInfo",
+      "exceptions": [],
+      "name": "newSyncInfo(int,android.accounts.Account,java.lang.String,long)"
+    },
     "notifyChange(android.net.Uri,android.database.ContentObserver)": {
       "isImplementation": true,
       "modifiers": [
@@ -638,8 +654,26 @@
         "uri"
       ],
       "returnType": "java.io.OutputStream",
-      "exceptions": [],
+      "exceptions": [
+        "java.io.FileNotFoundException"
+      ],
       "name": "openOutputStream(android.net.Uri)"
+    },
+    "openOutputStream(android.net.Uri,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [
+        "uri",
+        "mode"
+      ],
+      "returnType": "java.io.OutputStream",
+      "exceptions": [
+        "java.io.FileNotFoundException"
+      ],
+      "name": "openOutputStream(android.net.Uri,java.lang.String)"
     },
     "query(android.net.Uri,java.lang.String[],android.os.Bundle,android.os.CancellationSignal)": {
       "isImplementation": true,
@@ -1031,6 +1065,7 @@
     "android.content.ContentResolver.SCHEME_CONTENT",
     "android.content.ContentResolver.SCHEME_FILE",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",

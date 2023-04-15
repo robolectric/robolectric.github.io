@@ -1632,6 +1632,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 33,
       "name": "setConfiguration(int,int,java.lang.String,int,int,int,int,int,int,int,int,int,int,int,int,int,int,int)"
     },
     "setLocale(java.lang.String)": {
@@ -1683,6 +1684,7 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.RuntimeEnvironment.castNativePtr",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",

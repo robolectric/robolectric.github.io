@@ -1,0 +1,380 @@
+{
+  "methods": {
+    "createFromAsset(android.content.res.AssetManager.AssetInputStream,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ais",
+        "source"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 28,
+      "maxSdk": 29,
+      "name": "createFromAsset(android.content.res.AssetManager.AssetInputStream,android.graphics.ImageDecoder.Source)"
+    },
+    "createFromAsset(android.content.res.AssetManager.AssetInputStream,boolean,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ais",
+        "preferAnimation",
+        "source"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 30,
+      "name": "createFromAsset(android.content.res.AssetManager.AssetInputStream,boolean,android.graphics.ImageDecoder.Source)"
+    },
+    "nClose(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nClose(long)"
+    },
+    "nCreate(byte[],int,int,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "data",
+        "offset",
+        "length",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 28,
+      "maxSdk": 29,
+      "name": "nCreate(byte[],int,int,android.graphics.ImageDecoder.Source)"
+    },
+    "nCreate(byte[],int,int,boolean,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "data",
+        "offset",
+        "length",
+        "preferAnimation",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 30,
+      "name": "nCreate(byte[],int,int,boolean,android.graphics.ImageDecoder.Source)"
+    },
+    "nCreate(java.io.FileDescriptor,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fd",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "maxSdk": 29,
+      "name": "nCreate(java.io.FileDescriptor,android.graphics.ImageDecoder.Source)"
+    },
+    "nCreate(java.io.FileDescriptor,long,boolean,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fd",
+        "length",
+        "preferAnimation",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 31,
+      "name": "nCreate(java.io.FileDescriptor,long,boolean,android.graphics.ImageDecoder.Source)"
+    },
+    "nCreate(java.io.InputStream,byte[],android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "is",
+        "storage",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 28,
+      "maxSdk": 29,
+      "name": "nCreate(java.io.InputStream,byte[],android.graphics.ImageDecoder.Source)"
+    },
+    "nCreate(java.io.InputStream,byte[],boolean,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "is",
+        "storage",
+        "preferAnimation",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 30,
+      "name": "nCreate(java.io.InputStream,byte[],boolean,android.graphics.ImageDecoder.Source)"
+    },
+    "nCreate(java.nio.ByteBuffer,int,int,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "buffer",
+        "position",
+        "limit",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 28,
+      "maxSdk": 29,
+      "name": "nCreate(java.nio.ByteBuffer,int,int,android.graphics.ImageDecoder.Source)"
+    },
+    "nCreate(java.nio.ByteBuffer,int,int,boolean,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "buffer",
+        "position",
+        "limit",
+        "preferAnimation",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 30,
+      "name": "nCreate(java.nio.ByteBuffer,int,int,boolean,android.graphics.ImageDecoder.Source)"
+    },
+    "nCreate(long,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "asset",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 28,
+      "maxSdk": 29,
+      "name": "nCreate(long,android.graphics.ImageDecoder.Source)"
+    },
+    "nCreate(long,boolean,android.graphics.ImageDecoder.Source)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "asset",
+        "preferAnimation",
+        "src"
+      ],
+      "returnType": "android.graphics.ImageDecoder",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 30,
+      "name": "nCreate(long,boolean,android.graphics.ImageDecoder.Source)"
+    },
+    "nDecodeBitmap(long,android.graphics.ImageDecoder,boolean,int,int,android.graphics.Rect,boolean,int,boolean,boolean,boolean,android.graphics.ColorSpace)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "decoder",
+        "doPostProcess",
+        "width",
+        "height",
+        "cropRect",
+        "mutable",
+        "allocator",
+        "unpremulRequired",
+        "conserveMemory",
+        "decodeAsAlphaMask",
+        "desiredColorSpace"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 28,
+      "maxSdk": 28,
+      "name": "nDecodeBitmap(long,android.graphics.ImageDecoder,boolean,int,int,android.graphics.Rect,boolean,int,boolean,boolean,boolean,android.graphics.ColorSpace)"
+    },
+    "nDecodeBitmap(long,android.graphics.ImageDecoder,boolean,int,int,android.graphics.Rect,boolean,int,boolean,boolean,boolean,long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "decoder",
+        "doPostProcess",
+        "width",
+        "height",
+        "cropRect",
+        "mutable",
+        "allocator",
+        "unpremulRequired",
+        "conserveMemory",
+        "decodeAsAlphaMask",
+        "desiredColorSpace",
+        "extended"
+      ],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 29,
+      "name": "nDecodeBitmap(long,android.graphics.ImageDecoder,boolean,int,int,android.graphics.Rect,boolean,int,boolean,boolean,boolean,long,boolean)"
+    },
+    "nGetColorSpace(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "android.graphics.ColorSpace",
+      "exceptions": [],
+      "name": "nGetColorSpace(long)"
+    },
+    "nGetMimeType(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "nGetMimeType(long)"
+    },
+    "nGetPadding(long,android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "outRect"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nGetPadding(long,android.graphics.Rect)"
+    },
+    "nGetSampledSize(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "sampleSize"
+      ],
+      "returnType": "android.util.Size",
+      "exceptions": [],
+      "name": "nGetSampledSize(long,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
+    "android.content.res.AssetManager.AssetInputStream",
+    "android.graphics.Bitmap",
+    "android.graphics.ColorSpace",
+    "android.graphics.ImageDecoder",
+    "android.graphics.ImageDecoder.Source",
+    "android.graphics.Rect",
+    "android.util.Size",
+    "java.io.FileDescriptor",
+    "java.io.IOException",
+    "java.io.InputStream",
+    "java.io.UnsupportedEncodingException",
+    "java.nio.ByteBuffer",
+    "java.nio.ByteOrder",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.ImageDecoderNatives",
+    "org.robolectric.shadows.ShadowNativeImageDecoder.Picker",
+    "org.robolectric.shadows.ShadowNativeImageDecoder.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeImageDecoder",
+  "documentation": "Shadow for {@link android.graphics.ImageDecoder} that is backed by native code "
+}

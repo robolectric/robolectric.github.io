@@ -48,7 +48,21 @@
       "returnType": "int",
       "exceptions": [],
       "minSdk": 33,
+      "maxSdk": 33,
       "name": "nativeImageSetup(android.media.Image,boolean)"
+    },
+    "nativeImageSetup(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "image"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "nativeImageSetup(java.lang.Object)"
     },
     "nativeReleaseImage(android.media.Image)": {
       "isImplementation": true,
@@ -65,6 +79,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.CUR_DEVELOPMENT",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.S_V2",
     "android.os.Build.VERSION_CODES.TIRAMISU",

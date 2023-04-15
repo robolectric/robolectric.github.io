@@ -1,0 +1,105 @@
+{
+  "methods": {
+    "nativeConstructor(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "valueCount",
+        "frameCount"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nativeConstructor(int,int)"
+    },
+    "nativeDestructor(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeInstance"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nativeDestructor(long)"
+    },
+    "nativeReset(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeInstance",
+        "valueCount",
+        "frameCount"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nativeReset(long,int,int)"
+    },
+    "nativeSetKeyFrame(long,int,int,float[],float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeInstance",
+        "index",
+        "msec",
+        "values",
+        "blend"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nativeSetKeyFrame(long,int,int,float[],float[])"
+    },
+    "nativeSetRepeatMirror(long,float,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeInstance",
+        "repeatCount",
+        "mirror"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nativeSetRepeatMirror(long,float,boolean)"
+    },
+    "nativeTimeToValues(long,int,float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeInstance",
+        "msec",
+        "values"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nativeTimeToValues(long,int,float[])"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.graphics.Interpolator",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.InterpolatorNatives",
+    "org.robolectric.shadows.ShadowNativeInterpolator.Picker",
+    "org.robolectric.shadows.ShadowNativeInterpolator.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeInterpolator",
+  "documentation": "Shadow for {@link Interpolator} that is backed by native code "
+}

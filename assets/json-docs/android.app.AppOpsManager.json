@@ -11,7 +11,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "__constructor__(android.content.Context,com.android.internal.app.IAppOpsService)"
     },
     "__staticInitializer__()": {
@@ -23,7 +22,6 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "__staticInitializer__()"
     },
     "checkOp(java.lang.String,int,java.lang.String)": {
@@ -54,9 +52,8 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "checkOpNoThrow(int,int,java.lang.String)",
-      "documentation": "Like {@link AppOpsManager#checkOp} but instead of throwing a {@link SecurityException} it\nreturns {@link AppOpsManager#MODE_ERRORED}.\n\n\u003cp\u003eMade public for testing {@link #setMode} as the method is {@coe @hide}.\n"
+      "documentation": "Like {@link AppOpsManager#checkOp} but instead of throwing a {@link SecurityException} it\nreturns {@link AppOpsManager#MODE_ERRORED}.\n\n\u003cp\u003eMade public for testing {@link #setMode} as the method is {@code @hide}.\n"
     },
     "checkOpNoThrow(java.lang.String,int,java.lang.String)": {
       "isImplementation": true,
@@ -84,7 +81,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "checkPackage(int,java.lang.String)"
     },
     "finishOp(int,int,java.lang.String)": {
@@ -99,7 +95,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "maxSdk": 29,
       "name": "finishOp(int,int,java.lang.String)",
       "documentation": "Removes a fake long-running operation from the set. "
@@ -135,6 +130,18 @@
       "exceptions": [],
       "name": "getAudioRestrictionKey(int,int)"
     },
+    "getOpString(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "opCode"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getOpString(int)"
+    },
     "getOpsForPackage(int,java.lang.String,int[])": {
       "isImplementation": true,
       "modifiers": [
@@ -147,7 +154,6 @@
       ],
       "returnType": "java.util.List\u003candroid.app.AppOpsManager.PackageOps\u003e",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getOpsForPackage(int,java.lang.String,int[])"
     },
     "getOpsForPackage(int,java.lang.String,java.lang.String[])": {
@@ -175,7 +181,6 @@
       ],
       "returnType": "java.util.List\u003candroid.app.AppOpsManager.PackageOps\u003e",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getPackagesForOps(int[])",
       "documentation": "Returns app op details for all packages for which one of {@link #setMode} methods was used to\nset the value of one of the given app ops (it does return those set to \u0027default\u0027 mode, while\nthe true implementation usually doesn\u0027t). Also, we don\u0027t enforce any permission checks which\nmight be needed in the true implementation.\n\n@param ops The set of operations you are interested in, or null if you want all of them.\n@return app ops information about each package, containing only ops that were specified as an\n    argument\n"
     },
@@ -234,7 +239,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "noteOp(int,int,java.lang.String)"
     },
     "noteOp(int,int,java.lang.String,java.lang.String,java.lang.String)": {
@@ -282,7 +286,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "noteOpNoThrow(int,int,java.lang.String)"
     },
     "noteOpNoThrow(int,int,java.lang.String,java.lang.String,java.lang.String)": {
@@ -391,7 +394,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "setMode(int,int,java.lang.String,int)",
       "documentation": "Int version of {@link #setMode(String, int, String, int)}.\n\n\u003cp\u003eThis method is public for testing {@link #checkOpNoThrow}. If {@link #checkOpNoThrow} is *\ncalled afterwards with the {@code op}, {@code ui}, and {@code packageName} provided, it will *\nreturn the {@code mode} set here.\n"
     },
@@ -494,7 +496,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "startWatchingMode(int,java.lang.String,android.app.AppOpsManager.OnOpChangedListener)"
     },
     "startWatchingMode(int,java.lang.String,int,android.app.AppOpsManager.OnOpChangedListener)": {
@@ -538,7 +539,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "stopWatchingMode(android.app.AppOpsManager.OnOpChangedListener)"
     },
     "toOpEntry(java.lang.Integer,int)": {
@@ -608,8 +608,11 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "java.util.stream.Collectors.toSet",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
     "android.annotation.RequiresPermission",
@@ -659,8 +662,12 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowAppOpsManager.Key",
-    "org.robolectric.shadows.ShadowAppOpsManager.ModeAndException"
+    "org.robolectric.shadows.ShadowAppOpsManager.ModeAndException",
+    "org.robolectric.shadows.ShadowAppOpsManager.AppOpInfoReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowAppOpsManager"
+  "name": "org.robolectric.shadows.ShadowAppOpsManager",
+  "documentation": "Shadow for {@link AppOpsManager}. "
 }

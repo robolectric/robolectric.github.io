@@ -392,7 +392,8 @@
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
-    "org.robolectric.shadows.ShadowDisplay._Display_"
+    "org.robolectric.shadows.ShadowDisplay._Display_",
+    "org.robolectric.shadows.ShadowDisplay.DisplayModeReflector"
   ],
   "name": "org.robolectric.shadows.ShadowDisplay",
   "documentation": "It is possible to override some display properties using setters on {@link ShadowDisplay}.\n\n@see \u003ca href\u003d\"http://robolectric.org/device-configuration/\"\u003edevice configuration\u003c/a\u003e for details.\n"

@@ -54,6 +54,17 @@
       "name": "distanceBetween(android.location.Location,android.location.Location)",
       "documentation": "Returns the distance between the two locations in meters. Adapted from:\nhttp://stackoverflow.com/questions/837872/calculate-distance-in-meters-when-you-know-longitude-and-latitude-in-java\n"
     },
+    "flushGnssBatch()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "flushGnssBatch()"
+    },
     "getAllProviders()": {
       "isImplementation": true,
       "modifiers": [
@@ -135,6 +146,17 @@
       "returnType": "void",
       "exceptions": [],
       "name": "getCurrentLocationInternal(java.lang.String,android.location.LocationRequest,android.os.CancellationSignal,java.util.concurrent.Executor,java.util.function.Consumer\u003candroid.location.Location\u003e)"
+    },
+    "getGnssBatchSize()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getGnssBatchSize()"
     },
     "getGnssHardwareModelName()": {
       "isImplementation": true,
@@ -436,6 +458,22 @@
       "minSdk": 30,
       "name": "registerAntennaInfoListener(java.lang.Object,java.lang.Object)"
     },
+    "registerGnssBatchedLocationCallback(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "periodNanos",
+        "wakeOnFifoFull",
+        "callback",
+        "handler"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "registerGnssBatchedLocationCallback(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
     "registerGnssMeasurementsCallback(android.location.GnssMeasurementsEvent.Callback,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
@@ -449,6 +487,21 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "registerGnssMeasurementsCallback(android.location.GnssMeasurementsEvent.Callback,android.os.Handler)"
+    },
+    "registerGnssMeasurementsCallback(java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "executor",
+        "callback"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "registerGnssMeasurementsCallback(java.lang.Object,java.lang.Object,java.lang.Object)"
     },
     "registerGnssMeasurementsCallback(java.util.concurrent.Executor,android.location.GnssMeasurementsEvent.Callback)": {
       "isImplementation": true,
@@ -577,6 +630,36 @@
       "returnType": "void",
       "exceptions": [],
       "name": "removeUpdatesInternal(java.lang.Object)"
+    },
+    "requestFlush(java.lang.String,android.app.PendingIntent,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "provider",
+        "pendingIntent",
+        "requestCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "requestFlush(java.lang.String,android.app.PendingIntent,int)"
+    },
+    "requestFlush(java.lang.String,android.location.LocationListener,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "provider",
+        "listener",
+        "requestCode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "requestFlush(java.lang.String,android.location.LocationListener,int)"
     },
     "requestLocationUpdates(android.location.LocationRequest,android.app.PendingIntent)": {
       "isImplementation": true,
@@ -912,6 +995,19 @@
       "name": "sendNmeaMessage(java.lang.String,long)",
       "documentation": "@deprecated Use {@link #simulateNmeaMessage(String, long)} instead.\n"
     },
+    "setGnssBatchSize(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "gnssBatchSize"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGnssBatchSize(int)",
+      "documentation": "Sets the GNSS hardware batch size. Values greater than 0 enables hardware GNSS batching APIs.\n"
+    },
     "setGnssHardwareModelName(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -1132,18 +1228,18 @@
       "name": "simulateLocation(android.location.Location)",
       "documentation": "A convenience function equivalent to invoking {@link #simulateLocation(String, Location)} with\nthe provider of the given location.\n"
     },
-    "simulateLocation(java.lang.String,android.location.Location)": {
+    "simulateLocation(java.lang.String,android.location.Location...)": {
       "isImplementation": false,
       "modifiers": [
         "public"
       ],
       "params": [
         "provider",
-        "location"
+        "locations"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "simulateLocation(java.lang.String,android.location.Location)",
+      "name": "simulateLocation(java.lang.String,android.location.Location...)",
       "documentation": "Delivers to the given provider (which will be created if necessary) a new location which will\nbe delivered to appropriate listeners and updates state accordingly. Delivery will ignore the\nenabled/disabled state of providers, unlike location on a real device.\n\n\u003cp\u003eThe location will also be delivered to the passive provider.\n"
     },
     "simulateNmeaMessage(java.lang.String,long)": {
@@ -1172,6 +1268,19 @@
       "exceptions": [],
       "minSdk": 30,
       "name": "unregisterAntennaInfoListener(java.lang.Object)"
+    },
+    "unregisterGnssBatchedLocationCallback(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "unregisterGnssBatchedLocationCallback(java.lang.Object)"
     },
     "unregisterGnssMeasurementsCallback(android.location.GnssMeasurementsEvent.Callback)": {
       "isImplementation": true,
@@ -1238,6 +1347,7 @@
     "android.os.WorkSource",
     "android.provider.Settings.Secure",
     "android.text.TextUtils",
+    "android.util.Log",
     "androidx.annotation.GuardedBy",
     "androidx.annotation.Nullable",
     "androidx.annotation.RequiresApi",
@@ -1269,6 +1379,7 @@
     "org.robolectric.shadows.ShadowLocationManager.LocationTransport",
     "org.robolectric.shadows.ShadowLocationManager.LocationListenerTransport",
     "org.robolectric.shadows.ShadowLocationManager.LocationPendingIntentTransport",
+    "org.robolectric.shadows.ShadowLocationManager.LegacyBatchedTransport",
     "org.robolectric.shadows.ShadowLocationManager.CurrentLocationTransport",
     "org.robolectric.shadows.ShadowLocationManager.GnssStatusCallbackTransport",
     "org.robolectric.shadows.ShadowLocationManager.OnNmeaMessageListenerTransport",

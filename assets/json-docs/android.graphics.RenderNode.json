@@ -1,0 +1,1219 @@
+{
+  "methods": {
+    "nAddAnimator(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "animatorPtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nAddAnimator(long,long)"
+    },
+    "nClearStretch(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nClearStretch(long)"
+    },
+    "nCreate(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "name"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nCreate(java.lang.String)"
+    },
+    "nDiscardDisplayList(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nDiscardDisplayList(long)"
+    },
+    "nEndAllAnimators(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nEndAllAnimators(long)"
+    },
+    "nGetAllocatedSize(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "nGetAllocatedSize(long)"
+    },
+    "nGetAllowForceDark(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nGetAllowForceDark(long)"
+    },
+    "nGetAlpha(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetAlpha(long)"
+    },
+    "nGetAmbientShadowColor(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetAmbientShadowColor(long)"
+    },
+    "nGetAnimationMatrix(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "animationMatrix"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nGetAnimationMatrix(long,long)"
+    },
+    "nGetBottom(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetBottom(long)"
+    },
+    "nGetCameraDistance(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetCameraDistance(long)"
+    },
+    "nGetClipToBounds(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nGetClipToBounds(long)"
+    },
+    "nGetClipToOutline(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nGetClipToOutline(long)"
+    },
+    "nGetElevation(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetElevation(long)"
+    },
+    "nGetHeight(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetHeight(long)"
+    },
+    "nGetInverseTransformMatrix(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "nativeMatrix"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nGetInverseTransformMatrix(long,long)"
+    },
+    "nGetLayerType(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetLayerType(long)"
+    },
+    "nGetLeft(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetLeft(long)"
+    },
+    "nGetNativeFinalizer()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nGetNativeFinalizer()"
+    },
+    "nGetPivotX(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetPivotX(long)"
+    },
+    "nGetPivotY(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetPivotY(long)"
+    },
+    "nGetRight(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetRight(long)"
+    },
+    "nGetRotation(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetRotation(long)"
+    },
+    "nGetRotationX(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetRotationX(long)"
+    },
+    "nGetRotationY(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetRotationY(long)"
+    },
+    "nGetScaleX(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetScaleX(long)"
+    },
+    "nGetScaleY(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetScaleY(long)"
+    },
+    "nGetSpotShadowColor(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetSpotShadowColor(long)"
+    },
+    "nGetTop(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetTop(long)"
+    },
+    "nGetTransformMatrix(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "nativeMatrix"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nGetTransformMatrix(long,long)"
+    },
+    "nGetTranslationX(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetTranslationX(long)"
+    },
+    "nGetTranslationY(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetTranslationY(long)"
+    },
+    "nGetTranslationZ(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetTranslationZ(long)"
+    },
+    "nGetUniqueId(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nGetUniqueId(long)"
+    },
+    "nGetUsageSize(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "nGetUsageSize(long)"
+    },
+    "nGetWidth(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetWidth(long)"
+    },
+    "nHasIdentityMatrix(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nHasIdentityMatrix(long)"
+    },
+    "nHasOverlappingRendering(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nHasOverlappingRendering(long)"
+    },
+    "nHasShadow(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nHasShadow(long)"
+    },
+    "nIsPivotExplicitlySet(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nIsPivotExplicitlySet(long)"
+    },
+    "nIsValid(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nIsValid(long)"
+    },
+    "nOffsetLeftAndRight(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "offset"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nOffsetLeftAndRight(long,int)"
+    },
+    "nOffsetTopAndBottom(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "offset"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nOffsetTopAndBottom(long,int)"
+    },
+    "nOutput(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nOutput(long)"
+    },
+    "nRequestPositionUpdates(long,android.graphics.RenderNode.PositionUpdateListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 32,
+      "name": "nRequestPositionUpdates(long,android.graphics.RenderNode.PositionUpdateListener)"
+    },
+    "nResetPivot(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nResetPivot(long)"
+    },
+    "nSetAllowForceDark(long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "allowForceDark"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetAllowForceDark(long,boolean)"
+    },
+    "nSetAlpha(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "alpha"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetAlpha(long,float)"
+    },
+    "nSetAmbientShadowColor(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "color"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetAmbientShadowColor(long,int)"
+    },
+    "nSetAnimationMatrix(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "animationMatrix"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetAnimationMatrix(long,long)"
+    },
+    "nSetBottom(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "bottom"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetBottom(long,int)"
+    },
+    "nSetCameraDistance(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "distance"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetCameraDistance(long,float)"
+    },
+    "nSetClipBounds(long,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetClipBounds(long,int,int,int,int)"
+    },
+    "nSetClipBoundsEmpty(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetClipBoundsEmpty(long)"
+    },
+    "nSetClipToBounds(long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "clipToBounds"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetClipToBounds(long,boolean)"
+    },
+    "nSetClipToOutline(long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "clipToOutline"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetClipToOutline(long,boolean)"
+    },
+    "nSetElevation(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "lift"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetElevation(long,float)"
+    },
+    "nSetHasOverlappingRendering(long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "hasOverlappingRendering"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetHasOverlappingRendering(long,boolean)"
+    },
+    "nSetLayerPaint(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "paint"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetLayerPaint(long,long)"
+    },
+    "nSetLayerType(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "layerType"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetLayerType(long,int)"
+    },
+    "nSetLeft(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "left"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetLeft(long,int)"
+    },
+    "nSetLeftTopRightBottom(long,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetLeftTopRightBottom(long,int,int,int,int)"
+    },
+    "nSetOutlineEmpty(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetOutlineEmpty(long)"
+    },
+    "nSetOutlineNone(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetOutlineNone(long)"
+    },
+    "nSetOutlinePath(long,long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "nativePath",
+        "alpha"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "nSetOutlinePath(long,long,float)"
+    },
+    "nSetOutlineRoundRect(long,int,int,int,int,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "left",
+        "top",
+        "right",
+        "bottom",
+        "radius",
+        "alpha"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetOutlineRoundRect(long,int,int,int,int,float,float)"
+    },
+    "nSetPivotX(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "pivotX"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetPivotX(long,float)"
+    },
+    "nSetPivotY(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "pivotY"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetPivotY(long,float)"
+    },
+    "nSetProjectBackwards(long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "shouldProject"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetProjectBackwards(long,boolean)"
+    },
+    "nSetProjectionReceiver(long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "shouldReceive"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetProjectionReceiver(long,boolean)"
+    },
+    "nSetRenderEffect(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "renderEffect"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nSetRenderEffect(long,long)"
+    },
+    "nSetRevealClip(long,boolean,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "shouldClip",
+        "x",
+        "y",
+        "radius"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetRevealClip(long,boolean,float,float,float)"
+    },
+    "nSetRight(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "right"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetRight(long,int)"
+    },
+    "nSetRotation(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "rotation"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetRotation(long,float)"
+    },
+    "nSetRotationX(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "rotationX"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetRotationX(long,float)"
+    },
+    "nSetRotationY(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "rotationY"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetRotationY(long,float)"
+    },
+    "nSetScaleX(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "scaleX"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetScaleX(long,float)"
+    },
+    "nSetScaleY(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "scaleY"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetScaleY(long,float)"
+    },
+    "nSetSpotShadowColor(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "color"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetSpotShadowColor(long,int)"
+    },
+    "nSetStaticMatrix(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "nativeMatrix"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetStaticMatrix(long,long)"
+    },
+    "nSetTop(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "top"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetTop(long,int)"
+    },
+    "nSetTranslationX(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "translationX"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetTranslationX(long,float)"
+    },
+    "nSetTranslationY(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "translationY"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetTranslationY(long,float)"
+    },
+    "nSetTranslationZ(long,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "translationZ"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "nSetTranslationZ(long,float)"
+    },
+    "nSetUsageHint(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "usageHint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nSetUsageHint(long,int)"
+    },
+    "nStretch(long,float,float,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderNode",
+        "vecX",
+        "vecY",
+        "maxStretchX",
+        "maxStretchY"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nStretch(long,float,float,float,float)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.S_V2",
+    "android.graphics.RenderNode",
+    "android.graphics.RenderNode.PositionUpdateListener",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.RenderNodeNatives",
+    "org.robolectric.shadows.ShadowNativeRenderNode.Picker",
+    "org.robolectric.shadows.ShadowNativeRenderNode.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeRenderNode",
+  "documentation": "Shadow for {@link RenderNode} that is backed by native code "
+}

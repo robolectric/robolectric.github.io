@@ -1,32 +1,30 @@
 {
   "methods": {
-    "__constructor__(float)": {
+    "nativeCreate(float)": {
       "isImplementation": true,
       "modifiers": [
-        "protected"
+        "protected",
+        "static"
       ],
       "params": [
         "radius"
       ],
-      "returnType": "void",
+      "returnType": "long",
       "exceptions": [],
-      "name": "__constructor__(float)"
-    },
-    "getRadius()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "float",
-      "exceptions": [],
-      "name": "getRadius()"
+      "minSdk": 26,
+      "name": "nativeCreate(float)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.O",
     "android.graphics.CornerPathEffect",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.CornerPathEffectNatives",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.shadows.ShadowNativeCornerPathEffect.Picker",
+    "org.robolectric.shadows.ShadowNativeCornerPathEffect.Picker"
   ],
-  "name": "org.robolectric.shadows.ShadowCornerPathEffect"
+  "name": "org.robolectric.shadows.ShadowNativeCornerPathEffect",
+  "documentation": "Shadow for {@link CornerPathEffect} that is backed by native code "
 }

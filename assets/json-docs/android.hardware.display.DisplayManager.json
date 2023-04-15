@@ -70,7 +70,7 @@
       "name": "configureDefaultDisplay(android.content.res.Configuration,android.util.DisplayMetrics)",
       "documentation": "internal only "
     },
-    "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics)": {
+    "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics,boolean)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -78,13 +78,14 @@
       ],
       "params": [
         "configuration",
-        "displayMetrics"
+        "displayMetrics",
+        "isNaturallyPortrait"
       ],
       "returnType": "android.view.DisplayInfo",
       "exceptions": [],
-      "name": "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics)"
+      "name": "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics,boolean)"
     },
-    "createDisplayInfo(java.lang.String,android.view.DisplayInfo)": {
+    "createDisplayInfo(java.lang.String,java.lang.Integer)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -92,11 +93,11 @@
       ],
       "params": [
         "qualifiersStr",
-        "baseDisplayInfo"
+        "displayId"
       ],
       "returnType": "android.view.DisplayInfo",
       "exceptions": [],
-      "name": "createDisplayInfo(java.lang.String,android.view.DisplayInfo)"
+      "name": "createDisplayInfo(java.lang.String,java.lang.Integer)"
     },
     "displayModeOf(int,int,int,float)": {
       "isImplementation": false,
@@ -148,6 +149,19 @@
       "exceptions": [],
       "name": "getShadowDisplayManagerGlobal()"
     },
+    "isRotated(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "rotation"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isRotated(int)"
+    },
     "removeDisplay(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -161,6 +175,17 @@
       "exceptions": [],
       "name": "removeDisplay(int)",
       "documentation": "Removes a simulated display and idles the main looper to ensure all listeners are notified.\n\n@param displayId the display id to remove\n"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "setBrightnessConfiguration(java.lang.Object)": {
       "isImplementation": true,
@@ -218,6 +243,21 @@
       "name": "setDefaultBrightnessConfiguration(java.lang.Object)",
       "documentation": "Set the default brightness configuration for this device. "
     },
+    "setNaturallyPortrait(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "displayId",
+        "isNaturallyPortrait"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNaturallyPortrait(int,boolean)",
+      "documentation": "Changes the display to be naturally portrait or landscape. This will ensure that the rotation\nis configured consistently with orientation when the orientation is configured by {@link\n#changeDisplay}, e.g. if the display is naturally portrait and the orientation is configured as\nlandscape the rotation will be set to {@link Surface#ROTATION_90}.\n"
+    },
     "setSaturationLevel(float)": {
       "isImplementation": true,
       "modifiers": [
@@ -249,8 +289,11 @@
     }
   },
   "imports": [
+    "android.content.res.Configuration.ORIENTATION_LANDSCAPE",
+    "android.content.res.Configuration.ORIENTATION_PORTRAIT",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.P",
+    "java.util.Objects.requireNonNull",
     "org.robolectric.shadow.api.Shadow.extract",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
@@ -265,8 +308,10 @@
     "android.view.Display",
     "android.view.DisplayInfo",
     "android.view.Surface",
+    "androidx.annotation.Nullable",
     "androidx.annotation.RequiresApi",
     "com.google.auto.value.AutoBuilder",
+    "java.util.HashMap",
     "java.util.List",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.android.Bootstrap",
@@ -275,6 +320,7 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.res.Qualifiers",
     "org.robolectric.util.Consumer",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",

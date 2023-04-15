@@ -362,17 +362,17 @@
       "exceptions": [],
       "name": "reset()"
     },
-    "setAlias(java.lang.String)": {
-      "isImplementation": false,
+    "setAlias(java.lang.Object)": {
+      "isImplementation": true,
       "modifiers": [
         "public"
       ],
       "params": [
         "alias"
       ],
-      "returnType": "void",
+      "returnType": "java.lang.Object",
       "exceptions": [],
-      "name": "setAlias(java.lang.String)",
+      "name": "setAlias(java.lang.Object)",
       "documentation": "Sets the alias name of the device.\n\n\u003cp\u003eAlias is the locally modified name of a remote device.\n\n\u003cp\u003eAlias Name is not part of the supported SDK, and accessed via reflection.\n\n@param alias alias name.\n"
     },
     "setBatteryLevel(int)": {
@@ -577,6 +577,7 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.S",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.IntRange",
     "android.app.ActivityThread",
@@ -585,10 +586,10 @@
     "android.bluetooth.BluetoothGatt",
     "android.bluetooth.BluetoothGattCallback",
     "android.bluetooth.BluetoothSocket",
+    "android.bluetooth.BluetoothStatusCodes",
     "android.bluetooth.IBluetooth",
     "android.content.Context",
     "android.os.Build.VERSION",
-    "android.os.Build.VERSION_CODES",
     "android.os.Handler",
     "android.os.ParcelUuid",
     "java.io.IOException",
@@ -609,5 +610,6 @@
     "org.robolectric.util.reflector.Static",
     "org.robolectric.shadows.ShadowBluetoothDevice.BluetoothDeviceReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowBluetoothDevice"
+  "name": "org.robolectric.shadows.ShadowBluetoothDevice",
+  "documentation": "Shadow for {@link BluetoothDevice}. "
 }

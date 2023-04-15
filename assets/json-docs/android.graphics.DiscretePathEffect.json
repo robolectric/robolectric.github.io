@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "nativeCreate(float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "length",
+        "deviation"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nativeCreate(float,float)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.graphics.DiscretePathEffect",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.DiscretePathEffectNatives",
+    "org.robolectric.shadows.ShadowNativeDiscretePathEffect.Picker",
+    "org.robolectric.shadows.ShadowNativeDiscretePathEffect.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeDiscretePathEffect",
+  "documentation": "Shadow for {@link DiscretePathEffect} that is backed by native code "
+}

@@ -1,42 +1,5 @@
 {
   "methods": {
-    "addCorruptStreamSource(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "src"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "addCorruptStreamSource(java.lang.String)"
-    },
-    "clearCorruptStreamSources()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "clearCorruptStreamSources()"
-    },
-    "createFromPath(java.lang.String)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "pathName"
-      ],
-      "returnType": "android.graphics.drawable.Drawable",
-      "exceptions": [],
-      "name": "createFromPath(java.lang.String)"
-    },
     "createFromResourceId(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -48,21 +11,8 @@
       ],
       "returnType": "android.graphics.drawable.Drawable",
       "exceptions": [],
-      "name": "createFromResourceId(int)"
-    },
-    "createFromStream(java.io.InputStream,java.lang.String)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "is",
-        "srcName"
-      ],
-      "returnType": "android.graphics.drawable.Drawable",
-      "exceptions": [],
-      "name": "createFromStream(java.io.InputStream,java.lang.String)"
+      "name": "createFromResourceId(int)",
+      "documentation": "Returns an invalid Drawable with the given the resource id.\n\n@deprecated use {@code ContextCompat.getDrawable(context, resourceId)}\n"
     },
     "getCreatedFromResId()": {
       "isImplementation": false,
@@ -83,26 +33,6 @@
       "returnType": "java.io.InputStream",
       "exceptions": [],
       "name": "getInputStream()"
-    },
-    "getIntrinsicHeight()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getIntrinsicHeight()"
-    },
-    "getIntrinsicWidth()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getIntrinsicWidth()"
     },
     "invalidateSelf()": {
       "isImplementation": true,
@@ -126,56 +56,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCreatedFromResId(int,java.lang.String)"
-    },
-    "setDefaultIntrinsicHeight(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "defaultIntrinsicHeight"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setDefaultIntrinsicHeight(int)"
-    },
-    "setDefaultIntrinsicWidth(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "defaultIntrinsicWidth"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setDefaultIntrinsicWidth(int)"
-    },
-    "setIntrinsicHeight(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intrinsicHeight"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setIntrinsicHeight(int)"
-    },
-    "setIntrinsicWidth(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "intrinsicWidth"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setIntrinsicWidth(int)"
     },
     "validate()": {
       "isImplementation": false,
@@ -204,14 +84,10 @@
     "android.graphics.drawable.BitmapDrawable",
     "android.graphics.drawable.Drawable",
     "java.io.InputStream",
-    "java.util.ArrayList",
-    "java.util.List",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
-    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowDrawable.DrawableReflector"

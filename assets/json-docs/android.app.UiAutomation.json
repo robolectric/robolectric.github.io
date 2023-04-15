@@ -1,5 +1,126 @@
 {
   "methods": {
+    "getRootLayoutParams()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.view.WindowManager.LayoutParams\u003e",
+      "exceptions": [],
+      "name": "getRootLayoutParams()"
+    },
+    "getStartedActivityTokens()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003candroid.os.IBinder\u003e",
+      "exceptions": [],
+      "name": "getStartedActivityTokens()"
+    },
+    "getViewRootImpls()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.view.ViewRootImpl\u003e",
+      "exceptions": [],
+      "name": "getViewRootImpls()"
+    },
+    "getViewRoots()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowUiAutomation.Root\u003e",
+      "exceptions": [],
+      "name": "getViewRoots()"
+    },
+    "getViewRootsContainer()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "name": "getViewRootsContainer()"
+    },
+    "hasLayoutFlag(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "flag"
+      ],
+      "returnType": "java.util.function.Predicate\u003corg.robolectric.shadows.ShadowUiAutomation.Root\u003e",
+      "exceptions": [],
+      "name": "hasLayoutFlag(int)"
+    },
+    "injectInputEvent(android.view.InputEvent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "event"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "injectInputEvent(android.view.InputEvent)",
+      "documentation": "Injects a motion event into the appropriate window, see {@link\nUiAutomation#injectInputEvent(InputEvent, boolean)}. This can be used through the {@link\nUiAutomation} API, this method is provided for backwards compatibility with SDK \u003c 18.\n"
+    },
+    "injectInputEvent(android.view.InputEvent,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "event",
+        "sync"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "injectInputEvent(android.view.InputEvent,boolean)"
+    },
+    "injectKeyEvent(android.view.KeyEvent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "event"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "injectKeyEvent(android.view.KeyEvent)"
+    },
+    "injectMotionEvent(android.view.MotionEvent)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "event"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "injectMotionEvent(android.view.MotionEvent)"
+    },
     "setAnimationScale(float)": {
       "isImplementation": true,
       "modifiers": [
@@ -39,6 +160,16 @@
       "exceptions": [],
       "name": "setRotation(int)"
     },
+    "takeScreenshot()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.graphics.Bitmap",
+      "exceptions": [],
+      "name": "takeScreenshot()"
+    },
     "throwIfNotConnectedLocked()": {
       "isImplementation": true,
       "modifiers": [
@@ -56,16 +187,52 @@
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.view.WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE",
+    "android.view.WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE",
+    "android.view.WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL",
+    "android.view.WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH",
+    "com.google.common.base.Preconditions.checkState",
+    "java.util.Comparator.comparingInt",
+    "java.util.stream.Collectors.toList",
+    "java.util.stream.Collectors.toSet",
     "org.robolectric.Shadows.shadowOf",
+    "android.app.Activity",
     "android.app.UiAutomation",
     "android.content.ContentResolver",
     "android.content.res.Configuration",
     "android.content.res.Resources",
+    "android.graphics.Bitmap",
+    "android.graphics.Canvas",
+    "android.graphics.Paint",
+    "android.graphics.Point",
+    "android.os.Build",
+    "android.os.IBinder",
+    "android.os.Looper",
     "android.provider.Settings",
     "android.view.Display",
+    "android.view.InputEvent",
+    "android.view.KeyEvent",
+    "android.view.MotionEvent",
+    "android.view.View",
+    "android.view.ViewRootImpl",
+    "android.view.WindowManager",
+    "android.view.WindowManagerGlobal",
+    "android.view.WindowManagerImpl",
+    "androidx.test.runner.lifecycle.ActivityLifecycleMonitor",
+    "androidx.test.runner.lifecycle.ActivityLifecycleMonitorRegistry",
+    "androidx.test.runner.lifecycle.Stage",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.ImmutableSet",
+    "java.util.ArrayList",
+    "java.util.Arrays",
+    "java.util.List",
+    "java.util.Set",
+    "java.util.function.Predicate",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.shadows.ShadowUiAutomation.Root"
   ],
   "name": "org.robolectric.shadows.ShadowUiAutomation",
   "documentation": "Shadow for {@link UiAutomation}. "

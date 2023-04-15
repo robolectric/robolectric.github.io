@@ -1,5 +1,29 @@
 {
   "methods": {
+    "addDiscoverableService(android.bluetooth.BluetoothGattService)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addDiscoverableService(android.bluetooth.BluetoothGattService)"
+    },
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "close()",
+      "documentation": "Close this Bluetooth GATT client. "
+    },
     "connect()": {
       "isImplementation": true,
       "modifiers": [
@@ -10,15 +34,123 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "connect()",
-      "documentation": "Overrides behavior of {@link BluetoothGatt#connect()} to always return true.\n\n@return true, unconditionally\n"
+      "documentation": "Connect to a remote device, and performs a {@link\nBluetoothGattCallback#onConnectionStateChange} if a {@link BluetoothGattCallback} has been set\nby {@link ShadowBluetoothGatt#setGattCallback}\n\n@return true, if a {@link BluetoothGattCallback} has been set by {@link\n    ShadowBluetoothGatt#setGattCallback}\n"
+    },
+    "disconnect()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "disconnect()",
+      "documentation": "Disconnects an established connection, or cancels a connection attempt currently in progress.\n"
+    },
+    "discoverServices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "discoverServices()",
+      "documentation": "Overrides {@link BluetoothGatt#discoverServices} to always return false unless there are\ndiscoverable services made available by {@link ShadowBluetoothGatt#addDiscoverableService}\n\n@return true if discoverable service is available and callback response is possible\n"
+    },
+    "getBluetoothConnectionManager()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.BluetoothConnectionManager",
+      "exceptions": [],
+      "name": "getBluetoothConnectionManager()"
+    },
+    "getConnectionPriority()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getConnectionPriority()"
     },
     "getGattCallback()": {
       "isImplementation": false,
-      "modifiers": [],
+      "modifiers": [
+        "public"
+      ],
       "params": [],
       "returnType": "android.bluetooth.BluetoothGattCallback",
       "exceptions": [],
       "name": "getGattCallback()"
+    },
+    "getLatestReadBytes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "name": "getLatestReadBytes()"
+    },
+    "getLatestWrittenBytes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "byte[]",
+      "exceptions": [],
+      "name": "getLatestWrittenBytes()"
+    },
+    "getServices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.bluetooth.BluetoothGattService\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getServices()",
+      "documentation": "Overrides {@link BluetoothGatt#getServices} to always return a list of services discovered.\n\n@return list of services that have been discovered through {@link\n    ShadowBluetoothGatt#discoverServices}, empty if none.\n"
+    },
+    "isCallbackAppropriate()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isCallbackAppropriate()"
+    },
+    "isClosed()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isClosed()"
+    },
+    "isConnected()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isConnected()"
     },
     "newInstance(android.bluetooth.BluetoothDevice)": {
       "isImplementation": false,
@@ -33,15 +165,95 @@
       "exceptions": [],
       "name": "newInstance(android.bluetooth.BluetoothDevice)"
     },
+    "notifyConnection(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "remoteAddress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyConnection(java.lang.String)",
+      "documentation": "Simulate a successful Gatt Client Conection with {@link BluetoothConnectionManager}. Performs a\n{@link BluetoothGattCallback#onConnectionStateChange} if available.\n\n@param remoteAddress address of Gatt client\n"
+    },
+    "notifyDisconnection(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "remoteAddress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyDisconnection(java.lang.String)",
+      "documentation": "Simulate a successful Gatt Client Disconnection with {@link BluetoothConnectionManager}.\nPerforms a {@link BluetoothGattCallback#onConnectionStateChange} if available.\n\n@param remoteAddress address of Gatt client\n"
+    },
+    "readIncomingCharacteristic(android.bluetooth.BluetoothGattCharacteristic)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "characteristic"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "readIncomingCharacteristic(android.bluetooth.BluetoothGattCharacteristic)",
+      "documentation": "Writes bytes from incoming characteristic if properties are valid and callback is set. Callback\nresponds with BluetoothGattCallback#onCharacteristicRead and returns true when successful.\n\n@param characteristic Characteristic to read\n@return true, if the read operation was initiated successfully\n@throws IllegalStateException if a {@link BluetoothGattCallback} has not been set by {@link\n    ShadowBluetoothGatt#setGattCallback}\n"
+    },
+    "removeDiscoverableService(android.bluetooth.BluetoothGattService)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeDiscoverableService(android.bluetooth.BluetoothGattService)"
+    },
+    "requestConnectionPriority(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "priority"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "requestConnectionPriority(int)",
+      "documentation": "Request a connection parameter update.\n\n@param priority Request a specific connection priority. Must be one of {@link\n    BluetoothGatt#CONNECTION_PRIORITY_BALANCED}, {@link BluetoothGatt#CONNECTION_PRIORITY_HIGH}\n    or {@link BluetoothGatt#CONNECTION_PRIORITY_LOW_POWER}.\n@return true if operation is successful.\n@throws IllegalArgumentException If the parameters are outside of their specified range.\n"
+    },
     "setGattCallback(android.bluetooth.BluetoothGattCallback)": {
       "isImplementation": false,
-      "modifiers": [],
+      "modifiers": [
+        "public"
+      ],
       "params": [
         "bluetoothGattCallback"
       ],
       "returnType": "void",
       "exceptions": [],
       "name": "setGattCallback(android.bluetooth.BluetoothGattCallback)"
+    },
+    "writeIncomingCharacteristic(android.bluetooth.BluetoothGattCharacteristic)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "characteristic"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "writeIncomingCharacteristic(android.bluetooth.BluetoothGattCharacteristic)",
+      "documentation": "Reads bytes from incoming characteristic if properties are valid and callback is set. Callback\nresponds with {@link BluetoothGattCallback#onCharacteristicWrite} and returns true when\nsuccessful.\n\n@param characteristic Characteristic to read\n@return true, if the read operation was initiated successfully\n@throws IllegalStateException if a {@link BluetoothGattCallback} has not been set by {@link\n    ShadowBluetoothGatt#setGattCallback}\n"
     }
   },
   "imports": [
@@ -54,11 +266,25 @@
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothGatt",
     "android.bluetooth.BluetoothGattCallback",
+    "android.bluetooth.BluetoothGattCharacteristic",
+    "android.bluetooth.BluetoothGattService",
+    "android.bluetooth.BluetoothProfile",
     "android.content.Context",
+    "java.util.ArrayList",
+    "java.util.HashSet",
+    "java.util.List",
+    "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.shadow.api.Shadow"
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.ReflectorObject",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.PerfStatsCollector",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowBluetoothGatt.BluetoothGattReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowBluetoothGatt"
+  "name": "org.robolectric.shadows.ShadowBluetoothGatt",
+  "documentation": "Shadow implementation of {@link BluetoothGatt}. "
 }

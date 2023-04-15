@@ -334,6 +334,7 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.provider.Settings.Secure.LOCATION_MODE_OFF",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ContentResolver",
     "android.content.Context",
     "android.content.Intent",
@@ -356,8 +357,8 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static"
   ],
   "name": "org.robolectric.shadows.ShadowSettings.ShadowSecure"
 }

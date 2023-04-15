@@ -1,0 +1,75 @@
+{
+  "methods": {
+    "nativeCreate(long,float,float,long[],float[],long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "matrix",
+        "x",
+        "y",
+        "colors",
+        "positions",
+        "colorSpaceHandle"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "nativeCreate(long,float,float,long[],float[],long)"
+    },
+    "nativeCreate1(long,float,float,int[],float[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "matrix",
+        "x",
+        "y",
+        "colors",
+        "positions"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "maxSdk": 28,
+      "name": "nativeCreate1(long,float,float,int[],float[])"
+    },
+    "nativeCreate2(long,float,float,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "matrix",
+        "x",
+        "y",
+        "color0",
+        "color1"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "maxSdk": 28,
+      "name": "nativeCreate2(long,float,float,int,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.graphics.SweepGradient",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.SweepGradientNatives",
+    "org.robolectric.shadows.ShadowNativeSweepGradient.Picker",
+    "org.robolectric.shadows.ShadowNativeSweepGradient.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeSweepGradient",
+  "documentation": "Shadow for {@link SweepGradient} that is backed by native code "
+}

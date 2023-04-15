@@ -26,6 +26,17 @@
       "exceptions": [],
       "name": "advance()"
     },
+    "getMetrics()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.PersistableBundle",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getMetrics()"
+    },
     "getSampleTrackIndex()": {
       "isImplementation": true,
       "modifiers": [
@@ -198,6 +209,21 @@
       "exceptions": [],
       "name": "setDataSource(org.robolectric.shadows.util.DataSource)"
     },
+    "setMetrics(org.robolectric.shadows.util.DataSource,android.os.PersistableBundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "dataSource",
+        "metrics"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMetrics(org.robolectric.shadows.util.DataSource,android.os.PersistableBundle)",
+      "documentation": "Sets metrics for an associated {@link org.robolectric.shadows.util.DataSource}.\n\n@param metrics the data which will be returned by {@link MediaExtractor#getMetrics()}.\n"
+    },
     "unselectTrack(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -214,6 +240,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
     "java.lang.Math.min",
     "org.robolectric.shadows.util.DataSource.toDataSource",
     "android.content.Context",
@@ -222,6 +249,7 @@
     "android.media.MediaExtractor",
     "android.media.MediaFormat",
     "android.net.Uri",
+    "android.os.PersistableBundle",
     "java.io.FileDescriptor",
     "java.nio.ByteBuffer",
     "java.util.ArrayList",

@@ -1,6 +1,6 @@
 {
   "methods": {
-    "checkRecognitionSupport(android.content.Intent,java.util.concurrent.Executor,android.speech.RecognitionSupportCallback)": {
+    "checkRecognitionSupport(java.lang.Object,java.lang.Object,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
         "protected"
@@ -13,7 +13,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 33,
-      "name": "checkRecognitionSupport(android.content.Intent,java.util.concurrent.Executor,android.speech.RecognitionSupportCallback)"
+      "name": "checkRecognitionSupport(java.lang.Object,java.lang.Object,java.lang.Object)"
     },
     "createOnDeviceSpeechRecognizer(android.content.Context)": {
       "isImplementation": true,
@@ -42,6 +42,16 @@
       "returnType": "android.speech.SpeechRecognizer",
       "exceptions": [],
       "name": "createSpeechRecognizer(android.content.Context,android.content.ComponentName)"
+    },
+    "destroy()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "destroy()"
     },
     "getLastRecognizerIntent()": {
       "isImplementation": false,
@@ -74,7 +84,7 @@
       "returnType": "android.speech.SpeechRecognizer",
       "exceptions": [],
       "name": "getLatestSpeechRecognizer()",
-      "documentation": "Returns the latest SpeechRecognizer. This method can only be called after {@link\nSpeechRecognizer#createSpeechRecognizer()} is called.\n"
+      "documentation": "Returns the latest SpeechRecognizer. This method can only be called after {@link\nSpeechRecognizer#createSpeechRecognizer(Context)} is called.\n"
     },
     "handleChangeListener(android.speech.RecognitionListener)": {
       "isImplementation": true,
@@ -88,6 +98,17 @@
       "exceptions": [],
       "name": "handleChangeListener(android.speech.RecognitionListener)",
       "documentation": "Handles changing the listener and allows access to the internal listener to trigger events and\nsets the latest SpeechRecognizer.\n"
+    },
+    "isDestroyed()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isDestroyed()",
+      "documentation": "Returns true iff the destroy method of was invoked for the recognizer. "
     },
     "isOnDeviceRecognitionAvailable(android.content.Context)": {
       "isImplementation": true,
@@ -234,7 +255,7 @@
       "exceptions": [],
       "name": "triggerSupportError(int)"
     },
-    "triggerSupportResult(android.speech.RecognitionSupport)": {
+    "triggerSupportResult(java.lang.Object)": {
       "isImplementation": false,
       "modifiers": [
         "public"
@@ -244,7 +265,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "triggerSupportResult(android.speech.RecognitionSupport)"
+      "name": "triggerSupportResult(java.lang.Object)"
     }
   },
   "imports": [
@@ -259,11 +280,11 @@
     "android.os.Message",
     "android.speech.IRecognitionService",
     "android.speech.RecognitionListener",
-    "android.speech.RecognitionSupport",
-    "android.speech.RecognitionSupportCallback",
     "android.speech.SpeechRecognizer",
+    "androidx.annotation.NonNull",
     "androidx.annotation.Nullable",
     "androidx.annotation.RequiresApi",
+    "com.google.common.base.Preconditions",
     "java.util.Queue",
     "java.util.concurrent.Executor",
     "org.robolectric.annotation.Implementation",

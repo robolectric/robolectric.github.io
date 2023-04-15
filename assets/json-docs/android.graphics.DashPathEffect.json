@@ -1,8 +1,31 @@
 {
-  "methods": {},
+  "methods": {
+    "nativeCreate(float[],float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "intervals",
+        "phase"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nativeCreate(float[],float)"
+    }
+  },
   "imports": [
+    "android.os.Build.VERSION_CODES.O",
     "android.graphics.DashPathEffect",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DashPathEffectNatives",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.shadows.ShadowNativeDashPathEffect.Picker",
+    "org.robolectric.shadows.ShadowNativeDashPathEffect.Picker"
   ],
-  "name": "org.robolectric.shadows.ShadowDashPathEffect"
+  "name": "org.robolectric.shadows.ShadowNativeDashPathEffect",
+  "documentation": "Shadow for {@link DashPathEffect} that is backed by native code "
 }

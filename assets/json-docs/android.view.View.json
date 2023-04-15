@@ -965,12 +965,25 @@
     "useRealGraphics()": {
       "isImplementation": false,
       "modifiers": [
+        "public",
         "static"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "useRealGraphics()"
+      "name": "useRealGraphics()",
+      "documentation": "Internal API to determine if native graphics is enabled.\n\n\u003cp\u003eThis is currently public because it has to be accessed from multiple packages, but it is not\nrecommended to depend on this API.\n"
+    },
+    "useRealScrolling()": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "useRealScrolling()",
+      "documentation": "Currently the default View scrolling implementation is broken and low-fidelty. For instance,\neven if a View has no children, Robolectric will still happily set the scroll position of a\nView. Long-term we want to eliminate this broken behavior, but in the mean time the real\nscrolling behavior is enabled when native graphics are enabled, or when a system property is\nset.\n"
     },
     "visualize(android.view.View)": {
       "isImplementation": false,
@@ -1034,6 +1047,7 @@
     "android.view.WindowManager",
     "android.view.animation.Animation",
     "android.view.animation.Transformation",
+    "com.google.common.annotations.Beta",
     "com.google.common.collect.ImmutableList",
     "java.io.PrintStream",
     "java.util.ArrayList",
@@ -1042,12 +1056,15 @@
     "java.util.Set",
     "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.GraphicsMode",
+    "org.robolectric.annotation.GraphicsMode.Mode",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.ReflectorObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.config.ConfigurationRegistry",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.TimeUtils",

@@ -1,0 +1,182 @@
+{
+  "methods": {
+    "cancelConnection(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "cancelConnection(android.bluetooth.BluetoothDevice)",
+      "documentation": "Disconnects an established connection, or cancels a connection attempt currently in progress.\n\n@param device Remote device\n"
+    },
+    "clearResponses()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearResponses()",
+      "documentation": "Clear the list of responses. "
+    },
+    "close()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "close()",
+      "documentation": "Close this GATT server instance. "
+    },
+    "getBluetoothConnectionManager()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.BluetoothConnectionManager",
+      "exceptions": [],
+      "name": "getBluetoothConnectionManager()"
+    },
+    "getGattServerCallback()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.bluetooth.BluetoothGattServerCallback",
+      "exceptions": [],
+      "name": "getGattServerCallback()"
+    },
+    "getResponses()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cbyte[]\u003e",
+      "exceptions": [],
+      "name": "getResponses()",
+      "documentation": "Get a copy of the list of responses that have been sent. "
+    },
+    "isClosed()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isClosed()",
+      "documentation": "Get whether server has been closed. "
+    },
+    "isConnectedToDevice(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isConnectedToDevice(android.bluetooth.BluetoothDevice)",
+      "documentation": "Returns true if the connection status of remote device is connected\n\n@param device remote device\n"
+    },
+    "isConnectionCancelled(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isConnectionCancelled(android.bluetooth.BluetoothDevice)",
+      "documentation": "Get whether the device\u0027s connection has been cancelled.\n\n@param device remote device\n"
+    },
+    "notifyConnection(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyConnection(android.bluetooth.BluetoothDevice)",
+      "documentation": "Simulate a successful Gatt Server Connection with {@link BluetoothConnectionManager}. Performs\na {@link BluetoothGattCallback#onConnectionStateChange} if available.\n\n@param device remote device\n"
+    },
+    "notifyDisconnection(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "notifyDisconnection(android.bluetooth.BluetoothDevice)",
+      "documentation": "Simulate a successful Gatt Server Disconnection with {@link BluetoothConnectionManager}.\nPerforms a {@link BluetoothGattCallback#onConnectionStateChange} if available, even when device\nwas not connected initially.\n\n@param device remote device\n"
+    },
+    "sendResponse(android.bluetooth.BluetoothDevice,int,int,int,byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device",
+        "requestId",
+        "status",
+        "offset",
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "sendResponse(android.bluetooth.BluetoothDevice,int,int,int,byte[])",
+      "documentation": "Send a response to a read or write request to a remote device.\n\n@param device The remote device to send this response to\n@param requestId The ID of the request that was received with the callback\n@param status The status of the request to be sent to the remote devices\n@param offset Value offset for partial read/write response\n@param value The value of the attribute that was read/written (optional)\n"
+    },
+    "setGattServerCallback(android.bluetooth.BluetoothGattServerCallback)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGattServerCallback(android.bluetooth.BluetoothGattServerCallback)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.bluetooth.BluetoothAdapter",
+    "android.bluetooth.BluetoothDevice",
+    "android.bluetooth.BluetoothGatt",
+    "android.bluetooth.BluetoothGattServer",
+    "android.bluetooth.BluetoothGattServerCallback",
+    "java.util.ArrayList",
+    "java.util.HashSet",
+    "java.util.List",
+    "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.ReflectorObject",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowBluetoothGattServer.BluetoothGattServerReflector"
+  ],
+  "name": "org.robolectric.shadows.ShadowBluetoothGattServer",
+  "documentation": "Shadow of {@link BluetoothGattServer}. "
+}
