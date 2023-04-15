@@ -1,0 +1,241 @@
+{
+  "methods": {
+    "nAddAnimator(long,long,long,long,long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "setPtr",
+        "propertyValuesHolder",
+        "nativeInterpolator",
+        "startDelay",
+        "duration",
+        "repeatCount",
+        "repeatMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 25,
+      "name": "nAddAnimator(long,long,long,long,long,int,int)"
+    },
+    "nCreateAnimatorSet()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nCreateAnimatorSet()"
+    },
+    "nCreateGroupPropertyHolder(long,int,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "propertyId",
+        "startValue",
+        "endValue"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nCreateGroupPropertyHolder(long,int,float,float)"
+    },
+    "nCreatePathColorPropertyHolder(long,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "propertyId",
+        "startValue",
+        "endValue"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nCreatePathColorPropertyHolder(long,int,int,int)"
+    },
+    "nCreatePathDataPropertyHolder(long,long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "startValuePtr",
+        "endValuePtr"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nCreatePathDataPropertyHolder(long,long,long)"
+    },
+    "nCreatePathPropertyHolder(long,int,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "propertyId",
+        "startValue",
+        "endValue"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nCreatePathPropertyHolder(long,int,float,float)"
+    },
+    "nCreateRootAlphaPropertyHolder(long,float,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "startValue",
+        "endValue"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nCreateRootAlphaPropertyHolder(long,float,float)"
+    },
+    "nEnd(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "animatorSetPtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nEnd(long)"
+    },
+    "nReset(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "animatorSetPtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nReset(long)"
+    },
+    "nReverse(long,android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "animatorSetPtr",
+        "set",
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nReverse(long,android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT,int)"
+    },
+    "nSetPropertyHolderData(long,float[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "data",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nSetPropertyHolderData(long,float[],int)"
+    },
+    "nSetPropertyHolderData(long,int[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "data",
+        "length"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 25,
+      "name": "nSetPropertyHolderData(long,int[],int)"
+    },
+    "nSetVectorDrawableTarget(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "animatorPtr",
+        "vectorDrawablePtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 25,
+      "name": "nSetVectorDrawableTarget(long,long)"
+    },
+    "nStart(long,android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "animatorSetPtr",
+        "set",
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "nStart(long,android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
+    "android.graphics.drawable.AnimatedVectorDrawable",
+    "android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.AnimatedVectorDrawableNatives",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable.Picker",
+    "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable",
+  "documentation": "Shadow for {@link AnimatedVectorDrawable} that is backed by native code "
+}

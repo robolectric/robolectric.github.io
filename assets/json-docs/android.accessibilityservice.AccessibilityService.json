@@ -1,5 +1,15 @@
 {
   "methods": {
+    "cloneWindowOnAllDisplays()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.util.SparseArray\u003cjava.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e\u003e",
+      "exceptions": [],
+      "name": "cloneWindowOnAllDisplays()"
+    },
     "dispatchGesture(android.accessibilityservice.GestureDescription,android.accessibilityservice.AccessibilityService.GestureResultCallback,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
@@ -58,7 +68,19 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "getWindows()",
-      "documentation": "Returns a representation of interactive windows shown on the device screen. Mirrors the values\nprovided to {@link #setWindows(List\u003cAccessibilityWindowInfo\u003e)}. Returns an empty List if not\nset.\n"
+      "documentation": "Returns a representation of interactive windows shown on the device\u0027s default display. Mirrors\nthe values provided to {@link #setWindows(List\u003cAccessibilityWindowInfo\u003e)}. Returns an empty\nlist if not set.\n"
+    },
+    "getWindowsOnAllDisplays()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.util.SparseArray\u003cjava.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e\u003e",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getWindowsOnAllDisplays()",
+      "documentation": "Returns a representation of interactive windows shown on the device\u0027s all displays. An empty\nlist will be returned for default display and {@code null} will be return for other displays if\nthey are not set by {@link #setWindowsOnDisplay(int, List)}.\n"
     },
     "performGlobalAction(int)": {
       "isImplementation": true,
@@ -123,7 +145,21 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setWindows(java.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e)",
-      "documentation": "Sets the list of interactive windows shown on the device screen as reported by {@link\n#getWindows()}\n"
+      "documentation": "Sets the list of interactive windows shown on the device\u0027s default display as reported by\n{@link #getWindows()}\n"
+    },
+    "setWindowsOnDisplay(int,java.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "displayId",
+        "windowList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWindowsOnDisplay(int,java.util.List\u003candroid.view.accessibility.AccessibilityWindowInfo\u003e)",
+      "documentation": "Sets the list of interactive windows shown on the device\u0027s {@code displayId} display. If the\n{@code windowList} is null, we will remove the list with given {@code displayId} display as\nreported by {@link #getWindowsOnAllDisplays()}.\n"
     },
     "takeScreenshot(int,java.util.concurrent.Executor,android.accessibilityservice.AccessibilityService.TakeScreenshotCallback)": {
       "isImplementation": true,
@@ -168,11 +204,15 @@
     "android.hardware.HardwareBuffer",
     "android.os.Handler",
     "android.os.SystemClock",
+    "android.util.SparseArray",
+    "android.view.Display",
     "android.view.accessibility.AccessibilityNodeInfo",
     "android.view.accessibility.AccessibilityWindowInfo",
+    "com.google.common.collect.ArrayListMultimap",
     "java.util.ArrayList",
     "java.util.List",
     "java.util.concurrent.Executor",
+    "javax.annotation.Nullable",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.util.ReflectionHelpers",

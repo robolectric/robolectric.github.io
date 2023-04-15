@@ -23,15 +23,17 @@
       "exceptions": [],
       "name": "acquire(long)"
     },
-    "acquireInternal()": {
+    "acquireInternal(java.util.Optional\u003cjava.lang.Long\u003e)": {
       "isImplementation": false,
       "modifiers": [
         "private"
       ],
-      "params": [],
+      "params": [
+        "timeoutOptional"
+      ],
       "returnType": "void",
       "exceptions": [],
-      "name": "acquireInternal()"
+      "name": "acquireInternal(java.util.Optional\u003cjava.lang.Long\u003e)"
     },
     "getTag()": {
       "isImplementation": true,
@@ -88,6 +90,17 @@
       "exceptions": [],
       "name": "isReferenceCounted()",
       "documentation": "Retrieves if the wake lock is reference counted or not\n\n@return Is the wake lock reference counted?\n"
+    },
+    "refreshTimeoutTimestampList()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "refreshTimeoutTimestampList()",
+      "documentation": "Iterate all the wake lock and remove those timeouted ones. "
     },
     "release(int)": {
       "isImplementation": true,
@@ -157,6 +170,8 @@
     "android.os.Build.VERSION_CODES.S",
     "android.os.Build.VERSION_CODES.TIRAMISU",
     "com.google.common.base.Preconditions.checkState",
+    "java.util.Comparator.comparing",
+    "java.util.stream.Collectors.toCollection",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest.permission",
     "android.annotation.NonNull",

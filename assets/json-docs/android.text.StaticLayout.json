@@ -69,6 +69,17 @@
       "minSdk": 21,
       "maxSdk": 22,
       "name": "nLineBreakOpportunities(java.lang.String,char[],int,int[])"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     }
   },
   "imports": [
@@ -77,10 +88,19 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.P",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.text.DynamicLayout",
     "android.text.StaticLayout",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowStaticLayout.LineBreaksReflector"
   ],
-  "name": "org.robolectric.shadows.ShadowStaticLayout"
+  "name": "org.robolectric.shadows.ShadowStaticLayout",
+  "documentation": "Shadow for android.text.StaticLayout "
 }

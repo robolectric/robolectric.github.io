@@ -209,7 +209,6 @@
     "android.companion.AssociationRequest",
     "android.companion.CompanionDeviceManager",
     "android.content.ComponentName",
-    "android.net.MacAddress",
     "android.os.Build.VERSION_CODES",
     "android.os.Handler",
     "androidx.annotation.Nullable",

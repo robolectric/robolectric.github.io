@@ -1,0 +1,138 @@
+{
+  "methods": {
+    "nAddReplacementRun(long,long,int,int,float)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeBuilderPtr",
+        "paintPtr",
+        "start",
+        "end",
+        "width"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nAddReplacementRun(long,long,int,int,float)"
+    },
+    "nAddStyleRun(long,long,int,int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeBuilderPtr",
+        "paintPtr",
+        "start",
+        "end",
+        "isRtl"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 32,
+      "name": "nAddStyleRun(long,long,int,int,boolean)"
+    },
+    "nAddStyleRun(long,long,int,int,int,int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeBuilderPtr",
+        "paintPtr",
+        "lineBreakStyle",
+        "lineBreakWordStyle",
+        "start",
+        "end",
+        "isRtl"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "nAddStyleRun(long,long,int,int,int,int,boolean)"
+    },
+    "nBuildMeasuredText(long,long,char[],boolean,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeBuilderPtr",
+        "hintMtPtr",
+        "text",
+        "computeHyphenation",
+        "computeLayout"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "maxSdk": 32,
+      "name": "nBuildMeasuredText(long,long,char[],boolean,boolean)"
+    },
+    "nBuildMeasuredText(long,long,char[],boolean,boolean,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeBuilderPtr",
+        "hintMtPtr",
+        "text",
+        "computeHyphenation",
+        "computeLayout",
+        "fastHyphenationMode"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "nBuildMeasuredText(long,long,char[],boolean,boolean,boolean)"
+    },
+    "nFreeBuilder(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeBuilderPtr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nFreeBuilder(long)"
+    },
+    "nInitBuilder()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nInitBuilder()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.S_V2",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.annotation.FloatRange",
+    "android.annotation.IntRange",
+    "android.graphics.Rect",
+    "android.graphics.text.MeasuredText",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.MeasuredTextBuilderNatives",
+    "org.robolectric.nativeruntime.MeasuredTextNatives",
+    "org.robolectric.shadows.ShadowNativeMeasuredText.Picker",
+    "org.robolectric.shadows.ShadowNativeMeasuredText.ShadowNativeMeasuredTextBuilder.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeMeasuredText.ShadowNativeMeasuredTextBuilder",
+  "documentation": "Shadow for {@link MeasuredText.Builder} that is backed by native code "
+}

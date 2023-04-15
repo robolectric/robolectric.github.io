@@ -338,6 +338,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 33,
       "name": "showSoftInput(android.view.View,int,android.os.ResultReceiver,int)"
     },
     "startInputInner(int,android.os.IBinder,int,int,int)": {
@@ -380,6 +381,7 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.os.Bundle",
     "android.os.IBinder",

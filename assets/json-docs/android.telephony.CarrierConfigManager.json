@@ -1,5 +1,15 @@
 {
   "methods": {
+    "checkReadPhoneStatePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkReadPhoneStatePermission()"
+    },
     "getConfigForSubId(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -41,6 +51,18 @@
       "exceptions": [],
       "name": "setConfigForSubId(int,android.os.PersistableBundle)",
       "documentation": "Sets that the {@code config} PersistableBundle for a particular {@code subId}; controls the\nreturn value of {@link CarrierConfigManager#getConfigForSubId()}.\n"
+    },
+    "setReadPhoneStatePermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "readPhoneStatePermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setReadPhoneStatePermission(boolean)"
     }
   },
   "imports": [

@@ -142,6 +142,16 @@
       "name": "getLinkProperties(android.net.Network)",
       "documentation": "@see #setLinkProperties(Network, LinkProperties) "
     },
+    "getNetworkCallbackPendingIntents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.Set\u003candroid.app.PendingIntent\u003e",
+      "exceptions": [],
+      "name": "getNetworkCallbackPendingIntents()"
+    },
     "getNetworkCallbacks()": {
       "isImplementation": false,
       "modifiers": [
@@ -273,6 +283,20 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)"
+    },
+    "registerNetworkCallback(android.net.NetworkRequest,android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "pendingIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "registerNetworkCallback(android.net.NetworkRequest,android.app.PendingIntent)"
     },
     "registerNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
@@ -547,6 +571,19 @@
       "name": "setRestrictBackgroundStatus(int)",
       "documentation": "Sets the next return value for {@link ConnectivityManager#getRestrictBackgroundStatus()}. "
     },
+    "unregisterNetworkCallback(android.app.PendingIntent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "pendingIntent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "unregisterNetworkCallback(android.app.PendingIntent)"
+    },
     "unregisterNetworkCallback(android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
       "modifiers": [
@@ -569,6 +606,7 @@
     "android.os.Build.VERSION_CODES.O",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf",
+    "android.app.PendingIntent",
     "android.net.ConnectivityManager",
     "android.net.ConnectivityManager.OnNetworkActiveListener",
     "android.net.LinkProperties",

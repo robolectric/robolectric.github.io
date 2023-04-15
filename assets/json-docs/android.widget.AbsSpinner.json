@@ -34,6 +34,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setSelection(int,boolean)"
+    },
+    "useRealSpinnerSelection()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "useRealSpinnerSelection()",
+      "documentation": "Currently the shadow method {@link #setSelection(int)} broken and low-fidelity. In real\nAndroid, the item selected callback is invoked during layout passes. However, in Robolectric,\nthe callback is always invoked explicitly, which leads to many issues:\n\n\u003col\u003e\n  \u003cli\u003eItem selection callbacks are invoked even if the selection hasn\u0027t changed, which can lead\n      to infinite loops.\n  \u003cli\u003eItem selection callbacks are still invoked if spinners are not attached to an Activity.\n  \u003cli\u003eItem selection callbacks are invoked even if spinners are non-visible.\n  \u003cli\u003eItem selection callbacks are invoked twice if spinners are attached to an Activity and\n      visible.\n\u003c/ol\u003e\n\n\u003cp\u003eLong-term we want to eliminate this broken shadow method, but in the mean time the real\nscrolling behavior is only enabled if a system property is set, due to tests depending on the\nbroken behavior.\n"
     }
   },
   "imports": [

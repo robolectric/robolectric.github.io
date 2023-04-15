@@ -3,7 +3,8 @@
     "appendDescription(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "s"
@@ -12,384 +13,11 @@
       "exceptions": [],
       "name": "appendDescription(java.lang.String)"
     },
-    "asShared()": {
-      "isImplementation": true,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "minSdk": 31,
-      "name": "asShared()"
-    },
-    "checkBitmapMutable()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "checkBitmapMutable()"
-    },
-    "compress(android.graphics.Bitmap.CompressFormat,int,java.io.OutputStream)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "format",
-        "quality",
-        "stream"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "compress(android.graphics.Bitmap.CompressFormat,int,java.io.OutputStream)"
-    },
-    "copy(android.graphics.Bitmap.Config,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "config",
-        "isMutable"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "copy(android.graphics.Bitmap.Config,boolean)"
-    },
-    "copyPixelsFromBuffer(java.nio.Buffer)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "dst"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "copyPixelsFromBuffer(java.nio.Buffer)"
-    },
-    "copyPixelsToBuffer(java.nio.Buffer)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "dst"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "copyPixelsToBuffer(java.nio.Buffer)"
-    },
-    "createAshmemBitmap()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "minSdk": 23,
-      "name": "createAshmemBitmap()"
-    },
-    "createBitmap(android.graphics.Bitmap,int,int,int,int,android.graphics.Matrix,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "src",
-        "x",
-        "y",
-        "width",
-        "height",
-        "matrix",
-        "filter"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "createBitmap(android.graphics.Bitmap,int,int,int,int,android.graphics.Matrix,boolean)"
-    },
-    "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "displayMetrics",
-        "width",
-        "height",
-        "config"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "minSdk": 17,
-      "name": "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config)"
-    },
-    "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "displayMetrics",
-        "width",
-        "height",
-        "config",
-        "hasAlpha"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "minSdk": 17,
-      "name": "createBitmap(android.util.DisplayMetrics,int,int,android.graphics.Bitmap.Config,boolean)"
-    },
-    "createBitmap(android.util.DisplayMetrics,int[],int,int,int,int,android.graphics.Bitmap.Config)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "displayMetrics",
-        "colors",
-        "offset",
-        "stride",
-        "width",
-        "height",
-        "config"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "minSdk": 17,
-      "name": "createBitmap(android.util.DisplayMetrics,int[],int,int,int,int,android.graphics.Bitmap.Config)"
-    },
-    "createBitmap(int,int,android.graphics.Bitmap.Config)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "width",
-        "height",
-        "config"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "createBitmap(int,int,android.graphics.Bitmap.Config)"
-    },
-    "createBitmap(int,int,android.graphics.Bitmap.Config,boolean,android.graphics.ColorSpace)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "width",
-        "height",
-        "config",
-        "hasAlpha",
-        "colorSpace"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "minSdk": 26,
-      "name": "createBitmap(int,int,android.graphics.Bitmap.Config,boolean,android.graphics.ColorSpace)"
-    },
-    "createBitmap(int[],int,int,int,int,android.graphics.Bitmap.Config)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "colors",
-        "offset",
-        "stride",
-        "width",
-        "height",
-        "config"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "createBitmap(int[],int,int,int,int,android.graphics.Bitmap.Config)"
-    },
-    "createBitmap(java.awt.image.BufferedImage,int,int,android.graphics.Bitmap.Config)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "bufferedImage",
-        "width",
-        "height",
-        "config"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "createBitmap(java.awt.image.BufferedImage,int,int,android.graphics.Bitmap.Config)"
-    },
-    "createScaledBitmap(android.graphics.Bitmap,int,int,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "src",
-        "dstWidth",
-        "dstHeight",
-        "filter"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "createScaledBitmap(android.graphics.Bitmap,int,int,boolean)"
-    },
-    "drawBitmap(android.graphics.Bitmap,int,int)": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [
-        "source",
-        "left",
-        "top"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "drawBitmap(android.graphics.Bitmap,int,int)"
-    },
-    "drawRect(android.graphics.Rect,android.graphics.Paint)": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [
-        "r",
-        "paint"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "drawRect(android.graphics.Rect,android.graphics.Paint)"
-    },
-    "drawRect(android.graphics.RectF,android.graphics.Paint)": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [
-        "r",
-        "paint"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "drawRect(android.graphics.RectF,android.graphics.Paint)"
-    },
-    "eraseColor(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "color"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "eraseColor(int)"
-    },
-    "extractAlpha()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "extractAlpha()"
-    },
-    "extractAlpha(android.graphics.Paint,int[])": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "paint",
-        "offsetXY"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "extractAlpha(android.graphics.Paint,int[])",
-      "documentation": "This shadow implementation ignores the given paint and offsetXY and simply calls {@link\n#extractAlpha()}.\n"
-    },
-    "getAllocationByteCount()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "final"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "minSdk": 19,
-      "name": "getAllocationByteCount()"
-    },
-    "getBufferedImage()": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [],
-      "returnType": "java.awt.image.BufferedImage",
-      "exceptions": [],
-      "name": "getBufferedImage()"
-    },
-    "getByteCount()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getByteCount()"
-    },
-    "getBytesPerPixel(android.graphics.Bitmap.Config)": {
-      "isImplementation": false,
-      "modifiers": [
-        "static"
-      ],
-      "params": [
-        "config"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getBytesPerPixel(android.graphics.Bitmap.Config)"
-    },
-    "getColorSpace()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "android.graphics.ColorSpace",
-      "exceptions": [],
-      "minSdk": 26,
-      "name": "getColorSpace()"
-    },
-    "getConfig()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "final"
-      ],
-      "params": [],
-      "returnType": "android.graphics.Bitmap.Config",
-      "exceptions": [],
-      "name": "getConfig()"
-    },
     "getCreatedFromBitmap()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "android.graphics.Bitmap",
@@ -400,7 +28,8 @@
     "getCreatedFromBytes()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "byte[]",
@@ -411,7 +40,8 @@
     "getCreatedFromColors()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "int[]",
@@ -422,7 +52,8 @@
     "getCreatedFromFilter()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "boolean",
@@ -433,7 +64,8 @@
     "getCreatedFromHeight()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "int",
@@ -444,7 +76,8 @@
     "getCreatedFromMatrix()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "android.graphics.Matrix",
@@ -455,7 +88,8 @@
     "getCreatedFromPath()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "java.lang.String",
@@ -466,7 +100,8 @@
     "getCreatedFromResId()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "int",
@@ -477,7 +112,8 @@
     "getCreatedFromStream()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "java.io.InputStream",
@@ -488,7 +124,8 @@
     "getCreatedFromWidth()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "int",
@@ -499,7 +136,8 @@
     "getCreatedFromX()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "int",
@@ -510,7 +148,8 @@
     "getCreatedFromY()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "int",
@@ -521,257 +160,19 @@
     "getDescription()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
       "name": "getDescription()"
     },
-    "getGenerationId()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getGenerationId()"
-    },
-    "getHeight()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getHeight()"
-    },
-    "getPixel(int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "x",
-        "y"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getPixel(int,int)"
-    },
-    "getPixels(int[],int,int,int,int,int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "pixels",
-        "offset",
-        "stride",
-        "x",
-        "y",
-        "width",
-        "height"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "getPixels(int[],int,int,int,int,int,int)",
-      "documentation": "Note that this method will return a RuntimeException unless: - {@code pixels} has the same\nlength as the number of pixels of the bitmap. - {@code x \u003d 0} - {@code y \u003d 0} - {@code width}\nand {@code height} height match the current bitmap\u0027s dimensions.\n"
-    },
-    "getRowBytes()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getRowBytes()"
-    },
-    "getWidth()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getWidth()"
-    },
-    "hasAlpha()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "final"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "hasAlpha()"
-    },
-    "hasMipMap()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "final"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "minSdk": 17,
-      "name": "hasMipMap()"
-    },
-    "internalCheckPixelAccess(int,int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [
-        "x",
-        "y"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "internalCheckPixelAccess(int,int)"
-    },
-    "isMutable()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "final"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "isMutable()"
-    },
-    "isPremultiplied()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "minSdk": 19,
-      "name": "isPremultiplied()"
-    },
-    "isRecycled()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "final"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "isRecycled()"
-    },
-    "nativeCreateFromParcel(android.os.Parcel)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "p"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "nativeCreateFromParcel(android.os.Parcel)"
-    },
-    "reconfigure(int,int,android.graphics.Bitmap.Config)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "width",
-        "height",
-        "config"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 19,
-      "name": "reconfigure(int,int,android.graphics.Bitmap.Config)"
-    },
-    "recycle()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "recycle()"
-    },
-    "sameAs(android.graphics.Bitmap)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "other"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "sameAs(android.graphics.Bitmap)"
-    },
-    "setBufferedImage(java.awt.image.BufferedImage)": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [
-        "bufferedImage"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setBufferedImage(java.awt.image.BufferedImage)"
-    },
-    "setColorSpace(android.graphics.ColorSpace)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "colorSpace"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 29,
-      "name": "setColorSpace(android.graphics.ColorSpace)"
-    },
-    "setConfig(android.graphics.Bitmap.Config)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "config"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 19,
-      "name": "setConfig(android.graphics.Bitmap.Config)"
-    },
-    "setCreatedFromResId(int,java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "resId",
-        "description"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setCreatedFromResId(int,java.lang.String)"
-    },
     "setDescription(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "s"
@@ -780,49 +181,11 @@
       "exceptions": [],
       "name": "setDescription(java.lang.String)"
     },
-    "setHasAlpha(boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "hasAlpha"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setHasAlpha(boolean)"
-    },
-    "setHasMipMap(boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "final"
-      ],
-      "params": [
-        "hasMipMap"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 17,
-      "name": "setHasMipMap(boolean)"
-    },
-    "setHeight(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "height"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 19,
-      "name": "setHeight(int)"
-    },
     "setMutable(boolean)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "abstract"
       ],
       "params": [
         "mutable"
@@ -830,80 +193,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setMutable(boolean)"
-    },
-    "setPixel(int,int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "x",
-        "y",
-        "color"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setPixel(int,int,int)"
-    },
-    "setPixels(int[],int,int,int,int,int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "pixels",
-        "offset",
-        "stride",
-        "x",
-        "y",
-        "width",
-        "height"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setPixels(int[],int,int,int,int,int,int)"
-    },
-    "setPixelsInternal(int[],int,int,int,int,int,int)": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [
-        "pixels",
-        "offset",
-        "stride",
-        "x",
-        "y",
-        "width",
-        "height"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setPixelsInternal(int[],int,int,int,int,int,int)"
-    },
-    "setPremultiplied(boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "isPremultiplied"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 19,
-      "name": "setPremultiplied(boolean)"
-    },
-    "setWidth(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "width"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 19,
-      "name": "setWidth(int)"
     },
     "visualize(android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -918,63 +207,17 @@
       "exceptions": [],
       "name": "visualize(android.graphics.Bitmap)",
       "documentation": "Returns a textual representation of the appearance of the object.\n\n@param bitmap the bitmap to visualize\n@return Textual representation of the appearance of the object.\n"
-    },
-    "writeToParcel(android.os.Parcel,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "p",
-        "flags"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "writeToParcel(android.os.Parcel,int)"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.KITKAT",
-    "android.os.Build.VERSION_CODES.M",
-    "android.os.Build.VERSION_CODES.O",
-    "android.os.Build.VERSION_CODES.Q",
-    "android.os.Build.VERSION_CODES.S",
-    "com.google.common.base.Preconditions.checkArgument",
-    "com.google.common.base.Preconditions.checkNotNull",
-    "java.lang.Integer.max",
-    "java.lang.Integer.min",
     "android.graphics.Bitmap",
-    "android.graphics.Bitmap.Config",
-    "android.graphics.ColorSpace",
     "android.graphics.Matrix",
-    "android.graphics.Paint",
-    "android.graphics.Rect",
-    "android.graphics.RectF",
-    "android.os.Build",
-    "android.os.Parcel",
-    "android.util.DisplayMetrics",
-    "java.awt.Color",
-    "java.awt.Graphics2D",
-    "java.awt.geom.Rectangle2D",
-    "java.awt.image.BufferedImage",
-    "java.awt.image.ColorModel",
-    "java.awt.image.DataBufferInt",
-    "java.awt.image.WritableRaster",
-    "java.io.FileDescriptor",
     "java.io.InputStream",
-    "java.io.OutputStream",
-    "java.nio.Buffer",
-    "java.nio.ByteBuffer",
-    "java.nio.IntBuffer",
-    "java.util.Arrays",
-    "org.robolectric.RuntimeEnvironment",
-    "org.robolectric.Shadows",
-    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.shadows.ShadowBitmap.Picker",
+    "org.robolectric.shadows.ShadowBitmap.Picker"
   ],
-  "name": "org.robolectric.shadows.ShadowBitmap"
+  "name": "org.robolectric.shadows.ShadowBitmap",
+  "documentation": "Base class for {@link Bitmap} shadows. "
 }

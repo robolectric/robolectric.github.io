@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "nativeCreate(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeOuterpe",
+        "nativeInnerpe"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nativeCreate(long,long)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.graphics.ComposePathEffect",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.ComposePathEffectNatives",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.shadows.ShadowNativeComposePathEffect.Picker",
+    "org.robolectric.shadows.ShadowNativeComposePathEffect.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeComposePathEffect",
+  "documentation": "Shadow for {@link ComposePathEffect} that is backed by native code "
+}

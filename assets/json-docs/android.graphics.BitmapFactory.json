@@ -1,52 +1,8 @@
 {
   "methods": {
-    "create(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "static"
-      ],
-      "params": [
-        "name"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "create(java.lang.String)"
-    },
-    "create(java.lang.String,android.graphics.BitmapFactory.Options)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "name",
-        "options"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options)",
-      "documentation": "@deprecated Use {@link Bitmap#createBitmap(int, int, Config)} to create a simple Bitmap or any\n    of the BitmapFactory.decode methods with real image data.\n"
-    },
-    "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public",
-        "static"
-      ],
-      "params": [
-        "name",
-        "options",
-        "widthAndHeight"
-      ],
-      "returnType": "android.graphics.Bitmap",
-      "exceptions": [],
-      "name": "create(java.lang.String,android.graphics.BitmapFactory.Options,android.graphics.Point)",
-      "documentation": "@deprecated Use {@link Bitmap#createBitmap(int, int, Config)} to create a simple Bitmap or any\n    of the BitmapFactory.decode methods with real image data.\n"
-    },
     "create(java.lang.String,android.graphics.BitmapFactory.Options,org.robolectric.shadows.ImageUtil.RobolectricBufferedImage)": {
       "isImplementation": false,
       "modifiers": [
-        "private",
         "static"
       ],
       "params": [
@@ -336,7 +292,6 @@
     "android.content.res.AssetManager.AssetInputStream",
     "android.content.res.Resources",
     "android.graphics.Bitmap",
-    "android.graphics.Bitmap.Config",
     "android.graphics.BitmapFactory",
     "android.graphics.Point",
     "android.graphics.Rect",

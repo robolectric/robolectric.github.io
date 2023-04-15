@@ -63,7 +63,7 @@
       "name": "removeTransportType(int)",
       "documentation": "Updates the transport types for this network capablities to remove {@code transportType}. "
     },
-    "setLinkDownstreamBandwidthKbps(int)": {
+    "setLinkDownstreamBandwidthKbps(java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
         "public"
@@ -71,10 +71,9 @@
       "params": [
         "kbps"
       ],
-      "returnType": "android.net.NetworkCapabilities",
+      "returnType": "java.lang.Object",
       "exceptions": [],
-      "minSdk": 29,
-      "name": "setLinkDownstreamBandwidthKbps(int)",
+      "name": "setLinkDownstreamBandwidthKbps(java.lang.Object)",
       "documentation": "Sets the LinkDownstreamBandwidthKbps of the NetworkCapabilities. "
     },
     "setNetworkSpecifier(android.net.NetworkSpecifier)": {

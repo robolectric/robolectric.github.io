@@ -1,0 +1,93 @@
+{
+  "methods": {
+    "nGetBounds(long,char[],int,int,android.graphics.Rect)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "buf",
+        "start",
+        "end",
+        "rect"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nGetBounds(long,char[],int,int,android.graphics.Rect)"
+    },
+    "nGetCharWidthAt(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "offset"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetCharWidthAt(long,int)"
+    },
+    "nGetMemoryUsage(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetMemoryUsage(long)"
+    },
+    "nGetReleaseFunc()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nGetReleaseFunc()"
+    },
+    "nGetWidth(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativePtr",
+        "start",
+        "end"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetWidth(long,int,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.S_V2",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.annotation.FloatRange",
+    "android.annotation.IntRange",
+    "android.graphics.Rect",
+    "android.graphics.text.MeasuredText",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.MeasuredTextBuilderNatives",
+    "org.robolectric.nativeruntime.MeasuredTextNatives",
+    "org.robolectric.shadows.ShadowNativeMeasuredText.Picker",
+    "org.robolectric.shadows.ShadowNativeMeasuredText.ShadowNativeMeasuredTextBuilder",
+    "org.robolectric.shadows.ShadowNativeMeasuredText.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeMeasuredText",
+  "documentation": "Shadow for {@link MeasuredText} that is backed by native code "
+}

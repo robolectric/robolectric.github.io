@@ -12,6 +12,17 @@
       "exceptions": [],
       "name": "addPrimaryClipChangedListener(android.content.ClipboardManager.OnPrimaryClipChangedListener)"
     },
+    "clearPrimaryClip()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "clearPrimaryClip()"
+    },
     "getPrimaryClip()": {
       "isImplementation": true,
       "modifiers": [
@@ -92,6 +103,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.P",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ClipData",
@@ -104,7 +116,6 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowClipboardManager.ClipboardManagerReflector"
   ],

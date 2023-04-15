@@ -1,5 +1,15 @@
 {
   "methods": {
+    "getContext()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.Context",
+      "exceptions": [],
+      "name": "getContext()"
+    },
     "getSearchableInfo(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -11,14 +21,37 @@
       "returnType": "android.app.SearchableInfo",
       "exceptions": [],
       "name": "getSearchableInfo(android.content.ComponentName)"
+    },
+    "launchAssist(android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "bundle"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "launchAssist(android.os.Bundle)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.M",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.SystemApi",
     "android.app.SearchManager",
     "android.app.SearchableInfo",
     "android.content.ComponentName",
+    "android.content.Context",
+    "android.content.Intent",
+    "android.os.Bundle",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowSearchManager.ReflectorSearchManager"
   ],
   "name": "org.robolectric.shadows.ShadowSearchManager"
 }

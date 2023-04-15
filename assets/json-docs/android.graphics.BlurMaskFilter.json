@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "nativeConstructor(float,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "radius",
+        "style"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nativeConstructor(float,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.graphics.BlurMaskFilter",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.BlurMaskFilterNatives",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.shadows.ShadowNativeBlurMaskFilter.Picker",
+    "org.robolectric.shadows.ShadowNativeBlurMaskFilter.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeBlurMaskFilter",
+  "documentation": "Shadow for {@link BlurMaskFilter} that is backed by native code "
+}

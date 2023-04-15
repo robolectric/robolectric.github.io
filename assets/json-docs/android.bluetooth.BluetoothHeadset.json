@@ -72,6 +72,20 @@
       "exceptions": [],
       "name": "isDeviceActive(android.bluetooth.BluetoothDevice)"
     },
+    "isVoiceRecognitionSupported(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isVoiceRecognitionSupported(android.bluetooth.BluetoothDevice)",
+      "documentation": "Checks whether the headset supports voice recognition.\n\n@see #setVoiceRecognitionSupported(boolean)\n"
+    },
     "sendAudioStateChangedBroadcast(int,android.bluetooth.BluetoothDevice)": {
       "isImplementation": false,
       "modifiers": [
@@ -128,6 +142,19 @@
       "name": "setAllowsSendVendorSpecificResultCode(boolean)",
       "documentation": "Affects the behavior of {@link BluetoothHeadset#sendVendorSpecificResultCode}\n\n@param allowsSendVendorSpecificResultCode can be set to \u0027false\u0027 to simulate the situation where\n    the system is unable to send vendor-specific result codes to a device\n"
     },
+    "setVoiceRecognitionSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setVoiceRecognitionSupported(boolean)",
+      "documentation": "Sets whether the headset supports voice recognition.\n\n\u003cp\u003eBy default voice recognition is supported.\n\n@see #isVoiceRecognitionSupported(BluetoothDevice)\n"
+    },
     "startVoiceRecognition(android.bluetooth.BluetoothDevice)": {
       "isImplementation": true,
       "modifiers": [
@@ -158,6 +185,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.S",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothHeadset",
     "android.bluetooth.BluetoothProfile",

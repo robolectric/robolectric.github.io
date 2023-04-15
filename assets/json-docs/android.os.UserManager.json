@@ -305,6 +305,19 @@
       "name": "getUserHandle(int)",
       "documentation": "@return user id for given user serial number. "
     },
+    "getUserHandles(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "excludeDying"
+      ],
+      "returnType": "java.util.List\u003candroid.os.UserHandle\u003e",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getUserHandles(boolean)"
+    },
     "getUserIcon()": {
       "isImplementation": true,
       "modifiers": [
@@ -527,6 +540,18 @@
       "name": "isDemoUser()",
       "documentation": "@return false by default, or the value specified via {@link #setIsDemoUser(boolean)} "
     },
+    "isHeadlessSystemUserMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isHeadlessSystemUserMode()"
+    },
     "isLinkedUser()": {
       "isImplementation": true,
       "modifiers": [
@@ -599,7 +624,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 26,
+      "minSdk": 24,
       "name": "isQuietModeEnabled(android.os.UserHandle)",
       "documentation": "Query whether the quiet mode is enabled for a managed profile.\n\n\u003cp\u003eThis method checks whether the user handle corresponds to a managed profile, and then query\nits state. When quiet, the user is not running.\n"
     },
@@ -719,6 +744,20 @@
       "name": "isUserUnlockingOrUnlocked(android.os.UserHandle)",
       "documentation": "@see #setUserState(UserHandle, UserState) "
     },
+    "removeSomeUserHasAccount(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountName",
+        "accountType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeSomeUserHasAccount(java.lang.String,java.lang.String)",
+      "documentation": "Removes user account set via {@link #setSomeUserHasAccount(String, String)}. "
+    },
     "removeUser(android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -827,6 +866,20 @@
       "exceptions": [],
       "name": "setCanSwitchUser(boolean)",
       "documentation": "Sets whether switching users is allowed or not; controls the return value of {@link\nUserManager#canSwitchUser()}\n\n@deprecated use {@link #setUserSwitchability} instead\n"
+    },
+    "setHeadlessSystemUserMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "isEnabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHeadlessSystemUserMode(boolean)",
+      "documentation": "Updates headless system user mode. "
     },
     "setIsDemoUser(boolean)": {
       "isImplementation": false,
@@ -1010,6 +1063,20 @@
       "name": "setSerialNumberForUser(android.os.UserHandle,long)",
       "documentation": "{@link #addUser} uses UserHandle for serialNumber. setSerialNumberForUser() allows assigning an\narbitary serialNumber. Some test use serialNumber!\u003d0 as secondary user check, so it\u0027s necessary\nto \"fake\" the serialNumber to a non-zero value.\n"
     },
+    "setSomeUserHasAccount(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountName",
+        "accountType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSomeUserHasAccount(java.lang.String,java.lang.String)",
+      "documentation": "Setter for {@link UserManager#someUserHasAccount(String, String)}. "
+    },
     "setSupportsMultipleUsers(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -1063,6 +1130,20 @@
       "exceptions": [],
       "name": "setUserRestriction(android.os.UserHandle,java.lang.String,boolean)",
       "documentation": "@deprecated When possible, please use the real Android framework API {@link\n    UserManager#setUserRestriction()}.\n"
+    },
+    "setUserRestriction(java.lang.String,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "key",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 18,
+      "name": "setUserRestriction(java.lang.String,boolean)"
     },
     "setUserRestriction(java.lang.String,boolean,android.os.UserHandle)": {
       "isImplementation": true,
@@ -1132,6 +1213,20 @@
       "name": "setUserUnlocked(boolean)",
       "documentation": "Setter for {@link UserManager#isUserUnlocked()} "
     },
+    "someUserHasAccount(java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "accountName",
+        "accountType"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "someUserHasAccount(java.lang.String,java.lang.String)"
+    },
     "supportsMultipleUsers()": {
       "isImplementation": true,
       "modifiers": [
@@ -1165,10 +1260,10 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
-    "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "android.os.Build.VERSION_CODES.TIRAMISU",
     "android.os.UserManager.USER_TYPE_FULL_GUEST",
     "android.os.UserManager.USER_TYPE_FULL_RESTRICTED",
@@ -1177,6 +1272,7 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest.permission",
+    "android.accounts.Account",
     "android.annotation.UserIdInt",
     "android.app.Application",
     "android.content.Context",
@@ -1197,6 +1293,7 @@
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.List",
     "java.util.Map",
     "java.util.Set",

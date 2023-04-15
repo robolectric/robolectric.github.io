@@ -88,6 +88,7 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.Static",
     "org.robolectric.shadows.ShadowRenderNodeAnimator.RenderNodeAnimatorReflector"

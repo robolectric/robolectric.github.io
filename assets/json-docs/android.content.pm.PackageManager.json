@@ -961,6 +961,18 @@
       "exceptions": [],
       "name": "getShadowPackageArchiveInfo(java.lang.String,int)"
     },
+    "getVerificationCodeAtTimeoutExtension(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getVerificationCodeAtTimeoutExtension(int)"
+    },
     "getVerificationExtendedTimeout(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -1351,10 +1363,24 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setUpPackageStorage(android.content.pm.ApplicationInfo)"
+    },
+    "triggerInstallVerificationTimeout(android.app.Application,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "appContext",
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerInstallVerificationTimeout(android.app.Application,int)"
     }
   },
   "imports": [
     "android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED",
+    "android.content.pm.PackageManager.EXTRA_VERIFICATION_ID",
     "android.content.pm.PackageManager.GET_ACTIVITIES",
     "android.content.pm.PackageManager.GET_CONFIGURATIONS",
     "android.content.pm.PackageManager.GET_GIDS",
@@ -1379,6 +1405,7 @@
     "android.content.pm.PackageManager.SIGNATURE_NEITHER_SIGNED",
     "android.content.pm.PackageManager.SIGNATURE_NO_MATCH",
     "android.content.pm.PackageManager.SIGNATURE_SECOND_NOT_SIGNED",
+    "android.content.pm.PackageManager.VERIFICATION_ALLOW",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.N",
@@ -1387,6 +1414,8 @@
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest",
     "android.annotation.UserIdInt",
+    "android.app.Application",
+    "android.content.BroadcastReceiver",
     "android.content.ComponentName",
     "android.content.Context",
     "android.content.Intent",

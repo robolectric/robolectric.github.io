@@ -1,8 +1,0 @@
-{
-  "methods": {},
-  "imports": [
-    "android.widget.AbsSeekBar",
-    "org.robolectric.annotation.Implements"
-  ],
-  "name": "org.robolectric.shadows.ShadowAbsSeekBar"
-}

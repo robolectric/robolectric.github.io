@@ -282,6 +282,19 @@
       "name": "getApplicationRestrictions(java.lang.String)",
       "documentation": "Returns all application restrictions of the {@code packageName} in a {@link Bundle}. "
     },
+    "getAutoTimeEnabled(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getAutoTimeEnabled(android.content.ComponentName)"
+    },
     "getAutoTimeRequired()": {
       "isImplementation": true,
       "modifiers": [
@@ -342,7 +355,7 @@
       "exceptions": [],
       "minSdk": 18,
       "name": "getDeviceOwner()",
-      "documentation": "@see #setDeviceOwner(ComponentName) "
+      "documentation": "@see #setDeviceOwner(ComponentName)\n"
     },
     "getDevicePolicyManagementRoleHolderPackage()": {
       "isImplementation": true,
@@ -378,6 +391,19 @@
       "exceptions": [],
       "name": "getLastSetPassword()",
       "documentation": "Retrieves last password set through {@link DevicePolicyManager#resetPassword} or {@link\nDevicePolicyManager#resetPasswordWithToken}.\n"
+    },
+    "getLockTaskFeatures(android.content.ComponentName)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getLockTaskFeatures(android.content.ComponentName)"
     },
     "getLockTaskPackages(android.content.ComponentName)": {
       "isImplementation": true,
@@ -699,7 +725,7 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "getProfileOwner()",
-      "documentation": "@see #setProfileOwner(ComponentName) "
+      "documentation": "@see #setProfileOwner(ComponentName)\n"
     },
     "getProfileOwnerNameAsUser(int)": {
       "isImplementation": true,
@@ -782,6 +808,17 @@
       "exceptions": [],
       "name": "getTimeZone()",
       "documentation": "Returns the time zone set by setTimeZone. "
+    },
+    "getTransferOwnershipBundle()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.PersistableBundle",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "getTransferOwnershipBundle()"
     },
     "getUserProvisioningState()": {
       "isImplementation": true,
@@ -903,7 +940,7 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "isDeviceManaged()",
-      "documentation": "@see #setDeviceOwner(ComponentName) "
+      "documentation": "@see #setDeviceOwner(ComponentName)\n"
     },
     "isDeviceOwnerApp(java.lang.String)": {
       "isImplementation": true,
@@ -1232,6 +1269,20 @@
       "name": "setApplicationRestrictions(java.lang.String,android.os.Bundle)",
       "documentation": "Sets the application restrictions of the {@code packageName}.\n\n\u003cp\u003eThe new {@code applicationRestrictions} always completely overwrites any existing ones.\n"
     },
+    "setAutoTimeEnabled(android.content.ComponentName,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "setAutoTimeEnabled(android.content.ComponentName,boolean)"
+    },
     "setAutoTimeRequired(android.content.ComponentName,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -1376,6 +1427,20 @@
       "exceptions": [],
       "minSdk": 17,
       "name": "setKeyguardDisabledFeatures(android.content.ComponentName,int)"
+    },
+    "setLockTaskFeatures(android.content.ComponentName,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 28,
+      "name": "setLockTaskFeatures(android.content.ComponentName,int)"
     },
     "setLockTaskPackages(android.content.ComponentName,java.lang.String[])": {
       "isImplementation": true,
@@ -1962,6 +2027,9 @@
     }
   },
   "imports": [
+    "android.app.admin.DevicePolicyManager.LOCK_TASK_FEATURE_HOME",
+    "android.app.admin.DevicePolicyManager.LOCK_TASK_FEATURE_NOTIFICATIONS",
+    "android.app.admin.DevicePolicyManager.LOCK_TASK_FEATURE_OVERVIEW",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",

@@ -12,6 +12,20 @@
       "exceptions": [],
       "name": "addNetwork(android.net.wifi.WifiConfiguration)"
     },
+    "addNetworkPrivileged(android.net.wifi.WifiConfiguration)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "config"
+      ],
+      "returnType": "android.net.wifi.WifiManager.AddNetworkResult",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "addNetworkPrivileged(android.net.wifi.WifiConfiguration)",
+      "documentation": "The new version of {@link #addNetwork(WifiConfiguration)} which returns a more detailed failure\ncodes. The original implementation of this API is limited to Device Owner (DO), Profile Owner\n(PO), system app, and privileged apps but this shadow can be called by all apps.\n"
+    },
     "addOnWifiUsabilityStatsListener(java.lang.Object,java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
@@ -50,6 +64,26 @@
       "exceptions": [],
       "name": "checkAccessWifiStatePermission()"
     },
+    "checkChangeWifiStatePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkChangeWifiStatePermission()"
+    },
+    "checkDeviceOwner()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkDeviceOwner()"
+    },
     "clearUsabilityScores()": {
       "isImplementation": false,
       "modifiers": [
@@ -60,6 +94,17 @@
       "exceptions": [],
       "name": "clearUsabilityScores()",
       "documentation": "Clears wifi usability scores previous passed to {@link WifiManager#updateWifiUsabilityScore}\n"
+    },
+    "clearWifiConnectedNetworkScorer()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "clearWifiConnectedNetworkScorer()"
     },
     "connect(android.net.wifi.WifiConfiguration,android.net.wifi.WifiManager.ActionListener)": {
       "isImplementation": true,
@@ -162,6 +207,18 @@
       "name": "getActiveLockCount()",
       "documentation": "Returns the number of WifiLocks and MulticastLocks that are currently acquired. "
     },
+    "getCallerConfiguredNetworks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.net.wifi.WifiConfiguration\u003e",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getCallerConfiguredNetworks()",
+      "documentation": "The original implementation allows this to be called by the Device Owner (DO), Profile Owner\n(PO), callers with carrier privilege and system apps, but this shadow can be called by all apps\ncarrying the ACCESS_WIFI_STATE permission.\n\n\u003cp\u003eThis shadow is a wrapper for getConfiguredNetworks() and does not actually check the caller.\n"
+    },
     "getConfiguredNetworks()": {
       "isImplementation": true,
       "modifiers": [
@@ -242,6 +299,17 @@
       "returnType": "java.util.List\u003candroid.net.wifi.ScanResult\u003e",
       "exceptions": [],
       "name": "getScanResults()"
+    },
+    "getSoftApConfiguration()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.net.wifi.SoftApConfiguration",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getSoftApConfiguration()"
     },
     "getUsabilityScores()": {
       "isImplementation": false,
@@ -346,6 +414,17 @@
       "name": "isStaApConcurrencySupported()",
       "documentation": "Returns last value provided to #setStaApConcurrencySupported. "
     },
+    "isWifiConnectedNetworkScorerEnabled()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isWifiConnectedNetworkScorerEnabled()",
+      "documentation": "Returns if wifi connected betwork scorer enabled "
+    },
     "isWifiEnabled()": {
       "isImplementation": true,
       "modifiers": [
@@ -406,6 +485,18 @@
       "exceptions": [],
       "name": "removeNetwork(int)"
     },
+    "removeNonCallerConfiguredNetworks()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "removeNonCallerConfiguredNetworks()",
+      "documentation": "Removes all configured networks regardless of the app that created the network. Can only be\ncalled by a Device Owner (DO) app.\n\n@return {@code true} if at least one network is removed, {@code false} otherwise\n"
+    },
     "removeOnWifiUsabilityStatsListener(java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
@@ -441,6 +532,18 @@
       "exceptions": [],
       "name": "setAccessWifiStatePermission(boolean)"
     },
+    "setChangeWifiStatePermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "changeWifiStatePermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setChangeWifiStatePermission(boolean)"
+    },
     "setConnectionInfo(android.net.wifi.WifiInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -452,7 +555,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setConnectionInfo(android.net.wifi.WifiInfo)",
-      "documentation": "Sets the connection info as the provided {@link WifiInfo}.\n"
+      "documentation": "Sets the connection info as the provided {@link WifiInfo}. "
     },
     "setDhcpInfo(android.net.DhcpInfo)": {
       "isImplementation": false,
@@ -516,6 +619,19 @@
       "exceptions": [],
       "name": "setSignalLevelInPercent(float)"
     },
+    "setSoftApConfiguration(android.net.wifi.SoftApConfiguration)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "softApConfig"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "setSoftApConfiguration(android.net.wifi.SoftApConfiguration)"
+    },
     "setStaApConcurrencySupported(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -567,6 +683,21 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "setWifiApConfiguration(android.net.wifi.WifiConfiguration)"
+    },
+    "setWifiConnectedNetworkScorer(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "executorObject",
+        "scorerObject"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "setWifiConnectedNetworkScorer(java.lang.Object,java.lang.Object)",
+      "documentation": "Implements setWifiConnectedNetworkScorer() with the generic Object input as\nWifiConnectedNetworkScorer is a hidden/System API.\n"
     },
     "setWifiEnabled(boolean)": {
       "isImplementation": true,
@@ -700,15 +831,19 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
+    "android.app.admin.DevicePolicyManager",
     "android.content.Context",
     "android.content.Intent",
     "android.net.ConnectivityManager",
     "android.net.DhcpInfo",
     "android.net.NetworkInfo",
     "android.net.wifi.ScanResult",
+    "android.net.wifi.SoftApConfiguration",
     "android.net.wifi.WifiConfiguration",
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiManager",
+    "android.net.wifi.WifiManager.AddNetworkResult",
     "android.net.wifi.WifiManager.MulticastLock",
     "android.net.wifi.WifiUsabilityStatsEntry",
     "android.os.Handler",

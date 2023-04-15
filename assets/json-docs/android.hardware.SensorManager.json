@@ -79,6 +79,19 @@
       "name": "createSensorEvent(int,int)",
       "documentation": "Creates a {@link SensorEvent} for the given {@link Sensor} type with the given value array\nsize, which the caller should set based on the type of sensor which is being emulated.\n\n\u003cp\u003eCallers can then specify individual values for the event. For example, for a proximity event\na caller may wish to specify the distance value:\n\n\u003cpre\u003e{@code\nevent.values[0] \u003d distance;\n}\u003c/pre\u003e\n\n\u003cp\u003eSee {@link SensorEvent#values} for more information about values.\n"
     },
+    "flush(android.hardware.SensorEventListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "flush(android.hardware.SensorEventListener)"
+    },
     "getDefaultSensor(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -266,8 +279,10 @@
     "android.hardware.SensorDirectChannel",
     "android.hardware.SensorEvent",
     "android.hardware.SensorEventListener",
+    "android.hardware.SensorEventListener2",
     "android.hardware.SensorManager",
     "android.os.Handler",
+    "android.os.Looper",
     "android.os.MemoryFile",
     "com.google.common.collect.HashMultimap",
     "com.google.common.collect.ImmutableList",

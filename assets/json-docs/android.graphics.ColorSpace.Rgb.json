@@ -14,9 +14,11 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.Q",
     "android.graphics.ColorSpace",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements"
   ],
-  "name": "org.robolectric.shadows.ShadowColorSpace.ShadowRgb"
+  "name": "org.robolectric.shadows.ShadowColorSpaceRgb",
+  "documentation": "Shadow for {@link ColorSpace.Rgb}. "
 }

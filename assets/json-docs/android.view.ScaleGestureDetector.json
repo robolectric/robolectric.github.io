@@ -116,7 +116,11 @@
     "android.view.MotionEvent",
     "android.view.ScaleGestureDetector",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.ReflectorObject",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowScaleGestureDetector.ScaleGestureDetectorReflector"
   ],
   "name": "org.robolectric.shadows.ShadowScaleGestureDetector"
 }

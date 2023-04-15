@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "native_CreateLightingFilter(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "mul",
+        "add"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "native_CreateLightingFilter(int,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.graphics.LightingColorFilter",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.LightingColorFilterNatives",
+    "org.robolectric.shadows.ShadowNativeLightingColorFilter.Picker",
+    "org.robolectric.shadows.ShadowNativeLightingColorFilter.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeLightingColorFilter",
+  "documentation": "Shadow for {@link LightingColorFilter} that is backed by native code "
+}

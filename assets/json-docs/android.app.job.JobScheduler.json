@@ -39,6 +39,20 @@
       "minSdk": 26,
       "name": "enqueue(android.app.job.JobInfo,android.app.job.JobWorkItem)"
     },
+    "failExpeditedJob(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "abstract"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "failExpeditedJob(boolean)",
+      "documentation": "Whether to fail a job if it is set as expedited. "
+    },
     "failOnJob(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -112,12 +126,16 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.S",
     "android.annotation.SystemApi",
+    "android.annotation.TargetApi",
     "android.app.JobSchedulerImpl",
     "android.app.job.JobInfo",
     "android.app.job.JobScheduler",
     "android.app.job.JobWorkItem",
+    "android.os.Build",
     "java.util.ArrayList",
+    "java.util.Collections",
     "java.util.HashSet",
     "java.util.LinkedHashMap",
     "java.util.List",

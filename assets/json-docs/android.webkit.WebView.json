@@ -689,7 +689,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCanGoBack(boolean)",
-      "documentation": "Sets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}\n@deprecated Do not depend on this method as it will be removed in a future update. The\n    preferered method is to populate a fake web history to use for going back.\n"
+      "documentation": "Sets the value to return from {@code android.webkit.WebView#canGoBack()}\n\n@param canGoBack Value to return from {@code android.webkit.WebView#canGoBack()}\n@deprecated Do not depend on this method as it will be removed in a future update. The\n    preferred method is to populate a fake web history to use for going back.\n"
     },
     "setCurrentWebViewPackage(android.content.pm.PackageInfo)": {
       "isImplementation": false,

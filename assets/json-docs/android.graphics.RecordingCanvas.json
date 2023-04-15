@@ -1,0 +1,201 @@
+{
+  "methods": {
+    "nCreateDisplayListCanvas(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "node",
+        "width",
+        "height"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nCreateDisplayListCanvas(long,int,int)"
+    },
+    "nDrawCircle(long,long,long,long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderer",
+        "propCx",
+        "propCy",
+        "propRadius",
+        "propPaint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nDrawCircle(long,long,long,long,long)"
+    },
+    "nDrawRenderNode(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderer",
+        "renderNode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nDrawRenderNode(long,long)"
+    },
+    "nDrawRipple(long,long,long,long,long,long,long,int,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderer",
+        "propCx",
+        "propCy",
+        "propRadius",
+        "propPaint",
+        "propProgress",
+        "turbulencePhase",
+        "color",
+        "runtimeEffect"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nDrawRipple(long,long,long,long,long,long,long,int,long)"
+    },
+    "nDrawRoundRect(long,long,long,long,long,long,long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderer",
+        "propLeft",
+        "propTop",
+        "propRight",
+        "propBottom",
+        "propRx",
+        "propRy",
+        "propPaint"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nDrawRoundRect(long,long,long,long,long,long,long,long)"
+    },
+    "nDrawTextureLayer(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderer",
+        "layer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nDrawTextureLayer(long,long)"
+    },
+    "nDrawWebViewFunctor(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "canvas",
+        "functor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nDrawWebViewFunctor(long,int)"
+    },
+    "nEnableZ(long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderer",
+        "enableZ"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nEnableZ(long,boolean)"
+    },
+    "nFinishRecording(long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderer",
+        "renderNode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "nFinishRecording(long,long)"
+    },
+    "nGetMaximumTextureHeight()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetMaximumTextureHeight()"
+    },
+    "nGetMaximumTextureWidth()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetMaximumTextureWidth()"
+    },
+    "nResetDisplayListCanvas(long,long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "canvas",
+        "node",
+        "width",
+        "height"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "nResetDisplayListCanvas(long,long,int,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.S",
+    "android.graphics.RecordingCanvas",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.RecordingCanvasNatives",
+    "org.robolectric.shadows.ShadowNativeRecordingCanvas.Picker",
+    "org.robolectric.shadows.ShadowNativeRecordingCanvas.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeRecordingCanvas",
+  "documentation": "Shadow for {@link RecordingCanvas} that is backed by native code "
+}

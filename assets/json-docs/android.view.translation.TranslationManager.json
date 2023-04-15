@@ -1,0 +1,44 @@
+{
+  "methods": {
+    "getOnDeviceTranslationCapabilities(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "sourceFormat",
+        "targetFormat"
+      ],
+      "returnType": "java.util.Set\u003candroid.view.translation.TranslationCapability\u003e",
+      "exceptions": [],
+      "name": "getOnDeviceTranslationCapabilities(int,int)"
+    },
+    "setOnDeviceTranslationCapabilities(int,int,java.util.Set\u003candroid.view.translation.TranslationCapability\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sourceFormat",
+        "targetFormat",
+        "capabilities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setOnDeviceTranslationCapabilities(int,int,java.util.Set\u003candroid.view.translation.TranslationCapability\u003e)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES",
+    "android.view.translation.TranslationCapability",
+    "android.view.translation.TranslationManager",
+    "com.google.common.collect.HashBasedTable",
+    "com.google.common.collect.ImmutableSet",
+    "com.google.common.collect.Table",
+    "java.util.Set",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowTranslationManager",
+  "documentation": "Shadow for {@link TranslationManager}. "
+}

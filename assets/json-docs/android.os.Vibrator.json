@@ -68,6 +68,17 @@
       "name": "getPrimitiveEffects()",
       "documentation": "Returns the last list of {@link PrimitiveEffect}. "
     },
+    "getPrimitiveSegmentsInPrimitiveEffects()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003corg.robolectric.shadows.ShadowVibrator.PrimitiveEffect\u003e",
+      "exceptions": [],
+      "name": "getPrimitiveSegmentsInPrimitiveEffects()",
+      "documentation": "Returns the last list of {@link PrimitiveSegment} vibrations in {@link PrimitiveEffect}. "
+    },
     "getRepeat()": {
       "isImplementation": false,
       "modifiers": [
@@ -124,6 +135,17 @@
       "name": "isVibrating()",
       "documentation": "Returns true if the Vibrator is currently vibrating as controlled by {@link\nVibrator#vibrate(long)}\n"
     },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
     "setHasAmplitudeControl(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -170,14 +192,18 @@
     "android.os.VibrationAttributes",
     "android.os.VibrationEffect",
     "android.os.Vibrator",
+    "android.os.vibrator.PrimitiveSegment",
     "android.os.vibrator.VibrationEffectSegment",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.List",
     "java.util.Objects",
+    "java.util.stream.Collectors",
     "javax.annotation.Nullable",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowVibrator.PrimitiveEffect"
   ],
   "name": "org.robolectric.shadows.ShadowVibrator"

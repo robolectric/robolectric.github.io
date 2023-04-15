@@ -15,6 +15,20 @@
       "name": "addDevice(int,int,android.bluetooth.BluetoothDevice)",
       "documentation": "Add a remote bluetooth device that will be served by {@link\nBluetoothManager#getDevicesMatchingConnectionStates} for the specified profile and states of\nthe profile connection.\n\n@param profile {@link BluetoothProfile#GATT} or {@link BluetoothProfile#GATT_SERVER}.\n@param state State of the profile connection. One of {@link BluetoothProfile#STATE_CONNECTED},\n    {@link BluetoothProfile#STATE_CONNECTING}, {@link BluetoothProfile#STATE_DISCONNECTED} and\n    {@link BluetoothProfile#STATE_DISCONNECTING}.\n@param device The remote bluetooth device.\n"
     },
+    "createGattServer(android.content.Context,android.bluetooth.BluetoothGattServerCallback,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "unusedContext",
+        "callback",
+        "transport"
+      ],
+      "returnType": "android.bluetooth.BluetoothGattServer",
+      "exceptions": [],
+      "name": "createGattServer(android.content.Context,android.bluetooth.BluetoothGattServerCallback,int)"
+    },
     "getAdapter()": {
       "isImplementation": true,
       "modifiers": [
@@ -23,7 +37,8 @@
       "params": [],
       "returnType": "android.bluetooth.BluetoothAdapter",
       "exceptions": [],
-      "name": "getAdapter()"
+      "name": "getAdapter()",
+      "documentation": "Get the {@link BluetoothAdapter} for this device.\n\n@return BluetoothAdapter instance\n"
     },
     "getDevicesMatchingConnectionStates(int,int[])": {
       "isImplementation": true,
@@ -49,22 +64,67 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isProfileValid(int)"
+    },
+    "openGattServer(android.content.Context,android.bluetooth.BluetoothGattServerCallback,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "callback",
+        "transport"
+      ],
+      "returnType": "android.bluetooth.BluetoothGattServer",
+      "exceptions": [],
+      "minSdk": 26,
+      "maxSdk": 30,
+      "name": "openGattServer(android.content.Context,android.bluetooth.BluetoothGattServerCallback,int)"
+    },
+    "openGattServer(android.content.Context,android.bluetooth.BluetoothGattServerCallback,int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "context",
+        "callback",
+        "transport",
+        "eattSupport"
+      ],
+      "returnType": "android.bluetooth.BluetoothGattServer",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "openGattServer(android.content.Context,android.bluetooth.BluetoothGattServerCallback,int,boolean)",
+      "documentation": "Overrides behavior of {@link openGattServer} and returns {@link ShadowBluetoothGattServer}\nafter creating and using a nullProxy for {@link IBluetoothGatt}.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "com.google.common.base.Preconditions.checkArgument",
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothDevice",
+    "android.bluetooth.BluetoothGattServer",
+    "android.bluetooth.BluetoothGattServerCallback",
     "android.bluetooth.BluetoothManager",
     "android.bluetooth.BluetoothProfile",
+    "android.bluetooth.IBluetoothGatt",
+    "android.content.Context",
     "com.google.auto.value.AutoValue",
     "com.google.common.collect.ImmutableList",
     "com.google.common.primitives.ImmutableIntArray",
     "java.util.ArrayList",
     "java.util.List",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.PerfStatsCollector",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowBluetoothManager.BleDevice"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothManager",

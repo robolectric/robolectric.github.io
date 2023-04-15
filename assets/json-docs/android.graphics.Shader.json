@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "nativeGetFinalizer()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "nativeGetFinalizer()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.O",
+    "android.graphics.Shader",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.ShaderNatives",
+    "org.robolectric.shadows.ShadowNativeShader.Picker",
+    "org.robolectric.shadows.ShadowNativeShader.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeShader",
+  "documentation": "Shadow for {@link Shader} that is backed by native code "
+}

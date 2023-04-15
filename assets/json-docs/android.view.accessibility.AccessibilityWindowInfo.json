@@ -205,6 +205,17 @@
       "exceptions": [],
       "name": "isFocused()"
     },
+    "isInPictureInPictureMode()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "isInPictureInPictureMode()"
+    },
     "obtain()": {
       "isImplementation": true,
       "modifiers": [
@@ -336,6 +347,19 @@
       "exceptions": [],
       "name": "setLayer(int)"
     },
+    "setPictureInPicture(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "pictureInPicture"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setPictureInPicture(boolean)"
+    },
     "setRoot(android.view.accessibility.AccessibilityNodeInfo)": {
       "isImplementation": false,
       "modifiers": [
@@ -388,6 +412,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Rect",

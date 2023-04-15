@@ -48,6 +48,17 @@
       "name": "getCallbacks()",
       "documentation": "Gets the callbacks registered to MediaController. "
     },
+    "getExtras()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getExtras()",
+      "documentation": "Gets the extras set via {@link #extras}. "
+    },
     "getMetadata()": {
       "isImplementation": true,
       "modifiers": [
@@ -103,18 +114,32 @@
       "name": "getSessionActivity()",
       "documentation": "Gets the playbackState set via {@link #setSessionActivity}. "
     },
-    "registerCallback(android.media.session.MediaController.Callback)": {
+    "registerCallback(android.media.session.MediaController.Callback,android.os.Handler)": {
       "isImplementation": true,
       "modifiers": [
         "protected"
       ],
       "params": [
-        "callback"
+        "callback",
+        "handler"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "registerCallback(android.media.session.MediaController.Callback)",
-      "documentation": "Register callback and store it in the shadow to make it easier to check the state of the\nregistered callbacks.\n"
+      "name": "registerCallback(android.media.session.MediaController.Callback,android.os.Handler)",
+      "documentation": "Register callback and store it in the shadow to make it easier to check the state of the\nregistered callbacks. Handler is just passed on to the real class.\n"
+    },
+    "setExtras(android.os.Bundle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setExtras(android.os.Bundle)",
+      "documentation": "Saves the extras to control the return value of {@link MediaController#getExtras()}. "
     },
     "setMetadata(android.media.MediaMetadata)": {
       "isImplementation": false,
@@ -212,6 +237,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.NonNull",
+    "android.annotation.Nullable",
     "android.app.PendingIntent",
     "android.media.MediaMetadata",
     "android.media.Rating",
@@ -220,6 +246,7 @@
     "android.media.session.MediaController.PlaybackInfo",
     "android.media.session.PlaybackState",
     "android.os.Bundle",
+    "android.os.Handler",
     "java.util.ArrayList",
     "java.util.List",
     "org.robolectric.annotation.Implementation",

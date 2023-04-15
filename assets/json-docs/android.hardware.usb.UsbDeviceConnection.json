@@ -84,6 +84,17 @@
       "minSdk": 19,
       "name": "controlTransfer(int,int,int,int,byte[],int,int,int)"
     },
+    "getOutgoingDataStream()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.io.InputStream",
+      "exceptions": [],
+      "name": "getOutgoingDataStream()",
+      "documentation": "Provides an {@link InputStream} that allows reading data written by\nUsbDeviceConnection#bulkTransfer. Closing this stream has no effect. It is effectively closed\nduring {@link UsbDeviceConnection#releaseInterface(UsbInterface)}.\n"
+    },
     "readOutgoingData(byte[])": {
       "isImplementation": false,
       "modifiers": [
@@ -97,7 +108,7 @@
         "java.io.IOException"
       ],
       "name": "readOutgoingData(byte[])",
-      "documentation": "Fills the buffer with data that was written by UsbDeviceConnection#bulkTransfer. "
+      "documentation": "Fills the buffer with data that was written by UsbDeviceConnection#bulkTransfer.\n\n@deprecated prefer {@link #getOutgoingDataStream()}, which allows callers to know how much data\n    has been read and when the {@link UsbDeviceConnection} closes.\n"
     },
     "registerDataListener(org.robolectric.shadows.ShadowUsbDeviceConnection.DataListener)": {
       "isImplementation": false,
@@ -146,6 +157,20 @@
       "minSdk": 26,
       "name": "requestWait(long)"
     },
+    "setInterface(android.hardware.usb.UsbInterface)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intf"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "setInterface(android.hardware.usb.UsbInterface)",
+      "documentation": "No-op on Robolectrict. The real implementation would return false on Robolectric and make it\nimpossible to test callers that expect a successful result. Always returns {@code true}.\n"
+    },
     "unregisterDataListener()": {
       "isImplementation": false,
       "modifiers": [],
@@ -171,12 +196,15 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
     "android.hardware.usb.UsbDeviceConnection",
     "android.hardware.usb.UsbEndpoint",
     "android.hardware.usb.UsbInterface",
     "android.hardware.usb.UsbRequest",
+    "java.io.FilterInputStream",
     "java.io.IOException",
+    "java.io.InputStream",
     "java.io.PipedInputStream",
     "java.io.PipedOutputStream",
     "java.util.concurrent.TimeoutException",

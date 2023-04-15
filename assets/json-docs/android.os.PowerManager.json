@@ -560,6 +560,8 @@
     "android.os.Build.VERSION_CODES.S",
     "android.os.Build.VERSION_CODES.TIRAMISU",
     "com.google.common.base.Preconditions.checkState",
+    "java.util.Comparator.comparing",
+    "java.util.stream.Collectors.toCollection",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.Manifest.permission",
     "android.annotation.NonNull",

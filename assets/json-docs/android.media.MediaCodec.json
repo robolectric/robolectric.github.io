@@ -105,8 +105,22 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 33,
       "name": "freeByteBuffer(java.nio.ByteBuffer)",
       "documentation": "Prevents attempting to free non-direct ByteBuffer objects. "
+    },
+    "freeByteBufferLocked(java.nio.ByteBuffer)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffer"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "freeByteBufferLocked(java.nio.ByteBuffer)"
     },
     "getBuffer(boolean,int)": {
       "isImplementation": true,
@@ -175,8 +189,24 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 33,
       "name": "invalidateByteBuffer(java.nio.ByteBuffer[],int)",
       "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. "
+    },
+    "invalidateByteBufferLocked(java.nio.ByteBuffer[],int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers",
+        "index",
+        "input"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "invalidateByteBufferLocked(java.nio.ByteBuffer[],int,boolean)"
     },
     "invalidateByteBuffers(java.nio.ByteBuffer[])": {
       "isImplementation": true,
@@ -189,8 +219,22 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 33,
       "name": "invalidateByteBuffers(java.nio.ByteBuffer[])",
       "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. "
+    },
+    "invalidateByteBuffersLocked(java.nio.ByteBuffer[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "invalidateByteBuffersLocked(java.nio.ByteBuffer[])"
     },
     "makeInputBufferAvailable(int)": {
       "isImplementation": false,
@@ -416,8 +460,24 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 33,
       "name": "revalidateByteBuffer(java.nio.ByteBuffer[],int)",
       "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. "
+    },
+    "revalidateByteBuffer(java.nio.ByteBuffer[],int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers",
+        "index",
+        "input"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "revalidateByteBuffer(java.nio.ByteBuffer[],int,boolean)"
     },
     "throwCodecException(int,int,java.lang.String)": {
       "isImplementation": false,
@@ -447,8 +507,23 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 33,
       "name": "validateInputByteBuffer(java.nio.ByteBuffer[],int)",
       "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. "
+    },
+    "validateInputByteBufferLocked(java.nio.ByteBuffer[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers",
+        "index"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "validateInputByteBufferLocked(java.nio.ByteBuffer[],int)"
     },
     "validateOutputByteBuffer(java.nio.ByteBuffer[],int,android.media.MediaCodec.BufferInfo)": {
       "isImplementation": true,
@@ -463,15 +538,33 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 21,
+      "maxSdk": 33,
       "name": "validateOutputByteBuffer(java.nio.ByteBuffer[],int,android.media.MediaCodec.BufferInfo)",
       "documentation": "Prevents calling Android-only methods on basic ByteBuffer objects. Replicates existing behavior\nadjusting buffer positions and limits.\n"
+    },
+    "validateOutputByteBufferLocked(java.nio.ByteBuffer[],int,android.media.MediaCodec.BufferInfo)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "buffers",
+        "index",
+        "info"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 10000,
+      "name": "validateOutputByteBufferLocked(java.nio.ByteBuffer[],int,android.media.MediaCodec.BufferInfo)"
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.CUR_DEVELOPMENT",
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "com.google.common.base.Preconditions.checkState",
     "java.util.concurrent.TimeUnit.MICROSECONDS",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",

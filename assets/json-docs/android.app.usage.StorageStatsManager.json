@@ -14,7 +14,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addStorageStats(java.util.UUID,java.lang.String,android.os.UserHandle,android.app.usage.StorageStats)",
-      "documentation": "Sets the {@link StorageStats} to return when queried with matching {@code storageUuid}, {@code\npackageName} and {@code userHandle}.\n"
+      "documentation": "Sets the {@link StorageStats} for given {@code storageUuid}, {@code packageName} and {@code\nuserHandle}. If {@code queryStatsForPackage} is called with matching {@code storageUuid},\n{@code packageName} and {@code userHandle}, the {@code storageStatsToReturn} will be returned\ndirectly. If {@code queryStatsForUser} is called with matching {@code storageUuid} and {@code\nuserHandle}, then an accumulated {@link StorageStats} will be returned.\n"
     },
     "clearStorageStats()": {
       "isImplementation": false,
@@ -90,6 +90,23 @@
       "name": "queryStatsForPackage(java.util.UUID,java.lang.String,android.os.UserHandle)",
       "documentation": "Fake implementation of {@link StorageStatsManager#queryStatsForPackage} that returns test setup\nvalues. This fake implementation does not check for access permission. It only checks for\narguments matching those set in {@link ShadowStorageStatsManager#addStorageStats}.\n"
     },
+    "queryStatsForUser(java.util.UUID,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "storageUuid",
+        "user"
+      ],
+      "returnType": "android.app.usage.StorageStats",
+      "exceptions": [
+        "android.content.pm.PackageManager.NameNotFoundException",
+        "java.io.IOException"
+      ],
+      "name": "queryStatsForUser(java.util.UUID,android.os.UserHandle)",
+      "documentation": "Fake implementation of {@link StorageStatsManager#queryStatsForUser} that returns an\naccumulated {@link StorageStats} based on the setup values for the user. This fake\nimplementation does not check for access permission. It only checks for arguments matching\nthose set in {@link ShadowStorageStatsManager#addStorageStats}.\n"
+    },
     "removeStorageDevice(java.util.UUID)": {
       "isImplementation": false,
       "modifiers": [
@@ -125,6 +142,7 @@
     "android.app.usage.StorageStatsManager",
     "android.content.pm.PackageManager",
     "android.os.Build",
+    "android.os.Parcel",
     "android.os.UserHandle",
     "android.os.storage.StorageManager",
     "com.google.auto.value.AutoValue",

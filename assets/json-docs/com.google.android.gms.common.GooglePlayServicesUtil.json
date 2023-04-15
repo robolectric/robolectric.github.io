@@ -143,7 +143,7 @@
       "exceptions": [],
       "name": "reset()"
     },
-    "showErrorDialogFragment(int,android.app.Activity,android.support.v4.app.Fragment,int,android.content.DialogInterface.OnCancelListener)": {
+    "showErrorDialogFragment(int,android.app.Activity,androidx.fragment.app.Fragment,int,android.content.DialogInterface.OnCancelListener)": {
       "isImplementation": true,
       "modifiers": [
         "public",
@@ -159,7 +159,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "showErrorDialogFragment(int,android.app.Activity,android.support.v4.app.Fragment,int,android.content.DialogInterface.OnCancelListener)"
+      "name": "showErrorDialogFragment(int,android.app.Activity,androidx.fragment.app.Fragment,int,android.content.DialogInterface.OnCancelListener)"
     },
     "showErrorDialogFragment(int,android.app.Activity,int)": {
       "isImplementation": true,
@@ -218,7 +218,7 @@
     "android.content.DialogInterface.OnCancelListener",
     "android.content.Intent",
     "android.content.res.Resources",
-    "android.support.v4.app.Fragment",
+    "androidx.fragment.app.Fragment",
     "com.google.android.gms.common.ConnectionResult",
     "com.google.android.gms.common.GooglePlayServicesUtil",
     "com.google.common.base.Preconditions",
