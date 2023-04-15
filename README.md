@@ -6,7 +6,7 @@ This repository is the source for the docs that live at [robolectric.org](http:/
 
 Make sure you are in the `master` branch before making changes. This is the default branch so git should put you there automatically.
 
-Before submitting a pull request, view the docs locally to check that the content and layout are correct. The docs are built using [jekyll](https://jekyllrb.com/).
+Before submitting a pull request, view the docs locally to check that the content and layout are correct. The docs are built using [Jekyll](https://jekyllrb.com/).
 
 Assuming you don't already have [Bundler](http://bundler.io/) installed, you will first need to do:
 
@@ -22,10 +22,10 @@ Then run:
 This will build the docs and make them available at [localhost:4000](http://localhost:4000). Once
 your pull request is accepted, the docs will be automatically built and pushed to the web by GitHub.
 
-If you want to update jekyll's dependencies, you can run:
+If you want to update Jekyll's dependencies, you can run:
 
     bundle update
 
 ## Javadocs
 
-When Robolectric is released, the `source/javadocs` directory needs to be updated. We can get latest steps to generate javadocs at [Robolectric Wiki's release part](https://github.com/robolectric/robolectric/wiki/Performing-a-Release#release).
+When Robolectric is released, the `source/javadocs` directory needs to be updated. We can get latest steps to generate Javadocs at [Robolectric Wiki's release part](https://github.com/robolectric/robolectric/wiki/Performing-a-Release#release).
