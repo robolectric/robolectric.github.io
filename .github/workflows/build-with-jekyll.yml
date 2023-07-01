@@ -15,7 +15,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
-          languages: ruby, javascript
+          languages: ruby
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
