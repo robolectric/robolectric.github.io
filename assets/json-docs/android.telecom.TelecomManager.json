@@ -98,6 +98,26 @@
       "exceptions": [],
       "name": "cancelMissedCallsNotification()"
     },
+    "checkCallPhonePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkCallPhonePermission()"
+    },
+    "checkReadPhoneStatePermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkReadPhoneStatePermission()"
+    },
     "clearAccounts()": {
       "isImplementation": true,
       "modifiers": [
@@ -323,6 +343,18 @@
       "returnType": "android.telecom.PhoneAccountHandle",
       "exceptions": [],
       "name": "getConnectionManager()"
+    },
+    "getConnectionService(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "phoneAccount"
+      ],
+      "returnType": "android.telecom.ConnectionService",
+      "exceptions": [],
+      "name": "getConnectionService(android.telecom.PhoneAccountHandle)"
     },
     "getCurrentTtyMode()": {
       "isImplementation": true,
@@ -671,6 +703,19 @@
       "name": "removeDefaultOutgoingPhoneAccount(java.lang.String)",
       "documentation": "Remove default outgoing phone account for corresponding {@code uriScheme}. "
     },
+    "setCallPhonePermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "callPhonePermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCallPhonePermission(boolean)",
+      "documentation": "When set to false methods requiring {@link android.Manifest.permission.CALL_PHONE} permission\nwill throw a {@link SecurityException}. By default it\u0027s set to true for backwards\ncompatibility.\n"
+    },
     "setCallRequestMode(org.robolectric.shadows.ShadowTelecomManager.CallRequestMode)": {
       "isImplementation": false,
       "modifiers": [
@@ -682,6 +727,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setCallRequestMode(org.robolectric.shadows.ShadowTelecomManager.CallRequestMode)"
+    },
+    "setConnectionService(android.telecom.ConnectionService)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "service"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConnectionService(android.telecom.ConnectionService)",
+      "documentation": "Set connection service.\n\u003cp\u003e\nThis method can be used in case, when you already created connection service\nand would like to use it in telecom manager instead of creating new one.\n\n@param service existing connection service\n"
     },
     "setDefaultDialer(java.lang.String)": {
       "isImplementation": true,
@@ -724,6 +782,18 @@
       "name": "setDefaultOutgoingPhoneAccount(java.lang.String,android.telecom.PhoneAccountHandle)",
       "documentation": "Set default outgoing phone account to be returned from {@link\n#getDefaultOutgoingPhoneAccount(String)} for corresponding {@code uriScheme}.\n"
     },
+    "setHandleMmiValue(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "handleMmiValue"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHandleMmiValue(boolean)"
+    },
     "setIsInCall(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -737,6 +807,19 @@
       "name": "setIsInCall(boolean)",
       "documentation": "Sets the return value for {@link TelecomManager#isInCall}. "
     },
+    "setLine1Number(android.telecom.PhoneAccountHandle,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "accountHandle",
+        "number"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLine1Number(android.telecom.PhoneAccountHandle,java.lang.String)"
+    },
     "setManageBlockNumbersIntent(android.content.Intent)": {
       "isImplementation": false,
       "modifiers": [
@@ -749,6 +832,19 @@
       "exceptions": [],
       "name": "setManageBlockNumbersIntent(android.content.Intent)",
       "documentation": "Sets the BlockNumbersIntent to be returned by {@link\nShadowTelecomManager#createManageBlockedNumbersIntent()}\n"
+    },
+    "setReadPhoneStatePermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "readPhoneStatePermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setReadPhoneStatePermission(boolean)",
+      "documentation": "When set to false methods requiring {@link android.Manifest.permission.READ_PHONE_STATE}\npermission will throw a {@link SecurityException}. By default it\u0027s set to true for backwards\ncompatibility.\n"
     },
     "setSimCallManager(android.telecom.PhoneAccountHandle)": {
       "isImplementation": true,
@@ -869,6 +965,7 @@
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.R",
+    "com.google.common.base.Preconditions.checkNotNull",
     "com.google.common.base.Verify.verifyNotNull",
     "android.annotation.SystemApi",
     "android.annotation.TargetApi",

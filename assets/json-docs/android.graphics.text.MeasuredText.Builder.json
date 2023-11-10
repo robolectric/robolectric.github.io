@@ -35,6 +35,27 @@
       "maxSdk": 32,
       "name": "nAddStyleRun(long,long,int,int,boolean)"
     },
+    "nAddStyleRun(long,long,int,int,boolean,int,int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeBuilderPtr",
+        "paintPtr",
+        "lineBreakStyle",
+        "lineBreakWordStyle",
+        "hyphenation",
+        "start",
+        "end",
+        "isRtl"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "nAddStyleRun(long,long,int,int,boolean,int,int,boolean)"
+    },
     "nAddStyleRun(long,long,int,int,int,int,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -53,6 +74,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 33,
+      "maxSdk": 34,
       "name": "nAddStyleRun(long,long,int,int,int,int,boolean)"
     },
     "nBuildMeasuredText(long,long,char[],boolean,boolean)": {
@@ -90,7 +112,28 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 33,
+      "maxSdk": 34,
       "name": "nBuildMeasuredText(long,long,char[],boolean,boolean,boolean)"
+    },
+    "nBuildMeasuredText(long,long,char[],boolean,boolean,boolean,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeBuilderPtr",
+        "hintMtPtr",
+        "text",
+        "computeHyphenation",
+        "computeLayout",
+        "computeBounds",
+        "fastHyphenationMode"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "nBuildMeasuredText(long,long,char[],boolean,boolean,boolean,boolean)"
     },
     "nFreeBuilder(long)": {
       "isImplementation": true,
@@ -131,6 +174,8 @@
     "org.robolectric.nativeruntime.MeasuredTextBuilderNatives",
     "org.robolectric.nativeruntime.MeasuredTextNatives",
     "org.robolectric.shadows.ShadowNativeMeasuredText.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
+    "org.robolectric.versioning.AndroidVersions.V",
     "org.robolectric.shadows.ShadowNativeMeasuredText.ShadowNativeMeasuredTextBuilder.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeMeasuredText.ShadowNativeMeasuredTextBuilder",

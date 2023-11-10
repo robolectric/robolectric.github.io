@@ -15,31 +15,51 @@
       "exceptions": [],
       "name": "alertFinished(android.view.PixelCopy.OnPixelCopyFinishedListener,android.os.Handler,int)"
     },
-    "getActivity(android.content.Context)": {
+    "findViewForSurface(android.view.Surface)": {
       "isImplementation": false,
       "modifiers": [
         "private",
         "static"
       ],
       "params": [
-        "context"
+        "source"
       ],
-      "returnType": "android.app.Activity",
+      "returnType": "android.view.View",
       "exceptions": [],
-      "name": "getActivity(android.content.Context)"
+      "name": "findViewForSurface(android.view.Surface)"
     },
-    "getActivity(android.view.View)": {
-      "isImplementation": false,
+    "request(android.view.Surface,android.graphics.Rect,android.graphics.Bitmap,android.view.PixelCopy.OnPixelCopyFinishedListener,android.os.Handler)": {
+      "isImplementation": true,
       "modifiers": [
-        "private",
+        "protected",
         "static"
       ],
       "params": [
-        "view"
+        "source",
+        "srcRect",
+        "dest",
+        "listener",
+        "listenerThread"
       ],
-      "returnType": "android.app.Activity",
+      "returnType": "void",
       "exceptions": [],
-      "name": "getActivity(android.view.View)"
+      "name": "request(android.view.Surface,android.graphics.Rect,android.graphics.Bitmap,android.view.PixelCopy.OnPixelCopyFinishedListener,android.os.Handler)"
+    },
+    "request(android.view.SurfaceView,android.graphics.Bitmap,android.view.PixelCopy.OnPixelCopyFinishedListener,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "source",
+        "dest",
+        "listener",
+        "listenerThread"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "request(android.view.SurfaceView,android.graphics.Bitmap,android.view.PixelCopy.OnPixelCopyFinishedListener,android.os.Handler)"
     },
     "request(android.view.SurfaceView,android.graphics.Rect,android.graphics.Bitmap,android.view.PixelCopy.OnPixelCopyFinishedListener,android.os.Handler)": {
       "isImplementation": true,
@@ -91,20 +111,36 @@
       "exceptions": [],
       "name": "request(android.view.Window,android.graphics.Rect,android.graphics.Bitmap,android.view.PixelCopy.OnPixelCopyFinishedListener,android.os.Handler)"
     },
-    "takeScreenshot(android.view.Window,android.graphics.Bitmap,android.graphics.Rect)": {
+    "request(java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "requestObject",
+        "callbackExecutor",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "request(java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
+    "takeScreenshot(android.view.View,android.graphics.Bitmap,android.graphics.Rect)": {
       "isImplementation": false,
       "modifiers": [
         "private",
         "static"
       ],
       "params": [
-        "window",
+        "view",
         "screenshot",
         "srcRect"
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "takeScreenshot(android.view.Window,android.graphics.Bitmap,android.graphics.Rect)"
+      "name": "takeScreenshot(android.view.View,android.graphics.Bitmap,android.graphics.Rect)"
     },
     "validateBitmap(android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -115,16 +151,15 @@
       "params": [
         "bitmap"
       ],
-      "returnType": "void",
+      "returnType": "android.graphics.Bitmap",
       "exceptions": [],
       "name": "validateBitmap(android.graphics.Bitmap)"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.P",
-    "android.app.Activity",
-    "android.content.Context",
-    "android.content.ContextWrapper",
+    "android.os.Build.VERSION_CODES.O",
+    "com.google.common.base.Preconditions.checkNotNull",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Bitmap",
     "android.graphics.Canvas",
     "android.graphics.Paint",
@@ -133,14 +168,29 @@
     "android.os.Looper",
     "android.view.PixelCopy",
     "android.view.PixelCopy.OnPixelCopyFinishedListener",
+    "android.view.Surface",
     "android.view.SurfaceView",
     "android.view.View",
-    "android.view.ViewGroup",
+    "android.view.ViewRootImpl",
     "android.view.Window",
+    "android.view.WindowManagerGlobal",
     "androidx.annotation.NonNull",
     "androidx.annotation.Nullable",
+    "java.util.function.Consumer",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.shadows.ShadowWindowManagerGlobal.WindowManagerGlobalReflector",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Constructor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.versioning.AndroidVersions.U",
+    "org.robolectric.shadows.ShadowPixelCopy.ShadowPixelCopyRequestBuilder",
+    "org.robolectric.shadows.ShadowPixelCopy.PixelCopyReflector",
+    "org.robolectric.shadows.ShadowPixelCopy.BuilderReflector",
+    "org.robolectric.shadows.ShadowPixelCopy.RequestReflector",
+    "org.robolectric.shadows.ShadowPixelCopy.ResultReflector"
   ],
   "name": "org.robolectric.shadows.ShadowPixelCopy",
   "documentation": "Shadow for PixelCopy that uses View.draw to create screenshots. The real PixelCopy performs a\nfull hardware capture of the screen at the given location, which is impossible in Robolectric.\n\n\u003cp\u003eIf listenerThread is backed by a paused looper, make sure to call ShadowLooper.idle() to\nensure the screenshot finishes.\n"

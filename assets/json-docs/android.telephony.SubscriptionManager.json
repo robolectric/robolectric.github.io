@@ -14,6 +14,31 @@
       "name": "addOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)",
       "documentation": "Adds a listener to a local list of listeners. Will be triggered by {@link\n#setActiveSubscriptionInfoList} when the local list of {@link SubscriptionInfo} is updated.\n"
     },
+    "addOnSubscriptionsChangedListener(java.util.concurrent.Executor,android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "executor",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "addOnSubscriptionsChangedListener(java.util.concurrent.Executor,android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)",
+      "documentation": "Adds a listener to a local list of listeners. Will be triggered by {@link\n#setActiveSubscriptionInfoList} when the local list of {@link SubscriptionInfo} is updated.\n"
+    },
+    "checkReadPhoneNumbersPermission()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "checkReadPhoneNumbersPermission()"
+    },
     "checkReadPhoneStatePermission()": {
       "isImplementation": false,
       "modifiers": [
@@ -95,7 +120,7 @@
       "exceptions": [],
       "minSdk": 22,
       "name": "getActiveSubscriptionInfo(int)",
-      "documentation": "Returns subscription that were set via {@link #setActiveSubscriptionInfoList} if it can find\none with the specified id or null if none found.\n"
+      "documentation": "Returns subscription that were set via {@link #setActiveSubscriptionInfoList} if it can find\none with the specified id or null if none found.\n\n\u003cp\u003eAn exception will be thrown if the READ_PHONE_STATE permission has not been granted.\n"
     },
     "getActiveSubscriptionInfoCount()": {
       "isImplementation": true,
@@ -287,7 +312,35 @@
       "exceptions": [],
       "minSdk": 33,
       "name": "getPhoneNumber(int)",
-      "documentation": "Returns the phone number for the given {@code subscriptionId}, or an empty string if not\navailable.\n\n\u003cp\u003eThe phone number can be set by {@link #setPhoneNumber(int, String)}\n"
+      "documentation": "Returns the phone number for the given {@code subscriptionId}, or an empty string if not\navailable.\n\n\u003cp\u003eThe phone number can be set by {@link #setPhoneNumber(int, String)}\n\n\u003cp\u003eAn exception will be thrown if the READ_PHONE_NUMBERS permission has not been granted.\n"
+    },
+    "getPhoneNumber(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subscriptionId",
+        "source"
+      ],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getPhoneNumber(int,int)",
+      "documentation": "Returns the phone number for the given {@code subscriptionId}, or an empty string if not\navailable. {@code source} is ignored and will return the same as {@link #getPhoneNumber(int)}.\n\n\u003cp\u003eThe phone number can be set by {@link #setPhoneNumber(int, String)}\n"
+    },
+    "hasOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasOnSubscriptionsChangedListener(android.telephony.SubscriptionManager.OnSubscriptionsChangedListener)",
+      "documentation": "Check if a listener exists in the {@link ShadowSubscriptionManager.listeners}.\n\n@param listener The listener to check.\n@return boolean True if the listener already added, otherwise false.\n"
     },
     "isNetworkRoaming(int)": {
       "isImplementation": true,
@@ -504,6 +557,19 @@
       "name": "setPhoneNumber(int,java.lang.String)",
       "documentation": "Sets the phone number returned by {@link #getPhoneNumber(int)}. "
     },
+    "setReadPhoneNumbersPermission(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "readPhoneNumbersPermission"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setReadPhoneNumbersPermission(boolean)",
+      "documentation": "When set to false methods requiring {@link android.Manifest.permission.READ_PHONE_NUMBERS}\npermission will throw a {@link SecurityException}. By default it\u0027s set to true for backwards\ncompatibility.\n"
+    },
     "setReadPhoneStatePermission(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -539,6 +605,7 @@
     "java.util.List",
     "java.util.Map",
     "java.util.Set",
+    "java.util.concurrent.Executor",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

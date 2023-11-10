@@ -96,21 +96,10 @@
         "public"
       ],
       "params": [],
-      "returnType": "android.os.VibrationAttributes",
+      "returnType": "java.lang.Object",
       "exceptions": [],
       "name": "getVibrationAttributesFromLastVibration()",
-      "documentation": "Returns the {@link VibrationAttributes} from the last vibration. "
-    },
-    "getVibrationEffectSegments()": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [],
-      "returnType": "java.util.List\u003candroid.os.vibrator.VibrationEffectSegment\u003e",
-      "exceptions": [],
-      "name": "getVibrationEffectSegments()",
-      "documentation": "Returns the last list of {@link VibrationEffectSegment}. "
+      "documentation": "Returns the {@link android.os.VibrationAttributes} from the last vibration. "
     },
     "isCancelled()": {
       "isImplementation": false,
@@ -189,11 +178,9 @@
   "imports": [
     "android.os.Build.VERSION_CODES.R",
     "android.media.AudioAttributes",
-    "android.os.VibrationAttributes",
     "android.os.VibrationEffect",
     "android.os.Vibrator",
     "android.os.vibrator.PrimitiveSegment",
-    "android.os.vibrator.VibrationEffectSegment",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.List",

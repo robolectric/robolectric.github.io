@@ -172,6 +172,18 @@
       "name": "getCallState()",
       "documentation": "Call state may be specified via {@link #setCallState(int)}. "
     },
+    "getCallStateForSubscription()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getCallStateForSubscription()",
+      "documentation": "Call state may be specified via {@link #setCallState(int)}. "
+    },
     "getCarrierConfig()": {
       "isImplementation": true,
       "modifiers": [
@@ -245,6 +257,17 @@
       "minSdk": 23,
       "name": "getCurrentPhoneType(int)"
     },
+    "getDataActivity()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getDataActivity()",
+      "documentation": "Data activity may be specified via {@link #setDataActivity(int)}. If no override is set, this\ndefaults to {@link TelephonyManager#DATA_ACTIVITY_NONE}.\n"
+    },
     "getDataNetworkType()": {
       "isImplementation": true,
       "modifiers": [
@@ -292,6 +315,16 @@
       "name": "getDeviceId(int)",
       "documentation": "Returns {@code null} by default or the value specified via {@link #setDeviceId(int, String)}.\n"
     },
+    "getDeviceSoftwareVersion()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getDeviceSoftwareVersion()"
+    },
     "getEmergencyCallbackMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -302,6 +335,18 @@
       "exceptions": [],
       "minSdk": 26,
       "name": "getEmergencyCallbackMode()"
+    },
+    "getEmergencyNumberList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.Map\u003cjava.lang.Integer,java.util.List\u003candroid.telephony.emergency.EmergencyNumber\u003e\u003e",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getEmergencyNumberList()",
+      "documentation": "Implementation for {@link TelephonyManager#getEmergencyNumberList}.\n\n@return an immutable map by default, unless set with {@link #setEmergencyNumberList}.\n"
     },
     "getEventFlags()": {
       "isImplementation": false,
@@ -458,6 +503,17 @@
       "exceptions": [],
       "name": "getNetworkOperatorName()"
     },
+    "getNetworkSpecifier()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getNetworkSpecifier()"
+    },
     "getNetworkType()": {
       "isImplementation": true,
       "modifiers": [
@@ -467,6 +523,17 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getNetworkType()"
+    },
+    "getPhoneCapability()": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getPhoneCapability()"
     },
     "getPhoneCount()": {
       "isImplementation": true,
@@ -659,6 +726,19 @@
       "exceptions": [],
       "name": "getSubscriberId()"
     },
+    "getSubscriptionId(android.telecom.PhoneAccountHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "handle"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getSubscriptionId(android.telecom.PhoneAccountHandle)"
+    },
     "getUiccCardsInfo()": {
       "isImplementation": true,
       "modifiers": [
@@ -754,6 +834,20 @@
       "name": "getVoicemailRingtoneUri(android.telecom.PhoneAccountHandle)",
       "documentation": "Returns {@code null} by default or the value specified via {@link\n#setVoicemailRingtoneUri(PhoneAccountHandle, Uri)}.\n"
     },
+    "hasCarrierPrivileges(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "hasCarrierPrivileges(int)",
+      "documentation": "@return False by default, unless set with {@link #setHasCarrierPrivileges(int, boolean)}.\n"
+    },
     "initListener(android.telephony.PhoneStateListener,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -801,6 +895,20 @@
       "minSdk": 26,
       "name": "isDataEnabled()",
       "documentation": "Implementation for {@link TelephonyManager#isDataEnabled}.\n\n@return False by default, unless set with {@link TelephonyManager#setDataEnabled}.\n"
+    },
+    "isDataEnabledForReason(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "reason"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isDataEnabledForReason(int)",
+      "documentation": "Implementation for {@link TelephonyManager#isDataEnabledForReason}.\n\n@return True by default, unless reason is set to false with {@link\n    TelephonyManager#setDataEnabledForReason}.\n"
     },
     "isEmergencyNumber(java.lang.String)": {
       "isImplementation": true,
@@ -874,6 +982,18 @@
       "exceptions": [],
       "name": "isSmsCapable()",
       "documentation": "@return true by default, or the value specified via {@link #setIsSmsCapable(boolean)}\n"
+    },
+    "isTtyModeSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "isTtyModeSupported()",
+      "documentation": "Implementation for {@link TelephonyManager#isTtyModeSupported}.\n\n@return False by default, unless set with {@link #setTtyModeSupported(boolean)}.\n"
     },
     "isVoiceCapable()": {
       "isImplementation": true,
@@ -1165,6 +1285,19 @@
       "name": "setCurrentPhoneType(int,int)",
       "documentation": "Sets the phone type for the given {@code subId}. "
     },
+    "setDataActivity(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "dataActivity"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDataActivity(int)",
+      "documentation": "Sets the value to be returned by calls to {@link #getDataActivity()}. This \u003cb\u003eshould\u003c/b\u003e\ncorrespond to one of the {@code DATA_ACTIVITY_*} constants defined on {@link TelephonyManager},\nbut this is not enforced.\n"
+    },
     "setDataEnabled(boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -1178,6 +1311,21 @@
       "minSdk": 26,
       "name": "setDataEnabled(boolean)",
       "documentation": "Implementation for {@link TelephonyManager#setDataEnabled}. Marked as public in order to allow\nit to be used as a test API.\n"
+    },
+    "setDataEnabledForReason(int,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "reason",
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "setDataEnabledForReason(int,boolean)",
+      "documentation": "Implementation for {@link TelephonyManager#setDataEnabledForReason}. Marked as public in order\nto allow it to be used as a test API.\n"
     },
     "setDataNetworkType(int)": {
       "isImplementation": true,
@@ -1232,6 +1380,18 @@
       "exceptions": [],
       "name": "setDeviceId(java.lang.String)"
     },
+    "setDeviceSoftwareVersion(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "newDeviceSoftwareVersion"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDeviceSoftwareVersion(java.lang.String)"
+    },
     "setEmergencyCallbackMode(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -1245,6 +1405,20 @@
       "name": "setEmergencyCallbackMode(boolean)",
       "documentation": "Emergency Callback Mode (ECBM) is typically set by the carrier, for a time window of 5 minutes\nafter the last outgoing emergency call. The user can exit ECBM via a system notification.\n\n@param emergencyCallbackMode whether the device is in ECBM or not.\n"
     },
+    "setEmergencyNumberList(java.util.Map\u003cjava.lang.Integer,java.util.List\u003candroid.telephony.emergency.EmergencyNumber\u003e\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "emergencyNumbersList"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEmergencyNumberList(java.util.Map\u003cjava.lang.Integer,java.util.List\u003candroid.telephony.emergency.EmergencyNumber\u003e\u003e)",
+      "documentation": "Sets the emergency numbers list returned by {@link TelephonyManager#getEmergencyNumberList}.\n"
+    },
     "setGroupIdLevel1(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -1256,6 +1430,32 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setGroupIdLevel1(java.lang.String)"
+    },
+    "setHasCarrierPrivileges(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "hasCarrierPrivileges"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHasCarrierPrivileges(boolean)"
+    },
+    "setHasCarrierPrivileges(int,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "subId",
+        "hasCarrierPrivileges"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHasCarrierPrivileges(int,boolean)",
+      "documentation": "Sets the {@code hasCarrierPrivileges} for the given {@code subId}. "
     },
     "setHearingAidCompatibilitySupported(boolean)": {
       "isImplementation": false,
@@ -1411,7 +1611,34 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 22,
+      "maxSdk": 34,
       "name": "setNetworkOperatorName(java.lang.String)"
+    },
+    "setNetworkOperatorNameForPhone(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneId",
+        "networkOperatorName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "setNetworkOperatorNameForPhone(int,java.lang.String)"
+    },
+    "setNetworkSpecifier(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "networkSpecifier"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNetworkSpecifier(java.lang.String)"
     },
     "setNetworkType(int)": {
       "isImplementation": false,
@@ -1425,6 +1652,31 @@
       "exceptions": [],
       "name": "setNetworkType(int)",
       "documentation": "@deprecated {@link TelephonyManager#getNetworkType()} was replaced with {@link\n    TelephonyManager#getDataNetworkType()} in Android N, and has been deprecated in Android R.\n    Use {@link #setDataNetworkType instead}.\n"
+    },
+    "setPhoneAccountHandleSubscriptionId(android.telecom.PhoneAccountHandle,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "handle",
+        "subscriptionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPhoneAccountHandleSubscriptionId(android.telecom.PhoneAccountHandle,int)"
+    },
+    "setPhoneCapability(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneCapability"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPhoneCapability(java.lang.Object)"
     },
     "setPhoneCount(int)": {
       "isImplementation": false,
@@ -1450,7 +1702,22 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 22,
+      "maxSdk": 34,
       "name": "setPhoneType(int)"
+    },
+    "setPhoneType(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneId",
+        "type"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "setPhoneType(int,int)"
     },
     "setReadPhoneStatePermission(boolean)": {
       "isImplementation": false,
@@ -1593,7 +1860,22 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 22,
+      "maxSdk": 34,
       "name": "setSimOperatorName(java.lang.String)"
+    },
+    "setSimOperatorNameForPhone(int,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "phoneId",
+        "name"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "setSimOperatorNameForPhone(int,java.lang.String)"
     },
     "setSimSerialNumber(java.lang.String)": {
       "isImplementation": false,
@@ -1688,6 +1970,19 @@
       "exceptions": [],
       "name": "setTelephonyManagerForSubscriptionId(int,android.telephony.TelephonyManager)",
       "documentation": "Sets the value returned by {@link TelephonyManager#createForSubscriptionId(int)}. "
+    },
+    "setTtyModeSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isTtyModeSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setTtyModeSupported(boolean)",
+      "documentation": "Sets the value to be returned by {@link #isTtyModeSupported()} "
     },
     "setUiccCardsInfo(java.lang.Object)": {
       "isImplementation": false,
@@ -1890,20 +2185,25 @@
     "android.telephony.TelephonyManager",
     "android.telephony.TelephonyManager.CellInfoCallback",
     "android.telephony.VisualVoicemailSmsFilterSettings",
+    "android.telephony.emergency.EmergencyNumber",
     "android.text.TextUtils",
     "android.util.SparseArray",
+    "android.util.SparseBooleanArray",
     "android.util.SparseIntArray",
     "com.google.common.base.Ascii",
     "com.google.common.base.Preconditions",
     "com.google.common.base.Predicate",
     "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.ImmutableMap",
     "com.google.common.collect.Iterables",
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
+    "java.util.HashSet",
     "java.util.List",
     "java.util.Locale",
     "java.util.Map",
+    "java.util.Set",
     "java.util.concurrent.Executor",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",
@@ -1913,6 +2213,8 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.versioning.AndroidVersions.U",
+    "org.robolectric.versioning.AndroidVersions.V",
     "org.robolectric.shadows.ShadowTelephonyManager.VisualVoicemailSmsParams"
   ],
   "name": "org.robolectric.shadows.ShadowTelephonyManager"

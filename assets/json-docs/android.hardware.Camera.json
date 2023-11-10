@@ -1,15 +1,5 @@
 {
   "methods": {
-    "__constructor__()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "__constructor__()"
-    },
     "addCallbackBuffer(byte[])": {
       "isImplementation": true,
       "modifiers": [
@@ -400,12 +390,13 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "org.robolectric.shadow.api.Shadow.newInstanceOf",
-    "android.graphics.ImageFormat",
     "android.hardware.Camera",
     "android.os.Build",
     "android.view.SurfaceHolder",
+    "com.google.common.base.Joiner",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.ImmutableMap",
     "java.util.ArrayList",
-    "java.util.Arrays",
     "java.util.Collections",
     "java.util.HashMap",
     "java.util.List",
@@ -413,9 +404,11 @@
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.shadows.ShadowCamera.ShadowParameters",
-    "org.robolectric.shadows.ShadowCamera.ShadowSize"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadows.ShadowCamera.ShadowParameters"
   ],
   "name": "org.robolectric.shadows.ShadowCamera"
 }

@@ -141,7 +141,7 @@
       ],
       "returnType": "android.hardware.camera2.CameraDevice",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 34,
       "name": "openCameraDeviceUserAsync(java.lang.String,android.hardware.camera2.CameraDevice.StateCallback,java.util.concurrent.Executor,int,int,boolean)"
     },
     "registerAvailabilityCallback(android.hardware.camera2.CameraManager.AvailabilityCallback,android.os.Handler)": {
@@ -294,6 +294,7 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.ForType",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowCameraManager.ReflectorCameraManager",
     "org.robolectric.shadows.ShadowCameraManager.ShadowCameraManagerGlobal"
   ],

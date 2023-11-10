@@ -13,6 +13,20 @@
       "name": "addConnectedDevice(android.bluetooth.BluetoothDevice)",
       "documentation": "Adds the given BluetoothDevice to the shadow\u0027s list of \"connected devices\" "
     },
+    "addDevice(android.bluetooth.BluetoothDevice,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bluetoothDevice",
+        "connectionState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addDevice(android.bluetooth.BluetoothDevice,int)",
+      "documentation": "Adds the provided BluetoothDevice to the shadow profile\u0027s device list with an associated\nconnectionState. The provided connection state will be returned by {@link\nShadowBluetoothHeadset#getConnectionState}.\n"
+    },
     "getActiveDevice()": {
       "isImplementation": true,
       "modifiers": [
@@ -85,6 +99,19 @@
       "minSdk": 31,
       "name": "isVoiceRecognitionSupported(android.bluetooth.BluetoothDevice)",
       "documentation": "Checks whether the headset supports voice recognition.\n\n@see #setVoiceRecognitionSupported(boolean)\n"
+    },
+    "removeDevice(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "bluetoothDevice"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeDevice(android.bluetooth.BluetoothDevice)",
+      "documentation": "Remove the given BluetoothDevice from the shadow profile\u0027s device list "
     },
     "sendAudioStateChangedBroadcast(int,android.bluetooth.BluetoothDevice)": {
       "isImplementation": false,
@@ -186,12 +213,16 @@
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.S",
+    "java.util.stream.Collectors.toCollection",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothHeadset",
     "android.bluetooth.BluetoothProfile",
     "android.content.Intent",
     "java.util.ArrayList",
+    "java.util.HashMap",
     "java.util.List",
+    "java.util.Map",
+    "java.util.Map.Entry",
     "java.util.Objects",
     "javax.annotation.Nullable",
     "javax.annotation.concurrent.NotThreadSafe",

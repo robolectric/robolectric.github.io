@@ -61,7 +61,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 34,
       "name": "nativeImageSetup(java.lang.Object)"
     },
     "nativeReleaseImage(android.media.Image)": {
@@ -79,7 +79,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.CUR_DEVELOPMENT",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.S_V2",
     "android.os.Build.VERSION_CODES.TIRAMISU",
@@ -103,6 +102,7 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.ForType",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowImageReader.FakeSurface",
     "org.robolectric.shadows.ShadowImageReader.ShadowSurfaceImage",
     "org.robolectric.shadows.ShadowImageReader.ImageReaderReflector"

@@ -317,6 +317,17 @@
       "name": "getUuids()",
       "documentation": "Overrides behavior of {@link BluetoothDevice#getUuids} to return pre-set result.\n\n@return Value set by calling {@link ShadowBluetoothDevice#setUuids}. If setUuids has not\n    previously been called, will return null.\n"
     },
+    "isConnected()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 20,
+      "name": "isConnected()"
+    },
     "isInSilenceMode()": {
       "isImplementation": true,
       "modifiers": [
@@ -412,6 +423,18 @@
       "exceptions": [],
       "name": "setBondState(int)",
       "documentation": "Sets value of bond state for {@link BluetoothDevice#getBondState}. "
+    },
+    "setConnected(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isConnected"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setConnected(boolean)"
     },
     "setCreatedBond(boolean)": {
       "isImplementation": false,
@@ -573,6 +596,7 @@
     "android.bluetooth.BluetoothDevice.BOND_NONE",
     "android.content.pm.PackageManager.PERMISSION_GRANTED",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
+    "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",

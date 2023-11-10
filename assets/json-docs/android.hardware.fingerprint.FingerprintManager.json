@@ -75,6 +75,17 @@
       "name": "getFingerprintId(int)",
       "documentation": "@return Returns the finger ID for the given index.\n"
     },
+    "getSensorPropertiesInternal()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.hardware.fingerprint.FingerprintSensorPropertiesInternal\u003e",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getSensorPropertiesInternal()"
+    },
     "hasEnrolledFingerprints()": {
       "isImplementation": true,
       "modifiers": [
@@ -161,6 +172,8 @@
     "android.hardware.fingerprint.FingerprintManager.AuthenticationCallback",
     "android.hardware.fingerprint.FingerprintManager.AuthenticationResult",
     "android.hardware.fingerprint.FingerprintManager.CryptoObject",
+    "android.hardware.fingerprint.FingerprintSensorPropertiesInternal",
+    "android.os.Build.VERSION_CODES",
     "android.os.CancellationSignal",
     "android.os.Handler",
     "android.util.Log",

@@ -11,7 +11,21 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addExtensionMimeTypMapping(java.lang.String,java.lang.String)"
+      "name": "addExtensionMimeTypMapping(java.lang.String,java.lang.String)",
+      "documentation": "@deprecated use addExtensionMimeTypeMapping\n"
+    },
+    "addExtensionMimeTypeMapping(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "extension",
+        "mimeType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addExtensionMimeTypeMapping(java.lang.String,java.lang.String)"
     },
     "clearMappings()": {
       "isImplementation": false,

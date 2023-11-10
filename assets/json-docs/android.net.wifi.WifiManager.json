@@ -1,5 +1,19 @@
 {
   "methods": {
+    "addLocalOnlyConnectionFailureListener(java.util.concurrent.Executor,android.net.wifi.WifiManager.LocalOnlyConnectionFailureListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "executor",
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "addLocalOnlyConnectionFailureListener(java.util.concurrent.Executor,android.net.wifi.WifiManager.LocalOnlyConnectionFailureListener)"
+    },
     "addNetwork(android.net.wifi.WifiConfiguration)": {
       "isImplementation": true,
       "modifiers": [
@@ -84,6 +98,17 @@
       "exceptions": [],
       "name": "checkDeviceOwner()"
     },
+    "clearExternalPnoScanRequest()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "clearExternalPnoScanRequest()"
+    },
     "clearUsabilityScores()": {
       "isImplementation": false,
       "modifiers": [
@@ -145,6 +170,16 @@
       "returnType": "android.net.wifi.WifiManager.MulticastLock",
       "exceptions": [],
       "name": "createMulticastLock(java.lang.String)"
+    },
+    "createPnoScanResultsBroadcastIntent()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.content.Intent",
+      "exceptions": [],
+      "name": "createPnoScanResultsBroadcastIntent()"
     },
     "createWifiLock(int,java.lang.String)": {
       "isImplementation": true,
@@ -412,7 +447,7 @@
       "exceptions": [],
       "minSdk": 30,
       "name": "isStaApConcurrencySupported()",
-      "documentation": "Returns last value provided to #setStaApConcurrencySupported. "
+      "documentation": "Returns last value provided to {@link #setStaApConcurrencySupported}. "
     },
     "isWifiConnectedNetworkScorerEnabled()": {
       "isImplementation": false,
@@ -435,6 +470,54 @@
       "exceptions": [],
       "name": "isWifiEnabled()"
     },
+    "isWpa3SaeH2eSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isWpa3SaeH2eSupported()",
+      "documentation": "Returns last value provided to {@link #setWpa3SaeH2eSupported}. "
+    },
+    "isWpa3SaePublicKeySupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isWpa3SaePublicKeySupported()",
+      "documentation": "Returns last value provided to {@link #setWpa3SaePublicKeySupported}. "
+    },
+    "isWpa3SaeSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isWpa3SaeSupported()",
+      "documentation": "Returns last value provided to {@link #setWpa3SaeSupported}. "
+    },
+    "isWpa3SuiteBSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isWpa3SuiteBSupported()",
+      "documentation": "Returns last value provided to {@link #setWpa3SuiteBSupported}. "
+    },
     "makeCopy(android.net.wifi.WifiConfiguration,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -447,6 +530,19 @@
       "returnType": "android.net.wifi.WifiConfiguration",
       "exceptions": [],
       "name": "makeCopy(android.net.wifi.WifiConfiguration,int)"
+    },
+    "networksFoundFromPnoScan(java.util.List\u003candroid.net.wifi.ScanResult\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "scanResults"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "networksFoundFromPnoScan(java.util.List\u003candroid.net.wifi.ScanResult\u003e)",
+      "documentation": "Informs the {@link WifiManager} of a list of PNO {@link ScanResult}. "
     },
     "postUsabilityStats(int,boolean,org.robolectric.shadows.WifiUsabilityStatsEntryBuilder)": {
       "isImplementation": false,
@@ -472,6 +568,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "reconnect()"
+    },
+    "removeLocalOnlyConnectionFailureListener(android.net.wifi.WifiManager.LocalOnlyConnectionFailureListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "removeLocalOnlyConnectionFailureListener(android.net.wifi.WifiManager.LocalOnlyConnectionFailureListener)"
     },
     "removeNetwork(int)": {
       "isImplementation": true,
@@ -568,6 +677,22 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDhcpInfo(android.net.DhcpInfo)"
+    },
+    "setExternalPnoScanRequest(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "ssids",
+        "frequencies",
+        "executor",
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "setExternalPnoScanRequest(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
     },
     "setIs5GHzBandSupported(boolean)": {
       "isImplementation": false,
@@ -723,6 +848,58 @@
       "exceptions": [],
       "name": "setWifiState(int)"
     },
+    "setWpa3SaeH2eSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isWpa3SaeH2eSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWpa3SaeH2eSupported(boolean)",
+      "documentation": "Sets whether WPA3 SAE Hash-to-Element is supported. "
+    },
+    "setWpa3SaePublicKeySupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isWpa3SaePublicKeySupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWpa3SaePublicKeySupported(boolean)",
+      "documentation": "Sets whether WPA3 SAE Public Key is supported. "
+    },
+    "setWpa3SaeSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isWpa3SaeSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWpa3SaeSupported(boolean)",
+      "documentation": "Sets whether WPA3-Personal SAE is supported. "
+    },
+    "setWpa3SuiteBSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "isWpa3SuiteBSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setWpa3SuiteBSupported(boolean)",
+      "documentation": "Sets whether WPA3-Enterprise Suite-B-192 is supported. "
+    },
     "shadowOf(android.net.wifi.WifiManager)": {
       "isImplementation": false,
       "modifiers": [
@@ -786,6 +963,20 @@
       "exceptions": [],
       "name": "stripQuotes(java.lang.String)"
     },
+    "triggerLocalConnectionFailure(android.net.wifi.WifiNetworkSpecifier,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "specifier",
+        "failureReason"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "triggerLocalConnectionFailure(android.net.wifi.WifiNetworkSpecifier,int)",
+      "documentation": "Simulates a connection failure for a specified local network connection.\n\n@param specifier the {@link WifiNetworkSpecifier} describing the local network connection\n    attempt\n@param failureReason the reason for the network connection failure. This should be one of the\n    values specified in {@code WifiManager#STATUS_LOCAL_ONLY_CONNECTION_FAILURE_*}\n"
+    },
     "updateNetwork(android.net.wifi.WifiConfiguration)": {
       "isImplementation": true,
       "modifiers": [
@@ -832,6 +1023,9 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
+    "java.util.stream.Collectors.toList",
     "android.app.admin.DevicePolicyManager",
     "android.content.Context",
     "android.content.Intent",
@@ -844,15 +1038,22 @@
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiManager",
     "android.net.wifi.WifiManager.AddNetworkResult",
+    "android.net.wifi.WifiManager.LocalOnlyConnectionFailureListener",
     "android.net.wifi.WifiManager.MulticastLock",
+    "android.net.wifi.WifiNetworkSpecifier",
+    "android.net.wifi.WifiSsid",
     "android.net.wifi.WifiUsabilityStatsEntry",
+    "android.os.Binder",
     "android.os.Handler",
     "android.os.Looper",
     "android.provider.Settings",
     "android.util.ArraySet",
     "android.util.Pair",
     "com.google.common.collect.ImmutableList",
+    "java.lang.reflect.InvocationTargetException",
+    "java.lang.reflect.Method",
     "java.util.ArrayList",
+    "java.util.Arrays",
     "java.util.BitSet",
     "java.util.HashSet",
     "java.util.LinkedHashMap",
@@ -860,6 +1061,7 @@
     "java.util.Map",
     "java.util.Set",
     "java.util.concurrent.ConcurrentHashMap",
+    "java.util.concurrent.ConcurrentMap",
     "java.util.concurrent.Executor",
     "java.util.concurrent.atomic.AtomicInteger",
     "org.robolectric.RuntimeEnvironment",
@@ -871,7 +1073,9 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.shadows.ShadowWifiManager.ShadowWifiLock",
     "org.robolectric.shadows.ShadowWifiManager.ShadowMulticastLock",
-    "org.robolectric.shadows.ShadowWifiManager.WifiUsabilityScore"
+    "org.robolectric.shadows.ShadowWifiManager.WifiUsabilityScore",
+    "org.robolectric.shadows.ShadowWifiManager.PnoScanRequest",
+    "org.robolectric.shadows.ShadowWifiManager.InternalPnoScanResultsCallback"
   ],
   "name": "org.robolectric.shadows.ShadowWifiManager",
   "documentation": "Shadow for {@link android.net.wifi.WifiManager}. "

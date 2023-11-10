@@ -79,6 +79,19 @@
       "exceptions": [],
       "name": "disable()"
     },
+    "disable(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "persist"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 17,
+      "name": "disable(boolean)"
+    },
     "enable()": {
       "isImplementation": true,
       "modifiers": [
@@ -718,6 +731,7 @@
   },
   "imports": [
     "android.bluetooth.BluetoothAdapter.STATE_ON",
+    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
@@ -738,6 +752,7 @@
     "android.bluetooth.BluetoothSocket",
     "android.bluetooth.BluetoothStatusCodes",
     "android.bluetooth.IBluetoothManager",
+    "android.bluetooth.IBluetoothProfileServiceConnection",
     "android.bluetooth.le.BluetoothLeAdvertiser",
     "android.bluetooth.le.BluetoothLeScanner",
     "android.content.AttributionSource",
@@ -745,6 +760,7 @@
     "android.os.Build",
     "android.os.Build.VERSION_CODES",
     "android.os.ParcelUuid",
+    "android.os.RemoteException",
     "android.provider.Settings",
     "com.google.common.collect.ImmutableList",
     "java.io.IOException",
@@ -772,7 +788,8 @@
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.Static",
     "org.robolectric.shadows.ShadowBluetoothAdapter.BackgroundRfcommServerEntry",
-    "org.robolectric.shadows.ShadowBluetoothAdapter.BluetoothAdapterReflector"
+    "org.robolectric.shadows.ShadowBluetoothAdapter.BluetoothAdapterReflector",
+    "org.robolectric.shadows.ShadowBluetoothAdapter.BluetoothManagerDelegate"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothAdapter"
 }

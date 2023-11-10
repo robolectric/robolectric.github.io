@@ -105,7 +105,7 @@
     "java.io.PrintStream",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
-    "org.robolectric.annotation.LooperMode",
+    "org.robolectric.annotation.LooperMode.Mode",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.reflector.Direct",

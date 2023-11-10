@@ -1,0 +1,85 @@
+{
+  "methods": {
+    "ctor(java.io.FileDescriptor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fd"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "ctor(java.io.FileDescriptor)"
+    },
+    "readEntityData_native(long,byte[],int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "backupReader",
+        "data",
+        "offset",
+        "size"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "readEntityData_native(long,byte[],int,int)"
+    },
+    "readNextHeader_native(java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "backupReader",
+        "entity"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "readNextHeader_native(java.lang.Object,java.lang.Object)"
+    },
+    "setEntities(com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.BackupDataEntity\u003e)": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [
+        "entities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setEntities(com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.BackupDataEntity\u003e)",
+      "documentation": "Sets the entities to return when reading from this {@link BackupDataInput}. Use {@link\norg.robolectric.shadows.BackupDataInputBuilder} to get a populated instance.\n"
+    },
+    "skipEntityData_native(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "backupReader"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "skipEntityData_native(long)"
+    }
+  },
+  "imports": [
+    "java.lang.Math.min",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.app.backup.BackupDataInput",
+    "android.os.Build.VERSION_CODES",
+    "com.google.common.collect.ImmutableList",
+    "java.io.FileDescriptor",
+    "java.util.ArrayList",
+    "java.util.List",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowBackupDataInput.EntityHeaderReflector"
+  ],
+  "name": "org.robolectric.shadows.ShadowBackupDataInput",
+  "documentation": "Shadow for BackupDataInput. "
+}

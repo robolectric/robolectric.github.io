@@ -29,6 +29,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 20,
+      "maxSdk": 30,
       "name": "__constructor__(android.content.Context,android.util.AttributeSet,int,int)"
     },
     "addGlobalPerformClickListener(android.view.View.OnClickListener)": {
@@ -326,6 +327,18 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getLayerType()"
+    },
+    "getLocationInSurfaceCompat(android.view.View)": {
+      "isImplementation": false,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        "view"
+      ],
+      "returnType": "int[]",
+      "exceptions": [],
+      "name": "getLocationInSurfaceCompat(android.view.View)"
     },
     "getLocationOnScreen(int[])": {
       "isImplementation": true,
@@ -1019,7 +1032,6 @@
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
-    "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
     "org.robolectric.util.ReflectionHelpers.getField",
     "org.robolectric.util.reflector.Reflector.reflector",
@@ -1031,6 +1043,7 @@
     "android.graphics.Rect",
     "android.graphics.RectF",
     "android.graphics.drawable.Drawable",
+    "android.os.Build",
     "android.os.Looper",
     "android.os.RemoteException",
     "android.os.SystemClock",
@@ -1066,7 +1079,7 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.config.ConfigurationRegistry",
     "org.robolectric.shadow.api.Shadow",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.shadows.ShadowViewRootImpl.ViewRootImplReflector",
     "org.robolectric.util.TimeUtils",
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.Direct",

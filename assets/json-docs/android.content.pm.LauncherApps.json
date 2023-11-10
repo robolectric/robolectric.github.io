@@ -207,6 +207,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "minSdk": 21,
       "name": "isActivityEnabled(android.content.ComponentName,android.os.UserHandle)"
     },
     "isPackageEnabled(java.lang.String,android.os.UserHandle)": {
@@ -313,6 +314,20 @@
       "exceptions": [],
       "minSdk": 29,
       "name": "registerPackageInstallerSessionCallback(java.util.concurrent.Executor,android.content.pm.PackageInstaller.SessionCallback)"
+    },
+    "setActivityEnabled(android.os.UserHandle,android.content.ComponentName)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "componentName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setActivityEnabled(android.os.UserHandle,android.content.ComponentName)",
+      "documentation": "Sets an activity referenced by ComponentName as enabled, to be checked by {@link\n#isActivityEnabled(ComponentName, UserHandle)}.\n\n@param userHandle the user handle to be set.\n@param componentName the component name of the activity to be enabled.\n"
     },
     "setHasShortcutHostPermission(boolean)": {
       "isImplementation": false,

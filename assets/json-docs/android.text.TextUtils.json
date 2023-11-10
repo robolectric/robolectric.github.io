@@ -25,5 +25,5 @@
     "org.robolectric.annotation.Implements"
   ],
   "name": "org.robolectric.shadows.ShadowTextUtils",
-  "documentation": "Implement {@lint TextUtils#ellipsize} by truncating the text.\n"
+  "documentation": "Implement {@link TextUtils#ellipsize} by truncating the text. "
 }

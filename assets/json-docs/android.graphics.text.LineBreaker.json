@@ -141,7 +141,26 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nInit(int,int,boolean,int[])"
+    },
+    "nInit(int,int,boolean,int[],boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "breakStrategy",
+        "hyphenationFrequency",
+        "isJustified",
+        "indents",
+        "useBoundsForWidth"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "nInit(int,int,boolean,int[],boolean)"
     }
   },
   "imports": [
@@ -154,6 +173,8 @@
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.LineBreakerNatives",
     "org.robolectric.shadows.ShadowNativeLineBreaker.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
+    "org.robolectric.versioning.AndroidVersions.V",
     "org.robolectric.shadows.ShadowNativeLineBreaker.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeLineBreaker",

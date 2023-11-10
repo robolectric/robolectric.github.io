@@ -12,6 +12,17 @@
       "exceptions": [],
       "name": "__constructor__(android.os.ParcelFileDescriptor)"
     },
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "__staticInitializer__()"
+    },
     "close()": {
       "isImplementation": true,
       "modifiers": [
@@ -51,6 +62,18 @@
       "minSdk": 19,
       "name": "createReliablePipe()"
     },
+    "dup()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "dup()"
+    },
     "getFd()": {
       "isImplementation": true,
       "modifiers": [
@@ -60,6 +83,16 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getFd()"
+    },
+    "getFile()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "java.io.RandomAccessFile",
+      "exceptions": [],
+      "name": "getFile()"
     },
     "getFileDescriptor()": {
       "isImplementation": true,
@@ -93,6 +126,17 @@
       "returnType": "long",
       "exceptions": [],
       "name": "getStatSize()"
+    },
+    "newParcelFileDescriptor()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [],
+      "name": "newParcelFileDescriptor()"
     },
     "open(java.io.File,int)": {
       "isImplementation": true,
@@ -128,32 +172,66 @@
       ],
       "minSdk": 19,
       "name": "open(java.io.File,int,android.os.Handler,android.os.ParcelFileDescriptor.OnCloseListener)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
+    },
+    "writeToParcel(android.os.Parcel,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "out",
+        "flags"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "writeToParcel(android.os.Parcel,int)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.KITKAT",
+    "android.os.Parcelable.PARCELABLE_WRITE_RETURN_VALUE",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.SuppressLint",
     "android.os.Handler",
+    "android.os.Parcel",
     "android.os.ParcelFileDescriptor",
+    "android.os.Parcelable",
     "java.io.File",
     "java.io.FileDescriptor",
     "java.io.FileNotFoundException",
     "java.io.IOException",
     "java.io.RandomAccessFile",
+    "java.nio.file.Files",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.Map",
     "java.util.UUID",
+    "java.util.concurrent.atomic.AtomicInteger",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowParcelFileDescriptor.FileDescriptorFromParcelUnavailableException",
     "org.robolectric.shadows.ShadowParcelFileDescriptor.ParcelFileDescriptorReflector"
   ],
   "name": "org.robolectric.shadows.ShadowParcelFileDescriptor"

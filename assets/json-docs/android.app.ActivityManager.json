@@ -365,7 +365,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setAppTasks(java.util.List\u003candroid.app.ActivityManager.AppTask\u003e)",
-      "documentation": "Sets the values to be returned by {@link #getAppTasks()}.\n\n@see #getAppTasks()\n@param tasks List of app tasks.\n"
+      "documentation": "Sets the values to be returned by {@link #getAppTasks()}.\n\n@see #getAppTasks()\n@param appTasks List of app tasks.\n"
     },
     "setBackgroundRestricted(boolean)": {
       "isImplementation": false,

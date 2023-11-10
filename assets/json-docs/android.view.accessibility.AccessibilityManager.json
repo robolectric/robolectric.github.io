@@ -238,6 +238,30 @@
       "exceptions": [],
       "name": "setInstalledAccessibilityServiceList(java.util.List\u003candroid.accessibilityservice.AccessibilityServiceInfo\u003e)"
     },
+    "setInteractiveUiTimeout(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "interactiveUiTimeoutMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInteractiveUiTimeout(int)"
+    },
+    "setNonInteractiveUiTimeout(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "nonInteractiveUiTimeoutMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNonInteractiveUiTimeout(int)"
+    },
     "setTouchExplorationEnabled(boolean)": {
       "isImplementation": false,
       "modifiers": [
