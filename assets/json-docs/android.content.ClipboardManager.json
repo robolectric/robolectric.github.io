@@ -103,6 +103,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.util.reflector.Reflector.reflector",
@@ -110,12 +111,14 @@
     "android.content.ClipDescription",
     "android.content.ClipboardManager",
     "android.content.ClipboardManager.OnPrimaryClipChangedListener",
+    "android.os.SystemClock",
     "java.util.Collection",
     "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowClipboardManager.ClipboardManagerReflector"
   ],

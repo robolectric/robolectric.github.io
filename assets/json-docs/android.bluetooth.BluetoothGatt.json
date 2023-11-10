@@ -12,6 +12,19 @@
       "exceptions": [],
       "name": "addDiscoverableService(android.bluetooth.BluetoothGattService)"
     },
+    "allowCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "characteristic"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "allowCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic)",
+      "documentation": "Allows the incoming characteristic to be set to enable notification. "
+    },
     "close()": {
       "isImplementation": true,
       "modifiers": [
@@ -35,6 +48,19 @@
       "minSdk": 18,
       "name": "connect()",
       "documentation": "Connect to a remote device, and performs a {@link\nBluetoothGattCallback#onConnectionStateChange} if a {@link BluetoothGattCallback} has been set\nby {@link ShadowBluetoothGatt#setGattCallback}\n\n@return true, if a {@link BluetoothGattCallback} has been set by {@link\n    ShadowBluetoothGatt#setGattCallback}\n"
+    },
+    "disallowCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "characteristic"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "disallowCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic)",
+      "documentation": "Disallows the incoming characteristic to be set to enable notification. "
     },
     "disconnect()": {
       "isImplementation": true,
@@ -109,6 +135,20 @@
       "returnType": "byte[]",
       "exceptions": [],
       "name": "getLatestWrittenBytes()"
+    },
+    "getService(java.util.UUID)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uuid"
+      ],
+      "returnType": "android.bluetooth.BluetoothGattService",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getService(java.util.UUID)",
+      "documentation": "Overrides {@link BluetoothGatt#getService} to return a service with given UUID.\n\n@return a service with given UUID that have been discovered through {@link\n    ShadowBluetoothGatt#discoverServices}.\n"
     },
     "getServices()": {
       "isImplementation": true,
@@ -230,6 +270,21 @@
       "name": "requestConnectionPriority(int)",
       "documentation": "Request a connection parameter update.\n\n@param priority Request a specific connection priority. Must be one of {@link\n    BluetoothGatt#CONNECTION_PRIORITY_BALANCED}, {@link BluetoothGatt#CONNECTION_PRIORITY_HIGH}\n    or {@link BluetoothGatt#CONNECTION_PRIORITY_LOW_POWER}.\n@return true if operation is successful.\n@throws IllegalArgumentException If the parameters are outside of their specified range.\n"
     },
+    "setCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "characteristic",
+        "enable"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic,boolean)",
+      "documentation": "Overrides {@link BluetoothGatt#setCharacteristicNotification} so it returns true (false) if\nallowCharacteristicNotification (disallowCharacteristicNotification) is called.\n"
+    },
     "setGattCallback(android.bluetooth.BluetoothGattCallback)": {
       "isImplementation": false,
       "modifiers": [
@@ -274,6 +329,8 @@
     "java.util.HashSet",
     "java.util.List",
     "java.util.Set",
+    "java.util.UUID",
+    "javax.annotation.Nullable",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

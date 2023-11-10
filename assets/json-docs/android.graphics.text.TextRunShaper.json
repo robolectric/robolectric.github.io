@@ -1,0 +1,54 @@
+{
+  "methods": {
+    "nativeShapeTextRun(char[],int,int,int,int,boolean,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "text",
+        "start",
+        "count",
+        "contextStart",
+        "contextCount",
+        "isRtl",
+        "nativePaint"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nativeShapeTextRun(char[],int,int,int,int,boolean,long)"
+    },
+    "nativeShapeTextRun(java.lang.String,int,int,int,int,boolean,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "text",
+        "start",
+        "count",
+        "contextStart",
+        "contextCount",
+        "isRtl",
+        "nativePaint"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nativeShapeTextRun(java.lang.String,int,int,int,int,boolean,long)"
+    }
+  },
+  "imports": [
+    "android.graphics.text.MeasuredText",
+    "android.graphics.text.TextRunShaper",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.TextRunShaperNatives",
+    "org.robolectric.shadows.ShadowNativeTextRunShaper.Picker",
+    "org.robolectric.versioning.AndroidVersions.S",
+    "org.robolectric.shadows.ShadowNativeTextRunShaper.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativeTextRunShaper",
+  "documentation": "Shadow for {@link TextRunShaper} that is backed by native code "
+}

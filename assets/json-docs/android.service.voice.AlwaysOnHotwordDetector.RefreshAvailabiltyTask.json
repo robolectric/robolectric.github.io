@@ -1,0 +1,79 @@
+{
+  "methods": {
+    "internalGetInitialAvailability()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "internalGetInitialAvailability()"
+    },
+    "internalGetIsEnrolled(int,java.util.Locale)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "keyphraseId",
+        "locale"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "internalGetIsEnrolled(int,java.util.Locale)"
+    },
+    "internalUpdateEnrolledKeyphraseMetadata()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "internalUpdateEnrolledKeyphraseMetadata()"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
+    "android.service.voice.AlwaysOnHotwordDetector.EventPayload.DATA_FORMAT_TRIGGER_AUDIO",
+    "android.service.voice.AlwaysOnHotwordDetector.STATE_KEYPHRASE_ENROLLED",
+    "org.robolectric.shadow.api.Shadow.invokeConstructor",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.hardware.soundtrigger.KeyphraseEnrollmentInfo",
+    "android.hardware.soundtrigger.KeyphraseMetadata",
+    "android.hardware.soundtrigger.SoundTrigger.KeyphraseRecognitionExtra",
+    "android.media.AudioFormat",
+    "android.os.ParcelFileDescriptor",
+    "android.os.PersistableBundle",
+    "android.os.SharedMemory",
+    "android.service.voice.AlwaysOnHotwordDetector",
+    "android.service.voice.AlwaysOnHotwordDetector.Callback",
+    "android.service.voice.AlwaysOnHotwordDetector.EventPayload",
+    "android.service.voice.HotwordDetectedResult",
+    "android.service.voice.IVoiceInteractionService",
+    "com.android.internal.app.IVoiceInteractionManagerService",
+    "java.util.ArrayList",
+    "java.util.List",
+    "java.util.Locale",
+    "java.util.concurrent.Executor",
+    "javax.annotation.Nonnull",
+    "javax.annotation.Nullable",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Constructor",
+    "org.robolectric.util.reflector.ForType"
+  ],
+  "name": "org.robolectric.shadows.ShadowAlwaysOnHotwordDetector.ShadowRefreshAvailabilityTask",
+  "documentation": "Shadow for AsyncTask kicked off in the constructor of AlwaysOnHotwordDetector. "
+}

@@ -170,6 +170,18 @@
       "exceptions": [],
       "name": "enforceActiveAdmin(android.content.ComponentName)"
     },
+    "enforceCallerDelegated(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "targetScope"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "enforceCallerDelegated(java.lang.String)"
+    },
     "enforceDeviceOwnerOrProfileOwner(android.content.ComponentName)": {
       "isImplementation": false,
       "modifiers": [
@@ -367,6 +379,18 @@
       "exceptions": [],
       "minSdk": 33,
       "name": "getDevicePolicyManagementRoleHolderPackage()"
+    },
+    "getDevicePolicyState()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "getDevicePolicyState()",
+      "documentation": "Return a stub value set by {@link #setDevicePolicyState(DevicePolicyState policyState)} "
     },
     "getKeyguardDisabledFeatures(android.content.ComponentName)": {
       "isImplementation": true,
@@ -882,6 +906,19 @@
       "exceptions": [],
       "name": "hasGrantedPolicy(android.content.ComponentName,int)"
     },
+    "hasPackage(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "caller",
+        "packageName"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "hasPackage(java.lang.String,java.lang.String)"
+    },
     "init(android.content.Context)": {
       "isImplementation": false,
       "modifiers": [
@@ -1337,6 +1374,21 @@
       "exceptions": [],
       "name": "setCameraDisabled(android.content.ComponentName,boolean)"
     },
+    "setDelegatedScopes(android.content.ComponentName,java.lang.String,java.util.List\u003cjava.lang.String\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "admin",
+        "delegatePackage",
+        "scopes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "setDelegatedScopes(android.content.ComponentName,java.lang.String,java.util.List\u003cjava.lang.String\u003e)"
+    },
     "setDeviceOwner(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
@@ -1364,6 +1416,19 @@
       "exceptions": [],
       "name": "setDevicePolicyManagementRoleHolderPackage(java.lang.String)",
       "documentation": "Sets the package name of the device policy management role holder.\n\n@see #getDevicePolicyManagementRoleHolderPackage()\n"
+    },
+    "setDevicePolicyState(java.lang.Object)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "policyState"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDevicePolicyState(java.lang.Object)",
+      "documentation": "Set the {@link DevicePolicyState} which can be constructed from {@link\nDevicePolicyStateBuilder}\n"
     },
     "setDeviceProvisioned(boolean)": {
       "isImplementation": false,
@@ -2060,6 +2125,7 @@
     "android.app.admin.DevicePolicyManager.NearbyStreamingPolicy",
     "android.app.admin.DevicePolicyManager.PasswordComplexity",
     "android.app.admin.DevicePolicyManager.UserProvisioningState",
+    "android.app.admin.DevicePolicyState",
     "android.app.admin.IDevicePolicyManager",
     "android.app.admin.SystemUpdatePolicy",
     "android.content.ComponentName",
@@ -2080,6 +2146,7 @@
     "android.text.TextUtils",
     "com.android.internal.util.Preconditions",
     "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.ImmutableSet",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.Collection",
@@ -2095,6 +2162,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowDevicePolicyManager.PackageAndPermission"
   ],
   "name": "org.robolectric.shadows.ShadowDevicePolicyManager"

@@ -59,6 +59,19 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "setErrorMessage(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "message"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setErrorMessage(java.lang.String)",
+      "documentation": "Sets the value to be passed to {@link GeocodeListener#onError(String)}. "
+    },
     "setFromLocation(java.util.List\u003candroid.location.Address\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -96,6 +109,7 @@
     "java.io.IOException",
     "java.util.ArrayList",
     "java.util.List",
+    "javax.annotation.Nullable",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter"

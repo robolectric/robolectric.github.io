@@ -1,0 +1,51 @@
+{
+  "methods": {
+    "getHalDataspace(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "imageFormat"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHalDataspace(int)"
+    },
+    "getHalFormat(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "imageFormat"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getHalFormat(int)"
+    },
+    "getPublicFormat(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "imageFormat",
+        "dataspace"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPublicFormat(int,int)"
+    }
+  },
+  "imports": [
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements"
+  ],
+  "name": "org.robolectric.shadows.ShadowPublicFormatUtils",
+  "documentation": "Shadow for private class PublicFormatUtils.\n\n\u003cp\u003eIt converts between the \"legacy\" Image \"public format\" (S) and the newer \"hal format\" (T).\n\n\u003cp\u003eReference:\nhttps://cs.android.com/android/platform/superproject/+/android-13.0.0_r1:frameworks/base/media/java/android/media/PublicFormatUtils.java\nhttps://cs.android.com/android/platform/superproject/+/android-13.0.0_r1:frameworks/base/libs/hostgraphics/PublicFormat.cpp\n"
+}

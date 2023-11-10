@@ -1,5 +1,100 @@
 {
   "methods": {
+    "addSupportedCloudMediaProviderAuthorities(java.util.List\u003cjava.lang.String\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "authorities"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addSupportedCloudMediaProviderAuthorities(java.util.List\u003cjava.lang.String\u003e)",
+      "documentation": "Mutator method to add the input {@code authorities} to the list of supported cloud media\nprovider authorities.\n"
+    },
+    "clearCloudMediaChangedEventList()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearCloudMediaChangedEventList()"
+    },
+    "clearSupportedCloudMediaProviderAuthorities()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearSupportedCloudMediaProviderAuthorities()",
+      "documentation": "Mutator method to clear the list of supported cloud media provider authorities. "
+    },
+    "getCloudMediaChangedEvents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "com.google.common.collect.ImmutableList\u003corg.robolectric.shadows.ShadowMediaStore.CloudMediaChangedEvent\u003e",
+      "exceptions": [],
+      "name": "getCloudMediaChangedEvents()",
+      "documentation": "Returns an {@link ImmutableList} of all {@link CloudMediaChangedEvent} objects that {@link\nMediaStore} has been notified of.\n"
+    },
+    "isCurrentCloudMediaProviderAuthority(android.content.ContentResolver,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "resolver",
+        "authority"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "isCurrentCloudMediaProviderAuthority(android.content.ContentResolver,java.lang.String)"
+    },
+    "isSupportedCloudMediaProviderAuthority(android.content.ContentResolver,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "resolver",
+        "authority"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "isSupportedCloudMediaProviderAuthority(android.content.ContentResolver,java.lang.String)"
+    },
+    "notifyCloudMediaChangedEvent(android.content.ContentResolver,java.lang.String,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "resolver",
+        "authority",
+        "currentMediaCollectionId"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "notifyCloudMediaChangedEvent(android.content.ContentResolver,java.lang.String,java.lang.String)"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -10,6 +105,20 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "setCurrentCloudMediaProviderAuthority(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "authority"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCurrentCloudMediaProviderAuthority(java.lang.String)",
+      "documentation": "Mutator method to set the value of the current cloud media provider authority. "
     },
     "setStubBitmapForThumbnails(android.graphics.Bitmap)": {
       "isImplementation": false,
@@ -26,12 +135,19 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.NonNull",
+    "android.annotation.Nullable",
     "android.content.ContentResolver",
     "android.graphics.Bitmap",
     "android.graphics.BitmapFactory.Options",
     "android.net.Uri",
     "android.provider.MediaStore",
+    "com.google.auto.value.AutoValue",
+    "com.google.common.collect.ImmutableList",
+    "java.util.ArrayList",
+    "java.util.List",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
@@ -40,7 +156,8 @@
     "org.robolectric.shadows.ShadowMediaStore.ShadowImages",
     "org.robolectric.shadows.ShadowMediaStore.ShadowVideo",
     "org.robolectric.shadows.ShadowMediaStore.ImagesThumbnailsReflector",
-    "org.robolectric.shadows.ShadowMediaStore.VideoThumbnailsReflector"
+    "org.robolectric.shadows.ShadowMediaStore.VideoThumbnailsReflector",
+    "org.robolectric.shadows.ShadowMediaStore.CloudMediaChangedEvent"
   ],
   "name": "org.robolectric.shadows.ShadowMediaStore",
   "documentation": "Shadow for {@link MediaStore}. "

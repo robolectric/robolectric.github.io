@@ -1,5 +1,17 @@
 {
   "methods": {
+    "addAllowedInLowPowerStandby(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "feature"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addAllowedInLowPowerStandby(java.lang.String)"
+    },
     "addThermalStatusListener(java.lang.Object)": {
       "isImplementation": true,
       "modifiers": [
@@ -114,10 +126,10 @@
         "public"
       ],
       "params": [],
-      "returnType": "com.google.common.collect.ImmutableList\u003cjava.lang.String\u003e",
+      "returnType": "java.util.List\u003cjava.lang.String\u003e",
       "exceptions": [],
       "name": "getRebootReasons()",
-      "documentation": "Returns the list of reasons for each reboot, in chronological order. "
+      "documentation": "Returns the list of reasons for each reboot, in chronological order. May contain {@code null}.\n"
     },
     "getThermalStatusListeners()": {
       "isImplementation": false,
@@ -140,6 +152,19 @@
       "exceptions": [],
       "name": "getTimesRebooted()",
       "documentation": "Returns the number of times {@link #reboot(String)} was called. "
+    },
+    "isAllowedInLowPowerStandby(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "feature"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "isAllowedInLowPowerStandby(java.lang.String)"
     },
     "isAmbientDisplayAvailable()": {
       "isImplementation": true,
@@ -200,6 +225,17 @@
       "minSdk": 33,
       "name": "isDeviceLightIdleMode()"
     },
+    "isExemptFromLowPowerStandby()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "isExemptFromLowPowerStandby()"
+    },
     "isIgnoringBatteryOptimizations(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -235,6 +271,28 @@
       "minSdk": 24,
       "name": "isLightDeviceIdleMode()",
       "documentation": "@return false by default, or the value specified via {@link #setIsLightDeviceIdleMode(boolean)}\n"
+    },
+    "isLowPowerStandbyEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "isLowPowerStandbyEnabled()"
+    },
+    "isLowPowerStandbySupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "isLowPowerStandbySupported()"
     },
     "isPowerSaveMode()": {
       "isImplementation": true,
@@ -281,6 +339,19 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "isWakeLockLevelSupported(int)"
+    },
+    "newLowPowerStandbyPortsLock(java.util.List\u003candroid.os.PowerManager.LowPowerStandbyPortDescription\u003e)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "ports"
+      ],
+      "returnType": "java.lang.Object",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "newLowPowerStandbyPortsLock(java.util.List\u003candroid.os.PowerManager.LowPowerStandbyPortDescription\u003e)"
     },
     "newWakeLock(int,java.lang.String)": {
       "isImplementation": true,
@@ -388,6 +459,18 @@
       "name": "setCurrentThermalStatus(int)",
       "documentation": "Sets the value returned by {@link #getCurrentThermalStatus()}. "
     },
+    "setExemptFromLowPowerStandby(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "exemptFromLowPowerStandby"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setExemptFromLowPowerStandby(boolean)"
+    },
     "setIgnoringBatteryOptimizations(java.lang.String,boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -489,7 +572,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setIsScreenOn(boolean)",
-      "documentation": "@deprecated Use {@link #setIsInteractive(boolean)} instead.\n"
+      "documentation": "@deprecated Use {@link #turnScreenOn(boolean)} instead.\n"
     },
     "setIsWakeLockLevelSupported(int,boolean)": {
       "isImplementation": false,
@@ -516,6 +599,31 @@
       "exceptions": [],
       "name": "setLocationPowerSaveMode(int)",
       "documentation": "Sets the value returned by {@link #getLocationPowerSaveMode()} when battery saver is on. "
+    },
+    "setLowPowerStandbyEnabled(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "lowPowerStandbyEnabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "setLowPowerStandbyEnabled(boolean)"
+    },
+    "setLowPowerStandbySupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lowPowerStandbySupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLowPowerStandbySupported(boolean)"
     },
     "suppressAmbientDisplay(java.lang.String,boolean)": {
       "isImplementation": true,
@@ -559,24 +667,26 @@
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
     "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
     "com.google.common.base.Preconditions.checkState",
     "java.util.Comparator.comparing",
     "java.util.stream.Collectors.toCollection",
     "org.robolectric.util.reflector.Reflector.reflector",
-    "android.Manifest.permission",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
+    "android.annotation.TargetApi",
     "android.content.Context",
     "android.content.Intent",
     "android.os.Binder",
     "android.os.Build.VERSION_CODES",
     "android.os.PowerManager",
+    "android.os.PowerManager.LowPowerStandbyPortDescription",
+    "android.os.PowerManager.LowPowerStandbyPortsLock",
     "android.os.PowerManager.WakeLock",
     "android.os.SystemClock",
     "android.os.WorkSource",
-    "com.google.common.collect.ImmutableList",
     "com.google.common.collect.ImmutableSet",
     "java.time.Duration",
     "java.util.ArrayList",
@@ -597,6 +707,7 @@
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowPowerManager.ShadowWakeLock",
+    "org.robolectric.shadows.ShadowPowerManager.ShadowLowPowerStandbyPortsLock",
     "org.robolectric.shadows.ShadowPowerManager.ReflectorPowerManager"
   ],
   "name": "org.robolectric.shadows.ShadowPowerManager",

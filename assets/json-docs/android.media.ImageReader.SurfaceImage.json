@@ -47,7 +47,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.CUR_DEVELOPMENT",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.S_V2",
     "android.os.Build.VERSION_CODES.TIRAMISU",
@@ -70,7 +69,8 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.reflector.Accessor",
-    "org.robolectric.util.reflector.ForType"
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.versioning.AndroidVersions.U"
   ],
   "name": "org.robolectric.shadows.ShadowImageReader.ShadowSurfaceImage",
   "documentation": "Shadow for {@link android.media.Image} "

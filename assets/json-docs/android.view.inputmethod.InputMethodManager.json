@@ -341,6 +341,23 @@
       "maxSdk": 33,
       "name": "showSoftInput(android.view.View,int,android.os.ResultReceiver,int)"
     },
+    "showSoftInput(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "view",
+        "statsToken",
+        "flags",
+        "resultReceiver",
+        "reason"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "showSoftInput(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
     "startInputInner(int,android.os.IBinder,int,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -406,9 +423,11 @@
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.Static",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowInputMethodManager.SoftInputVisibilityChangeHandler",
     "org.robolectric.shadows.ShadowInputMethodManager.PrivateCommandListener",
     "org.robolectric.shadows.ShadowInputMethodManager._InputMethodManager_"
   ],
-  "name": "org.robolectric.shadows.ShadowInputMethodManager"
+  "name": "org.robolectric.shadows.ShadowInputMethodManager",
+  "documentation": "Shadow for InputMethodManager. "
 }

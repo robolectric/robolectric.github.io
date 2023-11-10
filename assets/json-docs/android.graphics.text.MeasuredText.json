@@ -85,6 +85,8 @@
     "org.robolectric.nativeruntime.MeasuredTextBuilderNatives",
     "org.robolectric.nativeruntime.MeasuredTextNatives",
     "org.robolectric.shadows.ShadowNativeMeasuredText.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
+    "org.robolectric.versioning.AndroidVersions.V",
     "org.robolectric.shadows.ShadowNativeMeasuredText.ShadowNativeMeasuredTextBuilder",
     "org.robolectric.shadows.ShadowNativeMeasuredText.Picker"
   ],

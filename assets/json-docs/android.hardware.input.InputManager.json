@@ -25,6 +25,16 @@
       "name": "getInputDeviceIds()",
       "documentation": "Used in {@link InputDevice#getDeviceIds()} "
     },
+    "getInputDevices()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "android.util.SparseArray\u003candroid.view.InputDevice\u003e",
+      "exceptions": [],
+      "name": "getInputDevices()"
+    },
     "injectInputEvent(android.view.InputEvent,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -38,6 +48,19 @@
       "exceptions": [],
       "name": "injectInputEvent(android.view.InputEvent,int)"
     },
+    "populateInputDevicesLocked()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [
+        "java.lang.ClassNotFoundException"
+      ],
+      "maxSdk": 33,
+      "name": "populateInputDevicesLocked()"
+    },
     "reset()": {
       "isImplementation": false,
       "modifiers": [
@@ -48,6 +71,18 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "setInputDevices(android.util.SparseArray\u003candroid.view.InputDevice\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "devices"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setInputDevices(android.util.SparseArray\u003candroid.view.InputDevice\u003e)"
     },
     "verifyInputEvent(java.lang.Object)": {
       "isImplementation": true,
@@ -65,10 +100,14 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION.SDK_INT",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "java.util.concurrent.TimeUnit.MILLISECONDS",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.hardware.input.InputManager",
+    "android.util.SparseArray",
     "android.view.InputDevice",
     "android.view.InputEvent",
     "android.view.KeyEvent",
@@ -77,8 +116,13 @@
     "android.view.VerifiedMotionEvent",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.util.ReflectionHelpers"
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.versioning.AndroidVersions.U",
+    "org.robolectric.shadows.ShadowInputManager.InputManagerReflector"
   ],
   "name": "org.robolectric.shadows.ShadowInputManager",
   "documentation": "Shadow for {@link InputManager} "

@@ -23,6 +23,21 @@
       "name": "getConfigForSubId(int)",
       "documentation": "Returns {@link android.os.PersistableBundle} previously set by {@link #overrideConfig} or\n{@link #setConfigForSubId(int, PersistableBundle)}, or default values for an invalid {@code\nsubId}.\n"
     },
+    "getConfigForSubId(int,java.lang.String...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "subId",
+        "keys"
+      ],
+      "returnType": "android.os.PersistableBundle",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "getConfigForSubId(int,java.lang.String...)",
+      "documentation": "@see #getConfigForSubId(int). Currently the \u0027keys\u0027 parameter is ignored.\n"
+    },
     "overrideConfig(int,android.os.PersistableBundle)": {
       "isImplementation": true,
       "modifiers": [
@@ -71,10 +86,12 @@
     "android.annotation.Nullable",
     "android.os.PersistableBundle",
     "android.telephony.CarrierConfigManager",
+    "com.google.common.base.Preconditions",
     "java.util.HashMap",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.versioning.AndroidVersions.U"
   ],
   "name": "org.robolectric.shadows.ShadowCarrierConfigManager"
 }

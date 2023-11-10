@@ -35,7 +35,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 34,
       "name": "_play(int,float,float,int,int,float,int)"
     },
     "clearPlayed()": {
@@ -227,7 +227,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.CUR_DEVELOPMENT",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
@@ -249,6 +248,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowSoundPool.Playback"
   ],
   "name": "org.robolectric.shadows.ShadowSoundPool"

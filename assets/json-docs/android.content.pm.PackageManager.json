@@ -290,7 +290,8 @@
     "addPackage(android.content.pm.PackageInfo)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "final"
       ],
       "params": [
         "packageInfo"
@@ -298,7 +299,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addPackage(android.content.pm.PackageInfo)",
-      "documentation": "This method is getting renamed to {link {@link #installPackage}. "
+      "documentation": "@deprecated Use {@link #installPackage} instead.\n"
     },
     "addPackage(android.content.pm.PackageInfo,android.content.pm.PackageStats)": {
       "isImplementation": false,
@@ -1459,6 +1460,7 @@
     "com.google.common.base.Preconditions",
     "com.google.common.collect.HashMultimap",
     "com.google.common.collect.Multimap",
+    "com.google.errorprone.annotations.InlineMe",
     "java.lang.reflect.Array",
     "java.util.ArrayList",
     "java.util.Arrays",

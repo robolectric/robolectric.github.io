@@ -1,5 +1,17 @@
 {
   "methods": {
+    "createMockTag()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "android.nfc.Tag",
+      "exceptions": [],
+      "name": "createMockTag()",
+      "documentation": "Factory method for creating a mock NfcAdapter.Tag "
+    },
     "disable()": {
       "isImplementation": true,
       "modifiers": [
@@ -289,6 +301,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.Activity",
     "android.app.PendingIntent",
@@ -299,7 +312,6 @@
     "android.nfc.NfcAdapter",
     "android.nfc.Tag",
     "android.os.Build",
-    "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "java.util.Map",
     "org.robolectric.RuntimeEnvironment",
@@ -307,11 +319,14 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Accessor",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.Static",
-    "org.robolectric.shadows.ShadowNfcAdapter.NfcAdapterReflector"
+    "org.robolectric.shadows.ShadowNfcAdapter.NfcAdapterReflector",
+    "org.robolectric.shadows.ShadowNfcAdapter.TagReflector"
   ],
   "name": "org.robolectric.shadows.ShadowNfcAdapter",
   "documentation": "Shadow implementation of {@link NfcAdapter}. "

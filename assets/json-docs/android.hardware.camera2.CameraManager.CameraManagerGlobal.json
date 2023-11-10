@@ -44,7 +44,8 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Accessor",
-    "org.robolectric.util.reflector.ForType"
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.versioning.AndroidVersions.U"
   ],
   "name": "org.robolectric.shadows.ShadowCameraManager.ShadowCameraManagerGlobal",
   "documentation": "Shadow class for internal class CameraManager$CameraManagerGlobal "

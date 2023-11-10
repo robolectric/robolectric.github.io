@@ -106,7 +106,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addMediaInfo(org.robolectric.shadows.util.DataSource,org.robolectric.shadows.ShadowMediaPlayer.MediaInfo)",
-      "documentation": "Adds a {@link MediaInfo} for a {@link DataSource}.\n\n\u003cp\u003eThis overrides any {@link MediaInfoProvider} previously set by calling {@link\n#setMediaInfoProvider}, i.e., the provider will not be used for any {@link DataSource}.\n"
+      "documentation": "Adds a {@link MediaInfo} for a {@link DataSource}.\n"
     },
     "attachAuxEffect(int)": {
       "isImplementation": true,
@@ -1080,6 +1080,7 @@
     "java.util.List",
     "java.util.Map",
     "java.util.Map.Entry",
+    "java.util.Optional",
     "java.util.Random",
     "java.util.TreeMap",
     "org.robolectric.annotation.Implementation",

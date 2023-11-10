@@ -1,0 +1,11 @@
+{
+  "methods": {},
+  "imports": [
+    "android.net.wifi.ScanResult",
+    "android.os.Build.VERSION_CODES",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.shadows.ShadowInformationElement.Builder"
+  ],
+  "name": "org.robolectric.shadows.ShadowInformationElement",
+  "documentation": "Shadow for {@link android.net.wifi.ScanResult.InformationElement}. "
+}

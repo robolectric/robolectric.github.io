@@ -457,6 +457,16 @@
       "name": "isServiceIntent()",
       "documentation": "@return {@code true} iff sending this PendingIntent will start a service\n@deprecated prefer {@link #isService} which was added to {@link PendingIntent} in API 31\n    (Android S).\n"
     },
+    "isTargetedToPackage()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isTargetedToPackage()"
+    },
     "readPendingIntentOrNullFromParcel(android.os.Parcel)": {
       "isImplementation": true,
       "modifiers": [

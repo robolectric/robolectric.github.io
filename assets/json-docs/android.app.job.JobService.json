@@ -34,14 +34,65 @@
       "returnType": "void",
       "exceptions": [],
       "name": "jobFinished(android.app.job.JobParameters,boolean)"
+    },
+    "setNotification(android.app.job.JobParameters,int,android.app.Notification,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "params",
+        "notificationId",
+        "notification",
+        "jobEndNotificationPolicy"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "setNotification(android.app.job.JobParameters,int,android.app.Notification,int)",
+      "documentation": "Stubbed out for now, as the real implementation throws an NPE when executed in Robolectric. "
+    },
+    "updateEstimatedNetworkBytes(android.app.job.JobParameters,long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "params",
+        "downloadBytes",
+        "uploadBytes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "updateEstimatedNetworkBytes(android.app.job.JobParameters,long,long)",
+      "documentation": "Stubbed out for now, as the real implementation throws an NPE when executed in Robolectric. "
+    },
+    "updateTransferredNetworkBytes(android.app.job.JobParameters,long,long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "params",
+        "downloadBytes",
+        "uploadBytes"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "updateTransferredNetworkBytes(android.app.job.JobParameters,long,long)",
+      "documentation": "Stubbed out for now, as the real implementation throws an NPE when executed in Robolectric. "
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.app.Notification",
     "android.app.job.JobParameters",
     "android.app.job.JobService",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.versioning.AndroidVersions.U"
   ],
   "name": "org.robolectric.shadows.ShadowJobService"
 }

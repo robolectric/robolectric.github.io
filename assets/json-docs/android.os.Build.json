@@ -35,6 +35,20 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "setBoard(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "board"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setBoard(java.lang.String)",
+      "documentation": "Sets the value of the {@link Build#BOARD} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
     "setBrand(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [

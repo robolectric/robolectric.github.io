@@ -53,6 +53,21 @@
       "minSdk": 33,
       "name": "associate(android.companion.AssociationRequest,java.util.concurrent.Executor,android.companion.CompanionDeviceManager.Callback)"
     },
+    "associate(java.lang.String,android.net.MacAddress,byte[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "macAddress",
+        "certificate"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "associate(java.lang.String,android.net.MacAddress,byte[])"
+    },
     "checkHasAssociation()": {
       "isImplementation": false,
       "modifiers": [
@@ -62,6 +77,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "checkHasAssociation()"
+    },
+    "checkPermission(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "permission"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "checkPermission(java.lang.String)"
     },
     "createAssociationInfo(org.robolectric.shadows.ShadowCompanionDeviceManager.RoboAssociationInfo)": {
       "isImplementation": false,
@@ -131,7 +159,8 @@
       "params": [],
       "returnType": "android.companion.CompanionDeviceManager.Callback",
       "exceptions": [],
-      "name": "getLastAssociationCallback()"
+      "name": "getLastAssociationCallback()",
+      "documentation": "This method will return the last {@link CompanionDeviceManager.Callback} passed to {@code\nCompanionDeviceManager#associate(AssociationRequest, CompanionDeviceManager.Callback, Handler)}\nor {@code CompanionDeviceManager#associate(AssociationRequest, Executor,\nCompanionDeviceManager.Callback, Handler)}.\n\n\u003cp\u003eNote that the value returned is only changed when calling {@code associate} and will be set\nif that method throws an exception. Moreover, this value will unchanged if disassociate is\ncalled.\n"
     },
     "getLastAssociationRequest()": {
       "isImplementation": false,
@@ -141,7 +170,19 @@
       "params": [],
       "returnType": "android.companion.AssociationRequest",
       "exceptions": [],
-      "name": "getLastAssociationRequest()"
+      "name": "getLastAssociationRequest()",
+      "documentation": "This method will return the last {@link AssociationRequest} passed to {@code\nCompanionDeviceManager#associate(AssociationRequest, CompanionDeviceManager.Callback, Handler)}\nor {@code CompanionDeviceManager#associate(AssociationRequest, Executor,\nCompanionDeviceManager.Callback, Handler)}.\n\n\u003cp\u003eNote that the value returned is only changed when calling {@code associate} and will be set\nif that method throws an exception. Moreover, this value will unchanged if disassociate is\ncalled.\n"
+    },
+    "getLastObservingDevicePresenceDeviceAddress()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getLastObservingDevicePresenceDeviceAddress()",
+      "documentation": "Returns the last device address passed to {@link\nCompanionDeviceManager#startObservingDevicePresence(String)}.\n\n\u003cp\u003eNote that the value returned is only changed when calling {@link\nCompanionDeviceManager#startObservingDevicePresence(String)} and will still be set in the event\nthat this method throws an exception. Moreover, this value will unchanged if disassociate is\ncalled.\n"
     },
     "getLastRequestedNotificationAccess()": {
       "isImplementation": false,
@@ -151,7 +192,19 @@
       "params": [],
       "returnType": "android.content.ComponentName",
       "exceptions": [],
-      "name": "getLastRequestedNotificationAccess()"
+      "name": "getLastRequestedNotificationAccess()",
+      "documentation": "If an association is set, this method will return the last {@link ComponentName} passed to\n{@code CompanionDeviceManager#requestNotificationAccess(ComponentName)}.\n"
+    },
+    "getLastSystemApiAssociationMacAddress()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.MacAddress",
+      "exceptions": [],
+      "name": "getLastSystemApiAssociationMacAddress()",
+      "documentation": "Returns the last {@link MacAddress} passed to systemApi {@code associate}.\n\n\u003cp\u003eNote that the value returned is only changed when calling {@code associate} and will be set\nif that method throws an exception. Moreover, this value will unchanged if disassociate is\ncalled.\n"
     },
     "getMyAssociations()": {
       "isImplementation": true,
@@ -200,15 +253,33 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setNotificationAccess(android.content.ComponentName,boolean)"
+    },
+    "startObservingDevicePresence(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "deviceAddress"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "startObservingDevicePresence(java.lang.String)"
     }
   },
   "imports": [
+    "android.content.pm.PackageManager.PERMISSION_GRANTED",
     "java.util.stream.Collectors.toCollection",
     "java.util.stream.Collectors.toList",
+    "android.Manifest.permission",
+    "android.app.ActivityThread",
     "android.companion.AssociationInfo",
     "android.companion.AssociationRequest",
     "android.companion.CompanionDeviceManager",
+    "android.companion.DeviceNotAssociatedException",
     "android.content.ComponentName",
+    "android.net.MacAddress",
     "android.os.Build.VERSION_CODES",
     "android.os.Handler",
     "androidx.annotation.Nullable",
@@ -220,8 +291,12 @@
     "java.util.List",
     "java.util.Set",
     "java.util.concurrent.Executor",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.shadow.api.Shadow",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowCompanionDeviceManager.RoboAssociationInfo"
   ],
   "name": "org.robolectric.shadows.ShadowCompanionDeviceManager",

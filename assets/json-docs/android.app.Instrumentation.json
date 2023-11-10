@@ -698,6 +698,20 @@
       "exceptions": [],
       "name": "registerReceiverWithContext(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int,android.content.Context)"
     },
+    "runOnMainSyncNoIdle(java.lang.Runnable)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "runnable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "runOnMainSyncNoIdle(java.lang.Runnable)",
+      "documentation": "Executes a runnable depending on the LooperMode.\n\n\u003cp\u003eFor INSTRUMENTATION_TEST mode, will post the runnable to the instrumentation thread and\nblock the caller\u0027s thread until that runnable is executed.\n\n\u003cp\u003eFor other modes, simply executes the runnable.\n\n@param runnable a runnable to be executed\n"
+    },
     "sendBroadcast(android.content.Intent,android.content.Context)": {
       "isImplementation": false,
       "modifiers": [],
@@ -1031,6 +1045,7 @@
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.LooperMode",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",

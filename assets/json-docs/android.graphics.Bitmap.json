@@ -168,6 +168,17 @@
       "exceptions": [],
       "name": "getDescription()"
     },
+    "hasGainmap()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "hasGainmap()"
+    },
     "setDescription(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -180,6 +191,19 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDescription(java.lang.String)"
+    },
+    "setGainmap(java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "gainmap"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "setGainmap(java.lang.Object)"
     },
     "setMutable(boolean)": {
       "isImplementation": false,
@@ -210,12 +234,21 @@
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Bitmap",
     "android.graphics.Matrix",
+    "com.google.common.base.Preconditions",
     "java.io.InputStream",
+    "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowBitmap.Picker",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.versioning.AndroidVersions.U",
+    "org.robolectric.shadows.ShadowBitmap.BitmapReflector",
     "org.robolectric.shadows.ShadowBitmap.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowBitmap",

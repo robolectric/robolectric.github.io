@@ -47,7 +47,9 @@
     "org.robolectric.res.Fs",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter"
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
+    "org.robolectric.versioning.AndroidVersions.T",
+    "org.robolectric.versioning.AndroidVersions.U"
   ],
   "name": "org.robolectric.shadows.ShadowLegacyTypeface.ShadowBuilder",
   "documentation": "Shadow for {@link Typeface.Builder} "

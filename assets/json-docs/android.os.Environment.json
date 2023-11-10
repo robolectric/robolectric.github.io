@@ -91,6 +91,18 @@
       "minSdk": 21,
       "name": "getExternalStorageState(java.io.File)"
     },
+    "getStorageDirectory()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "java.io.File",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "getStorageDirectory()"
+    },
     "getStorageState(java.io.File)": {
       "isImplementation": true,
       "modifiers": [
@@ -204,7 +216,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setExternalStorageDirectory(java.nio.file.Path)",
-      "documentation": "Sets the return value of {@link #getExternalStorageDirectory()}.  Note that\nthe default value provides a directory that is usable in the test environment.\nIf the test app uses this method to override that default directory, please\nclean up any files written to that directory, as the Robolectric environment\nwill not purge that directory when the test ends.\n\n@param directory Path to return from {@link #getExternalStorageDirectory()}.\n"
+      "documentation": "Sets the return value of {@link #getExternalStorageDirectory()}. Note that the default value\nprovides a directory that is usable in the test environment. If the test app uses this method\nto override that default directory, please clean up any files written to that directory, as the\nRobolectric environment will not purge that directory when the test ends.\n\n@param directory Path to return from {@link #getExternalStorageDirectory()}.\n"
     },
     "setExternalStorageEmulated(java.io.File,boolean)": {
       "isImplementation": false,
@@ -292,6 +304,20 @@
       "exceptions": [],
       "name": "setIsExternalStorageLegacy(boolean)",
       "documentation": "Sets the return value of {@link #isExternalStorageLegacy()} ()}.\n\n@param legacy Value to return from {@link #isExternalStorageLegacy()}.\n"
+    },
+    "setStorageDirectory(java.nio.file.Path)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "directory"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setStorageDirectory(java.nio.file.Path)",
+      "documentation": "Sets the return value of {@link #getStorageDirectory()}. This can be used for example, when\ntesting code paths that need to perform regex matching on this directory.\n\n\u003cp\u003eNote that the default value provides a directory that is usable in the test environment. If\nthe test app uses this method to override that default directory, please clean up any files\nwritten to that directory, as the Robolectric environment will not purge that directory when\nthe test ends.\n\n@param directory Path to return from {@link #getStorageDirectory()}.\n"
     }
   },
   "imports": [
@@ -301,6 +327,7 @@
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.os.Environment",
     "java.io.File",
@@ -318,9 +345,12 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
     "org.robolectric.shadows.ShadowEnvironment.ShadowUserEnvironment",
-    "org.robolectric.shadows.ShadowEnvironment._UserEnvironment_"
+    "org.robolectric.shadows.ShadowEnvironment._UserEnvironment_",
+    "org.robolectric.shadows.ShadowEnvironment.EnvironmentReflector"
   ],
   "name": "org.robolectric.shadows.ShadowEnvironment"
 }

@@ -1,5 +1,17 @@
 {
   "methods": {
+    "isStartInitiated()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isStartInitiated()",
+      "documentation": "Returns true if {@link #start()} was called and false if {@link #start()} was not called or\n{@link #stop()} was called.\n"
+    },
     "nAddAnimator(long,long,long,long,long,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -221,20 +233,45 @@
       "exceptions": [],
       "minSdk": 24,
       "name": "nStart(long,android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT,int)"
+    },
+    "start()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "start()"
+    },
+    "stop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stop()"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.O",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.drawable.AnimatedVectorDrawable",
     "android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.nativeruntime.AnimatedVectorDrawableNatives",
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable.Picker",
-    "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable.Picker"
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable.Picker",
+    "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable.AnimatedVectorDrawableReflector"
   ],
   "name": "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable",
   "documentation": "Shadow for {@link AnimatedVectorDrawable} that is backed by native code "

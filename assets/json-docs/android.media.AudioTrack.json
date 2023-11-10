@@ -1,5 +1,19 @@
 {
   "methods": {
+    "addAllowedNonPcmEncoding(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "encoding"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addAllowedNonPcmEncoding(int)",
+      "documentation": "Add a non-PCM encoding for which {@link AudioTrack} instances are allowed to be created.\n\n@param encoding One of {@link AudioFormat} {@code ENCODING_} constants that represents a\n    non-PCM encoding. If {@code encoding} is PCM, this method throws an {@link\n    IllegalArgumentException}.\n"
+    },
     "addAudioDataListener(org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener)": {
       "isImplementation": false,
       "modifiers": [
@@ -13,6 +27,45 @@
       "exceptions": [],
       "name": "addAudioDataListener(org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener)",
       "documentation": "Registers an {@link OnAudioDataWrittenListener} to the {@link ShadowAudioTrack}.\n\n@param listener The {@link OnAudioDataWrittenListener} to be registered.\n"
+    },
+    "addDirectPlaybackSupport(android.media.AudioFormat,android.media.AudioAttributes)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "format",
+        "attr"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addDirectPlaybackSupport(android.media.AudioFormat,android.media.AudioAttributes)",
+      "documentation": "Adds support for direct playback for the pair of {@link AudioFormat} and {@link\nAudioAttributes} where the format encoding must be non-PCM. Calling {@link\nAudioTrack#isDirectPlaybackSupported(AudioFormat, AudioAttributes)} will return {@code true}\nfor matching {@link AudioFormat} and {@link AudioAttributes}. The matching is performed against\nthe format\u0027s {@linkplain AudioFormat#getEncoding() encoding}, {@linkplain\nAudioFormat#getSampleRate() sample rate}, {@linkplain AudioFormat#getChannelMask() channel\nmask} and {@linkplain AudioFormat#getChannelIndexMask() channel index mask}, and the\nattribute\u0027s {@linkplain AudioAttributes#getContentType() content type}, {@linkplain\nAudioAttributes#getUsage() usage} and {@linkplain AudioAttributes#getFlags() flags}.\n\n@param format The {@link AudioFormat}, which must be of a non-PCM encoding. If the encoding is\n    PCM, the method will throw an {@link IllegalArgumentException}.\n@param attr The {@link AudioAttributes}.\n"
+    },
+    "clearAllowedNonPcmEncodings()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearAllowedNonPcmEncodings()",
+      "documentation": "Clears all encodings that have been added with {@link #addAllowedNonPcmEncoding(int)}. "
+    },
+    "clearDirectPlaybackSupportedFormats()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearDirectPlaybackSupportedFormats()",
+      "documentation": "Clears all encodings that have been added for direct playback support with {@link\n#addDirectPlaybackSupport}.\n"
     },
     "flush()": {
       "isImplementation": true,
@@ -33,6 +86,31 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getPlaybackHeadPosition()"
+    },
+    "getPlaybackParams()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "final"
+      ],
+      "params": [],
+      "returnType": "android.media.PlaybackParams",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "getPlaybackParams()"
+    },
+    "isPcm(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "encoding"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "isPcm(int)"
     },
     "native_get_FCC_8()": {
       "isImplementation": true,
@@ -63,6 +141,130 @@
       "name": "native_get_min_buff_size(int,int,int)",
       "documentation": "Returns a predefined or default minimum buffer size. Audio format and config are neglected. "
     },
+    "native_is_direct_output_supported(int,int,int,int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "encoding",
+        "sampleRate",
+        "channelMask",
+        "channelIndexMask",
+        "contentType",
+        "usage",
+        "flags"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "native_is_direct_output_supported(int,int,int,int,int,int,int)"
+    },
+    "native_setup(java.lang.Object,java.lang.Object,int[],int,int,int,int,int,int[],android.os.Parcel,long,boolean,int,java.lang.Object,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioTrack",
+        "attributes",
+        "sampleRate",
+        "channelMask",
+        "channelIndexMask",
+        "audioFormat",
+        "buffSizeInBytes",
+        "mode",
+        "sessionId",
+        "attributionSource",
+        "nativeAudioTrack",
+        "offload",
+        "encapsulationMode",
+        "tunerConfiguration",
+        "opPackageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "native_setup(java.lang.Object,java.lang.Object,int[],int,int,int,int,int,int[],android.os.Parcel,long,boolean,int,java.lang.Object,java.lang.String)"
+    },
+    "native_setup(java.lang.Object,java.lang.Object,int[],int,int,int,int,int,int[],long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioTrack",
+        "attributes",
+        "sampleRate",
+        "channelMask",
+        "channelIndexMask",
+        "audioFormat",
+        "buffSizeInBytes",
+        "mode",
+        "sessionId",
+        "nativeAudioTrack",
+        "offload"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 28,
+      "maxSdk": 29,
+      "name": "native_setup(java.lang.Object,java.lang.Object,int[],int,int,int,int,int,int[],long,boolean)"
+    },
+    "native_setup(java.lang.Object,java.lang.Object,int[],int,int,int,int,int,int[],long,boolean,int,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioTrack",
+        "attributes",
+        "sampleRate",
+        "channelMask",
+        "channelIndexMask",
+        "audioFormat",
+        "buffSizeInBytes",
+        "mode",
+        "sessionId",
+        "nativeAudioTrack",
+        "offload",
+        "encapsulationMode",
+        "tunerConfiguration"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "maxSdk": 30,
+      "name": "native_setup(java.lang.Object,java.lang.Object,int[],int,int,int,int,int,int[],long,boolean,int,java.lang.Object)"
+    },
+    "native_setup(java.lang.Object,java.lang.Object,int[],int,int,int,int,int,int[],long,boolean,int,java.lang.Object,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "audioTrack",
+        "attributes",
+        "sampleRate",
+        "channelMask",
+        "channelIndexMask",
+        "audioFormat",
+        "buffSizeInBytes",
+        "mode",
+        "sessionId",
+        "nativeAudioTrack",
+        "offload",
+        "encapsulationMode",
+        "tunerConfiguration",
+        "opPackageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 31,
+      "maxSdk": 33,
+      "name": "native_setup(java.lang.Object,java.lang.Object,int[],int,int,int,int,int,int[],long,boolean,int,java.lang.Object,java.lang.String)"
+    },
     "native_write_byte(byte[],int,int,int,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -80,7 +282,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "native_write_byte(byte[],int,int,int,boolean)",
-      "documentation": "Always return the number of bytes to write. This method returns immedidately even with {@link\nAudioTrack#WRITE_BLOCKING}\n"
+      "documentation": "Returns the number of bytes to write. This method returns immediately even with {@link\nAudioTrack#WRITE_BLOCKING}. If the {@link AudioTrack} instance was created with a non-PCM\nencoding and the encoding can no longer be played directly, the method will return {@link\nAudioTrack#ERROR_DEAD_OBJECT};\n"
     },
     "removeAudioDataListener(org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener)": {
       "isImplementation": false,
@@ -121,6 +323,19 @@
       "name": "setMinBufferSize(int)",
       "documentation": "In the real class, the minimum buffer size is estimated from audio sample rate and other\nfactors. We do not provide such estimation in {@link #native_get_min_buff_size(int, int, int)},\ninstead letting users set the minimum for the expected audio sample. Usually higher sample rate\nrequires bigger buffer size.\n"
     },
+    "setPlaybackParams(android.media.PlaybackParams)": {
+      "isImplementation": true,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "params"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "setPlaybackParams(android.media.PlaybackParams)"
+    },
     "write(java.nio.ByteBuffer,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -135,30 +350,50 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "write(java.nio.ByteBuffer,int,int)",
-      "documentation": "Always return the number of bytes to write except with invalid parameters. Assumes AudioTrack\nis already initialized (object properly created). Do not block even if AudioTrack in offload\nmode is in STOPPING play state. This method returns immediately even with {@link\nAudioTrack#WRITE_BLOCKING}\n"
+      "documentation": "Returns the number of bytes to write, except with invalid parameters. If the {@link AudioTrack}\nwas created for a non-PCM encoding that can no longer be played directly, it returns {@link\nAudioTrack#ERROR_DEAD_OBJECT}. Assumes {@link AudioTrack} is already initialized (object\nproperly created). Do not block even if {@link AudioTrack} in offload mode is in STOPPING play\nstate. This method returns immediately even with {@link AudioTrack#WRITE_BLOCKING}\n"
     }
   },
   "imports": [
     "android.media.AudioTrack.ERROR_BAD_VALUE",
+    "android.media.AudioTrack.ERROR_DEAD_OBJECT",
     "android.media.AudioTrack.WRITE_BLOCKING",
     "android.media.AudioTrack.WRITE_NON_BLOCKING",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "com.google.common.base.Preconditions.checkArgument",
+    "com.google.common.base.Preconditions.checkNotNull",
     "android.annotation.NonNull",
+    "android.media.AudioAttributes",
     "android.media.AudioFormat",
     "android.media.AudioTrack",
     "android.media.AudioTrack.WriteMode",
+    "android.media.PlaybackParams",
+    "android.os.Build.VERSION",
+    "android.os.Parcel",
     "android.util.Log",
+    "com.google.common.collect.HashMultimap",
+    "com.google.common.collect.Multimap",
+    "com.google.common.collect.Multimaps",
     "java.nio.ByteBuffer",
+    "java.util.Collections",
+    "java.util.HashSet",
     "java.util.List",
+    "java.util.Set",
     "java.util.concurrent.CopyOnWriteArrayList",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
-    "org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener"
+    "org.robolectric.versioning.AndroidVersions.U",
+    "org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener",
+    "org.robolectric.shadows.ShadowAudioTrack.AudioFormatInfo",
+    "org.robolectric.shadows.ShadowAudioTrack.AudioAttributesInfo"
   ],
   "name": "org.robolectric.shadows.ShadowAudioTrack",
   "documentation": "Implementation of a couple methods in {@link AudioTrack}. Only a couple methods are supported,\nother methods are expected run through the real class. The two {@link WriteMode} are treated the\nsame.\n"

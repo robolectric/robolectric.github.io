@@ -6,5 +6,5 @@
     "org.robolectric.shadows.ShadowAsyncTaskLoader.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowAsyncTaskLoader",
-  "documentation": "The shadow API for {@link AsyncTaskLoader}.\n\nDifferent shadow implementations will be used based on the current {@link LooperMode.Mode}.\n@see ShadowLegacyAsyncTaskLoader, ShadowPausedAsyncTaskLoader\n"
+  "documentation": "The shadow API for {@link AsyncTaskLoader}.\n\n\u003cp\u003eDifferent shadow implementations will be used based on the current {@link LooperMode.Mode}.\n\n@see ShadowLegacyAsyncTaskLoader\n@see ShadowPausedAsyncTaskLoader\n"
 }

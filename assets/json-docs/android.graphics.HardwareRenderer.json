@@ -377,7 +377,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 10000,
+      "minSdk": 34,
       "name": "nInitDisplayInfo(int,int,float,int,long,long,boolean,boolean)"
     },
     "nLoadSystemProperties(long)": {
@@ -932,6 +932,7 @@
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.HardwareRendererNatives",
     "org.robolectric.shadows.ShadowNativeHardwareRenderer.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeHardwareRenderer.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeHardwareRenderer",

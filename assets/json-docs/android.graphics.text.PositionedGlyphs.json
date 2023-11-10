@@ -1,0 +1,136 @@
+{
+  "methods": {
+    "nGetAscent(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "minikinLayout"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetAscent(long)"
+    },
+    "nGetDescent(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "minikinLayout"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetDescent(long)"
+    },
+    "nGetFont(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "minikinLayout",
+        "i"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nGetFont(long,int)"
+    },
+    "nGetGlyphCount(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "minikinLayout"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetGlyphCount(long)"
+    },
+    "nGetGlyphId(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "minikinLayout",
+        "i"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "nGetGlyphId(long,int)"
+    },
+    "nGetTotalAdvance(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "minikinLayout"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetTotalAdvance(long)"
+    },
+    "nGetX(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "minikinLayout",
+        "i"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetX(long,int)"
+    },
+    "nGetY(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "minikinLayout",
+        "i"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "name": "nGetY(long,int)"
+    },
+    "nReleaseFunc()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "nReleaseFunc()"
+    }
+  },
+  "imports": [
+    "android.graphics.text.MeasuredText",
+    "android.graphics.text.PositionedGlyphs",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
+    "org.robolectric.nativeruntime.PositionedGlyphsNatives",
+    "org.robolectric.shadows.ShadowNativePositionedGlyphs.Picker",
+    "org.robolectric.versioning.AndroidVersions.S",
+    "org.robolectric.shadows.ShadowNativePositionedGlyphs.Picker"
+  ],
+  "name": "org.robolectric.shadows.ShadowNativePositionedGlyphs",
+  "documentation": "Shadow for {@link PositionedGlyphs} that is backed by native code "
+}

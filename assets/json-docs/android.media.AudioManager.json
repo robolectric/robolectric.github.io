@@ -26,6 +26,20 @@
       "name": "abandonAudioFocusRequest(android.media.AudioFocusRequest)",
       "documentation": "Provides a mock like interface for the abandonAudioFocusRequest method by storing the request\nobject for later inspection and returning the value specified in setNextFocusRequestResponse.\n"
     },
+    "addAvailableCommunicationDevice(android.media.AudioDeviceInfo,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "communicationDevice",
+        "notifyAudioDeviceCallbacks"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addAvailableCommunicationDevice(android.media.AudioDeviceInfo,boolean)",
+      "documentation": "Adds an available communication {@link AudioDeviceInfo} and notifies the list of {@link\nAudioDeviceCallback} if the device was not present before and indicated by {@code\nnotifyAudioDeviceCallbacks}.\n"
+    },
     "addInputDevice(android.media.AudioDeviceInfo,boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -80,6 +94,16 @@
       "minSdk": 31,
       "name": "clearCommunicationDevice()"
     },
+    "clearDispatchedMediaKeyEvents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearDispatchedMediaKeyEvents()"
+    },
     "createActiveRecordingConfiguration(int,int,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -106,6 +130,20 @@
       "returnType": "android.media.AudioPlaybackConfiguration",
       "exceptions": [],
       "name": "createAudioPlaybackConfiguration(android.media.AudioAttributes)"
+    },
+    "dispatchMediaKeyEvent(android.view.KeyEvent)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "keyEvent"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 19,
+      "name": "dispatchMediaKeyEvent(android.view.KeyEvent)",
+      "documentation": "Sends a simulated key event for a media button.\n\n\u003cp\u003eInstead of sending the media event to the media system service, from where it would be\nrouted to a media app, this shadow method only records the events to be verified through {@link\n#getDispatchedMediaKeyEvents()}.\n"
     },
     "generateAudioSessionId()": {
       "isImplementation": true,
@@ -141,6 +179,17 @@
       "minSdk": 24,
       "name": "getActiveRecordingConfigurations()",
       "documentation": "Returns list of active recording configurations that was set by {@link\n#setActiveRecordingConfigurations} or empty list otherwise.\n"
+    },
+    "getAvailableCommunicationDevices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.media.AudioDeviceInfo\u003e",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getAvailableCommunicationDevices()"
     },
     "getCommunicationDevice()": {
       "isImplementation": true,
@@ -179,6 +228,16 @@
       "minSdk": 30,
       "name": "getDevicesForAttributes(android.media.AudioAttributes)",
       "documentation": "Returns the devices associated with the given audio stream.\n\n\u003cp\u003eIn this shadow-implementation the devices returned are either\n\n\u003col\u003e\n  \u003cli\u003edevices set through {@link #setDevicesForAttributes}, or\n  \u003cli\u003edevices set through {@link #setDefaultDevicesForAttributes}, or\n  \u003cli\u003ean empty list.\n\u003c/ol\u003e\n"
+    },
+    "getDispatchedMediaKeyEvents()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.view.KeyEvent\u003e",
+      "exceptions": [],
+      "name": "getDispatchedMediaKeyEvents()"
     },
     "getIdForAudioPolicy(java.lang.Object)": {
       "isImplementation": false,
@@ -461,7 +520,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "registerAudioDeviceCallback(android.media.AudioDeviceCallback,android.os.Handler)",
-      "documentation": "Registers an {@link AudioDeviceCallback} object to receive notifications of changes to the set\nof connected audio devices.\n\n\u003cp\u003eThe {@code handler} is ignored.\n\n@see #addInputDevice(AudioDeviceInfo, boolean)\n@see #addOutputDevice(AudioDeviceInfo, boolean)\n@see #removeInputDevice(AudioDeviceInfo, boolean)\n@see #removeOutputDevice(AudioDeviceInfo, boolean)\n"
+      "documentation": "Registers an {@link AudioDeviceCallback} object to receive notifications of changes to the set\nof connected audio devices.\n\n\u003cp\u003eThe {@code handler} is ignored.\n\n@see #addInputDevice(AudioDeviceInfo, boolean)\n@see #addOutputDevice(AudioDeviceInfo, boolean)\n@see #addAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n@see #removeInputDevice(AudioDeviceInfo, boolean)\n@see #removeOutputDevice(AudioDeviceInfo, boolean)\n@see #removeAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n"
     },
     "registerAudioPlaybackCallback(android.media.AudioManager.AudioPlaybackCallback,android.os.Handler)": {
       "isImplementation": true,
@@ -506,6 +565,20 @@
       "minSdk": 24,
       "name": "registerAudioRecordingCallback(android.media.AudioManager.AudioRecordingCallback,android.os.Handler)",
       "documentation": "Registers callback that will receive changes made to the list of active recording\nconfigurations by {@link setActiveRecordingConfigurations}.\n"
+    },
+    "removeAvailableCommunicationDevice(android.media.AudioDeviceInfo,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "communicationDevice",
+        "notifyAudioDeviceCallbacks"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeAvailableCommunicationDevice(android.media.AudioDeviceInfo,boolean)",
+      "documentation": "Removes an available communication {@link AudioDeviceInfo} and notifies the list of {@link\nAudioDeviceCallback} if the device was present before and indicated by {@code\nnotifyAudioDeviceCallbacks}.\n"
     },
     "removeInputDevice(android.media.AudioDeviceInfo,boolean)": {
       "isImplementation": false,
@@ -603,6 +676,19 @@
       "exceptions": [],
       "name": "setActiveRecordingConfigurations(java.util.List\u003candroid.media.AudioRecordingConfiguration\u003e,boolean)",
       "documentation": "Sets active recording configurations that will be served by {@link\nAudioManager#getActiveRecordingConfigurations} and notifies callback listeners about that\nchange.\n"
+    },
+    "setAvailableCommunicationDevices(java.util.List\u003candroid.media.AudioDeviceInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "availableCommunicationDevices"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAvailableCommunicationDevices(java.util.List\u003candroid.media.AudioDeviceInfo\u003e)",
+      "documentation": "Sets the list of available communication devices represented by {@link AudioDeviceInfo}.\n\n\u003cp\u003eThe previous list of communication devices is replaced and no notifications of the list of\n{@link AudioDeviceCallback} is done.\n\n\u003cp\u003eTo add/remove devices one by one and trigger notifications for the list of {@link\nAudioDeviceCallback} please use one of the following methods {@link\n#addOutputDevice(AudioDeviceInfo, boolean)}, {@link #removeOutputDevice(AudioDeviceInfo,\nboolean)}.\n"
     },
     "setBluetoothA2dpOn(boolean)": {
       "isImplementation": true,
@@ -865,7 +951,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "unregisterAudioDeviceCallback(android.media.AudioDeviceCallback)",
-      "documentation": "Unregisters an {@link AudioDeviceCallback} object which has been previously registered to\nreceive notifications of changes to the set of connected audio devices.\n\n@see #addInputDevice(AudioDeviceInfo, boolean)\n@see #addOutputDevice(AudioDeviceInfo, boolean)\n@see #removeInputDevice(AudioDeviceInfo, boolean)\n@see #removeOutputDevice(AudioDeviceInfo, boolean)\n"
+      "documentation": "Unregisters an {@link AudioDeviceCallback} object which has been previously registered to\nreceive notifications of changes to the set of connected audio devices.\n\n@see #addInputDevice(AudioDeviceInfo, boolean)\n@see #addOutputDevice(AudioDeviceInfo, boolean)\n@see #addAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n@see #removeInputDevice(AudioDeviceInfo, boolean)\n@see #removeOutputDevice(AudioDeviceInfo, boolean)\n@see #removeAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n"
     },
     "unregisterAudioPlaybackCallback(android.media.AudioManager.AudioPlaybackCallback)": {
       "isImplementation": true,
@@ -923,6 +1009,7 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
@@ -948,6 +1035,7 @@
     "android.os.Build.VERSION_CODES",
     "android.os.Handler",
     "android.os.Parcel",
+    "android.view.KeyEvent",
     "com.android.internal.util.Preconditions",
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",

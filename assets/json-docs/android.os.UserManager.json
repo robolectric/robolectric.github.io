@@ -13,6 +13,21 @@
       "exceptions": [],
       "name": "__constructor__(android.content.Context,android.os.IUserManager)"
     },
+    "addProfile(int,int,android.content.pm.UserInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "userHandle",
+        "profileUserHandle",
+        "profileUserInfo"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addProfile(int,int,android.content.pm.UserInfo)",
+      "documentation": "Add a profile to be returned by {@link #getProfiles(int)}. "
+    },
     "addProfile(int,int,java.lang.String,int)": {
       "isImplementation": false,
       "modifiers": [
@@ -27,7 +42,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addProfile(int,int,java.lang.String,int)",
-      "documentation": "Add a profile to be returned by {@link #getProfiles(int)}.* "
+      "documentation": "Add a profile to be returned by {@link #getProfiles(int)}. "
     },
     "addUser(int,java.lang.String,int)": {
       "isImplementation": false,
@@ -528,6 +543,18 @@
       "minSdk": 33,
       "name": "hasUserRestrictionForUser(java.lang.String,int)"
     },
+    "isCloneProfile()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isCloneProfile()",
+      "documentation": "If permissions are enforced (see {@link #enforcePermissionChecks(boolean)}) and the application\ndoesn\u0027t have the {@link android.Manifest.permission#MANAGE_USERS} permission, throws a {@link\nSecurityManager} exception.\n\n@return true if the user is clone, or the value specified via {@link #setCloneProfile(boolean)}\n@see #enforcePermissionChecks(boolean)\n@see #setCloneProfile(boolean)\n"
+    },
     "isDemoUser()": {
       "isImplementation": true,
       "modifiers": [
@@ -666,6 +693,17 @@
       "name": "isSystemUser()",
       "documentation": "@return \u0027true\u0027 by default, or the value specified via {@link #setIsSystemUser(boolean)} "
     },
+    "isUserForeground()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "isUserForeground()"
+    },
     "isUserOfType(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -784,6 +822,20 @@
       "minSdk": 17,
       "name": "removeUser(int)"
     },
+    "removeUserWhenPossible(android.os.UserHandle,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "user",
+        "overrideDevicePolicy"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "removeUserWhenPossible(android.os.UserHandle,boolean)"
+    },
     "requestQuietModeEnabled(boolean,android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -866,6 +918,19 @@
       "exceptions": [],
       "name": "setCanSwitchUser(boolean)",
       "documentation": "Sets whether switching users is allowed or not; controls the return value of {@link\nUserManager#canSwitchUser()}\n\n@deprecated use {@link #setUserSwitchability} instead\n"
+    },
+    "setCloneProfile(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "cloneProfile"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCloneProfile(boolean)",
+      "documentation": "Setter for {@link UserManager#isCloneProfile()}. "
     },
     "setHeadlessSystemUserMode(boolean)": {
       "isImplementation": false,
@@ -1089,6 +1154,19 @@
       "exceptions": [],
       "name": "setSupportsMultipleUsers(boolean)",
       "documentation": "Sets whether multiple users are supported; controls the return value of {@link\nUserManager#supportsMultipleUser}.\n"
+    },
+    "setUserForeground(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "foreground"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setUserForeground(boolean)",
+      "documentation": "Sets whether or not the current user is the foreground user. "
     },
     "setUserIcon(android.graphics.Bitmap)": {
       "isImplementation": true,
