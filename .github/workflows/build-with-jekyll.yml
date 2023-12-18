@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: ruby
       - name: Setup Pages
@@ -24,6 +24,6 @@ jobs:
           source: ./
           destination: ./_site
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
