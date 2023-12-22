@@ -169,7 +169,26 @@ android {
 }
 
 dependencies {
-    annotationProcessor project(":processor")
+    annotationProcessor 'org.robolectric:processor:<version>'
+    ...
+}
+```
+
+When you write your shadows in Kotlin, configure kapt:
+
+```
+plugins {
+    id 'kotlin-kapt`
+}
+
+kapt {
+    arguments {
+        arg('org.robolectric.annotation.processing.shadowPackage', 'com.example.myshadowpackage')
+    }
+}
+
+dependencies {
+    kapt  'org.robolectric:processor:<version>'
     ...
 }
 ```
