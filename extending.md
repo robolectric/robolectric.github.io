@@ -178,7 +178,7 @@ When you write your shadows in Kotlin, configure kapt:
 
 ```groovy
 plugins {
-    id 'kotlin-kapt`
+    id 'kotlin-kapt'
 }
 
 kapt {
