@@ -16,9 +16,9 @@ public class MyActivityTest {
 
   @Test
   public void clickingButton_shouldChangeMessage() {
-    try (ActivityController<MyActvitiy> controller = Robolectric.buildActivity(MyActvitiy.class)) {
+    try (ActivityController<MyActivity> controller = Robolectric.buildActivity(MyActivity.class)) {
       controller.setup(); // Moves Activity to RESUMED state
-      MyActvitiy activity = controller.get();
+      MyActivity activity = controller.get();
 
       activity.findViewById(R.id.button).performClick();
       assertEquals(((TextView) activity.findViewById(R.id.text)).getText(), "Robolectric Rocks!");
