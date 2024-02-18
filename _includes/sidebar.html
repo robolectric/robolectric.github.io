@@ -78,22 +78,6 @@
             </ul>
         </section>
 
-        <section id="chrome-robolectric-extension-sidebar" class="hide-if-chrome-extension-is-installed">
-            <header class="major">
-                <h2>Chrome Extension</h2>
-            </header>
-            <article class="mini-post">
-                See Robolectric documentation inline with Android Developer Documentation.
-                <button onclick="chrome.webstore.install('https://chrome.google.com/webstore/detail/pjepcinimnfnaoopahdkpkefnefdkdgh')">Add to Chrome</button>
-            </article>
-        </section>
-        <script>
-            if (!window.chrome) {
-                var extSidebar = document.getElementById('chrome-robolectric-extension-sidebar');
-                extSidebar.parentNode.removeChild(extSidebar);
-            }
-        </script>
-
         <!-- Section -->
         <section>
             <header class="major">
