@@ -44,12 +44,16 @@ We also ask that students interested in applying should attempt to make one
 small contribution to Robolectric in order to gain some familiarity with the
 development environment.
 
+Note that time zone differences will be a consideration when reviewing
+applications.  Because of the limited number of mentors. we would prefer if each
+mentor and host were in a compatible time zone.
+
 ### More information
 
-Learn more about GSOC (https://summerofcode.withgoogle.com/)
+The Robolectric profile for GSOC 2024 can be found [here](https://summerofcode.withgoogle.com/programs/2024/organizations/robolectric).
 
 Review the [Robolectric GSOC 2024 project
-list](https://docs.google.com/presentation/d/1Wyqkef0bK3c9EbZzTdFw7S9Hx5-fq9iRgNbVWozQ2q0/edit?usp=sharing)
+list](https://docs.google.com/presentation/d/1Wyqkef0bK3c9EbZzTdFw7S9Hx5-fq9iRgNbVWozQ2q0/edit?usp=sharing) for a list of project ideas.
 
 If you have any questions, please start a discussion
 [here](https://github.com/robolectric/robolectric/discussions) or email any of
