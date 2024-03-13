@@ -27,14 +27,11 @@ This section contains instructions for an Ubuntu Linux system. Other Linux syste
 ```
 # Install prerequisites
 sudo apt-get update
-sudo apt-get install git default-jdk openjdk-11-jdk clang make cmake ninja-build
-git clone --recurse-submodules https://github.com/robolectric/robolectric.git
-# If you forgot --recurse-submodules, you can also run `git submodule update --init --recursive` from the 'robolectric' directory.
+sudo apt-get install git default-jdk openjdk-11-jdk make
+git clone https://github.com/robolectric/robolectric.git
 cd robolectric
 ./gradlew clean assemble
 ```
-
-If you encounter `configure: error: Namespace support is required to build ICU` building error on Ubuntu 22.04 or other Linux variants, you can refer the issue: [nativeruntime/icu build failed on Ubuntu 22.04 with c++ namespace not supported error](https://github.com/robolectric/robolectric/issues/7977) to fix your Linux environments for building.
 
 ## Mac
 
@@ -54,8 +51,7 @@ To build Robolectric on a Mac, [homebrew](https://brew.sh/) is required.
 ### Building
 
 ```
-brew install cmake ninja
-git clone --recurse-submodules https://github.com/robolectric/robolectric.git
+git clone https://github.com/robolectric/robolectric.git
 cd robolectric
 ./gradlew clean assemble
 ```
@@ -77,8 +73,8 @@ Open an msys2 terminal by running the "MSYS2 MINGW64" shortcut. This will ensure
 ```
 pacman -Syu # Update system
 pacman -Sy base-devel mingw-w64-x86_64-toolchain # Install the ming-w64-x86_64 package group
-pacman -Sy git mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja
-git clone --recurse-submodules https://github.com/robolectric/robolectric.git
+pacman -Sy git # Install git
+git clone https://github.com/robolectric/robolectric.git
 export ANDROID_SDK_ROOT=/c/Users/$USER/AppData/Local/Android/Sdk
 export JAVA_HOME=/c/Program\ Files/Eclipse\ Adoptium/jdk-11.0.14.101-hotspot # Will likely be a different version on your machine
 ./gradlew clean assemble
