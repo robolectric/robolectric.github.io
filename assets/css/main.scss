@@ -5,7 +5,10 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/skel';
-@import 'font-awesome.min.css';
+@import 'fontAwesome/brands.scss';
+@import 'fontAwesome/fontawesome.scss';
+@import 'fontAwesome/regular.scss';
+@import 'fontAwesome/solid.scss';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700');
 
 /*
@@ -173,7 +176,7 @@ header {
 	padding-top: 1em;
 
 	i.fa-android {
-		font-size: 11em;
+		font-size: 7.7em;
 		color: #bbbbbb;
 		letter-spacing: -13px;
 	}
