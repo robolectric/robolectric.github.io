@@ -9,7 +9,7 @@ toc: true
 
 This page describes how to set up a development environment to build Robolectric in the supported OSs (Linux, Mac, Windows).
 
-JDK 11 is currently recommended to build Robolectric. Newer versions of the JDK (e.g. 17) will likely work, but may contain some rough edges.
+JDK 17 is currently required to build Robolectric. Newer versions of the JDK (e.g. 21) will likely work, but may contain some rough edges.
 
 ## Installing Android SDK Tools
 
@@ -58,9 +58,9 @@ cd robolectric
 
 ## Windows
 
-### Install JDK 11
+### Install JDK 17
 
-By default Windows does not come with a JDK. It is  recommended to install [Adoptium Temurin 11](https://adoptium.net/?variant=openjdk11&jvmVariant=hotspot).
+By default Windows does not come with a JDK. It is recommended to install the 64 bit version of [Adoptium Temurin 17](https://adoptium.net/?variant=openjdk17&jvmVariant=hotspot).
 
 ### Install msys2 64 bit
 
@@ -72,10 +72,9 @@ Open an msys2 terminal by running the "MSYS2 MINGW64" shortcut. This will ensure
 
 ```
 pacman -Syu # Update system
-pacman -Sy base-devel mingw-w64-x86_64-toolchain # Install the ming-w64-x86_64 package group
 pacman -Sy git # Install git
 git clone https://github.com/robolectric/robolectric.git
 export ANDROID_SDK_ROOT=/c/Users/$USER/AppData/Local/Android/Sdk
-export JAVA_HOME=/c/Program\ Files/Eclipse\ Adoptium/jdk-11.0.14.101-hotspot # Will likely be a different version on your machine
+export JAVA_HOME=/c/Program\ Files/Eclipse\ Adoptium/jdk-17.0.10.7-hotspot # Will likely be a different version on your machine
 ./gradlew clean assemble
 ```
