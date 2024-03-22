@@ -53,7 +53,7 @@ cd robolectric
 In order to get the C/C++ toolchain, you will need to install the XCode command line tools. To do this it is usually as simple as opening
 a terminal and running `xcode-select --install`.
 
-## Install JDK 17
+### Install JDK 17
 
 By default Mac does not come with a JDK. It is  recommended to use [Azul](https://www.azul.com/downloads/?package=jdk), as they support the M1 architecture.
 
