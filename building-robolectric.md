@@ -40,7 +40,7 @@ sudo apt install git openjdk-17-jdk
 If you're using other Ubuntu or Linux variants you can search to find the proper approaches to install these tools.
 Proceed with the rest of the Robolectric setup:
 ```
-sudo apt-get install git make
+sudo apt-get install git
 git clone https://github.com/robolectric/robolectric.git
 cd robolectric
 ./gradlew clean assemble
