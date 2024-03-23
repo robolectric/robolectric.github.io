@@ -17,77 +17,43 @@ The first step is to install the Android SDK tools. The easiest way to do this i
 Android SDK tools, and provides the SDK Manager UI to manage SDK versions. Alternatively it is also possible to only download the Android command line tools without
 installing the entire Android Studio. However, it is recommended to install Android Studio if possible. Visit [https://developer.android.com/studio#download](https://developer.android.com/studio#download) to get started.
 
+If you install the Android Studio, it's recommended to use the latest stable Android Studio because Robolectric
+keeps using the latest stable AGP, and it requires a recent Android Studio.
+
 Many of Robolectric's [integration tests](https://github.com/robolectric/robolectric/tree/master/integration_tests)
 require the Android build tools to be installed and specific SDK versions to be installed.
 
-## Linux
+## Install Git and OpenJDK 17
 
-This section contains instructions for an Ubuntu Linux system. Other Linux systems will have different package management commands.
+1. Install git to download Robolectric source code. See [git-scm download](https://git-scm.com/downloads) to get started.
+2. Install OpenJDK 17 to build and run Robolectric tests. See [GitHub Action setup-java](https://github.com/actions/setup-java)
+   to get the recommended OpenJDK distribution list. Any distribution that support JDK 17 is recommended. Different operating
+   system has different OpenJDK installation and configuration tutorials, please search the internet to learn how to do it.
 
-There are some tools that are used by Robolectric to download code, build code:
+## Download source code
 
-1. git.
-2. OpenJDK 17.
-
-**Note:** `openjdk-17-jdk` may need to be installed separately, as it's not accessible in all Ubuntu versions. Here's how you can install it:
-
-If you're using Ubuntu 22.04+, you can run following commands to install these tools:
-
-```
-sudo apt install git openjdk-17-jdk
-```
-
-If you're using other Ubuntu or Linux variants you can search to find the proper approaches to install these tools.
-Proceed with the rest of the Robolectric setup:
-```
-sudo apt-get install git
+```shell
 git clone https://github.com/robolectric/robolectric.git
-cd robolectric
+```
+
+## Building
+
+### Building source code
+```shell
 ./gradlew clean assemble
 ```
 
-## Mac
+### Run local tests
 
-### Install XCode command line tools
-
-In order to get the C/C++ toolchain, you will need to install the XCode command line tools. To do this it is usually as simple as opening
-a terminal and running `xcode-select --install`.
-
-### Install JDK 17
-
-By default Mac does not come with a JDK. It is  recommended to use [Azul](https://www.azul.com/downloads/?package=jdk), as they support the M1 architecture.
-
-### Install homebrew
-
-To build Robolectric on a Mac, [homebrew](https://brew.sh/) is required.
-
-### Building
-
-```
-git clone https://github.com/robolectric/robolectric.git
-cd robolectric
-./gradlew clean assemble
+```shell
+./gradlew test --parallel -D"robolectric.enabledSdks=26,27,28"
 ```
 
-## Windows
+### Run instrumentation tests with Android device
 
-### Install JDK 17
-
-By default Windows does not come with a JDK. It is recommended to install the 64 bit version of [Adoptium Temurin 17](https://adoptium.net/?variant=openjdk17&jvmVariant=hotspot).
-
-### Install msys2 64 bit
-
-Install the 64 bit version of msys2. You can follow the instructions at https://www.msys2.org.
-
-### Building
-
-Open an msys2 terminal by running the "MSYS2 MINGW64" shortcut. This will ensure that `/mingw64/bin` is on the PATH.
-
+```shell
+./gradlew cAT --info
 ```
-pacman -Syu # Update system
-pacman -Sy git # Install git
-git clone https://github.com/robolectric/robolectric.git
-export ANDROID_SDK_ROOT=/c/Users/$USER/AppData/Local/Android/Sdk
-export JAVA_HOME=/c/Program\ Files/Eclipse\ Adoptium/jdk-17.0.10.7-hotspot # Will likely be a different version on your machine
-./gradlew clean assemble
-```
+
+If you're using Windows, it's recommended to use [PowerShell](https://github.com/PowerShell/PowerShell) in
+[Windows Terminal](https://github.com/microsoft/terminal).
