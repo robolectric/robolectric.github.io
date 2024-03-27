@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   test-drive your Android code
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://robolectric.org" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Robolectric
+x_username: Robolectric
 github_username: robolectric
 
 # Build settings
