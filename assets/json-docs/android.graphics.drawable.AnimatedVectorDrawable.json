@@ -30,6 +30,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 25,
+      "maxSdk": 34,
       "name": "nAddAnimator(long,long,long,long,long,int,int)"
     },
     "nCreateAnimatorSet()": {
@@ -42,6 +43,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nCreateAnimatorSet()"
     },
     "nCreateGroupPropertyHolder(long,int,float,float)": {
@@ -59,6 +61,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nCreateGroupPropertyHolder(long,int,float,float)"
     },
     "nCreatePathColorPropertyHolder(long,int,int,int)": {
@@ -76,6 +79,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nCreatePathColorPropertyHolder(long,int,int,int)"
     },
     "nCreatePathDataPropertyHolder(long,long,long)": {
@@ -92,6 +96,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nCreatePathDataPropertyHolder(long,long,long)"
     },
     "nCreatePathPropertyHolder(long,int,float,float)": {
@@ -109,6 +114,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nCreatePathPropertyHolder(long,int,float,float)"
     },
     "nCreateRootAlphaPropertyHolder(long,float,float)": {
@@ -125,6 +131,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nCreateRootAlphaPropertyHolder(long,float,float)"
     },
     "nEnd(long)": {
@@ -139,6 +146,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nEnd(long)"
     },
     "nReset(long)": {
@@ -153,6 +161,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nReset(long)"
     },
     "nReverse(long,android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT,int)": {
@@ -169,6 +178,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nReverse(long,android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT,int)"
     },
     "nSetPropertyHolderData(long,float[],int)": {
@@ -185,6 +195,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nSetPropertyHolderData(long,float[],int)"
     },
     "nSetPropertyHolderData(long,int[],int)": {
@@ -201,6 +212,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 25,
+      "maxSdk": 34,
       "name": "nSetPropertyHolderData(long,int[],int)"
     },
     "nSetVectorDrawableTarget(long,long)": {
@@ -216,6 +228,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 25,
+      "maxSdk": 34,
       "name": "nSetVectorDrawableTarget(long,long)"
     },
     "nStart(long,android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT,int)": {
@@ -232,6 +245,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "nStart(long,android.graphics.drawable.AnimatedVectorDrawable.VectorDrawableAnimatorRT,int)"
     },
     "start()": {
@@ -270,6 +284,7 @@
     "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable.Picker",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable.Picker",
     "org.robolectric.shadows.ShadowNativeAnimatedVectorDrawable.AnimatedVectorDrawableReflector"
   ],

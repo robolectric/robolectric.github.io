@@ -61,20 +61,6 @@
       "exceptions": [],
       "name": "getImpl()"
     },
-    "getOpenSourceSoftwareLicenseInfo(android.content.Context)": {
-      "isImplementation": true,
-      "modifiers": [
-        "public",
-        "static",
-        "synchronized"
-      ],
-      "params": [
-        "context"
-      ],
-      "returnType": "java.lang.String",
-      "exceptions": [],
-      "name": "getOpenSourceSoftwareLicenseInfo(android.content.Context)"
-    },
     "getRemoteContext(android.content.Context)": {
       "isImplementation": true,
       "modifiers": [

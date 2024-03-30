@@ -3,8 +3,7 @@
     "getForegroundServiceType()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -119,8 +118,7 @@
     "startForeground(int,android.app.Notification)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "id",
@@ -133,8 +131,7 @@
     "startForeground(int,android.app.Notification,int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "id",

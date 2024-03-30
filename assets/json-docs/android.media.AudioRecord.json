@@ -144,6 +144,19 @@
       "minSdk": 23,
       "name": "native_read_in_short_array(short[],int,int,boolean)"
     },
+    "native_setInputDevice(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "preferredDeviceId"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "native_setInputDevice(int)"
+    },
     "native_start(int,int)": {
       "isImplementation": true,
       "modifiers": [

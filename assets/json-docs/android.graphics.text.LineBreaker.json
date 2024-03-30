@@ -1,5 +1,17 @@
 {
   "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "__staticInitializer__()"
+    },
     "nComputeLineBreaks(long,char[],long,int,float,int,float,float[],float,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -20,6 +32,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nComputeLineBreaks(long,char[],long,int,float,int,float,float[],float,int)"
     },
     "nGetLineAscent(long,int)": {
@@ -34,6 +47,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetLineAscent(long,int)"
     },
     "nGetLineBreakOffset(long,int)": {
@@ -48,6 +62,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetLineBreakOffset(long,int)"
     },
     "nGetLineCount(long)": {
@@ -61,6 +76,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetLineCount(long)"
     },
     "nGetLineDescent(long,int)": {
@@ -75,6 +91,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetLineDescent(long,int)"
     },
     "nGetLineFlag(long,int)": {
@@ -89,6 +106,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetLineFlag(long,int)"
     },
     "nGetLineWidth(long,int)": {
@@ -103,6 +121,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetLineWidth(long,int)"
     },
     "nGetReleaseFunc()": {
@@ -114,6 +133,7 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetReleaseFunc()"
     },
     "nGetReleaseResultFunc()": {
@@ -125,6 +145,7 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetReleaseResultFunc()"
     },
     "nInit(int,int,boolean,int[])": {
@@ -143,24 +164,6 @@
       "exceptions": [],
       "maxSdk": 34,
       "name": "nInit(int,int,boolean,int[])"
-    },
-    "nInit(int,int,boolean,int[],boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "breakStrategy",
-        "hyphenationFrequency",
-        "isJustified",
-        "indents",
-        "useBoundsForWidth"
-      ],
-      "returnType": "long",
-      "exceptions": [],
-      "minSdk": 35,
-      "name": "nInit(int,int,boolean,int[],boolean)"
     }
   },
   "imports": [

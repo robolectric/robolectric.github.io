@@ -83,6 +83,18 @@
       "name": "dispatchOnSubscriptionsChanged()",
       "documentation": "Notifies {@link OnSubscriptionsChangedListener} listeners that the list of {@link\nSubscriptionInfo} has been updated.\n"
     },
+    "getAccessibleSubscriptionInfoList()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.telephony.SubscriptionInfo\u003e",
+      "exceptions": [],
+      "minSdk": 27,
+      "name": "getAccessibleSubscriptionInfoList()",
+      "documentation": "Returns the accessible list of {@link SubscriptionInfo} that were set via {@link\n#setAccessibleSubscriptionInfoList}.\n"
+    },
     "getActiveDataSubscriptionId()": {
       "isImplementation": true,
       "modifiers": [
@@ -410,6 +422,32 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "setAccessibleSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "list"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccessibleSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)",
+      "documentation": "Sets the accessible list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n\n\u003cp\u003e\"Accessible\" here means subscriptions which are eSIM ({@link SubscriptionInfo#isEmbedded})\nand \"owned\" by the calling app, i.e. by {@link\nSubscriptionManager#canManageSubscription(SubscriptionInfo)}. They may be active, or\ninstalled-but-inactive. This is generally intended to be called by carrier apps that directly\nmanage their own eSIM profiles on the device in concert with {@link\nandroid.telephony.EuiccManager}.\n\n@param list - The subscription info list, can be null.\n"
+    },
+    "setAccessibleSubscriptionInfos(android.telephony.SubscriptionInfo...)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "infos"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAccessibleSubscriptionInfos(android.telephony.SubscriptionInfo...)",
+      "documentation": "Sets the accessible list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n"
+    },
     "setActiveDataSubscriptionId(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -435,7 +473,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setActiveSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)",
-      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n\n@param list - The subscription info list, can be null.\n"
+      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n\n\u003cp\u003e\"Active\" here means subscriptions which are currently mapped to a live modem stack in the\ndevice (i.e. the modem will attempt to use them to connect to nearby towers), and they are\nexpected to have {@link SubscriptionInfo#getSimSlotIndex()} \u003e\u003d 0. A subscription being \"active\"\nin the device does NOT have any relation to a carrier\u0027s \"activation\" process for subscribers\u0027\nSIMs.\n\n@param list - The subscription info list, can be null.\n"
     },
     "setActiveSubscriptionInfos(android.telephony.SubscriptionInfo...)": {
       "isImplementation": false,
@@ -461,7 +499,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setAvailableSubscriptionInfoList(java.util.List\u003candroid.telephony.SubscriptionInfo\u003e)",
-      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n\n@param list - The subscription info list, can be null.\n"
+      "documentation": "Sets the available list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n\n\u003cp\u003e\"Available\" here means all active subscriptions (see {@link #setActiveSubscriptionInfoList})\ncombined with all installed-but-inactive eSIM subscriptions (similar to {@link\n#setAccessibleSubscriptionInfoList}, but not filtered to one particular app\u0027s \"ownership\"\nrights for subscriptions). This is generally intended to be called by system components such as\nthe eSIM LPA or Settings that allow the user to manage all subscriptions on the device through\nsome system-provided user interface.\n\n@param list - The subscription info list, can be null.\n"
     },
     "setAvailableSubscriptionInfos(android.telephony.SubscriptionInfo...)": {
       "isImplementation": false,
@@ -474,7 +512,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setAvailableSubscriptionInfos(android.telephony.SubscriptionInfo...)",
-      "documentation": "Sets the active list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n"
+      "documentation": "Sets the available list of {@link SubscriptionInfo}. This call internally triggers {@link\nOnSubscriptionsChangedListener#onSubscriptionsChanged()} to all the listeners.\n"
     },
     "setDefaultDataSubscriptionId(int)": {
       "isImplementation": false,

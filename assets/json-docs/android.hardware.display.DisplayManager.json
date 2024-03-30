@@ -26,6 +26,21 @@
       "name": "addDisplay(java.lang.String)",
       "documentation": "Adds a simulated display and drain the main looper queue to ensure all the callbacks are\nprocessed.\n\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display.\n@return the new display\u0027s ID\n"
     },
+    "addDisplay(java.lang.String,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "qualifiersStr",
+        "displayName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "addDisplay(java.lang.String,java.lang.String)",
+      "documentation": "Adds a simulated display and drain the main looper queue to ensure all the callbacks are\nprocessed.\n\n@param qualifiersStr the {@link Qualifiers} string representing characteristics of the new\n    display.\n@param displayName the display name to use while creating the display\n@return the new display\u0027s ID\n"
+    },
     "changeDisplay(int,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -70,7 +85,7 @@
       "name": "configureDefaultDisplay(android.content.res.Configuration,android.util.DisplayMetrics)",
       "documentation": "internal only "
     },
-    "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics,boolean)": {
+    "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics,boolean,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
         "private",
@@ -79,11 +94,12 @@
       "params": [
         "configuration",
         "displayMetrics",
-        "isNaturallyPortrait"
+        "isNaturallyPortrait",
+        "name"
       ],
       "returnType": "android.view.DisplayInfo",
       "exceptions": [],
-      "name": "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics,boolean)"
+      "name": "createDisplayInfo(android.content.res.Configuration,android.util.DisplayMetrics,boolean,java.lang.String)"
     },
     "createDisplayInfo(java.lang.String,java.lang.Integer)": {
       "isImplementation": false,
@@ -98,6 +114,21 @@
       "returnType": "android.view.DisplayInfo",
       "exceptions": [],
       "name": "createDisplayInfo(java.lang.String,java.lang.Integer)"
+    },
+    "createDisplayInfo(java.lang.String,java.lang.Integer,java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private",
+        "static"
+      ],
+      "params": [
+        "qualifiersStr",
+        "displayId",
+        "name"
+      ],
+      "returnType": "android.view.DisplayInfo",
+      "exceptions": [],
+      "name": "createDisplayInfo(java.lang.String,java.lang.Integer,java.lang.String)"
     },
     "displayModeOf(int,int,int,float)": {
       "isImplementation": false,
@@ -291,13 +322,14 @@
   "imports": [
     "android.content.res.Configuration.ORIENTATION_LANDSCAPE",
     "android.content.res.Configuration.ORIENTATION_PORTRAIT",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.P",
     "java.util.Objects.requireNonNull",
     "org.robolectric.shadow.api.Shadow.extract",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.shadows.ShadowLooper.shadowMainLooper",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.Nullable",
+    "android.annotation.RequiresApi",
     "android.content.Context",
     "android.content.res.Configuration",
     "android.hardware.display.BrightnessChangeEvent",
@@ -308,8 +340,6 @@
     "android.view.Display",
     "android.view.DisplayInfo",
     "android.view.Surface",
-    "androidx.annotation.Nullable",
-    "androidx.annotation.RequiresApi",
     "com.google.auto.value.AutoBuilder",
     "java.util.HashMap",
     "java.util.List",

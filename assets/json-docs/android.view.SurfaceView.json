@@ -33,6 +33,7 @@
   },
   "imports": [
     "android.graphics.Canvas",
+    "android.graphics.PixelFormat",
     "android.graphics.Rect",
     "android.view.Surface",
     "android.view.SurfaceHolder",

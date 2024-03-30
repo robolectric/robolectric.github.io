@@ -36,6 +36,18 @@
       "exceptions": [],
       "name": "addNewUnknownCall(android.telecom.PhoneAccountHandle,android.os.Bundle)"
     },
+    "adjustCapabilities(android.telecom.PhoneAccount)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "account"
+      ],
+      "returnType": "android.telecom.PhoneAccount",
+      "exceptions": [],
+      "name": "adjustCapabilities(android.telecom.PhoneAccount)"
+    },
     "allowIncomingCall(org.robolectric.shadows.ShadowTelecomManager.IncomingCallRecord)": {
       "isImplementation": false,
       "modifiers": [
@@ -739,7 +751,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setConnectionService(android.telecom.ConnectionService)",
-      "documentation": "Set connection service.\n\u003cp\u003e\nThis method can be used in case, when you already created connection service\nand would like to use it in telecom manager instead of creating new one.\n\n@param service existing connection service\n"
+      "documentation": "Set connection service.\n\n\u003cp\u003eThis method can be used in case, when you already created connection service and would like\nto use it in telecom manager instead of creating new one.\n\n@param service existing connection service\n"
     },
     "setDefaultDialer(java.lang.String)": {
       "isImplementation": true,
@@ -959,14 +971,16 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION.SDK_INT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.R",
-    "com.google.common.base.Preconditions.checkNotNull",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
     "com.google.common.base.Verify.verifyNotNull",
+    "android.annotation.Nullable",
     "android.annotation.SystemApi",
     "android.annotation.TargetApi",
     "android.bluetooth.BluetoothDevice",
@@ -986,7 +1000,6 @@
     "android.telecom.VideoProfile",
     "android.text.TextUtils",
     "android.util.ArrayMap",
-    "androidx.annotation.Nullable",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Iterables",
     "java.util.ArrayList",

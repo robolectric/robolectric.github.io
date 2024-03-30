@@ -27,6 +27,32 @@
       "name": "addDevice(android.bluetooth.BluetoothDevice,int)",
       "documentation": "Adds the provided BluetoothDevice to the shadow profile\u0027s device list with an associated\nconnectionState. The provided connection state will be returned by {@link\nShadowBluetoothHeadset#getConnectionState}.\n"
     },
+    "connect(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "connect(android.bluetooth.BluetoothDevice)",
+      "documentation": "Overrides behavior of {@link connect}. Returns {@code true} and adds {@code device} to the\nshadow profile\u0027s connected device list if {@code device} is currently disconnected, and returns\n{@code false} otherwise.\n"
+    },
+    "disconnect(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "disconnect(android.bluetooth.BluetoothDevice)",
+      "documentation": "Overrides behavior of {@link disconnect}. Returns {@code true} and removes {@code device} from\nthe shadow profile\u0027s connected device list if {@code device} is currently connected, and\nreturns {@code false} otherwise.\n"
+    },
     "getActiveDevice()": {
       "isImplementation": true,
       "modifiers": [
@@ -47,7 +73,7 @@
       "returnType": "java.util.List\u003candroid.bluetooth.BluetoothDevice\u003e",
       "exceptions": [],
       "name": "getConnectedDevices()",
-      "documentation": "Overrides behavior of {@link getConnectedDevices}. Returns list of devices that is set up by\ncall(s) to {@link ShadowBluetoothHeadset#addConnectedDevice}. Returns an empty list by default.\n"
+      "documentation": "Overrides behavior of {@link getConnectedDevices}. Returns list of devices that is set up by\ncall(s) to {@link ShadowBluetoothHeadset#addConnectedDevice} or {@link connect}. Returns an\nempty list by default.\n"
     },
     "getConnectionState(android.bluetooth.BluetoothDevice)": {
       "isImplementation": true,
@@ -60,7 +86,19 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getConnectionState(android.bluetooth.BluetoothDevice)",
-      "documentation": "Overrides behavior of {@link getConnectionState}.\n\n@return {@code BluetoothProfile.STATE_CONNECTED} if the given device has been previously added\n    by a call to {@link ShadowBluetoothHeadset#addConnectedDevice}, and {@code\n    BluetoothProfile.STATE_DISCONNECTED} otherwise.\n"
+      "documentation": "Overrides behavior of {@link getConnectionState}.\n\n@return {@code BluetoothProfile.STATE_CONNECTED} if the given device has been previously added\n    by a call to {@link ShadowBluetoothHeadset#addConnectedDevice} or {@link connect}, and\n    {@code BluetoothProfile.STATE_DISCONNECTED} otherwise.\n"
+    },
+    "getDevicesMatchingConnectionStates(int[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "states"
+      ],
+      "returnType": "java.util.List\u003candroid.bluetooth.BluetoothDevice\u003e",
+      "exceptions": [],
+      "name": "getDevicesMatchingConnectionStates(int[])"
     },
     "isAudioConnected(android.bluetooth.BluetoothDevice)": {
       "isImplementation": true,
@@ -139,9 +177,8 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 19,
       "name": "sendVendorSpecificResultCode(android.bluetooth.BluetoothDevice,java.lang.String,java.lang.String)",
-      "documentation": "Overrides behavior of {@link sendVendorSpecificResultCode}.\n\n@return \u0027true\u0027 only if the given device has been previously added by a call to {@link\n    ShadowBluetoothHeadset#addConnectedDevice} and {@link\n    ShadowBluetoothHeadset#setAllowsSendVendorSpecificResultCode} has not been called with\n    \u0027false\u0027 argument.\n@throws IllegalArgumentException if \u0027command\u0027 argument is null, per Android API\n"
+      "documentation": "Overrides behavior of {@link sendVendorSpecificResultCode}.\n\n@return \u0027true\u0027 only if the given device has been previously added by a call to {@link\n    ShadowBluetoothHeadset#addConnectedDevice} or {@link connect}, and {@link\n    ShadowBluetoothHeadset#setAllowsSendVendorSpecificResultCode} has not been called with\n    \u0027false\u0027 argument.\n@throws IllegalArgumentException if \u0027command\u0027 argument is null, per Android API\n"
     },
     "setActiveDevice(android.bluetooth.BluetoothDevice)": {
       "isImplementation": true,
@@ -206,11 +243,10 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "stopVoiceRecognition(android.bluetooth.BluetoothDevice)",
-      "documentation": "Overrides the behavior of {@link stopVoiceRecognition}. Returns false if voice recognition was\nnot started or voice recogntion has already ended on this headset. If this function returns\ntrue, {@link ACTION_AUDIO_STATE_CHANGED} intent is broadcasted with {@link\nBluetoothProfile.EXTRA_STATE} set to {@link STATE_DISCONNECTED}.\n"
+      "documentation": "Overrides the behavior of {@link stopVoiceRecognition}. Returns false if voice recognition was\nnot started or voice recognition has already ended on this headset. If this function returns\ntrue, {@link ACTION_AUDIO_STATE_CHANGED} intent is broadcasted with {@link\nBluetoothProfile.EXTRA_STATE} set to {@link STATE_DISCONNECTED}.\n"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.S",
     "java.util.stream.Collectors.toCollection",
@@ -218,6 +254,9 @@
     "android.bluetooth.BluetoothHeadset",
     "android.bluetooth.BluetoothProfile",
     "android.content.Intent",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.ImmutableSet",
+    "com.google.common.primitives.Ints",
     "java.util.ArrayList",
     "java.util.HashMap",
     "java.util.List",

@@ -131,6 +131,7 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.P",
+    "android.annotation.NonNull",
     "android.app.slice.SliceManager",
     "android.app.slice.SliceSpec",
     "android.content.Context",
@@ -138,7 +139,6 @@
     "android.content.pm.PackageManager.NameNotFoundException",
     "android.net.Uri",
     "android.os.Handler",
-    "androidx.annotation.NonNull",
     "com.google.common.collect.ImmutableSet",
     "java.util.ArrayList",
     "java.util.Collection",

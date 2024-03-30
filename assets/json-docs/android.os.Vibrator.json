@@ -57,6 +57,19 @@
       "name": "getPattern()",
       "documentation": "Returns the last vibration pattern. "
     },
+    "getPrimitiveDurations(int...)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "primitiveIds"
+      ],
+      "returnType": "int[]",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getPrimitiveDurations(int...)"
+    },
     "getPrimitiveEffects()": {
       "isImplementation": false,
       "modifiers": [
@@ -161,6 +174,20 @@
       "name": "setHasVibrator(boolean)",
       "documentation": "Controls the return value of {@link Vibrator#hasVibrator()} the default is true. "
     },
+    "setPrimitiveDurations(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "primitiveId",
+        "durationMillis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPrimitiveDurations(int,int)",
+      "documentation": "Set a custom duration in milliseconds for the given vibration primitive. "
+    },
     "setSupportedPrimitives(java.util.Collection\u003cjava.lang.Integer\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -177,10 +204,11 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.S",
     "android.media.AudioAttributes",
-    "android.os.VibrationEffect",
     "android.os.Vibrator",
     "android.os.vibrator.PrimitiveSegment",
+    "android.util.SparseArray",
     "java.util.ArrayList",
     "java.util.Collection",
     "java.util.List",

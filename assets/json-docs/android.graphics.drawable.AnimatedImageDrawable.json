@@ -41,6 +41,7 @@
         "java.io.IOException"
       ],
       "minSdk": 29,
+      "maxSdk": 34,
       "name": "nCreate(long,android.graphics.ImageDecoder,int,int,long,boolean,android.graphics.Rect)"
     },
     "nDraw(long,long)": {
@@ -55,6 +56,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDraw(long,long)"
     },
     "nGetAlpha(long)": {
@@ -68,6 +70,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetAlpha(long)"
     },
     "nGetNativeFinalizer()": {
@@ -79,6 +82,7 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetNativeFinalizer()"
     },
     "nGetRepeatCount(long)": {
@@ -92,6 +96,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetRepeatCount(long)"
     },
     "nIsRunning(long)": {
@@ -105,6 +110,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nIsRunning(long)"
     },
     "nNativeByteSize(long)": {
@@ -118,6 +124,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nNativeByteSize(long)"
     },
     "nSetAlpha(long,int)": {
@@ -132,6 +139,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetAlpha(long,int)"
     },
     "nSetBounds(long,android.graphics.Rect)": {
@@ -147,6 +155,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nSetBounds(long,android.graphics.Rect)"
     },
     "nSetColorFilter(long,long)": {
@@ -161,6 +170,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetColorFilter(long,long)"
     },
     "nSetMirrored(long,boolean)": {
@@ -175,6 +185,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetMirrored(long,boolean)"
     },
     "nSetOnAnimationEndListener(long,android.graphics.drawable.AnimatedImageDrawable)": {
@@ -205,6 +216,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 33,
+      "maxSdk": 34,
       "name": "nSetOnAnimationEndListener(long,java.lang.ref.WeakReference\u003candroid.graphics.drawable.AnimatedImageDrawable\u003e)"
     },
     "nSetRepeatCount(long,int)": {
@@ -219,6 +231,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetRepeatCount(long,int)"
     },
     "nStart(long)": {
@@ -232,6 +245,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nStart(long)"
     },
     "nStop(long)": {
@@ -245,6 +259,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nStop(long)"
     }
   },
@@ -263,6 +278,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.nativeruntime.AnimatedImageDrawableNatives",
     "org.robolectric.shadows.ShadowNativeAnimatedImageDrawable.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeAnimatedImageDrawable.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeAnimatedImageDrawable",

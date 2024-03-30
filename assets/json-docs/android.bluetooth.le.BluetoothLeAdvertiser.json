@@ -37,6 +37,17 @@
       "name": "getAdvertisementRequestCount()",
       "documentation": "Returns the count of current ongoing Bluetooth LE advertising requests. "
     },
+    "getAdvertisingSetRequestCount()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getAdvertisingSetRequestCount()",
+      "documentation": "Returns the count of current ongoing Bluetooth LE advertising set requests. "
+    },
     "getByteLength(byte[])": {
       "isImplementation": false,
       "modifiers": [
@@ -94,6 +105,29 @@
       "name": "startAdvertising(android.bluetooth.le.AdvertiseSettings,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseCallback)",
       "documentation": "Start Bluetooth LE Advertising. This method returns immediately, the operation status is\ndelivered through {@code callback}.\n\n@param settings Settings for Bluetooth LE advertising.\n@param advertiseData Advertisement data to be broadcasted.\n@param scanResponse Scan response associated with the advertisement data.\n@param callback Callback for advertising status.\n@throws IllegalArgumentException When {@code callback} is not present.\n"
     },
+    "startAdvertisingSet(android.bluetooth.le.AdvertisingSetParameters,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseData,android.bluetooth.le.PeriodicAdvertisingParameters,android.bluetooth.le.AdvertiseData,int,int,android.bluetooth.BluetoothGattServer,android.bluetooth.le.AdvertisingSetCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "parameters",
+        "advertiseData",
+        "scanResponse",
+        "periodicParameters",
+        "periodicData",
+        "duration",
+        "maxExtendedAdvertisingEvents",
+        "gattServer",
+        "callback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "startAdvertisingSet(android.bluetooth.le.AdvertisingSetParameters,android.bluetooth.le.AdvertiseData,android.bluetooth.le.AdvertiseData,android.bluetooth.le.PeriodicAdvertisingParameters,android.bluetooth.le.AdvertiseData,int,int,android.bluetooth.BluetoothGattServer,android.bluetooth.le.AdvertisingSetCallback,android.os.Handler)",
+      "documentation": "Start Bluetooth LE Advertising Set. This method returns immediately, the operation status is\ndelivered through {@code callback}.\n\n@param parameters Advertising set parameters.\n@param advertiseData Advertisement data to be broadcasted.\n@param scanResponse Scan response associated with the advertisement data.\n@param periodicParameters Periodic advertisng parameters.\n@param periodicData Periodic advertising data.\n@param duration Advertising duration, in 10ms unit.\n@param maxExtendedAdvertisingEvents Maximum number of extended advertising events the\n    controller shall attempt to send prior to terminating the extended advertising, even if the\n    duration has not expired.\n@param gattServer GattServer the GATT server that will \"own\" connections derived from this\n    advertising.\n@param callback Callback for advertising set.\n@param handler Thread upon which the callbacks will be invoked.\n@throws IllegalArgumentException When {@code callback} is not present.\n"
+    },
     "stopAdvertising(android.bluetooth.le.AdvertiseCallback)": {
       "isImplementation": true,
       "modifiers": [
@@ -106,26 +140,54 @@
       "exceptions": [],
       "name": "stopAdvertising(android.bluetooth.le.AdvertiseCallback)",
       "documentation": "Stop Bluetooth LE advertising. The {@code callback} must be the same one use in {@link\nShadowBluetoothLeAdvertiser#startAdvertising}.\n\n@param callback {@link AdvertiseCallback} identifies the advertising instance to stop.\n@throws IllegalArgumentException When the {@code callback} is not a key present in {@code\n    advertisements}.\n"
+    },
+    "stopAdvertisingSet(android.bluetooth.le.AdvertisingSetCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "stopAdvertisingSet(android.bluetooth.le.AdvertisingSetCallback)",
+      "documentation": "Used to dispose of a {@link AdvertisingSet} object, obtained with {@link\nBluetoothLeAdvertiser#startAdvertisingSet}.\n\n@param callback Callback for advertising set.\n@throws IllegalArgumentException When {@code callback} is not present.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
     "android.bluetooth.BluetoothAdapter",
+    "android.bluetooth.BluetoothDevice",
+    "android.bluetooth.BluetoothGattServer",
     "android.bluetooth.BluetoothUuid",
     "android.bluetooth.IBluetoothManager",
     "android.bluetooth.le.AdvertiseCallback",
     "android.bluetooth.le.AdvertiseData",
     "android.bluetooth.le.AdvertiseSettings",
+    "android.bluetooth.le.AdvertisingSet",
+    "android.bluetooth.le.AdvertisingSetCallback",
+    "android.bluetooth.le.AdvertisingSetParameters",
     "android.bluetooth.le.BluetoothLeAdvertiser",
+    "android.bluetooth.le.PeriodicAdvertisingParameters",
+    "android.content.AttributionSource",
+    "android.os.Handler",
     "android.os.ParcelUuid",
+    "java.util.HashMap",
     "java.util.HashSet",
+    "java.util.Map",
     "java.util.Set",
+    "java.util.concurrent.atomic.AtomicInteger",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.ReflectorObject",
     "org.robolectric.util.PerfStatsCollector",
+    "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowBluetoothLeAdvertiser.BluetoothLeAdvertiserReflector"

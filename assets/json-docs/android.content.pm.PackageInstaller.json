@@ -46,6 +46,30 @@
       "exceptions": [],
       "name": "getAllSessions()"
     },
+    "getLastUninstalledStatusReceiver(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "android.content.IntentSender",
+      "exceptions": [],
+      "name": "getLastUninstalledStatusReceiver(java.lang.String)"
+    },
+    "getLastUninstalledVersion(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "java.lang.Long",
+      "exceptions": [],
+      "name": "getLastUninstalledVersion(java.lang.String)"
+    },
     "getMySessions()": {
       "isImplementation": true,
       "modifiers": [
@@ -94,6 +118,67 @@
       "returnType": "void",
       "exceptions": [],
       "name": "registerSessionCallback(android.content.pm.PackageInstaller.SessionCallback,android.os.Handler)"
+    },
+    "sendPreapprovalUpdate(int,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "sessionId",
+        "status"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.content.IntentSender.SendIntentException"
+      ],
+      "name": "sendPreapprovalUpdate(int,int)",
+      "documentation": "Sends an update to the preapproval status receiver.\n\n@param status refers to the Session status. See\n    https://developer.android.com/reference/android/content/pm/PackageInstaller for possible\n    values.\n"
+    },
+    "setPreapprovalDialogApproved(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.content.IntentSender.SendIntentException"
+      ],
+      "name": "setPreapprovalDialogApproved(int)",
+      "documentation": "Approve the preapproval dialog. "
+    },
+    "setPreapprovalDialogDenied(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.content.IntentSender.SendIntentException"
+      ],
+      "name": "setPreapprovalDialogDenied(int)",
+      "documentation": "Deny the preapproval dialog. "
+    },
+    "setPreapprovalDialogDismissed(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "sessionId"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "android.content.IntentSender.SendIntentException"
+      ],
+      "name": "setPreapprovalDialogDismissed(int)",
+      "documentation": "Close the preapproval dialog. "
     },
     "setSessionActiveState(int,boolean)": {
       "isImplementation": false,
@@ -159,6 +244,63 @@
       "name": "setSessionSucceeds(int)",
       "documentation": "Prefer instead to use the Android APIs to close the session {@link\nandroid.content.pm.PackageInstaller.Session#commit(IntentSender)}\n"
     },
+    "uninstall(android.content.pm.VersionedPackage,android.content.IntentSender)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "versionedPackage",
+        "statusReceiver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "uninstall(android.content.pm.VersionedPackage,android.content.IntentSender)"
+    },
+    "uninstall(android.content.pm.VersionedPackage,int,android.content.IntentSender)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "versionedPackage",
+        "flags",
+        "statusReceiver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "uninstall(android.content.pm.VersionedPackage,int,android.content.IntentSender)"
+    },
+    "uninstall(java.lang.String,android.content.IntentSender)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "statusReceiver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "uninstall(java.lang.String,android.content.IntentSender)"
+    },
+    "uninstallExistingPackage(java.lang.String,android.content.IntentSender)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "packageName",
+        "statusReceiver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "uninstallExistingPackage(java.lang.String,android.content.IntentSender)"
+    },
     "unregisterSessionCallback(android.content.pm.PackageInstaller.SessionCallback)": {
       "isImplementation": true,
       "modifiers": [
@@ -201,15 +343,26 @@
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
+    "org.robolectric.Shadows.shadowOf",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
     "android.annotation.SuppressLint",
+    "android.content.Intent",
     "android.content.IntentSender",
     "android.content.IntentSender.SendIntentException",
     "android.content.pm.PackageInstaller",
+    "android.content.pm.PackageInstaller.PreapprovalDetails",
     "android.content.pm.PackageInstaller.SessionInfo",
+    "android.content.pm.PackageManager",
+    "android.content.pm.VersionedPackage",
     "android.graphics.Bitmap",
+    "android.os.Build.VERSION",
     "android.os.Handler",
+    "android.os.PersistableBundle",
     "com.google.common.collect.ImmutableList",
     "java.io.IOException",
     "java.io.OutputStream",
@@ -228,7 +381,8 @@
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.shadows.ShadowPackageInstaller.ShadowSessionInfo",
     "org.robolectric.shadows.ShadowPackageInstaller.CallbackInfo",
-    "org.robolectric.shadows.ShadowPackageInstaller.ShadowSession"
+    "org.robolectric.shadows.ShadowPackageInstaller.ShadowSession",
+    "org.robolectric.shadows.ShadowPackageInstaller.UninstalledPackage"
   ],
   "name": "org.robolectric.shadows.ShadowPackageInstaller",
   "documentation": "Shadow for PackageInstaller. "

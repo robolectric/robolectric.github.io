@@ -12,6 +12,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 34,
       "name": "nativeConstructor(long)"
     },
     "nativeDestructor(long)": {
@@ -26,6 +27,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 34,
       "name": "nativeDestructor(long)"
     },
     "nativeNext(long,android.graphics.Rect)": {
@@ -41,6 +43,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 34,
       "name": "nativeNext(long,android.graphics.Rect)"
     }
   },
@@ -53,6 +56,7 @@
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.RegionIteratorNatives",
     "org.robolectric.shadows.ShadowNativeRegionIterator.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeRegionIterator.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeRegionIterator",

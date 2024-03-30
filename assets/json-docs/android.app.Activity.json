@@ -95,6 +95,19 @@
       "name": "callOnGetDirectActions(android.os.CancellationSignal,java.util.function.Consumer\u003cjava.util.List\u003candroid.app.DirectAction\u003e\u003e)",
       "documentation": "Calls Activity#onGetDirectActions with the given parameters. This method also simulates the\nParcel serialization/deserialization which occurs when assistant requests DirectAction.\n"
     },
+    "clearOverrideActivityTransition(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "overrideType"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "clearOverrideActivityTransition(int)"
+    },
     "clickMenuItem(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -111,8 +124,7 @@
     "dismissDialog(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "id"
@@ -357,11 +369,23 @@
       "name": "getOptionsMenu()",
       "documentation": "Return the options menu.\n\n@return Options menu.\n"
     },
+    "getOverriddenActivityTransition(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "overrideType"
+      ],
+      "returnType": "org.robolectric.shadows.ShadowActivity.OverriddenActivityTransition",
+      "exceptions": [],
+      "name": "getOverriddenActivityTransition(int)",
+      "documentation": "Get the overridden {@link Activity} transition, set by {@link\nActivity#overrideActivityTransition}.\n\n@param overrideType Use {@link Activity#OVERRIDE_TRANSITION_OPEN} to get the overridden\n    activity transition animation details when starting/entering an activity. Use {@link\n    Activity#OVERRIDE_TRANSITION_CLOSE} to get the overridden activity transition animation\n    details when finishing/closing an activity.\n@return overridden activity transition details after calling {@link\n    Activity#overrideActivityTransition(int, int, int, int)} or null if was not overridden.\n@see #clearOverrideActivityTransition(int)\n"
+    },
     "getParent()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "android.app.Activity",
@@ -477,8 +501,7 @@
     "getVolumeControlStream()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -541,7 +564,6 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 16,
       "name": "isFinishing()",
       "documentation": "Returns whether {@link #finish()} was called.\n\n\u003cp\u003eNote: this method seems redundant, but removing it will cause problems for Mockito spies of\nActivities that call {@link Activity#finish()} followed by {@link Activity#isFinishing()}. This\nis because `finish` modifies the members of {@link ShadowActivity#realActivity}, so\n`isFinishing` should refer to those same members.\n"
     },
@@ -581,8 +603,7 @@
     "isTaskRoot()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -632,6 +653,22 @@
       "returnType": "void",
       "exceptions": [],
       "name": "onDestroy()"
+    },
+    "overrideActivityTransition(int,int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "overrideType",
+        "enterAnim",
+        "exitAnim",
+        "backgroundColor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "overrideActivityTransition(int,int,int,int)"
     },
     "overridePendingTransition(int,int)": {
       "isImplementation": true,
@@ -684,8 +721,7 @@
     "removeDialog(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "id"
@@ -702,14 +738,12 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "reportFullyDrawn()"
     },
     "requestPermissions(java.lang.String[],int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "permissions",
@@ -871,8 +905,7 @@
     "setResult(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "resultCode"
@@ -884,8 +917,7 @@
     "setResult(int,android.content.Intent)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "resultCode",
@@ -937,8 +969,7 @@
     "setVolumeControlStream(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "streamType"
@@ -974,8 +1005,7 @@
     "showDialog(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "id"
@@ -987,8 +1017,7 @@
     "showDialog(int,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "id",
@@ -1068,8 +1097,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN",
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
@@ -1077,7 +1104,11 @@
     "android.os.Build.VERSION_CODES.O_MR1",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.AnimRes",
+    "android.annotation.ColorInt",
+    "android.annotation.RequiresApi",
     "android.app.Activity",
     "android.app.ActivityManager",
     "android.app.ActivityOptions",
@@ -1099,6 +1130,7 @@
     "android.content.res.Configuration",
     "android.database.Cursor",
     "android.os.Binder",
+    "android.os.Build",
     "android.os.Build.VERSION",
     "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
@@ -1109,6 +1141,7 @@
     "android.os.Parcel",
     "android.text.Selection",
     "android.text.SpannableStringBuilder",
+    "android.util.SparseArray",
     "android.view.Display",
     "android.view.LayoutInflater",
     "android.view.Menu",
@@ -1116,7 +1149,6 @@
     "android.view.View",
     "android.view.ViewGroup",
     "android.view.Window",
-    "androidx.annotation.RequiresApi",
     "com.android.internal.app.IVoiceInteractor",
     "java.util.ArrayList",
     "java.util.HashMap",
@@ -1142,6 +1174,7 @@
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.WithType",
     "org.robolectric.shadows.ShadowActivity.IntentForResult",
+    "org.robolectric.shadows.ShadowActivity.OverriddenActivityTransition",
     "org.robolectric.shadows.ShadowActivity.PermissionsRequest",
     "org.robolectric.shadows.ShadowActivity.IntentSenderRequest",
     "org.robolectric.shadows.ShadowActivity.DirectActivityReflector"

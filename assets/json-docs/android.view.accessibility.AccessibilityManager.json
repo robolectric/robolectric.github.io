@@ -276,7 +276,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",

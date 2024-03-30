@@ -66,7 +66,8 @@
     "clearPhoneTypes()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "static"
       ],
       "params": [],
       "returnType": "void",
@@ -137,7 +138,6 @@
       "params": [],
       "returnType": "java.util.List\u003candroid.telephony.CellInfo\u003e",
       "exceptions": [],
-      "minSdk": 17,
       "name": "getAllCellInfo()"
     },
     "getBootstrapAuthenticationCallback()": {
@@ -367,7 +367,6 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getGroupIdLevel1()"
     },
     "getImei()": {
@@ -1089,6 +1088,30 @@
       "exceptions": [],
       "name": "reset()"
     },
+    "resetAllSimCountryIsos()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetAllSimCountryIsos()",
+      "documentation": "Clears {@code subId} to simCountryIso mapping and resets to default state. "
+    },
+    "resetAllSimStates()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "resetAllSimStates()",
+      "documentation": "Clears {@code slotIndex} to state mapping and resets to default state. "
+    },
     "resetSimCountryIsos()": {
       "isImplementation": false,
       "modifiers": [
@@ -1098,7 +1121,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "resetSimCountryIsos()",
-      "documentation": "Clears {@code subId} to simCountryIso mapping and resets to default state. "
+      "documentation": "Clears {@code subId} to simCountryIso mapping and resets to default state.\n\n@deprecated for resetAllSimCountryIsos\n"
     },
     "resetSimStates()": {
       "isImplementation": false,
@@ -1109,7 +1132,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "resetSimStates()",
-      "documentation": "Clears {@code slotIndex} to state mapping and resets to default state. "
+      "documentation": "Clears {@code slotIndex} to state mapping and resets to default state.\n\n@deprecated use resetAllSimStates()\n"
     },
     "sendDialerSpecialCode(java.lang.String)": {
       "isImplementation": true,
@@ -2135,8 +2158,6 @@
   },
   "imports": [
     "android.content.pm.PackageManager.PERMISSION_GRANTED",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
@@ -2187,19 +2208,17 @@
     "android.telephony.VisualVoicemailSmsFilterSettings",
     "android.telephony.emergency.EmergencyNumber",
     "android.text.TextUtils",
-    "android.util.SparseArray",
-    "android.util.SparseBooleanArray",
-    "android.util.SparseIntArray",
     "com.google.common.base.Ascii",
     "com.google.common.base.Preconditions",
     "com.google.common.base.Predicate",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.ImmutableMap",
+    "com.google.common.collect.ImmutableSet",
     "com.google.common.collect.Iterables",
     "java.util.ArrayList",
     "java.util.Collections",
-    "java.util.HashMap",
     "java.util.HashSet",
+    "java.util.LinkedHashMap",
     "java.util.List",
     "java.util.Locale",
     "java.util.Map",

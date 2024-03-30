@@ -24,50 +24,6 @@
       "exceptions": [],
       "name": "getDoubleTapTimeout()"
     },
-    "getEdgeSlop()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getEdgeSlop()"
-    },
-    "getFadingEdgeLength()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getFadingEdgeLength()"
-    },
-    "getGlobalActionKeyTimeout()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "long",
-      "exceptions": [],
-      "name": "getGlobalActionKeyTimeout()"
-    },
-    "getJumpTapTimeout()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getJumpTapTimeout()"
-    },
     "getLongPressTimeout()": {
       "isImplementation": true,
       "modifiers": [
@@ -100,17 +56,6 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getMaximumFlingVelocity()"
-    },
-    "getMinimumFlingVelocity()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getMinimumFlingVelocity()"
     },
     "getPressedStateDuration()": {
       "isImplementation": true,
@@ -213,17 +158,6 @@
       "exceptions": [],
       "name": "getScaledWindowTouchSlop()"
     },
-    "getScrollBarFadeDuration()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getScrollBarFadeDuration()"
-    },
     "getScrollBarSize()": {
       "isImplementation": true,
       "modifiers": [
@@ -234,28 +168,6 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getScrollBarSize()"
-    },
-    "getScrollDefaultDelay()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getScrollDefaultDelay()"
-    },
-    "getScrollFriction()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "float",
-      "exceptions": [],
-      "name": "getScrollFriction()"
     },
     "getTapTimeout()": {
       "isImplementation": true,
@@ -289,17 +201,6 @@
       "returnType": "int",
       "exceptions": [],
       "name": "getWindowTouchSlop()"
-    },
-    "getZoomControlsTimeout()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [],
-      "returnType": "long",
-      "exceptions": [],
-      "name": "getZoomControlsTimeout()"
     },
     "hasPermanentMenuKey()": {
       "isImplementation": true,

@@ -100,7 +100,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",

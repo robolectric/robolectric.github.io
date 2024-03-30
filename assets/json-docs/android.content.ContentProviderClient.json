@@ -44,7 +44,6 @@
       "exceptions": [
         "android.os.RemoteException"
       ],
-      "minSdk": 17,
       "name": "call(java.lang.String,java.lang.String,android.os.Bundle)"
     },
     "delete(android.net.Uri,java.lang.String,java.lang.String[])": {
@@ -170,8 +169,7 @@
     "openTypedAssetFileDescriptor(android.net.Uri,java.lang.String,android.os.Bundle)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "uri",
@@ -251,7 +249,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ContentProvider",
     "android.content.ContentProviderClient",

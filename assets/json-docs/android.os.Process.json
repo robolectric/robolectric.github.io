@@ -25,8 +25,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [
         "tid"
@@ -40,8 +39,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [
         "pid"
@@ -55,8 +53,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [],
       "returnType": "int",
@@ -80,8 +77,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [],
       "returnType": "int",
@@ -93,8 +89,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [],
       "returnType": "int",
@@ -145,8 +140,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [
         "priority"
@@ -160,8 +154,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [
         "tid",
@@ -204,7 +197,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.TIRAMISU",
     "com.google.common.base.Preconditions.checkArgument",
-    "androidx.annotation.NonNull",
+    "android.annotation.NonNull",
     "java.util.HashMap",
     "java.util.HashSet",
     "java.util.Map",

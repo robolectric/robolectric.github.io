@@ -9,6 +9,7 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "disableVsync()"
     },
     "isWebViewOverlaysEnabled()": {
@@ -21,6 +22,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "isWebViewOverlaysEnabled()"
     },
     "nAddObserver(long,long)": {
@@ -36,6 +38,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 30,
+      "maxSdk": 34,
       "name": "nAddObserver(long,long)"
     },
     "nAddRenderNode(long,long,boolean)": {
@@ -51,6 +54,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nAddRenderNode(long,long,boolean)"
     },
     "nAllocateBuffers(long)": {
@@ -64,6 +68,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nAllocateBuffers(long)"
     },
     "nBuildLayer(long,long)": {
@@ -78,6 +83,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nBuildLayer(long,long)"
     },
     "nCancelLayerUpdate(long,long)": {
@@ -92,6 +98,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCancelLayerUpdate(long,long)"
     },
     "nCopyLayerInto(long,long,long)": {
@@ -107,6 +114,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCopyLayerInto(long,long,long)"
     },
     "nCopySurfaceInto(android.view.Surface,int,int,int,int,long)": {
@@ -141,6 +149,7 @@
       ],
       "returnType": "android.graphics.Bitmap",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCreateHardwareBitmap(long,int,int)"
     },
     "nCreateProxy(boolean,boolean,long)": {
@@ -173,6 +182,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nCreateProxy(boolean,long)"
     },
     "nCreateProxy(java.lang.Object,java.lang.Object)": {
@@ -200,6 +210,7 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCreateRootRenderNode()"
     },
     "nCreateTextureLayer(long)": {
@@ -213,6 +224,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCreateTextureLayer(long)"
     },
     "nDeleteProxy(long)": {
@@ -226,6 +238,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDeleteProxy(long)"
     },
     "nDestroy(long,long)": {
@@ -240,6 +253,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDestroy(long,long)"
     },
     "nDestroyHardwareResources(long)": {
@@ -253,6 +267,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDestroyHardwareResources(long)"
     },
     "nDetachSurfaceTexture(long,long)": {
@@ -267,6 +282,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDetachSurfaceTexture(long,long)"
     },
     "nDrawRenderNode(long,long)": {
@@ -281,6 +297,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDrawRenderNode(long,long)"
     },
     "nDumpProfileInfo(long,java.io.FileDescriptor,int)": {
@@ -296,6 +313,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDumpProfileInfo(long,java.io.FileDescriptor,int)"
     },
     "nFence(long)": {
@@ -309,6 +327,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nFence(long)"
     },
     "nGetRenderThreadTid(long)": {
@@ -322,6 +341,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetRenderThreadTid(long)"
     },
     "nHackySetRTAnimationsEnabled(boolean)": {
@@ -336,7 +356,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 29,
-      "maxSdk": 31,
+      "maxSdk": 32,
       "name": "nHackySetRTAnimationsEnabled(boolean)"
     },
     "nInitDisplayInfo(int,int,float,int,long,long)": {
@@ -378,6 +398,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 34,
+      "maxSdk": 34,
       "name": "nInitDisplayInfo(int,int,float,int,long,long,boolean,boolean)"
     },
     "nLoadSystemProperties(long)": {
@@ -391,6 +412,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nLoadSystemProperties(long)"
     },
     "nNotifyFramePending(long)": {
@@ -404,6 +426,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nNotifyFramePending(long)"
     },
     "nOverrideProperty(java.lang.String,java.lang.String)": {
@@ -418,6 +441,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nOverrideProperty(java.lang.String,java.lang.String)"
     },
     "nPause(long)": {
@@ -431,6 +455,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nPause(long)"
     },
     "nPushLayerUpdate(long,long)": {
@@ -445,6 +470,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nPushLayerUpdate(long,long)"
     },
     "nRegisterAnimatingRenderNode(long,long)": {
@@ -459,6 +485,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nRegisterAnimatingRenderNode(long,long)"
     },
     "nRegisterVectorDrawableAnimator(long,long)": {
@@ -473,6 +500,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nRegisterVectorDrawableAnimator(long,long)"
     },
     "nRemoveObserver(long,long)": {
@@ -488,6 +516,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 30,
+      "maxSdk": 34,
       "name": "nRemoveObserver(long,long)"
     },
     "nRemoveRenderNode(long,long)": {
@@ -502,6 +531,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nRemoveRenderNode(long,long)"
     },
     "nRotateProcessStatsBuffer()": {
@@ -513,6 +543,7 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nRotateProcessStatsBuffer()"
     },
     "nSetASurfaceTransactionCallback(java.lang.Object,java.lang.Object)": {
@@ -528,6 +559,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nSetASurfaceTransactionCallback(java.lang.Object,java.lang.Object)"
     },
     "nSetColorMode(long,int)": {
@@ -543,6 +575,7 @@
       "returnType": "java.lang.Object",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nSetColorMode(long,int)"
     },
     "nSetContentDrawBounds(long,int,int,int,int)": {
@@ -560,6 +593,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetContentDrawBounds(long,int,int,int,int)"
     },
     "nSetContextPriority(int)": {
@@ -573,6 +607,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetContextPriority(int)"
     },
     "nSetDebuggingEnabled(boolean)": {
@@ -586,6 +621,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetDebuggingEnabled(boolean)"
     },
     "nSetDisplayDensityDpi(int)": {
@@ -600,6 +636,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nSetDisplayDensityDpi(int)"
     },
     "nSetForceDark(long,boolean)": {
@@ -614,6 +651,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetForceDark(long,boolean)"
     },
     "nSetFrameCallback(long,android.graphics.HardwareRenderer.FrameDrawingCallback)": {
@@ -628,6 +666,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetFrameCallback(long,android.graphics.HardwareRenderer.FrameDrawingCallback)"
     },
     "nSetFrameCompleteCallback(long,android.graphics.HardwareRenderer.FrameCompleteCallback)": {
@@ -642,6 +681,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetFrameCompleteCallback(long,android.graphics.HardwareRenderer.FrameCompleteCallback)"
     },
     "nSetHighContrastText(boolean)": {
@@ -655,6 +695,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetHighContrastText(boolean)"
     },
     "nSetIsHighEndGfx(boolean)": {
@@ -669,6 +710,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nSetIsHighEndGfx(boolean)"
     },
     "nSetIsolatedProcess(boolean)": {
@@ -682,6 +724,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetIsolatedProcess(boolean)"
     },
     "nSetLightAlpha(long,float,float)": {
@@ -697,6 +740,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetLightAlpha(long,float,float)"
     },
     "nSetLightGeometry(long,float,float,float,float)": {
@@ -714,6 +758,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetLightGeometry(long,float,float,float,float)"
     },
     "nSetName(long,java.lang.String)": {
@@ -728,6 +773,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetName(long,java.lang.String)"
     },
     "nSetOpaque(long,boolean)": {
@@ -742,6 +788,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetOpaque(long,boolean)"
     },
     "nSetPictureCaptureCallback(long,android.graphics.HardwareRenderer.PictureCapturedCallback)": {
@@ -756,6 +803,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetPictureCaptureCallback(long,android.graphics.HardwareRenderer.PictureCapturedCallback)"
     },
     "nSetPrepareSurfaceControlForWebviewCallback(java.lang.Object,java.lang.Object)": {
@@ -771,6 +819,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nSetPrepareSurfaceControlForWebviewCallback(java.lang.Object,java.lang.Object)"
     },
     "nSetProcessStatsBuffer(int)": {
@@ -784,7 +833,23 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetProcessStatsBuffer(int)"
+    },
+    "nSetRtAnimationsEnabled(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "enabled"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "maxSdk": 34,
+      "name": "nSetRtAnimationsEnabled(boolean)"
     },
     "nSetSdrWhitePoint(long,float)": {
       "isImplementation": true,
@@ -799,6 +864,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nSetSdrWhitePoint(long,float)"
     },
     "nSetStopped(long,boolean)": {
@@ -813,6 +879,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSetStopped(long,boolean)"
     },
     "nSetSurface(long,android.view.Surface,boolean)": {
@@ -829,6 +896,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 30,
+      "maxSdk": 34,
       "name": "nSetSurface(long,android.view.Surface,boolean)"
     },
     "nSetSurfaceControl(long,long)": {
@@ -844,7 +912,23 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nSetSurfaceControl(long,long)"
+    },
+    "nSetWideGamut(long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "nativeProxy",
+        "wideGamut"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 30,
+      "name": "nSetWideGamut(long,boolean)"
     },
     "nStopDrawing(long)": {
       "isImplementation": true,
@@ -857,6 +941,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nStopDrawing(long)"
     },
     "nSyncAndDrawFrame(long,long[],int)": {
@@ -872,6 +957,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nSyncAndDrawFrame(long,long[],int)"
     },
     "nTrimMemory(int)": {
@@ -885,6 +971,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nTrimMemory(int)"
     },
     "preload()": {
@@ -896,6 +983,7 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "preload()"
     },
     "setupShadersDiskCache(java.lang.String,java.lang.String)": {
@@ -910,6 +998,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "setupShadersDiskCache(java.lang.String,java.lang.String)"
     }
   },
@@ -917,6 +1006,7 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.S_V2",
     "android.os.Build.VERSION_CODES.TIRAMISU",
     "android.graphics.Bitmap",
     "android.graphics.HardwareRenderer",

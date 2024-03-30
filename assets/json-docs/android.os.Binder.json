@@ -4,8 +4,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [],
       "returnType": "int",
@@ -16,8 +15,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [],
       "returnType": "int",
@@ -28,8 +26,7 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [],
       "returnType": "int",
@@ -42,13 +39,11 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "static",
-        "final"
+        "static"
       ],
       "params": [],
       "returnType": "android.os.UserHandle",
       "exceptions": [],
-      "minSdk": 17,
       "name": "getCallingUserHandle()"
     },
     "reset()": {
@@ -121,7 +116,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Binder",
     "android.os.Parcel",

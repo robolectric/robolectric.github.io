@@ -173,7 +173,6 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "minSdk": 17,
       "name": "getCreatorPackage()"
     },
     "getCreatorUid()": {
@@ -184,7 +183,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 17,
       "name": "getCreatorUid()"
     },
     "getFlags()": {
@@ -684,7 +682,6 @@
     "android.app.PendingIntent.FLAG_NO_CREATE",
     "android.app.PendingIntent.FLAG_ONE_SHOT",
     "android.app.PendingIntent.FLAG_UPDATE_CURRENT",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",

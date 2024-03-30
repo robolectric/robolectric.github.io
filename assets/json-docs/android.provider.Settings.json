@@ -139,8 +139,6 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.P",
@@ -152,7 +150,6 @@
     "android.content.Context",
     "android.content.Intent",
     "android.location.LocationManager",
-    "android.os.Build",
     "android.provider.Settings",
     "android.provider.Settings.Secure",
     "android.provider.Settings.SettingNotFoundException",
@@ -161,6 +158,7 @@
     "java.util.Arrays",
     "java.util.HashMap",
     "java.util.HashSet",
+    "java.util.List",
     "java.util.Map",
     "java.util.Objects",
     "java.util.Optional",
@@ -175,6 +173,7 @@
     "org.robolectric.shadows.ShadowSettings.ShadowSystem",
     "org.robolectric.shadows.ShadowSettings.ShadowSecure",
     "org.robolectric.shadows.ShadowSettings.ShadowGlobal",
+    "org.robolectric.shadows.ShadowSettings.ShadowConfig",
     "org.robolectric.shadows.ShadowSettings.SettingsSecureReflector"
   ],
   "name": "org.robolectric.shadows.ShadowSettings"

@@ -31,8 +31,7 @@
     "cancelAllNotifications()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -42,8 +41,7 @@
     "cancelNotification(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "key"

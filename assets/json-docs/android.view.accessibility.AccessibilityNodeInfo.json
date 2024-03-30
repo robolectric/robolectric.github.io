@@ -126,7 +126,6 @@
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getLabelFor()"
     },
     "getLabeledBy()": {
@@ -137,7 +136,6 @@
       "params": [],
       "returnType": "android.view.accessibility.AccessibilityNodeInfo",
       "exceptions": [],
-      "minSdk": 17,
       "name": "getLabeledBy()"
     },
     "getParent()": {
@@ -350,7 +348,6 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 18,
       "name": "refresh()"
     },
     "resetObtainedInstances()": {
@@ -566,14 +563,13 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.R",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.graphics.Rect",

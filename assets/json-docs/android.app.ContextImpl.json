@@ -127,7 +127,6 @@
       ],
       "returnType": "java.io.File",
       "exceptions": [],
-      "maxSdk": 18,
       "name": "getExternalFilesDir(java.lang.String)"
     },
     "getExternalFilesDirs(java.lang.String)": {
@@ -140,7 +139,6 @@
       ],
       "returnType": "java.io.File[]",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getExternalFilesDirs(java.lang.String)"
     },
     "getShadowInstrumentation()": {
@@ -187,7 +185,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getUserId()"
     },
     "registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)": {
@@ -264,7 +261,6 @@
       ],
       "returnType": "android.content.Intent",
       "exceptions": [],
-      "minSdk": 17,
       "name": "registerReceiverAsUser(android.content.BroadcastReceiver,android.os.UserHandle,android.content.IntentFilter,java.lang.String,android.os.Handler)"
     },
     "removeSystemService(java.lang.String)": {
@@ -316,6 +312,21 @@
       "exceptions": [],
       "name": "sendBroadcast(android.content.Intent,java.lang.String)"
     },
+    "sendBroadcast(android.content.Intent,java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "intent",
+        "receiverPermission",
+        "options"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "sendBroadcast(android.content.Intent,java.lang.String,android.os.Bundle)"
+    },
     "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle)": {
       "isImplementation": true,
       "modifiers": [
@@ -327,7 +338,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 17,
       "name": "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle)"
     },
     "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String)": {
@@ -342,7 +352,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 17,
       "name": "sendBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String)"
     },
     "sendOrderedBroadcast(android.content.Intent,java.lang.String)": {
@@ -393,7 +402,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 17,
       "name": "sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)",
       "documentation": "Allows the test to query for the broadcasts for specific users, for everything else behaves as\n{@link #sendOrderedBroadcastAsUser}.\n"
     },
@@ -455,7 +463,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setUserId(int)"
+      "name": "setUserId(int)",
+      "documentation": "Set the user id returned by {@link #getUserId()}. "
     },
     "startActivityAsUser(android.content.Intent,android.os.Bundle,android.os.UserHandle)": {
       "isImplementation": true,
@@ -563,19 +572,16 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "validateServiceIntent(android.content.Intent)"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.shadow.api.Shadow.directlyOn",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.Nullable",

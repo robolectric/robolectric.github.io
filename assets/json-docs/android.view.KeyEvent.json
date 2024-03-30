@@ -1,0 +1,35 @@
+{
+  "methods": {
+    "nativeKeyCodeFromString(java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "keyCode"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 21,
+      "name": "nativeKeyCodeFromString(java.lang.String)"
+    }
+  },
+  "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.view.KeyEvent",
+    "java.lang.reflect.Field",
+    "java.lang.reflect.Modifier",
+    "java.util.HashMap",
+    "java.util.Map",
+    "org.robolectric.RuntimeEnvironment",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.versioning.AndroidVersions.L",
+    "org.robolectric.shadows.ShadowKeyEvent.KeyEventReflector"
+  ],
+  "name": "org.robolectric.shadows.ShadowKeyEvent",
+  "documentation": "Shadow for {@link KeyEvent}. "
+}

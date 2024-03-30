@@ -68,6 +68,19 @@
       "name": "addOutputDevice(android.media.AudioDeviceInfo,boolean)",
       "documentation": "Adds an output {@link AudioDeviceInfo} and notifies the list of {@link AudioDeviceCallback} if\nthe device was not present before and indicated by {@code notifyAudioDeviceCallbacks}.\n"
     },
+    "addOutputDeviceWithDirectProfiles(android.media.AudioDeviceInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outputDevice"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addOutputDeviceWithDirectProfiles(android.media.AudioDeviceInfo)",
+      "documentation": "Adds an output {@link AudioDeviceInfo device} with direct profiles and notifies the list of\n{@link AudioDeviceCallback} if the device was not present before.\n"
+    },
     "adjustStreamVolume(int,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -141,9 +154,20 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "dispatchMediaKeyEvent(android.view.KeyEvent)",
       "documentation": "Sends a simulated key event for a media button.\n\n\u003cp\u003eInstead of sending the media event to the media system service, from where it would be\nrouted to a media app, this shadow method only records the events to be verified through {@link\n#getDispatchedMediaKeyEvents()}.\n"
+    },
+    "dispatchModeChangedListeners(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [
+        "newMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "dispatchModeChangedListeners(int)"
     },
     "generateAudioSessionId()": {
       "isImplementation": true,
@@ -179,6 +203,20 @@
       "minSdk": 24,
       "name": "getActiveRecordingConfigurations()",
       "documentation": "Returns list of active recording configurations that was set by {@link\n#setActiveRecordingConfigurations} or empty list otherwise.\n"
+    },
+    "getAudioDevicesForAttributes(android.media.AudioAttributes)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "attributes"
+      ],
+      "returnType": "java.util.List\u003candroid.media.AudioDeviceInfo\u003e",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getAudioDevicesForAttributes(android.media.AudioAttributes)",
+      "documentation": "Returns the audio devices that would be used for the routing of the given audio attributes.\n\n\u003cp\u003eDevices can be added with {@link #setAudioDevicesForAttributes}. Note that {@link\n#setDevicesForAttributes} and {@link #setDefaultDevicesForAttributes} have no effect on the\nreturn value of this method.\n"
     },
     "getAvailableCommunicationDevices()": {
       "isImplementation": true,
@@ -228,6 +266,20 @@
       "minSdk": 30,
       "name": "getDevicesForAttributes(android.media.AudioAttributes)",
       "documentation": "Returns the devices associated with the given audio stream.\n\n\u003cp\u003eIn this shadow-implementation the devices returned are either\n\n\u003col\u003e\n  \u003cli\u003edevices set through {@link #setDevicesForAttributes}, or\n  \u003cli\u003edevices set through {@link #setDefaultDevicesForAttributes}, or\n  \u003cli\u003ean empty list.\n\u003c/ol\u003e\n"
+    },
+    "getDirectProfilesForAttributes(android.media.AudioAttributes)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "attributes"
+      ],
+      "returnType": "java.util.List\u003candroid.media.AudioProfile\u003e",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getDirectProfilesForAttributes(android.media.AudioAttributes)",
+      "documentation": "Returns the list of profiles supported for direct playback.\n\n\u003cp\u003eIn this shadow-implementation the list returned are profiles set through {@link\n#addOutputDeviceWithDirectProfiles(AudioDeviceInfo)}, {@link\n#removeOutputDeviceWithDirectProfiles(AudioDeviceInfo)}.\n"
     },
     "getDispatchedMediaKeyEvents()": {
       "isImplementation": false,
@@ -428,6 +480,19 @@
       "exceptions": [],
       "name": "isBluetoothScoOn()"
     },
+    "isHotwordStreamSupported(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "lookbackAudio"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "isHotwordStreamSupported(boolean)"
+    },
     "isMicrophoneMute()": {
       "isImplementation": true,
       "modifiers": [
@@ -494,6 +559,32 @@
       "exceptions": [],
       "name": "isWiredHeadsetOn()"
     },
+    "lockCommunicationDevice(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lockCommunicationDevice"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "lockCommunicationDevice(boolean)",
+      "documentation": "Sets whether subsequent calls to {@link setCommunicationDevice} will succeed. "
+    },
+    "lockMode(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lockMode"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "lockMode(boolean)",
+      "documentation": "Sets whether subsequent calls to {@link setMode} will succeed or not. "
+    },
     "notifyAudioDeviceCallbacks(java.util.List\u003candroid.media.AudioDeviceInfo\u003e,boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -520,7 +611,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "registerAudioDeviceCallback(android.media.AudioDeviceCallback,android.os.Handler)",
-      "documentation": "Registers an {@link AudioDeviceCallback} object to receive notifications of changes to the set\nof connected audio devices.\n\n\u003cp\u003eThe {@code handler} is ignored.\n\n@see #addInputDevice(AudioDeviceInfo, boolean)\n@see #addOutputDevice(AudioDeviceInfo, boolean)\n@see #addAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n@see #removeInputDevice(AudioDeviceInfo, boolean)\n@see #removeOutputDevice(AudioDeviceInfo, boolean)\n@see #removeAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n"
+      "documentation": "Registers an {@link AudioDeviceCallback} object to receive notifications of changes to the set\nof connected audio devices.\n\n\u003cp\u003eThe {@code handler} is ignored.\n\n@see #addInputDevice(AudioDeviceInfo, boolean)\n@see #addOutputDevice(AudioDeviceInfo, boolean)\n@see #addAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n@see #removeInputDevice(AudioDeviceInfo, boolean)\n@see #removeOutputDevice(AudioDeviceInfo, boolean)\n@see #removeAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n@see #addOutputDeviceWithDirectProfiles(AudioDeviceInfo)\n@see #removeOutputDeviceWithDirectProfiles(AudioDeviceInfo)\n"
     },
     "registerAudioPlaybackCallback(android.media.AudioManager.AudioPlaybackCallback,android.os.Handler)": {
       "isImplementation": true,
@@ -608,6 +699,19 @@
       "name": "removeOutputDevice(android.media.AudioDeviceInfo,boolean)",
       "documentation": "Removes an output {@link AudioDeviceInfo} and notifies the list of {@link AudioDeviceCallback}\nif the device was present before and indicated by {@code notifyAudioDeviceCallbacks}.\n"
     },
+    "removeOutputDeviceWithDirectProfiles(android.media.AudioDeviceInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "outputDevice"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "removeOutputDeviceWithDirectProfiles(android.media.AudioDeviceInfo)",
+      "documentation": "Removes an output {@link AudioDeviceInfo device} with direct profiles and notifies the list of\n{@link AudioDeviceCallback} if the device was present before.\n"
+    },
     "requestAudioFocus(android.media.AudioFocusRequest)": {
       "isImplementation": true,
       "modifiers": [
@@ -677,6 +781,20 @@
       "name": "setActiveRecordingConfigurations(java.util.List\u003candroid.media.AudioRecordingConfiguration\u003e,boolean)",
       "documentation": "Sets active recording configurations that will be served by {@link\nAudioManager#getActiveRecordingConfigurations} and notifies callback listeners about that\nchange.\n"
     },
+    "setAudioDevicesForAttributes(android.media.AudioAttributes,com.google.common.collect.ImmutableList\u003candroid.media.AudioDeviceInfo\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "attributes",
+        "devices"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setAudioDevicesForAttributes(android.media.AudioAttributes,com.google.common.collect.ImmutableList\u003candroid.media.AudioDeviceInfo\u003e)",
+      "documentation": "Sets the audio devices returned from {@link #getAudioDevicesForAttributes}. "
+    },
     "setAvailableCommunicationDevices(java.util.List\u003candroid.media.AudioDeviceInfo\u003e)": {
       "isImplementation": false,
       "modifiers": [
@@ -725,7 +843,8 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 31,
-      "name": "setCommunicationDevice(android.media.AudioDeviceInfo)"
+      "name": "setCommunicationDevice(android.media.AudioDeviceInfo)",
+      "documentation": "Note that this method can silently fail. See {@link lockCommunicationDevice}. "
     },
     "setDefaultDevicesForAttributes(com.google.common.collect.ImmutableList\u003cjava.lang.Object\u003e)": {
       "isImplementation": false,
@@ -753,6 +872,19 @@
       "exceptions": [],
       "name": "setDevicesForAttributes(android.media.AudioAttributes,com.google.common.collect.ImmutableList\u003cjava.lang.Object\u003e)",
       "documentation": "Sets the devices associated with the given audio stream. "
+    },
+    "setHotwordStreamSupported(boolean,boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "lookbackAudio",
+        "isSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHotwordStreamSupported(boolean,boolean)"
     },
     "setInputDevices(java.util.List\u003candroid.media.AudioDeviceInfo\u003e)": {
       "isImplementation": false,
@@ -826,7 +958,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "setMode(int)"
+      "name": "setMode(int)",
+      "documentation": "Note that this method can silently fail. See {@link lockMode}. "
     },
     "setNextFocusRequestResponse(int)": {
       "isImplementation": false,
@@ -951,7 +1084,7 @@
       "exceptions": [],
       "minSdk": 23,
       "name": "unregisterAudioDeviceCallback(android.media.AudioDeviceCallback)",
-      "documentation": "Unregisters an {@link AudioDeviceCallback} object which has been previously registered to\nreceive notifications of changes to the set of connected audio devices.\n\n@see #addInputDevice(AudioDeviceInfo, boolean)\n@see #addOutputDevice(AudioDeviceInfo, boolean)\n@see #addAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n@see #removeInputDevice(AudioDeviceInfo, boolean)\n@see #removeOutputDevice(AudioDeviceInfo, boolean)\n@see #removeAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n"
+      "documentation": "Unregisters an {@link AudioDeviceCallback} object which has been previously registered to\nreceive notifications of changes to the set of connected audio devices.\n\n@see #addInputDevice(AudioDeviceInfo, boolean)\n@see #addOutputDevice(AudioDeviceInfo, boolean)\n@see #addAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n@see #removeInputDevice(AudioDeviceInfo, boolean)\n@see #removeOutputDevice(AudioDeviceInfo, boolean)\n@see #removeAvailableCommunicationDevice(AudioDeviceInfo, boolean)\n@see #addOutputDeviceWithDirectProfiles(AudioDeviceInfo)\n@see #removeOutputDeviceWithDirectProfiles(AudioDeviceInfo)\n"
     },
     "unregisterAudioPlaybackCallback(android.media.AudioManager.AudioPlaybackCallback)": {
       "isImplementation": true,
@@ -1009,7 +1142,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
@@ -1018,7 +1150,10 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.NonNull",
     "android.annotation.RequiresPermission",
     "android.annotation.TargetApi",
@@ -1028,6 +1163,7 @@
     "android.media.AudioFormat",
     "android.media.AudioManager",
     "android.media.AudioPlaybackConfiguration",
+    "android.media.AudioProfile",
     "android.media.AudioRecordingConfiguration",
     "android.media.IPlayer",
     "android.media.PlayerBase",
@@ -1038,6 +1174,7 @@
     "android.view.KeyEvent",
     "com.android.internal.util.Preconditions",
     "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.ImmutableSet",
     "java.util.ArrayList",
     "java.util.Collections",
     "java.util.HashMap",
@@ -1048,7 +1185,11 @@
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.util.ReflectionHelpers",
+    "org.robolectric.util.reflector.Constructor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowAudioManager.ModeDispatcherStubReflector",
     "org.robolectric.shadows.ShadowAudioManager.AudioFocusRequest",
     "org.robolectric.shadows.ShadowAudioManager.AudioStream"
   ],

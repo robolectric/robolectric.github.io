@@ -133,12 +133,10 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "setWifiP2pChannels(android.net.wifi.p2p.WifiP2pManager.Channel,int,int,android.net.wifi.p2p.WifiP2pManager.ActionListener)"
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.content.Context",
     "android.net.wifi.p2p.WifiP2pGroup",
     "android.net.wifi.p2p.WifiP2pManager",

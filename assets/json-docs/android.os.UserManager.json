@@ -167,7 +167,6 @@
       ],
       "returnType": "android.os.Bundle",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getApplicationRestrictions(java.lang.String)",
       "documentation": "Compared to real Android, there is no check that the package name matches the application\npackage name and the method returns instantly.\n\n@see #setApplicationRestrictions(String, Bundle)\n"
     },
@@ -204,7 +203,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 17,
       "name": "getMaxSupportedUsers()"
     },
     "getProfileParent(int)": {
@@ -316,9 +314,8 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 17,
       "name": "getUserHandle(int)",
-      "documentation": "@return user id for given user serial number. "
+      "documentation": "@return user id for given user serial number.\n"
     },
     "getUserHandles(boolean)": {
       "isImplementation": true,
@@ -391,6 +388,20 @@
       "minSdk": 21,
       "name": "getUserProfiles()"
     },
+    "getUserRestrictionSources(java.lang.String,android.os.UserHandle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "restriction",
+        "userHandle"
+      ],
+      "returnType": "java.util.List\u003candroid.os.UserManager.EnforcingUser\u003e",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "getUserRestrictionSources(java.lang.String,android.os.UserHandle)"
+    },
     "getUserRestrictions()": {
       "isImplementation": true,
       "modifiers": [
@@ -412,7 +423,6 @@
       ],
       "returnType": "android.os.Bundle",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getUserRestrictions(android.os.UserHandle)"
     },
     "getUserRestrictionsForUser(android.os.UserHandle)": {
@@ -587,9 +597,8 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 18,
       "name": "isLinkedUser()",
-      "documentation": "@return \u0027false\u0027 by default, or the value specified via {@link #setIsLinkedUser(boolean)} "
+      "documentation": "@return \u0027false\u0027 by default, or the value specified via {@link #setIsLinkedUser(boolean)}\n"
     },
     "isManagedProfile()": {
       "isImplementation": true,
@@ -819,7 +828,6 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 17,
       "name": "removeUser(int)"
     },
     "removeUserWhenPossible(android.os.UserHandle,boolean)": {
@@ -1220,7 +1228,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 18,
       "name": "setUserRestriction(java.lang.String,boolean)"
     },
     "setUserRestriction(java.lang.String,boolean,android.os.UserHandle)": {
@@ -1235,7 +1242,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 18,
       "name": "setUserRestriction(java.lang.String,boolean,android.os.UserHandle)",
       "documentation": "Shadows UserManager.setUserRestriction() API. This allows UserManager.hasUserRestriction() to\nreturn meaningful results in test environment; thus, allowing test to verify the invoking of\nUserManager.setUserRestriction().\n"
     },
@@ -1332,17 +1338,17 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",
+    "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
     "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.os.UserManager.RESTRICTION_SOURCE_SYSTEM",
     "android.os.UserManager.USER_TYPE_FULL_GUEST",
     "android.os.UserManager.USER_TYPE_FULL_RESTRICTED",
     "android.os.UserManager.USER_TYPE_FULL_SECONDARY",
@@ -1365,6 +1371,7 @@
     "android.os.Process",
     "android.os.UserHandle",
     "android.os.UserManager",
+    "android.os.UserManager.EnforcingUser",
     "com.google.common.base.Preconditions",
     "com.google.common.collect.BiMap",
     "com.google.common.collect.HashBiMap",

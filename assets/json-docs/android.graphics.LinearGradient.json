@@ -19,6 +19,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 29,
+      "maxSdk": 34,
       "name": "nativeCreate(long,float,float,float,float,long[],float[],int,long)"
     },
     "nativeCreate1(long,float,float,float,float,int[],float[],int)": {
@@ -71,9 +72,11 @@
     "android.graphics.LinearGradient",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.LinearGradientNatives",
     "org.robolectric.shadows.ShadowNativeLinearGradient.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeLinearGradient.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeLinearGradient",

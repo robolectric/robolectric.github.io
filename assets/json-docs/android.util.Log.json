@@ -370,7 +370,10 @@
     }
   },
   "imports": [
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.util.Log",
+    "android.util.Log.TerribleFailure",
+    "android.util.Log.TerribleFailureHandler",
     "com.google.common.base.Ascii",
     "com.google.common.base.Throwables",
     "com.google.common.collect.ImmutableList",
@@ -383,11 +386,20 @@
     "java.util.Queue",
     "java.util.concurrent.ConcurrentLinkedQueue",
     "java.util.function.Supplier",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.Resetter",
+    "org.robolectric.util.Util",
+    "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Constructor",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.util.reflector.Static",
+    "org.robolectric.versioning.AndroidVersions.L",
     "org.robolectric.shadows.ShadowLog.LogItem",
-    "org.robolectric.shadows.ShadowLog.TerribleFailure"
+    "org.robolectric.shadows.ShadowLog.LogReflector",
+    "org.robolectric.shadows.ShadowLog.TerribleFailureHandlerReflector",
+    "org.robolectric.shadows.ShadowLog.TerribleFailureReflector"
   ],
   "name": "org.robolectric.shadows.ShadowLog",
   "documentation": "Controls the behavior of {@link android.util.Log} and provides access to log messages. "

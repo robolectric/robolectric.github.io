@@ -70,7 +70,6 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 17,
       "name": "enableShutterSound(boolean)"
     },
     "getAddedCallbackBuffers()": {
@@ -388,10 +387,8 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "org.robolectric.shadow.api.Shadow.newInstanceOf",
     "android.hardware.Camera",
-    "android.os.Build",
     "android.view.SurfaceHolder",
     "com.google.common.base.Joiner",
     "com.google.common.collect.ImmutableList",

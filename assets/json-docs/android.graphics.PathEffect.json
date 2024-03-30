@@ -12,6 +12,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 34,
       "name": "nativeDestructor(long)"
     }
   },
@@ -22,6 +23,7 @@
     "org.robolectric.annotation.Implements",
     "org.robolectric.nativeruntime.PathEffectNatives",
     "org.robolectric.shadows.ShadowNativePathEffect.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativePathEffect.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativePathEffect",

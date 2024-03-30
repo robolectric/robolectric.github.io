@@ -180,7 +180,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "set(int,long,long,long,android.app.PendingIntent,android.os.WorkSource)"
     },
     "set(int,long,long,long,java.lang.String,android.app.AlarmManager.OnAlarmListener,android.os.Handler,android.os.WorkSource)": {
@@ -272,7 +271,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "setExact(int,long,android.app.PendingIntent)"
     },
     "setExact(int,long,java.lang.String,android.app.AlarmManager.OnAlarmListener,android.os.Handler)": {
@@ -455,7 +453,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "setWindow(int,long,long,android.app.PendingIntent)"
     },
     "setWindow(int,long,long,java.lang.String,android.app.AlarmManager.OnAlarmListener,android.os.Handler)": {
@@ -517,6 +514,8 @@
   "imports": [
     "android.app.AlarmManager.RTC_WAKEUP",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.Nullable",
+    "android.annotation.RequiresApi",
     "android.app.AlarmManager",
     "android.app.AlarmManager.AlarmClockInfo",
     "android.app.AlarmManager.OnAlarmListener",
@@ -528,9 +527,7 @@
     "android.os.Looper",
     "android.os.SystemClock",
     "android.os.WorkSource",
-    "androidx.annotation.GuardedBy",
-    "androidx.annotation.Nullable",
-    "androidx.annotation.RequiresApi",
+    "com.android.internal.annotations.GuardedBy",
     "com.google.common.collect.Iterables",
     "java.util.ArrayList",
     "java.util.List",

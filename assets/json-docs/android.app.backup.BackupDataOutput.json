@@ -83,9 +83,9 @@
     }
   },
   "imports": [
+    "android.annotation.Nullable",
     "android.app.backup.BackupDataOutput",
     "android.os.Build.VERSION_CODES",
-    "androidx.annotation.Nullable",
     "com.google.common.collect.ImmutableList",
     "java.io.FileDescriptor",
     "java.util.ArrayList",

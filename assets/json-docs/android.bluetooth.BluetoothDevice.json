@@ -46,7 +46,6 @@
       ],
       "returnType": "android.bluetooth.BluetoothGatt",
       "exceptions": [],
-      "minSdk": 18,
       "name": "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback)"
     },
     "connectGatt(android.content.Context,boolean,android.bluetooth.BluetoothGattCallback,int)": {
@@ -302,7 +301,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getType()",
       "documentation": "Overrides behavior of {@link BluetoothDevice#getType} to return pre-set result.\n\n@return Value set by calling {@link ShadowBluetoothDevice#setType}. If setType has not\n    previously been called, will return BluetoothDevice.DEVICE_TYPE_UNKNOWN.\n"
     },
@@ -462,6 +460,19 @@
       "name": "setFetchUuidsWithSdpResult(boolean)",
       "documentation": "Sets value of the return result for {@link BluetoothDevice#fetchUuidsWithSdp}. "
     },
+    "setGattConnectionInterceptor(org.robolectric.shadows.ShadowBluetoothDevice.BluetoothGattConnectionInterceptor)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "interceptor"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setGattConnectionInterceptor(org.robolectric.shadows.ShadowBluetoothDevice.BluetoothGattConnectionInterceptor)",
+      "documentation": "Allows tests to intercept the {@link BluetoothDevice.connectGatt} method and set state on both\nBluetoothDevice and BluetoothGatt objects. This is useful for e2e testing situations where the\nfine-grained execution of Bluetooth connection logic is onerous.\n"
+    },
     "setMetadata(int,byte[])": {
       "isImplementation": true,
       "modifiers": [
@@ -595,7 +606,6 @@
   "imports": [
     "android.bluetooth.BluetoothDevice.BOND_NONE",
     "android.content.pm.PackageManager.PERMISSION_GRANTED",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
@@ -622,6 +632,7 @@
     "java.util.List",
     "java.util.Map",
     "java.util.UUID",
+    "javax.annotation.Nullable",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
@@ -632,6 +643,7 @@
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.util.reflector.Static",
+    "org.robolectric.shadows.ShadowBluetoothDevice.BluetoothGattConnectionInterceptor",
     "org.robolectric.shadows.ShadowBluetoothDevice.BluetoothDeviceReflector"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothDevice",

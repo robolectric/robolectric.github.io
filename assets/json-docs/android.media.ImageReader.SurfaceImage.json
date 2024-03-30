@@ -8,7 +8,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getFormat()"
     },
     "getHeight()": {
@@ -19,7 +18,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getHeight()"
     },
     "getWidth()": {
@@ -30,7 +28,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getWidth()"
     },
     "setTimeStamp(long)": {
@@ -47,7 +44,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.S_V2",
     "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.util.reflector.Reflector.reflector",

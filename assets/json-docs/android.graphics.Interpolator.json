@@ -12,6 +12,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nativeConstructor(int,int)"
     },
     "nativeDestructor(long)": {
@@ -25,6 +26,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nativeDestructor(long)"
     },
     "nativeReset(long,int,int)": {
@@ -40,6 +42,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nativeReset(long,int,int)"
     },
     "nativeSetKeyFrame(long,int,int,float[],float[])": {
@@ -57,6 +60,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nativeSetKeyFrame(long,int,int,float[],float[])"
     },
     "nativeSetRepeatMirror(long,float,boolean)": {
@@ -72,6 +76,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nativeSetRepeatMirror(long,float,boolean)"
     },
     "nativeTimeToValues(long,int,float[])": {
@@ -87,6 +92,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nativeTimeToValues(long,int,float[])"
     }
   },
@@ -98,6 +104,7 @@
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.InterpolatorNatives",
     "org.robolectric.shadows.ShadowNativeInterpolator.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeInterpolator.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeInterpolator",

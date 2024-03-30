@@ -183,7 +183,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 16,
       "maxSdk": 22,
       "name": "native_setup(java.lang.Object,java.lang.String,java.lang.String,int,int,int[],java.lang.Object[])"
     },

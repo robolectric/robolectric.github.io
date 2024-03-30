@@ -26,6 +26,18 @@
       "exceptions": [],
       "name": "initializePlayCountMap()"
     },
+    "mustPlayShutterSound()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "mustPlayShutterSound()"
+    },
     "play(int)": {
       "isImplementation": true,
       "modifiers": [
@@ -49,12 +61,26 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
+    },
+    "setMustPlayShutterSound(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "mustPlayShutterSound"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMustPlayShutterSound(boolean)",
+      "documentation": "Sets the value returned by {@link MediaActionSound#mustPlayShutterSound()}. "
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.TIRAMISU",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.media.MediaActionSound",
-    "android.os.Build",
     "java.util.HashMap",
     "java.util.Map",
     "java.util.concurrent.atomic.AtomicInteger",

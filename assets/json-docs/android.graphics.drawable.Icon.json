@@ -115,6 +115,7 @@
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.Nullable",
     "android.content.Context",
     "android.graphics.Bitmap",
     "android.graphics.drawable.Drawable",
@@ -123,7 +124,6 @@
     "android.net.Uri",
     "android.os.Handler",
     "android.os.Message",
-    "androidx.annotation.Nullable",
     "java.util.concurrent.Executor",
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",

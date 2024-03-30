@@ -29,7 +29,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 18,
       "name": "bulkTransfer(android.hardware.usb.UsbEndpoint,byte[],int,int,int)"
     },
     "claimInterface(android.hardware.usb.UsbInterface,boolean)": {
@@ -61,7 +60,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "controlTransfer(int,int,int,int,byte[],int,int)"
     },
     "controlTransfer(int,int,int,int,byte[],int,int,int)": {
@@ -81,7 +79,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "controlTransfer(int,int,int,int,byte[],int,int,int)"
     },
     "getOutgoingDataStream()": {
@@ -194,8 +191,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
     "android.hardware.usb.UsbDeviceConnection",

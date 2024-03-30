@@ -223,8 +223,7 @@
     "getCurrentInterruptionFilter()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "int",
@@ -346,15 +345,14 @@
     "getNotificationPolicy()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "android.app.NotificationManager.Policy",
       "exceptions": [],
       "minSdk": 23,
       "name": "getNotificationPolicy()",
-      "documentation": "@return the value specified via {@link #setNotificationPolicy(Policy)} "
+      "documentation": "@return the value specified via {@link #setNotificationPolicy(Policy)}\n"
     },
     "isChannelDeleted(java.lang.String)": {
       "isImplementation": false,
@@ -372,8 +370,7 @@
     "isNotificationListenerAccessGranted(android.content.ComponentName)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "componentName"
@@ -387,15 +384,14 @@
     "isNotificationPolicyAccessGranted()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 23,
       "name": "isNotificationPolicyAccessGranted()",
-      "documentation": "@return the value specified via {@link #setNotificationPolicyAccessGranted(boolean)} "
+      "documentation": "@return the value specified via {@link #setNotificationPolicyAccessGranted(boolean)}\n"
     },
     "notify(int,android.app.Notification)": {
       "isImplementation": true,
@@ -479,8 +475,7 @@
     "setInterruptionFilter(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "interruptionFilter"
@@ -522,8 +517,7 @@
     "setNotificationPolicy(android.app.NotificationManager.Policy)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "policy"
@@ -592,6 +586,7 @@
     "android.os.Build.VERSION_CODES.P",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
+    "android.annotation.NonNull",
     "android.app.AutomaticZenRule",
     "android.app.Notification",
     "android.app.NotificationChannel",
@@ -601,7 +596,6 @@
     "android.os.Build",
     "android.os.Parcel",
     "android.service.notification.StatusBarNotification",
-    "androidx.annotation.NonNull",
     "com.google.common.base.Preconditions",
     "com.google.common.base.Strings",
     "com.google.common.collect.ImmutableList",

@@ -49,8 +49,7 @@
     "getSystemActions()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "java.util.List\u003candroid.view.accessibility.AccessibilityNodeInfo.AccessibilityAction\u003e",
@@ -85,8 +84,7 @@
     "performGlobalAction(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "action"

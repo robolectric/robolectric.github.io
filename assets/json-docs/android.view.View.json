@@ -483,7 +483,6 @@
       "params": [],
       "returnType": "android.view.WindowId",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getWindowId()"
     },
     "getWindowLocation()": {
@@ -561,7 +560,6 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 19,
       "name": "isAttachedToWindow()"
     },
     "lastHapticFeedbackPerformed()": {
@@ -996,7 +994,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "useRealScrolling()",
-      "documentation": "Currently the default View scrolling implementation is broken and low-fidelty. For instance,\neven if a View has no children, Robolectric will still happily set the scroll position of a\nView. Long-term we want to eliminate this broken behavior, but in the mean time the real\nscrolling behavior is enabled when native graphics are enabled, or when a system property is\nset.\n"
+      "documentation": "Currently the default View scrolling implementation is broken and low-fidelity. For instance,\neven if a View has no children, Robolectric will still happily set the scroll position of a\nView. Long-term we want to eliminate this broken behavior, but in the mean time the real\nscrolling behavior is enabled when native graphics are enabled, or when a system property is\nset.\n"
     },
     "visualize(android.view.View)": {
       "isImplementation": false,
@@ -1025,7 +1023,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.N",

@@ -13,6 +13,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 34,
       "name": "nativeCreate(float[],float)"
     }
   },
@@ -24,6 +25,7 @@
     "org.robolectric.nativeruntime.DashPathEffectNatives",
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.shadows.ShadowNativeDashPathEffect.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeDashPathEffect.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeDashPathEffect",

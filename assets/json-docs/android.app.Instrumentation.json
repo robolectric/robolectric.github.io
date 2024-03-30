@@ -220,7 +220,6 @@
       ],
       "returnType": "android.app.Instrumentation.ActivityResult",
       "exceptions": [],
-      "minSdk": 17,
       "maxSdk": 25,
       "name": "execStartActivity(android.content.Context,android.os.IBinder,android.os.IBinder,android.app.Activity,android.content.Intent,int,android.os.Bundle,android.os.UserHandle)",
       "documentation": "Behaves as {@link #execStartActivity(Context, IBinder, IBinder, Activity, Intent, int, Bundle).\n\n\u003cp\u003eCurrently ignores the user.\n"
@@ -443,7 +442,6 @@
       "params": [],
       "returnType": "android.app.UiAutomation",
       "exceptions": [],
-      "minSdk": 18,
       "maxSdk": 23,
       "name": "getUiAutomation()"
     },
@@ -521,10 +519,9 @@
       "name": "hasReceiverForIntent(android.content.Intent)",
       "documentation": "@deprecated use PackageManager.queryBroadcastReceivers instead\n"
     },
-    "hasRequiredPermissionForBroadcast(android.content.Context,java.lang.String)": {
+    "hasRequiredPermission(android.content.Context,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
-        "private",
         "static"
       ],
       "params": [
@@ -533,7 +530,7 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "name": "hasRequiredPermissionForBroadcast(android.content.Context,java.lang.String)",
+      "name": "hasRequiredPermission(android.content.Context,java.lang.String)",
       "documentation": "A null {@code requiredPermission} indicates that no permission is required. "
     },
     "logStartedActivity(android.content.Intent,java.lang.String,int,android.os.Bundle)": {
@@ -986,8 +983,6 @@
     "android.content.pm.PackageManager.MATCH_DEFAULT_ONLY",
     "android.content.pm.PackageManager.PERMISSION_DENIED",
     "android.content.pm.PackageManager.PERMISSION_GRANTED",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
@@ -998,6 +993,7 @@
     "com.google.common.util.concurrent.Futures.immediateFuture",
     "com.google.common.util.concurrent.MoreExecutors.directExecutor",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.Nullable",
     "android.app.Activity",
     "android.app.ActivityThread",
     "android.app.Fragment",
@@ -1022,7 +1018,6 @@
     "android.os.UserHandle",
     "android.text.TextUtils",
     "android.util.Pair",
-    "androidx.annotation.Nullable",
     "com.google.common.collect.ImmutableList",
     "com.google.common.util.concurrent.AsyncFunction",
     "com.google.common.util.concurrent.Futures",

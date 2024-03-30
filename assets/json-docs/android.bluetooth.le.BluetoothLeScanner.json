@@ -1,5 +1,17 @@
 {
   "methods": {
+    "addScanResult(android.bluetooth.le.ScanResult)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "scanResult"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addScanResult(android.bluetooth.le.ScanResult)"
+    },
     "getActiveScans()": {
       "isImplementation": false,
       "modifiers": [
@@ -82,11 +94,13 @@
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
+    "com.google.common.base.Preconditions.checkNotNull",
     "java.util.Collections.unmodifiableList",
     "android.app.PendingIntent",
     "android.bluetooth.le.BluetoothLeScanner",
     "android.bluetooth.le.ScanCallback",
     "android.bluetooth.le.ScanFilter",
+    "android.bluetooth.le.ScanResult",
     "android.bluetooth.le.ScanSettings",
     "com.google.auto.value.AutoValue",
     "com.google.common.collect.ImmutableList",

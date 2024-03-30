@@ -137,8 +137,7 @@
     "getBluetoothAdapter()": {
       "isImplementation": false,
       "modifiers": [
-        "public",
-        "final"
+        "public"
       ],
       "params": [],
       "returnType": "android.bluetooth.BluetoothAdapter",

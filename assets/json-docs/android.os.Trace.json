@@ -28,7 +28,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 18,
       "name": "beginSection(java.lang.String)",
       "documentation": "Starts a new trace section with given name. "
     },
@@ -85,7 +84,6 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 18,
       "name": "endSection()",
       "documentation": "Ends the most recent active trace section. "
     },
@@ -171,7 +169,6 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 18,
       "name": "nativeGetEnabledTags()"
     },
     "reset()": {
@@ -197,7 +194,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 18,
       "name": "setAppTracingAllowed(boolean)"
     },
     "setCounter(java.lang.String,long)": {
@@ -231,7 +227,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.Q",
     "com.google.common.base.Verify.verifyNotNull",
     "android.os.Trace",

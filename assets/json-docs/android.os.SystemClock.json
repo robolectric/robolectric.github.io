@@ -117,6 +117,20 @@
       "exceptions": [],
       "name": "setNetworkTimeAvailable(boolean)",
       "documentation": "Sets whether network time is available. "
+    },
+    "simulateDeepSleep(java.time.Duration)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "duration"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "simulateDeepSleep(java.time.Duration)",
+      "documentation": "In a deep sleep scenario, {@param elapsedRealtime} is advanced for this duration when in deep\nsleep whilst {@param uptime} maintains its original value.\n\n\u003cp\u003eMay only be used for {@link LooperMode.Mode#PAUSED}. For {@link LooperMode.Mode#LEGACY},\n{@param elapsedRealtime} is equal to {@param uptime}.\n"
     }
   },
   "imports": [

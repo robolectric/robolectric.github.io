@@ -14,8 +14,7 @@
     "respondToCall(android.telecom.Call.Details,android.telecom.CallScreeningService.CallResponse)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "callDetails",

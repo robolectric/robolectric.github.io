@@ -40,7 +40,7 @@
   },
   "imports": [
     "android.media.ToneGenerator",
-    "androidx.annotation.VisibleForTesting",
+    "com.android.internal.annotations.VisibleForTesting",
     "com.google.auto.value.AutoValue",
     "com.google.common.collect.ImmutableList",
     "java.time.Duration",

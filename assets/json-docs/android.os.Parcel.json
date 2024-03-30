@@ -1118,7 +1118,6 @@
       ],
       "returnType": "android.os.Parcelable.Creator\u003c?\u003e",
       "exceptions": [],
-      "minSdk": 18,
       "name": "readParcelableCreator(java.lang.ClassLoader)"
     },
     "reset()": {
@@ -1179,7 +1178,6 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",

@@ -59,7 +59,6 @@
       "exceptions": [
         "java.io.IOException"
       ],
-      "minSdk": 19,
       "name": "createReliablePipe()"
     },
     "dup()": {
@@ -73,6 +72,22 @@
         "java.io.IOException"
       ],
       "name": "dup()"
+    },
+    "dup(java.io.FileDescriptor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "fileDescriptor"
+      ],
+      "returnType": "android.os.ParcelFileDescriptor",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "name": "dup(java.io.FileDescriptor)",
+      "documentation": "Support shadowing of the static method {@link ParcelFileDescriptor#dup}.\n\n\u003cp\u003eThe real implementation calls {@link Os#fcntlInt} in order to duplicate the FileDescriptor\nin native code. This cannot be simulated on the JVM without the use of native code.\n"
     },
     "getFd()": {
       "isImplementation": true,
@@ -170,7 +185,6 @@
       "exceptions": [
         "java.io.IOException"
       ],
-      "minSdk": 19,
       "name": "open(java.io.File,int,android.os.Handler,android.os.ParcelFileDescriptor.OnCloseListener)"
     },
     "reset()": {
@@ -199,8 +213,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN",
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Parcelable.PARCELABLE_WRITE_RETURN_VALUE",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.ReflectionHelpers.ClassParameter.from",
@@ -210,11 +222,16 @@
     "android.os.Parcel",
     "android.os.ParcelFileDescriptor",
     "android.os.Parcelable",
+    "android.system.Os",
+    "com.google.common.io.ByteStreams",
     "java.io.File",
     "java.io.FileDescriptor",
+    "java.io.FileInputStream",
     "java.io.FileNotFoundException",
+    "java.io.FileOutputStream",
     "java.io.IOException",
     "java.io.RandomAccessFile",
+    "java.nio.channels.FileChannel",
     "java.nio.file.Files",
     "java.util.Collections",
     "java.util.HashMap",
@@ -228,7 +245,6 @@
     "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow",
     "org.robolectric.util.ReflectionHelpers",
-    "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowParcelFileDescriptor.FileDescriptorFromParcelUnavailableException",

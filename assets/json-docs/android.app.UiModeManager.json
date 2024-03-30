@@ -122,6 +122,19 @@
       "minSdk": 33,
       "name": "getNightModeCustomType()"
     },
+    "getProjectingPackages(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "projectionType"
+      ],
+      "returnType": "java.util.Set\u003cjava.lang.String\u003e",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "getProjectingPackages(int)"
+    },
     "isNightModeOn()": {
       "isImplementation": false,
       "modifiers": [
@@ -248,9 +261,11 @@
     "android.os.Build.VERSION",
     "android.os.Build.VERSION_CODES",
     "android.provider.Settings",
-    "androidx.annotation.GuardedBy",
+    "com.android.internal.annotations.GuardedBy",
     "com.google.common.collect.ImmutableSet",
+    "java.util.HashMap",
     "java.util.HashSet",
+    "java.util.Map",
     "java.util.Set",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.HiddenApi",

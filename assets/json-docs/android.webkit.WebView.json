@@ -152,7 +152,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "evaluateJavascript(java.lang.String,android.webkit.ValueCallback\u003cjava.lang.String\u003e)"
     },
     "findAddress(java.lang.String)": {
@@ -778,7 +777,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "setWebContentsDebuggingEnabled(boolean)"
     },
     "setWebViewClient(android.webkit.WebViewClient)": {

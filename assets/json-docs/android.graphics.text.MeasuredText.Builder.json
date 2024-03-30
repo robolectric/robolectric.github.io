@@ -1,5 +1,18 @@
 {
   "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "__staticInitializer__()",
+      "documentation": "The {@link MeasuredText.Builder} static initializer invokes its own native methods. This has\nto be deferred starting in Android V.\n"
+    },
     "nAddReplacementRun(long,long,int,int,float)": {
       "isImplementation": true,
       "modifiers": [
@@ -15,6 +28,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nAddReplacementRun(long,long,int,int,float)"
     },
     "nAddStyleRun(long,long,int,int,boolean)": {
@@ -34,27 +48,6 @@
       "exceptions": [],
       "maxSdk": 32,
       "name": "nAddStyleRun(long,long,int,int,boolean)"
-    },
-    "nAddStyleRun(long,long,int,int,boolean,int,int,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "nativeBuilderPtr",
-        "paintPtr",
-        "lineBreakStyle",
-        "lineBreakWordStyle",
-        "hyphenation",
-        "start",
-        "end",
-        "isRtl"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "minSdk": 35,
-      "name": "nAddStyleRun(long,long,int,int,boolean,int,int,boolean)"
     },
     "nAddStyleRun(long,long,int,int,int,int,boolean)": {
       "isImplementation": true,
@@ -115,26 +108,6 @@
       "maxSdk": 34,
       "name": "nBuildMeasuredText(long,long,char[],boolean,boolean,boolean)"
     },
-    "nBuildMeasuredText(long,long,char[],boolean,boolean,boolean,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "nativeBuilderPtr",
-        "hintMtPtr",
-        "text",
-        "computeHyphenation",
-        "computeLayout",
-        "computeBounds",
-        "fastHyphenationMode"
-      ],
-      "returnType": "long",
-      "exceptions": [],
-      "minSdk": 35,
-      "name": "nBuildMeasuredText(long,long,char[],boolean,boolean,boolean,boolean)"
-    },
     "nFreeBuilder(long)": {
       "isImplementation": true,
       "modifiers": [
@@ -146,6 +119,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nFreeBuilder(long)"
     },
     "nInitBuilder()": {
@@ -157,6 +131,7 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nInitBuilder()"
     }
   },

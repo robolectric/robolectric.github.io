@@ -27,6 +27,17 @@
       "name": "enforceWallpaperComponentPermission()",
       "documentation": "Throws {@link SecurityException} if the caller doesn\u0027t have {@link\npermission.SET_WALLPAPER_COMPONENT}.\n"
     },
+    "getAllWallpaperDimAmounts()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.Float\u003e",
+      "exceptions": [],
+      "name": "getAllWallpaperDimAmounts()",
+      "documentation": "Returns a list of all dim amounts set from calls to setWallpaperDimAmount. This can be used to\nverify that repeated calls to setWallpaperDimAmount are not done which can cause issues.\n"
+    },
     "getBitmap(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -97,7 +108,6 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 17,
       "name": "hasResourceWallpaper(int)",
       "documentation": "Returns whether the current wallpaper has been set through {@link #setResource(int)} or {@link\n#setResource(int, int)} with the same resource id.\n"
     },
@@ -275,7 +285,6 @@
     "android.graphics.Bitmap.CompressFormat",
     "android.graphics.BitmapFactory",
     "android.graphics.Rect",
-    "android.os.Build.VERSION_CODES",
     "android.os.Bundle",
     "android.os.IBinder",
     "android.os.ParcelFileDescriptor",

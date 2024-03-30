@@ -36,6 +36,31 @@
       "exceptions": [],
       "name": "getBufferLengthMillis(int)"
     },
+    "getCodecConfigPreference(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "android.bluetooth.BluetoothCodecConfig",
+      "exceptions": [],
+      "name": "getCodecConfigPreference(android.bluetooth.BluetoothDevice)"
+    },
+    "getCodecStatus(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "android.bluetooth.BluetoothCodecStatus",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getCodecStatus(android.bluetooth.BluetoothDevice)"
+    },
     "getConnectedDevices()": {
       "isImplementation": true,
       "modifiers": [
@@ -81,6 +106,19 @@
       "minSdk": 31,
       "name": "getDynamicBufferSupport()"
     },
+    "isOptionalCodecsEnabled(android.bluetooth.BluetoothDevice)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "isOptionalCodecsEnabled(android.bluetooth.BluetoothDevice)"
+    },
     "removeDevice(android.bluetooth.BluetoothDevice)": {
       "isImplementation": false,
       "modifiers": [
@@ -120,6 +158,33 @@
       "minSdk": 31,
       "name": "setBufferLengthMillis(int,int)"
     },
+    "setCodecConfigPreference(android.bluetooth.BluetoothDevice,android.bluetooth.BluetoothCodecConfig)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device",
+        "codecConfig"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "setCodecConfigPreference(android.bluetooth.BluetoothDevice,android.bluetooth.BluetoothCodecConfig)"
+    },
+    "setCodecStatus(android.bluetooth.BluetoothDevice,android.bluetooth.BluetoothCodecStatus)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "device",
+        "codecStatus"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setCodecStatus(android.bluetooth.BluetoothDevice,android.bluetooth.BluetoothCodecStatus)"
+    },
     "setDynamicBufferSupport(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -131,16 +196,50 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setDynamicBufferSupport(int)"
+    },
+    "setOptionalCodecsEnabled(android.bluetooth.BluetoothDevice,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device",
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "setOptionalCodecsEnabled(android.bluetooth.BluetoothDevice,int)"
+    },
+    "verifyDeviceNotNull(android.bluetooth.BluetoothDevice,java.lang.String)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "device",
+        "methodName"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 30,
+      "name": "verifyDeviceNotNull(android.bluetooth.BluetoothDevice,java.lang.String)"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "org.robolectric.util.reflector.Reflector.reflector",
     "android.bluetooth.BluetoothA2dp",
+    "android.bluetooth.BluetoothA2dp.OptionalCodecsPreferenceStatus",
     "android.bluetooth.BluetoothCodecConfig",
+    "android.bluetooth.BluetoothCodecStatus",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothProfile",
     "android.content.Intent",
+    "android.util.Log",
     "com.google.common.collect.ImmutableList",
     "java.util.ArrayList",
     "java.util.HashMap",
@@ -149,7 +248,11 @@
     "javax.annotation.Nullable",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
-    "org.robolectric.annotation.Implements"
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowBluetoothA2dp.BluetoothA2dpReflector"
   ],
   "name": "org.robolectric.shadows.ShadowBluetoothA2dp",
   "documentation": "Shadow of {@link BluetoothA2dp}. "

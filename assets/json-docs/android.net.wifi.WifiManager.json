@@ -142,7 +142,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "connect(android.net.wifi.WifiConfiguration,android.net.wifi.WifiManager.ActionListener)"
     },
     "connect(int,android.net.wifi.WifiManager.ActionListener)": {
@@ -156,7 +155,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "connect(int,android.net.wifi.WifiManager.ActionListener)"
     },
     "createMulticastLock(java.lang.String)": {
@@ -434,7 +432,6 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 18,
       "name": "isScanAlwaysAvailable()"
     },
     "isStaApConcurrencySupported()": {
@@ -1017,8 +1014,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",

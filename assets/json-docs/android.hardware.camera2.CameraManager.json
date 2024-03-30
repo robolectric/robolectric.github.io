@@ -68,7 +68,7 @@
       "minSdk": 21,
       "maxSdk": 24,
       "name": "openCameraDeviceUserAsync(java.lang.String,android.hardware.camera2.CameraDevice.StateCallback,android.os.Handler)",
-      "documentation": "Enables {@link CameraManager#openCamera(String, StateCallback, Handler)} to open a\n{@link CameraDevice}.\n\n\u003cp\u003eIf the provided cameraId exists, this will always post\n{@link CameraDevice.StateCallback#onOpened(CameraDevice) to the provided {@link Handler}.\nUnlike on real Android, this will not check if the camera has been disabled by device policy\nand does not attempt to connect to the camera service, so\n{@link CameraDevice.StateCallback#onError(CameraDevice, int)} and\n{@link CameraDevice.StateCallback#onDisconnected(CameraDevice)} will not be triggered by\n{@link CameraManager#openCamera(String, StateCallback, Handler)}.\n"
+      "documentation": "Enables {@link CameraManager#openCamera(String, StateCallback, Handler)} to open a {@link\nCameraDevice}.\n\n\u003cp\u003eIf the provided cameraId exists, this will always post {@link\nCameraDevice.StateCallback#onOpened(CameraDevice)} to the provided {@link Handler}. Unlike on\nreal Android, this will not check if the camera has been disabled by device policy and does not\nattempt to connect to the camera service, so {@link\nCameraDevice.StateCallback#onError(CameraDevice, int)} and {@link\nCameraDevice.StateCallback#onDisconnected(CameraDevice)} will not be triggered by {@link\nCameraManager#openCamera(String, StateCallback, Handler)}.\n"
     },
     "openCameraDeviceUserAsync(java.lang.String,android.hardware.camera2.CameraDevice.StateCallback,android.os.Handler,int)": {
       "isImplementation": true,
@@ -158,6 +158,20 @@
       "minSdk": 21,
       "name": "registerAvailabilityCallback(android.hardware.camera2.CameraManager.AvailabilityCallback,android.os.Handler)"
     },
+    "registerTorchCallback(android.hardware.camera2.CameraManager.TorchCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "registerTorchCallback(android.hardware.camera2.CameraManager.TorchCallback,android.os.Handler)"
+    },
     "removeCamera(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -245,6 +259,19 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "unregisterAvailabilityCallback(android.hardware.camera2.CameraManager.AvailabilityCallback)"
+    },
+    "unregisterTorchCallback(android.hardware.camera2.CameraManager.TorchCallback)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "callback"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "unregisterTorchCallback(android.hardware.camera2.CameraManager.TorchCallback)"
     },
     "updateCameraCallback(android.hardware.camera2.CameraDevice,android.hardware.camera2.CameraDevice.StateCallback,android.os.Handler,java.util.concurrent.Executor)": {
       "isImplementation": false,

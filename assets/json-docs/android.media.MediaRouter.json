@@ -98,15 +98,12 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.media.AudioRoutesInfo",
     "android.media.MediaRouter",
     "android.media.MediaRouter.RouteInfo",
     "android.os.Parcel",
     "android.text.TextUtils",
     "javax.annotation.Nullable",
-    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
     "org.robolectric.annotation.Resetter",
