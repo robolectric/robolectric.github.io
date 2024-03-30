@@ -75,6 +75,7 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 33,
       "name": "isFileEncryptedNativeOrEmulated()"
     },
     "isUserKeyUnlocked(int)": {
@@ -89,7 +90,19 @@
       "returnType": "boolean",
       "exceptions": [],
       "minSdk": 24,
+      "maxSdk": 34,
       "name": "isUserKeyUnlocked(int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     },
     "resetStorageVolumeList()": {
       "isImplementation": false,
@@ -119,6 +132,8 @@
   "imports": [
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
+    "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
     "android.os.UserManager",
     "android.os.storage.StorageManager",
     "android.os.storage.StorageVolume",
@@ -130,6 +145,7 @@
     "org.robolectric.annotation.HiddenApi",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.shadow.api.Shadow"
   ],
   "name": "org.robolectric.shadows.ShadowStorageManager",

@@ -15,6 +15,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 34,
       "name": "nativeConstructor(float[],float,float,float)"
     }
   },
@@ -26,6 +27,7 @@
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.EmbossMaskFilterNatives",
     "org.robolectric.shadows.ShadowNativeEmbossMaskFilter.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeEmbossMaskFilter.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeEmbossMaskFilter",

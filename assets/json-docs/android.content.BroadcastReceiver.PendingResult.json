@@ -30,8 +30,7 @@
     "finish()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -50,7 +49,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "android.content.BroadcastReceiver",

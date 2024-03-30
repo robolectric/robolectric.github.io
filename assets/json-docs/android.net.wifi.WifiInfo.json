@@ -110,7 +110,7 @@
       "name": "setRssi(int)"
     },
     "setSSID(java.lang.String)": {
-      "isImplementation": true,
+      "isImplementation": false,
       "modifiers": [
         "public"
       ],
@@ -119,7 +119,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "maxSdk": 16,
       "name": "setSSID(java.lang.String)"
     },
     "setSupplicantState(android.net.wifi.SupplicantState)": {
@@ -136,14 +135,12 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.net.wifi.SupplicantState",
     "android.net.wifi.WifiInfo",
     "android.net.wifi.WifiSsid",
     "java.net.InetAddress",
-    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

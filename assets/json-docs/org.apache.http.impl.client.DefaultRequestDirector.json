@@ -208,14 +208,13 @@
       "returnType": "org.apache.http.HttpRequest",
       "exceptions": [],
       "name": "getSentHttpRequest(int)",
-      "documentation": "Get the sent {@link HttpRequest} for the given index.\n\n@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequestInfo(int)} instead.)\n@return HttpRequest\n"
+      "documentation": "Get the sent {@link HttpRequest} for the given index.\n\n@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequestInfo(int)} instead. This method will be\n    removed in Robolectric 4.13.\n@return HttpRequest\n"
     },
     "getSentHttpRequestInfo(int)": {
       "isImplementation": false,
       "modifiers": [
         "public",
-        "static",
-        "final"
+        "static"
       ],
       "params": [
         "index"
@@ -223,7 +222,7 @@
       "returnType": "org.robolectric.shadows.httpclient.HttpRequestInfo",
       "exceptions": [],
       "name": "getSentHttpRequestInfo(int)",
-      "documentation": "Get the sent {@link HttpRequestInfo} for the given index.\n\n@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequest(int)} instead.)\n@return HttpRequestInfo\n"
+      "documentation": "Get the sent {@link HttpRequestInfo} for the given index.\n\n@param index The index\n@deprecated Use {@link FakeHttp#getSentHttpRequest(int)} instead. This method will be removed\n    in Robolectric 4.13.\n@return HttpRequestInfo\n"
     },
     "getTargetAuthenticationHandler()": {
       "isImplementation": false,

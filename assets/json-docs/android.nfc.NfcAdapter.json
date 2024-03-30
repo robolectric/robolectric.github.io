@@ -44,7 +44,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "disableReaderMode(android.app.Activity)"
     },
     "dispatchTagDiscovered(android.nfc.Tag)": {
@@ -98,13 +97,39 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "enableReaderMode(android.app.Activity,android.nfc.NfcAdapter.ReaderCallback,int,android.os.Bundle)"
+    },
+    "enableSecureNfc(boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "enableSecureNfc"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "enableSecureNfc(boolean)"
+    },
+    "getDefaultAdapter(android.content.Context)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "context"
+      ],
+      "returnType": "android.nfc.NfcAdapter",
+      "exceptions": [],
+      "name": "getDefaultAdapter(android.content.Context)"
     },
     "getDisabledActivity()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [],
       "returnType": "android.app.Activity",
@@ -114,7 +139,8 @@
     "getEnabledActivity()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [],
       "returnType": "android.app.Activity",
@@ -124,7 +150,8 @@
     "getFilters()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [],
       "returnType": "android.content.IntentFilter[]",
@@ -134,7 +161,8 @@
     "getIntent()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [],
       "returnType": "android.app.PendingIntent",
@@ -144,7 +172,8 @@
     "getNdefPushMessage()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [],
       "returnType": "android.nfc.NdefMessage",
@@ -155,7 +184,8 @@
     "getNdefPushMessageCallback()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [],
       "returnType": "android.nfc.NfcAdapter.CreateNdefMessageCallback",
@@ -179,7 +209,8 @@
     "getOnNdefPushCompleteCallback()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [],
       "returnType": "android.nfc.NfcAdapter.OnNdefPushCompleteCallback",
@@ -189,7 +220,8 @@
     "getTechLists()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [],
       "returnType": "java.lang.String[][]",
@@ -209,13 +241,36 @@
     "isInReaderMode()": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
       "name": "isInReaderMode()",
       "documentation": "Returns true if NFC is in reader mode. "
+    },
+    "isSecureNfcEnabled()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isSecureNfcEnabled()"
+    },
+    "isSecureNfcSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 29,
+      "name": "isSecureNfcSupported()"
     },
     "reset()": {
       "isImplementation": false,
@@ -232,7 +287,8 @@
     "setEnabled(boolean)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "public",
+        "synchronized"
       ],
       "params": [
         "enabled"
@@ -274,7 +330,8 @@
       "isImplementation": false,
       "modifiers": [
         "public",
-        "static"
+        "static",
+        "synchronized"
       ],
       "params": [
         "hardwareExists"
@@ -298,6 +355,19 @@
       "exceptions": [],
       "name": "setOnNdefPushCompleteCallback(android.nfc.NfcAdapter.OnNdefPushCompleteCallback,android.app.Activity,android.app.Activity...)",
       "documentation": "Sets callback that should be used on successful Android Beam (TM).\n\n\u003cp\u003eThe last registered callback is recalled and can be fetched using {@link\n#getOnNdefPushCompleteCallback}.\n"
+    },
+    "setSecureNfcSupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "synchronized"
+      ],
+      "params": [
+        "secureNfcSupported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSecureNfcSupported(boolean)"
     }
   },
   "imports": [
@@ -314,6 +384,7 @@
     "android.os.Build",
     "android.os.Bundle",
     "java.util.Map",
+    "javax.annotation.concurrent.GuardedBy",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

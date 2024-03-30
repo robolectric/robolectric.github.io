@@ -13,6 +13,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCreateDisplayListCanvas(long,int,int)"
     },
     "nDrawCircle(long,long,long,long,long)": {
@@ -30,6 +31,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDrawCircle(long,long,long,long,long)"
     },
     "nDrawRenderNode(long,long)": {
@@ -44,6 +46,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDrawRenderNode(long,long)"
     },
     "nDrawRipple(long,long,long,long,long,long,long,int,long)": {
@@ -66,6 +69,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nDrawRipple(long,long,long,long,long,long,long,int,long)"
     },
     "nDrawRoundRect(long,long,long,long,long,long,long,long)": {
@@ -86,6 +90,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDrawRoundRect(long,long,long,long,long,long,long,long)"
     },
     "nDrawTextureLayer(long,long)": {
@@ -100,6 +105,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDrawTextureLayer(long,long)"
     },
     "nDrawWebViewFunctor(long,int)": {
@@ -114,6 +120,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nDrawWebViewFunctor(long,int)"
     },
     "nEnableZ(long,boolean)": {
@@ -129,7 +136,23 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nEnableZ(long,boolean)"
+    },
+    "nFinishRecording(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderer"
+      ],
+      "returnType": "long",
+      "exceptions": [],
+      "minSdk": 29,
+      "maxSdk": 30,
+      "name": "nFinishRecording(long)"
     },
     "nFinishRecording(long,long)": {
       "isImplementation": true,
@@ -144,6 +167,7 @@
       "returnType": "void",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nFinishRecording(long,long)"
     },
     "nGetMaximumTextureHeight()": {
@@ -155,6 +179,7 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetMaximumTextureHeight()"
     },
     "nGetMaximumTextureWidth()": {
@@ -166,7 +191,23 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetMaximumTextureWidth()"
+    },
+    "nInsertReorderBarrier(long,boolean)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "renderer",
+        "enableReorder"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "maxSdk": 30,
+      "name": "nInsertReorderBarrier(long,boolean)"
     },
     "nResetDisplayListCanvas(long,long,int,int)": {
       "isImplementation": true,
@@ -182,18 +223,36 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nResetDisplayListCanvas(long,long,int,int)"
+    },
+    "reset()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "reset()"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.Q",
+    "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
     "android.graphics.RecordingCanvas",
+    "java.util.Collections",
+    "java.util.HashMap",
+    "java.util.Map",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.Resetter",
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.RecordingCanvasNatives",
     "org.robolectric.shadows.ShadowNativeRecordingCanvas.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeRecordingCanvas.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeRecordingCanvas",

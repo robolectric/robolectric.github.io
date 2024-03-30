@@ -8,7 +8,6 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getCallingPackage()"
     },
     "setCallingPackage(java.lang.Object)": {
@@ -27,7 +26,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.ContentProvider",

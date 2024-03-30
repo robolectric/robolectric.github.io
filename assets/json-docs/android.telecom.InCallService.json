@@ -8,6 +8,7 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "__constructor__()"
     },
     "addCall(android.telecom.Call)": {
@@ -20,7 +21,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "addCall(android.telecom.Call)"
+      "name": "addCall(android.telecom.Call)",
+      "documentation": "@deprecated Please add calls by adding a Call using {@link\n    android.telecom.InCallService.InCallServiceBinder}.\n"
     },
     "addCall(android.telecom.ParcelableCall)": {
       "isImplementation": false,
@@ -75,6 +77,16 @@
       "exceptions": [],
       "name": "getHandler()"
     },
+    "getShadowPhone()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "org.robolectric.shadows.ShadowPhone",
+      "exceptions": [],
+      "name": "getShadowPhone()"
+    },
     "isInCallAdapterSet()": {
       "isImplementation": false,
       "modifiers": [
@@ -111,7 +123,8 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "name": "removeCall(android.telecom.Call)"
+      "name": "removeCall(android.telecom.Call)",
+      "documentation": "@deprecated Please remove calls by invoking {@link Call#disconnect()}.\n"
     },
     "requestBluetoothAudio(android.bluetooth.BluetoothDevice)": {
       "isImplementation": true,
@@ -163,6 +176,16 @@
       "exceptions": [],
       "name": "setMuted(boolean)"
     },
+    "setPhone()": {
+      "isImplementation": false,
+      "modifiers": [
+        "private"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setPhone()"
+    },
     "setPostDialWait(java.lang.String,java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -194,6 +217,7 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N_MR1",
     "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
     "org.robolectric.shadow.api.Shadow.invokeConstructor",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.TargetApi",
@@ -208,7 +232,6 @@
     "android.telecom.ParcelableCall",
     "android.telecom.Phone",
     "com.android.internal.os.SomeArgs",
-    "com.android.internal.telecom.IInCallAdapter",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
@@ -216,6 +239,7 @@
     "org.robolectric.util.ReflectionHelpers",
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.util.reflector.Accessor",
+    "org.robolectric.util.reflector.Constructor",
     "org.robolectric.util.reflector.Direct",
     "org.robolectric.util.reflector.ForType",
     "org.robolectric.shadows.ShadowInCallService.ReflectorInCallService",

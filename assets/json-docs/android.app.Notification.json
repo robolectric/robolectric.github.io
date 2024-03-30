@@ -146,6 +146,16 @@
       "exceptions": [],
       "name": "getProgressBar_PreN()"
     },
+    "getTextLines()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cjava.lang.CharSequence\u003e",
+      "exceptions": [],
+      "name": "getTextLines()"
+    },
     "isIndeterminate()": {
       "isImplementation": false,
       "modifiers": [
@@ -201,8 +211,10 @@
     "android.widget.ImageView",
     "android.widget.ProgressBar",
     "android.widget.TextView",
+    "com.google.common.collect.ImmutableList",
     "java.io.ByteArrayOutputStream",
     "java.io.PrintStream",
+    "java.util.List",
     "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

@@ -1,34 +1,10 @@
 {
   "methods": {
-    "get(int,int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "keyCode",
-        "metaState"
-      ],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "get(int,int)"
-    },
-    "getDisplayLabel(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "keyCode"
-      ],
-      "returnType": "char",
-      "exceptions": [],
-      "name": "getDisplayLabel(int)"
-    },
     "getDownEvent(char)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "private",
+        "static"
       ],
       "params": [
         "a"
@@ -37,32 +13,11 @@
       "exceptions": [],
       "name": "getDownEvent(char)"
     },
-    "getEvents(char[])": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "chars"
-      ],
-      "returnType": "android.view.KeyEvent[]",
-      "exceptions": [],
-      "name": "getEvents(char[])"
-    },
-    "getKeyboardType()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getKeyboardType()"
-    },
     "getMetaState(char)": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "private",
+        "static"
       ],
       "params": [
         "a"
@@ -74,7 +29,8 @@
     "getUpEvent(char)": {
       "isImplementation": false,
       "modifiers": [
-        "public"
+        "private",
+        "static"
       ],
       "params": [
         "a"
@@ -82,18 +38,6 @@
       "returnType": "android.view.KeyEvent",
       "exceptions": [],
       "name": "getUpEvent(char)"
-    },
-    "isPrintingKey(int)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "keyCode"
-      ],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "isPrintingKey(int)"
     },
     "load(int)": {
       "isImplementation": true,
@@ -107,6 +51,126 @@
       "returnType": "android.view.KeyCharacterMap",
       "exceptions": [],
       "name": "load(int)"
+    },
+    "nativeGetCharacter(int,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "keyCode",
+        "metaState"
+      ],
+      "returnType": "char",
+      "exceptions": [],
+      "maxSdk": 19,
+      "name": "nativeGetCharacter(int,int,int)"
+    },
+    "nativeGetCharacter(long,int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "keyCode",
+        "metaState"
+      ],
+      "returnType": "char",
+      "exceptions": [],
+      "minSdk": 20,
+      "name": "nativeGetCharacter(long,int,int)"
+    },
+    "nativeGetDisplayLabel(int,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "keyCode"
+      ],
+      "returnType": "char",
+      "exceptions": [],
+      "maxSdk": 19,
+      "name": "nativeGetDisplayLabel(int,int)"
+    },
+    "nativeGetDisplayLabel(long,int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "keyCode"
+      ],
+      "returnType": "char",
+      "exceptions": [],
+      "minSdk": 20,
+      "name": "nativeGetDisplayLabel(long,int)"
+    },
+    "nativeGetEvents(int,char[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "chars"
+      ],
+      "returnType": "android.view.KeyEvent[]",
+      "exceptions": [],
+      "maxSdk": 19,
+      "name": "nativeGetEvents(int,char[])"
+    },
+    "nativeGetEvents(long,char[])": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr",
+        "chars"
+      ],
+      "returnType": "android.view.KeyEvent[]",
+      "exceptions": [],
+      "minSdk": 20,
+      "name": "nativeGetEvents(long,char[])"
+    },
+    "nativeGetKeyboardType(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "maxSdk": 19,
+      "name": "nativeGetKeyboardType(int)"
+    },
+    "nativeGetKeyboardType(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "ptr"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 20,
+      "name": "nativeGetKeyboardType(long)"
     },
     "nativeGetNumber(int,int)": {
       "isImplementation": true,
@@ -141,7 +205,8 @@
     "toCharKeyCode(char)": {
       "isImplementation": false,
       "modifiers": [
-        "private"
+        "private",
+        "static"
       ],
       "params": [
         "a"

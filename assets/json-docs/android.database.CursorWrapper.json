@@ -191,7 +191,6 @@
       "params": [],
       "returnType": "android.net.Uri",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getNotificationUri()"
     },
     "getPosition()": {
@@ -484,7 +483,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.M",
     "android.content.ContentResolver",
     "android.database.CharArrayBuffer",

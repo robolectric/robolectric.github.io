@@ -461,7 +461,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "maxSdk": 29,
       "name": "startOpNoThrow(int,int,java.lang.String)",
       "documentation": "Stores a fake long-running operation. It does not throw if a wrong uid is passed. "
@@ -602,7 +601,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.P",
@@ -615,6 +613,7 @@
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
+    "android.annotation.RequiresApi",
     "android.annotation.RequiresPermission",
     "android.annotation.SystemApi",
     "android.app.AppOpsManager",
@@ -634,7 +633,6 @@
     "android.util.ArrayMap",
     "android.util.LongSparseArray",
     "android.util.LongSparseLongArray",
-    "androidx.annotation.RequiresApi",
     "com.android.internal.app.IAppOpsService",
     "com.google.auto.value.AutoValue",
     "com.google.common.base.Preconditions",

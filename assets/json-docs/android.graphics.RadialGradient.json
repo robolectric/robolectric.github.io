@@ -22,6 +22,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nativeCreate(long,float,float,float,float,float,float,long[],float[],int,long)"
     },
     "nativeCreate(long,float,float,float,long[],float[],int,long)": {
@@ -95,13 +96,14 @@
     "android.os.Build.VERSION_CODES.Q",
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S",
+    "android.annotation.ColorLong",
     "android.graphics.RadialGradient",
-    "androidx.annotation.ColorLong",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.RadialGradientNatives",
     "org.robolectric.shadows.ShadowNativeRadialGradient.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeRadialGradient.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeRadialGradient",

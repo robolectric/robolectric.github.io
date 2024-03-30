@@ -60,6 +60,16 @@
       "exceptions": [],
       "name": "getDestination()"
     },
+    "getId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getId()"
+    },
     "getMimeType()": {
       "isImplementation": false,
       "modifiers": [
@@ -179,6 +189,18 @@
         "java.lang.Exception"
       ],
       "name": "setDestinationInExternalPublicDir(java.lang.String,java.lang.String)"
+    },
+    "setId(long)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setId(long)"
     },
     "setStatus(int)": {
       "isImplementation": false,

@@ -16,8 +16,7 @@
     "cancel()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "void",
@@ -80,7 +79,6 @@
       "isImplementation": true,
       "modifiers": [
         "protected",
-        "final",
         "synchronized"
       ],
       "params": [],

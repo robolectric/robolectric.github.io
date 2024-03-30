@@ -1342,8 +1342,7 @@
     "transform(android.graphics.Matrix)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "matrix"

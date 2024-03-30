@@ -63,6 +63,20 @@
       "name": "setBrand(java.lang.String)",
       "documentation": "Sets the value of the {@link Build#BRAND} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
+    "setDebuggable(java.lang.Boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "isDebuggable"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDebuggable(java.lang.Boolean)",
+      "documentation": "Sets the value of the {@link Build#IS_DEBUGGABLE} field.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
     "setDevice(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -189,6 +203,20 @@
       "name": "setSerial(java.lang.String)",
       "documentation": "Override return value from {@link Build#getSerial()}. "
     },
+    "setSupported32BitAbis(java.lang.String[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "supported32BitAbis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupported32BitAbis(java.lang.String[])",
+      "documentation": "Sets the value of the {@link Build#SUPPORTED_32_BIT_ABIS} field. Available in Android L+.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
     "setSupported64BitAbis(java.lang.String[])": {
       "isImplementation": false,
       "modifiers": [
@@ -202,6 +230,20 @@
       "exceptions": [],
       "name": "setSupported64BitAbis(java.lang.String[])",
       "documentation": "Sets the value of the {@link Build#SUPPORTED_64_BIT_ABIS} field. Available in Android L+.\n\n\u003cp\u003eIt will be reset for the next test.\n"
+    },
+    "setSupportedAbis(java.lang.String[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "supportedAbis"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSupportedAbis(java.lang.String[])",
+      "documentation": "Sets the value of the {@link Build#SUPPORTED_ABIS} field. Available in Android L+.\n\n\u003cp\u003eIt will be reset for the next test.\n"
     },
     "setTags(java.lang.String)": {
       "isImplementation": false,

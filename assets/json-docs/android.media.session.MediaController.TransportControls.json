@@ -1,0 +1,260 @@
+{
+  "methods": {
+    "getCustomAction()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.lang.String",
+      "exceptions": [],
+      "name": "getCustomAction()"
+    },
+    "getCustomActionArgs()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.os.Bundle",
+      "exceptions": [],
+      "name": "getCustomActionArgs()"
+    },
+    "getLastPerformedAction()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getLastPerformedAction()"
+    },
+    "getQueueItemId()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getQueueItemId()"
+    },
+    "getRating()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.media.Rating",
+      "exceptions": [],
+      "name": "getRating()"
+    },
+    "getSeekToPositionMs()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getSeekToPositionMs()"
+    },
+    "getUri()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "android.net.Uri",
+      "exceptions": [],
+      "name": "getUri()"
+    },
+    "pause()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "pause()"
+    },
+    "play()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "play()"
+    },
+    "playFromSearch(java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "query",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "playFromSearch(java.lang.String,android.os.Bundle)"
+    },
+    "playFromUri(android.net.Uri,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uri",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 23,
+      "name": "playFromUri(android.net.Uri,android.os.Bundle)"
+    },
+    "prepareFromSearch(java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "query",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "prepareFromSearch(java.lang.String,android.os.Bundle)"
+    },
+    "prepareFromUri(android.net.Uri,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uri",
+        "extras"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "prepareFromUri(android.net.Uri,android.os.Bundle)"
+    },
+    "seekTo(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "pos"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "seekTo(long)"
+    },
+    "sendCustomAction(java.lang.String,android.os.Bundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "action",
+        "args"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "sendCustomAction(java.lang.String,android.os.Bundle)"
+    },
+    "setRating(android.media.Rating)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "rating"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRating(android.media.Rating)"
+    },
+    "skipToNext()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "skipToNext()"
+    },
+    "skipToPrevious()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "skipToPrevious()"
+    },
+    "skipToQueueItem(long)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "id"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "skipToQueueItem(long)"
+    },
+    "stop()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "stop()"
+    }
+  },
+  "imports": [
+    "android.media.session.PlaybackState.ACTION_PAUSE",
+    "android.media.session.PlaybackState.ACTION_PLAY",
+    "android.media.session.PlaybackState.ACTION_PLAY_FROM_SEARCH",
+    "android.media.session.PlaybackState.ACTION_PLAY_FROM_URI",
+    "android.media.session.PlaybackState.ACTION_PREPARE_FROM_SEARCH",
+    "android.media.session.PlaybackState.ACTION_PREPARE_FROM_URI",
+    "android.media.session.PlaybackState.ACTION_SEEK_TO",
+    "android.media.session.PlaybackState.ACTION_SET_RATING",
+    "android.media.session.PlaybackState.ACTION_SKIP_TO_NEXT",
+    "android.media.session.PlaybackState.ACTION_SKIP_TO_PREVIOUS",
+    "android.media.session.PlaybackState.ACTION_SKIP_TO_QUEUE_ITEM",
+    "android.media.session.PlaybackState.ACTION_STOP",
+    "android.media.session.PlaybackState.STATE_NONE",
+    "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.M",
+    "android.os.Build.VERSION_CODES.N",
+    "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.Nullable",
+    "android.media.Rating",
+    "android.media.session.MediaController.TransportControls",
+    "android.net.Uri",
+    "android.os.Bundle",
+    "org.robolectric.annotation.Implementation",
+    "org.robolectric.annotation.Implements",
+    "org.robolectric.annotation.RealObject",
+    "org.robolectric.util.reflector.Direct",
+    "org.robolectric.util.reflector.ForType",
+    "org.robolectric.shadows.ShadowTransportControls.TransportControlsReflector"
+  ],
+  "name": "org.robolectric.shadows.ShadowTransportControls",
+  "documentation": "Shadow class for using {@link TransportControls} in tests.\n\n\u003cp\u003eTransportControls should always be created by first creating a corresponding MediaController;\n*NOT*, for instance, via Shadows.newInstanceOf(TransportControls.class).\n"
+}

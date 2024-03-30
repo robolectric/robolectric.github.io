@@ -112,18 +112,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setIsUserResolvableError(boolean)"
-    },
-    "setOpenSourceSoftwareLicenseInfo(java.lang.String)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "openSourceSoftwareLicenseInfo"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setOpenSourceSoftwareLicenseInfo(java.lang.String)"
     }
   },
   "imports": [

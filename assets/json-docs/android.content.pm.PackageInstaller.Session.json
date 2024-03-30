@@ -57,6 +57,17 @@
       ],
       "name": "fsync(java.io.OutputStream)"
     },
+    "getAppMetadata()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.os.PersistableBundle",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "getAppMetadata()"
+    },
     "openWrite(java.lang.String,long,long)": {
       "isImplementation": true,
       "modifiers": [
@@ -72,6 +83,35 @@
         "java.io.IOException"
       ],
       "name": "openWrite(java.lang.String,long,long)"
+    },
+    "requestUserPreapproval(android.content.pm.PackageInstaller.PreapprovalDetails,android.content.IntentSender)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "details",
+        "statusReceiver"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "requestUserPreapproval(android.content.pm.PackageInstaller.PreapprovalDetails,android.content.IntentSender)"
+    },
+    "setAppMetadata(android.os.PersistableBundle)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "data"
+      ],
+      "returnType": "void",
+      "exceptions": [
+        "java.io.IOException"
+      ],
+      "minSdk": 34,
+      "name": "setAppMetadata(android.os.PersistableBundle)"
     },
     "setShadowPackageInstaller(int,org.robolectric.shadows.ShadowPackageInstaller)": {
       "isImplementation": false,
@@ -90,15 +130,26 @@
   "imports": [
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
+    "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.P",
+    "android.os.Build.VERSION_CODES.S",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
+    "org.robolectric.Shadows.shadowOf",
     "android.annotation.NonNull",
     "android.annotation.Nullable",
     "android.annotation.SuppressLint",
+    "android.content.Intent",
     "android.content.IntentSender",
     "android.content.IntentSender.SendIntentException",
     "android.content.pm.PackageInstaller",
+    "android.content.pm.PackageInstaller.PreapprovalDetails",
     "android.content.pm.PackageInstaller.SessionInfo",
+    "android.content.pm.PackageManager",
+    "android.content.pm.VersionedPackage",
     "android.graphics.Bitmap",
+    "android.os.Build.VERSION",
     "android.os.Handler",
+    "android.os.PersistableBundle",
     "com.google.common.collect.ImmutableList",
     "java.io.IOException",
     "java.io.OutputStream",
@@ -116,5 +167,6 @@
     "org.robolectric.annotation.RealObject",
     "org.robolectric.shadow.api.Shadow"
   ],
-  "name": "org.robolectric.shadows.ShadowPackageInstaller.ShadowSession"
+  "name": "org.robolectric.shadows.ShadowPackageInstaller.ShadowSession",
+  "documentation": "Shadow for PackageInstaller.Session. "
 }

@@ -271,6 +271,21 @@
       "name": "isDefaultNetworkActive()",
       "documentation": "@return true by default, or the value specifed via {@link #setDefaultNetworkActive(boolean)}\n@see #setDefaultNetworkActive(boolean)\n"
     },
+    "registerBestMatchingNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "request",
+        "networkCallback",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 31,
+      "name": "registerBestMatchingNetworkCallback(android.net.NetworkRequest,android.net.ConnectivityManager.NetworkCallback,android.os.Handler)"
+    },
     "registerDefaultNetworkCallback(android.net.ConnectivityManager.NetworkCallback)": {
       "isImplementation": true,
       "modifiers": [
@@ -449,7 +464,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "setAirplaneMode(boolean)",
       "documentation": "Sets the value for enabling/disabling airplane mode\n\n@param enable new status for airplane mode\n"
     },
@@ -599,11 +613,11 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.O",
+    "android.os.Build.VERSION_CODES.S",
     "org.robolectric.RuntimeEnvironment.getApiLevel",
     "org.robolectric.Shadows.shadowOf",
     "android.app.PendingIntent",

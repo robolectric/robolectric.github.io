@@ -15,6 +15,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetBounds(long,char[],int,int,android.graphics.Rect)"
     },
     "nGetCharWidthAt(long,int)": {
@@ -29,6 +30,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetCharWidthAt(long,int)"
     },
     "nGetMemoryUsage(long)": {
@@ -42,6 +44,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetMemoryUsage(long)"
     },
     "nGetReleaseFunc()": {
@@ -53,6 +56,7 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetReleaseFunc()"
     },
     "nGetWidth(long,int,int)": {
@@ -68,6 +72,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetWidth(long,int,int)"
     }
   },

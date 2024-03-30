@@ -232,7 +232,6 @@
       ],
       "returnType": "android.accounts.Account[]",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getAccountsByTypeForPackage(java.lang.String,java.lang.String)"
     },
     "getAuthToken(android.accounts.Account,java.lang.String)": {
@@ -582,6 +581,19 @@
       "name": "setRemoveAccountIntent(android.content.Intent)",
       "documentation": "Sets the intent to include in Bundle result from {@link #removeAccount} if Activity is given.\n\n@param removeAccountIntent the intent to surface as {@link AccountManager#KEY_INTENT}.\n"
     },
+    "setSecurityErrorOnNextGetAccountsByTypeCall(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "shouldThrowException"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setSecurityErrorOnNextGetAccountsByTypeCall(boolean)",
+      "documentation": "Sets flag which if {@code true} will cause an exception to be thrown by {@link\n#getAccountsByType}.\n\n@param shouldThrowException should an exception be thrown or not on the next method call.\n"
+    },
     "setUserData(android.accounts.Account,java.lang.String,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
@@ -618,7 +630,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.O",
@@ -631,12 +642,12 @@
     "android.accounts.IAccountManager",
     "android.accounts.OnAccountsUpdateListener",
     "android.accounts.OperationCanceledException",
+    "android.annotation.Nullable",
     "android.app.Activity",
     "android.content.Context",
     "android.content.Intent",
     "android.os.Bundle",
     "android.os.Handler",
-    "androidx.annotation.Nullable",
     "java.io.IOException",
     "java.util.ArrayList",
     "java.util.Arrays",

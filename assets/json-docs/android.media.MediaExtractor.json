@@ -50,8 +50,7 @@
     "getTrackCount()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "int",

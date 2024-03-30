@@ -3,8 +3,7 @@
     "acquireContentProviderClient(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "uri"
@@ -16,8 +15,7 @@
     "acquireContentProviderClient(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "name"
@@ -29,8 +27,7 @@
     "acquireProvider(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "uri"
@@ -42,8 +39,7 @@
     "acquireProvider(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "name"
@@ -55,8 +51,7 @@
     "acquireUnstableContentProviderClient(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "uri"
@@ -68,8 +63,7 @@
     "acquireUnstableContentProviderClient(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "name"
@@ -94,8 +88,7 @@
     "acquireUnstableProvider(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "name"
@@ -151,8 +144,7 @@
     "bulkInsert(android.net.Uri,android.content.ContentValues[])": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "url",
@@ -221,8 +213,7 @@
     "delete(android.net.Uri,java.lang.String,java.lang.String[])": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "url",
@@ -394,7 +385,6 @@
       "params": [],
       "returnType": "java.util.List\u003candroid.content.UriPermission\u003e",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getPersistedUriPermissions()"
     },
     "getProvider(android.net.Uri)": {
@@ -530,8 +520,7 @@
     "insert(android.net.Uri,android.content.ContentValues)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "url",
@@ -569,22 +558,6 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isSyncActive(android.accounts.Account,java.lang.String)"
-    },
-    "newSyncInfo(int,android.accounts.Account,java.lang.String,long)": {
-      "isImplementation": false,
-      "modifiers": [
-        "private",
-        "static"
-      ],
-      "params": [
-        "authorityId",
-        "account",
-        "authority",
-        "startTime"
-      ],
-      "returnType": "android.content.SyncInfo",
-      "exceptions": [],
-      "name": "newSyncInfo(int,android.accounts.Account,java.lang.String,long)"
     },
     "notifyChange(android.net.Uri,android.database.ContentObserver)": {
       "isImplementation": true,
@@ -632,8 +605,7 @@
     "openInputStream(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "uri"
@@ -647,8 +619,7 @@
     "openOutputStream(android.net.Uri)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "uri"
@@ -662,8 +633,7 @@
     "openOutputStream(android.net.Uri,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "uri",
@@ -695,8 +665,7 @@
     "query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "uri",
@@ -753,7 +722,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 17,
       "name": "registerContentObserver(android.net.Uri,boolean,android.database.ContentObserver,int)"
     },
     "registerInputStream(android.net.Uri,java.io.InputStream)": {
@@ -834,7 +802,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "releasePersistableUriPermission(android.net.Uri,int)"
     },
     "removePeriodicSync(android.accounts.Account,java.lang.String,android.os.Bundle)": {
@@ -877,18 +844,6 @@
       "returnType": "void",
       "exceptions": [],
       "name": "reset()"
-    },
-    "setContentProviderResult(android.content.ContentProviderResult[])": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "contentProviderResults"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setContentProviderResult(android.content.ContentProviderResult[])"
     },
     "setCursor(android.net.Uri,org.robolectric.fakes.BaseCursor)": {
       "isImplementation": false,
@@ -1012,7 +967,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "takePersistableUriPermission(android.net.Uri,int)"
     },
     "unregisterContentObserver(android.database.ContentObserver)": {
@@ -1064,9 +1018,6 @@
     "android.content.ContentResolver.SCHEME_ANDROID_RESOURCE",
     "android.content.ContentResolver.SCHEME_CONTENT",
     "android.content.ContentResolver.SCHEME_FILE",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.Q",
     "org.robolectric.util.reflector.Reflector.reflector",

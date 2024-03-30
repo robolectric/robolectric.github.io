@@ -11,7 +11,6 @@
       ],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getDefaultUserAgent(android.content.Context)",
       "documentation": "Returns the default User-Agent used by a WebView. An instance of WebView could use a different\nUser-Agent if a call is made to {@link WebSettings#setUserAgentString(String)}.\n\n@param context a Context object used to access application assets\n"
     },
@@ -42,7 +41,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.content.Context",
     "android.webkit.WebSettings",
     "org.robolectric.annotation.Implementation",

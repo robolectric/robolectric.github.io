@@ -1,5 +1,18 @@
 {
   "methods": {
+    "addService(android.bluetooth.BluetoothGattService)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "service"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "addService(android.bluetooth.BluetoothGattService)",
+      "documentation": "Add a service to the GATT server.\n\n@param service service to be added to GattServer\n"
+    },
     "cancelConnection(android.bluetooth.BluetoothDevice)": {
       "isImplementation": true,
       "modifiers": [
@@ -23,6 +36,28 @@
       "exceptions": [],
       "name": "clearResponses()",
       "documentation": "Clear the list of responses. "
+    },
+    "clearServices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearServices()",
+      "documentation": "Remove all services from the list of provided services. "
+    },
+    "clearWrittenBytes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "clearWrittenBytes()",
+      "documentation": "Clear the list of written bytes. "
     },
     "close()": {
       "isImplementation": true,
@@ -65,6 +100,41 @@
       "exceptions": [],
       "name": "getResponses()",
       "documentation": "Get a copy of the list of responses that have been sent. "
+    },
+    "getService(java.util.UUID)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "uuid"
+      ],
+      "returnType": "android.bluetooth.BluetoothGattService",
+      "exceptions": [],
+      "name": "getService(java.util.UUID)",
+      "documentation": "Returns a {@link BluetoothGattService} from the list of services offered by this device.\n\n\u003cp\u003eIf multiple instances of the same service (as identified by UUID) exist, the first instance\nof the service is returned.\n\n@param uuid uuid of service\n"
+    },
+    "getServices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.bluetooth.BluetoothGattService\u003e",
+      "exceptions": [],
+      "name": "getServices()",
+      "documentation": "Returns a list of GATT services offered by this device. "
+    },
+    "getWrittenBytes()": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003cbyte[]\u003e",
+      "exceptions": [],
+      "name": "getWrittenBytes()",
+      "documentation": "Get a copy of the list of bytes that have been received. "
     },
     "isClosed()": {
       "isImplementation": false,
@@ -129,6 +199,38 @@
       "name": "notifyDisconnection(android.bluetooth.BluetoothDevice)",
       "documentation": "Simulate a successful Gatt Server Disconnection with {@link BluetoothConnectionManager}.\nPerforms a {@link BluetoothGattCallback#onConnectionStateChange} if available, even when device\nwas not connected initially.\n\n@param device remote device\n"
     },
+    "notifyOnCharacteristicWriteRequest(android.bluetooth.BluetoothDevice,int,android.bluetooth.BluetoothGattCharacteristic,java.lang.Boolean,java.lang.Boolean,int,byte[])": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "device",
+        "requestId",
+        "characteristic",
+        "preparedWrite",
+        "responseNeeded",
+        "offset",
+        "value"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "notifyOnCharacteristicWriteRequest(android.bluetooth.BluetoothDevice,int,android.bluetooth.BluetoothGattCharacteristic,java.lang.Boolean,java.lang.Boolean,int,byte[])",
+      "documentation": "Simulate a Gatt characteristic write request to the Gatt Server by triggering the server\ncallback.\n\n@param device remote device\n@param requestId id of the request\n@param characteristic characteristic to be written to\n@param preparedWrite true, if this write operation should be queued for later execution\n@param responseNeeded true, if the remote device requires a response\n@param offset the offset given for the value\n@param value the value the client wants to assign to the characteristic\n"
+    },
+    "removeService(android.bluetooth.BluetoothGattService)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "service"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "name": "removeService(android.bluetooth.BluetoothGattService)",
+      "documentation": "Remove a service from the GATT server.\n\n@param service service to be removed from GattServer\n"
+    },
     "sendResponse(android.bluetooth.BluetoothDevice,int,int,int,byte[])": {
       "isImplementation": true,
       "modifiers": [
@@ -164,12 +266,17 @@
     "android.bluetooth.BluetoothAdapter",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothGatt",
+    "android.bluetooth.BluetoothGattCharacteristic",
     "android.bluetooth.BluetoothGattServer",
     "android.bluetooth.BluetoothGattServerCallback",
+    "android.bluetooth.BluetoothGattService",
+    "com.google.common.collect.ImmutableList",
+    "com.google.common.collect.Lists",
     "java.util.ArrayList",
     "java.util.HashSet",
     "java.util.List",
     "java.util.Set",
+    "java.util.UUID",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.ReflectorObject",

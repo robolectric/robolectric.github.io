@@ -672,7 +672,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "requestLocationUpdates(android.location.LocationRequest,android.app.PendingIntent)"
     },
     "requestLocationUpdates(android.location.LocationRequest,android.location.LocationListener,android.os.Looper)": {
@@ -687,7 +686,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 19,
       "name": "requestLocationUpdates(android.location.LocationRequest,android.location.LocationListener,android.os.Looper)"
     },
     "requestLocationUpdates(android.location.LocationRequest,java.util.concurrent.Executor,android.location.LocationListener)": {
@@ -1321,6 +1319,8 @@
     "android.provider.Settings.Secure.LOCATION_MODE_SENSORS_ONLY",
     "android.provider.Settings.Secure.LOCATION_PROVIDERS_ALLOWED",
     "java.util.concurrent.TimeUnit.NANOSECONDS",
+    "android.annotation.Nullable",
+    "android.annotation.RequiresApi",
     "android.app.PendingIntent",
     "android.app.PendingIntent.CanceledException",
     "android.content.Context",
@@ -1348,9 +1348,7 @@
     "android.provider.Settings.Secure",
     "android.text.TextUtils",
     "android.util.Log",
-    "androidx.annotation.GuardedBy",
-    "androidx.annotation.Nullable",
-    "androidx.annotation.RequiresApi",
+    "com.android.internal.annotations.GuardedBy",
     "com.google.common.collect.ImmutableList",
     "com.google.common.collect.Iterables",
     "java.lang.reflect.Constructor",

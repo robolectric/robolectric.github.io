@@ -33,7 +33,6 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 18,
       "name": "close()",
       "documentation": "Close this Bluetooth GATT client. "
     },
@@ -45,7 +44,6 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 18,
       "name": "connect()",
       "documentation": "Connect to a remote device, and performs a {@link\nBluetoothGattCallback#onConnectionStateChange} if a {@link BluetoothGattCallback} has been set\nby {@link ShadowBluetoothGatt#setGattCallback}\n\n@return true, if a {@link BluetoothGattCallback} has been set by {@link\n    ShadowBluetoothGatt#setGattCallback}\n"
     },
@@ -70,7 +68,6 @@
       "params": [],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 18,
       "name": "disconnect()",
       "documentation": "Disconnects an established connection, or cancels a connection attempt currently in progress.\n"
     },
@@ -270,6 +267,20 @@
       "name": "requestConnectionPriority(int)",
       "documentation": "Request a connection parameter update.\n\n@param priority Request a specific connection priority. Must be one of {@link\n    BluetoothGatt#CONNECTION_PRIORITY_BALANCED}, {@link BluetoothGatt#CONNECTION_PRIORITY_HIGH}\n    or {@link BluetoothGatt#CONNECTION_PRIORITY_LOW_POWER}.\n@return true if operation is successful.\n@throws IllegalArgumentException If the parameters are outside of their specified range.\n"
     },
+    "requestMtu(int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "mtu"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "requestMtu(int)",
+      "documentation": "Overrides {@link BluetoothGatt#requestMtu} to always fail before {@link\nShadowBlueoothGatt.setGattCallback} is called, and always succeed after.\n"
+    },
     "setCharacteristicNotification(android.bluetooth.BluetoothGattCharacteristic,boolean)": {
       "isImplementation": true,
       "modifiers": [
@@ -297,6 +308,47 @@
       "exceptions": [],
       "name": "setGattCallback(android.bluetooth.BluetoothGattCallback)"
     },
+    "writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "characteristic"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic)"
+    },
+    "writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic,byte[],int)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "characteristic",
+        "value",
+        "writeType"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "writeCharacteristic(android.bluetooth.BluetoothGattCharacteristic,byte[],int)"
+    },
+    "writeDescriptor(android.bluetooth.BluetoothGattDescriptor)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "descriptor"
+      ],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 26,
+      "name": "writeDescriptor(android.bluetooth.BluetoothGattDescriptor)"
+    },
     "writeIncomingCharacteristic(android.bluetooth.BluetoothGattCharacteristic)": {
       "isImplementation": false,
       "modifiers": [
@@ -312,7 +364,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.O",
     "android.os.Build.VERSION_CODES.O_MR1",
@@ -322,9 +373,11 @@
     "android.bluetooth.BluetoothGatt",
     "android.bluetooth.BluetoothGattCallback",
     "android.bluetooth.BluetoothGattCharacteristic",
+    "android.bluetooth.BluetoothGattDescriptor",
     "android.bluetooth.BluetoothGattService",
     "android.bluetooth.BluetoothProfile",
     "android.content.Context",
+    "android.os.Build",
     "java.util.ArrayList",
     "java.util.HashSet",
     "java.util.List",

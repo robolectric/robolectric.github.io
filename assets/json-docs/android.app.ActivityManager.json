@@ -114,7 +114,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 17,
       "name": "getCurrentUser()"
     },
     "getDeviceConfigurationInfo()": {
@@ -304,7 +303,6 @@
       "params": [],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 19,
       "name": "isLowRamDevice()"
     },
     "isUserAMonkey()": {
@@ -520,14 +518,11 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 17,
       "name": "switchUser(int)"
     }
   },
   "imports": [
     "android.app.ActivityManager.RunningAppProcessInfo.IMPORTANCE_GONE",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
@@ -535,6 +530,7 @@
     "android.os.Build.VERSION_CODES.R",
     "java.util.stream.Collectors.toCollection",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.annotation.RequiresApi",
     "android.annotation.RequiresPermission",
     "android.app.ActivityManager",
     "android.app.ApplicationExitInfo",
@@ -550,7 +546,6 @@
     "android.os.UserHandle",
     "android.util.ArrayMap",
     "android.util.SparseIntArray",
-    "androidx.annotation.RequiresApi",
     "com.google.common.base.Preconditions",
     "java.util.ArrayDeque",
     "java.util.ArrayList",

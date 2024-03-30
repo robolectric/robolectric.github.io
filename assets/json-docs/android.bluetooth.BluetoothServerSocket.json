@@ -71,12 +71,10 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.annotation.SuppressLint",
     "android.bluetooth.BluetoothDevice",
     "android.bluetooth.BluetoothServerSocket",
     "android.bluetooth.BluetoothSocket",
-    "android.os.Build",
     "android.os.ParcelUuid",
     "java.io.IOException",
     "java.util.concurrent.BlockingQueue",

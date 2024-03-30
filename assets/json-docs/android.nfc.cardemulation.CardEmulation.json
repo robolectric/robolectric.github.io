@@ -23,7 +23,6 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 19,
       "name": "isDefaultServiceForCategory(android.content.ComponentName,java.lang.String)"
     },
     "reset()": {

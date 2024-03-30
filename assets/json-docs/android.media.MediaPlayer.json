@@ -781,7 +781,6 @@
       "exceptions": [
         "java.io.IOException"
       ],
-      "minSdk": 14,
       "maxSdk": 25,
       "name": "setDataSource(android.content.Context,android.net.Uri,java.util.Map\u003cjava.lang.String,java.lang.String\u003e)"
     },
@@ -1044,7 +1043,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.N_MR1",

@@ -20,6 +20,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nativeCreateBitmapEffect(long,float,float,float,float,float,float,float,float)"
     },
     "nativeCreateBlendModeEffect(long,long,int)": {
@@ -36,6 +37,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nativeCreateBlendModeEffect(long,long,int)"
     },
     "nativeCreateBlurEffect(float,float,long,int)": {
@@ -53,6 +55,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nativeCreateBlurEffect(float,float,long,int)"
     },
     "nativeCreateChainEffect(long,long)": {
@@ -68,6 +71,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nativeCreateChainEffect(long,long)"
     },
     "nativeCreateColorFilterEffect(long,long)": {
@@ -83,6 +87,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nativeCreateColorFilterEffect(long,long)"
     },
     "nativeCreateOffsetEffect(float,float,long)": {
@@ -99,6 +104,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nativeCreateOffsetEffect(float,float,long)"
     },
     "nativeCreateShaderEffect(long)": {
@@ -113,6 +119,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nativeCreateShaderEffect(long)"
     },
     "nativeGetFinalizer()": {
@@ -125,6 +132,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 31,
+      "maxSdk": 34,
       "name": "nativeGetFinalizer()"
     }
   },
@@ -137,6 +145,7 @@
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.RenderEffectNatives",
     "org.robolectric.shadows.ShadowNativeRenderEffect.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeRenderEffect.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeRenderEffect",

@@ -346,7 +346,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "java.nio.charset.StandardCharsets.UTF_8",
     "org.robolectric.util.reflector.Reflector.reflector",

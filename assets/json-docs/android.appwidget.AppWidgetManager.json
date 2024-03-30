@@ -90,7 +90,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 17,
       "name": "bindAppWidgetId(int,android.content.ComponentName,android.os.Bundle)"
     },
     "bindAppWidgetIdIfAllowed(int,android.content.ComponentName)": {
@@ -119,7 +118,6 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 17,
       "name": "bindAppWidgetIdIfAllowed(int,android.content.ComponentName,android.os.Bundle)",
       "documentation": "Create an internal presentation of the widget locally and store the options {@link Bundle} with\nit. This implementation doesn\u0027t trigger {@code AppWidgetProvider.onUpdate}\n"
     },
@@ -471,7 +469,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.L",
     "android.os.Build.VERSION_CODES.LOLLIPOP",

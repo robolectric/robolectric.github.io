@@ -316,8 +316,7 @@
     "isAntiAlias()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -327,8 +326,7 @@
     "isDither()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -338,8 +336,7 @@
     "isFilterBitmap()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "boolean",
@@ -591,6 +588,31 @@
       "maxSdk": 27,
       "name": "nGetRunAdvance(long,long,char[],int,int,int,int,boolean,int)"
     },
+    "nGetRunCharacterAdvance(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [
+        "paintPtr",
+        "text",
+        "start",
+        "end",
+        "contextStart",
+        "contextEnd",
+        "isRtl",
+        "offset",
+        "advances",
+        "advancesIndex",
+        "drawingBounds",
+        "runInfo"
+      ],
+      "returnType": "float",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "nGetRunCharacterAdvance(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"
+    },
     "nGetRunCharacterAdvance(long,char[],int,int,int,int,boolean,int,float[],int)": {
       "isImplementation": true,
       "modifiers": [
@@ -614,30 +636,6 @@
       "minSdk": 34,
       "maxSdk": 34,
       "name": "nGetRunCharacterAdvance(long,char[],int,int,int,int,boolean,int,float[],int)"
-    },
-    "nGetRunCharacterAdvance(long,char[],int,int,int,int,boolean,int,float[],int,android.graphics.RectF)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected",
-        "static"
-      ],
-      "params": [
-        "paintPtr",
-        "text",
-        "start",
-        "end",
-        "contextStart",
-        "contextEnd",
-        "isRtl",
-        "offset",
-        "advances",
-        "advancesIndex",
-        "drawingBounds"
-      ],
-      "returnType": "float",
-      "exceptions": [],
-      "minSdk": 35,
-      "name": "nGetRunCharacterAdvance(long,char[],int,int,int,int,boolean,int,float[],int,android.graphics.RectF)"
     },
     "nInit()": {
       "isImplementation": true,
@@ -683,7 +681,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 18,
       "maxSdk": 20,
       "name": "native_breakText(char[],int,int,float,int,float[])"
     },
@@ -717,7 +714,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 18,
       "maxSdk": 20,
       "name": "native_breakText(java.lang.String,boolean,float,int,float[])"
     },
@@ -806,7 +802,6 @@
       ],
       "returnType": "float",
       "exceptions": [],
-      "minSdk": 18,
       "maxSdk": 19,
       "name": "native_getTextRunAdvances(int,char[],int,int,int,int,int,float[],int)"
     },
@@ -852,7 +847,6 @@
       ],
       "returnType": "float",
       "exceptions": [],
-      "minSdk": 18,
       "maxSdk": 19,
       "name": "native_getTextRunAdvances(int,java.lang.String,int,int,int,int,int,float[],int)"
     },
@@ -990,8 +984,7 @@
     "setFilterBitmap(boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "filterBitmap"
@@ -1212,7 +1205,6 @@
   },
   "imports": [
     "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.L",
@@ -1230,7 +1222,6 @@
     "android.graphics.Paint",
     "android.graphics.Paint.FontMetricsInt",
     "android.graphics.PathEffect",
-    "android.graphics.RectF",
     "android.graphics.Shader",
     "android.graphics.Typeface",
     "org.robolectric.annotation.Implementation",

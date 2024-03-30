@@ -43,6 +43,20 @@
       "name": "addDirectPlaybackSupport(android.media.AudioFormat,android.media.AudioAttributes)",
       "documentation": "Adds support for direct playback for the pair of {@link AudioFormat} and {@link\nAudioAttributes} where the format encoding must be non-PCM. Calling {@link\nAudioTrack#isDirectPlaybackSupported(AudioFormat, AudioAttributes)} will return {@code true}\nfor matching {@link AudioFormat} and {@link AudioAttributes}. The matching is performed against\nthe format\u0027s {@linkplain AudioFormat#getEncoding() encoding}, {@linkplain\nAudioFormat#getSampleRate() sample rate}, {@linkplain AudioFormat#getChannelMask() channel\nmask} and {@linkplain AudioFormat#getChannelIndexMask() channel index mask}, and the\nattribute\u0027s {@linkplain AudioAttributes#getContentType() content type}, {@linkplain\nAudioAttributes#getUsage() usage} and {@linkplain AudioAttributes#getFlags() flags}.\n\n@param format The {@link AudioFormat}, which must be of a non-PCM encoding. If the encoding is\n    PCM, the method will throw an {@link IllegalArgumentException}.\n@param attr The {@link AudioAttributes}.\n"
     },
+    "addOnRoutingChangedListener(android.media.AudioRouting.OnRoutingChangedListener,android.os.Handler)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener",
+        "handler"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "addOnRoutingChangedListener(android.media.AudioRouting.OnRoutingChangedListener,android.os.Handler)"
+    },
     "clearAllowedNonPcmEncodings()": {
       "isImplementation": false,
       "modifiers": [
@@ -90,14 +104,24 @@
     "getPlaybackParams()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "android.media.PlaybackParams",
       "exceptions": [],
       "minSdk": 23,
       "name": "getPlaybackParams()"
+    },
+    "getRoutedDevice()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "android.media.AudioDeviceInfo",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "getRoutedDevice()"
     },
     "isPcm(int)": {
       "isImplementation": false,
@@ -268,8 +292,7 @@
     "native_write_byte(byte[],int,int,int,boolean)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "audioData",
@@ -297,6 +320,19 @@
       "exceptions": [],
       "name": "removeAudioDataListener(org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener)",
       "documentation": "Removes an {@link OnAudioDataWrittenListener} from the {@link ShadowAudioTrack}.\n\n@param listener The {@link OnAudioDataWrittenListener} to be removed.\n"
+    },
+    "removeOnRoutingChangedListener(android.media.AudioRouting.OnRoutingChangedListener)": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [
+        "listener"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 24,
+      "name": "removeOnRoutingChangedListener(android.media.AudioRouting.OnRoutingChangedListener)"
     },
     "resetTest()": {
       "isImplementation": false,
@@ -336,6 +372,20 @@
       "minSdk": 23,
       "name": "setPlaybackParams(android.media.PlaybackParams)"
     },
+    "setRoutedDevice(android.media.AudioDeviceInfo)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public",
+        "static"
+      ],
+      "params": [
+        "routedDevice"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setRoutedDevice(android.media.AudioDeviceInfo)",
+      "documentation": "Sets the routed device returned from {@link AudioTrack#getRoutedDevice()} and informs all\nregistered {@link OnRoutingChangedListener}.\n\n\u003cp\u003eNote that this affects the routed device for all {@link AudioTrack} instances.\n\n@param routedDevice The route device, or null to reset it to unknown.\n"
+    },
     "write(java.nio.ByteBuffer,int,int)": {
       "isImplementation": true,
       "modifiers": [
@@ -369,12 +419,17 @@
     "com.google.common.base.Preconditions.checkArgument",
     "com.google.common.base.Preconditions.checkNotNull",
     "android.annotation.NonNull",
+    "android.annotation.Nullable",
+    "android.annotation.RequiresApi",
     "android.media.AudioAttributes",
+    "android.media.AudioDeviceInfo",
     "android.media.AudioFormat",
+    "android.media.AudioRouting.OnRoutingChangedListener",
     "android.media.AudioTrack",
     "android.media.AudioTrack.WriteMode",
     "android.media.PlaybackParams",
     "android.os.Build.VERSION",
+    "android.os.Handler",
     "android.os.Parcel",
     "android.util.Log",
     "com.google.common.collect.HashMultimap",
@@ -384,8 +439,10 @@
     "java.util.Collections",
     "java.util.HashSet",
     "java.util.List",
+    "java.util.Objects",
     "java.util.Set",
     "java.util.concurrent.CopyOnWriteArrayList",
+    "java.util.concurrent.CopyOnWriteArraySet",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",
@@ -393,7 +450,8 @@
     "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowAudioTrack.OnAudioDataWrittenListener",
     "org.robolectric.shadows.ShadowAudioTrack.AudioFormatInfo",
-    "org.robolectric.shadows.ShadowAudioTrack.AudioAttributesInfo"
+    "org.robolectric.shadows.ShadowAudioTrack.AudioAttributesInfo",
+    "org.robolectric.shadows.ShadowAudioTrack.OnRoutingChangedListenerInfo"
   ],
   "name": "org.robolectric.shadows.ShadowAudioTrack",
   "documentation": "Implementation of a couple methods in {@link AudioTrack}. Only a couple methods are supported,\nother methods are expected run through the real class. The two {@link WriteMode} are treated the\nsame.\n"

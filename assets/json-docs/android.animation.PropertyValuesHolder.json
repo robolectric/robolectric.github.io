@@ -13,6 +13,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCallFloatMethod(java.lang.Object,long,float)"
     },
     "nCallFourFloatMethod(java.lang.Object,long,float,float,float,float)": {
@@ -31,6 +32,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCallFourFloatMethod(java.lang.Object,long,float,float,float,float)"
     },
     "nCallFourIntMethod(java.lang.Object,long,int,int,int,int)": {
@@ -49,6 +51,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCallFourIntMethod(java.lang.Object,long,int,int,int,int)"
     },
     "nCallIntMethod(java.lang.Object,long,int)": {
@@ -64,6 +67,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCallIntMethod(java.lang.Object,long,int)"
     },
     "nCallMultipleFloatMethod(java.lang.Object,long,float[])": {
@@ -79,6 +83,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCallMultipleFloatMethod(java.lang.Object,long,float[])"
     },
     "nCallMultipleIntMethod(java.lang.Object,long,int[])": {
@@ -94,6 +99,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCallMultipleIntMethod(java.lang.Object,long,int[])"
     },
     "nCallTwoFloatMethod(java.lang.Object,long,float,float)": {
@@ -110,6 +116,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCallTwoFloatMethod(java.lang.Object,long,float,float)"
     },
     "nCallTwoIntMethod(java.lang.Object,long,int,int)": {
@@ -126,6 +133,7 @@
       ],
       "returnType": "void",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nCallTwoIntMethod(java.lang.Object,long,int,int)"
     },
     "nGetFloatMethod(java.lang.Class\u003c?\u003e,java.lang.String)": {
@@ -140,6 +148,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetFloatMethod(java.lang.Class\u003c?\u003e,java.lang.String)"
     },
     "nGetIntMethod(java.lang.Class\u003c?\u003e,java.lang.String)": {
@@ -154,6 +163,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetIntMethod(java.lang.Class\u003c?\u003e,java.lang.String)"
     },
     "nGetMultipleFloatMethod(java.lang.Class\u003c?\u003e,java.lang.String,int)": {
@@ -169,6 +179,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetMultipleFloatMethod(java.lang.Class\u003c?\u003e,java.lang.String,int)"
     },
     "nGetMultipleIntMethod(java.lang.Class\u003c?\u003e,java.lang.String,int)": {
@@ -184,6 +195,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetMultipleIntMethod(java.lang.Class\u003c?\u003e,java.lang.String,int)"
     }
   },
@@ -195,6 +207,7 @@
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.nativeruntime.PropertyValuesHolderNatives",
     "org.robolectric.shadows.ShadowNativePropertyValuesHolder.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativePropertyValuesHolder.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativePropertyValuesHolder",

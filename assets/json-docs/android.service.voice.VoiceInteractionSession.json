@@ -142,7 +142,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setStartAssistantActivityException(java.lang.RuntimeException)",
-      "documentation": "Sets a {@link RuntimeException} that should be thrown when {@link\nVoiceInteractionSession#startAssistantActivity(Intent)} is invoked.\n"
+      "documentation": "Sets a {@link RuntimeException} that should be thrown when {@link\nVoiceInteractionSession#startAssistantActivity(Intent)} is invoked.\n\n@see \u003ca\n    href\u003d\"https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/java/android/app/Instrumentation.java;drc\u003d5f8f8ab44b4ac659804a13fb75b6516f86f977e7;l\u003d2225\"\u003eInstrumentation.checkStartActivityResult\u003c/a\u003e\n    for possible runtime exceptions that can be thrown.\n"
     },
     "setStartVoiceActivityException(java.lang.RuntimeException)": {
       "isImplementation": false,
@@ -155,7 +155,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setStartVoiceActivityException(java.lang.RuntimeException)",
-      "documentation": "Sets a {@link RuntimeException} that should be thrown when {@link\nVoiceInteractionSession#startVoiceActivity(Intent)} is invoked.\n"
+      "documentation": "Sets a {@link RuntimeException} that should be thrown when {@link\nVoiceInteractionSession#startVoiceActivity(Intent)} is invoked.\n\n@see \u003ca\n    href\u003d\"https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/java/android/app/Instrumentation.java;drc\u003d5f8f8ab44b4ac659804a13fb75b6516f86f977e7;l\u003d2225\"\u003eInstrumentation.checkStartActivityResult\u003c/a\u003e\n    for possible runtime exceptions that can be thrown.\n"
     }
   },
   "imports": [

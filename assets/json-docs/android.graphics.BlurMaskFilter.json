@@ -13,6 +13,7 @@
       "returnType": "long",
       "exceptions": [],
       "minSdk": 26,
+      "maxSdk": 34,
       "name": "nativeConstructor(float,int)"
     }
   },
@@ -24,6 +25,7 @@
     "org.robolectric.nativeruntime.BlurMaskFilterNatives",
     "org.robolectric.nativeruntime.DefaultNativeRuntimeLoader",
     "org.robolectric.shadows.ShadowNativeBlurMaskFilter.Picker",
+    "org.robolectric.versioning.AndroidVersions.U",
     "org.robolectric.shadows.ShadowNativeBlurMaskFilter.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativeBlurMaskFilter",

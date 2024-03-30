@@ -18,7 +18,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getProductId()"
     },
     "getVendorId()": {
@@ -29,7 +28,6 @@
       "params": [],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 19,
       "name": "getVendorId()"
     },
     "makeInputDeviceNamed(java.lang.String)": {
@@ -83,7 +81,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.KITKAT",
     "android.view.InputDevice",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",

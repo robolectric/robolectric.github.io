@@ -3,7 +3,6 @@
   "imports": [
     "android.annotation.Nullable",
     "android.content.Context",
-    "android.os.Build.VERSION_CODES",
     "android.provider.Telephony",
     "android.provider.Telephony.Sms",
     "org.robolectric.annotation.Implementation",

@@ -24,7 +24,22 @@
       "returnType": "void",
       "exceptions": [],
       "name": "addAvailableRestoreSets(long,java.util.List\u003cjava.lang.String\u003e)",
-      "documentation": "Adds a restore set available to be restored. "
+      "documentation": "Adds a restore set available to be restored successfully. "
+    },
+    "addAvailableRestoreSets(long,java.util.List\u003cjava.lang.String\u003e,int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "restoreToken",
+        "packages",
+        "result"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "addAvailableRestoreSets(long,java.util.List\u003cjava.lang.String\u003e,int)",
+      "documentation": "Adds a restore set available to be restored and the final result of the restore session. "
     },
     "beginRestoreSession()": {
       "isImplementation": true,
@@ -82,6 +97,19 @@
       "name": "getDataChangedCount()",
       "documentation": "Returns number of times {@link #dataChanged()} was called. "
     },
+    "getPackageRestoreCount(java.lang.String)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "packageName"
+      ],
+      "returnType": "int",
+      "exceptions": [],
+      "name": "getPackageRestoreCount(java.lang.String)",
+      "documentation": "Returns the number of recorded restores for the given package. "
+    },
     "getPackageRestoreToken(java.lang.String)": {
       "isImplementation": false,
       "modifiers": [
@@ -93,7 +121,7 @@
       "returnType": "long",
       "exceptions": [],
       "name": "getPackageRestoreToken(java.lang.String)",
-      "documentation": "Returns the restore token for the given package, or {@code 0} if the package was not restored.\n"
+      "documentation": "Returns the last recorded restore token for the given package, or {@code 0} if the package was\nnot restored.\n"
     },
     "isBackupEnabled()": {
       "isImplementation": true,
@@ -140,12 +168,26 @@
       "exceptions": [],
       "minSdk": 21,
       "name": "setBackupEnabled(boolean)"
+    },
+    "setNullAvailableRestoreSets(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "value"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setNullAvailableRestoreSets(boolean)",
+      "documentation": "Causes the {@link IRestoreObserver#restoreSetsAvailable} callback to receive {@code null},\nregardless of whether any restore sets were added to this shadow. Can be used to simulate a\nfailure by the transport to fetch available restore sets.\n"
     }
   },
   "imports": [
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.app.backup.BackupManager",
+    "android.app.backup.BackupTransport",
     "android.app.backup.IBackupManagerMonitor",
     "android.app.backup.IRestoreObserver",
     "android.app.backup.IRestoreSession",
@@ -156,6 +198,8 @@
     "android.os.IBinder",
     "android.os.Looper",
     "android.os.RemoteException",
+    "com.google.common.collect.ArrayListMultimap",
+    "com.google.common.collect.ListMultimap",
     "java.util.ArrayList",
     "java.util.Arrays",
     "java.util.HashMap",
@@ -174,8 +218,9 @@
     "org.robolectric.util.ReflectionHelpers.ClassParameter",
     "org.robolectric.shadows.ShadowBackupManager.FakeRestoreSession",
     "org.robolectric.shadows.ShadowBackupManager.BackupManagerServiceState",
+    "org.robolectric.shadows.ShadowBackupManager.RestoreData",
     "org.robolectric.shadows.ShadowBackupManager.RemoteRunnable"
   ],
   "name": "org.robolectric.shadows.ShadowBackupManager",
-  "documentation": "A stub implementation of {@link BackupManager} that instead of connecting to a real backup\ntransport and performing restores, stores which packages are restored from which backup set, and\ncan be verified using methods on the shadow like {@link #getPackageRestoreToken(String)}.\n"
+  "documentation": "A stub implementation of {@link BackupManager} that instead of connecting to a real backup\ntransport and performing restores, stores which packages are restored from which backup set, what\nthe final result should be and can be verified using methods on the shadow like {@link\n#getPackageRestoreToken(String)} and {@link #getPackageRestoreCount(String)}.\n"
 }

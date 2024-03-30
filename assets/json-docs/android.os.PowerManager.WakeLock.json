@@ -182,7 +182,6 @@
     "android.content.Context",
     "android.content.Intent",
     "android.os.Binder",
-    "android.os.Build.VERSION_CODES",
     "android.os.PowerManager",
     "android.os.PowerManager.LowPowerStandbyPortDescription",
     "android.os.PowerManager.LowPowerStandbyPortsLock",

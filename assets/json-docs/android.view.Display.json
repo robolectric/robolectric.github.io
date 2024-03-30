@@ -1,30 +1,5 @@
 {
   "methods": {
-    "configureForJBOnly(android.content.res.Configuration,android.util.DisplayMetrics)": {
-      "isImplementation": false,
-      "modifiers": [],
-      "params": [
-        "configuration",
-        "displayMetrics"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "configureForJBOnly(android.content.res.Configuration,android.util.DisplayMetrics)"
-    },
-    "getCurrentSizeRange(android.graphics.Point,android.graphics.Point)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "outSmallestSize",
-        "outLargestSize"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "maxSdk": 16,
-      "name": "getCurrentSizeRange(android.graphics.Point,android.graphics.Point)"
-    },
     "getDefaultDisplay()": {
       "isImplementation": false,
       "modifiers": [
@@ -37,17 +12,6 @@
       "name": "getDefaultDisplay()",
       "documentation": "Returns the default display.\n\n@return the default display\n"
     },
-    "getDisplayId()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getDisplayId()",
-      "documentation": "If {@link #setDisplayId(int)} has been called, this method will return the specified value.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
-    },
     "getMetrics(android.util.DisplayMetrics)": {
       "isImplementation": true,
       "modifiers": [
@@ -59,18 +23,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "getMetrics(android.util.DisplayMetrics)",
-      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity} will\nbe modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
-    },
-    "getPixelFormat()": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [],
-      "returnType": "int",
-      "exceptions": [],
-      "name": "getPixelFormat()",
-      "documentation": "If {@link #setPixelFormat(int)} has been called, this method will return the specified value.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
+      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity} will\nbe modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 4.13.\n"
     },
     "getRealMetrics(android.util.DisplayMetrics)": {
       "isImplementation": true,
@@ -83,20 +36,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "getRealMetrics(android.util.DisplayMetrics)",
-      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity} will\nbe modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
-    },
-    "getRealSize(android.graphics.Point)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "outSize"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "maxSdk": 16,
-      "name": "getRealSize(android.graphics.Point)"
+      "documentation": "If {@link #setScaledDensity(float)} has been called, {@link DisplayMetrics#scaledDensity} will\nbe modified to reflect the value specified. Note that this is not a realistic state.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 4.13.\n"
     },
     "getRefreshRate()": {
       "isImplementation": true,
@@ -108,30 +48,6 @@
       "exceptions": [],
       "name": "getRefreshRate()",
       "documentation": "If {@link #setRefreshRate(float)} has been called, this method will return the specified value.\n\n@deprecated This behavior is deprecated and will be removed in Robolectric 3.7.\n"
-    },
-    "getSizeInternal(android.graphics.Point,boolean)": {
-      "isImplementation": true,
-      "modifiers": [
-        "protected"
-      ],
-      "params": [
-        "outSize",
-        "doCompat"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "maxSdk": 16,
-      "name": "getSizeInternal(android.graphics.Point,boolean)"
-    },
-    "isJB()": {
-      "isImplementation": false,
-      "modifiers": [
-        "private"
-      ],
-      "params": [],
-      "returnType": "boolean",
-      "exceptions": [],
-      "name": "isJB()"
     },
     "setDensity(float)": {
       "isImplementation": false,
@@ -189,19 +105,6 @@
       "name": "setDisplayHdrCapabilities(int,float,float,float,int...)",
       "documentation": "Set HDR capabilities to the display sourced with displayId. see {@link HdrCapabilities} for\nsupportedHdrTypes.\n\n@throws UnsupportedOperationException if the method is called below Android vesrsion N.\n"
     },
-    "setDisplayId(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "displayId"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setDisplayId(int)",
-      "documentation": "Changes the ID for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n\n@deprecated This method is deprecated and will be removed in Robolectric 3.7.\n"
-    },
     "setFlags(int)": {
       "isImplementation": false,
       "modifiers": [
@@ -214,6 +117,19 @@
       "exceptions": [],
       "name": "setFlags(int)",
       "documentation": "Changes the flags for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
+    },
+    "setHdrSdrRatio(float)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "hdrSdrRatio"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setHdrSdrRatio(float)",
+      "documentation": "Sets current hdr/sdr ratio expressed as the ratio of targetHdrPeakBrightnessInNits /\ntargetSdrWhitePointInNits. This will have the intended side effect of making {@link\nDisplay#isHdrSdrRatioAvailable()} equal to true if set to any value other than {@link\nFloat#NaN}.\n\n@throws UnsupportedOperationException if the method is called below Android version U.\n"
     },
     "setHeight(int)": {
       "isImplementation": false,
@@ -240,19 +156,6 @@
       "exceptions": [],
       "name": "setName(java.lang.String)",
       "documentation": "Changes the name for this display.\n\n\u003cp\u003eAny registered {@link android.hardware.display.DisplayManager.DisplayListener}s will be\nnotified of the change.\n"
-    },
-    "setPixelFormat(int)": {
-      "isImplementation": false,
-      "modifiers": [
-        "public"
-      ],
-      "params": [
-        "pixelFormat"
-      ],
-      "returnType": "void",
-      "exceptions": [],
-      "name": "setPixelFormat(int)",
-      "documentation": "Changes the pixel format for this display.\n\n@deprecated This method is deprecated and will be removed in Robolectric 3.7.\n"
     },
     "setRealHeight(int)": {
       "isImplementation": false,
@@ -317,7 +220,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setScaledDensity(float)",
-      "documentation": "Changes the scaled density for this display.\n\n@deprecated This method is deprecated and will be removed in Robolectric 3.7.\n"
+      "documentation": "Changes the scaled density for this display.\n\n@deprecated This method is deprecated and will be removed in Robolectric 4.13.\n"
     },
     "setState(int)": {
       "isImplementation": false,
@@ -373,11 +276,8 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.content.Context",
-    "android.content.res.Configuration",
-    "android.graphics.Point",
     "android.os.Build",
     "android.os.Build.VERSION_CODES",
     "android.util.DisplayMetrics",

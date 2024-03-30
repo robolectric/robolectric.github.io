@@ -52,7 +52,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "closeProfileProxy(int,android.bluetooth.BluetoothProfile)",
-      "documentation": "Overrides behavior of {@link closeProfileProxy} if {@link\nShadowBluetoothAdapter#setProfileProxy} has been previously called.\n\nIf the given non-null BluetoothProfile {@code proxy} was previously set for the given {@code\nprofile} by {@link ShadowBluetoothAdapter#setProfileProxy}, this proxy will be \"deactivated\".\n"
+      "documentation": "Overrides behavior of {@link closeProfileProxy} if {@link\nShadowBluetoothAdapter#setProfileProxy} has been previously called.\n\n\u003cp\u003eIf the given non-null BluetoothProfile {@code proxy} was previously set for the given {@code\nprofile} by {@link ShadowBluetoothAdapter#setProfileProxy}, this proxy will be \"deactivated\".\n"
     },
     "createAdapter(java.lang.Object)": {
       "isImplementation": true,
@@ -89,7 +89,6 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 17,
       "name": "disable(boolean)"
     },
     "enable()": {
@@ -176,6 +175,17 @@
       "minSdk": 23,
       "name": "getLeState()",
       "documentation": "Decides the correct LE state. When off, BLE calls will fail or return null.\n\n\u003cp\u003eLE is enabled if either Bluetooth or BLE scans are enabled. LE is always off if Airplane\nMode is enabled.\n"
+    },
+    "getMostRecentlyConnectedDevices()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "java.util.List\u003candroid.bluetooth.BluetoothDevice\u003e",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "getMostRecentlyConnectedDevices()"
     },
     "getName()": {
       "isImplementation": true,
@@ -316,6 +326,17 @@
       "exceptions": [],
       "name": "isDiscovering()"
     },
+    "isDistanceMeasurementSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "isDistanceMeasurementSupported()"
+    },
     "isEnabled()": {
       "isImplementation": true,
       "modifiers": [
@@ -325,6 +346,41 @@
       "returnType": "boolean",
       "exceptions": [],
       "name": "isEnabled()"
+    },
+    "isLe2MPhySupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "isLe2MPhySupported()",
+      "documentation": "Returns the last value of {@link #setIsLe2MPhySupported}, defaulting to true. "
+    },
+    "isLeAudioSupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "int",
+      "exceptions": [],
+      "minSdk": 33,
+      "name": "isLeAudioSupported()"
+    },
+    "isLeCodedPhySupported()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected"
+      ],
+      "params": [],
+      "returnType": "boolean",
+      "exceptions": [],
+      "minSdk": 34,
+      "name": "isLeCodedPhySupported()",
+      "documentation": "Returns the last value of {@link #setIsLeCodedPhySupported}, defaulting to true. "
     },
     "isLeExtendedAdvertisingSupported()": {
       "isImplementation": true,
@@ -463,7 +519,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setBluetoothLeAdvertiser(android.bluetooth.le.BluetoothLeAdvertiser)",
-      "documentation": "@deprecated use real BluetoothLeAdvertiser instead "
+      "documentation": "@deprecated use real BluetoothLeAdvertiser instead\n"
     },
     "setBondedDevices(java.util.Set\u003candroid.bluetooth.BluetoothDevice\u003e)": {
       "isImplementation": false,
@@ -503,6 +559,19 @@
       "minSdk": 33,
       "name": "setDiscoverableTimeout(java.time.Duration)"
     },
+    "setDistanceMeasurementSupported(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setDistanceMeasurementSupported(int)",
+      "documentation": "Sets whether the distance measurement is supported or not. Minimum sdk version required is\nUPSIDE_DOWN_CAKE.\n"
+    },
     "setEnabled(boolean)": {
       "isImplementation": false,
       "modifiers": [
@@ -514,7 +583,7 @@
       "returnType": "void",
       "exceptions": [],
       "name": "setEnabled(boolean)",
-      "documentation": "@deprecated Use {@link BluetoothAdapter#enable()} or {@link BluetoothAdapter#disable()}. "
+      "documentation": "@deprecated Use {@link BluetoothAdapter#enable()} or {@link BluetoothAdapter#disable()}.\n"
     },
     "setIsBluetoothSupported(boolean)": {
       "isImplementation": false,
@@ -529,6 +598,32 @@
       "exceptions": [],
       "name": "setIsBluetoothSupported(boolean)",
       "documentation": "Determines if getDefaultAdapter() returns the default local adapter (true) or null (false). "
+    },
+    "setIsLe2MPhySupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsLe2MPhySupported(boolean)",
+      "documentation": "Sets the {@link #isLe2MPhySupported} to enable/disable LE 2M phy supported featured. "
+    },
+    "setIsLeCodedPhySupported(boolean)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setIsLeCodedPhySupported(boolean)",
+      "documentation": "Sets the {@link #isLeCodedPhySupported} to enable/disable LE coded phy supported featured. "
     },
     "setIsLeExtendedAdvertisingSupported(boolean)": {
       "isImplementation": false,
@@ -555,6 +650,31 @@
       "exceptions": [],
       "name": "setIsMultipleAdvertisementSupported(boolean)",
       "documentation": "Sets the value for {@link isMultipleAdvertisementSupported}. "
+    },
+    "setLeAudioSupported(int)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "supported"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setLeAudioSupported(int)",
+      "documentation": "Sets whether the Le Audio is supported or not. Minimum sdk version required is TIRAMISU. "
+    },
+    "setMostRecentlyConnectedDevices(java.util.List\u003candroid.bluetooth.BluetoothDevice\u003e)": {
+      "isImplementation": false,
+      "modifiers": [
+        "public"
+      ],
+      "params": [
+        "devices"
+      ],
+      "returnType": "void",
+      "exceptions": [],
+      "name": "setMostRecentlyConnectedDevices(java.util.List\u003candroid.bluetooth.BluetoothDevice\u003e)"
     },
     "setName(java.lang.String)": {
       "isImplementation": true,
@@ -670,7 +790,6 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 18,
       "name": "startLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)"
     },
     "startLeScan(java.util.UUID[],android.bluetooth.BluetoothAdapter.LeScanCallback)": {
@@ -684,7 +803,6 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 18,
       "name": "startLeScan(java.util.UUID[],android.bluetooth.BluetoothAdapter.LeScanCallback)"
     },
     "startRfcommServer(java.lang.String,java.util.UUID,android.app.PendingIntent)": {
@@ -712,7 +830,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 18,
       "name": "stopLeScan(android.bluetooth.BluetoothAdapter.LeScanCallback)"
     },
     "stopRfcommServer(java.util.UUID)": {
@@ -731,8 +848,6 @@
   },
   "imports": [
     "android.bluetooth.BluetoothAdapter.STATE_ON",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.O",
@@ -740,6 +855,7 @@
     "android.os.Build.VERSION_CODES.R",
     "android.os.Build.VERSION_CODES.S_V2",
     "android.os.Build.VERSION_CODES.TIRAMISU",
+    "android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE",
     "org.robolectric.Shadows.shadowOf",
     "org.robolectric.util.reflector.Reflector.reflector",
     "android.app.PendingIntent",

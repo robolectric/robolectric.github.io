@@ -37,15 +37,13 @@
     "addAssetPathNative(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "path"
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 18,
       "maxSdk": 23,
       "name": "addAssetPathNative(java.lang.String)"
     },
@@ -292,8 +290,7 @@
     "destroyAsset(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "asset"
@@ -454,8 +451,7 @@
     "getAssetLength(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "asset"
@@ -482,8 +478,7 @@
     "getAssetRemainingLength(int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "asset"
@@ -510,8 +505,7 @@
     "getAssignedPackageIdentifiers()": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [],
       "returnType": "android.util.SparseArray\u003cjava.lang.String\u003e",
@@ -567,6 +561,14 @@
       "returnType": "java.lang.String[]",
       "exceptions": [],
       "name": "getLocales()"
+    },
+    "getNativePtr()": {
+      "isImplementation": false,
+      "modifiers": [],
+      "params": [],
+      "returnType": "long",
+      "exceptions": [],
+      "name": "getNativePtr()"
     },
     "getNativeStringBlock(int)": {
       "isImplementation": true,
@@ -889,8 +891,7 @@
     "list(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "path"
@@ -1146,8 +1147,7 @@
     "open(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "fileName"
@@ -1161,8 +1161,7 @@
     "open(java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "fileName",
@@ -1209,8 +1208,7 @@
     "openFd(java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "fileName"
@@ -1224,8 +1222,7 @@
     "openNonAsset(int,java.lang.String,int)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
-        "final"
+        "public"
       ],
       "params": [
         "cookie",
@@ -1241,8 +1238,7 @@
     "openNonAssetFd(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "public",
-        "final"
+        "public"
       ],
       "params": [
         "cookie",
@@ -1307,8 +1303,7 @@
     "openXmlResourceParser(int,java.lang.String)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "cookie",
@@ -1531,8 +1526,7 @@
     "seekAsset(int,long,int)": {
       "isImplementation": true,
       "modifiers": [
-        "protected",
-        "final"
+        "protected"
       ],
       "params": [
         "asset",
@@ -1675,7 +1669,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.KITKAT_WATCH",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.M",
@@ -1701,6 +1694,7 @@
     "android.util.AttributeSet",
     "android.util.SparseArray",
     "android.util.TypedValue",
+    "com.google.common.annotations.VisibleForTesting",
     "com.google.common.collect.Ordering",
     "dalvik.system.VMRuntime",
     "java.io.ByteArrayInputStream",

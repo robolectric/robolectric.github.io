@@ -1,5 +1,18 @@
 {
   "methods": {
+    "__staticInitializer__()": {
+      "isImplementation": true,
+      "modifiers": [
+        "protected",
+        "static"
+      ],
+      "params": [],
+      "returnType": "void",
+      "exceptions": [],
+      "minSdk": 35,
+      "name": "__staticInitializer__()",
+      "documentation": "The {@link PositionedGlyphs} static initializer invokes its own native methods. This has to be\ndeferred starting in Android V.\n"
+    },
     "nGetAscent(long)": {
       "isImplementation": true,
       "modifiers": [
@@ -11,6 +24,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetAscent(long)"
     },
     "nGetDescent(long)": {
@@ -24,6 +38,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetDescent(long)"
     },
     "nGetFont(long,int)": {
@@ -38,6 +53,7 @@
       ],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetFont(long,int)"
     },
     "nGetGlyphCount(long)": {
@@ -51,6 +67,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetGlyphCount(long)"
     },
     "nGetGlyphId(long,int)": {
@@ -65,6 +82,7 @@
       ],
       "returnType": "int",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetGlyphId(long,int)"
     },
     "nGetTotalAdvance(long)": {
@@ -78,6 +96,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetTotalAdvance(long)"
     },
     "nGetX(long,int)": {
@@ -92,6 +111,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetX(long,int)"
     },
     "nGetY(long,int)": {
@@ -106,6 +126,7 @@
       ],
       "returnType": "float",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nGetY(long,int)"
     },
     "nReleaseFunc()": {
@@ -117,11 +138,11 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
+      "maxSdk": 34,
       "name": "nReleaseFunc()"
     }
   },
   "imports": [
-    "android.graphics.text.MeasuredText",
     "android.graphics.text.PositionedGlyphs",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
@@ -129,6 +150,8 @@
     "org.robolectric.nativeruntime.PositionedGlyphsNatives",
     "org.robolectric.shadows.ShadowNativePositionedGlyphs.Picker",
     "org.robolectric.versioning.AndroidVersions.S",
+    "org.robolectric.versioning.AndroidVersions.U",
+    "org.robolectric.versioning.AndroidVersions.V",
     "org.robolectric.shadows.ShadowNativePositionedGlyphs.Picker"
   ],
   "name": "org.robolectric.shadows.ShadowNativePositionedGlyphs",

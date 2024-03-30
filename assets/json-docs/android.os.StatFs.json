@@ -30,7 +30,6 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getAvailableBlocksLong()"
     },
     "getAvailableBytes()": {
@@ -41,7 +40,6 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getAvailableBytes()"
     },
     "getBlockCount()": {
@@ -62,7 +60,6 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getBlockCountLong()"
     },
     "getBlockSize()": {
@@ -83,7 +80,6 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getBlockSizeLong()",
       "documentation": "Robolectric always uses a block size of 4096. "
     },
@@ -105,7 +101,6 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getFreeBlocksLong()"
     },
     "getFreeBytes()": {
@@ -116,7 +111,6 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getFreeBytes()"
     },
     "getTotalBytes()": {
@@ -127,7 +121,6 @@
       "params": [],
       "returnType": "long",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getTotalBytes()"
     },
     "registerStats(java.io.File,int,int,int)": {
@@ -217,7 +210,6 @@
     }
   },
   "imports": [
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.StatFs",
     "java.io.File",
     "java.util.Map",

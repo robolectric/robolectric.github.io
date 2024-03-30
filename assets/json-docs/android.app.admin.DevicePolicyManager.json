@@ -365,7 +365,6 @@
       "params": [],
       "returnType": "java.lang.String",
       "exceptions": [],
-      "minSdk": 18,
       "name": "getDeviceOwner()",
       "documentation": "@see #setDeviceOwner(ComponentName)\n"
     },
@@ -402,7 +401,6 @@
       ],
       "returnType": "int",
       "exceptions": [],
-      "minSdk": 17,
       "name": "getKeyguardDisabledFeatures(android.content.ComponentName)"
     },
     "getLastSetPassword()": {
@@ -989,7 +987,6 @@
       ],
       "returnType": "boolean",
       "exceptions": [],
-      "minSdk": 18,
       "name": "isDeviceOwnerApp(java.lang.String)"
     },
     "isDeviceProvisioned()": {
@@ -1490,7 +1487,6 @@
       ],
       "returnType": "void",
       "exceptions": [],
-      "minSdk": 17,
       "name": "setKeyguardDisabledFeatures(android.content.ComponentName,int)"
     },
     "setLockTaskFeatures(android.content.ComponentName,int)": {
@@ -2095,8 +2091,6 @@
     "android.app.admin.DevicePolicyManager.LOCK_TASK_FEATURE_HOME",
     "android.app.admin.DevicePolicyManager.LOCK_TASK_FEATURE_NOTIFICATIONS",
     "android.app.admin.DevicePolicyManager.LOCK_TASK_FEATURE_OVERVIEW",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR1",
-    "android.os.Build.VERSION_CODES.JELLY_BEAN_MR2",
     "android.os.Build.VERSION_CODES.LOLLIPOP",
     "android.os.Build.VERSION_CODES.LOLLIPOP_MR1",
     "android.os.Build.VERSION_CODES.M",

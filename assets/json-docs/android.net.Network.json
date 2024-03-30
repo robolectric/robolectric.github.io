@@ -115,7 +115,7 @@
       "returnType": "android.net.Network",
       "exceptions": [],
       "name": "newInstance(int)",
-      "documentation": "Creates new instance of {@link Network}, because its constructor is hidden.\n\n@param netId The netId.\n@return The Network instance.\n"
+      "documentation": "Creates new instance of {@link Network}, because its constructor is hidden.\n\n\u003cp\u003eRequires API 21 (Lollipop) and above.\n\n@param netId The netId.\n@return The Network instance.\n"
     }
   },
   "imports": [
@@ -124,11 +124,13 @@
     "android.os.Build.VERSION_CODES.M",
     "android.os.Build.VERSION_CODES.R",
     "android.net.Network",
+    "com.google.common.base.Preconditions",
     "java.io.FileDescriptor",
     "java.net.DatagramSocket",
     "java.net.Socket",
     "java.util.HashSet",
     "java.util.Set",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.RealObject",

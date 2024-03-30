@@ -133,14 +133,17 @@
     }
   },
   "imports": [
+    "android.os.Build.VERSION_CODES.N",
     "android.os.Build.VERSION_CODES.R",
     "com.google.common.base.Preconditions.checkState",
     "org.robolectric.shadows.ShadowLooper.looperMode",
     "org.robolectric.util.reflector.Reflector.reflector",
+    "android.os.Looper",
     "android.view.Choreographer",
     "android.view.Choreographer.FrameCallback",
     "android.view.DisplayEventReceiver",
     "java.time.Duration",
+    "org.robolectric.RuntimeEnvironment",
     "org.robolectric.annotation.Implementation",
     "org.robolectric.annotation.Implements",
     "org.robolectric.annotation.LooperMode",
