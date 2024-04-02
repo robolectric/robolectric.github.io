@@ -73,7 +73,6 @@ menu:
         url: /javadoc/4.10/
       - title: "4.11"
         url: /javadoc/4.11/
-        class: italic
       - title: "4.12"
         url: /javadoc/4.12/
         class: italic
