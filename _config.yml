@@ -47,8 +47,6 @@ menu:
       url: /migrating
     - title: Javadoc
       items:
-      - title: "3.8"
-        url: /javadoc/3.8/
       - title: "4.0"
         url: /javadoc/4.0/
       - title: "4.1"
