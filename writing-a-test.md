@@ -20,7 +20,6 @@ Let's say you have an activity layout that represents a welcome screen:
         android:text="Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
 </LinearLayout>
 ```
 
@@ -28,7 +27,6 @@ We want to write a test that asserts that when a user clicks on a button, the ap
 
 ```java
 public class WelcomeActivity extends Activity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +48,6 @@ In order to test this, we can check that when a user clicks on the "Login" butto
 ```java
 @RunWith(RobolectricTestRunner.class)
 public class WelcomeActivityTest {
-
     @Test
     public void clickingLogin_shouldStartLoginActivity() {
         try (ActivityController<WelcomeActivity> controller = Robolectric.buildActivity(WelcomeActivity.class)) {
@@ -83,4 +80,3 @@ Additional test APIs are accessible as static methods on special classes called 
 // simulates a new display being plugged into the device...
 ShadowDisplay.addDisplay("xlarge-port");
 ```
-

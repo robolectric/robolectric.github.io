@@ -13,7 +13,6 @@ Running tests on an Android emulator or device is slow! Building, deploying, and
 ```java
 @RunWith(RobolectricTestRunner.class)
 public class MyActivityTest {
-
   @Test
   public void clickingButton_shouldChangeMessage() {
     try (ActivityController<MyActivity> controller = Robolectric.buildActivity(MyActivity.class)) {

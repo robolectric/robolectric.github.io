@@ -22,7 +22,7 @@ From version 3.6 on, Robolectric parses the `qualifiers` property according to t
 For unspecified properties, Robolectric picks consistent values based on the properties that have been specified, or uses default values as follows:
 
 | Property         | Calculated value (if unspecified) | Default | Other rules |
-|----
+|-----|-----|-----|-----|
 | MCC and MNC      | None. | None | |
 | Language, region, and script (locale) | None. | `en-rUS` | |
 | Layout direction | The locale’s layout direction. | `ldltr` | |

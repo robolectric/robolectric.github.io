@@ -61,7 +61,7 @@ import androidx.test.core.app.ApplicationProvider.getApplicationContext
 
 ## Activities
 
-Robolectric provided `Robolectric.setupActivity()` for the coarse-grained usecase where you just require
+Robolectric provided `Robolectric.setupActivity()` for the coarse-grained use case where you just require
 a launched activity in the resumed state and ready and visible for the user to interact with. 
 
 Robolectric also provided `Robolectric.buildActivity()` which returned an `ActivityController` that allowed
@@ -71,7 +71,7 @@ has undefined behavior and can cause compatibility issues when running on differ
 or when upgrading to newer versions of Robolectric.
 
 [`ActivityScenario`](https://developer.android.com/reference/androidx/test/core/app/ActivityScenario) provides a
-replacement for both of these usecases, but places tigher restrictions around lifecycle transitions, namely that
+replacement for both of these use cases, but places tighter restrictions around lifecycle transitions, namely that
 invalid or incomplete transitions are not possible. If you'd like a `Rule`-based equivalent please use
 [`ActivityScenarioRule`](https://developer.android.com/reference/androidx/test/ext/junit/rules/ActivityScenarioRule)
 instead.
@@ -92,7 +92,6 @@ class LocationTrackerActivityTest {
         assertThat(controller.get().locationListener).isNull()
      }
 }
-
 ```
 
 **Android X Test**
@@ -114,7 +113,6 @@ class LocationTrackerActivityTest {
         }
      }
 }
-
 ```
 
 Note that in Robolectric since both the test and UI event loop ran on the same thread, synchronization was not an
@@ -153,7 +151,6 @@ class AddContactActivityTest {
         onView(withId(R.id.contact_name_text)).check(matches(withText(contactName)))
      }
 }
-
 ```
 
 ## Fragments
@@ -176,8 +173,6 @@ class FragmentTest {
         onView(withId(R.id.text)).check(matches(withText("Hello World!")))
     }
 }
-
 ```
 
-Read more aboout testing Fragments here: [developer.android.com/training/basics/fragments/testing](https://developer.android.com/training/basics/fragments/testing)
-
+Read more about testing Fragments here: [developer.android.com/training/basics/fragments/testing](https://developer.android.com/training/basics/fragments/testing)

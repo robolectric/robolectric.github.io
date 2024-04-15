@@ -9,6 +9,7 @@ redirect_from:
 # Shadows
 
 Robolectric works by creating a runtime environment that includes the real Android framework code. This means when your tests or code under test calls into the Android framework you get a more realistic experience as for the most part the same code is executed as would be on a real device. There are limitations however:
+
 1. Native code - Android native code cannot execute on your development machine.
 2. Out of process calls - There are no Android system services running on your development machine.
 3. Inadequate testing APIs - Android includes next to no APIs suitable for testing
@@ -113,7 +114,7 @@ Methods on your shadow class are able to call through to the Android OS code, us
 
 ## Custom Shadows
 
-Robolectric is a work in progress and we rely, welcome and strongly encourage [contributions](https://github.com/robolectric/robolectric.github.io/blob/master/contributing.md) from the community for bug fixes and feature gaps. However, if you wish to modify shadow behaviour in a way that is not appropriate for sharing, or you can't wait for a new release to include a critical fix we do support custom shadows.
+Robolectric is a work in progress and we rely, welcome and strongly encourage [contributions](/contributing/) from the community for bug fixes and feature gaps. However, if you wish to modify shadow behaviour in a way that is not appropriate for sharing, or you can't wait for a new release to include a critical fix we do support custom shadows.
 
 ### Writing a Custom Shadow
 
@@ -143,13 +144,14 @@ public class MyShadowBitmap {
 
 Custom Shadows get hooked up to Robolectric using the `@Config` annotation on the test class or test method, using the `shadows` array attribute.  To use the `MyShadowBitmap` class mentioned in the previous section, you would annotate the test in question with `@Config(shadows={MyShadowBitmap.class})`, and to include multiple custom shadows: `@Config(shadows={MyShadowBitmap.class, MyOtherCustomShadow.class})`.  This causes Robolectric to recognize and use your custom shadow when executing code against the class you shadowed.
 
-If you would like your custom shadows to be applied to all tests in your suite or a certain package you can configure shadows through the [robolectric.properties](https://github.com/robolectric/robolectric.github.io/blob/master/configuring.md) file.
+If you would like your custom shadows to be applied to all tests in your suite or a certain package you can configure shadows through the [robolectric.properties](/configuring/) file.
 
 Note, by default `Shadows.shadowOf()` method will not work with custom shadows. You can instead use `Shadow.extract()` and cast the return value to the custom Shadow class you implemented.
 
 ### Building a library of Custom Shadows.
 
-If you find yourself building a library of custom shadows you should consider running Robolectric's shadow annoation processor on your library of shadows. This provides a number of benefits such as
+If you find yourself building a library of custom shadows you should consider running Robolectric's shadow annotation processor on your library of shadows. This provides a number of benefits such as
+
 1. Generating `shadowOf` methods for each of your shadows.
 2. Generating a ServiceLoader so your custom shadows are automatically applied if found on the classpath
 3. Invoking any `static` `@Resetter` methods on teardown to enable you to reset static state.
@@ -211,4 +213,4 @@ Rather than using shadows as glorified argument captors prefer writing a shadow 
 Robolectric provides a lot of power which requires responsible usage. Shadows are ideal for testing interaction with the Android framework as the framework doesn't support dependency injection and makes liberal use of static code. Before writing custom shadows for your own code, consider if you can't better refactor your code and use a popular mocking library such as Mockito.
 
 ### Support the community
-Please please [contribute](https://github.com/robolectric/robolectric.github.io/blob/master/contributing.md) your enhancements for sharing with the community and reducing the bloat in your own codebase.
+Please please [contribute](/contributing/) your enhancements for sharing with the community and reducing the bloat in your own codebase.

@@ -15,7 +15,7 @@ To configure Robolectric for a single test class or method, use the <a href="/ja
 Base classes are also searched for annotations, so if you find yourself specifying the same values on a large number of tests, you can create a base class and move your `@Config` annotation to that class.
 
 ```java
-  @Config(sdk=JELLYBEAN_MR1,
+  @Config(sdk=KITKAT,
       shadows={ShadowFoo.class, ShadowBar.class})
   public class SandwichTest {
   }
@@ -29,7 +29,7 @@ Below is an example:
 
 ```properties
 # src/test/resources/com/mycompany/app/robolectric.properties
-sdk=18
+sdk=19
 shadows=my.package.ShadowFoo,my.package.ShadowBar
 ```
 
@@ -48,11 +48,10 @@ The following examples show how to handle common configuration tasks. For clarit
 By default, Robolectric will run your code against the `targetSdkVersion` specified in your manifest. If you want to test your code under a different SDK, you can specify the SDK using the `sdk`, `minSdk` and `maxSdk` config properties:
 
 ```java
-@Config(sdk = { JELLY_BEAN, JELLY_BEAN_MR1 })
+@Config(sdk = { KITKAT, LOLLIPOP })
 public class SandwichTest {
-
     public void getSandwich_shouldReturnHamSandwich() {
-      // will run on JELLY_BEAN and JELLY_BEAN_MR1
+      // will run on KITKAT and LOLLIPOP
     }
 
     @Config(sdk = KITKAT)
@@ -78,7 +77,6 @@ Robolectric will attempt to create an instance of your Application class as spec
 ```java
 @Config(application = CustomApplication.class)
 public class SandwichTest {
-
     @Config(application = CustomApplicationOverride.class)
     public void getSandwich_shouldReturnHamSandwich() {
     }
@@ -91,7 +89,6 @@ You can explicitly configure the set of resource qualifiers in effect for a test
 
 ```java
 public class SandwichTest {
-
     @Config(qualifiers = "fr-xlarge")
     public void getSandwichName() {
       assertThat(sandwich.getName()).isEqualTo("Grande Croque Monégasque");
