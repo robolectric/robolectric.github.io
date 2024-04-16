@@ -1,31 +1,27 @@
 # Robolectric
 
-This repository is the source for the docs that live at [robolectric.org](http://robolectric.org).
+This repository contains the source of the documentation that lives at [robolectric.org](http://robolectric.org).
 
 ## Contributing
 
-Make sure you are in the `master` branch before making changes. This is the default branch so git should put you there automatically.
+Make sure that you are on the `master` branch, and that it is up to date before making any changes. This is the default branch, so Git should put you there automatically.
 
-Before submitting a pull request, view the docs locally to check that the content and layout are correct. The docs are built using [Jekyll](https://jekyllrb.com/).
+Before submitting a Pull Request, run the documentation locally to check that the content and layout are correct. The documentation is built using [MkDocs](https://www.mkdocs.org/).
 
-Assuming you don't already have [Bundler](http://bundler.io/) installed, you will first need to do:
+To do so, make sure that you have [Python 3+ installed](https://www.python.org/downloads/), and then install the required dependencies by running:
 
-    gem install bundler
-    
-The above command may require `sudo`.
+```bash
+pip install -r requirements.txt
+```
 
-Then run:
+Then you can execute the following command to access the documentation locally at http://127.0.0.1:8000/:
 
-    bundle install
-    bundle exec jekyll server --incremental
-  
-This will build the docs and make them available at [localhost:4000](http://localhost:4000). Once
-your pull request is accepted, the docs will be automatically built and pushed to the web by GitHub.
+```bash
+mkdocs serve
+```
 
-If you want to update Jekyll's dependencies, you can run:
-
-    bundle update
+Once your Pull Request is merged, the documentation will be automatically built and deployed by GitHub Actions.
 
 ## Javadocs
 
-When Robolectric is released, the `source/javadocs` directory needs to be updated. We can get latest steps to generate Javadocs at [Robolectric Wiki's release part](https://github.com/robolectric/robolectric/wiki/Performing-a-Release#release).
+When a new version of Robolectric is released, the `javadoc` directory needs to be updated. We can get the last steps to generate the Javadocs in [Robolectric Wiki's release part](https://github.com/robolectric/robolectric/wiki/Performing-a-Release#release).

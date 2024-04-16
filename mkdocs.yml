@@ -1,0 +1,134 @@
+site_name: Robolectric
+site_description: "test-drive your Android code"
+site_url: "https://robolectric.org"
+copyright: "©2010-2024. All rights reserved."
+repo_url: "https://github.com/robolectric/robolectric"
+repo_name: Robolectric
+
+theme:
+  name: material
+  favicon: images/favicon.ico
+  logo: images/robolectric-stacked.png
+  icon:
+    repo: fontawesome/brands/github
+  custom_dir: overrides
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: "Switch to light mode"
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/weather-night
+        name: "Switch to dark mode"
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/weather-sunny
+        name: "Switch to light mode"
+  features:
+    - content.code.copy
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - blog:
+      categories: false
+      post_excerpt: required
+      post_excerpt_max_authors: 5
+  - macros:
+      on_error_fail: true
+      on_undefined: strict
+  - redirects:
+      redirect_maps:
+        "activity-lifecycle.md": "androidx_test.md"
+        "custom-shadows.md": "extending.md"
+        "errorprone-refactorings.md": "automated-migration.md"
+  - search:
+
+extra:
+  analytics:
+    provider: google
+    property: "UA-19269905-2"
+  robolectric:
+    version:
+      current: "4.12"
+  social:
+    - name: "GitHub Project"
+      icon: fontawesome/brands/github
+      link: "http://github.com/robolectric/robolectric"
+    - name: "robolectric@googlegroups.com"
+      icon: fontawesome/regular/envelope 
+      link: "http://groups.google.com/group/robolectric"
+    - name: "@Robolectric"
+      icon: fontawesome/brands/x-twitter
+      link: "https://x.com/robolectric"
+
+nav:
+  - "Home": index.md
+  - "Setup":
+    - "Getting Started": getting-started.md
+    - "Writing Your First Test": writing-a-test.md
+  - "User Guide":
+    - "AndroidX Test": androidx_test.md
+    - "Configuring Robolectric": configuring.md
+    - "Device Configuration": device-configuration.md
+    - "Using Qualified Resources": using-qualifiers.md
+    - "Using Add-On Modules": using-add-on-modules.md
+    - "Best Practices": best-practices.md
+  - "Customizing":
+    - "Build System Integration": build-system-integration.md
+    - "Customizing the Test Runner": custom-test-runner.md
+  - "Contributing":
+    - "Building Robolectric": building-robolectric.md
+    - "Contributor Guidelines": contributing.md
+    - "Shadows": extending.md
+  - "Resources":
+    - "Migration Guide": migrating.md
+    - "GitHub": https://github.com/robolectric/robolectric/
+    - "Release Notes": https://github.com/robolectric/robolectric/releases/
+    - "Issues": https://github.com/robolectric/robolectric/issues/
+    - "Javadoc":
+      - "4.12": javadoc/4.12/
+      - "4.11": javadoc/4.11/
+      - "4.10": javadoc/4.10/
+      - "4.9": javadoc/4.9/
+      - "4.8": javadoc/4.8/
+      - "4.7": javadoc/4.7/
+      - "4.6": javadoc/4.6/
+      - "4.5": javadoc/4.5/
+      - "4.4": javadoc/4.4/
+      - "4.3": javadoc/4.3/
+      - "4.2": javadoc/4.2/
+      - "4.1": javadoc/4.1/
+      - "4.0": javadoc/4.0/
+  - "Blog":
+      - blog/index.md
+
+not_in_nav: |
+  automated-migration.md
+  other-environments.md
+
+watch:
+  - overrides
