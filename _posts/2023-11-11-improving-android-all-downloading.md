@@ -24,7 +24,7 @@ and manually fetching the necessary android-all jars before running Robolectric 
 
 The first solution is setting a custom proxy for `MavenArtifactFetcher` like the following snippet:
 
-```Kotlin
+```kotlin
 testOptions {
     unitTests {
         includeAndroidResources = true
@@ -53,7 +53,7 @@ host and port for internally allowed proxy servers.
 most scenarios. For example, I often set the repository to a custom Chinese popular Maven mirror
 for my custom projects:
 
-```Kotlin
+```kotlin
 testOptions {
     unitTests {
         includeAndroidResources = true
@@ -76,7 +76,7 @@ Robolectric supports using android-all jars in a local directory with its offlin
 any android-all jars from the network when running Robolectric tests. We can follow the following
 snippet to enable Robolectric's offline mode for the project:
 
-```Kotlin
+```kotlin
 testOptions {
     unitTests {
         includeAndroidResources = true
@@ -99,7 +99,7 @@ I created a sample project to provide build scripts to download these
 android-all jars into this preinstrumented directory: 
 [robolectric-offline-sample](https://github.com/utzcoz/robolectric-offline-sample/).
 
-```Kotlin
+```kotlin
 plugins {
     `java-library`
 }

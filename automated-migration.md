@@ -31,7 +31,7 @@ The migration tool will make changes directly to source files in your codebase, 
             errorprone "com.google.errorprone:error_prone_core:2.3.2"
             errorproneJavac "com.google.errorprone:javac:9+181-r4173-1"
 
-            errorprone "org.robolectric:errorprone:{{ site.robolectric.version.preview | escape }}"
+            errorprone "org.robolectric:errorprone:{{ site.robolectric.version.current | escape }}"
         }
 
         afterEvaluate {

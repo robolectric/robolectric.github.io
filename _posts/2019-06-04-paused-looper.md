@@ -18,7 +18,7 @@ While in many cases this has no observable effect it can lead to bugs that are h
 Consider the code below. When run on the UI thread on a device, the assertion would pass.  
 
 
-```
+```java
 List<String> events = new ArrayList<>();
 events.add("before");
 new Handler(Looper.getMainLooper()).post(() -> events.add("after"));
@@ -61,13 +61,15 @@ background thread
 ## Using PAUSED LooperMode
 
 To switch to PAUSED:
+
 *   Use robolectric 4.3. In gradle add
 
-    ```
+    ```groovy
     dependencies {
       testImplementation 'org.robolectric:robolectric:4.3'
     }
     ```
+
 *   Apply the `LooperMode(PAUSED)` annotation to your test package/class/method
 *   Convert any background `org.robolectric.util.Scheduler` calls for controlling `Loopers` to 
 `shadowOf(looper)`
@@ -84,7 +86,7 @@ appropriate point to add a `shadowOf(getMainLooper()).idle()` call.
 
 Example:
 
-```
+```java
 import static android.os.Looper.getMainLooper;
 import static org.robolectric.annotation.LooperMode.Mode.PAUSED;
 import static org.robolectric.Shadows.shadowOf;
