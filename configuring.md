@@ -10,7 +10,7 @@ Several aspects of Robolectric's behavior can be configured at runtime, using `r
 
 ### `@Config` Annotation
 
-To configure Robolectric for a single test class or method, use the <a href="/javadoc/latest/org/robolectric/annotation/Config.html">`@Config`</a> annotation. The annotation can be applied to classes and methods; values specified at the method level will override values specified at the class level.
+To configure Robolectric for a single test class or method, use the [`@Config`](/javadoc/latest/org/robolectric/annotation/Config.html) annotation. The annotation can be applied to classes and methods; values specified at the method level will override values specified at the class level.
 
 Base classes are also searched for annotations, so if you find yourself specifying the same values on a large number of tests, you can create a base class and move your `@Config` annotation to that class.
 

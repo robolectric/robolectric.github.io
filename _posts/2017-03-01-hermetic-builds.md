@@ -9,7 +9,7 @@ But what if you have a [hermetic build environment](http://blog.fahhem.com/2013/
 
 Here's a Gradle build script that'll help:
 
-```Groovy
+```groovy
 def robolectricVersion = '3.3'
 
 def androidSdkVersions = [

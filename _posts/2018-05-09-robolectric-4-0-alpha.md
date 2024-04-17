@@ -42,7 +42,7 @@ In conjunction with Android Studio 3.2, Robolectric can now use resources proces
 
 To enable the use of toolchain-processed resources in Robolectric tests, make sure you're using Android Gradle Plugin version `com.android.tools.build:gradle:3.2.0-alpha14` or higher, and add the following to your `gradle.properties`:
 
-```groovy
+```properties
 android.enableUnitTestBinaryResources=true
 ```
 

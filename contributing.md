@@ -56,7 +56,7 @@ Robolectric uses javadoc to document API's behavior. There are special rules for
 * All visible non-`@Implementation` methods SHOULD have descriptive Javadoc.
 * Don't write javadoc comments like "Shadow for (whatever).". The javadoc will appear in a section clearly related to testing, so make it make sense in context.
 
-Robolectric will release javadoc at robolectric.org after every main version released. For example, Robolectric's 4.7 javadoc is released at http://robolectric.org/javadoc/4.7/.
+Robolectric will release javadoc at robolectric.org after every main version released. For example, Robolectric's {{ site.robolectric.version.current | escape }} javadoc is released at http://robolectric.org/javadoc/{{ site.robolectric.version.current | escape }}/.
 
 ### Deprecations and Backwards Compatibility
 
