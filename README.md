@@ -17,7 +17,7 @@ pip install -r requirements.txt
 Then you can execute the following command to access the documentation locally at http://127.0.0.1:8000/:
 
 ```bash
-mkdocs serve
+mkdocs serve --open
 ```
 
 Once your Pull Request is merged, the documentation will be automatically built and deployed by GitHub Actions.
