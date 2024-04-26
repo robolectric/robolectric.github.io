@@ -11,8 +11,6 @@ slug: robolectric-4-0
 
 Robolectric 4.0 is released! Here's what's new!
 
-<!-- more -->
-
 ### `androidx.test`
 The different idioms for testing using Robolectric and instrumentation tests has long been a headache. With today's release of Robolectric 4.0 and `androidx.test` 1.0.0, both testing environments are converging on a set of common test APIs. Robolectric now supports the [`AndroidJUnit4` test runner](https://developer.android.com/training/testing/junit-runner), [`ActivityTestRule`](https://developer.android.com/training/testing/junit-rules), and [Espresso](https://developer.android.com/training/testing/espresso/) for interacting with UI components.
 

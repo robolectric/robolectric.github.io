@@ -12,8 +12,6 @@ slug: paused-looper
 more realistic.** Try it out today by annotating your tests with _@LooperMode(PAUSED)_ and let us 
 know your experience!
 
-<!-- more -->
-
 ## Background
 
 Unlike on a real device, Robolectric shares a single thread for both UI operations and Test code. 

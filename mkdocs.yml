@@ -54,7 +54,6 @@ markdown_extensions:
 plugins:
   - blog:
       categories: false
-      post_excerpt: required
       post_excerpt_max_authors: 5
   - macros:
       on_error_fail: true

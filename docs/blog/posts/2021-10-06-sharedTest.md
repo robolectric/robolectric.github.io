@@ -9,8 +9,6 @@ slug: sharedTest
 
 After [Robolectric's 4.0 release][2], Robolectric supports the [`AndroidJUnit4` test runner][3], [`ActivityScenario`][5], and [Espresso][4] for interacting with UI components. As we know, we also can run those tests with an official emulator. This article will show an often overlooked but widely-used pattern called sharedTest to share tests between local and instrumentation tests. This will provide the benefit of fast unit testing while ensuring that tests are high-fidelity by enabling them to be run in an emulator.
 
-<!-- more -->
-
 ## Using sharedTest steps by steps
 The first thing that sharedTest needs is [`AndroidJUnit4` test runner][3]. It is a test runner that supports both Robolectric and [`androidx.test`][13]. There is a sample class, called [`SampleFragmentTest.kt`][14] from [FragmentScenarioSample][15] that uses [`AndroidJUnit4` test runner][3]:
 

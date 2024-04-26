@@ -9,8 +9,6 @@ slug: Umesh-GSoC-on-ConscryptMode
 
 My name is [Umesh Singh](https://github.com/Umesh-01) and I was an open source contributor through Google Summer of Code this year. Google Summer of Code (GSoC) is a program where external participants can contribute to an open source project over a few months. We learn new computer science concepts, how to work on open source repositories, and create real code contributions to projects!
 
-<!-- more -->
-
 My project was `Switching Robolectric from BouncyCastle to Conscrypt as the default security provider`. Robolectric was using [BouncyCastle](https://www.bouncycastle.org/) as the Java Cryptography Extension (JCE) security provider. After the introduction of Android P, Android switched to using [Google Conscrypt](https://source.android.com/docs/core/architecture/modular-system/conscrypt) as the security provider. 
 To be more consistent with Android, Robolectric needed to be updated to use Conscrypt as the default security provider.
  

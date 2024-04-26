@@ -12,8 +12,6 @@ organization for the Google Summer of Code (GSOC) 2024! This will provide an
 opportunity for students interested in Android development to contribute to one
 of the most widely used testing frameworks for Android.
 
-<!-- more -->
-
 ### What is Robolectric?
 
 For those new to Robolectric, it's a powerful testing framework that allows

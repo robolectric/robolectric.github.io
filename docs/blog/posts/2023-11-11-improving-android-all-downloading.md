@@ -10,8 +10,6 @@ slug: improving-android-all-downloading
 In recent years, the team has received multiple issues regarding Robolectric's inability to download/resolve
 the necessary android-all jars when running Robolectric tests in a CI environment. Some examples include:
 
-<!-- more -->
-
 1. [android-all not downloaded as part of robolectric, or is it a separate dependency?](https://github.com/robolectric/robolectric/issues/7886)
 
 2. [Robolectric failing because not downloading dependencies in Jenkins when using Artifactory](https://github.com/robolectric/robolectric/issues/8158)

@@ -11,8 +11,6 @@ slug: robolectric-4-0-alpha
 
 The Robolectric team is super excited to announce the first alpha release of Robolectric 4.0, as well as some new developments in the world of Robolectric and Android testing in general.
 
-<!-- more -->
-
 ### `androidx.test`
 We’re collaborating closely with the Android Jetpack testing team to develop common APIs for writing Android tests that can run as both local (JVM-based) and on-device (instrumentation) tests. From 4.0 on, Robolectric will support Jetpack’s [androidx.test](https://developer.android.com/training/testing/) APIs, starting with support for the [`AndroidJUnit4` test runner](https://developer.android.com/training/testing/junit-runner), [`ActivityTestRule`](https://developer.android.com/training/testing/junit-rules), and [Espresso](https://developer.android.com/training/testing/espresso/) for interacting with UI components.
 

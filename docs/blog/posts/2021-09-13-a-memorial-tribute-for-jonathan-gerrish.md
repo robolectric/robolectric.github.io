@@ -17,8 +17,6 @@ contributor since 2014. He saw incredible potential in Robolectric and
 championed it within Google, elevating it to an officially supported testing
 tool that grew to be used by tens of thousands of Android developers.
 
-<!-- more -->
-
 The breadth of the contributions that Jonathan made to the project are too wide
 to list in this post. He was involved in many high-profile projects such as
 revamping PackageManager support and binary resources. He also worked

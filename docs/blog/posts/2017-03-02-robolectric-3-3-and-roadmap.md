@@ -10,8 +10,6 @@ slug: robolectric-3-3-and-roadmap
 
 Your Robolectric maintainers are pleased to announce the release of [Robolectric 3.3](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.3)! There's been a bunch of activity recently in Robolectric, and we wanted to give a quick update on our thinking about where the project is going.
 
-<!-- more -->
-
 ### Introduction
 
 Robolectric started life in 2010 as a quick hack to allow Android tests to be run on a regular JVM rather than a device or emulator, allowing for fast [TDD cycles](https://en.wikipedia.org/wiki/Test-driven_development#Test-driven_development_cycle). It was mostly developed in brief spurts as needed for testing specific projects.

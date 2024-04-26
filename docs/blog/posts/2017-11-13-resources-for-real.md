@@ -11,8 +11,6 @@ slug: resources-for-real
 
 Up until now, Robolectric has relied on rough approximations of the Android framework's resource handling logic, backwards-engineered to be 'good enough' for many testing purposes.
 
-<!-- more -->
-
 We've gotten to the point where 'good enough' is no longer good enough. We've completely reimplemented Robolectric's resources system, transliterating the real native Android resource handling code from the original C++ to Java, and in the coming several releases we'll be rolling it out. The new code will fix numerous bugs in the old Robolectric simulation, which we expect will expose places where your tests rely on incorrect Robolectric behavior.
 
 We're doing this in three separate releases to give you a chance to fix your tests in smaller batches. We strongly recommend you apply each upgrade individually and watch the release notes for migration hints.
