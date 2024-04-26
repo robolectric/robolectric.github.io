@@ -14,7 +14,7 @@ test. Furthermore it will make your tests more portable and compatible with our 
 ### TestRunner
 
 It is now possible to use the AndroidX test runner in Robolectric tests. If you require a custom test runner currently,
-please check out the new [configuration and plugin API](/javadoc/latest/org/robolectric/pluginapi/package-summary.html)
+please check out the new [configuration and plugin API](javadoc/latest/org/robolectric/pluginapi/package-summary.html)
 and let us know if there are any extension points missing that you require.
 
 **Robolectric**

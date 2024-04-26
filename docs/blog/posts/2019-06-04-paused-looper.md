@@ -54,7 +54,7 @@ PAUSED mode vs the existing ‘LEGACY’ mode include:
 
 
 *   Tasks posted to the main looper are not automatically executed inline. Similar to the
-[ legacy paused IdleState](/javadoc/4.3/org/robolectric/util/Scheduler.IdleState.html#PAUSED), 
+[ legacy paused IdleState](../../javadoc/4.3/org/robolectric/util/Scheduler.IdleState.html#PAUSED), 
 tasks posted to the main looper must be explicitly executed via `ShadowLooper` APIs. However, 
 we’ve made a couple additional improvements in PAUSED mode that make this easier:
 *   Robolectric will warn users if a test fails with unexecuted tasks in the main looper queue. 
