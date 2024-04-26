@@ -2,8 +2,6 @@
 date: 2022-09-06
 authors:
   - Umesh-01
-hide:
-  - footer
 slug: Umesh-GSoC-on-ConscryptMode
 ---
 

@@ -1,8 +1,3 @@
----
-hide:
-- footer
----
-
 # Shadows
 
 Robolectric works by creating a runtime environment that includes the real Android framework code. This means when your tests or code under test calls into the Android framework you get a more realistic experience as for the most part the same code is executed as would be on a real device. There are limitations however:

@@ -1,7 +1,5 @@
 ---
 title: Robolectric Migration Guide
-hide:
-- footer
 ---
 
 ## Automated Migration

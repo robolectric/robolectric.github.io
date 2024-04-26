@@ -1,8 +1,3 @@
----
-hide:
-- footer
----
-
 # Device Configuration
 
 Robolectric makes it easy to simulate a variety of device configurations. In particular, the properties that make up the `android.content.res.Configuration` class can be specified at the test method, test class, package, or suite level, as described [here](configuring.md).

@@ -1,8 +1,3 @@
----
-hide:
-- footer
----
-
 # Contributor Guidelines
 
 ## Getting Started

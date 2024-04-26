@@ -2,8 +2,6 @@
 date: 2024-02-25
 authors:
   - hoisie
-hide:
-  - footer
 slug: robolectric-2024-gsoc
 ---
 

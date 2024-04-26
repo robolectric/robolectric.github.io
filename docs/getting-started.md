@@ -1,8 +1,3 @@
----
-hide:
-- footer
----
-
 # Getting Started
 
 Robolectric works best with Gradle or Bazel. If you are starting a new project, we would recommend Gradle first (since it is the build system of choice in Android Studio) and Bazel second. Both environments provide first class support for Robolectric. If you are using another build system see how to configure [other environments](other-environments.md) or learn how to provide first class [build system integration](build-system-integration.md) support for other environments.

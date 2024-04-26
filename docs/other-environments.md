@@ -1,7 +1,6 @@
 ---
 title: Using Robolectric with other build environments
 hide:
-- footer
 - navigation
 ---
 

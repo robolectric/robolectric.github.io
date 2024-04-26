@@ -4,8 +4,6 @@ authors:
   - jongerrish
   - brettchabot
   - xian
-hide:
-  - footer
 slug: robolectric-4-0
 ---
 

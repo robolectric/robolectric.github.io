@@ -4,7 +4,6 @@ authors:
   - brettchabot
   - hoisie
 hide:
-  - footer
   - toc
 slug: a-memorial-tribute-for-jonathan-gerrish
 ---

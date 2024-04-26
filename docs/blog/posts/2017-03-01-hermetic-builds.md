@@ -3,7 +3,6 @@ date: 2017-03-01
 authors:
   - xian
 hide:
-  - footer
   - toc
 slug: hermetic-builds
 ---

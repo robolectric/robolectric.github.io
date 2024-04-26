@@ -34,7 +34,6 @@ theme:
         name: "Switch to light mode"
   features:
     - content.code.copy
-    - navigation.footer
     - navigation.indexes
     - navigation.sections
     - navigation.tabs

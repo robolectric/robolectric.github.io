@@ -3,8 +3,6 @@ date: 2019-06-04
 authors:
   - brettchabot
   - jongerrish
-hide:
-  - footer
 slug: paused-looper
 ---
 

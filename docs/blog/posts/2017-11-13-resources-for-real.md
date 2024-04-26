@@ -3,7 +3,6 @@ date: 2017-11-13
 authors:
   - xian
 hide:
-  - footer
   - toc
 slug: resources-for-real
 ---

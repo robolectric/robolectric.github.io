@@ -2,8 +2,6 @@
 date: 2023-11-11
 authors:
   - utzcoz
-hide:
-  - footer
 slug: improving-android-all-downloading
 ---
 

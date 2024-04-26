@@ -1,8 +1,3 @@
----
-hide:
-- footer
----
-
 # AndroidX Test
 
 Robolectric is intended to be fully compatible with Android's official testing libraries since version 4.0.

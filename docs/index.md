@@ -1,6 +1,5 @@
 ---
 hide:
-- footer
 - navigation
 ---
 

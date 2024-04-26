@@ -2,8 +2,6 @@
 date: 2021-10-06
 authors:
   - utzcoz
-hide:
-  - footer
 slug: sharedTest
 ---
 

@@ -1,8 +1,3 @@
----
-hide:
-- footer
----
-
 # Configuring Robolectric
 
 Several aspects of Robolectric's behavior can be configured at runtime, using `robolectric.properties` files for package-level configuration, or `@Config` annotations for class-level or method-level configuration.
