@@ -2,7 +2,7 @@ name: "Deploy website"
 
 on:
   push:
-    branches: [ master, "new_website" ]
+    branches: [ master, "dev-new-site" ]
 
 jobs:
   deploy_website:
@@ -20,9 +20,6 @@ jobs:
 
       - name: Install necessary tools
         run: pip install -r requirements.txt
-
-      - name: Copy Javadoc
-        run: cp -r javadoc/ docs/javadoc/
 
       - name: Deploy website
         run: mkdocs gh-deploy --force

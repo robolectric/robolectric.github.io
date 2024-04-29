@@ -77,7 +77,7 @@ extra:
       icon: fontawesome/brands/github
       link: "http://github.com/robolectric/robolectric"
     - name: "robolectric@googlegroups.com"
-      icon: fontawesome/regular/envelope 
+      icon: fontawesome/regular/envelope
       link: "http://groups.google.com/group/robolectric"
     - name: "@Robolectric"
       icon: fontawesome/brands/x-twitter
@@ -86,47 +86,53 @@ extra:
 nav:
   - "Home": index.md
   - "Setup":
-    - "Getting Started": getting-started.md
-    - "Writing Your First Test": writing-a-test.md
+      - "Getting Started": getting-started.md
+      - "Writing Your First Test": writing-a-test.md
   - "User Guide":
-    - "AndroidX Test": androidx_test.md
-    - "Configuring Robolectric": configuring.md
-    - "Device Configuration": device-configuration.md
-    - "Using Qualified Resources": using-qualifiers.md
-    - "Using Add-On Modules": using-add-on-modules.md
-    - "Best Practices": best-practices.md
+      - "AndroidX Test": androidx_test.md
+      - "Configuring Robolectric": configuring.md
+      - "Device Configuration": device-configuration.md
+      - "Using Qualified Resources": using-qualifiers.md
+      - "Using Add-On Modules": using-add-on-modules.md
+      - "Best Practices": best-practices.md
   - "Customizing":
-    - "Build System Integration": build-system-integration.md
-    - "Customizing the Test Runner": custom-test-runner.md
+      - "Build System Integration": build-system-integration.md
+      - "Customizing the Test Runner": custom-test-runner.md
   - "Contributing":
-    - "Building Robolectric": building-robolectric.md
-    - "Contributor Guidelines": contributing.md
-    - "Shadows": extending.md
+      - "Building Robolectric": building-robolectric.md
+      - "Contributor Guidelines": contributing.md
+      - "Shadows": extending.md
   - "Resources":
-    - "Migration Guide": migrating.md
-    - "GitHub": https://github.com/robolectric/robolectric/
-    - "Release Notes": https://github.com/robolectric/robolectric/releases/
-    - "Issues": https://github.com/robolectric/robolectric/issues/
-    - "Javadoc":
-      - "4.12": javadoc/4.12/
-      - "4.11": javadoc/4.11/
-      - "4.10": javadoc/4.10/
-      - "4.9": javadoc/4.9/
-      - "4.8": javadoc/4.8/
-      - "4.7": javadoc/4.7/
-      - "4.6": javadoc/4.6/
-      - "4.5": javadoc/4.5/
-      - "4.4": javadoc/4.4/
-      - "4.3": javadoc/4.3/
-      - "4.2": javadoc/4.2/
-      - "4.1": javadoc/4.1/
-      - "4.0": javadoc/4.0/
+      - "Migration Guide": migrating.md
+      - "GitHub": https://github.com/robolectric/robolectric/
+      - "Release Notes": https://github.com/robolectric/robolectric/releases/
+      - "Issues": https://github.com/robolectric/robolectric/issues/
+      - "Javadoc":
+          - "4.12": /javadoc/4.12/
+          - "4.11": /javadoc/4.11/
+          - "4.10": /javadoc/4.10/
+          - "4.9": /javadoc/4.9/
+          - "4.8": /javadoc/4.8/
+          - "4.7": /javadoc/4.7/
+          - "4.6": /javadoc/4.6/
+          - "4.5": /javadoc/4.5/
+          - "4.4": /javadoc/4.4/
+          - "4.3": /javadoc/4.3/
+          - "4.2": /javadoc/4.2/
+          - "4.1": /javadoc/4.1/
+          - "4.0": /javadoc/4.0/
   - "Blog":
       - blog/index.md
 
 not_in_nav: |
   automated-migration.md
   other-environments.md
+  /javadoc/4.11/legal/jquery.md
+  /javadoc/4.11/legal/jqueryUI.md
+  /javadoc/4.12/legal/jquery.md
+  /javadoc/4.12/legal/jqueryUI.md
+  /javadoc/latest/legal/jquery.md
+  /javadoc/latest/legal/jqueryUI.md
 
 watch:
   - overrides
