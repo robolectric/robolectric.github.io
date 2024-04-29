@@ -1,12 +1,6 @@
-_site
-build
 .idea
-.bundle
-.sass-cache
 .DS_Store
 *.iml
 *.ipr
 *.iws
-vendor
-.jekyll-cache
-.jekyll-metadata
+site/
