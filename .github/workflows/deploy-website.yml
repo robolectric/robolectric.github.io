@@ -4,6 +4,10 @@ on:
   push:
     branches: [ master ]
 
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   deploy_website:
     name: "Deploy website"
