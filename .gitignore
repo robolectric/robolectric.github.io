@@ -3,4 +3,7 @@
 *.iml
 *.ipr
 *.iws
+.sass-cache/
+.jekyll-metadata
 site/
+_site/
