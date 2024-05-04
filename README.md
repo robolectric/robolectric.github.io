@@ -25,3 +25,10 @@ Once your Pull Request is merged, the documentation will be automatically built 
 ## Javadocs
 
 When a new version of Robolectric is released, the `javadoc` directory needs to be updated. We can get the last steps to generate the Javadocs in [Robolectric Wiki's release part](https://github.com/robolectric/robolectric/wiki/Performing-a-Release#release).
+
+## Deploy process
+
+When a new PR is merged, GitHub Actions will build and push site code
+to `gh-pages` branch. The repository has configured to deploy the site
+with `gh-phages` branch, and then GitHub Pages will deploy the site
+public automatically.
