@@ -4,6 +4,7 @@ site_url: "https://robolectric.org"
 copyright: "©2010-2024. All rights reserved."
 repo_url: "https://github.com/robolectric/robolectric"
 repo_name: Robolectric
+edit_uri: https://github.com/robolectric/robolectric.github.io/tree/master/docs
 
 theme:
   name: material
@@ -33,7 +34,9 @@ theme:
         icon: material/weather-sunny
         name: "Switch to light mode"
   features:
+    - content.action.view
     - content.code.copy
+    - content.tooltips
     - navigation.indexes
     - navigation.sections
     - navigation.tabs
