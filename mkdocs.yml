@@ -4,6 +4,7 @@ site_url: "https://robolectric.org"
 copyright: "©2010-2024. All rights reserved."
 repo_url: "https://github.com/robolectric/robolectric"
 repo_name: Robolectric
+strict: true
 edit_uri: https://github.com/robolectric/robolectric.github.io/tree/master/docs
 
 theme:
@@ -111,25 +112,34 @@ nav:
     - "Release Notes": https://github.com/robolectric/robolectric/releases/
     - "Issues": https://github.com/robolectric/robolectric/issues/
     - "Javadoc":
-      - "4.12": javadoc/4.12/
-      - "4.11": javadoc/4.11/
-      - "4.10": javadoc/4.10/
-      - "4.9": javadoc/4.9/
-      - "4.8": javadoc/4.8/
-      - "4.7": javadoc/4.7/
-      - "4.6": javadoc/4.6/
-      - "4.5": javadoc/4.5/
-      - "4.4": javadoc/4.4/
-      - "4.3": javadoc/4.3/
-      - "4.2": javadoc/4.2/
-      - "4.1": javadoc/4.1/
-      - "4.0": javadoc/4.0/
+      - "4.12": /javadoc/4.12/
+      - "4.11": /javadoc/4.11/
+      - "4.10": /javadoc/4.10/
+      - "4.9": /javadoc/4.9/
+      - "4.8": /javadoc/4.8/
+      - "4.7": /javadoc/4.7/
+      - "4.6": /javadoc/4.6/
+      - "4.5": /javadoc/4.5/
+      - "4.4": /javadoc/4.4/
+      - "4.3": /javadoc/4.3/
+      - "4.2": /javadoc/4.2/
+      - "4.1": /javadoc/4.1/
+      - "4.0": /javadoc/4.0/
   - "Blog":
       - blog/index.md
+
+exclude_docs: |
+  /javadoc/*/legal/jquery*.md
 
 not_in_nav: |
   automated-migration.md
   other-environments.md
+
+validation:
+  links:
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
 
 watch:
   - overrides
