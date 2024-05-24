@@ -98,7 +98,7 @@ nav:
     - "Device Configuration": device-configuration.md
     - "Using Qualified Resources": using-qualifiers.md
     - "Using Add-On Modules": using-add-on-modules.md
-    - "Best Practices": best-practices.md
+    - "Best Practices & Limitations": best-practices.md
   - "Customizing":
     - "Build System Integration": build-system-integration.md
     - "Customizing the Test Runner": custom-test-runner.md
