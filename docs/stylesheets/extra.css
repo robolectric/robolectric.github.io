@@ -3,3 +3,12 @@
     --md-primary-fg-color--light: #7FC06B;
     --md-primary-fg-color--dark: #7FC06B;
 }
+
+/* Make source part of the header a bit wider to avoid cutting off version tags. */
+@media screen and (min-width: 60em) {
+    .md-header__source {
+        display: block;
+        max-width: 13rem;
+        width: 13rem;
+    }
+}
