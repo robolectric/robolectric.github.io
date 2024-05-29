@@ -19,7 +19,7 @@ android {
 
 dependencies {
   testImplementation 'junit:junit:4.13.2'
-  testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current }}'
+  testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current_patched }}'
 }
 ```
 

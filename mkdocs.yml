@@ -76,6 +76,7 @@ extra:
   robolectric:
     version:
       current: "4.12"
+      current_patched: "4.12.2"
   social:
     - name: "GitHub Project"
       icon: fontawesome/brands/github
