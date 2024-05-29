@@ -1,67 +1,96 @@
 # Getting Started
 
-Robolectric works best with Gradle or Bazel. If you are starting a new project, we would recommend Gradle first (since it is the build system of choice in Android Studio) and Bazel second. Both environments provide first class support for Robolectric. If you are using another build system see how to configure [other environments](other-environments.md) or learn how to provide first class [build system integration](build-system-integration.md) support for other environments.
+Robolectric works with various build systems, which are documented on this page. If you are starting a new project, we recommend [Gradle](https://gradle.org/) as a first choice, since it is the default build system for Android.
 
-## Building with Android Studio/Gradle
+## Building with Gradle
 
-Robolectric works best with Android Studio and [Android Gradle Plugin 3.2.1](https://developer.android.com/studio/releases/gradle-plugin#updating-plugin) or newer.
+Start by adding the following to your module's `build.gradle`/`build.gradle.kts` file:
 
-Add the following to your `build.gradle`:
+=== "Groovy"
 
-```groovy
-android {
-  testOptions {
-    unitTests {
-      includeAndroidResources = true
+    ```groovy
+    android {
+      testOptions {
+        unitTests {
+          includeAndroidResources = true
+        }
+      }
     }
-  }
-}
 
-dependencies {
-  testImplementation 'junit:junit:4.13.2'
-  testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current_patched }}'
-}
-```
+    dependencies {
+      testImplementation 'junit:junit:4.13.2'
+      testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current_patched }}'
+    }
+    ```
 
-Add this line to your `gradle.properties` (no longer necessary with Android Studio 3.3+):
+=== "Kotlin"
 
-```properties
-android.enableUnitTestBinaryResources=true
-```
+    ```kotlin
+    android {
+      testOptions {
+        unitTests {
+          isIncludeAndroidResources = true
+        }
+      }
+    }
 
-Annotate your test with the Robolectric test runner:
+    dependencies {
+      testImplementation("junit:junit:4.13.2")
+      testImplementation("org.robolectric:robolectric:{{ robolectric.version.current_patched }}")
+    }
+    ```
 
-```java
-@RunWith(RobolectricTestRunner.class)
-public class SandwichTest {
-}
-```
+Then, mark your test to run with `RobolectricTestRunner`:
+
+=== "Java"
+
+    ```java
+    import org.robolectric.RobolectricTestRunner;
+
+    @RunWith(RobolectricTestRunner.class)
+    public class SandwichTest {
+    }
+    ```
+
+=== "Kotlin"
+
+    ```kotlin
+    import org.robolectric.RobolectricTestRunner
+
+    @RunWith(RobolectricTestRunner::class)
+    public class SandwichTest
+    ```
 
 ## Building with Bazel
 
-Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel integrates with Robolectric through the `android_local_test` rule. The Robolectric Java test code is the same for a Bazel project as a new Gradle project.
+Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel integrates with Robolectric through the `android_local_test` rule. The Robolectric Java/Kotlin test code is the same for a Bazel project as for a Gradle project (see section above).
 
-Robolectric needs to be added as a dependency to your Bazel project with [`rules_jvm_external`](https://github.com/bazelbuild/rules_jvm_external). Add the following to your WORKSPACE file:
+Robolectric needs to be added as a dependency to your Bazel project with [`rules_jvm_external`](https://github.com/bazelbuild/rules_jvm_external). Add the following to your `WORKSPACE` file:
 
 ```python
 http_archive(
     name = "robolectric",
-    urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.7.3.tar.gz"],
-    strip_prefix = "robolectric-bazel-4.7.3",
+    sha256 = "f7b8e08f246f29f26fddd97b7ab5dfa01aaa6170ccc24b9b6a21931bde01ad6f",
+    strip_prefix = "robolectric-bazel-4.12.2",
+    urls = ["https://github.com/robolectric/robolectric-bazel/releases/download/4.12.2/robolectric-bazel-4.12.2.tar.gz"],
 )
 load("@robolectric//bazel:robolectric.bzl", "robolectric_repositories")
+
 robolectric_repositories()
 
 http_archive(
     name = "rules_jvm_external",
-    strip_prefix = "rules_jvm_external-4.2",
-    sha256 = "cd1a77b7b02e8e008439ca76fd34f5b07aecb8c752961f9640dea15e9e5ba1ca",
-    url = "https://github.com/bazelbuild/rules_jvm_external/archive/4.2.zip",
+    sha256 = "d31e369b854322ca5098ea12c69d7175ded971435e55c18dd9dd5f29cc5249ac",
+    strip_prefix = "rules_jvm_external-5.3",
+    url = "https://github.com/bazelbuild/rules_jvm_external/releases/download/5.3/rules_jvm_external-5.3.tar.gz",
 )
 load("@rules_jvm_external//:defs.bzl", "maven_install")
+
 maven_install(
+    name = "maven",
     artifacts = [
-        "org.robolectric:robolectric:4.7.3",
+        "com.google.truth:truth:1.1.3",
+        "org.robolectric:robolectric:{{ robolectric.version.current_patched }}",
     ],
     repositories = [
         "https://maven.google.com",
@@ -70,7 +99,7 @@ maven_install(
 )
 ```
 
-Add an `android_local_test` rule to your BUILD file:
+Add an `android_local_test` rule to your `BUILD` file:
 
 ```python
 android_local_test(
@@ -86,14 +115,99 @@ android_local_test(
 )
 ```
 
-[robolectric-bazel](https://github.com/robolectric/robolectric-bazel) repository has latest integration manual for Bazel. If you have any question about Bazel integration, we recommend to check it firstly, and file an issue if it doesn't resolve your problem.
+> [!NOTE]
+> These instructions use `robolectric-bazel` 4.12.2 and `rules_jvm_external` 5.3. Please check [`robolectric-bazel`'s latest release](https://github.com/robolectric/robolectric-bazel/releases/latest) for up to date information.
 
-## Other Environments
+If you have any question about Bazel integration, we recommend to [check `robolectric-bazel`](https://github.com/robolectric/robolectric-bazel) first, and file an issue there if you need assistance.
 
-* [Buck](https://buckbuild.com/rule/robolectric_test.html)
-* [Older Android Studio/Gradle Versions](other-environments.md#android-studio-gradle-agp-30)
-* [Maven & Eclipse](other-environments.md#maven-eclipse)
+## Building with Maven
 
-## Sample Projects
+Start by adding the following to your module's `pom.xml` file:
 
-Look at the [Google's Android Testing samples](https://github.com/googlesamples/android-testing) to see how fast and easy it can be to test drive the development of Android applications.
+```xml
+<dependency>
+    <groupId>org.robolectric</groupId>
+    <artifactId>robolectric</artifactId>
+    <version>{{ robolectric.version.current_patched }}</version>
+    <scope>test</scope>
+</dependency>
+```
+
+Then, mark your test to run with `RobolectricTestRunner`:
+
+=== "Java"
+
+    ```java
+    import org.robolectric.RobolectricTestRunner;
+
+    @RunWith(RobolectricTestRunner.class)
+    public class SandwichTest {
+    }
+    ```
+
+=== "Kotlin"
+
+    ```kotlin
+    import org.robolectric.RobolectricTestRunner
+
+    @RunWith(RobolectricTestRunner::class)
+    public class SandwichTest
+    ```
+
+### Using libraries
+
+If you use Maven to build your application, you will need to tell Robolectric where the unpacked resources are located for each library you use. This can either be specified with the `@Config` annotation:
+
+=== "Java"
+
+    ```java
+    import org.robolectric.RobolectricTestRunner;
+
+    @RunWith(RobolectricTestRunner.class)
+    @Config(libraries = {
+        "build/unpacked-libraries/library1",
+        "build/unpacked-libraries/library2"
+    })
+    public class SandwichTest {
+    }
+    ```
+
+=== "Kotlin"
+
+    ```kotlin
+    import org.robolectric.RobolectricTestRunner
+
+    @RunWith(RobolectricTestRunner::class)
+    @Config(libraries = [
+        "build/unpacked-libraries/library1",
+        "build/unpacked-libraries/library2"
+    ])
+    public class SandwichTest
+    ```
+
+or specified in the [`robolectric.properties`](configuring.md/#robolectricproperties-file) file:
+
+```properties
+libraries=build/unpacked-libraries/library1,build/unpacked-libraries/library2
+```
+
+All paths are relative to the root directory of the project.
+
+### Debugging resource loading issues
+
+If you are not sure if resources are being loaded for a particular library, enable debug logging by setting the system property `robolectric.logging.enabled = true` and run your tests. You should see lots of output like:
+
+```
+Loading resources for 'com.foo' from build/unpacked-libraries/library1...
+```
+
+If you don't see a particular library in the list, double-check the configuration.
+
+If you reference resources that are outside of your project (i.e. in an AAR dependency), you will need to provide Robolectric with a pointer to the exploded AAR in your build system. See [using libraries](#using-libraries) above for more information.
+
+## Additional resources
+
+* [Build system integration](build-system-integration.md)
+* [Build with Buck](https://buckbuild.com/rule/robolectric_test.html)
+* [Build with Buck2](https://buck2.build/docs/api/rules/#robolectric_test)
+* [Google's Android Testing samples](https://github.com/googlesamples/android-testing)
