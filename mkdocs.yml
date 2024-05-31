@@ -47,6 +47,7 @@ extra_css:
   - stylesheets/extra.css
 
 markdown_extensions:
+  - github-callouts
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -54,6 +55,12 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
 
 plugins:
   - blog:
@@ -67,6 +74,7 @@ plugins:
         "activity-lifecycle.md": "androidx_test.md"
         "custom-shadows.md": "extending.md"
         "errorprone-refactorings.md": "automated-migration.md"
+        "other-environments.md": "getting-started.md"
   - search:
 
 extra:
@@ -134,7 +142,6 @@ exclude_docs: |
 
 not_in_nav: |
   automated-migration.md
-  other-environments.md
 
 validation:
   links:
