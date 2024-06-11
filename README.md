@@ -24,7 +24,26 @@ Once your Pull Request is merged, the documentation will be automatically built 
 
 ## Javadocs
 
-When a new version of Robolectric is released, the `javadoc` directory needs to be updated. We can get the last steps to generate the Javadocs in [Robolectric Wiki's release part](https://github.com/robolectric/robolectric/wiki/Performing-a-Release#release).
+When a new version of Robolectric is released, the [`docs/javadoc`](docs/javadoc) directory needs to be updated. This can be achieved either automatically, or manually.
+
+### Automatic publication
+
+The simplest way to publish the javadoc for a specific version is to [create an issue](https://github.com/robolectric/robolectric.github.io/issues/new) whose title is `Publish javadoc for <version>`, where `<version>` is Robolectric's new version (for example `4.12`).
+
+> [!NOTE]
+> If you provide a bugfix version, it will overwrite the corresponding minor version's javadoc.
+> For example, passing version `4.12.2` will update the javadoc for Robolectric 4.12.
+
+This will trigger the [`publish-javadoc.yml` workflow](.github/workflows/publish-javadoc.yml) to build and publish the corresponding javadoc.
+
+> [!TIP]
+> If you use the [`gh`](https://cli.github.com/) command line tool, you can use the following command:
+> 
+> `gh issue create --title "Publish javadoc for <version>" --body ""`
+
+### Manual publication
+
+To manually publish the javadoc, you can follow the guide in [Robolectric Wiki's release part](https://github.com/robolectric/robolectric/wiki/Performing-a-Release#update-docs).
 
 ## Deploy process
 
