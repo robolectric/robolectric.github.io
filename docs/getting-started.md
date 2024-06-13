@@ -210,4 +210,4 @@ If you reference resources that are outside of your project (i.e. in an AAR depe
 * [Build system integration](build-system-integration.md)
 * [Build with Buck](https://buckbuild.com/rule/robolectric_test.html)
 * [Build with Buck2](https://buck2.build/docs/api/rules/#robolectric_test)
-* [Google's Android Testing samples](https://github.com/googlesamples/android-testing)
+* [Android's Testing samples](https://github.com/android/testing-samples)
