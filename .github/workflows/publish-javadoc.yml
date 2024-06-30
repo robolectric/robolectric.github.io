@@ -97,7 +97,7 @@ jobs:
           git commit -m "Publish javadoc for Robolectric ${{ steps.robolectric_version.outputs.patchVersion }}" \
             -m "- Add javadoc for Robolectric ${{ steps.robolectric_version.outputs.patchVersion }}." \
             -m "- Update mkdocs.yml to add a navigation entry to the new javadoc." \
-            -m "- Update mkdocs.yml to use version ${{ steps.robolectric_version.outputs.patchVersion }}."
+            -m "- Update mkdocs.yml to use version ${{ steps.robolectric_version.outputs.patchVersion }}." \
             -m "Fixes #${{ github.event.issue.id }}"
           git push --set-upstream origin publish-javadoc-robolectric-${{ steps.robolectric_version.outputs.patchVersion }}
           gh pr create --fill
