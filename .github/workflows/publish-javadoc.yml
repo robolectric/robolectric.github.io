@@ -17,14 +17,14 @@ jobs:
       - name: Extract Robolectric version
         id: robolectric_version
         run: |
-          authorAssociation=${{ github.event.issue.author_association }}
+          authorAssociation="${{ github.event.issue.author_association }}"
 
           if [[ "$authorAssociation" == "COLLABORATOR" || "$authorAssociation" == "MEMBER" || "$authorAssociation" == "OWNER" ]]; then
-            issueTitle=${{ github.event.issue.title }}
+            issueTitle="${{ github.event.issue.title }}"
 
             if [[ "$issueTitle" =~ ^Publish\ javadoc\ for\ (([0-9]+\.[0-9]+)(\.[0-9]+)?)$ ]]; then
-              robolectricMinorVersion=${BASH_REMATCH[2]}
-              robolectricPatchVersion=${BASH_REMATCH[1]}
+              robolectricMinorVersion="${BASH_REMATCH[2]}"
+              robolectricPatchVersion="${BASH_REMATCH[1]}"
 
               echo "minorVersion=$robolectricMinorVersion" > $GITHUB_OUTPUT
               echo "patchVersion=$robolectricPatchVersion" >> $GITHUB_OUTPUT
@@ -62,7 +62,7 @@ jobs:
         if: ${{ steps.robolectric_version.outputs.minorVersion }}
         run: |
           cd robolectric.github.io
-          targetFolder=docs/javadoc/${{ steps.robolectric_version.outputs.minorVersion }}
+          targetFolder="docs/javadoc/${{ steps.robolectric_version.outputs.minorVersion }}"
           if [ -e $targetFolder ]; then
             rm -r $targetFolder
           fi
