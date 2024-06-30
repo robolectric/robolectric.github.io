@@ -58,7 +58,7 @@ android {
 }
 
 dependencies {
-  testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current_patched }}'
+  testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current }}'
 }
 ```
 

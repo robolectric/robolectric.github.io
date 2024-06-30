@@ -19,7 +19,7 @@ Start by adding the following to your module's `build.gradle`/`build.gradle.kts`
 
     dependencies {
       testImplementation 'junit:junit:4.13.2'
-      testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current_patched }}'
+      testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current }}'
     }
     ```
 
@@ -36,7 +36,7 @@ Start by adding the following to your module's `build.gradle`/`build.gradle.kts`
 
     dependencies {
       testImplementation("junit:junit:4.13.2")
-      testImplementation("org.robolectric:robolectric:{{ robolectric.version.current_patched }}")
+      testImplementation("org.robolectric:robolectric:{{ robolectric.version.current }}")
     }
     ```
 
@@ -90,7 +90,7 @@ maven_install(
     name = "maven",
     artifacts = [
         "com.google.truth:truth:1.1.3",
-        "org.robolectric:robolectric:{{ robolectric.version.current_patched }}",
+        "org.robolectric:robolectric:{{ robolectric.version.current }}",
     ],
     repositories = [
         "https://maven.google.com",
@@ -128,7 +128,7 @@ Start by adding the following to your module's `pom.xml` file:
 <dependency>
     <groupId>org.robolectric</groupId>
     <artifactId>robolectric</artifactId>
-    <version>{{ robolectric.version.current_patched }}</version>
+    <version>{{ robolectric.version.current }}</version>
     <scope>test</scope>
 </dependency>
 ```
