@@ -84,14 +84,13 @@ extra:
     property: "UA-19269905-2"
   robolectric:
     version:
-      current: "4.12"
-      current_patched: "4.12.2"
+      current: "4.12.2"
   social:
     - name: "GitHub Project"
       icon: fontawesome/brands/github
       link: "http://github.com/robolectric/robolectric"
     - name: "robolectric@googlegroups.com"
-      icon: fontawesome/regular/envelope 
+      icon: fontawesome/regular/envelope
       link: "http://groups.google.com/group/robolectric"
     - name: "@Robolectric"
       icon: fontawesome/brands/x-twitter
@@ -136,7 +135,7 @@ nav:
       - "4.1": /javadoc/4.1/
       - "4.0": /javadoc/4.0/
   - "Blog":
-      - blog/index.md
+    - blog/index.md
 
 exclude_docs: |
   /javadoc/*/legal/jquery*.md

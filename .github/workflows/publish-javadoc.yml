@@ -59,10 +59,10 @@ jobs:
           ./gradlew clean aggregateDocs
 
       - name: Move the new javadoc
-        if: ${{ steps.robolectric_version.outputs.minorVersion }}
+        if: ${{ steps.robolectric_version.outputs.patchVersion }}
         run: |
           cd robolectric.github.io
-          targetFolder="docs/javadoc/${{ steps.robolectric_version.outputs.minorVersion }}"
+          targetFolder="docs/javadoc/${{ steps.robolectric_version.outputs.patchVersion }}"
           if [ -e $targetFolder ]; then
             rm -r $targetFolder
           fi
@@ -70,21 +70,17 @@ jobs:
           mv ../robolectric/build/docs/javadoc $targetFolder
 
       - name: Update Robolectric version in mkdocs.yml
-        if: ${{ steps.robolectric_version.outputs.minorVersion }}
+        if: ${{ steps.robolectric_version.outputs.patchVersion }}
         run: |
           cd robolectric.github.io
-          sed -i 's/^      current: ".*"$/      current: "${{ steps.robolectric_version.outputs.minorVersion }}"/' mkdocs.yml
-          sed -i 's/^      current_patched: ".*"$/      current_patched: "${{ steps.robolectric_version.outputs.patchVersion }}"/' mkdocs.yml
-
-          if [ "${{ steps.robolectric_version.outputs.minorVersion }}" == "${{ steps.robolectric_version.outputs.patchVersion }}" ]; then
-            sed -i 's/^\(    - "Javadoc":\)$/\1\n      - "${{ steps.robolectric_version.outputs.minorVersion }}": \/javadoc\/${{ steps.robolectric_version.outputs.minorVersion }}\//' mkdocs.yml
-          fi
+          sed -i 's/^      current: ".*"$/      current: "${{ steps.robolectric_version.outputs.patchVersion }}"/' mkdocs.yml
+          sed -i 's/^\(    - "Javadoc":\)$/\1\n      - "${{ steps.robolectric_version.outputs.patchVersion }}": \/javadoc\/${{ steps.robolectric_version.outputs.patchVersion }}\//' mkdocs.yml
 
       - name: Update latest javadoc symbolic link
-        if: ${{ steps.robolectric_version.outputs.minorVersion }}
+        if: ${{ steps.robolectric_version.outputs.patchVersion }}
         run: |
           cd robolectric.github.io
-          ln -sfn ${{ steps.robolectric_version.outputs.minorVersion }} docs/javadoc/latest
+          ln -sfn ${{ steps.robolectric_version.outputs.patchVersion }} docs/javadoc/latest
 
       - name: Create Pull Request
         if: ${{ steps.robolectric_version.outputs.patchVersion }}
@@ -100,6 +96,6 @@ jobs:
             -m "- Add javadoc for Robolectric ${{ steps.robolectric_version.outputs.patchVersion }}." \
             -m "- Update mkdocs.yml to add a navigation entry to the new javadoc." \
             -m "- Update mkdocs.yml to use version ${{ steps.robolectric_version.outputs.patchVersion }}." \
-            -m "Fixes #${{ github.event.issue.id }}"
+            -m "Fixes #${{ github.event.issue.number }}"
           git push --set-upstream origin publish-javadoc-robolectric-${{ steps.robolectric_version.outputs.patchVersion }}
           gh pr create --fill
