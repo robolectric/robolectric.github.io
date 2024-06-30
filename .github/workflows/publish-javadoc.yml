@@ -88,6 +88,8 @@ jobs:
 
       - name: Create Pull Request
         if: ${{ steps.robolectric_version.outputs.patchVersion }}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           cd robolectric.github.io
           git config user.name "github-actions[bot]"
