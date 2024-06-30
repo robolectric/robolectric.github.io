@@ -30,7 +30,7 @@ loadScripts(document, 'script');</script>
 <!-- ========= START OF TOP NAVBAR ======= -->
 <div class="top-nav" id="navbar-top">
 <div class="skip-nav"><a href="#skip-navbar-top" title="Skip navigation links">Skip navigation links</a></div>
-<div class="about-language"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.12 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="about-language"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.12.2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 <ul id="navbar-top-firstrow" class="nav-list" title="Navigation">
 <li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
@@ -77,10 +77,10 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <hr>
-<div class="type-signature"><span class="annotations"><a href="../annotation/Implements.html" title="annotation in org.robolectric.annotation">@Implements</a>(android.hardware.fingerprint.FingerprintManager.class)
+<div class="type-signature"><span class="annotations"><a href="../annotation/Implements.html" title="annotation in org.robolectric.annotation">@Implements</a>(<a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html" title="class or interface in android.hardware.fingerprint" class="external-link">android.hardware.fingerprint.FingerprintManager.class</a>)
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">ShadowFingerprintManager</span>
 <span class="extends-implements">extends <a href="https://developer.android.com/reference/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Provides testing APIs for <code>FingerprintManager</code></div>
+<div class="block">Provides testing APIs for <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html" title="class or interface in android.hardware.fingerprint" class="external-link"><code>FingerprintManager</code></a></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -93,7 +93,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected android.hardware.fingerprint.FingerprintManager.CryptoObject</code></div>
+<div class="col-first even-row-color"><code>protected <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintManager.CryptoObject</a></code></div>
 <div class="col-second even-row-color"><code><a href="#pendingCryptoObject" class="member-name-link">pendingCryptoObject</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
@@ -124,10 +124,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#authenticate(android.hardware.fingerprint.FingerprintManager.CryptoObject,android.os.CancellationSignal,int,android.hardware.fingerprint.FingerprintManager.AuthenticationCallback,android.os.Handler)" class="member-name-link">authenticate</a><wbr>(android.hardware.fingerprint.FingerprintManager.CryptoObject&nbsp;crypto,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#authenticate(android.hardware.fingerprint.FingerprintManager.CryptoObject,android.os.CancellationSignal,int,android.hardware.fingerprint.FingerprintManager.AuthenticationCallback,android.os.Handler)" class="member-name-link">authenticate</a><wbr>(<a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintManager.CryptoObject</a>&nbsp;crypto,
  <a href="https://developer.android.com/reference/android/os/CancellationSignal.html" title="class or interface in android.os" class="external-link">CancellationSignal</a>&nbsp;cancel,
  int&nbsp;flags,
- android.hardware.fingerprint.FingerprintManager.AuthenticationCallback&nbsp;callback,
+ <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintManager.AuthenticationCallback</a>&nbsp;callback,
  <a href="https://developer.android.com/reference/android/os/Handler.html" title="class or interface in android.os" class="external-link">Handler</a>&nbsp;handler)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Success or failure can be simulated with a subsequent call to <a href="#authenticationSucceeds()"><code>authenticationSucceeds()</code></a>
@@ -143,16 +143,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Simulates a successful fingerprint authentication.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected android.hardware.fingerprint.FingerprintManager.AuthenticationResult</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationResult.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintManager.AuthenticationResult</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createAuthenticationResult()" class="member-name-link">createAuthenticationResult</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;android.hardware.fingerprint.Fingerprint&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://developer.android.com/reference/android/hardware/fingerprint/Fingerprint.html" title="class or interface in android.hardware.fingerprint" class="external-link">Fingerprint</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnrolledFingerprints()" class="member-name-link">getEnrolledFingerprints</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFingerprintId(int)" class="member-name-link">getFingerprintId</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;android.hardware.fingerprint.FingerprintSensorPropertiesInternal&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintSensorPropertiesInternal.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintSensorPropertiesInternal</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorPropertiesInternal()" class="member-name-link">getSensorPropertiesInternal</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
@@ -179,7 +179,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIsHardwareDetected(boolean)" class="member-name-link">setIsHardwareDetected</a><wbr>(boolean&nbsp;isHardwareDetected)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets the return value of <code>FingerprintManager.isHardwareDetected()</code>.</div>
+<div class="block">Sets the return value of <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#isHardwareDetected--" title="class or interface in android.hardware.fingerprint" class="external-link"><code>FingerprintManager.isHardwareDetected()</code></a>.</div>
 </div>
 </div>
 </div>
@@ -201,7 +201,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="pendingCryptoObject">
 <h3>pendingCryptoObject</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">android.hardware.fingerprint.FingerprintManager.CryptoObject</span>&nbsp;<span class="element-name">pendingCryptoObject</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintManager.CryptoObject</a></span>&nbsp;<span class="element-name">pendingCryptoObject</span></div>
 </section>
 </li>
 </ul>
@@ -231,13 +231,13 @@ loadScripts(document, 'script');</script>
 <h3>authenticationSucceeds</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">authenticationSucceeds</span>()</div>
 <div class="block">Simulates a successful fingerprint authentication. An authentication request must have been
- issued with <code>FingerprintManager.authenticate(CryptoObject, CancellationSignal, int, AuthenticationCallback, Handler)</code> and not cancelled.</div>
+ issued with <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#authenticate-android.hardware.fingerprint.FingerprintManager.CryptoObject-android.os.CancellationSignal-int-android.hardware.fingerprint.FingerprintManager.AuthenticationCallback-android.os.Handler-" title="class or interface in android.hardware.fingerprint" class="external-link"><code>FingerprintManager.authenticate(CryptoObject, CancellationSignal, int, AuthenticationCallback, Handler)</code></a> and not cancelled.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="createAuthenticationResult()">
 <h3>createAuthenticationResult</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">android.hardware.fingerprint.FingerprintManager.AuthenticationResult</span>&nbsp;<span class="element-name">createAuthenticationResult</span>()</div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationResult.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintManager.AuthenticationResult</a></span>&nbsp;<span class="element-name">createAuthenticationResult</span>()</div>
 </section>
 </li>
 <li>
@@ -245,17 +245,17 @@ loadScripts(document, 'script');</script>
 <h3>authenticationFails</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">authenticationFails</span>()</div>
 <div class="block">Simulates a failed fingerprint authentication. An authentication request must have been
- issued with <code>FingerprintManager.authenticate(CryptoObject, CancellationSignal, int, AuthenticationCallback, Handler)</code> and not cancelled.</div>
+ issued with <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#authenticate-android.hardware.fingerprint.FingerprintManager.CryptoObject-android.os.CancellationSignal-int-android.hardware.fingerprint.FingerprintManager.AuthenticationCallback-android.os.Handler-" title="class or interface in android.hardware.fingerprint" class="external-link"><code>FingerprintManager.authenticate(CryptoObject, CancellationSignal, int, AuthenticationCallback, Handler)</code></a> and not cancelled.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="authenticate(android.hardware.fingerprint.FingerprintManager.CryptoObject,android.os.CancellationSignal,int,android.hardware.fingerprint.FingerprintManager.AuthenticationCallback,android.os.Handler)">
 <h3>authenticate</h3>
 <div class="member-signature"><span class="annotations"><a href="../annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>(<a href="../annotation/Implementation.html#minSdk()">minSdk</a>=23)
-</span><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">authenticate</span><wbr><span class="parameters">(android.hardware.fingerprint.FingerprintManager.CryptoObject&nbsp;crypto,
+</span><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">authenticate</span><wbr><span class="parameters">(<a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintManager.CryptoObject</a>&nbsp;crypto,
  <a href="https://developer.android.com/reference/android/os/CancellationSignal.html" title="class or interface in android.os" class="external-link">CancellationSignal</a>&nbsp;cancel,
  int&nbsp;flags,
- android.hardware.fingerprint.FingerprintManager.AuthenticationCallback&nbsp;callback,
+ <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintManager.AuthenticationCallback</a>&nbsp;callback,
  <a href="https://developer.android.com/reference/android/os/Handler.html" title="class or interface in android.os" class="external-link">Handler</a>&nbsp;handler)</span></div>
 <div class="block">Success or failure can be simulated with a subsequent call to <a href="#authenticationSucceeds()"><code>authenticationSucceeds()</code></a>
  or <a href="#authenticationFails()"><code>authenticationFails()</code></a>.</div>
@@ -269,7 +269,7 @@ loadScripts(document, 'script');</script>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#setDefaultFingerprints(int)"><code>setDefaultFingerprints(int)</code></a> instead.</div>
 </div>
-<div class="block">Sets the return value of <code>FingerprintManager.hasEnrolledFingerprints()</code>.</div>
+<div class="block">Sets the return value of <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#hasEnrolledFingerprints--" title="class or interface in android.hardware.fingerprint" class="external-link"><code>FingerprintManager.hasEnrolledFingerprints()</code></a>.</div>
 </section>
 </li>
 <li>
@@ -286,7 +286,7 @@ loadScripts(document, 'script');</script>
 <h3>getEnrolledFingerprints</h3>
 <div class="member-signature"><span class="annotations"><a href="../annotation/HiddenApi.html" title="annotation in org.robolectric.annotation">@HiddenApi</a>
 <a href="../annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>(<a href="../annotation/Implementation.html#minSdk()">minSdk</a>=23)
-</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;android.hardware.fingerprint.Fingerprint&gt;</span>&nbsp;<span class="element-name">getEnrolledFingerprints</span>()</div>
+</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://developer.android.com/reference/android/hardware/fingerprint/Fingerprint.html" title="class or interface in android.hardware.fingerprint" class="external-link">Fingerprint</a>&gt;</span>&nbsp;<span class="element-name">getEnrolledFingerprints</span>()</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>lists of current fingerprint items, the list be set via <a href="#setDefaultFingerprints(int)"><code>setDefaultFingerprints(int)</code></a></dd>
@@ -318,7 +318,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setIsHardwareDetected(boolean)">
 <h3>setIsHardwareDetected</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setIsHardwareDetected</span><wbr><span class="parameters">(boolean&nbsp;isHardwareDetected)</span></div>
-<div class="block">Sets the return value of <code>FingerprintManager.isHardwareDetected()</code>.</div>
+<div class="block">Sets the return value of <a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#isHardwareDetected--" title="class or interface in android.hardware.fingerprint" class="external-link"><code>FingerprintManager.isHardwareDetected()</code></a>.</div>
 </section>
 </li>
 <li>
@@ -336,7 +336,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getSensorPropertiesInternal()">
 <h3>getSensorPropertiesInternal</h3>
 <div class="member-signature"><span class="annotations"><a href="../annotation/Implementation.html" title="annotation in org.robolectric.annotation">@Implementation</a>(<a href="../annotation/Implementation.html#minSdk()">minSdk</a>=31)
-</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;android.hardware.fingerprint.FingerprintSensorPropertiesInternal&gt;</span>&nbsp;<span class="element-name">getSensorPropertiesInternal</span>()</div>
+</span><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://developer.android.com/reference/android/hardware/fingerprint/FingerprintSensorPropertiesInternal.html" title="class or interface in android.hardware.fingerprint" class="external-link">FingerprintSensorPropertiesInternal</a>&gt;</span>&nbsp;<span class="element-name">getSensorPropertiesInternal</span>()</div>
 </section>
 </li>
 </ul>

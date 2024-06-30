@@ -30,7 +30,7 @@ loadScripts(document, 'script');</script>
 <!-- ========= START OF TOP NAVBAR ======= -->
 <div class="top-nav" id="navbar-top">
 <div class="skip-nav"><a href="#skip-navbar-top" title="Skip navigation links">Skip navigation links</a></div>
-<div class="about-language"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.12 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
+<div class="about-language"><ul class="navList" style="font-size: 1.5em;"><li>Robolectric 4.12.2 | <a href="/" target="_top"><img src="http://robolectric.org/images/logo-with-bubbles-down.png" style="max-height: 18pt; vertical-align: sub;"/></a></li></ul></div>
 <ul id="navbar-top-firstrow" class="nav-list" title="Navigation">
 <li><a href="../../../index.html">Overview</a></li>
 <li><a href="package-summary.html">Package</a></li>
@@ -147,7 +147,7 @@ loadScripts(document, 'script');</script>
  <a href="https://developer.android.com/reference/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;test)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">For tests with a timeout, we need to wrap the test method execution (but not <code>@Before</code>s
- or <code>@After</code>s in a <code>TimeLimitedStatement</code>.</div>
+ or <code>@After</code>s in a <a href="TimeLimitedStatement.html" title="class in org.robolectric.internal"><code>TimeLimitedStatement</code></a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#testName(org.junit.runners.model.FrameworkMethod)" class="member-name-link">testName</a><wbr>(org.junit.runners.model.FrameworkMethod&nbsp;method)</code></div>
@@ -234,7 +234,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">org.junit.runners.model.Statement</span>&nbsp;<span class="element-name">methodInvoker</span><wbr><span class="parameters">(org.junit.runners.model.FrameworkMethod&nbsp;method,
  <a href="https://developer.android.com/reference/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;test)</span></div>
 <div class="block">For tests with a timeout, we need to wrap the test method execution (but not <code>@Before</code>s
- or <code>@After</code>s in a <code>TimeLimitedStatement</code>. JUnit's built-in <code>FailOnTimeout</code>
+ or <code>@After</code>s in a <a href="TimeLimitedStatement.html" title="class in org.robolectric.internal"><code>TimeLimitedStatement</code></a>. JUnit's built-in <code>FailOnTimeout</code>
  statement causes the test method (but not <code>@Before</code>s or <code>@After</code>s) to be run on a
  short-lived thread. This is inadequate for our purposes; we want to guarantee that every
  entry point to test code is run from the same thread.</div>
@@ -258,7 +258,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <ul class="see-list-long">
 <li><a href="#methodInvoker(org.junit.runners.model.FrameworkMethod,java.lang.Object)"><code>methodInvoker(FrameworkMethod, Object)</code></a></li>
-<li><code>TimeLimitedStatement</code></li>
+<li><a href="TimeLimitedStatement.html" title="class in org.robolectric.internal"><code>TimeLimitedStatement</code></a></li>
 </ul>
 </dd>
 </dl>
