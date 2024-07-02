@@ -5,9 +5,42 @@ hide:
 
 # Writing Your First Test
 
-Let's say you have an activity layout that represents a welcome screen:
+Let's say that you have an [`Activity`](https://developer.android.com/reference/android/app/Activity) that represents a welcome screen:
 
-```xml
+=== "Java"
+
+    ```java
+    public class WelcomeActivity extends Activity {
+        @Override
+        protected void onCreate(@Nullable Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.welcome_activity);
+    
+            final Button button = findViewById(R.id.login);
+            button.setOnClickListener((view) -> {
+                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class))
+            });
+        }
+    }
+    ```
+
+=== "Kotlin"
+
+    ```kotlin
+    class WelcomeActivity : Activity() {
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.welcome_activity)
+    
+            val button = findViewById<Button>(R.id.login)
+            button.setOnClickListener {
+                startActivity(Intent(this, LoginActivity::class.java))
+            }
+        }
+    }
+    ```
+
+```xml title="welcome_activity.xml"
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,60 +55,84 @@ Let's say you have an activity layout that represents a welcome screen:
 </LinearLayout>
 ```
 
-We want to write a test that asserts that when a user clicks on a button, the app launches the LoginActivity.
+We want to write a test that asserts that when the user clicks on the "Login" button, the app launches the `LoginActivity`.
 
-```java
-public class WelcomeActivity extends Activity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.welcome_activity);
+To achieve this, we can check that the correct [`Intent`](https://developer.android.com/reference/android/content/Intent) is started when the click is performed. Since Robolectric is a unit testing framework, the `LoginActivity` will not actually be started.
 
-        final View button = findViewById(R.id.login);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+=== "Java"
+
+    ```java
+    @RunWith(RobolectricTestRunner.class)
+    public class WelcomeActivityTest {
+        @Test
+        public void clickingLogin_shouldStartLoginActivity() {
+            try (ActivityController<WelcomeActivity> controller = Robolectric.buildActivity(WelcomeActivity.class)) {
+                controller.setup(); // Moves the Activity to the RESUMED state
+
+                WelcomeActivity activity = controller.get();
+                activity.findViewById<Button>(R.id.login).performClick();
+    
+                Intent expectedIntent = new Intent(activity, LoginActivity.class);
+                Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
+                assertEquals(expectedIntent.getComponent(), actual.getComponent());
             }
-        });
-    }
-}
-```
-
-In order to test this, we can check that when a user clicks on the "Login" button, we start the correct intent. Because Robolectric is a unit testing framework, the LoginActivity will not actually be started, but we can check that the WelcomeActivity fired the correct intent:
-
-```java
-@RunWith(RobolectricTestRunner.class)
-public class WelcomeActivityTest {
-    @Test
-    public void clickingLogin_shouldStartLoginActivity() {
-        try (ActivityController<WelcomeActivity> controller = Robolectric.buildActivity(WelcomeActivity.class)) {
-            controller.setup(); // Moves Activity to RESUMED state
-            WelcomeActivity activity = controller.get();
-
-            activity.findViewById(R.id.login).performClick();
-            Intent expectedIntent = new Intent(activity, LoginActivity.class);
-            Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
-            assertEquals(expectedIntent.getComponent(), actual.getComponent());
         }
     }
-}
-```
+    ```
+
+=== "Kotlin"
+
+    ```kotlin
+    @RunWith(RobolectricTestRunner::class)
+    class WelcomeActivityTest {
+        @Test
+        fun clickingLogin_shouldStartLoginActivity() {
+            Robolectric.buildActivity(WelcomeActivity::class.java).use { controller ->
+                controller.setup() // Moves the Activity to the RESUMED state
+
+                val activity = controller.get()
+                activity.findViewById<Button>(R.id.login).performClick()
+
+                val expectedIntent = Intent(activity, LoginActivity::class.java)
+                val actual = shadowOf(RuntimeEnvironment.application).nextStartedActivity
+                assertEquals(expectedIntent.component, actual.component)
+            }
+        }
+    }
+    ```
 
 ## Test APIs
 
-Robolectric extends the Android framework with a large set of test APIs, which offer extra configurability and access to the internal state and history of Android components that's useful for tests.
+Robolectric extends the Android framework with a large set of test APIs, which offer extra configurability and access to the internal state and history of Android components that are useful for tests.
 
 Many test APIs are extensions to individual Android classes, and can be accessed using the `shadowOf()` method:
 
-```java
-// retrieves all the toasts that have been displayed...
-List<Toast> toasts = shadowOf(application).getShownToasts();
-```
+=== "Java"
 
-Additional test APIs are accessible as static methods on special classes called shadows, which correspond to Android framework classes:
+    ```java
+    // Retrieve all the toasts that have been displayed
+    List<Toast> toasts = shadowOf(application).getShownToasts();
+    ```
 
-```java
-// simulates a new display being plugged into the device...
-ShadowDisplay.addDisplay("xlarge-port");
-```
+=== "Kotlin"
+
+    ```kotlin
+    // Retrieve all the toasts that have been displayed
+    val toasts = shadowOf(application).shownToasts
+    ```
+
+Additional test APIs are accessible as static methods on special classes called [shadows](extending.md), which correspond to Android framework classes:
+
+=== "Java"
+
+    ```java
+    // Simulate a new display being plugged into the device
+    ShadowDisplayManager.addDisplay("xlarge-port");
+    ```
+
+=== "Kotlin"
+
+    ```kotlin
+    // Simulate a new display being plugged into the device
+    ShadowDisplayManager.addDisplay("xlarge-port")
+    ```
