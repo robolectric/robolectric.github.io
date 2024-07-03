@@ -37,6 +37,7 @@ theme:
   features:
     - content.action.view
     - content.code.copy
+    - content.tabs.link
     - content.tooltips
     - navigation.indexes
     - navigation.sections
