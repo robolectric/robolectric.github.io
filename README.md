@@ -28,11 +28,7 @@ When a new version of Robolectric is released, the [`docs/javadoc`](docs/javadoc
 
 ### Automatic publication
 
-The simplest way to publish the javadoc for a specific version is to [create an issue](https://github.com/robolectric/robolectric.github.io/issues/new) whose title is `Publish javadoc for <version>`, where `<version>` is Robolectric's new version (for example `4.12`).
-
-> [!NOTE]
-> If you provide a bugfix version, it will overwrite the corresponding minor version's javadoc.
-> For example, passing version `4.12.2` will update the javadoc for Robolectric 4.12.
+The simplest way to publish the javadoc for a specific version is to [create an issue](https://github.com/robolectric/robolectric.github.io/issues/new) whose title is `Publish javadoc for <version>`, where `<version>` is the version you want to deploy (for example `4.12`).
 
 This will trigger the [`publish-javadoc.yml` workflow](.github/workflows/publish-javadoc.yml) to build and publish the corresponding javadoc.
 
