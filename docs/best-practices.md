@@ -26,12 +26,20 @@ Below is an incomplete list of differences you may encounter:
 
 #### Timezone handling
 
-When using [`SimpleDateFormat#parse()`](https://developer.android.com/reference/kotlin/java/text/SimpleDateFormat#parse) to parse a timezone using the `Z` marker, Android supports time zones with a colon (ie. `08:00`), while OpenJDK doesn't (ie. `0800`).
+When using [`SimpleDateFormat#parse()`](https://developer.android.com/reference/kotlin/java/text/SimpleDateFormat#parse) to parse a timezone using the `Z` marker, Android supports time zones with a colon (i.e. `08:00`), while OpenJDK doesn't (i.e. `0800`).
 
-To workaround this:
+To work around this:
 
 - If your min SDK version is 24 or higher, you can use the `X` marker instead.
 - Use the `java.time` API, with [library desugaring](https://developer.android.com/studio/write/java8-support#library-desugaring) enabled.
 - Run the corresponding tests using regular Android tests.
 
 **Related issues:** [#1030](https://github.com/robolectric/robolectric/issues/1030), [#1257](https://github.com/robolectric/robolectric/issues/1257), [#5220](https://github.com/robolectric/robolectric/issues/5220).
+
+#### Month names
+
+When using [`DateTimeFormatter.ofPattern(String)`](https://developer.android.com/reference/kotlin/java/time/format/DateTimeFormatter#ofpattern) to create a formatter displaying a short month name (using the `MMM` pattern), Android will use three-characters names (i.e. `Jan`), while OpenJDK will use three-characters names followed by a period (i.e. `Jan.`).
+
+In this case, we recommend running the corresponding tests as regular Android tests.
+
+**Related issues:** [#7910](https://github.com/robolectric/robolectric/issues/7910).
