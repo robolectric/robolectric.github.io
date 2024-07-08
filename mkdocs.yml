@@ -84,7 +84,7 @@ extra:
     property: "UA-19269905-2"
   robolectric:
     version:
-      current: "4.12.2"
+      current: "4.13"
   social:
     - name: "GitHub Project"
       icon: fontawesome/brands/github
@@ -121,6 +121,7 @@ nav:
     - "Release Notes": https://github.com/robolectric/robolectric/releases/
     - "Issues": https://github.com/robolectric/robolectric/issues/
     - "Javadoc":
+      - "4.13": /javadoc/4.13/
       - "4.12": /javadoc/4.12/
       - "4.11": /javadoc/4.11/
       - "4.10": /javadoc/4.10/
