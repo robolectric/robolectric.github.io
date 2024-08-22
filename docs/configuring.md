@@ -111,7 +111,7 @@ Since Robolectric **4.9.1**, you can now add these parameters :
 * **robolectric.dependency.proxy.host** — Set the host of the proxy to use for the runtime dependencies.
 * **robolectric.dependency.proxy.port** — Set the port number of the proxy to use for the runtime dependencies (default `0`).
 
-When using Gradle, you can configure the System Properties for unit tests with the `all` block (see [here](http://tools.android.com/tech-docs/unit-testing-support)). For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Maven Central:
+When using Gradle, you can configure the System Properties for unit tests with the `all` block (see [here](https://developer.android.com/studio/test/advanced-test-setup#configure-gradle-test-options)). For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Maven Central:
 
 ```groovy
 android {

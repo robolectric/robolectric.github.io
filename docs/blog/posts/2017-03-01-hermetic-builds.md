@@ -11,7 +11,7 @@ slug: hermetic-builds
 
 Robolectric needs access to multiple Android SDK jars in order to perform its magic, which means it needs special configuration beyond just setting up dependencies in your build. By default, it tries to download Android SDK jars from Maven Central.
 
-But what if you have a [hermetic build environment](http://blog.fahhem.com/2013/12/hermetic-build-systems/)? You just need to do a little more configuration.
+But what if you have a [hermetic build environment](https://blog.fahhem.com/2013/12/hermetic-build-systems/)? You just need to do a little more configuration.
 
 Here's a Gradle build script that'll help:
 

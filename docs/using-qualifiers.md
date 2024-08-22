@@ -5,7 +5,7 @@ hide:
 
 # Using Qualified Resources
 
-As described [in the android developer docs](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources), resource qualifiers allow you to change how your resources are loaded based on such factors as the language on the device, to the screen size, to whether it is day or night.  While these changes are often tedious to test rigorously (every string has a translation for all supported languages), you may find yourself wishing to run tests in different resource qualified contexts.
+As described [in the android developer docs](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources), resource qualifiers allow you to change how your resources are loaded based on such factors as the language on the device, to the screen size, to whether it is day or night.  While these changes are often tedious to test rigorously (every string has a translation for all supported languages), you may find yourself wishing to run tests in different resource qualified contexts.
 
 ## Specifying Resources in Test
 
@@ -48,4 +48,4 @@ public void shouldUseEnglishAndPortraitResources() {
 }
 ```
 
-Multiple qualifiers should be separated by dashes and provided in the order put forth in [this list](http://developer.android.com/guide/topics/resources/providing-resources.html#table2).
+Multiple qualifiers should be separated by dashes and provided in the order put forth in [this list](https://developer.android.com/guide/topics/resources/providing-resources.html#table2).
