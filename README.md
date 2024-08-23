@@ -1,6 +1,6 @@
 # Robolectric
 
-This repository contains the source of the documentation that lives at [robolectric.org](http://robolectric.org).
+This repository contains the source of the documentation that lives at [robolectric.org](https://robolectric.org).
 
 ## Contributing
 

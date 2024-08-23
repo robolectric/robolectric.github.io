@@ -88,10 +88,10 @@ extra:
   social:
     - name: "GitHub Project"
       icon: fontawesome/brands/github
-      link: "http://github.com/robolectric/robolectric"
+      link: "https://github.com/robolectric/robolectric"
     - name: "robolectric@googlegroups.com"
       icon: fontawesome/regular/envelope
-      link: "http://groups.google.com/group/robolectric"
+      link: "https://groups.google.com/group/robolectric"
     - name: "@Robolectric"
       icon: fontawesome/brands/x-twitter
       link: "https://x.com/robolectric"

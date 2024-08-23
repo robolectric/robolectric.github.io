@@ -27,7 +27,7 @@ import org.robolectric.annotation.LooperMode
 /**
  * A test using the androidx.test unified API, which can execute on an Android device or locally using Robolectric.
  *
- * See [testing documentation](http://d.android.com/tools/testing).
+ * See [testing documentation](https://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
 class SampleFragmentTest {
