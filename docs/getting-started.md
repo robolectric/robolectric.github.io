@@ -58,7 +58,7 @@ Then, mark your test to run with `RobolectricTestRunner`:
     import org.robolectric.RobolectricTestRunner
 
     @RunWith(RobolectricTestRunner::class)
-    public class SandwichTest
+    class SandwichTest
     ```
 
 ## Building with Bazel
@@ -151,7 +151,7 @@ Then, mark your test to run with `RobolectricTestRunner`:
     import org.robolectric.RobolectricTestRunner
 
     @RunWith(RobolectricTestRunner::class)
-    public class SandwichTest
+    class SandwichTest
     ```
 
 ### Using libraries
@@ -182,7 +182,7 @@ If you use Maven to build your application, you will need to tell Robolectric wh
         "build/unpacked-libraries/library1",
         "build/unpacked-libraries/library2"
     ])
-    public class SandwichTest
+    class SandwichTest
     ```
 
 or specified in the [`robolectric.properties`](configuring.md/#robolectricproperties-file) file:
