@@ -1,37 +1,54 @@
 # Configuring Robolectric
 
-Several aspects of Robolectric's behavior can be configured at runtime, using `robolectric.properties` files for package-level configuration, or `@Config` annotations for class-level or method-level configuration.
+Several aspects of Robolectric's behavior can be configured at runtime, using either [`@Config` annotations](#config-annotation) for class- or method-level configuration, or [`robolectric.properties` files](#robolectricproperties-file) for package-level configuration.
 
-### `@Config` Annotation
+## Configuration methods
 
-To configure Robolectric for a single test class or method, use the [`@Config`](javadoc/latest/org/robolectric/annotation/Config.html) annotation. The annotation can be applied to classes and methods; values specified at the method level will override values specified at the class level.
+### `@Config` annotation
 
-Base classes are also searched for annotations, so if you find yourself specifying the same values on a large number of tests, you can create a base class and move your `@Config` annotation to that class.
+To configure Robolectric for a single test class or method, use the [`@Config`](javadoc/latest/org/robolectric/annotation/Config.html) annotation on the desired class or method.
+Annotations applied on methods take precedence over the ones at the class level.
 
-```java
-  @Config(sdk=KITKAT,
-      shadows={ShadowFoo.class, ShadowBar.class})
-  public class SandwichTest {
-  }
-```
+Base classes are also searched for annotations. So if you find yourself specifying the same values on a large number of tests, you can create a base class and move your `@Config` annotation to that class.
 
-### `robolectric.properties` File
+=== "Java"
+
+    ```java
+    @Config(
+      sdk = Build.VERSION_CODES.TIRAMISU,
+      shadows = { ShadowFoo.class, ShadowBar.class }
+    )
+    public class SandwichTest {
+    }
+    ```
+
+=== "Kotlin"
+
+    ```kotlin
+    @Config(
+      sdk = Build.VERSION_CODES.TIRAMISU,
+      shadows = [ ShadowFoo.class, ShadowBar.class ]
+    )
+    class SandwichTest
+    ```
+
+### `robolectric.properties` file
 
 To configure all Robolectric tests within a package or group of packages, create a file named `robolectric.properties` in the appropriate package. Generally, this file would be placed within the appropriate package directory under `src/test/resources` in your project tree. Robolectric will search for properties files up the hierarchy of packages (including the unnamed default package at the top level), with values in deeper packages overriding values in more shallow packages. When test classes or methods have `@Config` annotations, those override any config from properties files.
 
 Below is an example:
 
-```properties
-# src/test/resources/com/mycompany/app/robolectric.properties
-sdk=19
-shadows=my.package.ShadowFoo,my.package.ShadowBar
+```properties title="src/test/resources/com/mycompany/app/robolectric.properties"
+sdk=33
+shadows=com.mycompany.ShadowFoo,com.mycompany.ShadowBar
 ```
 
-***Version note:*** *Prior to Robolectric 3.1.3, only a top-level `robolectric.properties` file may be specified.* 
+> [!NOTE]
+> Prior to Robolectric 3.1.3, only a top-level `robolectric.properties` file may be specified.
 
 ### Global Configuration
 
-If you wish to change the default for any configurable value for all your tests, you may extend `RobolectricTestRunner` and override the `buildGlobalConfig()` method, then specify your custom test runner using the `@RunWith` annotation.
+If you wish to change the default for any configurable value for all your tests, you can provide a [`GlobalConfigProvider`](javadoc/latest/org/robolectric/pluginapi/config/GlobalConfigProvider.html) service implementation.
 
 ## Configurables
 
@@ -39,105 +56,197 @@ The following examples show how to handle common configuration tasks. For clarit
 
 ### Configure SDK Level
 
-By default, Robolectric will run your code against the `targetSdkVersion` specified in your manifest. If you want to test your code under a different SDK, you can specify the SDK using the `sdk`, `minSdk` and `maxSdk` config properties:
+By default, Robolectric will run your code against the `targetSdk` specified in your module's `build.gradle`/`build.gradle.kts` or `AndroidManifest.xml` file.
+If you want to test your code under a different SDK, you can specify the desired SDK(s) using the [`sdk`](javadoc/latest/org/robolectric/annotation/Config.html#sdk()), [`minSdk`](javadoc/latest/org/robolectric/annotation/Config.html#minSdk()) and [`maxSdk`](javadoc/latest/org/robolectric/annotation/Config.html#maxSdk()) config properties:
 
-```java
-@Config(sdk = { KITKAT, LOLLIPOP })
-public class SandwichTest {
-    public void getSandwich_shouldReturnHamSandwich() {
-      // will run on KITKAT and LOLLIPOP
+=== "Java"
+
+    ```java
+    @Config(sdk = { TIRAMISU, UPSIDE_DOWN_CAKE })
+    public class SandwichTest {
+        @Test
+        public void getSandwich_shouldReturnHamSandwich() {
+          // will run on TIRAMISU and UPSIDE_DOWN_CAKE
+        }
+
+        @Test
+        @Config(sdk = TIRAMISU)
+        public void onTiramisu_getSandwich_shouldReturnChocolateWaferSandwich() {
+          // will run on TIRAMISU
+        }
+
+        @Test
+        @Config(minSdk = UPSIDE_DOWN_CAKE)
+        public void fromUpsideDownCakeOn_getSandwich_shouldReturnTunaSandwich() {
+          // will run on UPSIDE_DOWN_CAKE, VANILLA_ICE_CREAM, etc.
+        }
     }
+    ```
 
-    @Config(sdk = KITKAT)
-    public void onKitKat_getSandwich_shouldReturnChocolateWaferSandwich() {
-      // will run on KITKAT
+=== "Kotlin"
+
+    ```kotlin
+    @Config(sdk = [ TIRAMISU, UPSIDE_DOWN_CAKE ])
+    class SandwichTest {
+        @Test
+        fun getSandwich_shouldReturnHamSandwich() {
+          // will run on TIRAMISU and UPSIDE_DOWN_CAKE
+        }
+
+        @Test
+        @Config(sdk = TIRAMISU)
+        fun onTiramisu_getSandwich_shouldReturnChocolateWaferSandwich() {
+          // will run on TIRAMISU
+        }
+
+        @Test
+        @Config(minSdk = UPSIDE_DOWN_CAKE)
+        fun fromUpsideDownCakeOn_getSandwich_shouldReturnTunaSandwich() {
+          // will run on UPSIDE_DOWN_CAKE, VANILLA_ICE_CREAM, etc.
+        }
     }
-    
-    @Config(minSdk=LOLLIPOP)
-    public void fromLollipopOn_getSandwich_shouldReturnTunaSandwich() {
-      // will run on LOLLIPOP, M, etc.
+    ```
+
+Note that `sdk` and `minSdk`/`maxSdk` may not be specified in the same `@Config` annotation or file;
+however, `minSdk` and `maxSdk` may be specified together. If any of them is present, they override any SDK specification from a less-specific configuration location.
+
+> [!NOTE]
+> Prior to Robolectric 3.2, `minSdk` and `maxSdk` are ignored, and [`NEWEST_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#NEWEST_SDK), [`OLDEST_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#OLDEST_SDK), and [`TARGET_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#TARGET_SDK) are not supported.
+> Also, only integers corresponding to API levels may be specified in a properties file.
+
+### Configure `Application` class
+
+Robolectric will attempt to create an instance of your [`Application`](https://developer.android.com/reference/android/app/Application) class
+as specified in the `AndroidManifest`. If you want to provide a custom implementation, you can specify it by setting:
+
+=== "Java"
+
+    ```java
+    @Config(application = CustomApplication.class)
+    public class SandwichTest {
+        @Test
+        @Config(application = CustomApplicationOverride.class)
+        public void getSandwich_shouldReturnHamSandwich() {
+        }
     }
-}
-```
+    ```
 
-Note that `sdk` and `minSdk`/`maxSdk` may not be specified in the same config annotation or file; however, `minSdk` and `maxSdk` may be specified together. If any of them is present, they override any SDK specification from a less-specific configuration location.
+=== "Kotlin"
 
-***Version note:*** *Prior to Robolectric 3.2, `minSdk` and `maxSdk` are ignored, and `NEWEST`, `OLDEST`, and `TARGET` are not supported. Also, only integers corresponding to API levels may be specified in a properties file.* 
-
-### Configure Application Class
-
-Robolectric will attempt to create an instance of your Application class as specified in the manifest. If you want to provide a custom implementation, you can specify it by setting:
-
-```java
-@Config(application = CustomApplication.class)
-public class SandwichTest {
-    @Config(application = CustomApplicationOverride.class)
-    public void getSandwich_shouldReturnHamSandwich() {
+    ```kotlin
+    @Config(application = CustomApplication::class)
+    class SandwichTest {
+        @Test
+        @Config(application = CustomApplicationOverride.class)
+        fun getSandwich_shouldReturnHamSandwich() {
+        }
     }
-}
-```
+    ```
 
-### Configure Qualifiers
+### Configure qualifiers
 
 You can explicitly configure the set of resource qualifiers in effect for a test:
 
-```java
-public class SandwichTest {
-    @Config(qualifiers = "fr-xlarge")
-    public void getSandwichName() {
-      assertThat(sandwich.getName()).isEqualTo("Grande Croque Monégasque");
+=== "Java"
+
+    ```java
+    public class SandwichTest {
+        @Test
+        @Config(qualifiers = "fr-xlarge")
+        public void getSandwichName() {
+          assertThat(sandwich.getName()).isEqualTo("Grande Croque Monégasque");
+        }
     }
-}
-```
+    ```
 
-See [Using Qualifiers](using-qualifiers.md) for more details.
+=== "Kotlin"
 
-## System Properties
+    ```kotlin
+    class SandwichTest {
+        @Test
+        @Config(qualifiers = "fr-xlarge")
+        fun getSandwichName() {
+          assertThat(sandwich.name).isEqualTo("Grande Croque Monégasque")
+        }
+    }
+    ```
+
+See [Using Qualified Resources](using-qualifiers.md) for more details.
+
+## System properties
 
 Some additional options can be configured globally by setting these system properties:
 
-* **robolectric.enabledSdks** — Comma-separated list of SDK levels or names (e.g. `19, 21` or `KITKAT, LOLLIPOP`) which are enabled for this process. Only tests targetted at the listed SDKs will be run. By default, all SDKs are enabled.
-* **robolectric.offline** — Set to true to disable runtime fetching of jars.
-* **robolectric.usePreinstrumentedJars** — If true, Robolectric will use instrumented jars to reduce instrumentation overhead. If changes are made to instrumentation, this can be set to false to ensure the changes are included when building Robolectric.
-* **robolectric.dependency.dir** — When in offline mode, specifies a folder containing runtime dependencies.
-* **robolectric.dependency.repo.id** — Set the ID of the Maven repository to use for the runtime dependencies (default `mavenCentral`).
-* **robolectric.dependency.repo.url** — Set the URL of the Maven repository to use for the runtime dependencies (default `https://repo.maven.apache.org/maven2/`).
-* **robolectric.dependency.repo.username** - Username of repository that you defined in **robolectric.dependency.repo.url**.
-* **robolectric.dependency.repo.password** - Password of repository that you defined in **robolectric.dependency.repo.url**.
-* **robolectric.logging.enabled** — Set to true to enable debug logging.
+| Property name | Description | Default value |
+|-----|-----|-----|
+| `robolectric.enabledSdks` | Comma-separated list of SDK levels or names (e.g. `33, 34` or `TIRAMISU, UPSIDE_DOWN_CAKE`) which are enabled for this process. Only tests targeting a listed SDKs will be run. | All SDKs |
+| `robolectric.offline` | Set to `true` to disable runtime fetching of jars. | `true` |
+| `robolectric.usePreinstrumentedJars` | If `true`, Robolectric will use instrumented jars to reduce instrumentation overhead. If changes are made to instrumentation, this can be set to `false` to ensure the changes are included when building Robolectric. | `true` |
+| `robolectric.dependency.dir` | When in offline mode, specifies a folder containing runtime dependencies. | `null` |
+| `robolectric.dependency.repo.id` | Set the ID of the Maven repository to use for the runtime dependencies. | `mavenCentral` |
+| `robolectric.dependency.repo.url` | Set the URL of the Maven repository to use for the runtime dependencies. | `https://repo1.maven.org/maven2` |
+| `robolectric.dependency.repo.username` | Username of the repository that you defined in `robolectric.dependency.repo.url`. | `null` |
+| `robolectric.dependency.repo.password` | Password of the repository that you defined in `robolectric.dependency.repo.url`. | `null` |
+| `robolectric.logging.enabled` | Set to `true` to enable debug logging. | `false` |
 
 Since Robolectric **4.9.1**, you can now add these parameters :
 
-* **robolectric.dependency.proxy.host** — Set the host of the proxy to use for the runtime dependencies.
-* **robolectric.dependency.proxy.port** — Set the port number of the proxy to use for the runtime dependencies (default `0`).
+| Property name | Description | Default value |
+|-----|-----|-----|
+| `robolectric.dependency.proxy.host` | Set the host of the proxy to use for the runtime dependencies. | `null` |
+| `robolectric.dependency.proxy.port` | Set the port number of the proxy to use for the runtime dependencies. | `0` |
 
-When using Gradle, you can configure the System Properties for unit tests with the `all` block (see [here](https://developer.android.com/studio/test/advanced-test-setup#configure-gradle-test-options)). For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Maven Central:
+When using Gradle, you can configure the System Properties for unit tests with the `android.testOptions.unitTests.all` block (see [here](https://developer.android.com/studio/test/advanced-test-setup#configure-gradle-test-options)).
+For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Maven Central:
 
-```groovy
-android {
-  testOptions {
-    unitTests.all {
-      systemProperty 'robolectric.dependency.repo.url', 'https://local-mirror/repo'
-      systemProperty 'robolectric.dependency.repo.id', 'local'
-      // Username and password only needed when local repository
-      // needs account information.
-      systemProperty 'robolectric.dependency.repo.username', 'username'
-      systemProperty 'robolectric.dependency.repo.password', 'password'
-      
-      // Since Robolectric 4.9.1, these are available
-      systemProperty 'robolectric.dependency.proxy.host', project.findProperty("systemProp.https.proxyHost") ?: System.getenv("ROBOLECTRIC_PROXY_HOST")
-      systemProperty 'robolectric.dependency.proxy.port', project.findProperty("systemProp.https.proxyPort") ?: System.getenv("ROBOLECTRIC_PROXY_PORT")
+=== "Groovy"
+
+    ```groovy
+    android {
+      testOptions {
+        unitTests.all {
+          systemProperty "robolectric.dependency.repo.url", "https://local-mirror/repo"
+          systemProperty "robolectric.dependency.repo.id", "local"
+
+          // Username and password only needed when the local repository needs account information.
+          systemProperty "robolectric.dependency.repo.username", "username"
+          systemProperty "robolectric.dependency.repo.password", "password"
+
+          // Since Robolectric 4.9.1, these are available
+          systemProperty "robolectric.dependency.proxy.host", project.findProperty("systemProp.https.proxyHost") ?: System.getenv("ROBOLECTRIC_PROXY_HOST")
+          systemProperty "robolectric.dependency.proxy.port", project.findProperty("systemProp.https.proxyPort") ?: System.getenv("ROBOLECTRIC_PROXY_PORT")
+        }
+      }
     }
-  }
-}
-```
+    ```
 
-## ConscryptMode
+=== "Kotlin"
 
-Starting in Robolectric 4.9, Robolectric can currently either use Conscrypt and BouncyCastle or just BouncyCastle as the security provider. 
-In order to migrate tests over time, there is a [ConscryptMode](https://github.com/robolectric/robolectric/blob/master/annotations/src/main/java/org/robolectric/annotation/ConscryptMode.java) annotation that controls whether Conscrypt is loaded as the default security provider with BouncyCastle as backup. 
+    ```kotlin
+    android {
+      testOptions {
+        unitTests.all {
+          it.systemProperty("robolectric.dependency.repo.url", "https://local-mirror/repo")
+          it.systemProperty("robolectric.dependency.repo.id", "local")
 
-- If ConscryptMode is `ON`, it will install Conscrypt and BouncyCastle.
-- If ConscryptMode is `OFF`, it will only install BouncyCastle.
+          // Username and password only needed when the local repository needs account information.
+          it.systemProperty("robolectric.dependency.repo.username", "username")
+          it.systemProperty("robolectric.dependency.repo.password", "password")
+
+          // Since Robolectric 4.9.1, these are available
+          it.systemProperty("robolectric.dependency.proxy.host", project.findProperty("systemProp.https.proxyHost") ?: System.getenv("ROBOLECTRIC_PROXY_HOST"))
+          it.systemProperty("robolectric.dependency.proxy.port", project.findProperty("systemProp.https.proxyPort") ?: System.getenv("ROBOLECTRIC_PROXY_PORT"))
+        }
+      }
+    }
+    ```
+
+## `ConscryptMode`
+
+Starting with Robolectric 4.9, Robolectric can either use Conscrypt and BouncyCastle or just BouncyCastle as the security provider. 
+In order to migrate tests over time, there is a [`ConscryptMode`](javadoc/latest/org/robolectric/annotation/ConscryptMode.html) annotation that controls whether Conscrypt is loaded as the default security provider with BouncyCastle as backup. 
+
+- If `ConscryptMode` is `ON`, it will install Conscrypt and BouncyCastle.
+- If `ConscryptMode` is `OFF`, it will only install BouncyCastle.
 
 This is closer to to the way that it works on [real android](https://cs.android.com/android/platform/superproject/+/android-13.0.0_r1:libcore/ojluni/src/main/java/java/security/Security.java;l=134-137). Robolectric will search for a requested security primitive from Conscrypt first. If it does not support it, Robolectric will try BouncyCastle second.
