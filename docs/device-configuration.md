@@ -24,7 +24,7 @@ The Android device configuration can be specified using the [`qualifiers`](javad
     }
     ```
 
-From version 3.6 on, Robolectric parses the `qualifiers` property according to the rules set forth [here](https://developer.android.com/guide/topics/resources/providing-resources.html#QualifierRules) (but with no preceding directory name), and sets up the Android simulation environment with a corresponding configuration. The system's `Configuration`, [`Display`](https://developer.android.com/reference/android/view/Display) and [`DisplayMetrics`](https://developer.android.com/reference/android/hardware/display/DisplayManager) objects will all reflect the specified configuration, the locale will be set, and appropriate resources will be selected.
+From [version 3.6](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.6) on, Robolectric parses the `qualifiers` property according to the rules set forth [here](https://developer.android.com/guide/topics/resources/providing-resources.html#QualifierRules) (but with no preceding directory name), and sets up the Android simulation environment with a corresponding configuration. The system's `Configuration`, [`Display`](https://developer.android.com/reference/android/view/Display) and [`DisplayMetrics`](https://developer.android.com/reference/android/hardware/display/DisplayManager) objects will all reflect the specified configuration, the locale will be set, and appropriate resources will be selected.
 
 For unspecified properties, Robolectric picks consistent values based on the properties that have been specified, or uses default values as follows:
 
