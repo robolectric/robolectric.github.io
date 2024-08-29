@@ -3,49 +3,63 @@ hide:
 - toc
 ---
 
-# Using Qualified Resources
+# Using qualified resources
 
-As described [in the android developer docs](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources), resource qualifiers allow you to change how your resources are loaded based on such factors as the language on the device, to the screen size, to whether it is day or night.  While these changes are often tedious to test rigorously (every string has a translation for all supported languages), you may find yourself wishing to run tests in different resource qualified contexts.
+As described [in the Android developer docs](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources), resource qualifiers allow you to change how your resources are loaded based on such factors as the language on the device, to the screen size, to whether it is day or night.  While these changes are often tedious to test rigorously (every string has a translation for all supported languages), you may find yourself wishing to run tests in different resource qualified contexts.
 
-## Specifying Resources in Test
+## Specifying resources in test
 
-Specifying a resource qualifier is quite simple: simply add the desired qualifiers to the @Config annotation on your test case or test class, depending on whether you would like to change the resource qualifiers for the whole file, or simply one test.
+Specifying a resource qualifier is quite simple: simply add the desired qualifiers to the [`@Config`](javadoc/latest/org/robolectric/annotation/Config.html) annotation on your test case or test class, depending on whether you would like to change the resource qualifiers for the whole file, or simply one test.
 
-Given the following resources,
+Given the following resources:
 
-*values/strings.xml*
+=== "`values/strings.xml`"
 
-```xml
-<string name="not_overridden">Not Overridden</string>
-<string name="overridden">Unqualified value</string>
-<string name="overridden_twice">Unqualified value</string>
-```
+    ```xml
+    <string name="not_overridden">Not overridden</string>
+    <string name="overridden">Overridden</string>
+    <string name="overridden_twice">Overridden twice</string>
+    ```
 
-*values-en/strings.xml*
+=== "`values-en/strings.xml`"
 
-```xml
-<string name="overridden">English qualified value</string>
-<string name="overridden_twice">English qualified value</string>
-```
+    ```xml
+    <string name="overridden">Overridden in en</string>
+    <string name="overridden_twice">Overridden twice in en</string>
+    ```
 
-*values-en-port/strings.xml*
+=== "`values-en-port/strings.xml`"
 
-```xml
-<string name="overridden_twice">English portrait qualified value</string>
-```
+    ```xml
+    <string name="overridden_twice">Overridden twice in en-port</string>
+    ```
 
-this Robolectric test would pass, using the Android resource qualifier resolution rules.
+this Robolectric test would pass, using the Android resource qualifier resolution rules:
 
+=== "Java"
 
-```java
-@Test
-@Config(qualifiers="en-port")
-public void shouldUseEnglishAndPortraitResources() {
-  final Context context = RuntimeEnvironment.application;
-  assertThat(context.getString(R.id.not_overridden)).isEqualTo("Not Overridden");
-  assertThat(context.getString(R.id.overridden)).isEqualTo("English qualified value");
-  assertThat(context.getString(R.id.overridden_twice)).isEqualTo("English portrait qualified value");
-}
-```
+    ```java
+    @Test
+    @Config(qualifiers = "en-port")
+    public void shouldUseEnglishAndPortraitResources() {
+      final Context context = RuntimeEnvironment.application;
+      assertThat(context.getString(R.id.not_overridden)).isEqualTo("Not overridden");
+      assertThat(context.getString(R.id.overridden)).isEqualTo("Overridden in en");
+      assertThat(context.getString(R.id.overridden_twice)).isEqualTo("Overridden twice in en-port");
+    }
+    ```
+
+=== "Kotlin"
+
+    ```kotlin
+    @Test
+    @Config(qualifiers = "en-port")
+    fun shouldUseEnglishAndPortraitResources() {
+      val context = RuntimeEnvironment.application
+      assertThat(context.getString(R.id.not_overridden)).isEqualTo("Not overridden")
+      assertThat(context.getString(R.id.overridden)).isEqualTo("Overridden in en")
+      assertThat(context.getString(R.id.overridden_twice)).isEqualTo("Overridden twice in en-port")
+    }
+    ```
 
 Multiple qualifiers should be separated by dashes and provided in the order put forth in [this list](https://developer.android.com/guide/topics/resources/providing-resources.html#table2).
