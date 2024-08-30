@@ -44,7 +44,7 @@ shadows=com.mycompany.ShadowFoo,com.mycompany.ShadowBar
 ```
 
 > [!NOTE]
-> Prior to Robolectric 3.1.3, only a top-level `robolectric.properties` file may be specified.
+> Prior to [Robolectric 3.1.3](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.1.3), only a top-level `robolectric.properties` file may be specified.
 
 ### Global Configuration
 
@@ -111,7 +111,7 @@ Note that `sdk` and `minSdk`/`maxSdk` may not be specified in the same `@Config`
 however, `minSdk` and `maxSdk` may be specified together. If any of them is present, they override any SDK specification from a less-specific configuration location.
 
 > [!NOTE]
-> Prior to Robolectric 3.2, `minSdk` and `maxSdk` are ignored, and [`NEWEST_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#NEWEST_SDK), [`OLDEST_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#OLDEST_SDK), and [`TARGET_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#TARGET_SDK) are not supported.
+> Prior to [Robolectric 3.2](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.2), `minSdk` and `maxSdk` are ignored, and [`NEWEST_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#NEWEST_SDK), [`OLDEST_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#OLDEST_SDK), and [`TARGET_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#TARGET_SDK) are not supported.
 > Also, only integers corresponding to API levels may be specified in a properties file.
 
 ### Configure `Application` class
@@ -189,7 +189,7 @@ Some additional options can be configured globally by setting these system prope
 | `robolectric.dependency.repo.password` | Password of the repository that you defined in `robolectric.dependency.repo.url`. | `null` |
 | `robolectric.logging.enabled` | Set to `true` to enable debug logging. | `false` |
 
-Since Robolectric **4.9.1**, you can now add these parameters :
+Since [Robolectric 4.9.1](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9.1), you can now add these parameters :
 
 | Property name | Description | Default value |
 |-----|-----|-----|
@@ -243,7 +243,7 @@ For example, to override the Maven repository URL and ID to download the runtime
 
 ## `ConscryptMode`
 
-Starting with Robolectric 4.9, Robolectric can either use Conscrypt and BouncyCastle or just BouncyCastle as the security provider. 
+Starting with [Robolectric 4.9](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9), Robolectric can either use Conscrypt and BouncyCastle or just BouncyCastle as the security provider. 
 In order to migrate tests over time, there is a [`ConscryptMode`](javadoc/latest/org/robolectric/annotation/ConscryptMode.html) annotation that controls whether Conscrypt is loaded as the default security provider with BouncyCastle as backup. 
 
 - If `ConscryptMode` is `ON`, it will install Conscrypt and BouncyCastle.

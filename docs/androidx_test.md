@@ -1,6 +1,6 @@
 # AndroidX Test
 
-Robolectric is intended to be fully compatible with Android's official testing libraries since version 4.0.
+Robolectric is intended to be fully compatible with Android's official testing libraries since [version 4.0](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.0).
 As such, we encourage you to try these new APIs and provide feedback. At some point, the Robolectric equivalents will
 be deprecated and removed. Using the AndroidX Test APIs reduces the cognitive load for you as a developer, with just one
 set of APIs to learn for the same Android concept, no matter if you are writing an Robolectric test or an instrumentation

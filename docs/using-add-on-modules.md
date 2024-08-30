@@ -14,6 +14,6 @@ In order to reduce the number of external dependencies on the application being 
 | com.google.android.gms:play-services | org.robolectric:shadows-playservices |
 | org.apache.httpcomponents:httpclient | org.robolectric:shadows-httpclient    |
 
-The above artifact names are in use since Robolectric 3.5+. Robolectric 3.4.x drops `shadows-` prefix from artifact names. Prior to 3.4, all artifact names are the same as latest, except that `shadows-supportv4` and `shadow-playservices` are `shadows-support-v4` and `shadow-play-services` respectively.
+The above artifact names are in use since [Robolectric 3.5](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.5). [Robolectric 3.4](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.4) drops `shadows-` prefix from artifact names. Prior to 3.4, all artifact names are the same as latest, except that `shadows-supportv4` and `shadow-playservices` are `shadows-support-v4` and `shadow-play-services` respectively.
 
-Note that `org.robolectric:shadows-supportv4` was deprecated at Robolectric 4.8, and was removed at Robolectric 4.9.
+Note that `org.robolectric:shadows-supportv4` was deprecated at [Robolectric 4.8](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.8), and was removed at [Robolectric 4.9](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9).
