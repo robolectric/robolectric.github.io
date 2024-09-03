@@ -1,52 +1,72 @@
 # Building Robolectric
 
-This page describes how to set up a development environment to build Robolectric in the supported OSs (Linux, Mac, Windows).
-
-JDK 17 is currently required to build Robolectric. Newer versions of the JDK (e.g. 21) will likely work, but may contain some rough edges.
+This page describes how to set up a development environment to build and test Robolectric on the supported OSs (Linux, Mac, Windows).
 
 ## Installing Android SDK Tools
 
-The first step is to install the Android SDK tools. The easiest way to do this is to install Android Studio, which also installs a copy of the
-Android SDK tools, and provides the SDK Manager UI to manage SDK versions. Alternatively it is also possible to only download the Android command line tools without
-installing the entire Android Studio. However, it is recommended to install Android Studio if possible. Visit [https://developer.android.com/studio#download](https://developer.android.com/studio#download) to get started.
+This can be achieved by either [installing Android Studio](https://developer.android.com/studio#download) (recommended),
+or Android's [command line tools](https://developer.android.com/studio#command-line-tools-only).
+We recommend using the latest stable release of Android Studio, because Robolectric uses the latest stable version of the
+Android Gradle Plugin.
 
-If you install the Android Studio, it's recommended to use the latest stable Android Studio because Robolectric
-keeps using the latest stable AGP, and it requires a recent Android Studio.
-
-Many of Robolectric's [integration tests](https://github.com/robolectric/robolectric/tree/master/integration_tests)
-require the Android build tools to be installed and specific SDK versions to be installed.
+Robolectric's [integration tests](https://github.com/robolectric/robolectric/tree/master/integration_tests)
+require Android Build Tools to be installed and specific SDK versions to be installed. Please check the relevant
+modules to know which versions to install.
 
 ## Install Git and OpenJDK 17
 
-1. Install git to download Robolectric source code. See [git-scm download](https://git-scm.com/downloads) to get started.
-2. Install OpenJDK 17 to build and run Robolectric tests. See [GitHub Action setup-java](https://github.com/actions/setup-java)
-   to get the recommended OpenJDK distribution list. Any distribution that support JDK 17 is recommended. Different operating
-   system has different OpenJDK installation and configuration tutorials, please search the internet to learn how to do it.
+JDK 17 is currently required to build Robolectric. Newer versions of the JDK (e.g. 21) will likely work, but may contain some rough edges.
+
+1. [Install Git](https://git-scm.com/downloads) to download Robolectric source code.
+2. Install OpenJDK 17 to build and test Robolectric. See [GitHub Action setup-java](https://github.com/actions/setup-java#supported-distributions)
+   to get the recommended OpenJDK distribution list. Any distribution that supports JDK 17 is recommended. Different operating
+   systems have different OpenJDK installation and configuration tutorials, please search the internet to learn how to do it.
 
 ## Download source code
 
+Robolectric's source code is available on [GitHub](https://github.com/robolectric/robolectric). You can get by running the following command:
+
 ```shell
-git clone https://github.com/robolectric/robolectric.git
+git clone git@github.com:robolectric/robolectric.git
 ```
 
-## Building
+## Building and testing
 
-### Building source code
+### Build Robolectric
+
+Robolectric supports running tests against multiple Android API levels. To build Robolectric, run:
+
 ```shell
-./gradlew clean assemble
+./gradlew clean assemble testClasses --parallel
 ```
 
-### Run local tests
+### Run unit tests
 
 ```shell
-./gradlew test --parallel -D"robolectric.enabledSdks=26,27,28"
+./gradlew test --parallel
 ```
 
-### Run instrumentation tests with Android device
+You can use the `robolectric.enabledSdks` argument to specify a subset of comma-separated supported
+API levels to test:
 
 ```shell
-./gradlew cAT --info
+# Replace 32,33,34 with the API levels you want to test
+./gradlew test --parallel -"Drobolectric.enabledSdks=32,33,34"
+```
+
+### Run instrumentation tests
+
+You can run the compatibility test suites on your connected devices (either a physical device or an
+emulator) by running:
+
+```shell
+./gradlew connectedAndroidTest
 ```
 
 If you're using Windows, it's recommended to use [PowerShell](https://github.com/PowerShell/PowerShell) in
 [Windows Terminal](https://github.com/microsoft/terminal).
+
+## Next step
+
+Once you're up and running, you can have a look at the [architecture](https://github.com/robolectric/robolectric/blob/master/ARCHITECTURE.md) documentation
+to learn more about Robolectric's components.
