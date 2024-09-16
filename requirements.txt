@@ -29,5 +29,5 @@ regex==2024.7.24
 requests==2.32.3
 six==1.16.0
 termcolor==2.4.0
-urllib3==2.2.2
+urllib3==2.2.3
 watchdog==5.0.2
