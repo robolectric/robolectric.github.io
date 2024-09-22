@@ -10,50 +10,72 @@ Robolectric provides an automated migration tool to help keep your test suite up
 
 The migration tool will make changes directly to source files in your codebase, which you can review and commit to your source control system.
 
-***Before*** updating your dependencies to the new version of Robolectric:
+**Before** updating your dependencies to the new version of Robolectric:
 
 1. Make sure you're using a recent version of Gradle (4.10 or newer).
 
-2. [Configure your project](https://errorprone.info/docs/installation) to compile using Error Prone. Quick config for Gradle (usually in `app/build.gradle`):
+2. [Configure your project](https://errorprone.info/docs/installation) to integrate Error Prone. Quick config for Gradle (usually in your module's `build.gradle`/`build.gradle.kts` file):
+
+=== "Groovy"
 
     ```groovy
     plugins {
-        id "net.ltgt.errorprone" version "0.6" apply false
+        id "net.ltgt.errorprone" version "<error_prone_plugin_version>" apply false
     }
 
-    String roboMigration = System.getenv("ROBOLECTRIC_MIGRATION")
-    if (roboMigration) {
+    String robolectricMigrations = System.getenv("ROBOLECTRIC_MIGRATIONS")
+    if (robolectricMigrations) {
         apply plugin: "net.ltgt.errorprone"
 
         dependencies {
-            errorprone "com.google.errorprone:error_prone_core:2.3.2"
-            errorproneJavac "com.google.errorprone:javac:9+181-r4173-1"
-
+            errorprone "com.google.errorprone:error_prone_core:<error_prone_version>"
             errorprone "org.robolectric:errorprone:{{ robolectric.version.current }}"
         }
 
-        afterEvaluate {
-            tasks.withType(JavaCompile) { t ->
-                options.errorprone.errorproneArgs += [
-                        '-XepPatchChecks:' + roboMigration,
-                        '-XepPatchLocation:IN_PLACE',
-                ]
-            }
+         tasks.withType(JavaCompile).configureEach {
+             options.errorprone.errorproneArgs = [
+                  '-XepPatchChecks:' + robolectricMigrations,
+                  '-XepPatchLocation:IN_PLACE',
+             ]
+         }
+    }
+    ```
+
+=== "Kotlin"
+
+    ```kotlin
+    plugins {
+        id("net.ltgt.errorprone") version "<error_prone_plugin_version>" apply false
+    }
+
+    val robolectricMigrations = System.getenv("ROBOLECTRIC_MIGRATIONS")
+    if (!robolectricMigrations.isNullOrEmpty()) {
+        pluginManager.apply("net.ltgt.errorprone")
+
+        dependencies {
+            errorprone("com.google.errorprone:error_prone_core:<error_prone_version>")
+            errorprone("org.robolectric:errorprone:{{ robolectric.version.current }}")
         }
+
+         tasks.withType<JavaCompile>().configureEach {
+             options.errorprone.errorproneArgs = listOf(
+                  "-XepPatchChecks:$robolectricMigrations",
+                  "-XepPatchLocation:IN_PLACE",
+             )
+         }
     }
     ```
 
     You don't need to commit this change.
 
-3. Run the migrations. Due to limitations of Error Prone, you'll need to manually do this in a couple steps:
+3. Run the migrations:
 
     ```bash
-    ROBOLECTRIC_MIGRATION=DeprecatedMethods ./gradlew clean :compileDebugUnitTestJava
-    ROBOLECTRIC_MIGRATION=ShadowUsageCheck ./gradlew clean :compileDebugUnitTestJava
+    ROBOLECTRIC_MIGRATION=DeprecatedMethods,ShadowUsageCheck ./gradlew clean :compileDebugUnitTestJava
     ```
 
 4. Make sure your code still compiles and commit changes.
 
 5. Update your project to the new version of Robolectric.
 
-The migration tool will make a best effort attempt to adjust source, but there might be more complicated situations that it cannot handle and that need to be converted manually.
+The migration tool will make a best effort attempt to adjust the source code, but there might be more complicated situations that it cannot handle and that need to be converted manually.
