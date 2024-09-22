@@ -246,7 +246,7 @@ For example, to override the Maven repository URL and ID to download the runtime
 Starting with [Robolectric 4.9](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9), Robolectric can either use Conscrypt and BouncyCastle or just BouncyCastle as the security provider. 
 In order to migrate tests over time, there is a [`ConscryptMode`](javadoc/latest/org/robolectric/annotation/ConscryptMode.html) annotation that controls whether Conscrypt is loaded as the default security provider with BouncyCastle as backup. 
 
-- If `ConscryptMode` is `ON`, it will install Conscrypt and BouncyCastle.
-- If `ConscryptMode` is `OFF`, it will only install BouncyCastle.
+- If [`ConscryptMode.Mode`](javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html) is [`ON`](javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html#ON), it will install Conscrypt and BouncyCastle.
+- If [`ConscryptMode.Mode`](javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html) is [`OFF`](javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html#OFF), it will only install BouncyCastle.
 
 This is closer to to the way that it works on [real android](https://cs.android.com/android/platform/superproject/+/android-13.0.0_r1:libcore/ojluni/src/main/java/java/security/Security.java;l=134-137). Robolectric will search for a requested security primitive from Conscrypt first. If it does not support it, Robolectric will try BouncyCastle second.

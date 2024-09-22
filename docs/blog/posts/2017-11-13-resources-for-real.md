@@ -1,6 +1,8 @@
 ---
 date: 2017-11-13
 authors:
+  - jongerrish
+  - brettchabot
   - xian
 hide:
   - toc
@@ -17,11 +19,9 @@ We're doing this in three separate releases to give you a chance to fix your tes
 
 The releases will be:
 
-**3.6:** Resource selection based on transliterated framework code. Configuration properties set from `@Config(qualifiers=...)`.
-
-**3.7:** Manifest parsing based on transliterated framework code.
-
-**3.8:** Resource loading from `aapt`-processed binary resource files.
+- **3.6:** Resource selection based on transliterated framework code. Configuration properties set from [`@Config(qualifiers)`](../../device-configuration.md).
+- **3.7:** Manifest parsing based on transliterated framework code.
+- **3.8:** Resource loading from `aapt`-processed binary resource files.
 
 We'll keep the changes in each release focused and narrow, and provide lots of notes on migration. Stick with us through this, we think you'll be happy with the improvements.
 
