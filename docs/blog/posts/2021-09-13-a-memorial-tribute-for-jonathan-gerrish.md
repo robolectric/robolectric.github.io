@@ -19,8 +19,9 @@ tool that grew to be used by tens of thousands of Android developers.
 
 The breadth of the contributions that Jonathan made to the project are too wide
 to list in this post. He was involved in many high-profile projects such as
-revamping PackageManager support and binary resources. He also worked
-extensively to get first-class support for Robolectric in Gradle and Bazel.
+revamping [`PackageManager`](https://developer.android.com/reference/android/content/pm/PackageManager)
+support and binary resources. He also worked extensively to get first-class support
+for Robolectric in [Gradle](https://gradle.org/) and [Bazel](https://bazel.build).
 Jonathan was passionate about continually improving the fidelity of Robolectric
 to the point [where write-once, run-everywhere](https://medium.com/androiddevelopers/write-once-run-everywhere-tests-on-android-88adb2ba20c5)
 was possible. This allowed the same test to either be run in Robolectric or any
@@ -30,5 +31,5 @@ More importantly, Jonathan had a great spirit and was beloved by friends and
 family. He was friendly, easy-going, and respectful. He settled near Mariposa, CA
 to be closer to nature and to enjoy the open space and fresh air.
 
-We miss you dearly Jon. You will always be remembered by the Robolectric
+We miss you dearly, Jon. You will always be remembered by the Robolectric
 community.

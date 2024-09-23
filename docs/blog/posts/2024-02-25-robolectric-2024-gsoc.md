@@ -12,7 +12,7 @@ organization for the Google Summer of Code (GSOC) 2024! This will provide an
 opportunity for students interested in Android development to contribute to one
 of the most widely used testing frameworks for Android.
 
-### What is Robolectric?
+## What is Robolectric?
 
 For those new to Robolectric, it's a powerful testing framework that allows
 Android tests to be executed on the JVM instead of an emulator or a real device.
@@ -26,17 +26,17 @@ Contributions and improvements to Robolectric make a meaningful impact on the
 quality of Android testing, and thus improve the quality of the Android
 ecosystem as a whole.
 
-### The Robolectric GSOC experience
+## The Robolectric GSOC experience
 
-This is the second time Robolectric has participated in GSOC (the last time
-being in 2022). Students who work on Robolectric will gain a deeper
-understanding of the Android framework, JVM internals, and testing
-methodologies. Students will also collaborate with the Robolectric maintainers
-and other members of the Robolectric community, many of whom are professional
-Android developers. Students participating in GSOC will also receive a stipend
-from Google!
+This is the second time Robolectric has participated in GSOC ([the last time
+being in 2022](2022-09-06-Umesh-GSoC-on-ConscryptMode.md)). Students who work
+on Robolectric will gain a deeper understanding of the Android framework, JVM
+internals, and testing methodologies. Students will also collaborate with the
+Robolectric maintainers and other members of the Robolectric community, many
+of whom are professional Android developers. Students participating in GSOC
+will also receive a stipend from Google!
 
-### Ideal GSOC candidates
+## Ideal GSOC candidates
 
 Ideally, students applying for Robolectric in GSOC should have a solid grasp of
 Java fundamentals and some background in Android application development. While
@@ -49,10 +49,10 @@ small contribution to Robolectric in order to gain some familiarity with the
 development environment.
 
 Note that time zone differences will be a consideration when reviewing
-applications.  Because of the limited number of mentors. we would prefer if each
+applications. Because of the limited number of mentors. We would prefer if each
 mentor and host were in a compatible time zone.
 
-### More information
+## More information
 
 The Robolectric profile for GSOC 2024 can be found [here](https://summerofcode.withgoogle.com/programs/2024/organizations/robolectric).
 

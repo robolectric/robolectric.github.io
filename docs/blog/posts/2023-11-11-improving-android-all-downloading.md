@@ -21,10 +21,10 @@ It does not use any proxies defined by the Gradle build system.
 In a CI environment, especially in environments used by large companies internally,
 there are often network restrictions that can cause the aforementioned issues.
 This article provides some solutions to mitigate these issues as much as possible,
-including setting a custom proxy for MavenArtifactFetcher, leveraging Robolectric's offline mode,
+including setting a custom proxy for `MavenArtifactFetcher`, leveraging Robolectric's offline mode,
 and manually fetching the necessary android-all jars before running Robolectric tests.
 
-## Setting custom proxy for MavenArtifactFetcher
+## Setting custom proxy for `MavenArtifactFetcher`
 
 The first solution is setting a custom proxy for `MavenArtifactFetcher` like the following snippet:
 
@@ -71,8 +71,8 @@ testOptions {
 }
 ```
 
-[Robolectric's configuration documentation](../../configuring.md) contains a detailed description
-of these special Robolectric properties, and you can read it for more details.
+[Robolectric's configuration documentation](../../configuring.md#system-properties) contains a
+detailed description of these special Robolectric properties, and you can read it for more details.
 
 ## Leveraging Robolectric's offline mode
 
@@ -162,18 +162,18 @@ The above `build.gradle.kts` is just a sample to download necessary android-all 
 manually before running Robolectric tests. It's easy to maintain. Because Robolectric
 might add a new android-all jar for a new Android version or modify internal logic
 to update an existing android-all jar's version, these android-all jars might change
-across different Robolectric versions. If you store them in a git repository,
-your git repository might become bigger and bigger. If you like this approach,
+across different Robolectric versions. If you store them in a Git repository,
+your Git repository might become bigger and bigger. If you like this approach,
 you can store android-all jars in an external repository like
 [AndroidX](https://android-review.googlesource.com/c/platform/prebuilts/androidx/external/+/2813314).
 
-[Robolectric's configuring documentation](../../configuring.md) contains
+[Robolectric's configuring documentation](../../configuring.md#system-properties) contains
 a detailed description of these special Robolectric properties, and you can
 read it for details.
 
 ## Fetching android-all jars manually before running Robolectric tests
 
-If you don't store android-all jars in your git repository to leverage offline mode,
+If you don't store android-all jars in your Git repository to leverage offline mode,
 and you don't want to modify your system properties for Robolectric in your
 `build.gradle.kts`, you can try to download android-all jars in a script and
 download them manually before running any Gradle tasks.

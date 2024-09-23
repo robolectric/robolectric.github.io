@@ -137,6 +137,6 @@ Gradle will download all the dependencies you need to run Robolectric and place 
 
 Add the `.jar` files listed in `build/output/README.txt` as compile-time dependencies.
 
-Place the file called `build/output/robolectric-deps.properties` in your test resources directory. Change the paths as indicated in the comment in that file.
+Place the file called `build/output/robolectric-deps.properties` in your test `resources` directory. Change the paths as indicated in the comment in that file.
 
 You're all set! Robolectric will now load Android SDKs from the filesystem instead of attempting to download them from Maven Central.
