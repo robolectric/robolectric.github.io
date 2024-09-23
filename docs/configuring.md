@@ -180,7 +180,7 @@ Some additional options can be configured globally by setting these system prope
 | Property name | Description | Default value |
 |-----|-----|-----|
 | `robolectric.enabledSdks` | Comma-separated list of SDK levels or names (e.g. `33, 34` or `TIRAMISU, UPSIDE_DOWN_CAKE`) which are enabled for this process. Only tests targeting a listed SDKs will be run. | All SDKs |
-| `robolectric.offline` | Set to `true` to disable runtime fetching of jars. | `true` |
+| `robolectric.offline` | Set to `true` to disable runtime fetching of jars. | `false` |
 | `robolectric.usePreinstrumentedJars` | If `true`, Robolectric will use instrumented jars to reduce instrumentation overhead. If changes are made to instrumentation, this can be set to `false` to ensure the changes are included when building Robolectric. | `true` |
 | `robolectric.dependency.dir` | When in offline mode, specifies a folder containing runtime dependencies. | `null` |
 | `robolectric.dependency.repo.id` | Set the ID of the Maven repository to use for the runtime dependencies. | `mavenCentral` |
