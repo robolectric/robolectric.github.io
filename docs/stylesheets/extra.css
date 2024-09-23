@@ -12,3 +12,8 @@
         width: 13rem;
     }
 }
+
+/* Make the grid layout use at most 2 columns. */
+.md-typeset .grid {
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr))
+}
