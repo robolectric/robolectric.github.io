@@ -1,7 +1,11 @@
 [versions]
 android-gradle-plugin = "8.6.1"
+junit = "4.13.2"
+robolectric = "4.13"
 
 [libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
