@@ -6,6 +6,8 @@ This repository contains the source of the documentation that lives at [robolect
 
 Make sure that you are on the `master` branch, and that it is up to date before making any changes. This is the default branch, so Git should put you there automatically.
 
+### Build the documentation locally
+
 Before submitting a Pull Request, run the documentation locally to check that the content and layout are correct. The documentation is built using [MkDocs](https://www.mkdocs.org/).
 
 To do so, make sure that you have [Python 3+ installed](https://www.python.org/downloads/), and then install the required dependencies by running:
@@ -18,6 +20,16 @@ Then you can execute the following command to access the documentation locally a
 
 ```bash
 mkdocs serve --open
+```
+
+### Validate your Markdown files
+
+If you modified any Markdown file, we recommend using [`DavidAnson/markdownlint-cli2`](https://github.com/DavidAnson/markdownlint-cli2) to ensure that the formatting rules are respected.
+
+Once installed, you can run the command below to perform the check. Add the `--fix` option to fix issues that can be addressed automatically. The non-resolved issues will be printed in the console.
+
+```bash
+markdownlint-cli2 "docs/**/*.md" "#docs/javadoc/**/*.md" --config .markdownlint.jsonc
 ```
 
 Once your Pull Request is merged, the documentation will be automatically built and deployed by GitHub Actions.
