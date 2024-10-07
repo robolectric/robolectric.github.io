@@ -68,5 +68,5 @@ If you're using Windows, it's recommended to use [PowerShell](https://github.com
 
 ## Next step
 
-Once you're up and running, you can have a look at the [architecture](https://github.com/robolectric/robolectric/blob/master/ARCHITECTURE.md) documentation
+Once you're up and running, you can have a look at the [architecture](architecture.md) documentation
 to learn more about Robolectric's components.

@@ -115,6 +115,7 @@ nav:
     - "Customizing the Test Runner": custom-test-runner.md
   - "Contributing":
     - "Building Robolectric": building-robolectric.md
+    - "Robolectric Architecture": architecture.md
     - "Contributor Guidelines": contributing.md
     - "Shadows": extending.md
   - "Resources":
