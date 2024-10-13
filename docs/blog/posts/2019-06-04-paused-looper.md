@@ -8,11 +8,10 @@ slug: paused-looper
 
 # Improving Robolectric's Looper simulation
 
-**TL;DR: We'd love your feedback on improvements we've made to make Robolectric's
-[`Looper`](https://developer.android.com/reference/android/os/Looper.html) behavior more
-realistic.** Try it out today by annotating your tests with
-[`@LooperMode(PAUSED)`](../../javadoc/latest/org/robolectric/annotation/LooperMode.html) and let us
-know your experience!
+**TL;DR: We'd love your feedback on improvements we've made to make Robolectric's [`Looper`][looper]
+behavior more realistic.**
+Try it out today by annotating your tests with [`@LooperMode(PAUSED)`][looper-mode] and let us know
+your experience!
 
 ## Background
 
@@ -37,33 +36,28 @@ assertion fails with `[before, after, between]`, which is clearly incorrect.
 
 Robolectric’s current implementation is notoriously prone to deadlocks, infinite loops and other
 race conditions. Robolectric will duplicate each task posted to a `Looper` into a separate list
-stored in [`Scheduler`](../../javadoc/latest/org/robolectric/util/Scheduler.html). The `Looper`’s
-set of tasks and the `Scheduler`s can get out of sync, causing hard-to-diagnose errors. 
+stored in [`Scheduler`][scheduler]. The `Looper`’s set of tasks and the `Scheduler`s can get out of
+sync, causing hard-to-diagnose errors.
 
 ## Solution
 
 We’ve re-written Robolectric’s threading model and `Looper` simulation in a way that we hope will
-address the deficiencies of the current behavior. It’s available to try out now by applying a 
-`@LooperMode(PAUSED)` annotation to your test classes or methods. Some of the highlights of the 
-[`PAUSED`](../../javadoc/latest/org/robolectric/annotation/LooperMode.Mode.html#PAUSED) mode vs. the
-existing [`LEGACY`](../../javadoc/latest/org/robolectric/annotation/LooperMode.Mode.html#LEGACY)
-mode include:
+address the deficiencies of the current behavior. It’s available to try out now by applying a
+`@LooperMode(PAUSED)` annotation to your test classes or methods. Some of the highlights of the
+[`PAUSED`][looper-mode-paused] mode vs. the existing [`LEGACY`][looper-mode-legacy] mode include:
 
 * Tasks posted to the main `Looper` are not automatically executed inline. Similar to the
-[legacy `PAUSED` `IdleState`](../../javadoc/latest/org/robolectric/util/Scheduler.IdleState.html#PAUSED), 
-tasks posted to the main `Looper` must be explicitly executed via
-[`ShadowLooper`](../../javadoc/latest/org/robolectric/shadows/ShadowLooper.html) APIs. However, 
-we’ve made a couple additional improvements in `PAUSED` mode that make this easier:
-* Robolectric will warn users if a test fails with unexecuted tasks in the main `Looper` queue. 
-This is a hint that the unexecuted behavior is important for the test case.
-* AndroidX Test APIs, like
-[`ActivityScenario`](https://developer.android.com/reference/androidx/test/core/app/ActivityScenario),
-[`FragmentScenario`](https://developer.android.com/reference/androidx/fragment/app/testing/FragmentScenario)
-and [Espresso](https://developer.android.com/training/testing/espresso/) will automatically idle the
-main `Looper`.
-* Tasks posted to background `Looper`s are executed in real threads. This will hopefully 
-eliminate the need for hacks when trying to test code that asserts that it is running in a
-background thread.
+  [legacy `PAUSED` `IdleState`][idle-state-paused], tasks posted to the main `Looper` must be
+  explicitly executed via [`ShadowLooper`][shadow-looper] APIs. However, we’ve made a couple
+  additional improvements in `PAUSED` mode that make this easier:
+* Robolectric will warn users if a test fails with unexecuted tasks in the main `Looper` queue.
+  This is a hint that the unexecuted behavior is important for the test case.
+* AndroidX Test APIs, like [`ActivityScenario`][activity-scenario],
+  [`FragmentScenario`][fragment-scenario] and [Espresso][espresso] will automatically idle the main
+  `Looper`.
+* Tasks posted to background `Looper`s are executed in real threads. This will hopefully
+  eliminate the need for hacks when trying to test code that asserts that it is running in a
+  background thread.
 
 ## Using `PAUSED` `LooperMode`
 
@@ -78,13 +72,13 @@ To switch to `PAUSED`:
     ```
 
 * Apply the `@LooperMode(PAUSED)` annotation to your test package/class/method.
-* Convert any background `Scheduler` calls for controlling `Looper`s to 
-[`shadowOf(looper)`](../../javadoc/latest/org/robolectric/Shadows.html#shadowOf(android.os.Looper)).
+* Convert any background `Scheduler` calls for controlling `Looper`s to
+  [`shadowOf(looper)`][shadow-of-looper].
 * Recommended, but not mandatory: Convert any foreground `Scheduler` calls to
 `shadowOf(getMainLooper())`. The `Scheduler` APIs will be deprecated and removed over time.
-* Convert any [`RoboExecutorService`](../../javadoc/latest/org/robolectric/android/util/concurrent/RoboExecutorService.html)
-usages to [`PausedExecutorService`](../../javadoc/latest/org/robolectric/android/util/concurrent/PausedExecutorService.html)
-or [`InlineExecutorService`](../../javadoc/latest/org/robolectric/android/util/concurrent/InlineExecutorService.html).
+* Convert any [`RoboExecutorService`][robo-executor-service] usages to
+  [`PausedExecutorService`][paused-executor-service] or
+  [`InlineExecutorService`][inline-executor-service].
 * Run your tests. If you see test failures like `Main looper has queued unexecuted runnables`, 
 you may need to insert `shadowOf(getMainLooper()).idle()` calls to your test to drain the main
 `Looper`. It's recommended to step through your test code with a watch set on
@@ -120,16 +114,35 @@ public class MyTest {
 }
 ```
 
-Take a look at Robolectric’s [`ShadowPausedAsyncTaskTest`](https://github.com/robolectric/robolectric/blob/master/robolectric/src/test/java/org/robolectric/shadows/ShadowPausedAsyncTaskTest.java) for an example of using `PAUSED` `LooperMode` and background tasks.
+Take a look at Robolectric’s [`ShadowPausedAsyncTaskTest`][shadow-paused-async-task-test] for an
+example of using `PAUSED` `LooperMode` and background tasks.
 
 ## Troubleshooting
 
-* Animations: Use of Animations can cause delayed tasks to be posted to the main `Looper` queue. 
-You can use the [`ShadowLooper.idleFor()`](../../javadoc/latest/org/robolectric/shadows/ShadowLooper.html#idleFor(long,java.util.concurrent.TimeUnit))
-or [`ShadowLooper.runToEndOfTasks()`](../../javadoc/latest/org/robolectric/shadows/ShadowLooper.html#runToEndOfTasks()) APIs to execute these tasks.
+* Animations: Use of Animations can cause delayed tasks to be posted to the main `Looper` queue. You
+  can use the [`ShadowLooper.idleFor()`][shadow-looper-idle-for] or
+  [`ShadowLooper.runToEndOfTasks()`][shadow-looper-run-to-end-of-tasks] APIs to execute these tasks.
 
 ## Feedback
 
 Please let us know of any roadblocks to adopting `PAUSED` `LooperMode`.
 We’d like to make it the default mode for tests in the next release, and thus your feedback would be
 most welcome.
+
+[activity-scenario]: https://developer.android.com/reference/androidx/test/core/app/ActivityScenario
+[espresso]: https://developer.android.com/training/testing/espresso
+[fragment-scenario]: https://developer.android.com/reference/androidx/fragment/app/testing/FragmentScenario
+[idle-state-paused]: ../../javadoc/latest/org/robolectric/util/Scheduler.IdleState.html#PAUSED
+[inline-executor-service]: ../../javadoc/latest/org/robolectric/android/util/concurrent/InlineExecutorService.html
+[looper]: https://developer.android.com/reference/android/os/Looper.html
+[looper-mode]: ../../javadoc/latest/org/robolectric/annotation/LooperMode.html
+[looper-mode-legacy]: ../../javadoc/latest/org/robolectric/annotation/LooperMode.Mode.html#LEGACY
+[looper-mode-paused]: ../../javadoc/latest/org/robolectric/annotation/LooperMode.Mode.html#PAUSED
+[paused-executor-service]: ../../javadoc/latest/org/robolectric/android/util/concurrent/PausedExecutorService.html
+[robo-executor-service]: ../../javadoc/latest/org/robolectric/android/util/concurrent/RoboExecutorService.html
+[scheduler]: ../../javadoc/latest/org/robolectric/util/Scheduler.html
+[shadow-looper]: ../../javadoc/latest/org/robolectric/shadows/ShadowLooper.html
+[shadow-looper-idle-for]: ../../javadoc/latest/org/robolectric/shadows/ShadowLooper.html#idleFor(long,java.util.concurrent.TimeUnit)
+[shadow-looper-run-to-end-of-tasks]: ../../javadoc/latest/org/robolectric/shadows/ShadowLooper.html#runToEndOfTasks()
+[shadow-of-looper]: ../../javadoc/latest/org/robolectric/Shadows.html#shadowOf(android.os.Looper)
+[shadow-paused-async-task-test]: https://github.com/robolectric/robolectric/blob/master/robolectric/src/test/java/org/robolectric/shadows/ShadowPausedAsyncTaskTest.java

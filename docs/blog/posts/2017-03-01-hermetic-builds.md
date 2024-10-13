@@ -11,7 +11,8 @@ slug: hermetic-builds
 
 Robolectric needs access to multiple Android SDK jars in order to perform its magic, which means it needs special configuration beyond just setting up dependencies in your build. By default, it tries to download Android SDK jars from Maven Central.
 
-But what if you have a [hermetic build environment](https://blog.fahhem.com/2013/12/hermetic-build-systems/)? You just need to do a little more configuration.
+But what if you have a [hermetic build environment][hermetic-build]? You just need to do a little
+more configuration.
 
 Here's a Gradle build script that'll help:
 
@@ -140,3 +141,5 @@ Add the `.jar` files listed in `build/output/README.txt` as compile-time depende
 Place the file called `build/output/robolectric-deps.properties` in your test `resources` directory. Change the paths as indicated in the comment in that file.
 
 You're all set! Robolectric will now load Android SDKs from the filesystem instead of attempting to download them from Maven Central.
+
+[hermetic-build]: https://blog.fahhem.com/2013/12/hermetic-build-systems
