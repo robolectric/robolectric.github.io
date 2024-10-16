@@ -10,17 +10,15 @@ slug: improving-android-all-downloading
 In recent years, the team has received multiple issues regarding Robolectric's inability to download/resolve
 the necessary android-all jars when running Robolectric tests in a CI environment. Some examples include:
 
-1. [android-all not downloaded as part of robolectric, or is it a separate dependency?](https://github.com/robolectric/robolectric/issues/7886)
+1. [android-all not downloaded as part of robolectric, or is it a separate dependency?][robolectric-issue-7886]
+2. [Robolectric failing because not downloading dependencies in Jenkins when using Artifactory][robolectric-issue-8158]
+3. [Flaky SHA mismatch on CI builds when retrieving Maven artifacts since upgrading to 4.10.x][robolectric-issue-8205]
 
-2. [Robolectric failing because not downloading dependencies in Jenkins when using Artifactory](https://github.com/robolectric/robolectric/issues/8158)
-
-3. [Flaky SHA mismatch on CI builds when retrieving Maven artifacts since upgrading to 4.10.x](https://github.com/robolectric/robolectric/issues/8205)
-
-Robolectric downloads the necessary android-all jars using its [MavenArtifactFetcher](https://github.com/robolectric/robolectric/blob/7fa0183c592974c3a84e948605f5278addae2731/plugins/maven-dependency-resolver/src/main/java/org/robolectric/internal/dependency/MavenArtifactFetcher.java#L37) when running Robolectric tests.
-It does not use any proxies defined by the Gradle build system.
-In a CI environment, especially in environments used by large companies internally,
-there are often network restrictions that can cause the aforementioned issues.
-This article provides some solutions to mitigate these issues as much as possible,
+Robolectric downloads the necessary android-all jars using its
+[MavenArtifactFetcher][maven-artifact-fetcher] when running Robolectric tests. It does not use any
+proxies defined by the Gradle build system. In a CI environment, especially in environments used by
+large companies internally, there are often network restrictions that can cause the aforementioned
+issues. This article provides some solutions to mitigate these issues as much as possible,
 including setting a custom proxy for `MavenArtifactFetcher`, leveraging Robolectric's offline mode,
 and manually fetching the necessary android-all jars before running Robolectric tests.
 
@@ -71,8 +69,8 @@ testOptions {
 }
 ```
 
-[Robolectric's configuration documentation](../../configuring.md#system-properties) contains a
-detailed description of these special Robolectric properties, and you can read it for more details.
+[Robolectric's configuration documentation][robolectric-system-properties] contains a detailed
+description of these special Robolectric properties, and you can read it for more details.
 
 ## Leveraging Robolectric's offline mode
 
@@ -101,7 +99,7 @@ To make it work, we need to download android-all jars into the
 `${rootDir}/robolectric-jars/preinstrumented` directory before running any Robolectric tests.
 I created a sample project to provide build scripts to download these
 android-all jars into this preinstrumented directory: 
-[robolectric-offline-sample](https://github.com/utzcoz/robolectric-offline-sample/).
+[robolectric-offline-sample][robolectric-offline-sample].
 
 ```kotlin
 plugins {
@@ -164,12 +162,10 @@ might add a new android-all jar for a new Android version or modify internal log
 to update an existing android-all jar's version, these android-all jars might change
 across different Robolectric versions. If you store them in a Git repository,
 your Git repository might become bigger and bigger. If you like this approach,
-you can store android-all jars in an external repository like
-[AndroidX](https://android-review.googlesource.com/c/platform/prebuilts/androidx/external/+/2813314).
+you can store android-all jars in an external repository like [AndroidX][androidx].
 
-[Robolectric's configuring documentation](../../configuring.md#system-properties) contains
-a detailed description of these special Robolectric properties, and you can
-read it for details.
+[Robolectric's configuring documentation][robolectric-system-properties] contains a detailed
+description of these special Robolectric properties, and you can read it for details.
 
 ## Fetching android-all jars manually before running Robolectric tests
 
@@ -178,10 +174,10 @@ and you don't want to modify your system properties for Robolectric in your
 `build.gradle.kts`, you can try to download android-all jars in a script and
 download them manually before running any Gradle tasks.
 
-For example, I created a project to do it for myself: 
-[robolectric-android-all-fetcher](https://github.com/utzcoz/robolectric-android-all-fetcher/).
-You can change the Maven mirror to any one you like and run the script to download
-all android-all jars for a specific Robolectric version.
+For example, I created a project to do it for myself:
+[robolectric-android-all-fetcher][robolectric-android-all-fetcher]. You can change the Maven mirror
+to any one you like and run the script to download all android-all jars for a specific Robolectric
+version.
 
 ## Conclusion
 
@@ -189,3 +185,12 @@ Most of these issues are caused by a network issue when downloading necessary an
 and we can fix them or ease them by making android-all jars accessible before running Robolectric tests
 and letting `MavenArtifactFetcher` use them directly. The above potential solutions are some stable
 and recommended solutions for developers to try. Hope it can help you.
+
+[androidx]: https://android-review.googlesource.com/c/platform/prebuilts/androidx/external/+/2813314
+[maven-artifact-fetcher]: https://github.com/robolectric/robolectric/blob/7fa0183c592974c3a84e948605f5278addae2731/plugins/maven-dependency-resolver/src/main/java/org/robolectric/internal/dependency/MavenArtifactFetcher.java#L37
+[robolectric-android-all-fetcher]: https://github.com/utzcoz/robolectric-android-all-fetcher
+[robolectric-issue-7886]: https://github.com/robolectric/robolectric/issues/7886
+[robolectric-issue-8158]: https://github.com/robolectric/robolectric/issues/8158
+[robolectric-issue-8205]: https://github.com/robolectric/robolectric/issues/8205
+[robolectric-offline-sample]: https://github.com/utzcoz/robolectric-offline-sample
+[robolectric-system-properties]: ../../configuring.md#system-properties

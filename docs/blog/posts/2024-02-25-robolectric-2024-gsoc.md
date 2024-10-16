@@ -28,13 +28,12 @@ ecosystem as a whole.
 
 ## The Robolectric GSOC experience
 
-This is the second time Robolectric has participated in GSOC ([the last time
-being in 2022](2022-09-06-Umesh-GSoC-on-ConscryptMode.md)). Students who work
-on Robolectric will gain a deeper understanding of the Android framework, JVM
-internals, and testing methodologies. Students will also collaborate with the
-Robolectric maintainers and other members of the Robolectric community, many
-of whom are professional Android developers. Students participating in GSOC
-will also receive a stipend from Google!
+This is the second time Robolectric has participated in GSOC
+([the last time being in 2022][robolectric-gsoc-2022]). Students who work on Robolectric will gain a
+deeper understanding of the Android framework, JVM internals, and testing methodologies. Students
+will also collaborate with the Robolectric maintainers and other members of the Robolectric
+community, many of whom are professional Android developers. Students participating in GSOC will
+also receive a stipend from Google!
 
 ## Ideal GSOC candidates
 
@@ -54,14 +53,18 @@ mentor and host were in a compatible time zone.
 
 ## More information
 
-The Robolectric profile for GSOC 2024 can be found [here](https://summerofcode.withgoogle.com/programs/2024/organizations/robolectric).
+The Robolectric profile for GSOC 2024 can be found [here][robolectric-gsoc-profile].
 
-Review the [Robolectric GSOC 2024 project
-list](https://docs.google.com/presentation/d/1Wyqkef0bK3c9EbZzTdFw7S9Hx5-fq9iRgNbVWozQ2q0/edit?usp=sharing) for a list of project ideas.
+Review the [Robolectric GSOC 2024 project list][robolectric-gsoc-project-list] for a list of project
+ideas.
 
-If you have any questions, please start a discussion
-[here](https://github.com/robolectric/robolectric/discussions) or email any of
+If you have any questions, please start a discussion [here][robolectric-discussions] or email any of
 the Robolectric maintainers.
 
 We are very excited for the summer and hope that GSOC 2024 is an awesome experience for
 everyone involved!
+
+[robolectric-discussions]: https://github.com/robolectric/robolectric/discussions
+[robolectric-gsoc-2022]: 2022-09-06-Umesh-GSoC-on-ConscryptMode.md
+[robolectric-gsoc-profile]: https://summerofcode.withgoogle.com/programs/2024/organizations/robolectric
+[robolectric-gsoc-project-list]: https://docs.google.com/presentation/d/1Wyqkef0bK3c9EbZzTdFw7S9Hx5-fq9iRgNbVWozQ2q0/edit?usp=sharing

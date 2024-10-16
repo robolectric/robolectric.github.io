@@ -19,7 +19,8 @@ We're doing this in three separate releases to give you a chance to fix your tes
 
 The releases will be:
 
-- **3.6:** Resource selection based on transliterated framework code. Configuration properties set from [`@Config(qualifiers)`](../../device-configuration.md).
+- **3.6:** Resource selection based on transliterated framework code. Configuration properties set
+  from [`@Config(qualifiers)`][config-annotation].
 - **3.7:** Manifest parsing based on transliterated framework code.
 - **3.8:** Resource loading from `aapt`-processed binary resource files.
 
@@ -29,6 +30,4 @@ Going forward, we're applying a higher standard for accuracy in Robolectric's im
 
 As always, thanks for your pull requests, bug reports, ideas and questions! &#x1f4af;
 
-_Your Robolectric maintainers,_
-<br/>
-[jongerrish@google.com](mailto:jongerrish@google.com), [brettchabot@google.com](mailto:brettchabot@google.com), and [christianw@google.com](mailto:christianw@google.com).
+[config-annotation]: ../../device-configuration.md

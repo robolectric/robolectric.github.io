@@ -8,11 +8,15 @@ slug: robolectric-3-3-and-roadmap
 
 # Robolectric 3.3 and Roadmap
 
-Your Robolectric maintainers are pleased to announce the release of [Robolectric 3.3](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.3)! There's been a bunch of activity recently in Robolectric, and we wanted to give a quick update on our thinking about where the project is going.
+Your Robolectric maintainers are pleased to announce the release of
+[Robolectric 3.3][robolectric-3.3-release]! There's been a bunch of activity recently in
+Robolectric, and we wanted to give a quick update on our thinking about where the project is going.
 
 ## Introduction
 
-Robolectric started life in 2010 as a quick hack to allow Android tests to be run on a regular JVM rather than a device or emulator, allowing for fast [TDD cycles](https://en.wikipedia.org/wiki/Test-driven_development#Coding_cycle). It was mostly developed in brief spurts as needed for testing specific projects.
+Robolectric started life in 2010 as a quick hack to allow Android tests to be run on a regular JVM
+rather than a device or emulator, allowing for fast [TDD cycles][tdd-cycles]. It was mostly
+developed in brief spurts as needed for testing specific projects.
 
 Since then, it's been cool to see Robolectric grow with the help of the community, and become quite widely used. It's become a critical part of the test infrastructure of lots of companies and projects. It's rather outgrown the scrappy side-project Robolectric was for much of its life and needs some full-time attention.
 
@@ -44,10 +48,12 @@ As new SDKs and new features are released, we'll make sure Robolectric supports 
 
 ## Community
 
-We're going to do our best to stay on top of bug reports and pull requests. We'll be continuing to develop in the open on [GitHub](https://github.com/robolectric/robolectric), and we'd love your input on changes and designs.
+We're going to do our best to stay on top of bug reports and pull requests. We'll be continuing to
+develop in the open on [GitHub][robolectric-github], and we'd love your input on changes and
+designs.
 
 As always, thanks for your pull requests, bug reports, ideas and questions!
 
-_Your Robolectric maintainers,_
-<br/>
-[jongerrish@google.com](mailto:jongerrish@google.com) and [christianw@google.com](mailto:christianw@google.com)
+[robolectric-3.3-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-3.3
+[robolectric-github]: https://github.com/robolectric/robolectric
+[tdd-cycles]: https://en.wikipedia.org/wiki/Test-driven_development#Coding_cycle

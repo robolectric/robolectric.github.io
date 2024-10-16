@@ -13,7 +13,11 @@ The Robolectric team is super excited to announce the first alpha release of Rob
 
 ## `androidx.test`
 
-We’re collaborating closely with the Android Jetpack testing team to develop common APIs for writing Android tests that can run as both local (JVM-based) and on-device (instrumentation) tests. From 4.0 on, Robolectric will support Jetpack’s [`androidx.test`](https://developer.android.com/training/testing/) APIs, starting with support for the [`AndroidJUnit4` test runner](https://developer.android.com/training/testing/junit-runner), [`ActivityTestRule`](https://developer.android.com/training/testing/junit-rules), and [Espresso](https://developer.android.com/training/testing/espresso/) for interacting with UI components.
+We’re collaborating closely with the Android Jetpack testing team to develop common APIs for writing
+Android tests that can run as both local (JVM-based) and on-device (instrumentation) tests. From 4.0
+on, Robolectric will support Jetpack’s [`androidx.test`][androidx-test] APIs, starting with support
+for the [`AndroidJUnit4` test runner][junit-runner], [`ActivityTestRule`][activity-test-rule],
+and [Espresso][espresso] for interacting with UI components.
 
 ### A Robolectric 3.x style test
 
@@ -49,7 +53,10 @@ As you can see, many of the idioms common in instrumentation tests are now suppo
 
 In conjunction with Android Studio 3.2, Robolectric can now use resources processed using the Android build toolchain, and loads and handles those resources using the same logic as on an actual Android device. Robolectric's old idiosyncratic resource handling mode is still available for projects not yet using the latest version of the build toolchain.
 
-To enable the use of toolchain-processed resources in Robolectric tests, make sure you're using [Android Gradle Plugin](https://developer.android.com/studio/releases/gradle-plugin#updating-plugin) version `com.android.tools.build:gradle:3.2.0-alpha14` or higher, and add the following to your `gradle.properties`:
+To enable the use of toolchain-processed resources in Robolectric tests, make sure you're
+using [Android Gradle Plugin][android-gradle-plugin] version
+`com.android.tools.build:gradle:3.2.0-alpha14` or higher, and add the following to your
+`gradle.properties`:
 
 ```properties
 android.enableUnitTestBinaryResources=true
@@ -57,12 +64,17 @@ android.enableUnitTestBinaryResources=true
 
 ## Release Notes
 
-Release notes are [available here](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.0-alpha-1). Robolectric 4.0 is currently in alpha release, meaning that it is not yet feature-complete, and APIs are likely to change before the final release. Use with caution.
+Release notes are [available here][robolectric-4.0-alpha-1-release]. Robolectric 4.0 is currently in
+alpha release, meaning that it is not yet feature-complete, and APIs are likely to change before the
+final release. Use with caution.
 
 ---
 
 As always, thanks for your pull requests, bug reports, ideas and questions! &#x1f4af;
 
-_Your Robolectric maintainers,_
-<br/>
-[jongerrish@google.com](mailto:jongerrish@google.com), [brettchabot@google.com](mailto:brettchabot@google.com), and [christianw@google.com](mailto:christianw@google.com).
+[activity-test-rule]: https://developer.android.com/training/testing/junit-rules
+[android-gradle-plugin]: https://developer.android.com/studio/releases/gradle-plugin#updating-plugin
+[androidx-test]: https://developer.android.com/training/testing
+[espresso]: https://developer.android.com/training/testing/espresso
+[junit-runner]: https://developer.android.com/training/testing/junit-runner
+[robolectric-4.0-alpha-1-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.0-alpha-1
