@@ -5,7 +5,10 @@ hide:
 
 # Build System Integration
 
-Starting with [Robolectric 3.3](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.3), the test runner will look for a file named `/com/android/tools/test_config.properties` on the classpath. If it is found, it will be used to provide the default manifest, resource, and asset locations for tests, without the need to specify `@Config(manifest = "...", resourceDir = "...", assetDir = "...")` in your tests.
+Starting with [Robolectric 3.3][robolectric-3.3-release], the test runner will look for a file named
+`/com/android/tools/test_config.properties` on the classpath. If it is found, it will be used to
+provide the default manifest, resource, and asset locations for tests, without the need to specify
+`@Config(manifest = "...", resourceDir = "...", assetDir = "...")` in your tests.
 
 This gives build system implementors the ability to perform manifest, asset and resource preprocessing and merging for tests using the same strategy it would when building the APK, rather than leaving it up to Robolectric.
 
@@ -36,3 +39,5 @@ For binary resources support:
 ```properties
 android_resource_apk=/some/path/to/app/resources.ap_
 ```
+
+[robolectric-3.3-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-3.3
