@@ -1,16 +1,18 @@
 # AndroidX Test
 
-Robolectric is intended to be fully compatible with Android's official testing libraries since [version 4.0](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.0).
-As such, we encourage you to try these new APIs and provide feedback. At some point, the Robolectric equivalents will
-be deprecated and removed. Using the AndroidX Test APIs reduces the cognitive load for you as a developer, with just one
-set of APIs to learn for the same Android concept, no matter if you are writing an Robolectric test or an instrumentation
-test. Furthermore, it will make your tests more portable and compatible with our future plans.
+Robolectric is intended to be fully compatible with Android's official testing libraries since
+[version 4.0][robolectric-4.0-release]. As such, we encourage you to try these new APIs and provide
+feedback. At some point, the Robolectric equivalents will be deprecated and removed. Using the
+AndroidX Test APIs reduces the cognitive load for you as a developer, with just one set of APIs to
+learn for the same Android concept, no matter if you are writing an Robolectric test or an
+instrumentation test. Furthermore, it will make your tests more portable and compatible with our
+future plans.
 
 ## TestRunner
 
-It is now possible to use the AndroidX test runner in Robolectric tests. If you require a custom test runner,
-please check out the [configuration and plugin API](javadoc/latest/org/robolectric/pluginapi/package-summary.html),
-and let us know if there are any extension points missing that you require.
+It is now possible to use the AndroidX test runner in Robolectric tests. If you require a custom
+test runner, please check out the [configuration and plugin API][configuration-plugin-api], and let
+us know if there are any extension points missing that you require.
 
 **Robolectric**
 
@@ -56,8 +58,8 @@ and let us know if there are any extension points missing that you require.
 
 ## Application
 
-Since most Android code is centric around a [`Context`](https://developer.android.com/reference/android/content/Context),
-getting hold of your application’s context is a typical task for most tests. 
+Since most Android code is centric around a [`Context`][context-documentation], getting hold of your
+application’s context is a typical task for most tests.
 
 **Robolectric**
 
@@ -113,21 +115,21 @@ getting hold of your application’s context is a typical task for most tests.
 
 ## Activities
 
-Robolectric provides [`Robolectric.setupActivity()`](javadoc/latest/org/robolectric/Robolectric.html#setupActivity(java.lang.Class))
-for the coarse-grained use case where you require a launched activity in the resumed state and visible for the user to interact with. 
+Robolectric provides [`Robolectric.setupActivity()`][robolectric-setup-activity] for the
+coarse-grained use case where you require a launched activity in the resumed state and visible for
+the user to interact with.
 
-Robolectric also provides [`Robolectric.buildActivity()`](javadoc/latest/org/robolectric/Robolectric.html#buildActivity(java.lang.Class)),
-which returns an [`ActivityController`](javadoc/latest/org/robolectric/android/controller/ActivityController.html) that allows
-the developer to step through the [`Activity`](https://developer.android.com/reference/android/app/Activity) lifecycle.
-This has proved problematic as it requires developers to fully understand valid lifecycle transitions and possible valid states.
-Using an `Activity` in an invalid state has undefined behavior and can cause compatibility issues when running on different Android test runtimes
-or when upgrading to newer versions of Robolectric.
+Robolectric also provides [`Robolectric.buildActivity()`][robolectric-build-activity], which returns
+an [`ActivityController`][activity-controller] that allows the developer to step through the
+[`Activity`][activity-documentation] lifecycle. This has proved problematic as it requires
+developers to fully understand valid lifecycle transitions and possible valid states. Using an
+`Activity` in an invalid state has undefined behavior and can cause compatibility issues when
+running on different Android test runtimes or when upgrading to newer versions of Robolectric.
 
-[`ActivityScenario`](https://developer.android.com/reference/androidx/test/core/app/ActivityScenario) provides a
-replacement for both of these use cases, but places tighter restrictions around lifecycle transitions, namely that
-invalid or incomplete transitions are not possible. If you'd like a [`Rule`](https://junit.org/junit4/javadoc/latest/org/junit/Rule.html)-based
-equivalent please use [`ActivityScenarioRule`](https://developer.android.com/reference/androidx/test/ext/junit/rules/ActivityScenarioRule)
-instead.
+[`ActivityScenario`][activity-scenario] provides a replacement for both of these use cases, but
+places tighter restrictions around lifecycle transitions, namely that invalid or incomplete
+transitions are not possible. If you'd like a [`Rule`][junit-rule]-based equivalent please use
+[`ActivityScenarioRule`][activity-scenario-rule] instead.
 
 **Robolectric**
 
@@ -218,20 +220,20 @@ instead.
     }
     ```
 
-Note that in Robolectric since both the test and UI event loop run on the same thread, synchronization is not an
-issue. [`ActivityScenario.onActivity`](https://developer.android.com/reference/androidx/test/core/app/ActivityScenario#onActivity(androidx.test.core.app.ActivityScenario.ActivityAction%3CA%3E))
-provides a safe way of accessing the `Activity`, should you need to, that will be guaranteed to be compatible with our future plans.
+Note that in Robolectric since both the test and UI event loop run on the same thread,
+synchronization is not an issue. [`ActivityScenario.onActivity`][activity-scenario-on-activity]
+provides a safe way of accessing the `Activity`, should you need to, that will be guaranteed to be
+compatible with our future plans.
 
 ## Views
 
-Robolectric has very limited APIs for [`View`](https://developer.android.com/reference/android/view/View) interaction.
-In most cases, test writers can just use Android APIs, such as
-[`Activity.findViewById()`](https://developer.android.com/reference/android/app/Activity#findViewById(int)) which was safe
-since Robolectric tests do not have to worry about synchronization between test and UI threads.
+Robolectric has very limited APIs for [`View`][view-documentation] interaction. In most cases, test
+writers can just use Android APIs, such as [`Activity.findViewById()`][activity-find-view-by-id]
+which was safe since Robolectric tests do not have to worry about synchronization between test and
+UI threads.
 
-[Espresso](https://developer.android.com/training/testing/espresso/) is the view
-matching and interaction library of choice for instrumentation tests. Since Robolectric
-4.0, Espresso APIs are now supported in Robolectric tests.
+[Espresso][espresso] is the `View` matching and interaction library of choice for instrumentation
+tests. Since Robolectric 4.0, Espresso APIs are now supported in Robolectric tests.
 
 === "Java"
 
@@ -287,9 +289,8 @@ matching and interaction library of choice for instrumentation tests. Since Robo
 
 ## Fragments
 
-AndroidX Test provides [`FragmentScenario`](https://developer.android.com/reference/androidx/fragment/app/testing/FragmentScenario),
-which offers APIs to safely create your [`Fragment`](https://developer.android.com/reference/androidx/fragment/app/Fragment)
-under test and drive it through valid transitions.
+AndroidX Test provides [`FragmentScenario`][fragment-scenario], which offers APIs to safely create
+your [`Fragment`][fragment-documentation] under test and drive it through valid transitions.
 
 === "Java"
 
@@ -325,4 +326,22 @@ under test and drive it through valid transitions.
     }
     ```
 
-Read more about testing Fragments [here](https://developer.android.com/training/basics/fragments/testing).
+Read more about testing Fragments [here][fragment-testing].
+
+[activity-controller]: javadoc/latest/org/robolectric/android/controller/ActivityController.html
+[activity-documentation]: https://developer.android.com/reference/android/app/Activity
+[activity-find-view-by-id]: https://developer.android.com/reference/android/app/Activity#findViewById(int)
+[activity-scenario]: https://developer.android.com/reference/androidx/test/core/app/ActivityScenario
+[activity-scenario-on-activity]: https://developer.android.com/reference/androidx/test/core/app/ActivityScenario#onActivity(androidx.test.core.app.ActivityScenario.ActivityAction%3CA%3E)
+[activity-scenario-rule]: https://developer.android.com/reference/androidx/test/ext/junit/rules/ActivityScenarioRule
+[configuration-plugin-api]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.0
+[context-documentation]: https://developer.android.com/reference/android/content/Context
+[espresso]: https://developer.android.com/training/testing/espresso
+[fragment-documentation]: https://developer.android.com/reference/androidx/fragment/app/Fragment
+[fragment-scenario]: https://developer.android.com/reference/androidx/fragment/app/testing/FragmentScenario
+[fragment-testing]: https://developer.android.com/training/basics/fragments/testing
+[junit-rule]: https://junit.org/junit4/javadoc/latest/org/junit/Rule.html
+[robolectric-4.0-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.0
+[robolectric-build-activity]: javadoc/latest/org/robolectric/Robolectric.html#buildActivity
+[robolectric-setup-activity]: javadoc/latest/org/robolectric/Robolectric.html#setupActivity(java.lang.Class)
+[view-documentation]: https://developer.android.com/reference/android/view/View
