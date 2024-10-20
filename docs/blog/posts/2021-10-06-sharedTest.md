@@ -98,7 +98,10 @@ If it finds current running environment has `RobolectricTestRunner`, it will del
 
 ## Not only sharing code, but also speeding up development
 
-With `sharedTest` pattern, we can share test code as much as possible. Is it the only benefit to encourage you to use `sharedTest` pattern? Not yet. Actually, Robolectric is a simulated Android environment inside a JVM. It has better speed to establish and destroy tests environment, and developers can get test result more quickly. It can help developers to speed up [TDD cycles](https://developer.android.com/training/testing/fundamentals#create-test-iteratively):
+With `sharedTest` pattern, we can share test code as much as possible. Is it the only benefit to
+encourage you to use `sharedTest` pattern? Not yet. Actually, Robolectric is a simulated Android
+environment inside a JVM. It has better speed to establish and destroy tests environment, and
+developers can get test results more quickly. It can help developers to speed up [TDD cycles][18]:
 
 ![The two cycles associated with iterative, test-driven development](https://developer.android.com/images/training/testing/testing-workflow.png)
 
@@ -135,3 +138,4 @@ There are some Google's projects have used `sharedTest` pattern to sharing test 
 [15]: https://github.com/android/testing-samples/tree/main/ui/espresso/FragmentScenarioSample "FragmentScenarioSample of testing-samples"
 [16]: https://github.com/android/testing-samples/tree/main/ui/espresso/FragmentScenarioSample/app/src/sharedTest "sharedTest directory of FragmentScenarioSample"
 [17]: https://cs.android.com/androidx/android-test/+/master:ext/junit/java/androidx/test/ext/junit/runners/AndroidJUnit4.java "AndroidJUnit4 source code"
+[18]: https://developer.android.com/training/testing/fundamentals#create-test-iteratively "TDD cycles"
