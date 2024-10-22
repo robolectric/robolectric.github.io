@@ -5,7 +5,7 @@ hide:
 
 # Writing Your First Test
 
-Let's say that you have an [`Activity`](https://developer.android.com/reference/android/app/Activity) that represents a welcome screen:
+Let's say that you have an [`Activity`][activity-documentation] that represents a welcome screen:
 
 === "Java"
 
@@ -57,7 +57,9 @@ Let's say that you have an [`Activity`](https://developer.android.com/reference/
 
 We want to write a test that asserts that when the user clicks on the "Login" button, the app launches the `LoginActivity`.
 
-To achieve this, we can check that the correct [`Intent`](https://developer.android.com/reference/android/content/Intent) is started when the click is performed. Since Robolectric is a unit testing framework, the `LoginActivity` will not actually be started.
+To achieve this, we can check that the correct [`Intent`][intent-documentation] is started when the
+click is performed. Since Robolectric is a unit testing framework, the `LoginActivity` will not
+actually be started.
 
 === "Java"
 
@@ -136,3 +138,6 @@ Additional test APIs are accessible as static methods on special classes called 
     // Simulate a new display being plugged into the device
     ShadowDisplayManager.addDisplay("xlarge-port")
     ```
+
+[activity-documentation]: https://developer.android.com/reference/android/app/Activity
+[intent-documentation]: https://developer.android.com/reference/android/content/Intent

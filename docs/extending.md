@@ -12,13 +12,19 @@ Using byte code instrumentation, Robolectric is able to weave in cross-platform 
 
 ### What's in a Name?
 
-Why "Shadow"? Shadow objects are not quite [Proxies](https://en.wikipedia.org/wiki/Proxy_pattern "Proxy pattern - Wikipedia, the free encyclopedia"), not quite [Fakes](https://c2.com/cgi/wiki?FakeObject "Fake Object"), not quite [Mocks or Stubs](https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs "Mocks Aren't Stubs"). Shadows are sometimes hidden, sometimes seen, and can lead you to the real object. At least we didn't call them "sheep", which we were considering.
+Why "Shadow"? Shadow objects are not quite [Proxies][proxy-pattern], not quite [Fakes][fake-object],
+not quite [Mocks or Stubs][mocks-arent-stubs]. Shadows are sometimes hidden, sometimes seen, and can
+lead you to the real object. At least we didn't call them "sheep", which we were considering.
 
 ### Shadow Classes
 
-Shadow classes always need a public no-arg constructor so that the Robolectric framework can instantiate them. They are associated to the class that they Shadow with an [`@Implements`](javadoc/latest/org/robolectric/annotation/Implements.html) annotation on the class declaration.
+Shadow classes always need a public no-arg constructor so that the Robolectric framework can
+instantiate them. They are associated to the class that they Shadow with an
+[`@Implements`][implements-documentation] annotation on the class declaration.
 
-Shadow classes should mimic the production classes' inheritance hierarchy. For example, if you are implementing a Shadow for [`ViewGroup`](https://developer.android.com/reference/android/view/ViewGroup), `ShadowViewGroup`, then your Shadow class should extend `ViewGroup`'s superclass' Shadow, `ShadowView`.
+Shadow classes should mimic the production classes' inheritance hierarchy. For example, if you are
+implementing a Shadow for [`ViewGroup`][view-group-documentation], `ShadowViewGroup`, then your
+Shadow class should extend `ViewGroup`'s superclass' Shadow, `ShadowView`.
 
 === "Java"
 
@@ -55,7 +61,8 @@ Suppose an application defined the following line of code:
 
 Under test, the `ShadowImageView#setImageResource(int resId)` method on the Shadow instance would be invoked.
 
-Shadow methods must be marked with the [`@Implementation`](javadoc/latest/org/robolectric/annotation/Implementation.html) annotation. Robolectric includes a lint test to help ensure this is done correctly.
+Shadow methods must be marked with the [`@Implementation`][implementation-documentation] annotation.
+Robolectric includes a lint test to help ensure this is done correctly.
 
 === "Java"
 
@@ -85,13 +92,19 @@ Robolectric supports shadowing all methods on the original class, including `pri
 
 Typically `@Implementation` methods should have the `protected` modifier. The intention is to reduce the API surface area of the Shadows; the test author should always call such methods on the Android framework class directly.
 
-It is important that shadow methods are implemented on the corresponding shadow of the class in which they were originally defined. Otherwise, Robolectric's lookup mechanism will not find them (even if they have been declared on a shadow subclass). For example, the method [`setEnabled()`](https://developer.android.com/reference/android/view/View#setEnabled(boolean)) is defined on [`View`](https://developer.android.com/reference/android/view/View). If a `setEnabled()` method is defined on `ShadowViewGroup` instead of `ShadowView` then it will not be found at run time even when `setEnabled()` is called on an instance of `ViewGroup`.
+It is important that shadow methods are implemented on the corresponding shadow of the class in
+which they were originally defined. Otherwise, Robolectric's lookup mechanism will not find them
+(even if they have been declared on a shadow subclass). For example, the method
+[`setEnabled()`][view-set-enabled] is defined on [`View`][view-documentation]. If a `setEnabled()`
+method is defined on `ShadowViewGroup` instead of `ShadowView` then it will not be found at run time
+even when `setEnabled()` is called on an instance of `ViewGroup`.
 
 ### Shadowing Constructors
 
 Once a Shadow object is instantiated, Robolectric will look for a method named  `__constructor__` and annotated with `@Implementation` which has the same arguments as the constructor that was invoked on the real object.
 
-For instance, if the application code was to invoke the [`TextView`](https://developer.android.com/reference/android/widget/TextView) constructor which receives a [`Context`](https://developer.android.com/reference/android/content/Context):
+For instance, if the application code was to invoke the [`TextView`][text-view-documentation]
+constructor which receives a [`Context`][context-documentation]:
 
 === "Java"
 
@@ -131,7 +144,9 @@ Robolectric would invoke the following  `__constructor__` method that receives a
 
 ### Getting access to the real instance
 
-Sometimes Shadow classes may want to refer to the object they are shadowing, e.g., to manipulate fields. A Shadow class can achieve this by declaring a field annotated with [`@RealObject`](javadoc/latest/org/robolectric/annotation/RealObject.html):
+Sometimes Shadow classes may want to refer to the object they are shadowing, e.g., to manipulate
+fields. A Shadow class can achieve this by declaring a field annotated with
+[`@RealObject`][real-object-documentation]:
 
 === "Java"
 
@@ -161,11 +176,13 @@ Sometimes Shadow classes may want to refer to the object they are shadowing, e.g
     }
     ```
 
-Robolectric will set `realPoint` to the actual instance of [`Point`](https://developer.android.com/reference/android/graphics/Point) before invoking any other methods.
+Robolectric will set `realPoint` to the actual instance of [`Point`][point-documentation] before
+invoking any other methods.
 
 It is important to note that methods called on the real object will still be intercepted and redirected by Robolectric. This does not often matter in test code, but it has important implications for Shadow class implementors. Since the Shadow class inheritance hierarchy does not always mirror that of their associated Android classes, it is sometimes necessary to make calls through these real objects so that the Robolectric runtime will have the opportunity to route them to the correct Shadow class based on the actual class of the object. Otherwise, methods on Shadows of base classes would be unable to access methods on the Shadows of their subclasses.
 
-Methods on your shadow class are able to call through to the Android OS code, using [`Shadow.directlyOn()`](javadoc/latest/org/robolectric/shadow/api/Shadow.html#directlyOn(java.lang.Class,java.lang.String,org.robolectric.util.ReflectionHelpers.ClassParameter...)).
+Methods on your shadow class are able to call through to the Android OS code, using
+[`Shadow.directlyOn()`][shadow-directly-on].
 
 ## Custom Shadows
 
@@ -219,19 +236,27 @@ methods using `@Implementation` or shadowing constructors using `__constructor__
 
 ### Using a Custom Shadows
 
-Custom Shadows get hooked up to Robolectric using the [`@Config`](javadoc/latest/org/robolectric/annotation/Config.html) annotation on the test class or test method, using the [`shadows`](javadoc/latest/org/robolectric/annotation/Config.html#shadows()) array attribute. To use the `MyShadowBitmap` class mentioned in the previous section, you would annotate the test in question with `@Config(shadows = { MyShadowBitmap.class })`. This causes Robolectric to recognize and use your custom shadow when executing code against the class you shadowed.
+Custom Shadows get hooked up to Robolectric using the [`@Config`][config-documentation] annotation
+on the test class or test method, using the [`shadows`][config-shadows] array attribute. To use the
+`MyShadowBitmap` class mentioned in the previous section, you would annotate the test in question
+with `@Config(shadows = { MyShadowBitmap.class })`. This causes Robolectric to recognize and use
+your custom shadow when executing code against the class you shadowed.
 
 If you would like your custom shadows to be applied to all tests in your suite or a certain package, you can configure shadows through the [`robolectric.properties`](configuring.md#robolectricproperties-file) file.
 
-Note, by default `Shadows.shadowOf()` method will not work with custom shadows. You can instead use [`Shadow.extract()`](javadoc/latest/org/robolectric/shadow/api/Shadow.html#extract(java.lang.Object)) and cast the return value to the custom Shadow class you implemented.
+Note, by default `Shadows.shadowOf()` method will not work with custom shadows. You can instead
+use [`Shadow.extract()`][shadow-extract] and cast the return value to the custom Shadow class you
+implemented.
 
 ### Building a library of Custom Shadows.
 
 If you find yourself building a library of custom shadows, you should consider running Robolectric's shadow annotation processor on your library of shadows. This provides a number of benefits such as:
 
 1. Generating `shadowOf` methods for each of your shadows.
-2. Generating a `ServiceLoader` so your custom shadows are automatically applied if found on the classpath.
-3. Invoking any `static` [`@Resetter`](javadoc/latest/org/robolectric/annotation/Resetter.html) methods on teardown to enable you to reset static state.
+2. Generating a `ServiceLoader` so your custom shadows are automatically applied if found on the
+   classpath.
+3. Invoking any `static` [`@Resetter`][resetter-documentation] methods on teardown to enable you to
+   reset static state.
 4. Perform additional validation and checking on your shadows.
 
 === "Groovy"
@@ -255,7 +280,7 @@ If you find yourself building a library of custom shadows, you should consider r
 
 === "Kotlin"
 
-    When you write your shadows in Kotlin, configure [`kapt`](https://kotlinlang.org/docs/kapt.html):
+    When you write your shadows in Kotlin, configure [`kapt`][kapt-documentation]:
 
     ```kotlin
     plugins {
@@ -277,7 +302,10 @@ If you find yourself building a library of custom shadows, you should consider r
 
 ### Limit API surface area of shadows
 
-Since [Robolectric 3.7](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.7) `@Implementation` methods including `__constructor__` methods can be made `protected`. This is desirable as test code has no business calling these methods, by making your `@Implementation` methods protected you encourage test writers to call the public Android APIs instead.
+Since [Robolectric 3.7][robolectric-3.7-release] `@Implementation` methods including
+`__constructor__` methods can be made `protected`. This is desirable as test code has no business
+calling these methods, by making your `@Implementation` methods protected you encourage test writers
+to call the public Android APIs instead.
 
 ### Don't override `equals`, `hashCode` and `toString` in shadows
 
@@ -289,8 +317,32 @@ Rather than using shadows as glorified argument captors, prefer writing a shadow
 
 ### Use caution when shadowing your own code
 
-Robolectric provides a lot of power which requires responsible usage. Shadows are ideal for testing interaction with the Android framework as the framework doesn't support dependency injection and makes liberal use of static code. Before writing custom shadows for your own code, consider if you can't better refactor your code and use a popular mocking library such as [Mockito](https://site.mockito.org/).
+Robolectric provides a lot of power which requires responsible usage. Shadows are ideal for testing
+interaction with the Android framework as the framework doesn't support dependency injection and
+makes liberal use of static code. Before writing custom shadows for your own code, consider if you
+can't better refactor your code and use a popular mocking library such as [Mockito][mockito].
 
 ### Support the community
 
 Please [contribute](contributing.md) your enhancements to Robolectric. This will help the community and reduce the bloat in your own codebase.
+
+[config-documentation]: javadoc/latest/org/robolectric/annotation/Config.html
+[config-shadows]: javadoc/latest/org/robolectric/annotation/Config.html#shadows()
+[context-documentation]: https://developer.android.com/reference/android/content/Context
+[fake-object]: https://c2.com/cgi/wiki?FakeObject "Fake Object"
+[implementation-documentation]: javadoc/latest/org/robolectric/annotation/Implementation.html
+[implements-documentation]: javadoc/latest/org/robolectric/annotation/Implements.html
+[kapt-documentation]: https://kotlinlang.org/docs/kapt.html
+[mockito]: https://site.mockito.org/
+[mocks-arent-stubs]: https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs "Mocks Aren't Stubs"
+[point-documentation]: https://developer.android.com/reference/android/graphics/Point
+[proxy-pattern]: https://en.wikipedia.org/wiki/Proxy_pattern "Proxy pattern - Wikipedia, the free encyclopedia"
+[real-object-documentation]: javadoc/latest/org/robolectric/annotation/RealObject.html
+[resetter-documentation]: javadoc/latest/org/robolectric/annotation/Resetter.html
+[robolectric-3.7-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-3.7
+[shadow-directly-on]: javadoc/latest/org/robolectric/shadow/api/Shadow.html#directlyOn(java.lang.Class,java.lang.String,org.robolectric.util.ReflectionHelpers.ClassParameter...)
+[shadow-extract]: javadoc/latest/org/robolectric/shadow/api/Shadow.html#extract(java.lang.Object)
+[text-view-documentation]: https://developer.android.com/reference/android/widget/TextView
+[view-documentation]: https://developer.android.com/reference/android/view/View
+[view-group-documentation]: https://developer.android.com/reference/android/view/ViewGroup
+[view-set-enabled]: https://developer.android.com/reference/android/view/View#setEnabled(boolean)
