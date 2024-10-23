@@ -5,11 +5,17 @@ hide:
 
 # Using qualified resources
 
-As described [in the Android developer docs](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources), resource qualifiers allow you to change how your resources are loaded based on such factors as the language on the device, to the screen size, to whether it is day or night.  While these changes are often tedious to test rigorously (every string has a translation for all supported languages), you may find yourself wishing to run tests in different resource qualified contexts.
+As described [in the Android developer docs][android-providing-alternative-resources], resource
+qualifiers allow you to change how your resources are loaded based on such factors as the language
+on the device, to the screen size, to whether it is day or night. While these changes are often
+tedious to test rigorously (every string has a translation for all supported languages), you may
+find yourself wishing to run tests in different resource qualified contexts.
 
 ## Specifying resources in test
 
-Specifying a resource qualifier is quite simple: simply add the desired qualifiers to the [`@Config`](javadoc/latest/org/robolectric/annotation/Config.html) annotation on your test case or test class, depending on whether you would like to change the resource qualifiers for the whole file, or simply one test.
+Specifying a resource qualifier is quite simple: simply add the desired qualifiers to the
+[`@Config`][config-documentation] annotation on your test case or test class, depending on whether
+you would like to change the resource qualifiers for the whole file, or simply one test.
 
 Given the following resources:
 
@@ -62,4 +68,9 @@ this Robolectric test would pass, using the Android resource qualifier resolutio
     }
     ```
 
-Multiple qualifiers should be separated by dashes and provided in the order put forth in [this list](https://developer.android.com/guide/topics/resources/providing-resources.html#table2).
+Multiple qualifiers should be separated by dashes and provided in the order put forth in
+[this list][android-resources-qualifiers-order].
+
+[android-providing-alternative-resources]: https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
+[android-resources-qualifiers-order]: https://developer.android.com/guide/topics/resources/providing-resources.html#table2
+[config-documentation]: javadoc/latest/org/robolectric/annotation/Config.html

@@ -1,10 +1,13 @@
 # Device Configuration
 
-Robolectric makes it easy to simulate a variety of device configurations. In particular, the properties that make up the [`Configuration`](https://developer.android.com/reference/android/content/res/Configuration) class can be specified at the test method, test class, package, or suite level, as described [here](configuring.md).
+Robolectric makes it easy to simulate a variety of device configurations. In particular, the
+properties that make up the [`Configuration`][configuration-documentation] class can be specified at
+the test method, test class, package, or suite level, as described [here](configuring.md).
 
 ## Specifying device configuration
 
-The Android device configuration can be specified using the [`qualifiers`](javadoc/latest/org/robolectric/annotation/Config.html#qualifiers()) [`@Config`](javadoc/latest/org/robolectric/annotation/Config.html) argument:
+The Android device configuration can be specified using the [`qualifiers`][config-qualifiers]
+[`@Config`][config-documentation] argument:
 
 === "Java"
 
@@ -24,7 +27,12 @@ The Android device configuration can be specified using the [`qualifiers`](javad
     }
     ```
 
-From [version 3.6](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.6) on, Robolectric parses the `qualifiers` property according to the rules set forth [here](https://developer.android.com/guide/topics/resources/providing-resources.html#QualifierRules) (but with no preceding directory name), and sets up the Android simulation environment with a corresponding configuration. The system's `Configuration`, [`Display`](https://developer.android.com/reference/android/view/Display) and [`DisplayMetrics`](https://developer.android.com/reference/android/hardware/display/DisplayManager) objects will all reflect the specified configuration, the locale will be set, and appropriate resources will be selected.
+From [version 3.6][robolectric-3.6-release] on, Robolectric parses the `qualifiers` property
+according to the rules set forth [here][android-resources-qualifier-rules] (but with no preceding
+directory name), and sets up the Android simulation environment with a corresponding configuration.
+The system's `Configuration`, [`Display`][display-documentation] and
+[`DisplayMetrics`][display-metrics-documentation] objects will all reflect the specified
+configuration, the locale will be set, and appropriate resources will be selected.
 
 For unspecified properties, Robolectric picks consistent values based on the properties that have been specified, or uses default values as follows:
 
@@ -108,7 +116,8 @@ Values for unspecified properties are calculated, and rules are applied, after a
 
 ## Changing device configuration
 
-The device configuration can be changed within a test using [`RuntimeEnvironment.setQualifiers()`](javadoc/latest/org/robolectric/RuntimeEnvironment.html#setQualifiers(java.lang.String)):
+The device configuration can be changed within a test using
+[`RuntimeEnvironment.setQualifiers()`][runtime-environment-set-qualifiers]:
 
 === "Java"
 
@@ -142,10 +151,30 @@ The device configuration can be changed within a test using [`RuntimeEnvironment
 
 The string parameter to `RuntimeEnvironment.setQualifiers()` has the same rules as `Config.qualifiers`.
 
-Note that `RuntimeEnvironment.setQualifiers()` updates the system and application resources with the new configuration, but does not trigger any action on extant activities or other components. [`ActivityController.configurationChange()`](javadoc/latest/org/robolectric/android/controller/ActivityController.html#configurationChange(android.content.res.Configuration)) can be used to simulate the sequence of events that take place on a device when its configuration changes.
+Note that `RuntimeEnvironment.setQualifiers()` updates the system and application resources with the
+new configuration, but does not trigger any action on extant activities or other components.
+[`ActivityController.configurationChange()`][activity-controller-configuration-change] can be used
+to simulate the sequence of events that take place on a device when its configuration changes.
 
-If the [`Activity`](https://developer.android.com/reference/android/app/Activity) is configured to handle the configuration changes, `ActivityController.configurationChange()` will call the `Activity`’s `onConfigurationChanged()` method. If not, `ActivityController` destroys and recreates the `Activity`.
+If the [`Activity`][activity-documentation] is configured to handle the configuration changes,
+`ActivityController.configurationChange()` will call the `Activity`’s `onConfigurationChanged()`
+method. If not, `ActivityController` destroys and recreates the `Activity`.
 
 ## Simulating displays
 
-Robolectric allows display properties to be changed during a test using setters on [`ShadowDisplay`](javadoc/latest/org/robolectric/shadows/ShadowDisplay.html). Multiple displays can be simulated using APIs on [`ShadowDisplayManager`](javadoc/latest/org/robolectric/shadows/ShadowDisplayManager.html).
+Robolectric allows display properties to be changed during a test using setters on
+[`ShadowDisplay`][shadow-display]. Multiple displays can be simulated using APIs on
+[`ShadowDisplayManager`][shadow-display-manager].
+
+[activity-controller-configuration-change]: javadoc/latest/org/robolectric/android/controller/ActivityController.html#configurationChange(android.content.res.Configuration)
+[activity-documentation]: https://developer.android.com/reference/android/app/Activity
+[android-resources-qualifier-rules]: https://developer.android.com/guide/topics/resources/providing-resources.html#QualifierRules
+[config-documentation]: javadoc/latest/org/robolectric/annotation/Config.html
+[config-qualifiers]: javadoc/latest/org/robolectric/annotation/Config.html#qualifiers()
+[configuration-documentation]: https://developer.android.com/reference/android/content/res/Configuration
+[display-documentation]: https://developer.android.com/reference/android/view/Display
+[display-metrics-documentation]: https://developer.android.com/reference/android/util/DisplayMetrics
+[robolectric-3.6-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-3.6
+[runtime-environment-set-qualifiers]: javadoc/latest/org/robolectric/RuntimeEnvironment.html#setQualifiers(java.lang.String)
+[shadow-display]: javadoc/latest/org/robolectric/shadows/ShadowDisplay.html
+[shadow-display-manager]: javadoc/latest/org/robolectric/shadows/ShadowDisplayManager.html

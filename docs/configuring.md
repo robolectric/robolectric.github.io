@@ -6,8 +6,9 @@ Several aspects of Robolectric's behavior can be configured at runtime, using ei
 
 ### `@Config` annotation
 
-To configure Robolectric for a single test class or method, use the [`@Config`](javadoc/latest/org/robolectric/annotation/Config.html) annotation on the desired class or method.
-Annotations applied on methods take precedence over the ones at the class level.
+To configure Robolectric for a single test class or method, use the
+[`@Config`][config-documentation] annotation on the desired class or method. Annotations applied on
+methods take precedence over the ones at the class level.
 
 Base classes are also searched for annotations. So if you find yourself specifying the same values on a large number of tests, you can create a base class and move your `@Config` annotation to that class.
 
@@ -44,11 +45,13 @@ shadows=com.mycompany.ShadowFoo,com.mycompany.ShadowBar
 ```
 
 > [!NOTE]
-> Prior to [Robolectric 3.1.3](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.1.3), only a top-level `robolectric.properties` file may be specified.
+> Prior to [Robolectric 3.1.3][robolectric-3.1.3-release], only a top-level `robolectric.properties`
+> file may be specified.
 
 ### Global Configuration
 
-If you wish to change the default for any configurable value for all your tests, you can provide a [`GlobalConfigProvider`](javadoc/latest/org/robolectric/pluginapi/config/GlobalConfigProvider.html) service implementation.
+If you wish to change the default for any configurable value for all your tests, you can provide a
+[`GlobalConfigProvider`][global-config-provider] service implementation.
 
 ## Configurables
 
@@ -56,8 +59,10 @@ The following examples show how to handle common configuration tasks. For clarit
 
 ### Configure SDK Level
 
-By default, Robolectric will run your code against the `targetSdk` specified in your module's `build.gradle`/`build.gradle.kts` or `AndroidManifest.xml` file.
-If you want to test your code under a different SDK, you can specify the desired SDK(s) using the [`sdk`](javadoc/latest/org/robolectric/annotation/Config.html#sdk()), [`minSdk`](javadoc/latest/org/robolectric/annotation/Config.html#minSdk()) and [`maxSdk`](javadoc/latest/org/robolectric/annotation/Config.html#maxSdk()) config properties:
+By default, Robolectric will run your code against the `targetSdk` specified in your module's
+`build.gradle`/`build.gradle.kts` or `AndroidManifest.xml` file. If you want to test your code under
+a different SDK, you can specify the desired SDK(s) using the [`sdk`][config-sdk],
+[`minSdk`][config-min-sdk] and [`maxSdk`][config-max-sdk] config properties:
 
 === "Java"
 
@@ -111,13 +116,16 @@ Note that `sdk` and `minSdk`/`maxSdk` may not be specified in the same `@Config`
 however, `minSdk` and `maxSdk` may be specified together. If any of them is present, they override any SDK specification from a less-specific configuration location.
 
 > [!NOTE]
-> Prior to [Robolectric 3.2](https://github.com/robolectric/robolectric/releases/tag/robolectric-3.2), `minSdk` and `maxSdk` are ignored, and [`NEWEST_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#NEWEST_SDK), [`OLDEST_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#OLDEST_SDK), and [`TARGET_SDK`](javadoc/latest/org/robolectric/annotation/Config.html#TARGET_SDK) are not supported.
-> Also, only integers corresponding to API levels may be specified in a properties file.
+> Prior to [Robolectric 3.2][robolectric-3.2-release], `minSdk` and `maxSdk` are ignored, and
+> [`NEWEST_SDK`][config-newest-sdk], [`OLDEST_SDK`][config-oldest-sdk], and
+> [`TARGET_SDK`][config-target-sdk] are not supported. Also, only integers corresponding to API
+> levels may be specified in a properties file.
 
 ### Configure `Application` class
 
-Robolectric will attempt to create an instance of your [`Application`](https://developer.android.com/reference/android/app/Application) class
-as specified in the `AndroidManifest`. If you want to provide a custom implementation, you can specify it by setting:
+Robolectric will attempt to create an instance of your [`Application`][application-documentation]
+class as specified in the `AndroidManifest`. If you want to provide a custom implementation, you can
+specify it by setting:
 
 === "Java"
 
@@ -189,15 +197,17 @@ Some additional options can be configured globally by setting these system prope
 | `robolectric.dependency.repo.password` | Password of the repository that you defined in `robolectric.dependency.repo.url`. | `null` |
 | `robolectric.logging.enabled` | Set to `true` to enable debug logging. | `false` |
 
-Since [Robolectric 4.9.1](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9.1), you can now add these parameters :
+Since [Robolectric 4.9.1][robolectric-4.9.1-release], you can now add these parameters:
 
 | Property name | Description | Default value |
 |-----|-----|-----|
 | `robolectric.dependency.proxy.host` | Set the host of the proxy to use for the runtime dependencies. | `null` |
 | `robolectric.dependency.proxy.port` | Set the port number of the proxy to use for the runtime dependencies. | `0` |
 
-When using Gradle, you can configure the System Properties for unit tests with the `android.testOptions.unitTests.all` block (see [here](https://developer.android.com/studio/test/advanced-test-setup#configure-gradle-test-options)).
-For example, to override the Maven repository URL and ID to download the runtime dependencies from a repository other than Maven Central:
+When using Gradle, you can configure the System Properties for unit tests with the
+`android.testOptions.unitTests.all` block (see [here][configure-gradle-test-options]). For example,
+to override the Maven repository URL and ID to download the runtime dependencies from a repository
+other than Maven Central:
 
 === "Groovy"
 
@@ -243,10 +253,36 @@ For example, to override the Maven repository URL and ID to download the runtime
 
 ## `ConscryptMode`
 
-Starting with [Robolectric 4.9](https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9), Robolectric can either use Conscrypt and BouncyCastle or just BouncyCastle as the security provider. 
-In order to migrate tests over time, there is a [`ConscryptMode`](javadoc/latest/org/robolectric/annotation/ConscryptMode.html) annotation that controls whether Conscrypt is loaded as the default security provider with BouncyCastle as backup. 
+Starting with [Robolectric 4.9][robolectric-4.9-release], Robolectric can either use Conscrypt and
+BouncyCastle or just BouncyCastle as the security provider. In order to migrate tests over time,
+there is a [`ConscryptMode`][conscrypt-mode] annotation that controls whether Conscrypt is loaded as
+the default security provider with BouncyCastle as backup.
 
-- If [`ConscryptMode.Mode`](javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html) is [`ON`](javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html#ON), it will install Conscrypt and BouncyCastle.
-- If [`ConscryptMode.Mode`](javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html) is [`OFF`](javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html#OFF), it will only install BouncyCastle.
+- If [`ConscryptMode.Mode`][conscrypt-mode-mode] is [`ON`][conscrypt-mode-mode-on], it will install
+  Conscrypt and BouncyCastle.
+- If [`ConscryptMode.Mode`][conscrypt-mode-mode] is [`OFF`][conscrypt-mode-mode-off], it will only
+  install BouncyCastle.
 
-This is closer to to the way that it works on [real android](https://cs.android.com/android/platform/superproject/+/android-13.0.0_r1:libcore/ojluni/src/main/java/java/security/Security.java;l=134-137). Robolectric will search for a requested security primitive from Conscrypt first. If it does not support it, Robolectric will try BouncyCastle second.
+This is closer to the way that it works on [real android][android-security]. Robolectric will search
+for a requested security primitive from Conscrypt first. If it does not support it, Robolectric will
+try BouncyCastle second.
+
+[android-security]: https://cs.android.com/android/platform/superproject/+/android-13.0.0_r1:libcore/ojluni/src/main/java/java/security/Security.java;l=134-137
+[application-documentation]: https://developer.android.com/reference/android/app/Application
+[config-documentation]: javadoc/latest/org/robolectric/annotation/Config.html
+[config-max-sdk]: javadoc/latest/org/robolectric/annotation/Config.html#maxSdk()
+[config-min-sdk]: javadoc/latest/org/robolectric/annotation/Config.html#minSdk()
+[config-newest-sdk]: javadoc/latest/org/robolectric/annotation/Config.html#NEWEST_SDK
+[config-oldest-sdk]: javadoc/latest/org/robolectric/annotation/Config.html#OLDEST_SDK
+[config-target-sdk]: javadoc/latest/org/robolectric/annotation/Config.html#TARGET_SDK
+[config-sdk]: javadoc/latest/org/robolectric/annotation/Config.html#sdk()
+[configure-gradle-test-options]: https://developer.android.com/studio/test/advanced-test-setup#configure-gradle-test-options
+[conscrypt-mode]: javadoc/latest/org/robolectric/annotation/ConscryptMode.html
+[conscrypt-mode-mode]: javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html
+[conscrypt-mode-mode-off]: javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html#OFF
+[conscrypt-mode-mode-on]: javadoc/latest/org/robolectric/annotation/ConscryptMode.Mode.html#ON
+[global-config-provider]: javadoc/latest/org/robolectric/pluginapi/config/GlobalConfigProvider.html
+[robolectric-3.1.3-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-3.1.3
+[robolectric-3.2-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-3.2
+[robolectric-4.9-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9
+[robolectric-4.9.1-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9.1

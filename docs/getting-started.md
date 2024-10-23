@@ -1,6 +1,8 @@
 # Getting Started
 
-Robolectric works with various build systems, which are documented on this page. If you are starting a new project, we recommend [Gradle](https://gradle.org/) as a first choice, since it is the default build system for Android.
+Robolectric works with various build systems, which are documented on this page. If you are starting
+a new project, we recommend [Gradle][gradle] as a first choice, since it is the default build system
+for Android.
 
 ## Building with Gradle
 
@@ -63,9 +65,12 @@ Then, mark your test to run with `RobolectricTestRunner`:
 
 ## Building with Bazel
 
-Robolectric works with [Bazel](https://bazel.build) 0.10.0 or higher. Bazel integrates with Robolectric through the `android_local_test` rule. The Robolectric Java/Kotlin test code is the same for a Bazel project as for a Gradle project (see section above).
+Robolectric works with [Bazel][bazel] 0.10.0 or higher. Bazel integrates with Robolectric through
+the `android_local_test` rule. The Robolectric Java/Kotlin test code is the same for a Bazel project
+as for a Gradle project (see section above).
 
-Robolectric needs to be added as a dependency to your Bazel project with [`rules_jvm_external`](https://github.com/bazelbuild/rules_jvm_external). Add the following to your `WORKSPACE` file:
+Robolectric needs to be added as a dependency to your Bazel project with
+[`rules_jvm_external`][bazel-rules-jvm-external]. Add the following to your `WORKSPACE` file:
 
 ```python
 http_archive(
@@ -116,9 +121,11 @@ android_local_test(
 ```
 
 > [!NOTE]
-> These instructions use `robolectric-bazel` 4.12.2 and `rules_jvm_external` 5.3. Please check [`robolectric-bazel`'s latest release](https://github.com/robolectric/robolectric-bazel/releases/latest) for up to date information.
+> These instructions use `robolectric-bazel` 4.12.2 and `rules_jvm_external` 5.3. Please check
+> [`robolectric-bazel`'s latest release][bazel-latest-release] for up-to-date information.
 
-If you have any question about Bazel integration, we recommend to [check `robolectric-bazel`](https://github.com/robolectric/robolectric-bazel) first, and file an issue there if you need assistance.
+If you have any question about Bazel integration, we recommend to [check
+`robolectric-bazel`][robolectric-bazel] first, and file an issue there if you need assistance.
 
 ## Building with Maven
 
@@ -211,3 +218,9 @@ If you reference resources that are outside of your project (i.e. in an AAR depe
 * [Build with Buck](https://buckbuild.com/rule/robolectric_test.html)
 * [Build with Buck2](https://buck2.build/docs/api/rules/#robolectric_test)
 * [Android's Testing samples](https://github.com/android/testing-samples)
+
+[bazel]: https://bazel.build
+[bazel-latest-release]: https://github.com/robolectric/robolectric-bazel/releases/latest
+[bazel-rules-jvm-external]: https://github.com/bazelbuild/rules_jvm_external
+[gradle]: https://gradle.org/
+[robolectric-bazel]: https://github.com/robolectric/robolectric-bazel
