@@ -23,25 +23,22 @@ However, the pristine android-all jars are not the ones used during tests. Inste
 modifies the pristine android-all jars using bytecode instrumentation (see
 [`ClassInstrumentor`][class-instrumentor]). It performs several modifications:
 
-1. All Android methods, including constructors and static initializers, are
-   modified to support `shadowing`. This allows any method call to the Android
-   framework to be intercepted by Robolectric and delegated to a shadow method.
-   At a high level, this is done by iterating over each Android method and
-   converting it into two methods: the original method (but renamed), and the
-   `invokedynamic delegator` which can optionally invoke shadow methods if they
-   are available.
+1. All Android methods, including constructors and static initializers, are modified to support
+   `shadowing`. This allows any method call to the Android framework to be intercepted by
+   Robolectric and delegated to a shadow method. At a high level, this is done by iterating over
+   each Android method and converting it into two methods: the original method (but renamed), and
+   the `invokedynamic delegator` which can optionally invoke shadow methods if they are available.
 
-1. Android constructors are specially modified to create shadow objects if a
-   shadow class is bound to the Android class being instantiated.
+1. Android constructors are specially modified to create shadow objects if a shadow class is bound
+   to the Android class being instantiated.
 
 1. Because the Android version of Java core classes (libcore) contains subtle differences to the
    JDKs, certain problematic method calls have to be intercepted and rewritten. See
    [`AndroidInterceptors`][android-interceptors].
 
-1. Native methods undergo special instrumentation. Currently, native methods are
-   converted to no-op non-native methods that are shadowable by default.
-   However, there is now a native variant of each method also created. There are 
-   more details about native code in a section below.
+1. Native methods undergo special instrumentation. Currently, native methods are converted to no-op
+   non-native methods that are shadowable by default. However, there is now a native variant of each
+   method also created. There are more details about native code in a section below.
 
 1. The `final` keyword is stripped from classes and methods.
 
@@ -49,13 +46,13 @@ modifies the pristine android-all jars using bytecode instrumentation (see
    [`SparseArray.set()`][sparse-array-set].
 
 This instrumentation is typically performed when a new release of Robolectric is made. These
-pre-instrumented Android-all jars are published on MavenCentral. See
-the [android-all-instrumented][android-all-instrumented] path. They are lazily downloaded and during
+pre-instrumented Android-all jars are published on MavenCentral. See the
+[android-all-instrumented][android-all-instrumented] path. They are lazily downloaded and during
 tests runtime using [`MavenArtifactFetcher`][maven-artifact-fetcher].
 
-Although Robolectric supports shadowing for Android framework classes, it is
-also possible for users to perform Robolectric instrumentation for any package
-(except built-in Java packages). This enables shadowing of arbitrary third-party code.
+Although Robolectric supports shadowing for Android framework classes, it is also possible for users
+to perform Robolectric instrumentation for any package (except built-in Java packages). This enables
+shadowing of arbitrary third-party code.
 
 ## Shadows
 
@@ -64,22 +61,21 @@ code is invoked. This is because a lot of Android framework classes are pure Jav
 [`Intent`][intent-source] class or the [`org.json`][org-json-package] package) and that code can run
 on the JVM without any modifications needed.
 
-However, there are cases where Robolectric needs to intercept and replace
-Android method calls. This most commonly occurs when Android system service or
-native methods are invoked. To do this, Robolectric uses a system called Shadow
-classes.
+However, there are cases where Robolectric needs to intercept and replace Android method calls. This
+most commonly occurs when Android system service or native methods are invoked. To do this,
+Robolectric uses a system called Shadow classes.
 
 Shadow classes are Java classes that contain the replacement code of Android methods when they are
 invoked. Each shadow class is bound to specific Android classes and methods through annotations.
 There are currently hundreds of shadow classes that can be found [here][shadows-list].
 
-Shadow classes may optionally contain public APIs that can customize the
-behavior of the methods they are shadowing.
+Shadow classes may optionally contain public APIs that can customize the behavior of the methods
+they are shadowing.
 
-Robolectric allows tests to specify custom shadows as well to provide user
-defined implementation for Android classes.
+Robolectric allows tests to specify custom shadows as well to provide user defined implementation
+for Android classes.
 
-## Shadow Packages and the Robolectric Annotation Processor 
+## Shadow Packages and the Robolectric Annotation Processor
 
 There are two categories of shadows: Robolectric’s built-in shadows that are aggregated using the
 [Robolectric Annotation Processor (RAP)][robolectric-annotation-processor], and custom shadows that
@@ -96,11 +92,10 @@ to see the `ShadowProvider` for the framework shadows, you can run:
 cat ./shadows/framework/build/generated/src/apt/main/org/robolectric/Shadows.java
 ```
 
-In this file you will see the class `public class Shadows implements
-ShadowProvider`.
+In this file you will see the class `public class Shadows implements ShadowProvider`.
 
-During runtime, Robolectric will use `ServiceLoader` to detect all shadow packages
-that implement `ShadowProvider` and the shadow classes contained in them.
+During runtime, Robolectric will use `ServiceLoader` to detect all shadow packages that implement
+`ShadowProvider` and the shadow classes contained in them.
 
 ## `Sandbox` and `ClassLoader`
 

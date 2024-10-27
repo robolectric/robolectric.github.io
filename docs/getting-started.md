@@ -163,7 +163,9 @@ Then, mark your test to run with `RobolectricTestRunner`:
 
 ### Using libraries
 
-If you use Maven to build your application, you will need to tell Robolectric where the unpacked resources are located for each library you use. This can either be specified with the `@Config` annotation:
+If you use Maven to build your application, you will need to tell Robolectric where the unpacked
+resources are located for each library you use. This can either be specified with the `@Config`
+annotation:
 
 === "Java"
 
@@ -202,7 +204,9 @@ All paths are relative to the root directory of the project.
 
 ### Debugging resource loading issues
 
-If you are not sure if resources are being loaded for a particular library, enable debug logging by setting the system property `robolectric.logging.enabled = true` and run your tests. You should see lots of output like:
+If you are not sure if resources are being loaded for a particular library, enable debug logging by
+setting the system property `robolectric.logging.enabled = true` and run your tests. You should see
+lots of output like:
 
 ```
 Loading resources for 'com.foo' from build/unpacked-libraries/library1...
@@ -210,7 +214,9 @@ Loading resources for 'com.foo' from build/unpacked-libraries/library1...
 
 If you don't see a particular library in the list, double-check the configuration.
 
-If you reference resources that are outside of your project (i.e. in an AAR dependency), you will need to provide Robolectric with a pointer to the exploded AAR in your build system. See [using libraries](#using-libraries) above for more information.
+If you reference resources that are outside of your project (i.e. in an AAR dependency), you will
+need to provide Robolectric with a pointer to the exploded AAR in your build system. See
+[using libraries](#using-libraries) above for more information.
 
 ## Additional resources
 

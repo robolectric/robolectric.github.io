@@ -34,35 +34,39 @@ The system's `Configuration`, [`Display`][display-documentation] and
 [`DisplayMetrics`][display-metrics-documentation] objects will all reflect the specified
 configuration, the locale will be set, and appropriate resources will be selected.
 
-For unspecified properties, Robolectric picks consistent values based on the properties that have been specified, or uses default values as follows:
+For unspecified properties, Robolectric picks consistent values based on the properties that have
+been specified, or uses default values as follows:
 
-| Property | Calculated value (if unspecified) | Default | Other rules |
-|-----|-----|-----|-----|
-| MCC and MNC | None | None | |
-| Language, region, and script (locale) | None | `en-rUS` | |
-| Layout direction | The locale’s layout direction | `ldltr` | |
-| Smallest width | The smallest of width and height | `sw320dp` | |
-| Width | If screen size is specified, the corresponding width as declared here | `w320dp` | If screen orientation is specified, width and height will be swapped as appropriate |
-| Height | If screen size is specified, the corresponding height as declared here. If screen aspect is specified as long, the height is increased by 25%. | `h470dp` | If screen orientation is specified, width and height will be swapped as appropriate |
-| Screen size | If height and width are specified, the corresponding screen size as declared here | `normal` | |
-| Screen aspect | If width and height are specified, long will be used if the ratio of height to width is at least 1.75 | `notlong` | |
-| Round screen | If UI mode is watch then `round` | `notround` | |
-| Wide color gamut | None | `nowidecg` | |
-| High dynamic range | None | `lowdr` | |
-| Screen orientation | If width and height are specified, `port` or `land` as appropriate | `port` | |
-| UI mode | None | | `normal`, except this property isn't included in the qualifier list |
-| Night mode | None | `notnight` | |
-| Screen pixel density | None | `mdpi` | |
-| Touchscreen type | None | `finger` | |
-| Keyboard availability | None | `keyssoft` | |
-| Primary text input method | None | `nokeys` | |
-| Navigation key availability | None | `navhidden` | |
-| Primary non-touch navigation method | None | `nonav` | |
-| Platform version | | | The SDK level currently active. Need not be specified. |
+| Property                              | Calculated value (if unspecified)                                                                                                              | Default     | Other rules                                                                         |
+|---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|-------------|-------------------------------------------------------------------------------------|
+| MCC and MNC                           | None                                                                                                                                           | None        |                                                                                     |
+| Language, region, and script (locale) | None                                                                                                                                           | `en-rUS`    |                                                                                     |
+| Layout direction                      | The locale’s layout direction                                                                                                                  | `ldltr`     |                                                                                     |
+| Smallest width                        | The smallest of width and height                                                                                                               | `sw320dp`   |                                                                                     |
+| Width                                 | If screen size is specified, the corresponding width as declared here                                                                          | `w320dp`    | If screen orientation is specified, width and height will be swapped as appropriate |
+| Height                                | If screen size is specified, the corresponding height as declared here. If screen aspect is specified as long, the height is increased by 25%. | `h470dp`    | If screen orientation is specified, width and height will be swapped as appropriate |
+| Screen size                           | If height and width are specified, the corresponding screen size as declared here                                                              | `normal`    |                                                                                     |
+| Screen aspect                         | If width and height are specified, long will be used if the ratio of height to width is at least 1.75                                          | `notlong`   |                                                                                     |
+| Round screen                          | If UI mode is watch then `round`                                                                                                               | `notround`  |                                                                                     |
+| Wide color gamut                      | None                                                                                                                                           | `nowidecg`  |                                                                                     |
+| High dynamic range                    | None                                                                                                                                           | `lowdr`     |                                                                                     |
+| Screen orientation                    | If width and height are specified, `port` or `land` as appropriate                                                                             | `port`      |                                                                                     |
+| UI mode                               | None                                                                                                                                           |             | `normal`, except this property isn't included in the qualifier list                 |
+| Night mode                            | None                                                                                                                                           | `notnight`  |                                                                                     |
+| Screen pixel density                  | None                                                                                                                                           | `mdpi`      |                                                                                     |
+| Touchscreen type                      | None                                                                                                                                           | `finger`    |                                                                                     |
+| Keyboard availability                 | None                                                                                                                                           | `keyssoft`  |                                                                                     |
+| Primary text input method             | None                                                                                                                                           | `nokeys`    |                                                                                     |
+| Navigation key availability           | None                                                                                                                                           | `navhidden` |                                                                                     |
+| Primary non-touch navigation method   | None                                                                                                                                           | `nonav`     |                                                                                     |
+| Platform version                      |                                                                                                                                                |             | The SDK level currently active. Need not be specified.                              |
 
 ## Cumulative qualifiers
 
-By default, specifying qualifiers causes any previous specification of qualifiers to be ignored. For example, qualifiers at the test method level occlude qualifiers at the test class level. However, if the qualifiers config property starts with a `+` (plus sign), it is interpreted as an overlay to any higher-level qualifiers that have been specified:
+By default, specifying qualifiers causes any previous specification of qualifiers to be ignored. For
+example, qualifiers at the test method level occlude qualifiers at the test class level. However, if
+the qualifiers config property starts with a `+` (plus sign), it is interpreted as an overlay to any
+higher-level qualifiers that have been specified:
 
 === "Java"
 
@@ -112,7 +116,8 @@ By default, specifying qualifiers causes any previous specification of qualifier
     }
     ```
 
-Values for unspecified properties are calculated, and rules are applied, after all configs have been merged.
+Values for unspecified properties are calculated, and rules are applied, after all configs have been
+merged.
 
 ## Changing device configuration
 
@@ -149,7 +154,8 @@ The device configuration can be changed within a test using
     }
     ```
 
-The string parameter to `RuntimeEnvironment.setQualifiers()` has the same rules as `Config.qualifiers`.
+The string parameter to `RuntimeEnvironment.setQualifiers()` has the same rules as
+`Config.qualifiers`.
 
 Note that `RuntimeEnvironment.setQualifiers()` updates the system and application resources with the
 new configuration, but does not trigger any action on extant activities or other components.

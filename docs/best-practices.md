@@ -31,15 +31,22 @@ listeners.
 
 ## Limitations
 
-Robolectric aims to accelerate Android unit testing by simulating the Android environment in the JVM, eliminating the need for emulators or physical devices.
+Robolectric aims to accelerate Android unit testing by simulating the Android environment in the
+JVM, eliminating the need for emulators or physical devices.
 
-However, it is important to be aware that Robolectric has certain limitations in replicating the complete Android environment. These limitations, as well as potential workarounds, are outlined in this document.
+However, it is important to be aware that Robolectric has certain limitations in replicating the
+complete Android environment. These limitations, as well as potential workarounds, are outlined in
+this document.
 
 ### Android libcore and OpenJDK have different implementations
 
-Android libcore is a collection of Java libraries specifically designed for the Android platform. It provides essential functionalities for Android apps like networking, security, and file I/O. While libcore shares similarities with OpenJDK, it has its own implementation for some components, optimised for Android's resource constraints and security considerations.
+Android libcore is a collection of Java libraries specifically designed for the Android platform. It
+provides essential functionalities for Android apps like networking, security, and file I/O. While
+libcore shares similarities with OpenJDK, it has its own implementation for some components,
+optimised for Android's resource constraints and security considerations.
 
-Because of that, you may notice different behaviours when running your app on a device or emulator, and running your tests on the JVM with Robolectric.
+Because of that, you may notice different behaviours when running your app on a device or emulator,
+and running your tests on the JVM with Robolectric.
 
 Below is an incomplete list of differences you may encounter:
 

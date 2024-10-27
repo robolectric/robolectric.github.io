@@ -4,7 +4,8 @@ title: Robolectric Migration Guide
 
 ## Automated Migration
 
-Robolectric provides an [automated migration tool](automated-migration.md) to help keep your test suite up to date with Robolectric API changes.
+Robolectric provides an [automated migration tool](automated-migration.md) to help keep your test
+suite up to date with Robolectric API changes.
 
 ## Migrating to 4.0
 
@@ -66,7 +67,11 @@ using binary resources mode:
 
 ### Improper Use of Shadows
 
-Prior to Robolectric 4.0, it was possible (but ill-advised) to get the shadow for an Android framework object and invoke framework methods there. This could result in unexpected behavior (e.g., code in overridden methods in subclasses wouldn't be called). Shadow implementation methods are now marked `protected` to guard against this. Always invoke framework methods directly on the Android class.
+Prior to Robolectric 4.0, it was possible (but ill-advised) to get the shadow for an Android
+framework object and invoke framework methods there. This could result in unexpected behavior (e.g.,
+code in overridden methods in subclasses wouldn't be called). Shadow implementation methods are now
+marked `protected` to guard against this. Always invoke framework methods directly on the Android
+class.
 
 | 3.8                                      | 4.0                                                                      |
 |------------------------------------------|--------------------------------------------------------------------------|
@@ -88,7 +93,10 @@ APIs whenever possible rather than using Robolectric-specific APIs.
 
 ### Troubleshooting
 
-Robolectric 4.0 replaces its old home-grown resource handling code with a direct adaptation of Android's resource handling code, using the full Android toolchain. This greatly improves fidelity to the behavior of a real Android device, but if your tests were relying on the quirks of the old code, you may need to fix your tests.
+Robolectric 4.0 replaces its old home-grown resource handling code with a direct adaptation of
+Android's resource handling code, using the full Android toolchain. This greatly improves fidelity
+to the behavior of a real Android device, but if your tests were relying on the quirks of the old
+code, you may need to fix your tests.
 
 Some likely issues include:
 
@@ -158,7 +166,8 @@ The deprecated and redundant `attach()` method has been removed from
 
 ### Moved classes
 
-To simplify classloader logic and cleanup packages, some classes have moved. The old class locations are `@Deprecated` and will be removed in 3.4.
+To simplify classloader logic and cleanup packages, some classes have moved. The old class locations
+are `@Deprecated` and will be removed in 3.4.
 
 | 3.2 (now `@Deprecated`)                                    | 3.3                                                                                                   |
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -187,11 +196,17 @@ standard shadow, as we do for the rest of the framework. This is for a number of
 
 * It is more consistent with the way other framework code is handled.
 * A shadow will allow users' tests to build against any version of Android.
-* Switching to a shadow will allow us to defer parsing the manifest until the test or code under test makes calls to the `PackageManager`.
+* Switching to a shadow will allow us to defer parsing the manifest until the test or code under
+  test makes calls to the `PackageManager`.
 
-This should all be backwards compatible for the 3.3 release, but now you can start migrating your code.
+This should all be backwards compatible for the 3.3 release, but now you can start migrating your
+code.
 
-Before, the Robolectric class `DefaultPackageManager` implemented all `PackageManager` functionality. If you wanted to change any of its behavior, you'd extend `DefaultPackageManager` (or `StubPackageManager`) and override whichever methods you liked. Test-related setup was achieved by calling `RuntimeEnvironment.getRobolectricPackageManager()`, which had extra methods for modifying its behavior.
+Before, the Robolectric class `DefaultPackageManager` implemented all `PackageManager`
+functionality. If you wanted to change any of its behavior, you'd extend `DefaultPackageManager` (or
+`StubPackageManager`) and override whichever methods you liked. Test-related setup was achieved by
+calling `RuntimeEnvironment.getRobolectricPackageManager()`, which had extra methods for modifying
+its behavior.
 
 As of 3.3, Robolectric uses the normal Android `ApplicationPackageManager`, and shadows all of its
 methods, causing it to delegate to an instance of `DefaultPackageManager`, which works as before.
@@ -203,7 +218,8 @@ should start using [`shadowOf(PackageManager)`][shadow-of-package-manager-javado
 that we've implemented quite a bit more of `PackageManager`, so you might not need any custom code
 any longer.
 
-Starting with 3.4, `DefaultPackageManager` will be removed and its functionality will be moved into `ShadowApplicationPackageManager`.
+Starting with 3.4, `DefaultPackageManager` will be removed and its functionality will be moved into
+`ShadowApplicationPackageManager`.
 
 | 3.2 (now `@Deprecated`)                                                              | 3.3                                                                                                                  |
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -211,7 +227,8 @@ Starting with 3.4, `DefaultPackageManager` will be removed and its functionality
 | `PackageManager packageManager = RuntimeEnvironment.getPackageManager();`            | `// Prefer Android Framework APIs where possible`<br/>`PackageManager packageManager = context.getPackageManager();` |
 | `RuntimeEnvironment.setRobolectricPackageManager(customPackageManager);`             | Use a custom shadow instead! See below.                                                                              |
 
-Replace subclasses of `DefaultPackageManager` by a custom shadow (and be a good citizen by contributing your enhancements upstream 🙂):
+Replace subclasses of `DefaultPackageManager` by a custom shadow (and be a good citizen by
+contributing your enhancements upstream 🙂):
 
 === "Java"
 
@@ -228,7 +245,9 @@ Replace subclasses of `DefaultPackageManager` by a custom shadow (and be a good 
     class MyCustomPackageManager : ShadowApplicationPackageManager
     ```
 
-If you are using a custom subclass of `DefaultPackageManager` to implement functionality missing in Robolectric, check again as part of this work we've added support for a bunch more widely-used `PackageManager` features, and it might be now possible to completely remove your custom subclass.
+If you are using a custom subclass of `DefaultPackageManager` to implement functionality missing in
+Robolectric, check again as part of this work we've added support for a bunch more widely-used
+`PackageManager` features, and it might be now possible to completely remove your custom subclass.
 
 ### Deprecated Classes & Methods
 
@@ -319,7 +338,8 @@ you probably actually want to do is override
 
 ### Package-Level Configuration
 
-If you are using a [`robolectric.properties`](configuring.md#robolectricproperties-file) file to configure all tests, the expected location of the file has been changed.
+If you are using a [`robolectric.properties`](configuring.md#robolectricproperties-file) file to
+configure all tests, the expected location of the file has been changed.
 
 | 3.1                                         | 3.2                                                      |
 |---------------------------------------------|----------------------------------------------------------|
@@ -357,7 +377,8 @@ If you are using a [`robolectric.properties`](configuring.md#robolectricproperti
     Robolectric.setupContentProvider(MyContentProvider::class)
     ```
 
-* We've removed shadow methods where they duplicate the functionality of the Android APIs. In general, prefer calling Android framework APIs over Robolectric shadows where possible.
+* We've removed shadow methods where they duplicate the functionality of the Android APIs. In
+  general, prefer calling Android framework APIs over Robolectric shadows where possible.
 
 | 3.0                                                            | 3.1                                                                                                                                              |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -399,14 +420,14 @@ If you are using a [`robolectric.properties`](configuring.md#robolectricproperti
 * Custom test runner for Gradle / Android Studio:
 
 === "Java"
- 
+
     ```java
     @RunWith(RobolectricGradleTestRunner.class)
     @Config(constants = BuildConfig.class)
     ```
 
 === "Kotlin"
- 
+
     ```kotlin
     @RunWith(RobolectricGradleTestRunner::class)
     @Config(constants = BuildConfig::class)
@@ -438,12 +459,14 @@ If you are using a [`robolectric.properties`](configuring.md#robolectricproperti
 | `org.robolectric.shadows.ShadowMenuInflater`                                                   | ?                                                                                                                                                                                   |
 | `org.robolectric.Robolectric.clickOn`                                                          | `org.robolectric.shadows.ShadowView.clickOn`                                                                                                                                        |
 
-* `Robolectric.shadowOf_` has been removed. Similar functionality exists in `ShadowExtractor.extract`.
+* `Robolectric.shadowOf_` has been removed. Similar functionality exists in
+  `ShadowExtractor.extract`.
 
 ### Modules
 
 > [!NOTE]
-> Shadows for non-core Android classes have moved out of the main Robolectric module. If you want to use those shadows, you'll need to include the requisite module.
+> Shadows for non-core Android classes have moved out of the main Robolectric module. If you want to
+> use those shadows, you'll need to include the requisite module.
 
 #### `org.robolectric:robolectric`
 
@@ -461,9 +484,10 @@ Main "core" module for Robolectric 3.0.
     testCompile("org.robolectric:robolectric:3.0")
     ```
 
-Some of the shadows in Robolectric have been split out into separate modules to reduce the number of transitive dependencies imposed on projects using Robolectric. If you want to use any of these shadows,
-add the needed artifacts below to your build.
- 
+Some of the shadows in Robolectric have been split out into separate modules to reduce the number of
+transitive dependencies imposed on projects using Robolectric. If you want to use any of these
+shadows, add the needed artifacts below to your build.
+
 #### `org.robolectric:shadows-support-v4`
 
 Shadows for classes in the Android `support-v4` library.
@@ -575,4 +599,3 @@ Shadows for classes in Google Maps.
 [square-assertj-android]: https://github.com/square/assertj-android
 [system-current-time-millis-documentation]: https://developer.android.com/reference/java/lang/System#currentTimeMillis()
 [xml-resource-parser-impl-javadoc]: javadoc/latest/org/robolectric/android/XmlResourceParserImpl.html
-

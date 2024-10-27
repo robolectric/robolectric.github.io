@@ -1,6 +1,7 @@
 # Building Robolectric
 
-This page describes how to set up a development environment to build and test Robolectric on the supported OSs (Linux, Mac, Windows).
+This page describes how to set up a development environment to build and test Robolectric on the
+supported OSs (Linux, Mac, Windows).
 
 ## Installing Android SDK Tools
 
@@ -15,7 +16,8 @@ versions to install.
 
 ## Install Git and OpenJDK 17
 
-JDK 17 is currently required to build Robolectric. Newer versions of the JDK (e.g. 21) will likely work, but may contain some rough edges.
+JDK 17 is currently required to build Robolectric. Newer versions of the JDK (e.g. 21) will likely
+work, but may contain some rough edges.
 
 1. [Install Git][git-downloads] to download Robolectric source code.
 2. Install OpenJDK 17 to build and test Robolectric. See

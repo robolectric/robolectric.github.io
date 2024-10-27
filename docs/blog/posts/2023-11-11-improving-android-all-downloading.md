@@ -7,8 +7,9 @@ slug: improving-android-all-downloading
 
 # Improving android-all Downloading on CI
 
-In recent years, the team has received multiple issues regarding Robolectric's inability to download/resolve
-the necessary android-all jars when running Robolectric tests in a CI environment. Some examples include:
+In recent years, the team has received multiple issues regarding Robolectric's inability to
+download/resolve the necessary android-all jars when running Robolectric tests in a CI environment.
+Some examples include:
 
 1. [android-all not downloaded as part of robolectric, or is it a separate dependency?][robolectric-issue-7886]
 2. [Robolectric failing because not downloading dependencies in Jenkins when using Artifactory][robolectric-issue-8158]
@@ -48,12 +49,12 @@ testOptions {
 ```
 
 The `MavenArtifactFetcher` supports the above system properties to leverage a custom Maven
-repository link, although it needs a username and password. It also supports a custom proxy
-host and port for internally allowed proxy servers.
+repository link, although it needs a username and password. It also supports a custom proxy host and
+port for internally allowed proxy servers.
 
-`robolectric.dependency.repo.url` and `robolectric.dependency.repo.id` are enough for
-most scenarios. For example, I often set the repository to a custom Chinese popular Maven mirror
-for my custom projects:
+`robolectric.dependency.repo.url` and `robolectric.dependency.repo.id` are enough for most
+scenarios. For example, I often set the repository to a custom Chinese popular Maven mirror for my
+custom projects:
 
 ```kotlin
 testOptions {
@@ -74,9 +75,9 @@ description of these special Robolectric properties, and you can read it for mor
 
 ## Leveraging Robolectric's offline mode
 
-Robolectric supports using android-all jars in a local directory with its offline mode without downloading
-any android-all jars from the network when running Robolectric tests. We can follow the following
-snippet to enable Robolectric's offline mode for the project:
+Robolectric supports using android-all jars in a local directory with its offline mode without
+downloading any android-all jars from the network when running Robolectric tests. We can follow the
+following snippet to enable Robolectric's offline mode for the project:
 
 ```kotlin
 testOptions {
@@ -96,10 +97,9 @@ testOptions {
 ```
 
 To make it work, we need to download android-all jars into the
-`${rootDir}/robolectric-jars/preinstrumented` directory before running any Robolectric tests.
-I created a sample project to provide build scripts to download these
-android-all jars into this preinstrumented directory: 
-[robolectric-offline-sample][robolectric-offline-sample].
+`${rootDir}/robolectric-jars/preinstrumented` directory before running any Robolectric tests. I
+created a sample project to provide build scripts to download these android-all jars into this
+preinstrumented directory: [robolectric-offline-sample][robolectric-offline-sample].
 
 ```kotlin
 plugins {
@@ -156,23 +156,21 @@ tasks.register("downloadAllRobolectricJars") {
 }
 ```
 
-The above `build.gradle.kts` is just a sample to download necessary android-all jars
-manually before running Robolectric tests. It's easy to maintain. Because Robolectric
-might add a new android-all jar for a new Android version or modify internal logic
-to update an existing android-all jar's version, these android-all jars might change
-across different Robolectric versions. If you store them in a Git repository,
-your Git repository might become bigger and bigger. If you like this approach,
-you can store android-all jars in an external repository like [AndroidX][androidx].
+The above `build.gradle.kts` is just a sample to download necessary android-all jars manually before
+running Robolectric tests. It's easy to maintain. Because Robolectric might add a new android-all
+jar for a new Android version or modify internal logic to update an existing android-all jar's
+version, these android-all jars might change across different Robolectric versions. If you store
+them in a Git repository, your Git repository might become bigger and bigger. If you like this
+approach, you can store android-all jars in an external repository like [AndroidX][androidx].
 
 [Robolectric's configuring documentation][robolectric-system-properties] contains a detailed
 description of these special Robolectric properties, and you can read it for details.
 
 ## Fetching android-all jars manually before running Robolectric tests
 
-If you don't store android-all jars in your Git repository to leverage offline mode,
-and you don't want to modify your system properties for Robolectric in your
-`build.gradle.kts`, you can try to download android-all jars in a script and
-download them manually before running any Gradle tasks.
+If you don't store android-all jars in your Git repository to leverage offline mode, and you don't
+want to modify your system properties for Robolectric in your `build.gradle.kts`, you can try to
+download android-all jars in a script and download them manually before running any Gradle tasks.
 
 For example, I created a project to do it for myself:
 [robolectric-android-all-fetcher][robolectric-android-all-fetcher]. You can change the Maven mirror
@@ -181,8 +179,8 @@ version.
 
 ## Conclusion
 
-Most of these issues are caused by a network issue when downloading necessary android-all jars,
-and we can fix them or ease them by making android-all jars accessible before running Robolectric tests
+Most of these issues are caused by a network issue when downloading necessary android-all jars, and
+we can fix them or ease them by making android-all jars accessible before running Robolectric tests
 and letting `MavenArtifactFetcher` use them directly. The above potential solutions are some stable
 and recommended solutions for developers to try. Hope it can help you.
 

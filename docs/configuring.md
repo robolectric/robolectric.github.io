@@ -1,6 +1,8 @@
 # Configuring Robolectric
 
-Several aspects of Robolectric's behavior can be configured at runtime, using either [`@Config` annotations](#config-annotation) for class- or method-level configuration, or [`robolectric.properties` files](#robolectricproperties-file) for package-level configuration.
+Several aspects of Robolectric's behavior can be configured at runtime, using either
+[`@Config` annotations](#config-annotation) for class- or method-level configuration, or
+[`robolectric.properties` files](#robolectricproperties-file) for package-level configuration.
 
 ## Configuration methods
 
@@ -10,7 +12,9 @@ To configure Robolectric for a single test class or method, use the
 [`@Config`][config-documentation] annotation on the desired class or method. Annotations applied on
 methods take precedence over the ones at the class level.
 
-Base classes are also searched for annotations. So if you find yourself specifying the same values on a large number of tests, you can create a base class and move your `@Config` annotation to that class.
+Base classes are also searched for annotations. So if you find yourself specifying the same values
+on a large number of tests, you can create a base class and move your `@Config` annotation to that
+class.
 
 === "Java"
 
@@ -35,7 +39,12 @@ Base classes are also searched for annotations. So if you find yourself specifyi
 
 ### `robolectric.properties` file
 
-To configure all Robolectric tests within a package or group of packages, create a file named `robolectric.properties` in the appropriate package. Generally, this file would be placed within the appropriate package directory under `src/test/resources` in your project tree. Robolectric will search for properties files up the hierarchy of packages (including the unnamed default package at the top level), with values in deeper packages overriding values in more shallow packages. When test classes or methods have `@Config` annotations, those override any config from properties files.
+To configure all Robolectric tests within a package or group of packages, create a file named
+`robolectric.properties` in the appropriate package. Generally, this file would be placed within the
+appropriate package directory under `src/test/resources` in your project tree. Robolectric will
+search for properties files up the hierarchy of packages (including the unnamed default package at
+the top level), with values in deeper packages overriding values in more shallow packages. When test
+classes or methods have `@Config` annotations, those override any config from properties files.
 
 Below is an example:
 
@@ -55,7 +64,8 @@ If you wish to change the default for any configurable value for all your tests,
 
 ## Configurables
 
-The following examples show how to handle common configuration tasks. For clarity, `@Config` annotations are used, but any of these values may also be configured using properties files.
+The following examples show how to handle common configuration tasks. For clarity, `@Config`
+annotations are used, but any of these values may also be configured using properties files.
 
 ### Configure SDK Level
 
@@ -113,7 +123,8 @@ a different SDK, you can specify the desired SDK(s) using the [`sdk`][config-sdk
     ```
 
 Note that `sdk` and `minSdk`/`maxSdk` may not be specified in the same `@Config` annotation or file;
-however, `minSdk` and `maxSdk` may be specified together. If any of them is present, they override any SDK specification from a less-specific configuration location.
+however, `minSdk` and `maxSdk` may be specified together. If any of them is present, they override
+any SDK specification from a less-specific configuration location.
 
 > [!NOTE]
 > Prior to [Robolectric 3.2][robolectric-3.2-release], `minSdk` and `maxSdk` are ignored, and
@@ -185,24 +196,24 @@ See [Using Qualified Resources](using-qualifiers.md) for more details.
 
 Some additional options can be configured globally by setting these system properties:
 
-| Property name | Description | Default value |
-|-----|-----|-----|
-| `robolectric.enabledSdks` | Comma-separated list of SDK levels or names (e.g. `33, 34` or `TIRAMISU, UPSIDE_DOWN_CAKE`) which are enabled for this process. Only tests targeting a listed SDKs will be run. | All SDKs |
-| `robolectric.offline` | Set to `true` to disable runtime fetching of jars. | `false` |
-| `robolectric.usePreinstrumentedJars` | If `true`, Robolectric will use instrumented jars to reduce instrumentation overhead. If changes are made to instrumentation, this can be set to `false` to ensure the changes are included when building Robolectric. | `true` |
-| `robolectric.dependency.dir` | When in offline mode, specifies a folder containing runtime dependencies. | `null` |
-| `robolectric.dependency.repo.id` | Set the ID of the Maven repository to use for the runtime dependencies. | `mavenCentral` |
-| `robolectric.dependency.repo.url` | Set the URL of the Maven repository to use for the runtime dependencies. | `https://repo1.maven.org/maven2` |
-| `robolectric.dependency.repo.username` | Username of the repository that you defined in `robolectric.dependency.repo.url`. | `null` |
-| `robolectric.dependency.repo.password` | Password of the repository that you defined in `robolectric.dependency.repo.url`. | `null` |
-| `robolectric.logging.enabled` | Set to `true` to enable debug logging. | `false` |
+| Property name                          | Description                                                                                                                                                                                                            | Default value                    |
+|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| `robolectric.enabledSdks`              | Comma-separated list of SDK levels or names (e.g. `33, 34` or `TIRAMISU, UPSIDE_DOWN_CAKE`) which are enabled for this process. Only tests targeting a listed SDKs will be run.                                        | All SDKs                         |
+| `robolectric.offline`                  | Set to `true` to disable runtime fetching of jars.                                                                                                                                                                     | `false`                          |
+| `robolectric.usePreinstrumentedJars`   | If `true`, Robolectric will use instrumented jars to reduce instrumentation overhead. If changes are made to instrumentation, this can be set to `false` to ensure the changes are included when building Robolectric. | `true`                           |
+| `robolectric.dependency.dir`           | When in offline mode, specifies a folder containing runtime dependencies.                                                                                                                                              | `null`                           |
+| `robolectric.dependency.repo.id`       | Set the ID of the Maven repository to use for the runtime dependencies.                                                                                                                                                | `mavenCentral`                   |
+| `robolectric.dependency.repo.url`      | Set the URL of the Maven repository to use for the runtime dependencies.                                                                                                                                               | `https://repo1.maven.org/maven2` |
+| `robolectric.dependency.repo.username` | Username of the repository that you defined in `robolectric.dependency.repo.url`.                                                                                                                                      | `null`                           |
+| `robolectric.dependency.repo.password` | Password of the repository that you defined in `robolectric.dependency.repo.url`.                                                                                                                                      | `null`                           |
+| `robolectric.logging.enabled`          | Set to `true` to enable debug logging.                                                                                                                                                                                 | `false`                          |
 
 Since [Robolectric 4.9.1][robolectric-4.9.1-release], you can now add these parameters:
 
-| Property name | Description | Default value |
-|-----|-----|-----|
-| `robolectric.dependency.proxy.host` | Set the host of the proxy to use for the runtime dependencies. | `null` |
-| `robolectric.dependency.proxy.port` | Set the port number of the proxy to use for the runtime dependencies. | `0` |
+| Property name                       | Description                                                           | Default value |
+|-------------------------------------|-----------------------------------------------------------------------|---------------|
+| `robolectric.dependency.proxy.host` | Set the host of the proxy to use for the runtime dependencies.        | `null`        |
+| `robolectric.dependency.proxy.port` | Set the port number of the proxy to use for the runtime dependencies. | `0`           |
 
 When using Gradle, you can configure the System Properties for unit tests with the
 `android.testOptions.unitTests.all` block (see [here][configure-gradle-test-options]). For example,
