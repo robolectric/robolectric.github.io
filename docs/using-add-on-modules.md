@@ -1,6 +1,9 @@
 # Using add-on modules
 
-In order to reduce the number of external dependencies on the application being tested, Robolectric's shadows are split into various add-on packages. Only shadows for classes provided in the base Android SDK are provided by the main Robolectric module. Additional shadows are provided in dedicated packages.
+In order to reduce the number of external dependencies on the application being tested,
+Robolectric's shadows are split into various add-on packages. Only shadows for classes provided in
+the base Android SDK are provided by the main Robolectric module. Additional shadows are provided in
+dedicated packages.
 
 > [!NOTE]
 > - [Robolectric 3.4][robolectric-3.4-release] doesn't include the `shadows-` prefix in the package

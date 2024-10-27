@@ -55,7 +55,8 @@ Let's say that you have an [`Activity`][activity-documentation] that represents 
 </LinearLayout>
 ```
 
-We want to write a test that asserts that when the user clicks on the "Login" button, the app launches the `LoginActivity`.
+We want to write a test that asserts that when the user clicks on the "Login" button, the app
+launches the `LoginActivity`.
 
 To achieve this, we can check that the correct [`Intent`][intent-documentation] is started when the
 click is performed. Since Robolectric is a unit testing framework, the `LoginActivity` will not
@@ -105,9 +106,12 @@ actually be started.
 
 ## Test APIs
 
-Robolectric extends the Android framework with a large set of test APIs, which offer extra configurability and access to the internal state and history of Android components that are useful for tests.
+Robolectric extends the Android framework with a large set of test APIs, which offer extra
+configurability and access to the internal state and history of Android components that are useful
+for tests.
 
-Many test APIs are extensions to individual Android classes, and can be accessed using the `shadowOf()` method:
+Many test APIs are extensions to individual Android classes, and can be accessed using the
+`shadowOf()` method:
 
 === "Java"
 
@@ -123,7 +127,8 @@ Many test APIs are extensions to individual Android classes, and can be accessed
     val toasts = shadowOf(application).shownToasts
     ```
 
-Additional test APIs are accessible as static methods on special classes called [shadows](extending.md), which correspond to Android framework classes:
+Additional test APIs are accessible as static methods on special classes called
+[shadows](extending.md), which correspond to Android framework classes:
 
 === "Java"
 

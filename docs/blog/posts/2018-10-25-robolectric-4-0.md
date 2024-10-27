@@ -47,11 +47,17 @@ class OnDeviceTest {
 }
 ```
 
-As you can see, many of the idioms common in instrumentation tests are now supported by Robolectric tests. In future releases we'll be expanding `androidx.test` support on Robolectric, as well as introducing some Robolectric-originated testing paradigms to traditional instrumentation tests.
+As you can see, many of the idioms common in instrumentation tests are now supported by Robolectric
+tests. In future releases we'll be expanding `androidx.test` support on Robolectric, as well as
+introducing some Robolectric-originated testing paradigms to traditional instrumentation tests.
 
 ## Binary Resources
 
-In conjunction with Android Studio 3.2, Robolectric can now use resources processed using the Android build toolchain, and loads and handles those resources using the same logic as on an actual Android device. Robolectric's old idiosyncratic resource handling mode is still available for projects not yet using the latest version of the build toolchain, but is now deprecated and will be removed in a future release.
+In conjunction with Android Studio 3.2, Robolectric can now use resources processed using the
+Android build toolchain, and loads and handles those resources using the same logic as on an actual
+Android device. Robolectric's old idiosyncratic resource handling mode is still available for
+projects not yet using the latest version of the build toolchain, but is now deprecated and will be
+removed in a future release.
 
 To enable the use of toolchain-processed resources in Robolectric tests, make sure you're using
 [Android Gradle Plugin][android-gradle-plugin] version `com.android.tools.build:gradle:3.2.1` or

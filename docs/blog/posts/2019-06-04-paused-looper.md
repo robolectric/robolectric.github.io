@@ -15,9 +15,9 @@ your experience!
 
 ## Background
 
-Unlike on a real device, Robolectric shares a single thread for both UI operations and Test code. 
-By default, Robolectric will execute tasks posted to `Looper`s synchronously inline. 
-This causes Robolectric to execute tasks earlier than they would be on a real device. 
+Unlike on a real device, Robolectric shares a single thread for both UI operations and Test code.
+By default, Robolectric will execute tasks posted to `Looper`s synchronously inline.
+This causes Robolectric to execute tasks earlier than they would be on a real device.
 While in many cases this has no observable effect, it can lead to bugs that are hard to track down.
 
 Consider the code below. When run on the UI thread on a device, the assertion would pass.
@@ -79,7 +79,7 @@ To switch to `PAUSED`:
 * Convert any [`RoboExecutorService`][robo-executor-service] usages to
   [`PausedExecutorService`][paused-executor-service] or
   [`InlineExecutorService`][inline-executor-service].
-* Run your tests. If you see test failures like `Main looper has queued unexecuted runnables`, 
+* Run your tests. If you see test failures like `Main looper has queued unexecuted runnables`,
 you may need to insert `shadowOf(getMainLooper()).idle()` calls to your test to drain the main
 `Looper`. It's recommended to step through your test code with a watch set on
 `Looper.getMainLooper().getQueue()` to see the status of the `Looper` queue, to determine the

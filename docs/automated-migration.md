@@ -9,7 +9,8 @@ hide:
 Robolectric provides an automated migration tool to help keep your test suite up to date with
 Robolectric API changes. It's based on [Error Prone][error-prone-refactoring]'s refactoring tools.
 
-The migration tool will make changes directly to source files in your codebase, which you can review and commit to your source control system.
+The migration tool will make changes directly to source files in your codebase, which you can review
+and commit to your source control system.
 
 **Before** updating your dependencies to the new version of Robolectric:
 
@@ -80,7 +81,8 @@ The migration tool will make changes directly to source files in your codebase, 
 
 5. Update your project to the new version of Robolectric.
 
-The migration tool will make a best effort attempt to adjust the source code, but there might be more complicated situations that it cannot handle and that need to be converted manually.
+The migration tool will make a best effort attempt to adjust the source code, but there might be
+more complicated situations that it cannot handle and that need to be converted manually.
 
 [error-prone-refactoring]: https://errorprone.info/docs/patching
 [error-prone-setup]: https://errorprone.info/docs/installation

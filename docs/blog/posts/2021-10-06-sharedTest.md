@@ -7,11 +7,19 @@ slug: sharedTest
 
 # `sharedTest` pattern: sharing tests and speeding up development
 
-After [Robolectric's 4.0 release][2], Robolectric supports the [`AndroidJUnit4` test runner][3], [`ActivityScenario`][5], and [Espresso][4] for interacting with UI components. As we know, we also can run those tests with an official emulator. This article will show an often overlooked but widely-used pattern called `sharedTest` to share tests between local and instrumentation tests. This will provide the benefit of fast unit testing while ensuring that tests are high-fidelity by enabling them to be run in an emulator.
+After [Robolectric's 4.0 release][2], Robolectric supports the [`AndroidJUnit4` test runner][3],
+[`ActivityScenario`][5], and [Espresso][4] for interacting with UI components. As we know, we also
+can run those tests with an official emulator. This article will show an often overlooked but
+widely-used pattern called `sharedTest` to share tests between local and instrumentation tests. This
+will provide the benefit of fast unit testing while ensuring that tests are high-fidelity by
+enabling them to be run in an emulator.
 
 ## Using sharedTest steps by steps
 
-The first thing that `sharedTest` needs is [`AndroidJUnit4` test runner][3]. It is a test runner that supports both Robolectric and [`androidx.test`][13]. There is a sample class, called [`SampleFragmentTest.kt`][14] from [FragmentScenarioSample][15] that uses [`AndroidJUnit4` test runner][3]:
+The first thing that `sharedTest` needs is [`AndroidJUnit4` test runner][3]. It is a test runner
+that supports both Robolectric and [`androidx.test`][13]. There is a sample class, called
+[`SampleFragmentTest.kt`][14] from [FragmentScenarioSample][15] that uses
+[`AndroidJUnit4` test runner][3]:
 
 ```kotlin
 import androidx.fragment.app.testing.launchFragmentInContainer
@@ -43,9 +51,13 @@ class SampleFragmentTest {
 }
 ```
 
-The second thing to enable `sharedTest` is to create a directory called `sharedTest`, at the same directory level with `test` and `androidTest`. Android Studio doesn't support it, so we should create it manually. [`FragmentScenarioSample`'s `sharedTest` directory][16] is a good example for it.
+The second thing to enable `sharedTest` is to create a directory called `sharedTest`, at the same
+directory level with `test` and `androidTest`. Android Studio doesn't support it, so we should
+create it manually. [`FragmentScenarioSample`'s `sharedTest` directory][16] is a good example for
+it.
 
-The next step we should do is to add `sharedTest` directory to `test`'s and `androidTest`'s source directory. [`FragmentScenarioSample`'s `build.gradle`][11] is also a good example for it:
+The next step we should do is to add `sharedTest` directory to `test`'s and `androidTest`'s source
+directory. [`FragmentScenarioSample`'s `build.gradle`][11] is also a good example for it:
 
 ```groovy
 // share the unified tests
@@ -59,7 +71,9 @@ sourceSets {
 }
 ```
 
-If you want to share resources too, you can check [Robolectric's PR: Add ctesque common tests to android test][9] that used to reuse tests to improve CI fidelity with `sharedTest` pattern:
+If you want to share resources too, you can check
+[Robolectric's PR: Add ctesque common tests to android test][9] that used to reuse tests to improve
+CI fidelity with `sharedTest` pattern:
 
 ```groovy
 sourceSets {
@@ -73,11 +87,16 @@ sourceSets {
 }
 ```
 
-The last thing is to test it with `./gradlew test` for local tests on Robolectric and `./gradlew connectedCheck` for instrumentation tests on Emulator.
+The last thing is to test it with `./gradlew test` for local tests on Robolectric and
+`./gradlew connectedCheck` for instrumentation tests on Emulator.
 
 ## Why `AndroidJUnit4` test runner?
 
-There is an aspirational long-term goal for Android tests, [write once, run everywhere tests on Android][1]. The [`AndroidJUnit4` test runner][3] is selected as the bridge for different devices that used to run tests. We can check [`AndroidJUnit4#getRunnerClassName()`][17], and we can find how [`AndroidJUnit4`][17] to delegate tests to real test runner based on running environment:
+There is an aspirational long-term goal for Android tests,
+[write once, run everywhere tests on Android][1]. The [`AndroidJUnit4` test runner][3] is selected
+as the bridge for different devices that used to run tests. We can check
+[`AndroidJUnit4#getRunnerClassName()`][17], and we can find how [`AndroidJUnit4`][17] to delegate
+tests to real test runner based on running environment:
 
 ```java
 private static String getRunnerClassName() {
@@ -94,7 +113,9 @@ private static String getRunnerClassName() {
 }
 ```
 
-If it finds current running environment has `RobolectricTestRunner`, it will delegate tests to Robolectric's `RobolectricTestRunner`; otherwise to [`androidx.test`][13]'s `AndroidJUnit4ClassRunner`.
+If it finds current running environment has `RobolectricTestRunner`, it will delegate tests to
+Robolectric's `RobolectricTestRunner`; otherwise to [`androidx.test`][13]'s
+`AndroidJUnit4ClassRunner`.
 
 ## Not only sharing code, but also speeding up development
 
