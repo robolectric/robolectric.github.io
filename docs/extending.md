@@ -17,13 +17,13 @@ shadow object to associate with it.
 Using byte code instrumentation, Robolectric is able to weave in cross-platform fake implementations
 to substitute for native code and add additional APIs to make testing possible.
 
-### What's in a Name?
+## What's in a Name?
 
 Why "Shadow"? Shadow objects are not quite [Proxies][proxy-pattern], not quite [Fakes][fake-object],
 not quite [Mocks or Stubs][mocks-arent-stubs]. Shadows are sometimes hidden, sometimes seen, and can
 lead you to the real object. At least we didn't call them "sheep", which we were considering.
 
-### Shadow Classes
+## Shadow Classes
 
 Shadow classes always need a public no-arg constructor so that the Robolectric framework can
 instantiate them. They are associated to the class that they Shadow with an
@@ -48,7 +48,7 @@ Shadow class should extend `ViewGroup`'s superclass' Shadow, `ShadowView`.
     class ShadowViewGroup : ShadowView
     ```
 
-### Methods
+## Methods
 
 Shadow objects implement methods that have the same signature as the corresponding Android class.
 Robolectric will invoke the method on a Shadow object when a method with the same signature on the
@@ -112,7 +112,7 @@ which they were originally defined. Otherwise, Robolectric's lookup mechanism wi
 method is defined on `ShadowViewGroup` instead of `ShadowView` then it will not be found at run time
 even when `setEnabled()` is called on an instance of `ViewGroup`.
 
-### Shadowing Constructors
+## Shadowing Constructors
 
 Once a Shadow object is instantiated, Robolectric will look for a method named  `__constructor__`
 and annotated with `@Implementation` which has the same arguments as the constructor that was
@@ -157,7 +157,7 @@ Robolectric would invoke the following  `__constructor__` method that receives a
       }
     ```
 
-### Getting access to the real instance
+## Getting access to the real instance
 
 Sometimes Shadow classes may want to refer to the object they are shadowing, e.g., to manipulate
 fields. A Shadow class can achieve this by declaring a field annotated with
@@ -276,7 +276,7 @@ Note, by default `Shadows.shadowOf()` method will not work with custom shadows. 
 use [`Shadow.extract()`][shadow-extract] and cast the return value to the custom Shadow class you
 implemented.
 
-### Building a library of Custom Shadows.
+### Building a library of Custom Shadows
 
 If you find yourself building a library of custom shadows, you should consider running Robolectric's
 shadow annotation processor on your library of shadows. This provides a number of benefits such as:
@@ -366,6 +366,7 @@ and reduce the bloat in your own codebase.
 [fake-object]: https://c2.com/cgi/wiki?FakeObject "Fake Object"
 [implementation-documentation]: javadoc/latest/org/robolectric/annotation/Implementation.html
 [implements-documentation]: javadoc/latest/org/robolectric/annotation/Implements.html
+<!-- markdownlint-disable-next-line MD053 -->
 [kapt-documentation]: https://kotlinlang.org/docs/kapt.html
 [mockito]: https://site.mockito.org/
 [mocks-arent-stubs]: https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs "Mocks Aren't Stubs"

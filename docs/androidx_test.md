@@ -14,104 +14,104 @@ It is now possible to use the AndroidX test runner in Robolectric tests. If you 
 test runner, please check out the [configuration and plugin API][configuration-plugin-api], and let
 us know if there are any extension points missing that you require.
 
-**Robolectric**
+!!! snippet "Robolectric"
 
-=== "Java"
+    === "Java"
 
-    ```java
-    import org.robolectric.RobolectricTestRunner;
+        ```java
+        import org.robolectric.RobolectricTestRunner;
 
-    @RunWith(RobolectricTestRunner.class)
-    public class SandwichTest {
-    }
-    ```
+        @RunWith(RobolectricTestRunner.class)
+        public class SandwichTest {
+        }
+        ```
 
-=== "Kotlin"
+    === "Kotlin"
 
-    ```kotlin
-    import org.robolectric.RobolectricTestRunner
+        ```kotlin
+        import org.robolectric.RobolectricTestRunner
 
-    @RunWith(RobolectricTestRunner::class)
-    class SandwichTest
-    ```
+        @RunWith(RobolectricTestRunner::class)
+        class SandwichTest
+        ```
 
-**AndroidX Test**
+!!! snippet "AndroidX Test"
 
-=== "Java"
+    === "Java"
 
-    ```java
-    import androidx.test.ext.junit.runners.AndroidJUnit4;
+        ```java
+        import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-    @RunWith(AndroidJUnit4.class)
-    public class SandwichTest {
-    }
-    ```
+        @RunWith(AndroidJUnit4.class)
+        public class SandwichTest {
+        }
+        ```
 
-=== "Kotlin"
+    === "Kotlin"
 
-    ```kotlin
-    import androidx.test.ext.junit.runners.AndroidJUnit4
+        ```kotlin
+        import androidx.test.ext.junit.runners.AndroidJUnit4
 
-    @RunWith(AndroidJUnit4::class)
-    class SandwichTest
-    ```
+        @RunWith(AndroidJUnit4::class)
+        class SandwichTest
+        ```
 
 ## Application
 
 Since most Android code is centric around a [`Context`][context-documentation], getting hold of your
 application’s context is a typical task for most tests.
 
-**Robolectric**
+!!! snippet "Robolectric"
 
-=== "Java"
+    === "Java"
 
-    ```java
-    import org.robolectric.RuntimeEnvironment;
+        ```java
+        import org.robolectric.RuntimeEnvironment;
 
-    @Before
-    void setUp() {
-      ExampleApplication app = (ExampleApplication) RuntimeEnvironment.application;
-      app.setLocationProvider(mockLocationProvider);
-    }
-    ```
+        @Before
+        void setUp() {
+          ExampleApplication app = (ExampleApplication) RuntimeEnvironment.application;
+          app.setLocationProvider(mockLocationProvider);
+        }
+        ```
 
-=== "Kotlin"
+    === "Kotlin"
 
-    ```kotlin
-    import org.robolectric.RuntimeEnvironment
+        ```kotlin
+        import org.robolectric.RuntimeEnvironment
 
-    @Before
-    fun setUp() {
-      val app = RuntimeEnvironment.application as ExampleApplication
-      app.setLocationProvider(mockLocationProvider)
-    }
-    ```
+        @Before
+        fun setUp() {
+          val app = RuntimeEnvironment.application as ExampleApplication
+          app.setLocationProvider(mockLocationProvider)
+        }
+        ```
 
-**AndroidX Test**
+!!! snippet "AndroidX Test"
 
-=== "Java"
+    === "Java"
 
-    ```java
-    import androidx.test.core.app.ApplicationProvider;
+        ```java
+        import androidx.test.core.app.ApplicationProvider;
 
-    @Before
-    void setUp() {
-      ExampleApplication app = ApplicationProvider.getApplicationContext<ExampleApplication>();
-      app.setLocationProvider(mockLocationProvider);
-    }
-    ```
+        @Before
+        void setUp() {
+          ExampleApplication app = ApplicationProvider.getApplicationContext<ExampleApplication>();
+          app.setLocationProvider(mockLocationProvider);
+        }
+        ```
 
-=== "Kotlin"
+    === "Kotlin"
 
-    ```kotlin
-    import androidx.test.core.app.ApplicationProvider
+        ```kotlin
+        import androidx.test.core.app.ApplicationProvider
 
-    @Before
-    fun setUp() {
-      val app = ApplicationProvider.getApplicationContext<ExampleApplication>()
-      app.setLocationProvider(mockLocationProvider)
-    }
-    ```
+        @Before
+        fun setUp() {
+          val app = ApplicationProvider.getApplicationContext<ExampleApplication>()
+          app.setLocationProvider(mockLocationProvider)
+        }
+        ```
 
 ## Activities
 
@@ -131,94 +131,94 @@ places tighter restrictions around lifecycle transitions, namely that invalid or
 transitions are not possible. If you'd like a [`Rule`][junit-rule]-based equivalent please use
 [`ActivityScenarioRule`][activity-scenario-rule] instead.
 
-**Robolectric**
+!!! snippet "Robolectric"
 
-=== "Java"
+    === "Java"
 
-    ```java
-    import org.robolectric.Robolectric;
-    import org.robolectric.android.controller.ActivityController;
+        ```java
+        import org.robolectric.Robolectric;
+        import org.robolectric.android.controller.ActivityController;
 
-    public class LocationTrackerActivityTest {
-        @Test
-        public void locationListenerShouldBeUnregisteredInCreatedState() {
-            // GIVEN
-            ActivityController<LocationTrackerActivity> controller = Robolectric.buildActivity<LocationTrackerActivity>().setup();
-    
-            // WHEN
-            controller.pause().stop();
-    
-            // THEN
-            assertThat(controller.get().getLocationListener()).isNull();
-         }
-    }
-    ```
+        public class LocationTrackerActivityTest {
+            @Test
+            public void locationListenerShouldBeUnregisteredInCreatedState() {
+                // GIVEN
+                ActivityController<LocationTrackerActivity> controller = Robolectric.buildActivity<LocationTrackerActivity>().setup();
 
-=== "Kotlin"
+                // WHEN
+                controller.pause().stop();
 
-    ```kotlin
-    import org.robolectric.Robolectric
-
-    class LocationTrackerActivityTest {
-        @Test
-        fun locationListenerShouldBeUnregisteredInCreatedState() {
-            // GIVEN
-            val controller = Robolectric.buildActivity<LocationTrackerActivity>().setup()
-    
-            // WHEN
-            controller.pause().stop()
-    
-            // THEN
-            assertThat(controller.get().locationListener).isNull()
-         }
-    }
-    ```
-
-**Android X Test**
-
-=== "Java"
-
-    ```java
-    import androidx.lifecycle.Lifecycle;
-    import androidx.test.core.app.ActivityScenario;
-
-    public class LocationTrackerActivityTest {
-        @Test
-        public void locationListenerShouldBeUnregisteredInCreatedState() {
-            // GIVEN
-            ActivityScenario<LocationTrackerActivity> scenario = ActivityScenario.launchActivity<LocationTrackerActivity>();
-    
-            // WHEN
-            scenario.moveToState(Lifecycle.State.CREATED);
-    
-            // THEN
-            scenario.onActivity(activity -> assertThat(activity.getLocationListener()).isNull());
+                // THEN
+                assertThat(controller.get().getLocationListener()).isNull();
+             }
         }
-    }
-    ```
+        ```
 
-=== "Kotlin"
+    === "Kotlin"
 
-    ```kotlin
-    import androidx.lifecycle.Lifecycle
-    import androidx.test.core.app.ActivityScenario
+        ```kotlin
+        import org.robolectric.Robolectric
 
-    class LocationTrackerActivityTest {
-        @Test
-        fun locationListenerShouldBeUnregisteredInCreatedState() {
-            // GIVEN
-            val scenario = ActivityScenario.launchActivity<LocationTrackerActivity>()
-    
-            // WHEN
-            scenario.moveToState(Lifecycle.State.CREATED)
-    
-            // THEN
-            scenario.onActivity { activity ->
-                assertThat(activity.locationListener).isNull()
+        class LocationTrackerActivityTest {
+            @Test
+            fun locationListenerShouldBeUnregisteredInCreatedState() {
+                // GIVEN
+                val controller = Robolectric.buildActivity<LocationTrackerActivity>().setup()
+
+                // WHEN
+                controller.pause().stop()
+
+                // THEN
+                assertThat(controller.get().locationListener).isNull()
+             }
+        }
+        ```
+
+!!! snippet "AndroidX Test"
+
+    === "Java"
+
+        ```java
+        import androidx.lifecycle.Lifecycle;
+        import androidx.test.core.app.ActivityScenario;
+
+        public class LocationTrackerActivityTest {
+            @Test
+            public void locationListenerShouldBeUnregisteredInCreatedState() {
+                // GIVEN
+                ActivityScenario<LocationTrackerActivity> scenario = ActivityScenario.launchActivity<LocationTrackerActivity>();
+
+                // WHEN
+                scenario.moveToState(Lifecycle.State.CREATED);
+
+                // THEN
+                scenario.onActivity(activity -> assertThat(activity.getLocationListener()).isNull());
             }
         }
-    }
-    ```
+        ```
+
+    === "Kotlin"
+
+        ```kotlin
+        import androidx.lifecycle.Lifecycle
+        import androidx.test.core.app.ActivityScenario
+
+        class LocationTrackerActivityTest {
+            @Test
+            fun locationListenerShouldBeUnregisteredInCreatedState() {
+                // GIVEN
+                val scenario = ActivityScenario.launchActivity<LocationTrackerActivity>()
+
+                // WHEN
+                scenario.moveToState(Lifecycle.State.CREATED)
+
+                // THEN
+                scenario.onActivity { activity ->
+                    assertThat(activity.locationListener).isNull()
+                }
+            }
+        }
+        ```
 
 Note that in Robolectric since both the test and UI event loop run on the same thread,
 synchronization is not an issue. [`ActivityScenario.onActivity`][activity-scenario-on-activity]

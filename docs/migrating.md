@@ -100,14 +100,18 @@ code, you may need to fix your tests.
 
 Some likely issues include:
 
-* `android.view.InflateException: Binary XML file line #3: Failed to resolve attribute at index 17:
-  TypedValue{t=0x2/d=0x7f01000e a=-1}`<br/>
-  This happens when your [`Activity`][activity-documentation] is using a theme that lacks values for
-  certain attributes used by layouts. Make sure you've specified an appropriate theme for your
-  activities in your `AndroidManifest`.
+!!! quote ""
+
+    > android.view.InflateException: Binary XML file line #3: Failed to resolve attribute at index
+    > 17: TypedValue{t=0x2/d=0x7f01000e a=-1}
+
+    This happens when your [`Activity`][activity-documentation] is using a theme that lacks values
+    for certain attributes used by layouts. Make sure you've specified an appropriate theme for your
+    activities in your `AndroidManifest`.
 
 ---
 
+<!-- markdownlint-disable-next-line MD033 -->
 ## Migrating to 3.6<a name="migrating-from-35-to-36"></a>
 
 Previously, Robolectric's [`Display`][display-documentation] and
@@ -123,6 +127,7 @@ modified for new dimensions, or by pinning them to the old size:
 
 ---
 
+<!-- markdownlint-disable-next-line MD033 -->
 ## Migrating to 3.4<a name="migrating-from-33-to-34"></a>
 
 ### Dependencies
@@ -139,7 +144,7 @@ Shadow pattern as with other framework classes. You can use
 | 3.3 (was `@Deprecated`)                                 | 3.4                                                            |
 |---------------------------------------------------------|----------------------------------------------------------------|
 | `org.robolectric.res.builder.RobolectricPackageManager` | [`ShadowPackageManager`][shadow-package-manager-javadoc]       |
-| `RuntimeEnvironment.getRobolectricPackageManager()   `  | `shadowOf(RuntimeEnvironment.application.getPackageManager())` |
+| `RuntimeEnvironment.getRobolectricPackageManager()`     | `shadowOf(RuntimeEnvironment.application.getPackageManager())` |
 
 If you were using `RuntimeEnvironment.setRobolectricPackageManager()` to install a custom
 `PackageManager`, you should move your custom behavior to a subclass of
@@ -162,6 +167,7 @@ The deprecated and redundant `attach()` method has been removed from
 
 ---
 
+<!-- markdownlint-disable-next-line MD033 -->
 ## Migrating to 3.3<a name="migrating-from-32-to-33"></a>
 
 ### Moved classes
@@ -219,13 +225,14 @@ that we've implemented quite a bit more of `PackageManager`, so you might not ne
 any longer.
 
 Starting with 3.4, `DefaultPackageManager` will be removed and its functionality will be moved into
-`ShadowApplicationPackageManager`.
+`ShadowApplicationPackageManager`. In general, we recommand using Android Framework APIs where
+possible.
 
-| 3.2 (now `@Deprecated`)                                                              | 3.3                                                                                                                  |
-|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| `RobolectricPackageManager rpm = RuntimeEnvironment.getRobolectricPackageManager();` | `ShadowPackageManager shadowPackageManager`<br/>`  = shadowOf(context.getPackageManager());`                         |
-| `PackageManager packageManager = RuntimeEnvironment.getPackageManager();`            | `// Prefer Android Framework APIs where possible`<br/>`PackageManager packageManager = context.getPackageManager();` |
-| `RuntimeEnvironment.setRobolectricPackageManager(customPackageManager);`             | Use a custom shadow instead! See below.                                                                              |
+| 3.2 (now `@Deprecated`)                                                              | 3.3                                                                                  |
+|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| `RobolectricPackageManager rpm = RuntimeEnvironment.getRobolectricPackageManager();` | `ShadowPackageManager shadowPackageManager = shadowOf(context.getPackageManager());` |
+| `PackageManager packageManager = RuntimeEnvironment.getPackageManager();`            | `PackageManager packageManager = context.getPackageManager();`                       |
+| `RuntimeEnvironment.setRobolectricPackageManager(customPackageManager);`             | Use a custom shadow instead! See below.                                              |
 
 Replace subclasses of `DefaultPackageManager` by a custom shadow (and be a good citizen by
 contributing your enhancements upstream 🙂):
@@ -276,6 +283,7 @@ more [here](getting-started.md).
 
 ---
 
+<!-- markdownlint-disable-next-line MD033 -->
 ## Migrating to 3.2<a name="migrating-from-31-to-32"></a>
 
 ### Programmatic Configuration
@@ -347,6 +355,7 @@ configure all tests, the expected location of the file has been changed.
 
 ---
 
+<!-- markdownlint-disable-next-line MD033 -->
 ## Migrating to 3.1<a name="migrating-from-30-to-31"></a>
 
 ### Changes
@@ -411,6 +420,7 @@ configure all tests, the expected location of the file has been changed.
 
 ---
 
+<!-- markdownlint-disable-next-line MD033 -->
 ## Migrating to 3.0<a name="migrating-from-24-to-30"></a>
 
 ### New Features
@@ -435,29 +445,29 @@ configure all tests, the expected location of the file has been changed.
 
 ### Major Changes
 
-| 2.4                                                                                            | 3.0                                                                                                                                                                                 |
-|------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Robolectric.application`                                                                      | `RuntimeEnvironment.application`                                                                                                                                                    |
-| `Robolectric.shadowOf`                                                                         | `Shadows.shadowOf`                                                                                                                                                                  |
-| `Robolectric.Reflection.setFinalStaticField`                                                   | `ReflectionHelpers.setStaticField`                                                                                                                                                  |
-| `org.robolectric.Robolectric.<xxx>Looper`                                                      | `org.robolectric.shadows.ShadowLooper.<xxx>Looper`                                                                                                                                  |
-| `org.robolectric.Robolectric.getBackgroundScheduler`                                           | `org.robolectric.Robolectric.getBackgroundThreadScheduler`                                                                                                                          |
-| `org.robolectric.Robolectric.runBackgroundTasks`                                               | `org.robolectric.Robolectric.getBackgroundThreadScheduler().advanceBy(0)` (also `org.robolectric.Robolectric.flushBackgroundThreadScheduler` will run delayed background tasks too) |
-| `org.robolectric.Robolectric.getUiThreadScheduler`                                             | `org.robolectric.Robolectric.getForegroundThreadScheduler`                                                                                                                          |
-| `org.robolectric.Robolectric.runUiThreadTasks`                                                 | `org.robolectric.shadows.ShadowLooper.runUiThreadTasks`                                                                                                                             |
-| `org.robolectric.Robolectric.runUiThreadTasksIncludingDelayedTasks`                            | `org.robolectric.shadows.ShadowLooper.runUiThreadTasksIncludingDelayedTasks`<br>or<br>`org.robolectric.Robolectric.flushForegroundThreadScheduler`                                  |
-| `org.robolectric.Robolectric.getShadowApplication`                                             | `org.robolectric.shadows.ShadowApplication.getInstance`                                                                                                                             |
-| `FragmentTestUtil.startFragment`(v4/v11)                                                       | `SupportFragmentTestUtil.startFragment` (v4)<br>`FragmentTestUtil.startFragment` (v11)                                                                                              |
-| `org.robolectric.tester.android.view.TestMenuItem`                                             | `org.robolectric.fakes.RoboMenuItem`                                                                                                                                                |
-| `ActivityController.of`                                                                        | `Robolectric.buildActivity`                                                                                                                                                         |
-| `org.robolectric.Config.properties`                                                            | `robolectric.properties`                                                                                                                                                            |
-| `@Config(emulateSdk=...)` / `@Config(reportSdk=...)`                                           | `@Config(sdk=...)`                                                                                                                                                                  |
-| `org.robolectric.shadows.ShadowHandler`                                                        | `org.robolectric.shadows.ShadowLooper`                                                                                                                                              |
-| `org.robolectric.shadows.ShadowSettings.SettingsImpl`                                          | `org.robolectric.shadows.ShadowSettings.ShadowSystem`                                                                                                                               |
-| `Robolectric.packageManager = instance`                                                        | `RuntimeEnvironment.setRobolectricPackageManager(instance)`                                                                                                                         |
-| `org.robolectric.res.builder.RobolectricPackageManager`<br>changed from `class` to `interface` | `org.robolectric.res.builder.DefaultPackageManager`                                                                                                                                 |
-| `org.robolectric.shadows.ShadowMenuInflater`                                                   | ?                                                                                                                                                                                   |
-| `org.robolectric.Robolectric.clickOn`                                                          | `org.robolectric.shadows.ShadowView.clickOn`                                                                                                                                        |
+| 2.4                                                                                         | 3.0                                                                                                                                                                                 |
+|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Robolectric.application`                                                                   | `RuntimeEnvironment.application`                                                                                                                                                    |
+| `Robolectric.shadowOf`                                                                      | `Shadows.shadowOf`                                                                                                                                                                  |
+| `Robolectric.Reflection.setFinalStaticField`                                                | `ReflectionHelpers.setStaticField`                                                                                                                                                  |
+| `org.robolectric.Robolectric.<xxx>Looper`                                                   | `org.robolectric.shadows.ShadowLooper.<xxx>Looper`                                                                                                                                  |
+| `org.robolectric.Robolectric.getBackgroundScheduler`                                        | `org.robolectric.Robolectric.getBackgroundThreadScheduler`                                                                                                                          |
+| `org.robolectric.Robolectric.runBackgroundTasks`                                            | `org.robolectric.Robolectric.getBackgroundThreadScheduler().advanceBy(0)` (also `org.robolectric.Robolectric.flushBackgroundThreadScheduler` will run delayed background tasks too) |
+| `org.robolectric.Robolectric.getUiThreadScheduler`                                          | `org.robolectric.Robolectric.getForegroundThreadScheduler`                                                                                                                          |
+| `org.robolectric.Robolectric.runUiThreadTasks`                                              | `org.robolectric.shadows.ShadowLooper.runUiThreadTasks`                                                                                                                             |
+| `org.robolectric.Robolectric.runUiThreadTasksIncludingDelayedTasks`                         | `org.robolectric.shadows.ShadowLooper.runUiThreadTasksIncludingDelayedTasks` or `org.robolectric.Robolectric.flushForegroundThreadScheduler`                                        |
+| `org.robolectric.Robolectric.getShadowApplication`                                          | `org.robolectric.shadows.ShadowApplication.getInstance`                                                                                                                             |
+| `FragmentTestUtil.startFragment`(v4/v11)                                                    | `SupportFragmentTestUtil.startFragment` (v4) / `FragmentTestUtil.startFragment` (v11)                                                                                               |
+| `org.robolectric.tester.android.view.TestMenuItem`                                          | `org.robolectric.fakes.RoboMenuItem`                                                                                                                                                |
+| `ActivityController.of`                                                                     | `Robolectric.buildActivity`                                                                                                                                                         |
+| `org.robolectric.Config.properties`                                                         | `robolectric.properties`                                                                                                                                                            |
+| `@Config(emulateSdk=...)` / `@Config(reportSdk=...)`                                        | `@Config(sdk=...)`                                                                                                                                                                  |
+| `org.robolectric.shadows.ShadowHandler`                                                     | `org.robolectric.shadows.ShadowLooper`                                                                                                                                              |
+| `org.robolectric.shadows.ShadowSettings.SettingsImpl`                                       | `org.robolectric.shadows.ShadowSettings.ShadowSystem`                                                                                                                               |
+| `Robolectric.packageManager = instance`                                                     | `RuntimeEnvironment.setRobolectricPackageManager(instance)`                                                                                                                         |
+| `org.robolectric.res.builder.RobolectricPackageManager` changed from `class` to `interface` | `org.robolectric.res.builder.DefaultPackageManager`                                                                                                                                 |
+| `org.robolectric.shadows.ShadowMenuInflater`                                                | ?                                                                                                                                                                                   |
+| `org.robolectric.Robolectric.clickOn`                                                       | `org.robolectric.shadows.ShadowView.clickOn`                                                                                                                                        |
 
 * `Robolectric.shadowOf_` has been removed. Similar functionality exists in
   `ShadowExtractor.extract`.

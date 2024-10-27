@@ -17,3 +17,19 @@
 .md-typeset .grid {
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr))
 }
+
+/* Create a "snippet" admonition type */
+.md-typeset .admonition.snippet,
+.md-typeset details.snippet {
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .snippet > .admonition-title,
+.md-typeset .snippet > summary {
+  background-color: rgba(158, 158, 158, 0.1);
+}
+.md-typeset .snippet > .admonition-title::before,
+.md-typeset .snippet > summary::before {
+  background-color: rgb(158, 158, 158);
+  -webkit-mask-image: var(--md-admonition-icon--example);
+          mask-image: var(--md-admonition-icon--example);
+}
