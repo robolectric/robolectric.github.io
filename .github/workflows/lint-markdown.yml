@@ -22,4 +22,6 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v16
         with:
           config: ".markdownlint.jsonc"
-          globs: "docs/**/*.md"
+          globs: |
+            "docs/**/*.md"
+            "#docs/javadoc/**/*.md"
