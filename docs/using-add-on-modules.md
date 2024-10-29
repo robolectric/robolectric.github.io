@@ -6,6 +6,7 @@ the base Android SDK are provided by the main Robolectric module. Additional sha
 dedicated packages.
 
 > [!NOTE]
+>
 > - [Robolectric 3.4][robolectric-3.4-release] doesn't include the `shadows-` prefix in the package
     name (i.e., `org.robolectric:playservices` and `org.robolectric:httpclient`).
 > - Before Robolectric 3.4, `org.robolectric:playservices` was named `shadow-play-services`.

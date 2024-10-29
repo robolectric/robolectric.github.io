@@ -4,6 +4,8 @@ hide:
 - toc
 ---
 
+<!-- markdownlint-disable MD033 MD041 -->
+
 <div align="center">
   <img src="images/robolectric-horizontal.png" alt="{{ config.site_name }}" />
 
@@ -55,7 +57,7 @@ Tests run inside the JVM in seconds. With Robolectric you can write tests like t
 
 <div class="grid cards" markdown>
 
--   **Test APIs & Isolation**
+- **Test APIs & Isolation**
 
     ---
 
@@ -71,7 +73,7 @@ Tests run inside the JVM in seconds. With Robolectric you can write tests like t
     Robolectric provides a [test double][test-double] that's suitable for most unit testing
     scenarios.
 
--   **No Mocking Frameworks Required**
+- **No Mocking Frameworks Required**
 
     ---
 
@@ -84,7 +86,7 @@ Tests run inside the JVM in seconds. With Robolectric you can write tests like t
     instead of the implementation of Android. You can still use a mocking framework along with
     Robolectric if you like.
 
--   **Run Tests Outside the Emulator**
+- **Run Tests Outside the Emulator**
 
     ---
 
@@ -93,7 +95,7 @@ Tests run inside the JVM in seconds. With Robolectric you can write tests like t
     installing steps aren't necessary, reducing test cycles from minutes to seconds so you can
     iterate quickly and refactor your code with confidence.
 
--   **SDK, Resources, & Native Method Simulation**
+- **SDK, Resources, & Native Method Simulation**
 
     ---
 

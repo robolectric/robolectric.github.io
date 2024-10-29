@@ -1,0 +1,27 @@
+name: "Lint Markdown"
+
+on:
+  merge_group:
+  pull_request:
+  push:
+    branches: [ master ]
+
+jobs:
+  lint_project:
+    name: "Lint Markdown"
+    runs-on: ubuntu-latest
+    permissions:
+      statuses: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          config: ".markdownlint.jsonc"
+          globs: |
+            "docs/**/*.md"
+            "#docs/javadoc/**/*.md"

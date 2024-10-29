@@ -4,6 +4,8 @@ hide:
 - toc
 ---
 
+<!-- markdownlint-disable MD029 -->
+
 # Automated Migration
 
 Robolectric provides an automated migration tool to help keep your test suite up to date with
@@ -78,7 +80,6 @@ and commit to your source control system.
     ```
 
 4. Make sure your code still compiles and commit changes.
-
 5. Update your project to the new version of Robolectric.
 
 The migration tool will make a best effort attempt to adjust the source code, but there might be

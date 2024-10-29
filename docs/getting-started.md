@@ -208,7 +208,7 @@ If you are not sure if resources are being loaded for a particular library, enab
 setting the system property `robolectric.logging.enabled = true` and run your tests. You should see
 lots of output like:
 
-```
+```text
 Loading resources for 'com.foo' from build/unpacked-libraries/library1...
 ```
 

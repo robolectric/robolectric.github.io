@@ -1,0 +1,12 @@
+// https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.jsonc
+{
+  // Line length: https://github.com/DavidAnson/markdownlint/blob/main/doc/md013.md
+  "MD013": {
+    "line_length": 120,
+    "heading_line_length": 120,
+    "code_block_line_length": 120,
+    "tables": false
+  },
+  // Code block style: https://github.com/DavidAnson/markdownlint/blob/main/doc/md046.md
+  "MD046": false
+}

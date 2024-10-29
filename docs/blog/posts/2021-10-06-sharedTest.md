@@ -5,6 +5,8 @@ authors:
 slug: sharedTest
 ---
 
+<!-- markdownlint-disable MD052 -->
+
 # `sharedTest` pattern: sharing tests and speeding up development
 
 After [Robolectric's 4.0 release][2], Robolectric supports the [`AndroidJUnit4` test runner][3],
@@ -142,21 +144,22 @@ There are some Google's projects have used `sharedTest` pattern to sharing test 
 
 - [accompanist: [All] Share tests to run on Robolectric & Emulators by chrisbanes][10]
 
+<!-- markdownlint-disable MD013 -->
 [1]: https://medium.com/androiddevelopers/write-once-run-everywhere-tests-on-android-88adb2ba20c5 "Write Once, Run Everywhere Tests on Android"
 [2]: {{ config.site_url }}blog/2018/10/25/robolectric-4-0/ "Robolectric 4.0 release"
-[3]: https://developer.android.com/training/testing/junit-runner "AndroidJUnit4 test runner"
-[4]: https://developer.android.com/training/testing/espresso/ "Espresso"
-[5]: https://developer.android.com/reference/androidx/test/core/app/ActivityScenario "ActivityScenario"
-[6]: https://proandroiddev.com/sharing-code-between-local-and-instrumentation-tests-c0b57ebd3200 "Sharing code between local and instrumentation tests by Alex Zhukovich"
-[7]: https://medium.com/wirex/powerful-approaches-to-develop-shared-android-tests-15c508e3ce8a "Powerful Approaches to Develop Shared Android Tests by Oleksandr Hrybuk"
-[8]: https://blog.danlew.net/2015/11/02/sharing-code-between-unit-tests-and-instrumentation-tests-on-android/ "Sharing code between unit tests and instrumentation tests on Android by Dan Lew"
-[9]: https://github.com/robolectric/robolectric/pull/6570 "Add ctesque common tests to android test"
-[10]: https://github.com/google/accompanist/pull/180 "[All] Share tests to run on Robolectric & Emulators by chrisbanes"
-[11]: https://github.com/android/testing-samples/blob/main/ui/espresso/FragmentScenarioSample/app/build.gradle "FragmentScenarioSample of androidx.test with sharedTest pattern"
-[12]: https://www.raywenderlich.com/books/android-test-driven-development-by-tutorials/ "Android Test-Driven Development by Tutorials, by Fernando Sproviero, Victoria Gonda and Lance Gleason, Razeware LLC (July 20, 2021)"
-[13]: https://github.com/android/android-test "androidx.test"
-[14]: https://github.com/android/testing-samples/blob/main/ui/espresso/FragmentScenarioSample/app/src/sharedTest/java/com/example/android/testing/espresso/fragmentscenario/SampleFragmentTest.kt "SampleFragmentTest.kt of FragmentScenarioSample"
-[15]: https://github.com/android/testing-samples/tree/main/ui/espresso/FragmentScenarioSample "FragmentScenarioSample of testing-samples"
-[16]: https://github.com/android/testing-samples/tree/main/ui/espresso/FragmentScenarioSample/app/src/sharedTest "sharedTest directory of FragmentScenarioSample"
-[17]: https://cs.android.com/androidx/android-test/+/master:ext/junit/java/androidx/test/ext/junit/runners/AndroidJUnit4.java "AndroidJUnit4 source code"
-[18]: https://developer.android.com/training/testing/fundamentals#create-test-iteratively "TDD cycles"
+[3]: <https://developer.android.com/training/testing/junit-runner> "AndroidJUnit4 test runner"
+[4]: <https://developer.android.com/training/testing/espresso/> "Espresso"
+[5]: <https://developer.android.com/reference/androidx/test/core/app/ActivityScenario> "ActivityScenario"
+[6]: <https://proandroiddev.com/sharing-code-between-local-and-instrumentation-tests-c0b57ebd3200> "Sharing code between local and instrumentation tests by Alex Zhukovich"
+[7]: <https://medium.com/wirex/powerful-approaches-to-develop-shared-android-tests-15c508e3ce8a> "Powerful Approaches to Develop Shared Android Tests by Oleksandr Hrybuk"
+[8]: <https://blog.danlew.net/2015/11/02/sharing-code-between-unit-tests-and-instrumentation-tests-on-android/> "Sharing code between unit tests and instrumentation tests on Android by Dan Lew"
+[9]: <https://github.com/robolectric/robolectric/pull/6570> "Add ctesque common tests to android test"
+[10]: <https://github.com/google/accompanist/pull/180> "[All] Share tests to run on Robolectric & Emulators by chrisbanes"
+[11]: <https://github.com/android/testing-samples/blob/main/ui/espresso/FragmentScenarioSample/app/build.gradle> "FragmentScenarioSample of androidx.test with sharedTest pattern"
+[12]: <https://www.raywenderlich.com/books/android-test-driven-development-by-tutorials/> "Android Test-Driven Development by Tutorials, by Fernando Sproviero, Victoria Gonda and Lance Gleason, Razeware LLC (July 20, 2021)"
+[13]: <https://github.com/android/android-test> "androidx.test"
+[14]: <https://github.com/android/testing-samples/blob/main/ui/espresso/FragmentScenarioSample/app/src/sharedTest/java/com/example/android/testing/espresso/fragmentscenario/SampleFragmentTest.kt> "SampleFragmentTest.kt of FragmentScenarioSample"
+[15]: <https://github.com/android/testing-samples/tree/main/ui/espresso/FragmentScenarioSample> "FragmentScenarioSample of testing-samples"
+[16]: <https://github.com/android/testing-samples/tree/main/ui/espresso/FragmentScenarioSample/app/src/sharedTest> "sharedTest directory of FragmentScenarioSample"
+[17]: <https://cs.android.com/androidx/android-test/+/master:ext/junit/java/androidx/test/ext/junit/runners/AndroidJUnit4.java> "AndroidJUnit4 source code"
+[18]: <https://developer.android.com/training/testing/fundamentals#create-test-iteratively> "TDD cycles"

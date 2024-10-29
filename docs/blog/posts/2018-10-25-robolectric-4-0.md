@@ -7,6 +7,7 @@ authors:
 slug: robolectric-4-0
 ---
 
+<!-- markdownlint-disable-next-line MD026 -->
 # Robolectric 4.0 Released!
 
 Robolectric 4.0 is released! Here's what's new!
