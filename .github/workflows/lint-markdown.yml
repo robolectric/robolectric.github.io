@@ -23,5 +23,6 @@ jobs:
         with:
           config: ".markdownlint.jsonc"
           globs: |
+            "README.md"
             "docs/**/*.md"
             "#docs/javadoc/**/*.md"
