@@ -1,0 +1,42 @@
+name: "Validate snippets"
+
+on:
+  merge_group:
+  pull_request:
+  push:
+    branches: [ master ]
+
+jobs:
+  validate_snippets:
+    name: "Validate snippets"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            snippets
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          java-version: 17
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Check codestyle
+        uses: axel-op/googlejavaformat-action@v3
+        with:
+          args: "--replace"
+          files: snippets/**/*.java
+          skip-commit: true
+
+      - name: Print codestyle issues
+        run: git --no-pager diff --exit-code
+
+      - name: Build
+        run: |
+          cd snippets
+          ./gradlew check

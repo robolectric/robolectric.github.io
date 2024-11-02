@@ -5,6 +5,19 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      actions:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "gradle"
+    directory: "/snippets"
+    schedule:
+      interval: "weekly"
+    groups:
+      gradle:
+        patterns:
+          - "*"
 
   - package-ecosystem: "pip"
     directory: "/"

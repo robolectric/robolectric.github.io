@@ -22,6 +22,35 @@ Then you can execute the following command to access the documentation locally a
 mkdocs serve --open
 ```
 
+### Using code snippets
+
+The code snippets displayed throughout the website are stored in the [`snippets`](snippets) Android
+project.
+
+To use a new code snippet, follow these steps:
+
+1. Define your code snippet in the `snippets/java` module.
+2. Surround it with
+
+```java
+// --8<-- [start:my_code_snippet_identifier]
+my code snippet
+// --8<-- [end:my_code_snippet_identifier]
+```
+
+3. To use it in your Markdown file, use the following syntax:
+
+````markdown
+```java
+--8<-- "snippets/java/path/to/my/snippet/MyCodeSnippet.java:my_code_snippet_identifier"
+```
+````
+
+> [!NOTE]
+>
+> The migration of the code snippets to the `snippets` project is a work in progress.
+> New code snippets **should** be added in the `snippets` project.
+
 ### Validate your Markdown files
 
 If you modified any Markdown file, we recommend using [`DavidAnson/markdownlint-cli2`](https://github.com/DavidAnson/markdownlint-cli2) to ensure that the formatting rules are respected.

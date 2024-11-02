@@ -1,0 +1,40 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace "org.robolectric.snippets.java"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "org.robolectric.snippets.java"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        resValues = false
+        shaders = false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
+}
+
+dependencies {
+    testImplementation(libs.junit)
+    testImplementation(libs.robolectric)
+}
+
+tasks.withType(Test).configureEach {
+    it.testLogging.exceptionFormat = "full"
+}
