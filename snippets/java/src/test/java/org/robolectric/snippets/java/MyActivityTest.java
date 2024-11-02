@@ -3,7 +3,6 @@ package org.robolectric.snippets.java;
 import static org.junit.Assert.assertEquals;
 
 import android.widget.TextView;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;

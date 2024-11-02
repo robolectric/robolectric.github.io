@@ -12,6 +12,7 @@ public class MyActivity extends Activity {
     setContentView(R.layout.activity_my);
 
     findViewById(R.id.button)
-            .setOnClickListener((view) -> ((TextView) findViewById(R.id.text)).setText("Robolectric Rocks!"));
+        .setOnClickListener(
+            (view) -> ((TextView) findViewById(R.id.text)).setText("Robolectric Rocks!"));
   }
 }

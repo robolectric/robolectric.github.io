@@ -1,5 +1,5 @@
 [versions]
-android-gradle-plugin = "8.6.1"
+android-gradle-plugin = "8.7.2"
 junit = "4.13.2"
 robolectric = "4.13"
 
