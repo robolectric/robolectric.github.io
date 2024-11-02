@@ -8,60 +8,60 @@ for Android.
 
 Start by adding the following to your module's `build.gradle`/`build.gradle.kts` file:
 
-=== "Groovy"
-
-    ```groovy
-    android {
-      testOptions {
-        unitTests {
-          includeAndroidResources = true
-        }
-      }
+/// tab | Groovy
+```groovy
+android {
+  testOptions {
+    unitTests {
+      includeAndroidResources = true
     }
+  }
+}
 
-    dependencies {
-      testImplementation 'junit:junit:4.13.2'
-      testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current }}'
+dependencies {
+  testImplementation 'junit:junit:4.13.2'
+  testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current }}'
+}
+```
+///
+
+/// tab | Kotlin
+```kotlin
+android {
+  testOptions {
+    unitTests {
+      isIncludeAndroidResources = true
     }
-    ```
+  }
+}
 
-=== "Kotlin"
-
-    ```kotlin
-    android {
-      testOptions {
-        unitTests {
-          isIncludeAndroidResources = true
-        }
-      }
-    }
-
-    dependencies {
-      testImplementation("junit:junit:4.13.2")
-      testImplementation("org.robolectric:robolectric:{{ robolectric.version.current }}")
-    }
-    ```
+dependencies {
+  testImplementation("junit:junit:4.13.2")
+  testImplementation("org.robolectric:robolectric:{{ robolectric.version.current }}")
+}
+```
+///
 
 Then, mark your test to run with `RobolectricTestRunner`:
 
-=== "Java"
+/// tab | Java
+```java
+import org.robolectric.RobolectricTestRunner;
 
-    ```java
-    import org.robolectric.RobolectricTestRunner;
+@RunWith(RobolectricTestRunner.class)
+public class SandwichTest {
+}
+```
+///
 
-    @RunWith(RobolectricTestRunner.class)
-    public class SandwichTest {
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+import org.robolectric.RobolectricTestRunner
 
-=== "Kotlin"
-
-    ```kotlin
-    import org.robolectric.RobolectricTestRunner
-
-    @RunWith(RobolectricTestRunner::class)
-    class SandwichTest
-    ```
+@RunWith(RobolectricTestRunner::class)
+class SandwichTest
+```
+///
 
 ## Building with Bazel
 
@@ -142,24 +142,24 @@ Start by adding the following to your module's `pom.xml` file:
 
 Then, mark your test to run with `RobolectricTestRunner`:
 
-=== "Java"
+/// tab | Java
+```java
+import org.robolectric.RobolectricTestRunner;
 
-    ```java
-    import org.robolectric.RobolectricTestRunner;
+@RunWith(RobolectricTestRunner.class)
+public class SandwichTest {
+}
+```
+///
 
-    @RunWith(RobolectricTestRunner.class)
-    public class SandwichTest {
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+import org.robolectric.RobolectricTestRunner
 
-=== "Kotlin"
-
-    ```kotlin
-    import org.robolectric.RobolectricTestRunner
-
-    @RunWith(RobolectricTestRunner::class)
-    class SandwichTest
-    ```
+@RunWith(RobolectricTestRunner::class)
+class SandwichTest
+```
+///
 
 ### Using libraries
 
@@ -167,32 +167,32 @@ If you use Maven to build your application, you will need to tell Robolectric wh
 resources are located for each library you use. This can either be specified with the `@Config`
 annotation:
 
-=== "Java"
+/// tab | Java
+```java
+import org.robolectric.RobolectricTestRunner;
 
-    ```java
-    import org.robolectric.RobolectricTestRunner;
+@RunWith(RobolectricTestRunner.class)
+@Config(libraries = {
+  "build/unpacked-libraries/library1",
+  "build/unpacked-libraries/library2"
+})
+public class SandwichTest {
+}
+```
+///
 
-    @RunWith(RobolectricTestRunner.class)
-    @Config(libraries = {
-        "build/unpacked-libraries/library1",
-        "build/unpacked-libraries/library2"
-    })
-    public class SandwichTest {
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+import org.robolectric.RobolectricTestRunner
 
-=== "Kotlin"
-
-    ```kotlin
-    import org.robolectric.RobolectricTestRunner
-
-    @RunWith(RobolectricTestRunner::class)
-    @Config(libraries = [
-        "build/unpacked-libraries/library1",
-        "build/unpacked-libraries/library2"
-    ])
-    class SandwichTest
-    ```
+@RunWith(RobolectricTestRunner::class)
+@Config(libraries = [
+  "build/unpacked-libraries/library1",
+  "build/unpacked-libraries/library2"
+])
+class SandwichTest
+```
+///
 
 or specified in the [`robolectric.properties`](configuring.md/#robolectricproperties-file) file:
 

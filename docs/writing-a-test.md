@@ -7,38 +7,38 @@ hide:
 
 Let's say that you have an [`Activity`][activity-documentation] that represents a welcome screen:
 
-=== "Java"
+/// tab | Java
+```java
+public class WelcomeActivity extends Activity {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.welcome_activity);
 
-    ```java
-    public class WelcomeActivity extends Activity {
-        @Override
-        protected void onCreate(@Nullable Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.welcome_activity);
-    
-            final Button button = findViewById(R.id.login);
-            button.setOnClickListener((view) -> {
-                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class))
-            });
+        final Button button = findViewById(R.id.login);
+        button.setOnClickListener((view) -> {
+            startActivity(new Intent(WelcomeActivity.this, LoginActivity.class))
+        });
+    }
+}
+```
+///
+
+/// tab | Kotlin
+```kotlin
+class WelcomeActivity : Activity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.welcome_activity)
+
+        val button = findViewById<Button>(R.id.login)
+        button.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    class WelcomeActivity : Activity() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.welcome_activity)
-    
-            val button = findViewById<Button>(R.id.login)
-            button.setOnClickListener {
-                startActivity(Intent(this, LoginActivity::class.java))
-            }
-        }
-    }
-    ```
+}
+```
+///
 
 ```xml title="welcome_activity.xml"
 <?xml version="1.0" encoding="utf-8"?>
@@ -62,47 +62,47 @@ To achieve this, we can check that the correct [`Intent`][intent-documentation] 
 click is performed. Since Robolectric is a unit testing framework, the `LoginActivity` will not
 actually be started.
 
-=== "Java"
+/// tab | Java
+```java
+@RunWith(RobolectricTestRunner.class)
+public class WelcomeActivityTest {
+    @Test
+    public void clickingLogin_shouldStartLoginActivity() {
+        try (ActivityController<WelcomeActivity> controller = Robolectric.buildActivity(WelcomeActivity.class)) {
+            controller.setup(); // Moves the Activity to the RESUMED state
 
-    ```java
-    @RunWith(RobolectricTestRunner.class)
-    public class WelcomeActivityTest {
-        @Test
-        public void clickingLogin_shouldStartLoginActivity() {
-            try (ActivityController<WelcomeActivity> controller = Robolectric.buildActivity(WelcomeActivity.class)) {
-                controller.setup(); // Moves the Activity to the RESUMED state
+            WelcomeActivity activity = controller.get();
+            activity.findViewById<Button>(R.id.login).performClick();
 
-                WelcomeActivity activity = controller.get();
-                activity.findViewById<Button>(R.id.login).performClick();
-    
-                Intent expectedIntent = new Intent(activity, LoginActivity.class);
-                Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
-                assertEquals(expectedIntent.getComponent(), actual.getComponent());
-            }
+            Intent expectedIntent = new Intent(activity, LoginActivity.class);
+            Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
+            assertEquals(expectedIntent.getComponent(), actual.getComponent());
         }
     }
-    ```
+}
+```
+///
 
-=== "Kotlin"
+/// tab | Kotlin
+```kotlin
+@RunWith(RobolectricTestRunner::class)
+class WelcomeActivityTest {
+    @Test
+    fun clickingLogin_shouldStartLoginActivity() {
+        Robolectric.buildActivity(WelcomeActivity::class.java).use { controller ->
+            controller.setup() // Moves the Activity to the RESUMED state
 
-    ```kotlin
-    @RunWith(RobolectricTestRunner::class)
-    class WelcomeActivityTest {
-        @Test
-        fun clickingLogin_shouldStartLoginActivity() {
-            Robolectric.buildActivity(WelcomeActivity::class.java).use { controller ->
-                controller.setup() // Moves the Activity to the RESUMED state
+            val activity = controller.get()
+            activity.findViewById<Button>(R.id.login).performClick()
 
-                val activity = controller.get()
-                activity.findViewById<Button>(R.id.login).performClick()
-
-                val expectedIntent = Intent(activity, LoginActivity::class.java)
-                val actual = shadowOf(RuntimeEnvironment.application).nextStartedActivity
-                assertEquals(expectedIntent.component, actual.component)
-            }
+            val expectedIntent = Intent(activity, LoginActivity::class.java)
+            val actual = shadowOf(RuntimeEnvironment.application).nextStartedActivity
+            assertEquals(expectedIntent.component, actual.component)
         }
     }
-    ```
+}
+```
+///
 
 ## Test APIs
 
@@ -113,36 +113,36 @@ for tests.
 Many test APIs are extensions to individual Android classes, and can be accessed using the
 `shadowOf()` method:
 
-=== "Java"
+/// tab | Java
+```java
+// Retrieve all the toasts that have been displayed
+List<Toast> toasts = shadowOf(application).getShownToasts();
+```
+///
 
-    ```java
-    // Retrieve all the toasts that have been displayed
-    List<Toast> toasts = shadowOf(application).getShownToasts();
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    // Retrieve all the toasts that have been displayed
-    val toasts = shadowOf(application).shownToasts
-    ```
+/// tab | Kotlin
+```kotlin
+// Retrieve all the toasts that have been displayed
+val toasts = shadowOf(application).shownToasts
+```
+///
 
 Additional test APIs are accessible as static methods on special classes called
 [shadows](extending.md), which correspond to Android framework classes:
 
-=== "Java"
+/// tab | Java
+```java
+// Simulate a new display being plugged into the device
+ShadowDisplayManager.addDisplay("xlarge-port");
+```
+///
 
-    ```java
-    // Simulate a new display being plugged into the device
-    ShadowDisplayManager.addDisplay("xlarge-port");
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    // Simulate a new display being plugged into the device
-    ShadowDisplayManager.addDisplay("xlarge-port")
-    ```
+/// tab | Kotlin
+```kotlin
+// Simulate a new display being plugged into the device
+ShadowDisplayManager.addDisplay("xlarge-port")
+```
+///
 
 [activity-documentation]: https://developer.android.com/reference/android/app/Activity
 [intent-documentation]: https://developer.android.com/reference/android/content/Intent

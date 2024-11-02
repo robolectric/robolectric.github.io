@@ -17,29 +17,29 @@ often take minutes. That's no way to do <abbr title="Test-Driven Development">TD
 be a better way. Robolectric is a framework that brings fast and reliable unit tests to Android.
 Tests run inside the JVM in seconds. With Robolectric you can write tests like this:
 
-=== "Java"
+/// tab | Java
+```java
+--8<-- "snippets/java/src/test/java/org/robolectric/snippets/java/MyActivityTest.java:index_sample_test"
+```
+///
 
-    ```java
-    --8<-- "snippets/java/src/test/java/org/robolectric/snippets/java/MyActivityTest.java:index_sample_test"
-    ```
+/// tab | Kotlin
+```kotlin
+@RunWith(RobolectricTestRunner::class)
+class MyActivityTest {
+  @Test
+  fun clickingButton_shouldChangeMessage() {
+    Robolectric.buildActivity(MyActivity::class).use { controller ->
+      controller.setup() // Moves the Activity to the RESUMED state
+      val activity = controller.get()
 
-=== "Kotlin"
-
-    ```kotlin
-    @RunWith(RobolectricTestRunner::class)
-    class MyActivityTest {
-      @Test
-      fun clickingButton_shouldChangeMessage() {
-        Robolectric.buildActivity(MyActivity::class).use { controller ->
-          controller.setup() // Moves the Activity to the RESUMED state
-          val activity = controller.get()
-
-          activity.findViewById(R.id.button).performClick()
-          assertEquals((activity.findViewById(R.id.text) as TextView).text, "Robolectric Rocks!")
-        }
-      }
+      activity.findViewById(R.id.button).performClick()
+      assertEquals((activity.findViewById(R.id.text) as TextView).text, "Robolectric Rocks!")
     }
-    ```
+  }
+}
+```
+///
 
 [Get started](getting-started.md){ .md-button .md-button--primary }
 

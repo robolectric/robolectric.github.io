@@ -16,26 +16,26 @@ Base classes are also searched for annotations. So if you find yourself specifyi
 on a large number of tests, you can create a base class and move your `@Config` annotation to that
 class.
 
-=== "Java"
+/// tab | Java
+```java
+@Config(
+  sdk = Build.VERSION_CODES.TIRAMISU,
+  shadows = {ShadowFoo.class, ShadowBar.class}
+)
+public class SandwichTest {
+}
+```
+///
 
-    ```java
-    @Config(
-      sdk = Build.VERSION_CODES.TIRAMISU,
-      shadows = { ShadowFoo.class, ShadowBar.class }
-    )
-    public class SandwichTest {
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    @Config(
-      sdk = Build.VERSION_CODES.TIRAMISU,
-      shadows = [ ShadowFoo.class, ShadowBar.class ]
-    )
-    class SandwichTest
-    ```
+/// tab | Kotlin
+```kotlin
+@Config(
+  sdk = Build.VERSION_CODES.TIRAMISU,
+  shadows = [ShadowFoo::class, ShadowBar::class]
+)
+class SandwichTest
+```
+///
 
 ### `robolectric.properties` file
 
@@ -74,53 +74,53 @@ By default, Robolectric will run your code against the `targetSdk` specified in 
 a different SDK, you can specify the desired SDK(s) using the [`sdk`][config-sdk],
 [`minSdk`][config-min-sdk] and [`maxSdk`][config-max-sdk] config properties:
 
-=== "Java"
+/// tab | Java
+```java
+@Config(sdk = {TIRAMISU, UPSIDE_DOWN_CAKE})
+public class SandwichTest {
+  @Test
+  public void getSandwich_shouldReturnHamSandwich() {
+    // will run on TIRAMISU and UPSIDE_DOWN_CAKE
+  }
 
-    ```java
-    @Config(sdk = { TIRAMISU, UPSIDE_DOWN_CAKE })
-    public class SandwichTest {
-        @Test
-        public void getSandwich_shouldReturnHamSandwich() {
-          // will run on TIRAMISU and UPSIDE_DOWN_CAKE
-        }
+  @Test
+  @Config(sdk = TIRAMISU)
+  public void onTiramisu_getSandwich_shouldReturnChocolateWaferSandwich() {
+    // will run on TIRAMISU
+  }
 
-        @Test
-        @Config(sdk = TIRAMISU)
-        public void onTiramisu_getSandwich_shouldReturnChocolateWaferSandwich() {
-          // will run on TIRAMISU
-        }
+  @Test
+  @Config(minSdk = UPSIDE_DOWN_CAKE)
+  public void fromUpsideDownCakeOn_getSandwich_shouldReturnTunaSandwich() {
+    // will run on UPSIDE_DOWN_CAKE, VANILLA_ICE_CREAM, etc.
+  }
+}
+```
+///
 
-        @Test
-        @Config(minSdk = UPSIDE_DOWN_CAKE)
-        public void fromUpsideDownCakeOn_getSandwich_shouldReturnTunaSandwich() {
-          // will run on UPSIDE_DOWN_CAKE, VANILLA_ICE_CREAM, etc.
-        }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+@Config(sdk = [TIRAMISU, UPSIDE_DOWN_CAKE])
+class SandwichTest {
+  @Test
+  fun getSandwich_shouldReturnHamSandwich() {
+    // will run on TIRAMISU and UPSIDE_DOWN_CAKE
+  }
 
-=== "Kotlin"
+  @Test
+  @Config(sdk = TIRAMISU)
+  fun onTiramisu_getSandwich_shouldReturnChocolateWaferSandwich() {
+    // will run on TIRAMISU
+  }
 
-    ```kotlin
-    @Config(sdk = [ TIRAMISU, UPSIDE_DOWN_CAKE ])
-    class SandwichTest {
-        @Test
-        fun getSandwich_shouldReturnHamSandwich() {
-          // will run on TIRAMISU and UPSIDE_DOWN_CAKE
-        }
-
-        @Test
-        @Config(sdk = TIRAMISU)
-        fun onTiramisu_getSandwich_shouldReturnChocolateWaferSandwich() {
-          // will run on TIRAMISU
-        }
-
-        @Test
-        @Config(minSdk = UPSIDE_DOWN_CAKE)
-        fun fromUpsideDownCakeOn_getSandwich_shouldReturnTunaSandwich() {
-          // will run on UPSIDE_DOWN_CAKE, VANILLA_ICE_CREAM, etc.
-        }
-    }
-    ```
+  @Test
+  @Config(minSdk = UPSIDE_DOWN_CAKE)
+  fun fromUpsideDownCakeOn_getSandwich_shouldReturnTunaSandwich() {
+    // will run on UPSIDE_DOWN_CAKE, VANILLA_ICE_CREAM, etc.
+  }
+}
+```
+///
 
 Note that `sdk` and `minSdk`/`maxSdk` may not be specified in the same `@Config` annotation or file;
 however, `minSdk` and `maxSdk` may be specified together. If any of them is present, they override
@@ -138,57 +138,57 @@ Robolectric will attempt to create an instance of your [`Application`][applicati
 class as specified in the `AndroidManifest`. If you want to provide a custom implementation, you can
 specify it by setting:
 
-=== "Java"
+/// tab | Java
+```java
+@Config(application = CustomApplication.class)
+public class SandwichTest {
+  @Test
+  @Config(application = CustomApplicationOverride.class)
+  public void getSandwich_shouldReturnHamSandwich() {
+  }
+}
+```
+///
 
-    ```java
-    @Config(application = CustomApplication.class)
-    public class SandwichTest {
-        @Test
-        @Config(application = CustomApplicationOverride.class)
-        public void getSandwich_shouldReturnHamSandwich() {
-        }
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    @Config(application = CustomApplication::class)
-    class SandwichTest {
-        @Test
-        @Config(application = CustomApplicationOverride.class)
-        fun getSandwich_shouldReturnHamSandwich() {
-        }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+@Config(application = CustomApplication::class)
+class SandwichTest {
+  @Test
+  @Config(application = CustomApplicationOverride::class)
+  fun getSandwich_shouldReturnHamSandwich() {
+  }
+}
+```
+///
 
 ### Configure qualifiers
 
 You can explicitly configure the set of resource qualifiers in effect for a test:
 
-=== "Java"
+/// tab | Java
+```java
+public class SandwichTest {
+  @Test
+  @Config(qualifiers = "fr-xlarge")
+  public void getSandwichName() {
+    assertThat(sandwich.getName()).isEqualTo("Grande Croque Monégasque");
+  }
+}
+```
+///
 
-    ```java
-    public class SandwichTest {
-        @Test
-        @Config(qualifiers = "fr-xlarge")
-        public void getSandwichName() {
-          assertThat(sandwich.getName()).isEqualTo("Grande Croque Monégasque");
-        }
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    class SandwichTest {
-        @Test
-        @Config(qualifiers = "fr-xlarge")
-        fun getSandwichName() {
-          assertThat(sandwich.name).isEqualTo("Grande Croque Monégasque")
-        }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+class SandwichTest {
+  @Test
+  @Config(qualifiers = "fr-xlarge")
+  fun getSandwichName() {
+    assertThat(sandwich.name).isEqualTo("Grande Croque Monégasque")
+  }
+}
+```
+///
 
 See [Using Qualified Resources](using-qualifiers.md) for more details.
 
@@ -220,47 +220,47 @@ When using Gradle, you can configure the System Properties for unit tests with t
 to override the Maven repository URL and ID to download the runtime dependencies from a repository
 other than Maven Central:
 
-=== "Groovy"
+/// tab | Groovy
+```groovy
+android {
+  testOptions {
+    unitTests.all {
+      systemProperty "robolectric.dependency.repo.url", "https://local-mirror/repo"
+      systemProperty "robolectric.dependency.repo.id", "local"
 
-    ```groovy
-    android {
-      testOptions {
-        unitTests.all {
-          systemProperty "robolectric.dependency.repo.url", "https://local-mirror/repo"
-          systemProperty "robolectric.dependency.repo.id", "local"
+      // Username and password only needed when the local repository needs account information.
+      systemProperty "robolectric.dependency.repo.username", "username"
+      systemProperty "robolectric.dependency.repo.password", "password"
 
-          // Username and password only needed when the local repository needs account information.
-          systemProperty "robolectric.dependency.repo.username", "username"
-          systemProperty "robolectric.dependency.repo.password", "password"
-
-          // Since Robolectric 4.9.1, these are available
-          systemProperty "robolectric.dependency.proxy.host", project.findProperty("systemProp.https.proxyHost") ?: System.getenv("ROBOLECTRIC_PROXY_HOST")
-          systemProperty "robolectric.dependency.proxy.port", project.findProperty("systemProp.https.proxyPort") ?: System.getenv("ROBOLECTRIC_PROXY_PORT")
-        }
-      }
+      // Since Robolectric 4.9.1, these are available
+      systemProperty "robolectric.dependency.proxy.host", project.findProperty("systemProp.https.proxyHost") ?: System.getenv("ROBOLECTRIC_PROXY_HOST")
+      systemProperty "robolectric.dependency.proxy.port", project.findProperty("systemProp.https.proxyPort") ?: System.getenv("ROBOLECTRIC_PROXY_PORT")
     }
-    ```
+  }
+}
+```
+///
 
-=== "Kotlin"
+/// tab | Kotlin
+```kotlin
+android {
+  testOptions {
+    unitTests.all {
+      it.systemProperty("robolectric.dependency.repo.url", "https://local-mirror/repo")
+      it.systemProperty("robolectric.dependency.repo.id", "local")
 
-    ```kotlin
-    android {
-      testOptions {
-        unitTests.all {
-          it.systemProperty("robolectric.dependency.repo.url", "https://local-mirror/repo")
-          it.systemProperty("robolectric.dependency.repo.id", "local")
+      // Username and password only needed when the local repository needs account information.
+      it.systemProperty("robolectric.dependency.repo.username", "username")
+      it.systemProperty("robolectric.dependency.repo.password", "password")
 
-          // Username and password only needed when the local repository needs account information.
-          it.systemProperty("robolectric.dependency.repo.username", "username")
-          it.systemProperty("robolectric.dependency.repo.password", "password")
-
-          // Since Robolectric 4.9.1, these are available
-          it.systemProperty("robolectric.dependency.proxy.host", project.findProperty("systemProp.https.proxyHost") ?: System.getenv("ROBOLECTRIC_PROXY_HOST"))
-          it.systemProperty("robolectric.dependency.proxy.port", project.findProperty("systemProp.https.proxyPort") ?: System.getenv("ROBOLECTRIC_PROXY_PORT"))
-        }
-      }
+      // Since Robolectric 4.9.1, these are available
+      it.systemProperty("robolectric.dependency.proxy.host", project.findProperty("systemProp.https.proxyHost") ?: System.getenv("ROBOLECTRIC_PROXY_HOST"))
+      it.systemProperty("robolectric.dependency.proxy.port", project.findProperty("systemProp.https.proxyPort") ?: System.getenv("ROBOLECTRIC_PROXY_PORT"))
     }
-    ```
+  }
+}
+```
+///
 
 ## `ConscryptMode`
 

@@ -33,20 +33,20 @@ Shadow classes should mimic the production classes' inheritance hierarchy. For e
 implementing a Shadow for [`ViewGroup`][view-group-documentation], `ShadowViewGroup`, then your
 Shadow class should extend `ViewGroup`'s superclass' Shadow, `ShadowView`.
 
-=== "Java"
+/// tab | Java
+```java
+@Implements(ViewGroup.class)
+public class ShadowViewGroup extends ShadowView {
+}
+```
+///
 
-    ```java
-    @Implements(ViewGroup.class)
-    public class ShadowViewGroup extends ShadowView {
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    @Implements(ViewGroup::class)
-    class ShadowViewGroup : ShadowView
-    ```
+/// tab | Kotlin
+```kotlin
+@Implements(ViewGroup::class)
+class ShadowViewGroup : ShadowView
+```
+///
 
 ## Methods
 
@@ -56,17 +56,17 @@ Android object is invoked.
 
 Suppose an application defined the following line of code:
 
-=== "Java"
+/// tab | Java
+```java
+imageView.setImageResource(R.drawable.robolectric_logo);
+```
+///
 
-    ```java
-    imageView.setImageResource(R.drawable.robolectric_logo);
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    imageView.setImageResource(R.drawable.robolectric_logo)
-    ```
+/// tab | Kotlin
+```kotlin
+imageView.setImageResource(R.drawable.robolectric_logo)
+```
+///
 
 Under test, the `ShadowImageView#setImageResource(int resId)` method on the Shadow instance would be
 invoked.
@@ -74,29 +74,29 @@ invoked.
 Shadow methods must be marked with the [`@Implementation`][implementation-documentation] annotation.
 Robolectric includes a lint test to help ensure this is done correctly.
 
-=== "Java"
+/// tab | Java
+```java
+@Implements(ImageView.class)
+public class ShadowImageView extends ShadowView {
+  @Implementation
+  protected void setImageResource(int resId) {
+    // Implementation goes here
+  }
+}
+```
+///
 
-    ```java
-    @Implements(ImageView.class)
-    public class ShadowImageView extends ShadowView {
-      @Implementation
-      protected void setImageResource(int resId) {
-        // Implementation goes here
-      }
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    @Implements(ImageView::class)
-    class ShadowImageView : ShadowView {
-      @Implementation
-      protected fun setImageResource(resId: Int) {
-        // Implementation goes here
-      }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+@Implements(ImageView::class)
+class ShadowImageView : ShadowView {
+  @Implementation
+  protected fun setImageResource(resId: Int) {
+    // Implementation goes here
+  }
+}
+```
+///
 
 Robolectric supports shadowing all methods on the original class, including `private`, `static`,
 `final` or `native`.
@@ -121,41 +121,42 @@ invoked on the real object.
 For instance, if the application code was to invoke the [`TextView`][text-view-documentation]
 constructor which receives a [`Context`][context-documentation]:
 
-=== "Java"
+/// tab | Java
+```java
+new TextView(context);
+```
+///
 
-    ```java
-    new TextView(context);
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    TextView(context)
-    ```
+/// tab | Kotlin
+```kotlin
+TextView(context)
+```
+///
 
 Robolectric would invoke the following  `__constructor__` method that receives a `Context`:
 
-=== "Java"
+/// tab | Java
+```java
+@Implements(TextView.class)
+public class ShadowTextView {
+  @Implementation
+  protected void __constructor__(Context context) {
+    this.context = context;
+  }
+}
+```
+///
 
-    ```java
-    @Implements(TextView.class)
-    public class ShadowTextView {
-      @Implementation
-      protected void __constructor__(Context context) {
-        this.context = context;
-      }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    @Implements(TextView::class)
-    class ShadowTextView {
-      @Implementation
-      protected fun __constructor__(context: Context) {
-        this.context = context
-      }
-    ```
+/// tab | Kotlin
+```kotlin
+@Implements(TextView::class)
+class ShadowTextView {
+  @Implementation
+  protected fun __constructor__(context: Context) {
+    this.context = context
+  }
+```
+///
 
 ## Getting access to the real instance
 
@@ -163,33 +164,33 @@ Sometimes Shadow classes may want to refer to the object they are shadowing, e.g
 fields. A Shadow class can achieve this by declaring a field annotated with
 [`@RealObject`][real-object-documentation]:
 
-=== "Java"
+/// tab | Java
+```java
+@Implements(Point.class)
+public class ShadowPoint {
+  @RealObject private Point realPoint;
 
-    ```java
-    @Implements(Point.class)
-    public class ShadowPoint {
-      @RealObject private Point realPoint;
+  public void __constructor__(int x, int y) {
+    realPoint.x = x;
+    realPoint.y = y;
+  }
+}
+```
+///
 
-      public void __constructor__(int x, int y) {
-        realPoint.x = x;
-        realPoint.y = y;
-      }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+@Implements(Point::class)
+class ShadowPoint {
+  @RealObject private lateinit var realPoint: Point
 
-=== "Kotlin"
-
-    ```kotlin
-    @Implements(Point::class)
-    class ShadowPoint {
-      @RealObject private lateinit var realPoint: Point
-
-      fun __constructor__(x: Int, y: Int) {
-        realPoint.x = x
-        realPoint.y = y
-      }
-    }
-    ```
+  fun __constructor__(x: Int, y: Int) {
+    realPoint.x = x
+    realPoint.y = y
+  }
+}
+```
+///
 
 Robolectric will set `realPoint` to the actual instance of [`Point`][point-documentation] before
 invoking any other methods.
@@ -220,45 +221,45 @@ options, such as shadowing instance methods using `@Implementation` or shadowing
 `__constructor__()` methods. Your shadow class may also extend one of the stock Robolectric shadows
 if you like.
 
-=== "Java"
+/// tab | Java
+```java
+@Implements(Bitmap.class)
+public class MyShadowBitmap {
+  @RealObject private Bitmap realBitmap;
+  private int bitmapQuality = -1;
 
-    ```java
-    @Implements(Bitmap.class)
-    public class MyShadowBitmap {
-      @RealObject private Bitmap realBitmap;
-      private int bitmapQuality = -1;
+  @Implementation
+  public boolean compress(Bitmap.CompressFormat format, int quality, OutputStream stream) {
+    bitmapQuality = quality;
+    return realBitmap.compress(format, quality, stream);
+  }
 
-      @Implementation
-      public boolean compress(Bitmap.CompressFormat format, int quality, OutputStream stream) {
-        bitmapQuality = quality;
-        return realBitmap.compress(format, quality, stream);
-      }
+  public int getQuality() {
+    return bitmapQuality;
+  }
+}
+```
+///
 
-      public int getQuality() {
-        return bitmapQuality;
-      }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+@Implements(Bitmap::class)
+class MyShadowBitmap {
+  @RealObject private lateinit var realBitmap: Bitmap
+  private var bitmapQuality: Int = -1
 
-=== "Kotlin"
+  @Implementation
+  fun compress(format: Bitmap.CompressFormat, quality: Int, stream: OutputStream): Boolean {
+    bitmapQuality = quality
+    return realBitmap.compress(format, quality, stream)
+  }
 
-    ```kotlin
-    @Implements(Bitmap::class)
-    class MyShadowBitmap {
-      @RealObject private lateinit var realBitmap: Bitmap
-      private var bitmapQuality: Int = -1;
-
-      @Implementation
-      fun compress(format: Bitmap.CompressFormat, quality: Int, stream: OutputStream): Boolean {
-        bitmapQuality = quality
-        return realBitmap.compress(format, quality, stream)
-      }
-
-      fun getQuality(): Int {
-        return bitmapQuality
-      }
-    }
-    ```
+  fun getQuality(): Int {
+    return bitmapQuality
+  }
+}
+```
+///
 
 ### Using a Custom Shadows
 
@@ -288,44 +289,44 @@ shadow annotation processor on your library of shadows. This provides a number o
    reset static state.
 4. Perform additional validation and checking on your shadows.
 
-=== "Groovy"
-
-    ```groovy
-    android {
-      defaultConfig {
-        javaCompileOptions {
-          annotationProcessorOptions {
-            className 'org.robolectric.annotation.processing.RobolectricProcessor'
-            arguments = [ 'org.robolectric.annotation.processing.shadowPackage': 'com.example.myshadowpackage' ]
-          }
-        }
+/// tab | Groovy
+```groovy
+android {
+  defaultConfig {
+    javaCompileOptions {
+      annotationProcessorOptions {
+        className 'org.robolectric.annotation.processing.RobolectricProcessor'
+        arguments = ['org.robolectric.annotation.processing.shadowPackage': 'com.example.myshadowpackage']
       }
     }
+  }
+}
 
-    dependencies {
-      annotationProcessor 'org.robolectric:processor:{{ robolectric.version.current }}'
-    }
-    ```
+dependencies {
+  annotationProcessor 'org.robolectric:processor:{{ robolectric.version.current }}'
+}
+```
+///
 
-=== "Kotlin"
+/// tab | Kotlin
+When you write your shadows in Kotlin, configure [`kapt`][kapt-documentation]:
 
-    When you write your shadows in Kotlin, configure [`kapt`][kapt-documentation]:
+```kotlin
+plugins {
+  id("kotlin-kapt")
+}
 
-    ```kotlin
-    plugins {
-      id("kotlin-kapt")
-    }
+kapt {
+  arguments {
+    arg("org.robolectric.annotation.processing.shadowPackage", "com.example.myshadowpackage")
+  }
+}
 
-    kapt {
-      arguments {
-        arg("org.robolectric.annotation.processing.shadowPackage", "com.example.myshadowpackage")
-      }
-    }
-
-    dependencies {
-      kapt("org.robolectric:processor:{{ robolectric.version.current }}")
-    }
-    ```
+dependencies {
+  kapt("org.robolectric:processor:{{ robolectric.version.current }}")
+}
+```
+///
 
 ## Best practices
 

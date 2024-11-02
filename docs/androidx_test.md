@@ -16,45 +16,45 @@ us know if there are any extension points missing that you require.
 
 !!! snippet "Robolectric"
 
-    === "Java"
+    /// tab | Java
+    ```java
+    import org.robolectric.RobolectricTestRunner;
 
-        ```java
-        import org.robolectric.RobolectricTestRunner;
+    @RunWith(RobolectricTestRunner.class)
+    public class SandwichTest {
+    }
+    ```
+    ///
 
-        @RunWith(RobolectricTestRunner.class)
-        public class SandwichTest {
-        }
-        ```
+    /// tab | Kotlin
+    ```kotlin
+    import org.robolectric.RobolectricTestRunner
 
-    === "Kotlin"
-
-        ```kotlin
-        import org.robolectric.RobolectricTestRunner
-
-        @RunWith(RobolectricTestRunner::class)
-        class SandwichTest
-        ```
+    @RunWith(RobolectricTestRunner::class)
+    class SandwichTest
+    ```
+    ///
 
 !!! snippet "AndroidX Test"
 
-    === "Java"
+    /// tab | Java
+    ```java
+    import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-        ```java
-        import androidx.test.ext.junit.runners.AndroidJUnit4;
+    @RunWith(AndroidJUnit4.class)
+    public class SandwichTest {
+    }
+    ```
+    ///
 
-        @RunWith(AndroidJUnit4.class)
-        public class SandwichTest {
-        }
-        ```
+    /// tab | Kotlin
+    ```kotlin
+    import androidx.test.ext.junit.runners.AndroidJUnit4
 
-    === "Kotlin"
-
-        ```kotlin
-        import androidx.test.ext.junit.runners.AndroidJUnit4
-
-        @RunWith(AndroidJUnit4::class)
-        class SandwichTest
-        ```
+    @RunWith(AndroidJUnit4::class)
+    class SandwichTest
+    ```
+    ///
 
 ## Application
 
@@ -63,55 +63,55 @@ application’s context is a typical task for most tests.
 
 !!! snippet "Robolectric"
 
-    === "Java"
+    /// tab | Java
+    ```java
+    import org.robolectric.RuntimeEnvironment;
 
-        ```java
-        import org.robolectric.RuntimeEnvironment;
+    @Before
+    void setUp() {
+      ExampleApplication app = (ExampleApplication) RuntimeEnvironment.application;
+      app.setLocationProvider(mockLocationProvider);
+    }
+    ```
+    ///
 
-        @Before
-        void setUp() {
-          ExampleApplication app = (ExampleApplication) RuntimeEnvironment.application;
-          app.setLocationProvider(mockLocationProvider);
-        }
-        ```
+    /// tab | Kotlin
+    ```kotlin
+    import org.robolectric.RuntimeEnvironment
 
-    === "Kotlin"
-
-        ```kotlin
-        import org.robolectric.RuntimeEnvironment
-
-        @Before
-        fun setUp() {
-          val app = RuntimeEnvironment.application as ExampleApplication
-          app.setLocationProvider(mockLocationProvider)
-        }
-        ```
+    @Before
+    fun setUp() {
+      val app = RuntimeEnvironment.application as ExampleApplication
+      app.setLocationProvider(mockLocationProvider)
+    }
+    ```
+    ///
 
 !!! snippet "AndroidX Test"
 
-    === "Java"
+    /// tab | Java
+    ```java
+    import androidx.test.core.app.ApplicationProvider;
 
-        ```java
-        import androidx.test.core.app.ApplicationProvider;
+    @Before
+    void setUp() {
+      ExampleApplication app = ApplicationProvider.getApplicationContext<ExampleApplication>();
+      app.setLocationProvider(mockLocationProvider);
+    }
+    ```
+    ///
 
-        @Before
-        void setUp() {
-          ExampleApplication app = ApplicationProvider.getApplicationContext<ExampleApplication>();
-          app.setLocationProvider(mockLocationProvider);
-        }
-        ```
+    /// tab | Kotlin
+    ```kotlin
+    import androidx.test.core.app.ApplicationProvider
 
-    === "Kotlin"
-
-        ```kotlin
-        import androidx.test.core.app.ApplicationProvider
-
-        @Before
-        fun setUp() {
-          val app = ApplicationProvider.getApplicationContext<ExampleApplication>()
-          app.setLocationProvider(mockLocationProvider)
-        }
-        ```
+    @Before
+    fun setUp() {
+      val app = ApplicationProvider.getApplicationContext<ExampleApplication>()
+      app.setLocationProvider(mockLocationProvider)
+    }
+    ```
+    ///
 
 ## Activities
 
@@ -133,92 +133,92 @@ transitions are not possible. If you'd like a [`Rule`][junit-rule]-based equival
 
 !!! snippet "Robolectric"
 
-    === "Java"
+    /// tab | Java
+    ```java
+    import org.robolectric.Robolectric;
+    import org.robolectric.android.controller.ActivityController;
 
-        ```java
-        import org.robolectric.Robolectric;
-        import org.robolectric.android.controller.ActivityController;
+    public class LocationTrackerActivityTest {
+        @Test
+        public void locationListenerShouldBeUnregisteredInCreatedState() {
+            // GIVEN
+            ActivityController<LocationTrackerActivity> controller = Robolectric.buildActivity<LocationTrackerActivity>().setup();
 
-        public class LocationTrackerActivityTest {
-            @Test
-            public void locationListenerShouldBeUnregisteredInCreatedState() {
-                // GIVEN
-                ActivityController<LocationTrackerActivity> controller = Robolectric.buildActivity<LocationTrackerActivity>().setup();
+            // WHEN
+            controller.pause().stop();
 
-                // WHEN
-                controller.pause().stop();
+            // THEN
+            assertThat(controller.get().getLocationListener()).isNull();
+         }
+    }
+    ```
+    ///
 
-                // THEN
-                assertThat(controller.get().getLocationListener()).isNull();
-             }
-        }
-        ```
+    /// tab | Kotlin
+    ```kotlin
+    import org.robolectric.Robolectric
 
-    === "Kotlin"
+    class LocationTrackerActivityTest {
+        @Test
+        fun locationListenerShouldBeUnregisteredInCreatedState() {
+            // GIVEN
+            val controller = Robolectric.buildActivity<LocationTrackerActivity>().setup()
 
-        ```kotlin
-        import org.robolectric.Robolectric
+            // WHEN
+            controller.pause().stop()
 
-        class LocationTrackerActivityTest {
-            @Test
-            fun locationListenerShouldBeUnregisteredInCreatedState() {
-                // GIVEN
-                val controller = Robolectric.buildActivity<LocationTrackerActivity>().setup()
-
-                // WHEN
-                controller.pause().stop()
-
-                // THEN
-                assertThat(controller.get().locationListener).isNull()
-             }
-        }
-        ```
+            // THEN
+            assertThat(controller.get().locationListener).isNull()
+         }
+    }
+    ```
+    ///
 
 !!! snippet "AndroidX Test"
 
-    === "Java"
+    /// tab | Java
+    ```java
+    import androidx.lifecycle.Lifecycle;
+    import androidx.test.core.app.ActivityScenario;
 
-        ```java
-        import androidx.lifecycle.Lifecycle;
-        import androidx.test.core.app.ActivityScenario;
+    public class LocationTrackerActivityTest {
+        @Test
+        public void locationListenerShouldBeUnregisteredInCreatedState() {
+            // GIVEN
+            ActivityScenario<LocationTrackerActivity> scenario = ActivityScenario.launchActivity<LocationTrackerActivity>();
 
-        public class LocationTrackerActivityTest {
-            @Test
-            public void locationListenerShouldBeUnregisteredInCreatedState() {
-                // GIVEN
-                ActivityScenario<LocationTrackerActivity> scenario = ActivityScenario.launchActivity<LocationTrackerActivity>();
+            // WHEN
+            scenario.moveToState(Lifecycle.State.CREATED);
 
-                // WHEN
-                scenario.moveToState(Lifecycle.State.CREATED);
+            // THEN
+            scenario.onActivity(activity -> assertThat(activity.getLocationListener()).isNull());
+        }
+    }
+    ```
+    ///
 
-                // THEN
-                scenario.onActivity(activity -> assertThat(activity.getLocationListener()).isNull());
+    /// tab | Kotlin
+    ```kotlin
+    import androidx.lifecycle.Lifecycle
+    import androidx.test.core.app.ActivityScenario
+
+    class LocationTrackerActivityTest {
+        @Test
+        fun locationListenerShouldBeUnregisteredInCreatedState() {
+            // GIVEN
+            val scenario = ActivityScenario.launchActivity<LocationTrackerActivity>()
+
+            // WHEN
+            scenario.moveToState(Lifecycle.State.CREATED)
+
+            // THEN
+            scenario.onActivity { activity ->
+                assertThat(activity.locationListener).isNull()
             }
         }
-        ```
-
-    === "Kotlin"
-
-        ```kotlin
-        import androidx.lifecycle.Lifecycle
-        import androidx.test.core.app.ActivityScenario
-
-        class LocationTrackerActivityTest {
-            @Test
-            fun locationListenerShouldBeUnregisteredInCreatedState() {
-                // GIVEN
-                val scenario = ActivityScenario.launchActivity<LocationTrackerActivity>()
-
-                // WHEN
-                scenario.moveToState(Lifecycle.State.CREATED)
-
-                // THEN
-                scenario.onActivity { activity ->
-                    assertThat(activity.locationListener).isNull()
-                }
-            }
-        }
-        ```
+    }
+    ```
+    ///
 
 Note that in Robolectric since both the test and UI event loop run on the same thread,
 synchronization is not an issue. [`ActivityScenario.onActivity`][activity-scenario-on-activity]
@@ -235,96 +235,96 @@ UI threads.
 [Espresso][espresso] is the `View` matching and interaction library of choice for instrumentation
 tests. Since Robolectric 4.0, Espresso APIs are now supported in Robolectric tests.
 
-=== "Java"
+/// tab | Java
+```java
+import static androidx.test.espresso.Espresso.onView;
 
-    ```java
-    import static androidx.test.espresso.Espresso.onView;
+@RunWith(AndroidJUnit4.class)
+public class AddContactActivityTest {
+    @Test
+    public void inputTextShouldBeRetainedAfterActivityRecreation() {
+        // GIVEN
+        String contactName = "Test User";
+        ActivityScenario<AddContactActivity> scenario = ActivityScenario.launchActivity<AddContactActivity>();
 
-    @RunWith(AndroidJUnit4.class)
-    public class AddContactActivityTest {
-        @Test
-        public void inputTextShouldBeRetainedAfterActivityRecreation() {
-            // GIVEN
-            String contactName = "Test User";
-            ActivityScenario<AddContactActivity> scenario = ActivityScenario.launchActivity<AddContactActivity>();
-    
-            // WHEN
-            // Enter contact name
-            onView(withId(R.id.contact_name_text)).perform(typeText(contactName));
-            // Destroy and recreate Activity
-            scenario.recreate();
-    
-            // THEN
-            // Check contact name was preserved.
-            onView(withId(R.id.contact_name_text)).check(matches(withText(contactName)));
-         }
-    }
-    ```
+        // WHEN
+        // Enter contact name
+        onView(withId(R.id.contact_name_text)).perform(typeText(contactName));
+        // Destroy and recreate Activity
+        scenario.recreate();
 
-=== "Kotlin"
+        // THEN
+        // Check contact name was preserved.
+        onView(withId(R.id.contact_name_text)).check(matches(withText(contactName)));
+     }
+}
+```
+///
 
-    ```kotlin
-    import androidx.test.espresso.Espresso.onView
+/// tab | Kotlin
+```kotlin
+import androidx.test.espresso.Espresso.onView
 
-    @RunWith(AndroidJUnit4::class)
-    class AddContactActivityTest {
-        @Test
-        fun inputTextShouldBeRetainedAfterActivityRecreation() {
-            // GIVEN
-            val contactName = "Test User"
-            val scenario = ActivityScenario.launchActivity<AddContactActivity>()
-    
-            // WHEN
-            // Enter contact name
-            onView(withId(R.id.contact_name_text)).perform(typeText(contactName))
-            // Destroy and recreate Activity
-            scenario.recreate()
-    
-            // THEN
-            // Check contact name was preserved.
-            onView(withId(R.id.contact_name_text)).check(matches(withText(contactName)))
-         }
-    }
-    ```
+@RunWith(AndroidJUnit4::class)
+class AddContactActivityTest {
+    @Test
+    fun inputTextShouldBeRetainedAfterActivityRecreation() {
+        // GIVEN
+        val contactName = "Test User"
+        val scenario = ActivityScenario.launchActivity<AddContactActivity>()
+
+        // WHEN
+        // Enter contact name
+        onView(withId(R.id.contact_name_text)).perform(typeText(contactName))
+        // Destroy and recreate Activity
+        scenario.recreate()
+
+        // THEN
+        // Check contact name was preserved.
+        onView(withId(R.id.contact_name_text)).check(matches(withText(contactName)))
+     }
+}
+```
+///
 
 ## Fragments
 
 AndroidX Test provides [`FragmentScenario`][fragment-scenario], which offers APIs to safely create
 your [`Fragment`][fragment-documentation] under test and drive it through valid transitions.
 
-=== "Java"
+/// tab | Java
+```java
+import androidx.fragment.app.testing.FragmentScenario;
 
-    ```java
-    import androidx.fragment.app.testing.FragmentScenario;
-
-    @RunWith(AndroidJUnit4.class)
-    public class FragmentTest {
-        @Test
-        public void testEventFragment() {
-            Bundle arguments = Bundle();
-            MyFragmentFactory factory = MyFragmentFactory();
-            FragmentScenario<MyFragment> scenario = FragmentScenario.launchFragmentInContainer<MyFragment>(arguments, factory);
-            onView(withId(R.id.text)).check(matches(withText("Hello World!")));
-        }
+@RunWith(AndroidJUnit4.class)
+public class FragmentTest {
+    @Test
+    public void testEventFragment() {
+        Bundle arguments = Bundle();
+        MyFragmentFactory factory = MyFragmentFactory();
+        FragmentScenario<MyFragment> scenario = FragmentScenario.launchFragmentInContainer<MyFragment>(arguments, factory);
+        onView(withId(R.id.text)).check(matches(withText("Hello World!")));
     }
-    ```
+}
+```
+///
 
-=== "Kotlin"
+/// tab | Kotlin
+```kotlin
+import androidx.fragment.app.testing.FragmentScenario
 
-    ```kotlin
-    import androidx.fragment.app.testing.FragmentScenario
-
-    @RunWith(AndroidJUnit4::class)
-    class FragmentTest {
-        @Test
-        fun testEventFragment() {
-            val arguments = Bundle()
-            val factory = MyFragmentFactory()
-            val scenario = FragmentScenario.launchFragmentInContainer<MyFragment>(arguments, factory)
-            onView(withId(R.id.text)).check(matches(withText("Hello World!")))
-        }
+@RunWith(AndroidJUnit4::class)
+class FragmentTest {
+    @Test
+    fun testEventFragment() {
+        val arguments = Bundle()
+        val factory = MyFragmentFactory()
+        val scenario = FragmentScenario.launchFragmentInContainer<MyFragment>(arguments, factory)
+        onView(withId(R.id.text)).check(matches(withText("Hello World!")))
     }
-    ```
+}
+```
+///
 
 Read more about testing Fragments [here][fragment-testing].
 
