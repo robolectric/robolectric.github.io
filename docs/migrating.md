@@ -15,23 +15,23 @@ Robolectric 4.0 requires Android Gradle Plugin 3.2 or greater.
 
 Update the configuration in your module's `build.gradle`/`build.gradle.kts` file:
 
-=== "Groovy"
+/// tab | Groovy
+```groovy
+android {
+  compileSdkVersion 28 // Or newer
+  testOptions.unitTests.includeAndroidResources = true
+}
+```
+///
 
-    ```groovy
-    android {
-        compileSdkVersion 28 // Or newer
-        testOptions.unitTests.includeAndroidResources = true
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    android {
-        compileSdkVersion = 28 // Or newer
-        testOptions.unitTests.isIncludeAndroidResources = true
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+android {
+  compileSdkVersion = 28 // Or newer
+  testOptions.unitTests.isIncludeAndroidResources = true
+}
+```
+///
 
 Add the following in your `gradle.properties` file:
 
@@ -237,20 +237,20 @@ possible.
 Replace subclasses of `DefaultPackageManager` by a custom shadow (and be a good citizen by
 contributing your enhancements upstream 🙂):
 
-=== "Java"
+/// tab | Java
+```java
+@Implements(value = ApplicationPackageManager.class, inheritImplementationMethods = true)
+public class MyCustomPackageManager extends ShadowApplicationPackageManager {
+}
+```
+///
 
-    ```java
-    @Implements(value = ApplicationPackageManager.class, inheritImplementationMethods = true)
-    public class MyCustomPackageManager extends ShadowApplicationPackageManager {
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    @Implements(value = ApplicationPackageManager::class, inheritImplementationMethods = true)
-    class MyCustomPackageManager : ShadowApplicationPackageManager
-    ```
+/// tab | Kotlin
+```kotlin
+@Implements(value = ApplicationPackageManager::class, inheritImplementationMethods = true)
+class MyCustomPackageManager : ShadowApplicationPackageManager
+```
+///
 
 If you are using a custom subclass of `DefaultPackageManager` to implement functionality missing in
 Robolectric, check again as part of this work we've added support for a bunch more widely-used
@@ -298,51 +298,51 @@ you probably actually want to do is override
 
 #### Old code
 
-=== "Java"
+/// tab | Java
+```java
+public class MyTestRunner extends RobolectricTestRunner {
+  @Override protected Properties getConfigProperties() {
+    Properties props = new Properties();
+    props.setProperty("sdk", "23");
+    return props;
+  }
+}
+```
+///
 
-    ```java
-    public class MyTestRunner extends RobolectricTestRunner {
-      @Override protected Properties getConfigProperties() {
-        Properties props = new Properties();
-        props.setProperty("sdk", "23");
-        return props;
-      }
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    class MyTestRunner : RobolectricTestRunner {
-      override protected fun getConfigProperties(): Properties {
-        val props = Properties()
-        props.setProperty("sdk", "23")
-        return props
-      }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+class MyTestRunner : RobolectricTestRunner {
+  override protected fun getConfigProperties(): Properties {
+    val props = Properties()
+    props.setProperty("sdk", "23")
+    return props
+  }
+}
+```
+///
 
 #### New code
 
-=== "Java"
+/// tab | Java
+```java
+public class MyTestRunner extends RobolectricTestRunner {
+  @Override protected Config buildGlobalConfig() {
+    return new Config.Builder().setSdk(23).build();
+  }
+}
+```
+///
 
-    ```java
-    public class MyTestRunner extends RobolectricTestRunner {
-      @Override protected Config buildGlobalConfig() {
-        return new Config.Builder().setSdk(23).build();
-      }
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    class MyTestRunner : RobolectricTestRunner {
-      override protected buildGlobalConfig(): Config {
-        return Config.Builder().setSdk(23).build()
-      }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+class MyTestRunner : RobolectricTestRunner {
+  override protected fun buildGlobalConfig(): Config {
+    return Config.Builder().setSdk(23).build()
+  }
+}
+```
+///
 
 ### Package-Level Configuration
 
@@ -372,19 +372,19 @@ configure all tests, the expected location of the file has been changed.
   `Context` and [`ContextWrapper`][context-wrapper-documentation] in favor of using real framework
   code to improve fidelity.
 
-=== "Java"
+/// tab | Java
+```java
+Robolectric.buildService(MyService.class).create().get();
+Robolectric.setupContentProvider(MyContentProvider.class);
+```
+///
 
-    ```java
-    Robolectric.buildService(MyService.class).create().get();
-    Robolectric.setupContentProvider(MyContentProvider.class);
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    Robolectric.buildService(MyService::class).create().get()
-    Robolectric.setupContentProvider(MyContentProvider::class)
-    ```
+/// tab | Kotlin
+```kotlin
+Robolectric.buildService(MyService::class).create().get()
+Robolectric.setupContentProvider(MyContentProvider::class)
+```
+///
 
 * We've removed shadow methods where they duplicate the functionality of the Android APIs. In
   general, prefer calling Android framework APIs over Robolectric shadows where possible.
@@ -429,19 +429,19 @@ configure all tests, the expected location of the file has been changed.
 * Support for API 21 (Lollipop)
 * Custom test runner for Gradle / Android Studio:
 
-=== "Java"
+/// tab | Java
+```java
+@RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class)
+```
+///
 
-    ```java
-    @RunWith(RobolectricGradleTestRunner.class)
-    @Config(constants = BuildConfig.class)
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    @RunWith(RobolectricGradleTestRunner::class)
-    @Config(constants = BuildConfig::class)
-    ```
+/// tab | Kotlin
+```kotlin
+@RunWith(RobolectricGradleTestRunner::class)
+@Config(constants = BuildConfig::class)
+```
+///
 
 ### Major Changes
 
@@ -482,17 +482,17 @@ configure all tests, the expected location of the file has been changed.
 
 Main "core" module for Robolectric 3.0.
 
-=== "Groovy"
+/// tab | Groovy
+```groovy
+testCompile 'org.robolectric:robolectric:3.0'
+```
+///
 
-    ```groovy
-    testCompile 'org.robolectric:robolectric:3.0'
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    testCompile("org.robolectric:robolectric:3.0")
-    ```
+/// tab | Kotlin
+```kotlin
+testCompile("org.robolectric:robolectric:3.0")
+```
+///
 
 Some of the shadows in Robolectric have been split out into separate modules to reduce the number of
 transitive dependencies imposed on projects using Robolectric. If you want to use any of these
@@ -502,17 +502,17 @@ shadows, add the needed artifacts below to your build.
 
 Shadows for classes in the Android `support-v4` library.
 
-=== "Groovy"
+/// tab | Groovy
+```groovy
+testCompile 'org.robolectric:shadows-support-v4:3.0'
+```
+///
 
-    ```groovy
-    testCompile 'org.robolectric:shadows-support-v4:3.0'
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    testCompile("org.robolectric:shadows-support-v4:3.0")
-    ```
+/// tab | Kotlin
+```kotlin
+testCompile("org.robolectric:shadows-support-v4:3.0")
+```
+///
 
 #### `org.robolectric:shadows-httpclient`
   
@@ -520,33 +520,33 @@ Shadows for classes in Apache HTTP client. This includes methods like
 `Robolectric.getLatestSentHttpRequest`. These methods have moved to
 [`FakeHttp.getLatestSentHttpRequest`][fake-http-get-latest-sent-http-request-javadoc].
 
-=== "Groovy"
+/// tab | Groovy
+```groovy
+testCompile 'org.robolectric:shadows-httpclient:3.0'
+```
+///
 
-    ```groovy
-    testCompile 'org.robolectric:shadows-httpclient:3.0'
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    testCompile("org.robolectric:shadows-httpclient:3.0")
-    ```
+/// tab | Kotlin
+```kotlin
+testCompile("org.robolectric:shadows-httpclient:3.0")
+```
+///
 
 #### `org.robolectric:shadows-maps`
 
 Shadows for classes in Google Maps.
 
-=== "Groovy"
+/// tab | Groovy
+```groovy
+testCompile 'org.robolectric:shadows-maps:3.0'
+```
+///
 
-    ```groovy
-    testCompile 'org.robolectric:shadows-maps:3.0'
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    testCompile("org.robolectric:shadows-maps:3.0")
-    ```
+/// tab | Kotlin
+```kotlin
+testCompile("org.robolectric:shadows-maps:3.0")
+```
+///
 
 [activity-controller-javadoc]: javadoc/latest/org/robolectric/android/controller/ActivityController.html
 [activity-documentation]: https://developer.android.com/reference/android/app/Activity

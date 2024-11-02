@@ -52,7 +52,12 @@ markdown_extensions:
   - attr_list
   - github-callouts
   - md_in_html
-  - pymdownx.details
+  - pymdownx.blocks.tab:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -61,12 +66,6 @@ markdown_extensions:
   - pymdownx.snippets:
       url_download: true
   - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-      combine_header_slug: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
 
 plugins:
   - blog:

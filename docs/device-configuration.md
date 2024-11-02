@@ -9,23 +9,23 @@ the test method, test class, package, or suite level, as described [here](config
 The Android device configuration can be specified using the [`qualifiers`][config-qualifiers]
 [`@Config`][config-documentation] argument:
 
-=== "Java"
+/// tab | Java
+```java
+@Test
+@Config(qualifiers = "fr-rFR-w360dp-h640dp-xhdpi")
+public void testItOnFrenchNexus5() {
+}
+```
+///
 
-    ```java
-    @Test
-    @Config(qualifiers = "fr-rFR-w360dp-h640dp-xhdpi")
-    public void testItOnFrenchNexus5() {
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    @Test
-    @Config(qualifiers = "fr-rFR-w360dp-h640dp-xhdpi")
-    fun testItOnFrenchNexus5() {
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+@Test
+@Config(qualifiers = "fr-rFR-w360dp-h640dp-xhdpi")
+fun testItOnFrenchNexus5() {
+}
+```
+///
 
 From [version 3.6][robolectric-3.6-release] on, Robolectric parses the `qualifiers` property
 according to the rules set forth [here][android-resources-qualifier-rules] (but with no preceding
@@ -68,53 +68,53 @@ example, qualifiers at the test method level occlude qualifiers at the test clas
 the qualifiers config property starts with a `+` (plus sign), it is interpreted as an overlay to any
 higher-level qualifiers that have been specified:
 
-=== "Java"
+/// tab | Java
+```java
+@Config(qualifiers = "xlarge-port")
+public class MyTest {
+  @Test
+  public void testItWithXlargePort() {
+    // Config is "xlarge-port"
+  }
 
-    ```java
-    @Config(qualifiers = "xlarge-port")
-    public class MyTest {
-      @Test
-      public void testItWithXlargePort() {
-        // Config is "xlarge-port"
-      }
+  @Test
+  @Config(qualifiers = "+land")
+  public void testItWithXlargeLand() {
+    // Config is "xlarge-land"
+  }
 
-      @Test
-      @Config(qualifiers = "+land")
-      public void testItWithXlargeLand() {
-        // Config is "xlarge-land"
-      }
+  @Test
+  @Config(qualifiers = "land")
+  public void testItWithLand() {
+    // Config is "normal-land"
+  }
+}
+```
+///
 
-      @Test
-      @Config(qualifiers = "land")
-      public void testItWithLand() {
-        // Config is "normal-land"
-      }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+@Config(qualifiers = "xlarge-port")
+class MyTest {
+  @Test
+  fun testItWithXlargePort() {
+    // Config is "xlarge-port"
+  }
 
-=== "Kotlin"
+  @Test
+  @Config(qualifiers = "+land")
+  fun testItWithXlargeLand() {
+    // Config is "xlarge-land"
+  }
 
-    ```kotlin
-    @Config(qualifiers = "xlarge-port")
-    class MyTest {
-      @Test
-      fun testItWithXlargePort() {
-        // Config is "xlarge-port"
-      }
-
-      @Test
-      @Config(qualifiers = "+land")
-      fun testItWithXlargeLand() {
-        // Config is "xlarge-land"
-      }
-
-      @Test
-      @Config(qualifiers = "land")
-      fun testItWithLand() {
-        // Config is "normal-land"
-      }
-    }
-    ```
+  @Test
+  @Config(qualifiers = "land")
+  fun testItWithLand() {
+    // Config is "normal-land"
+  }
+}
+```
+///
 
 Values for unspecified properties are calculated, and rules are applied, after all configs have been
 merged.
@@ -124,35 +124,35 @@ merged.
 The device configuration can be changed within a test using
 [`RuntimeEnvironment.setQualifiers()`][runtime-environment-set-qualifiers]:
 
-=== "Java"
+/// tab | Java
+```java
+@Test
+@Config(qualifiers = "+port")
+public void testOrientationChange() {
+  MyActivity controller = Robolectric.buildActivity(MyActivity.class);
+  controller.setup();
+  // assert that activity is in portrait mode
+  RuntimeEnvironment.setQualifiers("+land");
+  controller.configurationChange();
+  // assert that activity is in landscape mode
+}
+```
+///
 
-    ```java
-    @Test
-    @Config(qualifiers = "+port")
-    public void testOrientationChange() {
-      MyActivity controller = Robolectric.buildActivity(MyActivity.class);
-      controller.setup();
-      // assert that activity is in portrait mode
-      RuntimeEnvironment.setQualifiers("+land");
-      controller.configurationChange();
-      // assert that activity is in landscape mode
-    }
-    ```
-
-=== "Kotlin"
-
-    ```kotlin
-    @Test
-    @Config(qualifiers = "+port")
-    fun testOrientationChange() {
-      val controller = Robolectric.buildActivity(MyActivity.class)
-      controller.setup()
-      // assert that activity is in portrait mode
-      RuntimeEnvironment.setQualifiers("+land")
-      controller.configurationChange()
-      // assert that activity is in landscape mode
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+@Test
+@Config(qualifiers = "+port")
+fun testOrientationChange() {
+  val controller = Robolectric.buildActivity(MyActivity::class)
+  controller.setup()
+  // assert that activity is in portrait mode
+  RuntimeEnvironment.setQualifiers("+land")
+  controller.configurationChange()
+  // assert that activity is in landscape mode
+}
+```
+///
 
 The string parameter to `RuntimeEnvironment.setQualifiers()` has the same rules as
 `Config.qualifiers`.

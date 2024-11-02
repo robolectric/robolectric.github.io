@@ -21,55 +21,55 @@ and commit to your source control system.
 2. [Configure your project][error-prone-setup] to integrate Error Prone. Quick config for Gradle (
    usually in your module's `build.gradle`/`build.gradle.kts` file):
 
-=== "Groovy"
+/// tab | Groovy
+```groovy
+plugins {
+   id "net.ltgt.errorprone" version "<error_prone_plugin_version>" apply false
+}
 
-    ```groovy
-    plugins {
-        id "net.ltgt.errorprone" version "<error_prone_plugin_version>" apply false
-    }
+String robolectricMigrations = System.getenv("ROBOLECTRIC_MIGRATIONS")
+if (robolectricMigrations) {
+   apply plugin: "net.ltgt.errorprone"
 
-    String robolectricMigrations = System.getenv("ROBOLECTRIC_MIGRATIONS")
-    if (robolectricMigrations) {
-        apply plugin: "net.ltgt.errorprone"
+   dependencies {
+      errorprone "com.google.errorprone:error_prone_core:<error_prone_version>"
+      errorprone "org.robolectric:errorprone:{{ robolectric.version.current }}"
+   }
 
-        dependencies {
-            errorprone "com.google.errorprone:error_prone_core:<error_prone_version>"
-            errorprone "org.robolectric:errorprone:{{ robolectric.version.current }}"
-        }
+   tasks.withType(JavaCompile).configureEach {
+      options.errorprone.errorproneArgs = [
+              '-XepPatchChecks:' + robolectricMigrations,
+              '-XepPatchLocation:IN_PLACE',
+      ]
+   }
+}
+```
+///
 
-         tasks.withType(JavaCompile).configureEach {
-             options.errorprone.errorproneArgs = [
-                  '-XepPatchChecks:' + robolectricMigrations,
-                  '-XepPatchLocation:IN_PLACE',
-             ]
-         }
-    }
-    ```
+/// tab | Kotlin
+```kotlin
+plugins {
+   id("net.ltgt.errorprone") version "<error_prone_plugin_version>" apply false
+}
 
-=== "Kotlin"
+val robolectricMigrations = System.getenv("ROBOLECTRIC_MIGRATIONS")
+if (!robolectricMigrations.isNullOrEmpty()) {
+   pluginManager.apply("net.ltgt.errorprone")
 
-    ```kotlin
-    plugins {
-        id("net.ltgt.errorprone") version "<error_prone_plugin_version>" apply false
-    }
+   dependencies {
+      errorprone("com.google.errorprone:error_prone_core:<error_prone_version>")
+      errorprone("org.robolectric:errorprone:{{ robolectric.version.current }}")
+   }
 
-    val robolectricMigrations = System.getenv("ROBOLECTRIC_MIGRATIONS")
-    if (!robolectricMigrations.isNullOrEmpty()) {
-        pluginManager.apply("net.ltgt.errorprone")
-
-        dependencies {
-            errorprone("com.google.errorprone:error_prone_core:<error_prone_version>")
-            errorprone("org.robolectric:errorprone:{{ robolectric.version.current }}")
-        }
-
-         tasks.withType<JavaCompile>().configureEach {
-             options.errorprone.errorproneArgs = listOf(
-                  "-XepPatchChecks:$robolectricMigrations",
-                  "-XepPatchLocation:IN_PLACE",
-             )
-         }
-    }
-    ```
+   tasks.withType<JavaCompile>().configureEach {
+      options.errorprone.errorproneArgs = listOf(
+         "-XepPatchChecks:$robolectricMigrations",
+         "-XepPatchLocation:IN_PLACE",
+      )
+   }
+}
+```
+///
 
     You don't need to commit this change.
 
