@@ -1,7 +1,6 @@
 name: "Build website"
 
 on:
-  merge_group:
   pull_request:
 
 jobs:

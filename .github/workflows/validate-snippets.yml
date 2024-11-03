@@ -1,10 +1,17 @@
 name: "Validate snippets"
 
 on:
-  merge_group:
   pull_request:
+    paths:
+      - "snippets/**"
   push:
     branches: [ master ]
+    paths:
+      - "snippets/**"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate_snippets:
