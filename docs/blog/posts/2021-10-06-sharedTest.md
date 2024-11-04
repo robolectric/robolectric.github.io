@@ -5,9 +5,9 @@ authors:
 slug: sharedTest
 ---
 
-<!-- markdownlint-disable MD052 -->
-
 # `sharedTest` pattern: sharing tests and speeding up development
+
+<!-- markdownlint-disable MD052 -->
 
 After [Robolectric's 4.0 release][2], Robolectric supports the [`AndroidJUnit4` test runner][3],
 [`ActivityScenario`][5], and [Espresso][4] for interacting with UI components. As we know, we also
