@@ -127,6 +127,7 @@ nav:
     - "Issues": https://github.com/robolectric/robolectric/issues/
     - "Javadoc":
       - "4.13": /javadoc/4.13/
+      - "4.13": /javadoc/4.13/
       - "4.12": /javadoc/4.12/
       - "4.11": /javadoc/4.11/
       - "4.10": /javadoc/4.10/
