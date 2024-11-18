@@ -1,7 +1,7 @@
 [versions]
 android-gradle-plugin = "8.7.2"
 junit = "4.13.2"
-robolectric = "4.13"
+robolectric = "4.14"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
