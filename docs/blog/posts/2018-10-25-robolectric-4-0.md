@@ -103,5 +103,5 @@ As always, thanks for your pull requests, bug reports, ideas and questions! &#x1
 [automated-migration-tool]: ../../automated-migration.md
 [espresso]: https://developer.android.com/training/testing/espresso
 [junit-runner]: https://developer.android.com/training/testing/junit-runner
-[migration]: ../../migrating.md#migrating-to-40
+[migration]: ../../upgrade_to_version_4.md#migrating-to-40
 [robolectric-4.0-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.0
