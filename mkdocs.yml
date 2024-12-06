@@ -79,6 +79,7 @@ plugins:
         "activity-lifecycle.md": "androidx_test.md"
         "custom-shadows.md": "extending.md"
         "errorprone-refactorings.md": "automated-migration.md"
+        "migrating.md": "automated-migration.md"
         "other-environments.md": "getting-started.md"
   - search:
 
@@ -121,10 +122,9 @@ nav:
     - "Contributor Guidelines": contributing.md
     - "Shadows": extending.md
   - "Resources":
-    - "Migration Guide": migrating.md
-    - "GitHub": https://github.com/robolectric/robolectric/
-    - "Release Notes": https://github.com/robolectric/robolectric/releases/
-    - "Issues": https://github.com/robolectric/robolectric/issues/
+    - "Automated Migration": automated-migration.md
+    - "Upgrade to Robolectric 4.x": upgrade_to_version_4.md
+    - "Upgrade to Robolectric 3.x": upgrade_to_version_3.md
     - "Javadoc":
       - "4.14": /javadoc/4.14/
       - "4.13": /javadoc/4.13/
@@ -141,6 +141,10 @@ nav:
       - "4.2": /javadoc/4.2/
       - "4.1": /javadoc/4.1/
       - "4.0": /javadoc/4.0/
+    - "":
+        - "GitHub": https://github.com/robolectric/robolectric/
+        - "Releases": https://github.com/robolectric/robolectric/releases/
+        - "Issues": https://github.com/robolectric/robolectric/issues/
   - "Blog":
     - blog/index.md
 
