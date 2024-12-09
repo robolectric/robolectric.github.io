@@ -151,9 +151,6 @@ nav:
 exclude_docs: |
   /javadoc/*/legal/jquery*.md
 
-not_in_nav: |
-  automated-migration.md
-
 validation:
   links:
     anchors: warn
