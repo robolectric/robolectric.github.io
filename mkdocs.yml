@@ -1,7 +1,7 @@
 site_name: Robolectric
 site_description: "test-drive your Android code"
 site_url: "https://robolectric.org"
-copyright: "©2010-2024. All rights reserved."
+copyright: "©2010-2025. All rights reserved."
 repo_url: "https://github.com/robolectric/robolectric"
 repo_name: Robolectric
 strict: true
