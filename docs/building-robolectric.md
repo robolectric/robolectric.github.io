@@ -14,6 +14,25 @@ Robolectric's [integration tests][robolectric-integration-tests] require Android
 installed and specific SDK versions to be installed. Please check the relevant modules to know which
 versions to install.
 
+### Configure necessary environments
+
+#### System environment `ANDROID_HOME`
+
+Current Robolectric repository requires system environment `ANDROID_HOME` to retrieve the official
+`android.jar` for internal validation.
+
+For macOS, there are some potential configuration files that Android Studio might recognize:
+
+1. `~/.bash_profile`.
+2. `~/.zprofile`.
+
+#### Install required `android.jar`
+
+Current Robolectric repository requires `android-34.jar` installed in
+`$ANDROID_HOME/platforms/android-34/android.jar`.
+
+The simplest way is to use Android Studio's `SDK Manager` to install it.
+
 ## Install Git and OpenJDK 17
 
 JDK 17 is currently required to build Robolectric. Newer versions of the JDK (e.g. 21) will likely
