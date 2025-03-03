@@ -1,0 +1,3310 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="test-drive your Android code">
+      
+      
+      
+        <link rel="canonical" href="https://robolectric.org/upgrade_to_version_3/">
+      
+      
+        <link rel="prev" href="../upgrade_to_version_4/">
+      
+      
+        <link rel="next" href="../blog/">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Upgrade to Robolectric 3.x - Robolectric</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-19269905-2"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-19269905-2",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-19269905-2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migrating-to-36" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Robolectric" class="md-header__button md-logo" aria-label="Robolectric" data-md-component="logo">
+      
+  <img src="../images/robolectric-stacked.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Robolectric
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Upgrade to Robolectric 3.x
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/robolectric/robolectric" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Robolectric
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../getting-started/" class="md-tabs__link">
+          
+  
+    
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../androidx_test/" class="md-tabs__link">
+          
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../build-system-integration/" class="md-tabs__link">
+          
+  
+    
+  
+  Customizing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../building-robolectric/" class="md-tabs__link">
+          
+  
+    
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../automated-migration/" class="md-tabs__link">
+          
+  
+    
+  
+  Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Robolectric" class="md-nav__button md-logo" aria-label="Robolectric" data-md-component="logo">
+      
+  <img src="../images/robolectric-stacked.png" alt="logo">
+
+    </a>
+    Robolectric
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/robolectric/robolectric" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Robolectric
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-a-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Your First Test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../androidx_test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AndroidX Test
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Robolectric
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../device-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Device Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-qualifiers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Qualified Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-add-on-modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Add-On Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices & Limitations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Customizing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Customizing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-system-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build System Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-test-runner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing the Test Runner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Contributing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building-robolectric/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Robolectric
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Robolectric Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributor Guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shadows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automated-migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automated Migration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade_to_version_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrade to Robolectric 4.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Upgrade to Robolectric 3.x
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Upgrade to Robolectric 3.x
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packagemanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      PackageManager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitycontrollerattach" class="md-nav__link">
+    <span class="md-ellipsis">
+      ActivityController.attach()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Stuff
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moved-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moved classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packagemanager_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PackageManager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecated-classes-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated Classes &amp; Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-gradle-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Gradle integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programmatic-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmatic Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmatic Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#old-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Old code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      New code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-level-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package-Level Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#major-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Major Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orgrobolectricrobolectric" class="md-nav__link">
+    <span class="md-ellipsis">
+      org.robolectric:robolectric
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orgrobolectricshadows-support-v4" class="md-nav__link">
+    <span class="md-ellipsis">
+      org.robolectric:shadows-support-v4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orgrobolectricshadows-httpclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      org.robolectric:shadows-httpclient
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orgrobolectricshadows-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      org.robolectric:shadows-maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Javadoc
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Javadoc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.14
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.13
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.11
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/robolectric/robolectric/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/robolectric/robolectric/releases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Releases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/robolectric/robolectric/issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Issues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2021
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2019/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2019
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2018/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2018
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2017/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2017
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packagemanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      PackageManager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activitycontrollerattach" class="md-nav__link">
+    <span class="md-ellipsis">
+      ActivityController.attach()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Stuff
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moved-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moved classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packagemanager_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PackageManager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecated-classes-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated Classes &amp; Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-gradle-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Gradle integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programmatic-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmatic Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmatic Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#old-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Old code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      New code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-level-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package-Level Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-to-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating to 3.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating to 3.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#major-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Major Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orgrobolectricrobolectric" class="md-nav__link">
+    <span class="md-ellipsis">
+      org.robolectric:robolectric
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orgrobolectricshadows-support-v4" class="md-nav__link">
+    <span class="md-ellipsis">
+      org.robolectric:shadows-support-v4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orgrobolectricshadows-httpclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      org.robolectric:shadows-httpclient
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orgrobolectricshadows-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      org.robolectric:shadows-maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/robolectric/robolectric.github.io/tree/master/docs/upgrade_to_version_3.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+  <h1>Upgrade to Robolectric 3.x</h1>
+
+<!-- markdownlint-disable-next-line MD033 -->
+<h2 id="migrating-to-36">Migrating to 3.6<a name="migrating-from-35-to-36"></a></h2>
+<p>Previously, Robolectric's <a href="https://developer.android.com/reference/android/view/Display"><code>Display</code></a> and
+<a href="https://developer.android.com/reference/android/util/DisplayMetrics"><code>DisplayMetrics</code></a> dimensions defaulted to 480&times;800px,
+regardless of screen size and density. Now they match the requested configuration, which defaults to
+320&times;470dp mdpi. Tests which rely on the old dimensions for layouts, pixel math, etc. can be
+modified for new dimensions, or by pinning them to the old size:
+<code>@Config(qualifiers = "w480dp-h800dp")</code>.</p>
+<table>
+<thead>
+<tr>
+<th>3.5</th>
+<th>3.6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Shadow.newInstanceOf(Display.class)</code></td>
+<td><a href="../javadoc/latest/org/robolectric/shadows/ShadowDisplay.html#getDefaultDisplay()"><code>ShadowDisplay.getDefaultDisplay()</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<!-- markdownlint-disable-next-line MD033 -->
+<h2 id="migrating-to-34">Migrating to 3.4<a name="migrating-from-33-to-34"></a></h2>
+<h3 id="dependencies">Dependencies</h3>
+<p>Robolectric tests should now be compiled with Java 8 and Android API 26.</p>
+<h3 id="packagemanager">PackageManager</h3>
+<p>We've change <a href="https://developer.android.com/reference/android/content/pm/PackageManager"><code>PackageManager</code></a> simulation to follow the standard
+Shadow pattern as with other framework classes. You can use
+<a href="../javadoc/latest/org/robolectric/shadows/ShadowPackageManager.html"><code>ShadowPackageManager</code></a> where you previously used
+<code>RobolectricPackageManager</code>.</p>
+<table>
+<thead>
+<tr>
+<th>3.3 (was <code>@Deprecated</code>)</th>
+<th>3.4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>org.robolectric.res.builder.RobolectricPackageManager</code></td>
+<td><a href="../javadoc/latest/org/robolectric/shadows/ShadowPackageManager.html"><code>ShadowPackageManager</code></a></td>
+</tr>
+<tr>
+<td><code>RuntimeEnvironment.getRobolectricPackageManager()</code></td>
+<td><code>shadowOf(RuntimeEnvironment.application.getPackageManager())</code></td>
+</tr>
+</tbody>
+</table>
+<p>If you were using <code>RuntimeEnvironment.setRobolectricPackageManager()</code> to install a custom
+<code>PackageManager</code>, you should move your custom behavior to a subclass of
+<a href="../javadoc/latest/org/robolectric/shadows/ShadowApplicationPackageManager.html"><code>ShadowApplicationPackageManager</code></a> and install it as a
+shadow (using <a href="../javadoc/latest/org/robolectric/annotation/Config.html"><code>@Config</code></a> and possibly
+<code>@Implements(inheritImplementationMethods = true)</code>) instead.</p>
+<h3 id="activitycontrollerattach"><code>ActivityController.attach()</code></h3>
+<p>The deprecated and redundant <code>attach()</code> method has been removed from
+<a href="../javadoc/latest/org/robolectric/android/controller/ActivityController.html"><code>ActivityController</code></a>,
+<a href="../javadoc/latest/org/robolectric/android/controller/FragmentController.html"><code>FragmentController</code></a>, and
+<a href="../javadoc/latest/org/robolectric/android/controller/ServiceController.html"><code>ServiceController</code></a>. To migrate, remove calls to this method.</p>
+<h3 id="other-stuff">Other Stuff</h3>
+<ul>
+<li>Because <a href="https://developer.android.com/reference/android/content/SharedPreferences"><code>SharedPreferences</code></a> now uses real Android framework
+  code, <a href="https://site.mockito.org/">Mockito</a> mocks and spies can lead to tests hanging. Rather than spying on
+  <code>SharedPreferences</code>, directly assert against its state.</li>
+</ul>
+<hr />
+<!-- markdownlint-disable-next-line MD033 -->
+<h2 id="migrating-to-33">Migrating to 3.3<a name="migrating-from-32-to-33"></a></h2>
+<h3 id="moved-classes">Moved classes</h3>
+<p>To simplify classloader logic and cleanup packages, some classes have moved. The old class locations
+are <code>@Deprecated</code> and will be removed in 3.4.</p>
+<table>
+<thead>
+<tr>
+<th>3.2 (now <code>@Deprecated</code>)</th>
+<th>3.3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>org.robolectric.internal.Shadow</code></td>
+<td><a href="../javadoc/latest/org/robolectric/shadow/api/Shadow.html"><code>org.robolectric.shadow.api.Shadow</code></a></td>
+</tr>
+<tr>
+<td><code>org.robolectric.internal.ShadowExtractor.extract()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/shadow/api/Shadow.html#extract(java.lang.Object)"><code>org.robolectric.shadow.api.Shadow.extract()</code></a></td>
+</tr>
+<tr>
+<td><code>org.robolectric.util.ActivityController</code></td>
+<td><a href="../javadoc/latest/org/robolectric/android/controller/ActivityController.html"><code>org.robolectric.android.controller.ActivityController</code></a></td>
+</tr>
+<tr>
+<td><code>org.robolectric.util.ContentProviderController</code></td>
+<td><a href="../javadoc/latest/org/robolectric/android/controller/ContentProviderController.html"><code>org.robolectric.android.controller.ContentProviderController</code></a></td>
+</tr>
+<tr>
+<td><code>org.robolectric.util.FragmentController</code></td>
+<td><a href="../javadoc/latest/org/robolectric/android/controller/FragmentController.html"><code>org.robolectric.android.controller.FragmentController</code></a></td>
+</tr>
+<tr>
+<td><code>org.robolectric.util.IntentServiceController</code></td>
+<td><a href="../javadoc/latest/org/robolectric/android/controller/IntentServiceController.html"><code>org.robolectric.android.controller.IntentServiceController</code></a></td>
+</tr>
+<tr>
+<td><code>org.robolectric.util.ServiceController</code></td>
+<td><a href="../javadoc/latest/org/robolectric/android/controller/ServiceController.html"><code>org.robolectric.android.controller.ServiceController</code></a></td>
+</tr>
+<tr>
+<td><code>org.robolectric.util.AccessibilityUtil</code></td>
+<td><code>org.robolectric.android.AccessibilityUtil</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.util.ApplicationTestUtil</code></td>
+<td><code>org.robolectric.android.ApplicationTestUtil</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.res.builder.StubPackageManager</code></td>
+<td><code>org.robolectric.android.StubPackageManager</code> ⚠️</td>
+</tr>
+<tr>
+<td><code>org.robolectric.res.builder.XmlResourceParserImpl</code></td>
+<td><a href="../javadoc/latest/org/robolectric/android/XmlResourceParserImpl.html"><code>org.robolectric.android.XmlResourceParserImpl</code></a> ⚠️</td>
+</tr>
+<tr>
+<td><code>org.robolectric.internal.fakes.RoboCharsets</code></td>
+<td><code>org.robolectric.android.fakes.RoboCharsets</code> ⚠️</td>
+</tr>
+<tr>
+<td><code>org.robolectric.internal.fakes.RoboExtendedResponseCache</code></td>
+<td><a href="../javadoc/latest/org/robolectric/fakes/RoboExtendedResponseCache.html"><code>org.robolectric.android.fakes.RoboExtendedResponseCache</code></a> ⚠️</td>
+</tr>
+<tr>
+<td><code>org.robolectric.util.concurrent.RoboExecutorService</code></td>
+<td><a href="../javadoc/latest/org/robolectric/android/util/concurrent/RoboExecutorService.html"><code>org.robolectric.android.util.concurrent.RoboExecutorService</code></a> ⚠️</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ Only use these classes if you really need too</p>
+<h3 id="packagemanager_1"><code>PackageManager</code></h3>
+<p>We have begun the process of switching from using a subclass of
+<a href="https://developer.android.com/reference/android/content/pm/PackageManager"><code>PackageManager</code></a> towards <code>PackageManager</code> being implemented by a
+standard shadow, as we do for the rest of the framework. This is for a number of reasons:</p>
+<ul>
+<li>It is more consistent with the way other framework code is handled.</li>
+<li>A shadow will allow users' tests to build against any version of Android.</li>
+<li>Switching to a shadow will allow us to defer parsing the manifest until the test or code under
+  test makes calls to the <code>PackageManager</code>.</li>
+</ul>
+<p>This should all be backwards compatible for the 3.3 release, but now you can start migrating your
+code.</p>
+<p>Before, the Robolectric class <code>DefaultPackageManager</code> implemented all <code>PackageManager</code>
+functionality. If you wanted to change any of its behavior, you'd extend <code>DefaultPackageManager</code> (or
+<code>StubPackageManager</code>) and override whichever methods you liked. Test-related setup was achieved by
+calling <code>RuntimeEnvironment.getRobolectricPackageManager()</code>, which had extra methods for modifying
+its behavior.</p>
+<p>As of 3.3, Robolectric uses the normal Android <code>ApplicationPackageManager</code>, and shadows all of its
+methods, causing it to delegate to an instance of <code>DefaultPackageManager</code>, which works as before.
+You can still replace it with your own subclass of <code>PackageManager</code> if you like, but that's
+deprecated. Instead of doing that, put your custom behavior in a subclass of
+<a href="../javadoc/latest/org/robolectric/shadows/ShadowApplicationPackageManager.html"><code>ShadowApplicationPackageManager</code></a>. For test-related
+setup, you can still access it through <code>RuntimeEnvironment.getRobolectricPackageManager()</code>, but you
+should start using <a href="../javadoc/latest/org/robolectric/Shadows.html#shadowOf(android.content.pm.PackageManager)"><code>shadowOf(PackageManager)</code></a> instead. Note
+that we've implemented quite a bit more of <code>PackageManager</code>, so you might not need any custom code
+any longer.</p>
+<p>Starting with 3.4, <code>DefaultPackageManager</code> will be removed and its functionality will be moved into
+<code>ShadowApplicationPackageManager</code>. In general, we recommand using Android Framework APIs where
+possible.</p>
+<table>
+<thead>
+<tr>
+<th>3.2 (now <code>@Deprecated</code>)</th>
+<th>3.3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RobolectricPackageManager rpm = RuntimeEnvironment.getRobolectricPackageManager();</code></td>
+<td><code>ShadowPackageManager shadowPackageManager = shadowOf(context.getPackageManager());</code></td>
+</tr>
+<tr>
+<td><code>PackageManager packageManager = RuntimeEnvironment.getPackageManager();</code></td>
+<td><code>PackageManager packageManager = context.getPackageManager();</code></td>
+</tr>
+<tr>
+<td><code>RuntimeEnvironment.setRobolectricPackageManager(customPackageManager);</code></td>
+<td>Use a custom shadow instead! See below.</td>
+</tr>
+</tbody>
+</table>
+<p>Replace subclasses of <code>DefaultPackageManager</code> by a custom shadow (and be a good citizen by
+contributing your enhancements upstream 🙂):</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="packagemanager_1-java" name="__tabbed_1" type="radio" /><input id="packagemanager_1-kotlin" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="packagemanager_1-java">Java</label><label for="packagemanager_1-kotlin">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@Implements</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ApplicationPackageManager</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">inheritImplementationMethods</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyCustomPackageManager</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ShadowApplicationPackageManager</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@Implements</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ApplicationPackageManager</span><span class="o">::</span><span class="n">class</span><span class="p">,</span><span class="w"> </span><span class="n">inheritImplementationMethods</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MyCustomPackageManager</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ShadowApplicationPackageManager</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>If you are using a custom subclass of <code>DefaultPackageManager</code> to implement functionality missing in
+Robolectric, check again as part of this work we've added support for a bunch more widely-used
+<code>PackageManager</code> features, and it might be now possible to completely remove your custom subclass.</p>
+<h3 id="deprecated-classes-methods">Deprecated Classes &amp; Methods</h3>
+<table>
+<thead>
+<tr>
+<th>3.2 (now <code>@Deprecated</code>)</th>
+<th>3.3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>org.robolectric.res.builder.RobolectricPackageManager</code></td>
+<td><a href="../javadoc/latest/org/robolectric/shadows/ShadowPackageManager.html"><code>org.robolectric.shadows.ShadowPackageManager</code></a></td>
+</tr>
+<tr>
+<td><code>RuntimeEnvironment.getRobolectricPackageManager()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/Shadows.html#shadowOf(android.content.pm.PackageManager)"><code>shadowOf(RuntimeEnvironment.application.getPackageManager())</code></a></td>
+</tr>
+<tr>
+<td><code>shadowOf(imageView).getImageResourceId()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/Shadows.html#shadowOf(android.graphics.drawable.Drawable)"><code>shadowOf(imageView.getDrawable)</code></a>.<a href="../javadoc/latest/org/robolectric/shadows/ShadowDrawable.html#getCreatedFromResId()"><code>getCreatedFromResId()</code></a></td>
+</tr>
+<tr>
+<td><code>shadowOf(notification).getProgressBar().isIndeterminate()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/Shadows.html#shadowOf(android.app.Notification)"><code>shadowOf(notification)</code></a>.<a href="../javadoc/latest/org/robolectric/shadows/ShadowNotification.html#isIndeterminate()"><code>isIndeterminate()</code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The following methods and classes are deprecated will be removed in 3.4:</p>
+<ul>
+<li><code>RuntimeEnvironment.getPackageManager()</code></li>
+<li><code>RuntimeEnvironment.getRobolectricPackageManager()</code></li>
+<li><code>RuntimeEnvironment.setRobolectricPackageManager()</code></li>
+<li><code>DefaultPackageManager</code></li>
+<li><code>StubPackageManager</code></li>
+<li><code>RobolectricPackageManager</code></li>
+</ul>
+<h3 id="new-gradle-integration">New Gradle integration</h3>
+<p>Starting with Robolectric 3.3 and Android Studio 3.0 alpha 5, we've included better integration with
+the tool chain. Resources, assets and <code>AndroidManifest.xml</code> are treated as first-class citizens and
+processed by the build system for correctness, performance and stability between releases. Read
+more <a href="../getting-started/">here</a>.</p>
+<hr />
+<!-- markdownlint-disable-next-line MD033 -->
+<h2 id="migrating-to-32">Migrating to 3.2<a name="migrating-from-31-to-32"></a></h2>
+<h3 id="programmatic-configuration">Programmatic Configuration</h3>
+<p>If you were providing custom configuration by subclassing and overriding methods on
+<a href="../javadoc/latest/org/robolectric/RobolectricTestRunner.html"><code>RobolectricTestRunner</code></a>, you'll need to make some changes.</p>
+<p><code>RobolectricTestRunner.getConfigProperties()</code> has moved to
+<a href="../javadoc/latest/org/robolectric/ConfigMerger.html#getConfigProperties(java.lang.String)"><code>ConfigMerger.getConfigProperties(String)</code></a>. But what
+you probably actually want to do is override
+<a href="../javadoc/latest/org/robolectric/RobolectricTestRunner.html#buildGlobalConfig()"><code>RobolectricTestRunner.buildGlobalConfig()</code></a>.</p>
+<h4 id="old-code">Old code</h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="old-code-java" name="__tabbed_2" type="radio" /><input id="old-code-kotlin" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="old-code-java">Java</label><label for="old-code-kotlin">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyTestRunner</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">RobolectricTestRunner</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="n">Properties</span><span class="w"> </span><span class="nf">getConfigProperties</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Properties</span><span class="w"> </span><span class="n">props</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Properties</span><span class="p">();</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">props</span><span class="p">.</span><span class="na">setProperty</span><span class="p">(</span><span class="s">&quot;sdk&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;23&quot;</span><span class="p">);</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">props</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MyTestRunner</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">RobolectricTestRunner</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="kd">override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">getConfigProperties</span><span class="p">():</span><span class="w"> </span><span class="n">Properties</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">props</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Properties</span><span class="p">()</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">props</span><span class="p">.</span><span class="na">setProperty</span><span class="p">(</span><span class="s">&quot;sdk&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;23&quot;</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">props</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="new-code">New code</h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="new-code-java" name="__tabbed_3" type="radio" /><input id="new-code-kotlin" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="new-code-java">Java</label><label for="new-code-kotlin">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyTestRunner</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">RobolectricTestRunner</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="n">Config</span><span class="w"> </span><span class="nf">buildGlobalConfig</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Config</span><span class="p">.</span><span class="na">Builder</span><span class="p">().</span><span class="na">setSdk</span><span class="p">(</span><span class="mi">23</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MyTestRunner</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">RobolectricTestRunner</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="kd">override</span><span class="w"> </span><span class="kd">protected</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">buildGlobalConfig</span><span class="p">():</span><span class="w"> </span><span class="n">Config</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Config</span><span class="p">.</span><span class="na">Builder</span><span class="p">().</span><span class="na">setSdk</span><span class="p">(</span><span class="m">23</span><span class="p">).</span><span class="na">build</span><span class="p">()</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="package-level-configuration">Package-Level Configuration</h3>
+<p>If you are using a <a href="../configuring/#robolectricproperties-file"><code>robolectric.properties</code></a> file to
+configure all tests, the expected location of the file has been changed.</p>
+<table>
+<thead>
+<tr>
+<th>3.1</th>
+<th>3.2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/test/resources/robolectric.properties</code></td>
+<td><code>src/test/resources/your/package/robolectric.properties</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<!-- markdownlint-disable-next-line MD033 -->
+<h2 id="migrating-to-31">Migrating to 3.1<a name="migrating-from-30-to-31"></a></h2>
+<h3 id="changes">Changes</h3>
+<ul>
+<li>To construct an Android components such as an <a href="https://developer.android.com/reference/android/app/Activity"><code>Activity</code></a>, a
+  <a href="https://developer.android.com/reference/android/app/Service"><code>Service</code></a> or a <a href="https://developer.android.com/reference/android/content/ContentProvider"><code>ContentProvider</code></a>, you
+  must now use the Robolectric APIs such as
+  <a href="../javadoc/latest/org/robolectric/Robolectric.html#buildActivity(java.lang.Class)"><code>Robolectric.buildActivity()</code></a>,
+  <a href="../javadoc/latest/org/robolectric/Robolectric.html#buildService(java.lang.Class)"><code>Robolectric.buildService()</code></a>, or
+  <a href="../javadoc/latest/org/robolectric/Robolectric.html#buildContentProvider(java.lang.Class)"><code>Robolectric.buildContentProvider()</code></a>, or the
+  corresponding <code>setup*()</code> methods; you should not create new instances of these classes yourself.
+  Calling these methods will create an instance of the component and attach its base
+  <a href="https://developer.android.com/reference/android/content/Context"><code>Context</code></a>. This is now necessary as we've removed code shadowing
+  <code>Context</code> and <a href="https://developer.android.com/reference/android/content/ContextWrapper"><code>ContextWrapper</code></a> in favor of using real framework
+  code to improve fidelity.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="changes-java" name="__tabbed_4" type="radio" /><input id="changes-kotlin" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="changes-java">Java</label><label for="changes-kotlin">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">Robolectric</span><span class="p">.</span><span class="na">buildService</span><span class="p">(</span><span class="n">MyService</span><span class="p">.</span><span class="na">class</span><span class="p">).</span><span class="na">create</span><span class="p">().</span><span class="na">get</span><span class="p">();</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">Robolectric</span><span class="p">.</span><span class="na">setupContentProvider</span><span class="p">(</span><span class="n">MyContentProvider</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Robolectric</span><span class="p">.</span><span class="na">buildService</span><span class="p">(</span><span class="n">MyService</span><span class="o">::</span><span class="n">class</span><span class="p">).</span><span class="na">create</span><span class="p">().</span><span class="na">get</span><span class="p">()</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">Robolectric</span><span class="p">.</span><span class="na">setupContentProvider</span><span class="p">(</span><span class="n">MyContentProvider</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<ul>
+<li>We've removed shadow methods where they duplicate the functionality of the Android APIs. In
+  general, prefer calling Android framework APIs over Robolectric shadows where possible.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>3.0</th>
+<th>3.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ShadowApplication.getInstance().getContentResolver()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/RuntimeEnvironment.html#application"><code>RuntimeEnvironment.application</code></a>.<a href="https://developer.android.com/reference/android/content/Context#getContentResolver()"><code>getContentResolver()</code></a></td>
+</tr>
+<tr>
+<td><code>ShadowApplication.getInstance().getPackageManager()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/RuntimeEnvironment.html#application"><code>RuntimeEnvironment.application</code></a>.<a href="https://developer.android.com/reference/android/content/Context#getPackageManager()"><code>getPackageManager()</code></a></td>
+</tr>
+<tr>
+<td><code>ShadowApplication.getInstance().getResources()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/RuntimeEnvironment.html#application"><code>RuntimeEnvironment.application</code></a>.<a href="https://developer.android.com/reference/android/content/Context#getResources()"><code>getResources()</code></a></td>
+</tr>
+<tr>
+<td><code>ShadowApplication.getInstance().getString()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/RuntimeEnvironment.html#application"><code>RuntimeEnvironment.application</code></a>.<a href="https://developer.android.com/reference/android/content/Context#getString(int)"><code>getString()</code></a></td>
+</tr>
+<tr>
+<td><code>ShadowApplication.getInstance().resetResources()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/RuntimeEnvironment.html#application"><code>RuntimeEnvironment.application</code></a>.<code>resetResources()</code></td>
+</tr>
+<tr>
+<td><code>ShadowApplication.getInstance().getAssets()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/RuntimeEnvironment.html#application"><code>RuntimeEnvironment.application</code></a>.<a href="https://developer.android.com/reference/android/content/Context#getAssets()"><code>getAssets()</code></a></td>
+</tr>
+<tr>
+<td><code>ShadowPreferenceManager.getDefaultSharedPreferences()</code></td>
+<td><a href="https://developer.android.com/reference/android/preference/PreferenceManager#getDefaultSharedPreferences(android.content.Context)"><code>PreferenceManager.getDefaultSharedPreferences()</code></a></td>
+</tr>
+<tr>
+<td><code>shadowOf(shadowOf(notification).getStyle()).getSummaryText()</code></td>
+<td><a href="../javadoc/latest/org/robolectric/Shadows.html#shadowOf(android.app.Notification)"><code>shadowOf(notification)</code></a>.<a href="../javadoc/latest/org/robolectric/shadows/ShadowNotification.html#getContentText()"><code>getContentText()</code></a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="../javadoc/latest/org/robolectric/fakes/RoboMenu.html"><code>RoboMenu</code></a> now requires a <code>Context</code> passed into its constructor. Previously
+  it was internally using
+  <a href="../javadoc/latest/org/robolectric/RuntimeEnvironment.html#application"><code>RuntimeEnvironment.application</code></a> which you can use as a
+  sensible default.</li>
+<li><code>.equals()</code> and <code>.hashCode()</code> methods have been removed from shadows to stop them incorrectly
+  providing an alternative equality of the shadowed object. For example, <code>Intent.equals()</code> now
+  behaves as the framework method. Instead of relying on a generically shadowed <code>equals()</code> method
+  with a vague equality rule, prefer to make assertions on specific fields of interest to the test.
+  We recommend using <a href="https://github.com/square/assertj-android"><code>square/assertj-android</code></a> to make assertions clear.</li>
+<li>Custom shadows now require the <code>public</code> access modifier on methods in the shadow class.</li>
+</ul>
+<h3 id="311-changes">3.1.1 Changes</h3>
+<ul>
+<li><code>RoboAttributeSet</code> is deprecated and uses should be replaced with
+  <a href="../javadoc/latest/org/robolectric/Robolectric.html#buildAttributeSet()"><code>Robolectric.buildAttributeSet()</code></a>.</li>
+<li><code>RobolectricGradleTestRunner</code> is deprecated and uses should be replaced with
+  <a href="../javadoc/latest/org/robolectric/RobolectricTestRunner.html"><code>RobolectricTestRunner</code></a>.</li>
+</ul>
+<hr />
+<!-- markdownlint-disable-next-line MD033 -->
+<h2 id="migrating-to-30">Migrating to 3.0<a name="migrating-from-24-to-30"></a></h2>
+<h3 id="new-features">New Features</h3>
+<ul>
+<li>Support for API 19 (KitKat)</li>
+<li>Support for API 21 (Lollipop)</li>
+<li>Custom test runner for Gradle / Android Studio:</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="new-features-java" name="__tabbed_5" type="radio" /><input id="new-features-kotlin" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="new-features-java">Java</label><label for="new-features-kotlin">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nd">@RunWith</span><span class="p">(</span><span class="n">RobolectricGradleTestRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nd">@Config</span><span class="p">(</span><span class="n">constants</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BuildConfig</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nd">@RunWith</span><span class="p">(</span><span class="n">RobolectricGradleTestRunner</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nd">@Config</span><span class="p">(</span><span class="n">constants</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BuildConfig</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="major-changes">Major Changes</h3>
+<table>
+<thead>
+<tr>
+<th>2.4</th>
+<th>3.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Robolectric.application</code></td>
+<td><code>RuntimeEnvironment.application</code></td>
+</tr>
+<tr>
+<td><code>Robolectric.shadowOf</code></td>
+<td><code>Shadows.shadowOf</code></td>
+</tr>
+<tr>
+<td><code>Robolectric.Reflection.setFinalStaticField</code></td>
+<td><code>ReflectionHelpers.setStaticField</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.Robolectric.&lt;xxx&gt;Looper</code></td>
+<td><code>org.robolectric.shadows.ShadowLooper.&lt;xxx&gt;Looper</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.Robolectric.getBackgroundScheduler</code></td>
+<td><code>org.robolectric.Robolectric.getBackgroundThreadScheduler</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.Robolectric.runBackgroundTasks</code></td>
+<td><code>org.robolectric.Robolectric.getBackgroundThreadScheduler().advanceBy(0)</code> (also <code>org.robolectric.Robolectric.flushBackgroundThreadScheduler</code> will run delayed background tasks too)</td>
+</tr>
+<tr>
+<td><code>org.robolectric.Robolectric.getUiThreadScheduler</code></td>
+<td><code>org.robolectric.Robolectric.getForegroundThreadScheduler</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.Robolectric.runUiThreadTasks</code></td>
+<td><code>org.robolectric.shadows.ShadowLooper.runUiThreadTasks</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.Robolectric.runUiThreadTasksIncludingDelayedTasks</code></td>
+<td><code>org.robolectric.shadows.ShadowLooper.runUiThreadTasksIncludingDelayedTasks</code> or <code>org.robolectric.Robolectric.flushForegroundThreadScheduler</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.Robolectric.getShadowApplication</code></td>
+<td><code>org.robolectric.shadows.ShadowApplication.getInstance</code></td>
+</tr>
+<tr>
+<td><code>FragmentTestUtil.startFragment</code>(v4/v11)</td>
+<td><code>SupportFragmentTestUtil.startFragment</code> (v4) / <code>FragmentTestUtil.startFragment</code> (v11)</td>
+</tr>
+<tr>
+<td><code>org.robolectric.tester.android.view.TestMenuItem</code></td>
+<td><code>org.robolectric.fakes.RoboMenuItem</code></td>
+</tr>
+<tr>
+<td><code>ActivityController.of</code></td>
+<td><code>Robolectric.buildActivity</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.Config.properties</code></td>
+<td><code>robolectric.properties</code></td>
+</tr>
+<tr>
+<td><code>@Config(emulateSdk=...)</code> / <code>@Config(reportSdk=...)</code></td>
+<td><code>@Config(sdk=...)</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.shadows.ShadowHandler</code></td>
+<td><code>org.robolectric.shadows.ShadowLooper</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.shadows.ShadowSettings.SettingsImpl</code></td>
+<td><code>org.robolectric.shadows.ShadowSettings.ShadowSystem</code></td>
+</tr>
+<tr>
+<td><code>Robolectric.packageManager = instance</code></td>
+<td><code>RuntimeEnvironment.setRobolectricPackageManager(instance)</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.res.builder.RobolectricPackageManager</code> changed from <code>class</code> to <code>interface</code></td>
+<td><code>org.robolectric.res.builder.DefaultPackageManager</code></td>
+</tr>
+<tr>
+<td><code>org.robolectric.shadows.ShadowMenuInflater</code></td>
+<td>?</td>
+</tr>
+<tr>
+<td><code>org.robolectric.Robolectric.clickOn</code></td>
+<td><code>org.robolectric.shadows.ShadowView.clickOn</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>Robolectric.shadowOf_</code> has been removed. Similar functionality exists in
+  <code>ShadowExtractor.extract</code>.</li>
+</ul>
+<h3 id="modules">Modules</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Shadows for non-core Android classes have moved out of the main Robolectric module. If you want to
+use those shadows, you'll need to include the requisite module.</p>
+</div>
+<h4 id="orgrobolectricrobolectric"><code>org.robolectric:robolectric</code></h4>
+<p>Main "core" module for Robolectric 3.0.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="orgrobolectricrobolectric-groovy" name="__tabbed_6" type="radio" /><input id="orgrobolectricrobolectric-kotlin" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="orgrobolectricrobolectric-groovy">Groovy</label><label for="orgrobolectricrobolectric-kotlin">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">testCompile</span><span class="w"> </span><span class="s1">&#39;org.robolectric:robolectric:3.0&#39;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">testCompile</span><span class="p">(</span><span class="s">&quot;org.robolectric:robolectric:3.0&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Some of the shadows in Robolectric have been split out into separate modules to reduce the number of
+transitive dependencies imposed on projects using Robolectric. If you want to use any of these
+shadows, add the needed artifacts below to your build.</p>
+<h4 id="orgrobolectricshadows-support-v4"><code>org.robolectric:shadows-support-v4</code></h4>
+<p>Shadows for classes in the Android <code>support-v4</code> library.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="orgrobolectricshadows-support-v4-groovy" name="__tabbed_7" type="radio" /><input id="orgrobolectricshadows-support-v4-kotlin" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="orgrobolectricshadows-support-v4-groovy">Groovy</label><label for="orgrobolectricshadows-support-v4-kotlin">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">testCompile</span><span class="w"> </span><span class="s1">&#39;org.robolectric:shadows-support-v4:3.0&#39;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">testCompile</span><span class="p">(</span><span class="s">&quot;org.robolectric:shadows-support-v4:3.0&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="orgrobolectricshadows-httpclient"><code>org.robolectric:shadows-httpclient</code></h4>
+<p>Shadows for classes in Apache HTTP client. This includes methods like
+<code>Robolectric.getLatestSentHttpRequest</code>. These methods have moved to
+<a href="../javadoc/latest/org/robolectric/shadows/httpclient/FakeHttp.html#getLatestSentHttpRequest()"><code>FakeHttp.getLatestSentHttpRequest</code></a>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="orgrobolectricshadows-httpclient-groovy" name="__tabbed_8" type="radio" /><input id="orgrobolectricshadows-httpclient-kotlin" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="orgrobolectricshadows-httpclient-groovy">Groovy</label><label for="orgrobolectricshadows-httpclient-kotlin">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">testCompile</span><span class="w"> </span><span class="s1">&#39;org.robolectric:shadows-httpclient:3.0&#39;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">testCompile</span><span class="p">(</span><span class="s">&quot;org.robolectric:shadows-httpclient:3.0&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="orgrobolectricshadows-maps"><code>org.robolectric:shadows-maps</code></h4>
+<p>Shadows for classes in Google Maps.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="orgrobolectricshadows-maps-groovy" name="__tabbed_9" type="radio" /><input id="orgrobolectricshadows-maps-kotlin" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="orgrobolectricshadows-maps-groovy">Groovy</label><label for="orgrobolectricshadows-maps-kotlin">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">testCompile</span><span class="w"> </span><span class="s1">&#39;org.robolectric:shadows-maps:3.0&#39;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">testCompile</span><span class="p">(</span><span class="s">&quot;org.robolectric:shadows-maps:3.0&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ©2010-2025. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/robolectric/robolectric" target="_blank" rel="noopener" title="GitHub Project" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://groups.google.com/group/robolectric" target="_blank" rel="noopener" title="robolectric@googlegroups.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://x.com/robolectric" target="_blank" rel="noopener" title="@Robolectric" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.view", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
