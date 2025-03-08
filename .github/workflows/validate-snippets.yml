@@ -5,7 +5,7 @@ on:
     paths:
       - "snippets/**"
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - "snippets/**"
 

@@ -5,7 +5,7 @@ This repository contains the source of the documentation that lives at
 
 ## Contributing
 
-Make sure that you are on the `master` branch, and that it is up to date before making any changes.
+Make sure that you are on the `main` branch, and that it is up to date before making any changes.
 This is the default branch, so Git should put you there automatically.
 
 ### Build the documentation locally
