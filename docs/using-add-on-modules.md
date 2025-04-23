@@ -11,17 +11,12 @@ dedicated packages.
     name (i.e., `org.robolectric:playservices` and `org.robolectric:httpclient`).
 > - Before Robolectric 3.4, `org.robolectric:playservices` was named `shadow-play-services`.
 
-## Supported packages
-
-| SDK package                            | Robolectric add-on package                                            | Javadoc                                 |
-|----------------------------------------|-----------------------------------------------------------------------|-----------------------------------------|
-| `com.google.android.gms:play-services` | [`org.robolectric:shadows-playservices`][shadows-playservices-source] | [Javadoc][shadows-playservices-javadoc] |
-
 ## Deprecated packages
 
-| SDK package                            | Robolectric add-on package                                        | Javadoc                               | Comment                                                   |
-|----------------------------------------|-------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------|
-| `org.apache.httpcomponents:httpclient` | [`org.robolectric:shadows-httpclient`][shadows-httpclient-source] | [Javadoc][shadows-httpclient-javadoc] | These shadows are only provided for legacy compatibility. |
+| SDK package                            | Robolectric add-on package                                            | Javadoc                                 | Comment                                                                     |
+|----------------------------------------|-----------------------------------------------------------------------|-----------------------------------------|-----------------------------------------------------------------------------|
+| `com.google.android.gms:play-services` | [`org.robolectric:shadows-playservices`][shadows-playservices-source] | [Javadoc][shadows-playservices-javadoc] | This package was deprecated in [Robolectric 4.15][robolectric-4.15-release] |
+| `org.apache.httpcomponents:httpclient` | [`org.robolectric:shadows-httpclient`][shadows-httpclient-source]     | [Javadoc][shadows-httpclient-javadoc]   | These shadows are only provided for legacy compatibility.                   |
 
 ## Removed packages
 
