@@ -11,19 +11,14 @@ dedicated packages.
     name (i.e., `org.robolectric:playservices` and `org.robolectric:httpclient`).
 > - Before Robolectric 3.4, `org.robolectric:playservices` was named `shadow-play-services`.
 
-## Supported packages
-
-| SDK package                            | Robolectric add-on package                                            | Javadoc                                 |
-|----------------------------------------|-----------------------------------------------------------------------|-----------------------------------------|
-| `com.google.android.gms:play-services` | [`org.robolectric:shadows-playservices`][shadows-playservices-source] | [Javadoc][shadows-playservices-javadoc] |
-
 ## Deprecated packages
 
-| SDK package                            | Robolectric add-on package                                        | Javadoc                               | Comment                                                                      |
-|----------------------------------------|-------------------------------------------------------------------|---------------------------------------|------------------------------------------------------------------------------|
-| `androidx.multidex.MultiDex`           | [`org.robolectric:shadows-multidex`][shadows-multidex-source]     | [Javadoc][shadows-multidex-javadoc]   | This package was deprecated in [Robolectric 4.14][robolectric-4.14-release]. |
-| `com.android.support.multidex`         | [`org.robolectric:shadows-multidex`][shadows-multidex-source]     | [Javadoc][shadows-multidex-javadoc]   | This package was deprecated in [Robolectric 4.14][robolectric-4.14-release]. |
-| `org.apache.httpcomponents:httpclient` | [`org.robolectric:shadows-httpclient`][shadows-httpclient-source] | [Javadoc][shadows-httpclient-javadoc] | These shadows are only provided for legacy compatibility.                    |
+| SDK package                            | Robolectric add-on package                                            | Javadoc                                 | Comment                                                                      |
+|----------------------------------------|-----------------------------------------------------------------------|-----------------------------------------|------------------------------------------------------------------------------|
+| `androidx.multidex.MultiDex`           | [`org.robolectric:shadows-multidex`][shadows-multidex-source]         | [Javadoc][shadows-multidex-javadoc]     | This package was deprecated in [Robolectric 4.14][robolectric-4.14-release]. |
+| `com.android.support.multidex`         | [`org.robolectric:shadows-multidex`][shadows-multidex-source]         | [Javadoc][shadows-multidex-javadoc]     | This package was deprecated in [Robolectric 4.14][robolectric-4.14-release]. |
+| `com.google.android.gms:play-services` | [`org.robolectric:shadows-playservices`][shadows-playservices-source] | [Javadoc][shadows-playservices-javadoc] | This package was deprecated in [Robolectric 4.15][robolectric-4.15-release]  |
+| `org.apache.httpcomponents:httpclient` | [`org.robolectric:shadows-httpclient`][shadows-httpclient-source]     | [Javadoc][shadows-httpclient-javadoc]   | These shadows are only provided for legacy compatibility.                    |
 
 ## Removed packages
 
@@ -35,6 +30,7 @@ dedicated packages.
 [robolectric-4.8-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.8
 [robolectric-4.9-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9
 [robolectric-4.14-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.14
+[robolectric-4.15-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.15
 [shadows-httpclient-javadoc]: javadoc/latest/org/robolectric/shadows/httpclient/package-summary.html
 [shadows-httpclient-source]: https://github.com/robolectric/robolectric/tree/master/shadows/httpclient
 [shadows-multidex-javadoc]: javadoc/latest/org/robolectric/shadows/multidex/package-summary.html
