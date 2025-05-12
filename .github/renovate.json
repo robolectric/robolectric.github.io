@@ -18,5 +18,6 @@
       "matchManagers": "gradle",
       "sourceDirectory": "snippets"
     }
-  ]
+  ],
+  "prHourlyLimit": 5
 }
