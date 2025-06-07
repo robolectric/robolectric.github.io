@@ -47,11 +47,11 @@ Then, run `./gradlew simulate` to start the simulator. It will run the main
 ### Standalone API
 
 Inside a Robolectric test, you can also start the simulator using the
-standalone API.  To do this, first add a dependency to the simulator in your
+standalone API. To do this, first add a dependency to the simulator in your
 project's `build.gradle`/`build.gradle.kts` file.
 
 
-!!! snippet "Simulator dependency
+!!! snippet "Simulator dependency"
 
     /// tab | Groovy
     ```groovy
