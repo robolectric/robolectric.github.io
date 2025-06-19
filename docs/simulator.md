@@ -40,7 +40,6 @@ to the `plugins` block of your app's `build.gradle`/`build.gradle.kts` file:
     ```
     ///
 
-
 Then, run `./gradlew simulate` to start the simulator. It will run the main
 `Activity` that is configured in your manifest.
 
@@ -49,7 +48,6 @@ Then, run `./gradlew simulate` to start the simulator. It will run the main
 Inside a Robolectric test, you can also start the simulator using the
 standalone API. To do this, first add a dependency to the simulator in your
 project's `build.gradle`/`build.gradle.kts` file.
-
 
 !!! snippet "Simulator dependency"
 
@@ -84,6 +82,5 @@ Next, you can create a Simulator object and start it using:
     ```
     ///
 
-
-This approach is good of your top-level Activity is unable to be started in a
+This approach is good if your top-level Activity is unable to be started in a
 Robolectric environment. 
