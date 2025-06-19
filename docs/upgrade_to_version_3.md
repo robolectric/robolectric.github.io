@@ -178,9 +178,7 @@ more [here](getting-started.md).
 If you were providing custom configuration by subclassing and overriding methods on
 [`RobolectricTestRunner`][robolectric-test-runner-javadoc], you'll need to make some changes.
 
-`RobolectricTestRunner.getConfigProperties()` has moved to
-[`ConfigMerger.getConfigProperties(String)`][config-merger-get-config-properties-javadoc]. But what
-you probably actually want to do is override
+`RobolectricTestRunner.getConfigProperties()` should be replaced by overriding
 [`RobolectricTestRunner.buildGlobalConfig()`][robolectric-test-runner-build-global-config-javadoc].
 
 #### Old code
@@ -439,7 +437,6 @@ testCompile("org.robolectric:shadows-maps:3.0")
 [activity-documentation]: https://developer.android.com/reference/android/app/Activity
 [config-asset-dir-javadoc]: javadoc/latest/org/robolectric/annotation/Config.html#assetDir()
 [config-javadoc]: javadoc/latest/org/robolectric/annotation/Config.html
-[config-merger-get-config-properties-javadoc]: javadoc/latest/org/robolectric/ConfigMerger.html#getConfigProperties(java.lang.String)
 [content-provider-controller-javadoc]: javadoc/latest/org/robolectric/android/controller/ContentProviderController.html
 [content-provider-documentation]: https://developer.android.com/reference/android/content/ContentProvider
 [context-documentation]: https://developer.android.com/reference/android/content/Context
