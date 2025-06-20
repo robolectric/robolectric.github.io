@@ -3,14 +3,14 @@ package org.robolectric.snippets.java;
 import static org.junit.Assert.assertEquals;
 
 import android.widget.TextView;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.android.controller.ActivityController;
 
 // --8<-- [start:index_sample_test]
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class MyActivityTest {
   @Test
   public void clickingButton_shouldChangeMessage() {

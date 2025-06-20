@@ -25,7 +25,7 @@ Tests run inside the JVM in seconds. With Robolectric you can write tests like t
 
 /// tab | Kotlin
 ```kotlin
-@RunWith(RobolectricTestRunner::class)
+@RunWith(AndroidJUnit4::class)
 class MyActivityTest {
   @Test
   fun clickingButton_shouldChangeMessage() {
@@ -34,7 +34,7 @@ class MyActivityTest {
       val activity = controller.get()
 
       activity.findViewById(R.id.button).performClick()
-      assertEquals((activity.findViewById(R.id.text) as TextView).text, "Robolectric Rocks!")
+      assertEquals(activity.findViewById<TextView>(R.id.text).text, "Robolectric Rocks!")
     }
   }
 }
