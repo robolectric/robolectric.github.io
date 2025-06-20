@@ -1,9 +1,11 @@
 [versions]
 android-gradle-plugin = "8.10.1"
+androidx-test-ext-junit = "1.2.1"
 junit = "4.13.2"
 robolectric = "4.14.1"
 
 [libraries]
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 
