@@ -127,6 +127,7 @@ nav:
     - "Upgrade to Robolectric 3.x": upgrade_to_version_3.md
     - "Javadoc":
       - "4.15": /javadoc/4.15/
+      - "4.15": /javadoc/4.15/
       - "4.14": /javadoc/4.14/
       - "4.13": /javadoc/4.13/
       - "4.12": /javadoc/4.12/
