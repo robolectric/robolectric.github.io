@@ -1,3 +1,77 @@
+## Migrating to 4.15
+
+### Deprecations
+
+| Deprecated symbol                                                            | Replacement                                                                                                                       |
+|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| `org.robolectric:shadows-playservices`                                       | Use APIs provided by Google Player Services libraries                                                                             |
+| `ActivityController#configurationChange(Configuration, DisplayMetrics, int)` | `ActivityController#configurationChange(Configuration, DisplayMetrics)`                                                           |
+| `AttributeSetBuilder`                                                        | `Xml#asAttributeSet()`                                                                                                            |
+| `Config.Builder#setAssetDir()`                                               | See [build system integration][build-system-integration]                                                                          |
+| `Config.Builder#setLibraries()`                                              | See [build system integration][build-system-integration]                                                                          |
+| `Config.Builder#setPackageName()`                                            | See [build system integration][build-system-integration]                                                                          |
+| `Config.Builder#setResourceDir()`                                            | See [build system integration][build-system-integration]                                                                          |
+| `Robolectric#buildAttributeSet()`                                            | `Robolectric#getAttributeSetFromXml()`                                                                                            |
+| `Robolectric#flushBackgroundThreadScheduler()`                               | `ShadowLooper#runToEndOfTasks()`                                                                                                  |
+| `Robolectric#flushForegroundThreadScheduler()`                               | `ShadowLooper#runToEndOfTasks()`                                                                                                  |
+| `Robolectric#getBackgroundThreadScheduler()`                                 | This is only needed in the `LEGACY` looper mode. We strongly encourage you to use the `PAUSED` looper mode (which is the default) |
+| `Robolectric#getForegroundThreadScheduler()`                                 | This is only needed in the `LEGACY` looper mode. We strongly encourage you to use the `PAUSED` looper mode (which is the default) |
+| `RuntimeEnvironment#getMasterScheduler()`                                    | This is only needed in the `LEGACY` looper mode. We strongly encourage you to use the `PAUSED` looper mode (which is the default) |
+| `RuntimeEnvironment#setMasterScheduler()`                                    | This is only needed in the `LEGACY` looper mode. We strongly encourage you to use the `PAUSED` looper mode (which is the default) |
+| `ShadowApplication#runBackgroundTasks()`                                     | This is only needed in the `LEGACY` looper mode. We strongly encourage you to use the `PAUSED` looper mode (which is the default) |
+| `ShadowAssetInputStream#isNinePatch()`                                       | Only use this in `LEGACY` graphics mode                                                                                           |
+| `ShadowRoleManager#addHeldRole()`                                            | `ShadowRoleManager#addRoleHolder()`                                                                                               |
+| `ShadowRoleManager#addAvailableRole()`                                       | `ShadowRoleManager#addRoleHolder()`                                                                                               |
+| `ShadowRoleManager#removeAvailableRole()`                                    | `ShadowRoleManager#removeRoleHolder()`                                                                                            |
+| `ShadowRoleManager#removeHeldRole()`                                         | `ShadowRoleManager#removeRoleHolder()`                                                                                            |
+
+### Removals
+
+| Removed symbol                                     | Replacement                                                    |
+|----------------------------------------------------|----------------------------------------------------------------|
+| `org.robolectric:shadows-multidex`                 | No longer needed with min SDK being 21+                        |
+| `AndroidManifest#supportsBinaryResourcesMode()`    | N/A (it always returned `true`)                                |
+| `AndroidManifest#supportsLegacyResourcesMode()`    | N/A (it always returned `false`)                               |
+| `ConfigMerger`                                     | `Provider<Config>`                                             |
+| `DependencyResolver#getLocalArtifactUrls()`        | N/A (overriding `getLocalArtifactUrl()` is enough)             |
+| `Fs#fileFromPath(path)`                            | `Fs.fromUrl(path)`                                             |
+| `Fs#newFile(file)`                                 | `file.toPath()`                                                |
+| `FsFile`                                           | `Path`                                                         |
+| `FsFile#getPath()`                                 | `Fs.externalize(path)`                                         |
+| `FsFile#join(name)`                                | `path.resolve(name)`                                           |
+| `InvokeDynamicClassInstrumentor`                   | `ClassInstrumentor`                                            |
+| `IShadow#directlyOn(T, Class<T>)`                  | Use a combination of `Reflector` and `Direct`                  |
+| `MavenManifestFactory`                             | See [build system integration][build-system-integration]       |
+| `PackageItemData#getClassName()`                   | `PackageItemData#getName()`                                    |
+| `ProxyMaker`                                       | Use a combination of `Reflector` and `Direct`                  |
+| `Qualifiers#addScreenWidth()`                      | `Configuration#screenWidthDp`                                  |
+| `Qualifiers#addSmallestScreenWidth()`              | `Configuration#smallestScreenWidthDp`                          |
+| `Qualifiers#getOrientation()`                      | `Configuration#orientation`                                    |
+| `Qualifiers#getPlatformVersion()`                  | `Build.VERSION#SDK_INT`                                        |
+| `Qualifiers#getScreenWidth()`                      | `Configuration#screenWidthDp`                                  |
+| `Qualifiers#getSmallestScreenWidth()`              | `Configuration#smallestScreenWidthDp`                          |
+| `RoboSettings`                                     | Read/write the `robolectric.scheduling.global` system property |
+| `Scheduler#idleConstantly()`                       | `Scheduler#setIdleState()`                                     | 
+| `SdkPicker`                                        | `DefaultSdkPicker`                                             |
+| `Shadow#directlyOn(T, Class<T>)`                   | Use a combination of `Reflector` and `Direct`                  |
+| `ShadowApplication#addWakeLock()`                  | Use the `PowerManager` APIs                                    |
+| `ShadowApplication#clearWakeLocks()`               | `ShadowPowerManager#clearWakeLocks()`                          |
+| `ShadowApplication#getAppWidgetManager()`          | `Context#getSystemService(Context.APPWIDGET_SERVICE)`          |
+| `ShadowApplication#getBluetoothAdapter()`          | `BluetoothAdapter#getDefaultAdapter()`                         |
+| `ShadowApplication#getForegroundThreadScheduler()` | Use the `PAUSED` looper mode (which is the default)            |
+| `ShadowApplication#getInstance()`                  | `ApplicationProvider#getApplicationContext()`                  |
+| `ShadowApplication#getLatestWakeLock()`            | `ShadowPowerManager#getLatestWakeLock()`                       |
+| `ShadowApplication#getSingleton()`                 | N/A                                                            |
+| `ShadowAssetInputStream#getDelegate()`             | N/A                                                            |
+| `ShadowImpl#directlyOn(T, Class<T>)`               | Use a combination of `Reflector` and `Direct`                  |
+| `ShadowMap#convertToShadowName()`                  | N/A                                                            |
+
+### Other Changes
+
+- `TestLifecycle` no longer has a generic type.
+- Renamed `ActivityData#isClearTaskOnLaungh()` into `ActivityData#isClearTaskOnLaunch()`.
+- Renamed `ResourceIds#makeIdentifer()` into `ResourceIds#makeIdentifier()`.
+
 ## Migrating to 4.0<a name="migrating-to-40"></a>
 
 ### Project Configuration
@@ -104,6 +178,7 @@ Some likely issues include:
 [activity-finish-documentation]: https://developer.android.com/reference/android/app/Activity#finish()
 [androidx-test-apis]: https://developer.android.com/reference/androidx/test/package-summary
 [application-provider-get-application-context-documentation]: https://developer.android.com/reference/androidx/test/core/app/ApplicationProvider#getApplicationContext()
+[build-system-integration]: https://robolectric.org/build-system-integration
 [config-asset-dir-javadoc]: javadoc/latest/org/robolectric/annotation/Config.html#assetDir()
 [config-javadoc]: javadoc/latest/org/robolectric/annotation/Config.html
 [config-manifest-javadoc]: javadoc/latest/org/robolectric/annotation/Config.html#manifest()
