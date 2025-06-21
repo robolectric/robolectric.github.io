@@ -90,6 +90,9 @@ extra:
   robolectric:
     version:
       current: "4.15"
+  simulator_gradle_plugin:
+    version:
+      current: "1.0.3"
   social:
     - name: "GitHub Project"
       icon: fontawesome/brands/github
@@ -113,6 +116,7 @@ nav:
     - "Using Qualified Resources": using-qualifiers.md
     - "Using Add-On Modules": using-add-on-modules.md
     - "Best Practices & Limitations": best-practices.md
+    - "Simulator": simulator.md
   - "Customizing":
     - "Build System Integration": build-system-integration.md
     - "Customizing the Test Runner": custom-test-runner.md
