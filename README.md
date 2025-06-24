@@ -80,18 +80,10 @@ be updated. This can be achieved either automatically, or manually.
 
 ### Automatic publication
 
-The simplest way to publish the javadoc for a specific version is to
-[create an issue](https://github.com/robolectric/robolectric.github.io/issues/new) whose title is
-`Publish javadoc for <version>`, where `<version>` is the version you want to deploy (for example
-`4.12`).
-
-This will trigger the [`publish-javadoc.yml` workflow](.github/workflows/publish-javadoc.yml) to build and publish the corresponding
-javadoc.
-
-> [!TIP]
-> If you use the [`gh`](https://cli.github.com/) command line tool, you can use the following command:
->
-> `gh issue create --title "Publish javadoc for <version>" --body ""`
+The simplest way to publish the javadoc for a specific version is by running the
+[`publish-javadoc.yml`](.github/workflows/publish-javadoc.yml) workflow from the repository's
+[Actions](https://github.com/robolectric/robolectric.github.io/actions/workflows/publish-javadoc.yml)
+tab.
 
 ### Manual publication
 
@@ -100,6 +92,6 @@ To manually publish the javadoc, you can follow the guide in
 
 ## Deploy process
 
-When a new PR is merged, GitHub Actions will build and push site code to `gh-pages` branch. The
-repository has configured to deploy the site with `gh-phages` branch, and then GitHub Pages will
-deploy the site public automatically.
+When a PR is merged, GitHub Actions will build and push the site code to the `gh-pages` branch. The
+repository is configured to deploy the site with `gh-pages` branch, and then GitHub Pages will
+deploy the site automatically.

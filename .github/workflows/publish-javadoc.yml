@@ -1,8 +1,12 @@
 name: Publish javadoc
 
 on:
-  issues:
-    types: [ opened ]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "The version of Robolectric"
+        required: true
+        type: string
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -17,18 +21,12 @@ jobs:
       - name: Extract Robolectric version
         id: robolectric_version
         run: |
-          authorAssociation="${{ github.event.issue.author_association }}"
+          if [[ "${{ inputs.version }}" =~ ^(([0-9]+\.[0-9]+)(\.[0-9]+)?)$ ]]; then
+            robolectricMinorVersion="${BASH_REMATCH[2]}"
+            robolectricPatchVersion="${BASH_REMATCH[1]}"
 
-          if [[ "$authorAssociation" == "COLLABORATOR" || "$authorAssociation" == "MEMBER" || "$authorAssociation" == "OWNER" ]]; then
-            issueTitle="${{ github.event.issue.title }}"
-
-            if [[ "$issueTitle" =~ ^Publish\ javadoc\ for\ (([0-9]+\.[0-9]+)(\.[0-9]+)?)$ ]]; then
-              robolectricMinorVersion="${BASH_REMATCH[2]}"
-              robolectricPatchVersion="${BASH_REMATCH[1]}"
-
-              echo "minorVersion=$robolectricMinorVersion" > $GITHUB_OUTPUT
-              echo "patchVersion=$robolectricPatchVersion" >> $GITHUB_OUTPUT
-            fi
+            echo "minorVersion=$robolectricMinorVersion" > $GITHUB_OUTPUT
+            echo "patchVersion=$robolectricPatchVersion" >> $GITHUB_OUTPUT
           fi
 
       - name: Checkout Robolectric
@@ -95,7 +93,6 @@ jobs:
           git commit -m "Publish javadoc for Robolectric ${{ steps.robolectric_version.outputs.patchVersion }}" \
             -m "- Add javadoc for Robolectric ${{ steps.robolectric_version.outputs.patchVersion }}." \
             -m "- Update mkdocs.yml to add a navigation entry to the new javadoc." \
-            -m "- Update mkdocs.yml to use version ${{ steps.robolectric_version.outputs.patchVersion }}." \
-            -m "Fixes #${{ github.event.issue.number }}"
+            -m "- Update mkdocs.yml to use version ${{ steps.robolectric_version.outputs.patchVersion }}."
           git push --set-upstream origin publish-javadoc-robolectric-${{ steps.robolectric_version.outputs.patchVersion }}
           gh pr create --fill
