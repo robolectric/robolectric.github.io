@@ -72,6 +72,22 @@
 - Renamed `ActivityData#isClearTaskOnLaungh()` into `ActivityData#isClearTaskOnLaunch()`.
 - Renamed `ResourceIds#makeIdentifer()` into `ResourceIds#makeIdentifier()`.
 
+## Migrating to 4.14
+
+### Deprecations
+
+| Deprecated symbol                  | Replacement                                              |
+|------------------------------------|----------------------------------------------------------|
+| `org.robolectric:shadows-multidex` | No longer needed with min SDK being 21+                  |
+| `Implements#looseSignatures()`     | Use either `@ClassName` or `@Implementation(methodName)` |
+| `Supercedes`                       | `Supersedes`                                             |
+
+### Removals
+
+| Removed symbol     | Replacement                                                                   |
+|--------------------|-------------------------------------------------------------------------------|
+| `FragmentTestUtil` | See [Test your fragments](https://developer.android.com/guide/fragments/test) |
+
 ## Migrating to 4.0<a name="migrating-to-40"></a>
 
 ### Project Configuration
