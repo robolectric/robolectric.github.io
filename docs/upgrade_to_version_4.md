@@ -88,6 +88,42 @@
 |--------------------|-------------------------------------------------------------------------------|
 | `FragmentTestUtil` | See [Test your fragments](https://developer.android.com/guide/fragments/test) |
 
+## Migrating to 4.13
+
+### Breaking Changes
+
+- This release bumps the min SDK version from 19 to 21, following the move made by the AndroidX
+  ecosystem.
+
+### Deprecations
+
+| Deprecated symbol | Replacement                                       |
+|-------------------|---------------------------------------------------|
+| `Scheduler`       | Use `LooperMode.PAUSED` and `ShadowLooper`'s APIs |
+
+### Removals
+
+| Removed symbol                            | Replacement                      |
+|-------------------------------------------|----------------------------------|
+| `Qualifiers#addPlatformVersion()`         | N/A                              |
+| `RuntimeEnvironment#useLegacyResources()` | N/A (it always returned `false`) |
+
+## Migrating to 4.12
+
+### Deprecations
+
+| Deprecated symbol                      | Replacement             |
+|----------------------------------------|-------------------------|
+| `RoboSettings#isUseGlobalScheduler()`  | Use `LooperMode.PAUSED` |
+| `RoboSettings#setUseGlobalScheduler()` | Use `LooperMode.PAUSED` |
+
+### Removals
+
+| Removed symbol                               | Replacement        |
+|----------------------------------------------|--------------------|
+| `RobolectricTestRunner#getConfig()`          | `Provider<Config>` |
+| `RuntimeEnvironment#setUseLegacyResources()` | N/A                |
+
 ## Migrating to 4.0<a name="migrating-to-40"></a>
 
 ### Project Configuration
