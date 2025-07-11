@@ -41,6 +41,44 @@ the `plugins` block of your app's `build.gradle`/`build.gradle.kts` file:
     ```
     ///
 
+To enable the simulator to work with JDK 23 and newer, you must add the following extra jvmArgs to your unit test configuration:
+
+!!! snippet "simulator-jvmArgs-configurations"
+
+    /// tab | Groovy
+    ```groovy
+    testOptions {
+        unitTests.all { test ->
+            test.jvmArgs += [
+                    "--add-exports=java.desktop/sun.awt=ALL-UNNAMED",
+                    "--add-exports=java.base/sun.reflect.misc=ALL-UNNAMED",
+                    "--add-exports=java.base/sun.security.action=ALL-UNNAMED",
+                    "--add-exports=java.desktop/sun.swing=ALL-UNNAMED",
+                    "--add-exports=java.desktop/sun.lwawt.macosx=ALL-UNNAMED"
+            ]
+        }
+    }
+    ```
+    ///
+
+    /// tab | Kotlin
+    ```kotlin
+    testOptions {
+        unitTests {
+            all { test ->
+                test.jvmArgs(
+                    "--add-exports=java.desktop/sun.awt=ALL-UNNAMED",
+                    "--add-exports=java.base/sun.reflect.misc=ALL-UNNAMED",
+                    "--add-exports=java.base/sun.security.action=ALL-UNNAMED",
+                    "--add-exports=java.desktop/sun.swing=ALL-UNNAMED",
+                    "--add-exports=java.desktop/sun.lwawt.macosx=ALL-UNNAMED",
+                )
+            }
+        }
+    }
+    ```
+    ///
+
 Then, run `./gradlew simulate<variant>` (for example, `./gradlew simulateDebug` or
 `./gradlew simulateDemoDebug`) to start the simulator for the `<variant>` build variant. It will run
 the main `Activity` that is configured in your manifest.
