@@ -236,6 +236,7 @@ UI threads.
 tests. Since Robolectric 4.0, Espresso APIs are now supported in Robolectric tests.
 
 /// tab | Java
+
 ```java
 import static androidx.test.espresso.Espresso.onView;
 
@@ -259,9 +260,11 @@ public class AddContactActivityTest {
      }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 import androidx.test.espresso.Espresso.onView
 
@@ -285,6 +288,7 @@ class AddContactActivityTest {
      }
 }
 ```
+
 ///
 
 ## Fragments
@@ -293,6 +297,7 @@ AndroidX Test provides [`FragmentScenario`][fragment-scenario], which offers API
 your [`Fragment`][fragment-documentation] under test and drive it through valid transitions.
 
 /// tab | Java
+
 ```java
 import androidx.fragment.app.testing.FragmentScenario;
 
@@ -307,9 +312,11 @@ public class FragmentTest {
     }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 import androidx.fragment.app.testing.FragmentScenario
 
@@ -324,6 +331,7 @@ class FragmentTest {
     }
 }
 ```
+
 ///
 
 Read more about testing Fragments [here][fragment-testing].

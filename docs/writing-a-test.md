@@ -8,6 +8,7 @@ hide:
 Let's say that you have an [`Activity`][activity-documentation] that represents a welcome screen:
 
 /// tab | Java
+
 ```java
 public class WelcomeActivity extends Activity {
     @Override
@@ -22,9 +23,11 @@ public class WelcomeActivity extends Activity {
     }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 class WelcomeActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +41,7 @@ class WelcomeActivity : Activity() {
     }
 }
 ```
+
 ///
 
 ```xml title="welcome_activity.xml"
@@ -63,6 +67,7 @@ click is performed. Since Robolectric is a unit testing framework, the `LoginAct
 actually be started.
 
 /// tab | Java
+
 ```java
 @RunWith(RobolectricTestRunner.class)
 public class WelcomeActivityTest {
@@ -81,9 +86,11 @@ public class WelcomeActivityTest {
     }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @RunWith(RobolectricTestRunner::class)
 class WelcomeActivityTest {
@@ -102,6 +109,7 @@ class WelcomeActivityTest {
     }
 }
 ```
+
 ///
 
 ## Test APIs
@@ -114,34 +122,42 @@ Many test APIs are extensions to individual Android classes, and can be accessed
 `shadowOf()` method:
 
 /// tab | Java
+
 ```java
 // Retrieve all the toasts that have been displayed
 List<Toast> toasts = shadowOf(application).getShownToasts();
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 // Retrieve all the toasts that have been displayed
 val toasts = shadowOf(application).shownToasts
 ```
+
 ///
 
 Additional test APIs are accessible as static methods on special classes called
 [shadows](extending.md), which correspond to Android framework classes:
 
 /// tab | Java
+
 ```java
 // Simulate a new display being plugged into the device
 ShadowDisplayManager.addDisplay("xlarge-port");
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 // Simulate a new display being plugged into the device
 ShadowDisplayManager.addDisplay("xlarge-port")
 ```
+
 ///
 
 [activity-documentation]: https://developer.android.com/reference/android/app/Activity

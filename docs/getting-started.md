@@ -9,6 +9,7 @@ for Android.
 Start by adding the following to your module's `build.gradle`/`build.gradle.kts` file:
 
 /// tab | Groovy
+
 ```groovy
 android {
   testOptions {
@@ -23,9 +24,11 @@ dependencies {
   testImplementation 'org.robolectric:robolectric:{{ robolectric.version.current }}'
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 android {
   testOptions {
@@ -40,11 +43,13 @@ dependencies {
   testImplementation("org.robolectric:robolectric:{{ robolectric.version.current }}")
 }
 ```
+
 ///
 
 Then, mark your test to run with `RobolectricTestRunner`:
 
 /// tab | Java
+
 ```java
 import org.robolectric.RobolectricTestRunner;
 
@@ -52,15 +57,18 @@ import org.robolectric.RobolectricTestRunner;
 public class SandwichTest {
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
 class SandwichTest
 ```
+
 ///
 
 ## Building with Bazel
@@ -143,6 +151,7 @@ Start by adding the following to your module's `pom.xml` file:
 Then, mark your test to run with `RobolectricTestRunner`:
 
 /// tab | Java
+
 ```java
 import org.robolectric.RobolectricTestRunner;
 
@@ -150,15 +159,18 @@ import org.robolectric.RobolectricTestRunner;
 public class SandwichTest {
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
 class SandwichTest
 ```
+
 ///
 
 ### Using libraries
@@ -168,6 +180,7 @@ resources are located for each library you use. This can either be specified wit
 annotation:
 
 /// tab | Java
+
 ```java
 import org.robolectric.RobolectricTestRunner;
 
@@ -179,9 +192,11 @@ import org.robolectric.RobolectricTestRunner;
 public class SandwichTest {
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 import org.robolectric.RobolectricTestRunner
 
@@ -192,6 +207,7 @@ import org.robolectric.RobolectricTestRunner
 ])
 class SandwichTest
 ```
+
 ///
 
 or specified in the [`robolectric.properties`](configuring.md/#robolectricproperties-file) file:

@@ -10,21 +10,25 @@ The Android device configuration can be specified using the [`qualifiers`][confi
 [`@Config`][config-documentation] argument:
 
 /// tab | Java
+
 ```java
 @Test
 @Config(qualifiers = "fr-rFR-w360dp-h640dp-xhdpi")
 public void testItOnFrenchNexus5() {
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Test
 @Config(qualifiers = "fr-rFR-w360dp-h640dp-xhdpi")
 fun testItOnFrenchNexus5() {
 }
 ```
+
 ///
 
 From [version 3.6][robolectric-3.6-release] on, Robolectric parses the `qualifiers` property
@@ -69,6 +73,7 @@ the qualifiers config property starts with a `+` (plus sign), it is interpreted 
 higher-level qualifiers that have been specified:
 
 /// tab | Java
+
 ```java
 @Config(qualifiers = "xlarge-port")
 public class MyTest {
@@ -90,9 +95,11 @@ public class MyTest {
   }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Config(qualifiers = "xlarge-port")
 class MyTest {
@@ -114,6 +121,7 @@ class MyTest {
   }
 }
 ```
+
 ///
 
 Values for unspecified properties are calculated, and rules are applied, after all configs have been
@@ -125,6 +133,7 @@ The device configuration can be changed within a test using
 [`RuntimeEnvironment.setQualifiers()`][runtime-environment-set-qualifiers]:
 
 /// tab | Java
+
 ```java
 @Test
 @Config(qualifiers = "+port")
@@ -137,9 +146,11 @@ public void testOrientationChange() {
   // assert that activity is in landscape mode
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Test
 @Config(qualifiers = "+port")
@@ -152,6 +163,7 @@ fun testOrientationChange() {
   // assert that activity is in landscape mode
 }
 ```
+
 ///
 
 The string parameter to `RuntimeEnvironment.setQualifiers()` has the same rules as

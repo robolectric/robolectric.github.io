@@ -21,6 +21,7 @@ and commit to your source control system.
    usually in your module's `build.gradle`/`build.gradle.kts` file):
 
 /// tab | Groovy
+
 ```groovy
 plugins {
    id "net.ltgt.errorprone" version "<error_prone_plugin_version>" apply false
@@ -43,9 +44,11 @@ if (robolectricMigrations) {
    }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 plugins {
    id("net.ltgt.errorprone") version "<error_prone_plugin_version>" apply false
@@ -68,6 +71,7 @@ if (!robolectricMigrations.isNullOrEmpty()) {
    }
 }
 ```
+
 ///
 
     You don't need to commit this change.

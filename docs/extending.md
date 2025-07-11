@@ -34,18 +34,22 @@ implementing a Shadow for [`ViewGroup`][view-group-documentation], `ShadowViewGr
 Shadow class should extend `ViewGroup`'s superclass' Shadow, `ShadowView`.
 
 /// tab | Java
+
 ```java
 @Implements(ViewGroup.class)
 public class ShadowViewGroup extends ShadowView {
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Implements(ViewGroup::class)
 class ShadowViewGroup : ShadowView
 ```
+
 ///
 
 ## Methods
@@ -57,15 +61,19 @@ Android object is invoked.
 Suppose an application defined the following line of code:
 
 /// tab | Java
+
 ```java
 imageView.setImageResource(R.drawable.robolectric_logo);
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 imageView.setImageResource(R.drawable.robolectric_logo)
 ```
+
 ///
 
 Under test, the `ShadowImageView#setImageResource(int resId)` method on the Shadow instance would be
@@ -75,6 +83,7 @@ Shadow methods must be marked with the [`@Implementation`][implementation-docume
 Robolectric includes a lint test to help ensure this is done correctly.
 
 /// tab | Java
+
 ```java
 @Implements(ImageView.class)
 public class ShadowImageView extends ShadowView {
@@ -84,9 +93,11 @@ public class ShadowImageView extends ShadowView {
   }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Implements(ImageView::class)
 class ShadowImageView : ShadowView {
@@ -96,6 +107,7 @@ class ShadowImageView : ShadowView {
   }
 }
 ```
+
 ///
 
 Robolectric supports shadowing all methods on the original class, including `private`, `static`,
@@ -122,20 +134,25 @@ For instance, if the application code was to invoke the [`TextView`][text-view-d
 constructor which receives a [`Context`][context-documentation]:
 
 /// tab | Java
+
 ```java
 new TextView(context);
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 TextView(context)
 ```
+
 ///
 
 Robolectric would invoke the following  `__constructor__` method that receives a `Context`:
 
 /// tab | Java
+
 ```java
 @Implements(TextView.class)
 public class ShadowTextView {
@@ -145,9 +162,11 @@ public class ShadowTextView {
   }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Implements(TextView::class)
 class ShadowTextView {
@@ -156,6 +175,7 @@ class ShadowTextView {
     this.context = context
   }
 ```
+
 ///
 
 ## Getting access to the real instance
@@ -165,6 +185,7 @@ fields. A Shadow class can achieve this by declaring a field annotated with
 [`@RealObject`][real-object-documentation]:
 
 /// tab | Java
+
 ```java
 @Implements(Point.class)
 public class ShadowPoint {
@@ -176,9 +197,11 @@ public class ShadowPoint {
   }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Implements(Point::class)
 class ShadowPoint {
@@ -190,6 +213,7 @@ class ShadowPoint {
   }
 }
 ```
+
 ///
 
 Robolectric will set `realPoint` to the actual instance of [`Point`][point-documentation] before
@@ -222,6 +246,7 @@ options, such as shadowing instance methods using `@Implementation` or shadowing
 if you like.
 
 /// tab | Java
+
 ```java
 @Implements(Bitmap.class)
 public class MyShadowBitmap {
@@ -239,9 +264,11 @@ public class MyShadowBitmap {
   }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Implements(Bitmap::class)
 class MyShadowBitmap {
@@ -259,6 +286,7 @@ class MyShadowBitmap {
   }
 }
 ```
+
 ///
 
 ### Using a Custom Shadows
@@ -290,6 +318,7 @@ shadow annotation processor on your library of shadows. This provides a number o
 4. Perform additional validation and checking on your shadows.
 
 /// tab | Groovy
+
 ```groovy
 android {
   defaultConfig {
@@ -306,6 +335,7 @@ dependencies {
   annotationProcessor 'org.robolectric:processor:{{ robolectric.version.current }}'
 }
 ```
+
 ///
 
 /// tab | Kotlin
@@ -326,6 +356,7 @@ dependencies {
   kapt("org.robolectric:processor:{{ robolectric.version.current }}")
 }
 ```
+
 ///
 
 ## Best practices
