@@ -112,10 +112,10 @@
 
 ### Deprecations
 
-| Deprecated symbol                      | Replacement             |
-|----------------------------------------|-------------------------|
-| `RoboSettings#isUseGlobalScheduler()`  | Use `LooperMode.PAUSED` |
-| `RoboSettings#setUseGlobalScheduler()` | Use `LooperMode.PAUSED` |
+| Deprecated symbol                      | Replacement         |
+|----------------------------------------|---------------------|
+| `RoboSettings#isUseGlobalScheduler()`  | `LooperMode.PAUSED` |
+| `RoboSettings#setUseGlobalScheduler()` | `LooperMode.PAUSED` |
 
 ### Removals
 
@@ -123,6 +123,41 @@
 |----------------------------------------------|--------------------|
 | `RobolectricTestRunner#getConfig()`          | `Provider<Config>` |
 | `RuntimeEnvironment#setUseLegacyResources()` | N/A                |
+
+## Migrating to 4.11
+
+### Breaking Changes
+
+- This release bumps the min SDK version from 16 to 19, following the move made by the AndroidX
+  ecosystem.
+
+### Deprecations
+
+| Deprecated symbol    | Replacement                            |
+|----------------------|----------------------------------------|
+| `BackgroundTestRule` | `LooperMode.Mode.INSTRUMENTATION_TEST` |
+
+## Migrating to 4.10
+
+### Removals
+
+| Removed symbol | Replacement |
+|----------------|-------------|
+| `Util#Util()`  | N/A         |
+
+## Migrating to 4.9
+
+### Deprecations
+
+| Deprecated symbol       | Replacement |
+|-------------------------|-------------|
+| `Util#intArrayToList()` | N/A         |
+
+### Removals
+
+| Removed symbol                      | Replacement                                                                   |
+|-------------------------------------|-------------------------------------------------------------------------------|
+| `org.robolectric:shadows-supportv4` | See [Test your fragments](https://developer.android.com/guide/fragments/test) |
 
 ## Migrating to 4.0<a name="migrating-to-40"></a>
 
