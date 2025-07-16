@@ -17,6 +17,7 @@ on a large number of tests, you can create a base class and move your `@Config` 
 class.
 
 /// tab | Java
+
 ```java
 @Config(
   sdk = Build.VERSION_CODES.TIRAMISU,
@@ -25,9 +26,11 @@ class.
 public class SandwichTest {
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Config(
   sdk = Build.VERSION_CODES.TIRAMISU,
@@ -35,6 +38,7 @@ public class SandwichTest {
 )
 class SandwichTest
 ```
+
 ///
 
 ### `robolectric.properties` file
@@ -75,6 +79,7 @@ a different SDK, you can specify the desired SDK(s) using the [`sdk`][config-sdk
 [`minSdk`][config-min-sdk] and [`maxSdk`][config-max-sdk] config properties:
 
 /// tab | Java
+
 ```java
 @Config(sdk = {TIRAMISU, UPSIDE_DOWN_CAKE})
 public class SandwichTest {
@@ -96,9 +101,11 @@ public class SandwichTest {
   }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Config(sdk = [TIRAMISU, UPSIDE_DOWN_CAKE])
 class SandwichTest {
@@ -120,6 +127,7 @@ class SandwichTest {
   }
 }
 ```
+
 ///
 
 Note that `sdk` and `minSdk`/`maxSdk` may not be specified in the same `@Config` annotation or file;
@@ -139,6 +147,7 @@ class as specified in the `AndroidManifest`. If you want to provide a custom imp
 specify it by setting:
 
 /// tab | Java
+
 ```java
 @Config(application = CustomApplication.class)
 public class SandwichTest {
@@ -148,9 +157,11 @@ public class SandwichTest {
   }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @Config(application = CustomApplication::class)
 class SandwichTest {
@@ -160,6 +171,7 @@ class SandwichTest {
   }
 }
 ```
+
 ///
 
 ### Configure qualifiers
@@ -167,6 +179,7 @@ class SandwichTest {
 You can explicitly configure the set of resource qualifiers in effect for a test:
 
 /// tab | Java
+
 ```java
 public class SandwichTest {
   @Test
@@ -176,9 +189,11 @@ public class SandwichTest {
   }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 class SandwichTest {
   @Test
@@ -188,6 +203,7 @@ class SandwichTest {
   }
 }
 ```
+
 ///
 
 See [Using Qualified Resources](using-qualifiers.md) for more details.
@@ -221,6 +237,7 @@ to override the Maven repository URL and ID to download the runtime dependencies
 other than Maven Central:
 
 /// tab | Groovy
+
 ```groovy
 android {
   testOptions {
@@ -239,9 +256,11 @@ android {
   }
 }
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 android {
   testOptions {
@@ -260,6 +279,7 @@ android {
   }
 }
 ```
+
 ///
 
 ## `ConscryptMode`
