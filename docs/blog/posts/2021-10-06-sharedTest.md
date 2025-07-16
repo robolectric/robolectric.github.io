@@ -138,6 +138,7 @@ There are some articles have shown `sharedTest` pattern, and they should be ment
 
 There is an awesome book has introduced `sharedTest` pattern too:
 
+<!-- markdownlint-disable-next-line MD013 -->
 - [Android Test-Driven Development by Tutorials, by Fernando Sproviero, Victoria Gonda and Lance Gleason, Razeware LLC (July 20, 2021)][12]
 
 There are some Google's projects have used `sharedTest` pattern to sharing test code:

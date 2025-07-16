@@ -192,6 +192,6 @@ project.
 [service-loader]: https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html
 [shadow-provider]: https://github.com/robolectric/robolectric/blob/master/shadowapi/src/main/java/org/robolectric/internal/ShadowProvider.java
 [shadow-wrangler-find-shadow-method-handle]: https://github.com/robolectric/robolectric/blob/master/sandbox/src/main/java/org/robolectric/internal/bytecode/ShadowWrangler.java#L170
-[shadows-list]: https://github.com/robolectric/robolectric/tree/master/shadows/framework/src/main/java/org/robolectric/shadows
+[shadows-list]: javadoc/latest/org/robolectric/shadows/package-summary.html
 [sparse-array-set]: https://github.com/robolectric/robolectric/blob/master/sandbox/src/main/java/org/robolectric/internal/bytecode/ClassInstrumentor.java#L204
 [test-environment-lifecycle-plugin]: https://github.com/robolectric/robolectric/blob/master/pluginapi/src/main/java/org/robolectric/pluginapi/TestEnvironmentLifecyclePlugin.java

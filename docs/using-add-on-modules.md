@@ -20,6 +20,7 @@ dedicated packages.
 
 ## Removed packages
 
+<!-- markdownlint-disable MD033 -->
 | SDK package                      | Robolectric add-on package          | Comment                                                                                                                |
 |----------------------------------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | `androidx.multidex.MultiDex`     | `org.robolectric:shadows-multidex`  | Deprecated in [Robolectric 4.14][robolectric-4.14-release]<br/>Removed in [Robolectric 4.15][robolectric-4.15-release] |

@@ -18,12 +18,15 @@ be a better way. Robolectric is a framework that brings fast and reliable unit t
 Tests run inside the JVM in seconds. With Robolectric you can write tests like this:
 
 /// tab | Java
+
 ```java
 --8<-- "snippets/java/src/test/java/org/robolectric/snippets/java/MyActivityTest.java:index_sample_test"
 ```
+
 ///
 
 /// tab | Kotlin
+
 ```kotlin
 @RunWith(AndroidJUnit4::class)
 class MyActivityTest {
@@ -39,6 +42,7 @@ class MyActivityTest {
   }
 }
 ```
+
 ///
 
 [Get started](getting-started.md){ .md-button .md-button--primary }

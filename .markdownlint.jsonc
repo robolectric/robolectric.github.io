@@ -7,6 +7,8 @@
     "code_block_line_length": 120,
     "tables": false
   },
+  // https://github.com/DavidAnson/markdownlint/blob/main/doc/md059.md
+  "MD059": false,
   // Code block style: https://github.com/DavidAnson/markdownlint/blob/main/doc/md046.md
   "MD046": false
 }
