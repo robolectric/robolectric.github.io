@@ -41,8 +41,9 @@ the `plugins` block of your app's `build.gradle`/`build.gradle.kts` file:
     ```
     ///
 
-Then, run `./gradlew simulate` to start the simulator. It will run the main
-`Activity` that is configured in your manifest.
+Then, run `./gradlew simulate<variant>` (for example, `./gradlew simulateDebug` or
+`./gradlew simulateDemoDebug`) to start the simulator for the `<variant>` build variant. It will run
+the main `Activity` that is configured in your manifest.
 
 If the simulator Gradle plugin is not working for you, it is equivalent to
 running the example code below in the standalone API.
@@ -123,5 +124,5 @@ Next, you can create a Simulator object and start it using:
     ```
     ///
 
-This approach is good if your top-level Activity is unable to be started using
+This approach is good if your top-level `Activity` is unable to be started using
 the Gradle plugin.
