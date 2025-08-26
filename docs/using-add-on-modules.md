@@ -32,6 +32,6 @@ dedicated packages.
 [robolectric-4.9-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.9
 [robolectric-4.14-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.14
 [robolectric-4.15-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.15
-[robolectric-4.16-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.16-beta-1
+[robolectric-4.16-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.16
 [shadows-httpclient-javadoc]: javadoc/latest/org/robolectric/shadows/httpclient/package-summary.html
 [shadows-httpclient-source]: https://github.com/robolectric/robolectric/tree/master/shadows/httpclient
