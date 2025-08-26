@@ -73,7 +73,7 @@ jobs:
         if: ${{ steps.robolectric_version.outputs.patchVersion }}
         run: |
           cd robolectric.github.io
-          sed -i 's/^      current: ".*"$/      current: "${{ steps.robolectric_version.outputs.patchVersion }}"/' mkdocs.yml
+          perl -i -0777 -pe 's/(robolectric:\s*version:\s*current: )".*"/\1"${{ steps.robolectric_version.outputs.patchVersion }}"/' mkdocs.yml
           sed -i 's/^\(    - "Javadoc":\)$/\1\n      - "${{ steps.robolectric_version.outputs.patchVersion }}": \/javadoc\/${{ steps.robolectric_version.outputs.patchVersion }}\//' mkdocs.yml
 
       - name: Update latest javadoc symbolic link
