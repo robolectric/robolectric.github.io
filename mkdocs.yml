@@ -89,10 +89,10 @@ extra:
     property: "UA-19269905-2"
   robolectric:
     version:
-      current: "4.15"
+      current: "4.16"
   simulator_gradle_plugin:
     version:
-      current: "1.0.3"
+      current: "4.16"
   social:
     - name: "GitHub Project"
       icon: fontawesome/brands/github
@@ -130,6 +130,7 @@ nav:
     - "Upgrade to Robolectric 4.x": upgrade_to_version_4.md
     - "Upgrade to Robolectric 3.x": upgrade_to_version_3.md
     - "Javadoc":
+      - "4.16": /javadoc/4.16/
       - "4.15": /javadoc/4.15/
       - "4.14": /javadoc/4.14/
       - "4.13": /javadoc/4.13/
