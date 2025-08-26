@@ -92,7 +92,7 @@ extra:
       current: "4.16"
   simulator_gradle_plugin:
     version:
-      current: "4.16"
+      current: "1.0.3"
   social:
     - name: "GitHub Project"
       icon: fontawesome/brands/github
