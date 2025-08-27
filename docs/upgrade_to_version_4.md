@@ -1,11 +1,33 @@
 <!-- markdownlint-disable MD024 MD041 -->
+## Migrating to 4.16
+
+### Breaking Changes
+
+- Drop support for API 21 and 22. Robolectric now supports API 23 (M) up to 36 (Baklava).
+
+### Deprecations
+
+| Deprecated symbol          | Replacement                                                                              |
+|----------------------------|------------------------------------------------------------------------------------------|
+| `TextLayoutMode`           | `TextLayoutMode.Mode.REALISTIC` is the default, and usages of these APIs can be removed. |
+| `TextLayoutModeConfigurer` | `TextLayoutMode.Mode.REALISTIC` is the default, and usages of these APIs can be removed. |
+
+### Removals
+
+| Removed symbol                                                        | Replacement                                                                                 |
+|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| `org.robolectric:shadows-playservices`                                | Use APIs provided by Google Play Services libraries                                         |
+| `FakeHttp#addPendingHttpResponseWithContentType(int, String, Header)` | `FakeHttp.getFakeHttpLayer().addPendingHttpResponse(statusCode, responseBody, contentType)` |
+| `ShadowDefaultRequestDirector#getSentHttpRequest(int)`                | `FakeHttp.getFakeHttpLayer().getSentHttpRequestInfo(index).getHttpRequest()`                |
+| `ShadowDefaultRequestDirector#getSentHttpRequestInfo(int)`            | `FakeHttp.getFakeHttpLayer().getSentHttpRequestInfo(index)`                                 |
+
 ## Migrating to 4.15
 
 ### Deprecations
 
 | Deprecated symbol                                                            | Replacement                                                                                                                       |
 |------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| `org.robolectric:shadows-playservices`                                       | Use APIs provided by Google Player Services libraries                                                                             |
+| `org.robolectric:shadows-playservices`                                       | Use APIs provided by Google Play Services libraries                                                                               |
 | `ActivityController#configurationChange(Configuration, DisplayMetrics, int)` | `ActivityController#configurationChange(Configuration, DisplayMetrics)`                                                           |
 | `AttributeSetBuilder`                                                        | `Xml#asAttributeSet()`                                                                                                            |
 | `Config.Builder#setAssetDir()`                                               | See [build system integration][build-system-integration]                                                                          |
@@ -142,9 +164,9 @@
 
 ### Removals
 
-| Removed symbol | Replacement |
-|----------------|-------------|
-| `Util#Util()`  | N/A         |
+| Removed symbol          | Replacement |
+|-------------------------|-------------|
+| `Util#intArrayToList()` | N/A         |
 
 ## Migrating to 4.9
 
