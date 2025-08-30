@@ -1,4 +1,5 @@
 .idea
+!.idea/icon.png
 .DS_Store
 *.iml
 *.ipr
