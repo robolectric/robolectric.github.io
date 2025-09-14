@@ -22,3 +22,10 @@ jobs:
 
       - name: Build website
         run: mkdocs build
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        if: ${{ github.repository == 'robolectric/robolectric' }}
+        with:
+          source-dir: site
+          pages-base-url: robolectric.org
