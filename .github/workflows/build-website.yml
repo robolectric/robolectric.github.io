@@ -25,7 +25,7 @@ jobs:
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
-        if: ${{ github.repository == 'robolectric/robolectric' }}
+        if: ${{ github.event.pull_request.head.repo.full_name == 'robolectric/robolectric.github.io' }}
         with:
           source-dir: site
           pages-base-url: robolectric.org
