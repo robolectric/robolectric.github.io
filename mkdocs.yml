@@ -9,6 +9,7 @@ edit_uri: https://github.com/robolectric/robolectric.github.io/tree/main/docs
 
 theme:
   name: material
+  language: en
   favicon: images/favicon.ico
   logo: images/robolectric-stacked.png
   icon:
