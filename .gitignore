@@ -1,6 +1,7 @@
 .idea
 !.idea/icon.png
 .DS_Store
+.venv
 *.iml
 *.ipr
 *.iws

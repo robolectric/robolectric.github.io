@@ -21,7 +21,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build website
-        run: mkdocs build
+        run: zensical build --clean
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
