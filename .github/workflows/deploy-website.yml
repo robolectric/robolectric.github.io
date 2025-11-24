@@ -10,9 +10,15 @@ permissions:
 
 jobs:
   deploy_website:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     name: "Deploy website"
     runs-on: ubuntu-latest
     steps:
+      - name: Configure pages
+        uses: actions/configure-pages@v5
+
       - name: Checkout
         uses: actions/checkout@v6
 
@@ -25,5 +31,13 @@ jobs:
       - name: Install necessary tools
         run: pip install -r requirements.txt
 
-      - name: Deploy website
-        run: mkdocs gh-deploy --force
+      - name: Build website
+        run: zensical build --clean
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - name: Deploy pages
+        uses: actions/deploy-pages@v4
