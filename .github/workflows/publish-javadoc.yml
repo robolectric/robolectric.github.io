@@ -30,7 +30,7 @@ jobs:
           fi
 
       - name: Checkout Robolectric
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         if: ${{ steps.robolectric_version.outputs.patchVersion }}
         with:
           repository: robolectric/robolectric
@@ -38,7 +38,7 @@ jobs:
           ref: robolectric-${{ steps.robolectric_version.outputs.patchVersion }}
 
       - name: Checkout robolectric.github.io
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         if: ${{ steps.robolectric_version.outputs.minorVersion }}
         with:
           path: robolectric.github.io
