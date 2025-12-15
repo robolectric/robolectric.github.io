@@ -32,7 +32,7 @@ Tests run inside the JVM in seconds. With Robolectric you can write tests like t
 class MyActivityTest {
   @Test
   fun clickingButton_shouldChangeMessage() {
-    Robolectric.buildActivity(MyActivity::class).use { controller ->
+    Robolectric.buildActivity(MyActivity::class.java).use { controller ->
       controller.setup() // Moves the Activity to the RESUMED state
       val activity = controller.get()
 
