@@ -34,7 +34,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
 
       - name: Check codestyle
-        uses: axel-op/googlejavaformat-action@v3
+        uses: axel-op/googlejavaformat-action@v4.0.0
         with:
           args: "--replace"
           files: snippets/**/*.java
