@@ -13,9 +13,9 @@ dedicated packages.
 
 ## Deprecated packages
 
-| SDK package                            | Robolectric add-on package                                        | Javadoc                               | Comment                                                   |
-|----------------------------------------|-------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------|
-| `org.apache.httpcomponents:httpclient` | [`org.robolectric:shadows-httpclient`][shadows-httpclient-source] | [Javadoc][shadows-httpclient-javadoc] | These shadows are only provided for legacy compatibility. |
+| SDK package                            | Robolectric add-on package                                        | Javadoc                               | Comment                                                                     |
+|----------------------------------------|-------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------|
+| `org.apache.httpcomponents:httpclient` | [`org.robolectric:shadows-httpclient`][shadows-httpclient-source] | [Javadoc][shadows-httpclient-javadoc] | This package was deprecated in [Robolectric 4.17][robolectric-4.17-release] |
 
 ## Removed packages
 
@@ -33,5 +33,6 @@ dedicated packages.
 [robolectric-4.14-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.14
 [robolectric-4.15-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.15
 [robolectric-4.16-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.16
+[robolectric-4.17-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.17
 [shadows-httpclient-javadoc]: javadoc/latest/org/robolectric/shadows/httpclient/package-summary.html
 [shadows-httpclient-source]: https://github.com/robolectric/robolectric/tree/master/shadows/httpclient
