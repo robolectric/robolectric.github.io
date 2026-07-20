@@ -4,20 +4,15 @@ plugins {
 
 android {
     namespace "org.robolectric.snippets.java"
-    compileSdk 34
+    compileSdk 37
 
     defaultConfig {
         applicationId "org.robolectric.snippets.java"
-        minSdk 21
-        targetSdk 34
+        minSdk 23
+        targetSdk 36
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildFeatures {
-        resValues = false
-        shaders = false
     }
 
     testOptions {
@@ -27,7 +22,7 @@ android {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
