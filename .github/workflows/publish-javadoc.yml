@@ -67,12 +67,12 @@ jobs:
 
           mv ../robolectric/build/docs/javadoc $targetFolder
 
-      - name: Update Robolectric version in mkdocs.yml
+      - name: Update Robolectric version in properdocs.yml
         if: ${{ steps.robolectric_version.outputs.patchVersion }}
         run: |
           cd robolectric.github.io
-          perl -i -0777 -pe 's/(robolectric:\s*version:\s*current: )".*"/\1"${{ steps.robolectric_version.outputs.patchVersion }}"/' mkdocs.yml
-          sed -i 's/^\(    - "Javadoc":\)$/\1\n      - "${{ steps.robolectric_version.outputs.patchVersion }}": \/javadoc\/${{ steps.robolectric_version.outputs.patchVersion }}\//' mkdocs.yml
+          perl -i -0777 -pe 's/(robolectric:\s*version:\s*current: )".*"/\1"${{ steps.robolectric_version.outputs.patchVersion }}"/' properdocs.yml
+          sed -i 's/^\(    - "Javadoc":\)$/\1\n      - "${{ steps.robolectric_version.outputs.patchVersion }}": \/javadoc\/${{ steps.robolectric_version.outputs.patchVersion }}\//' properdocs.yml
 
       - name: Update latest javadoc symbolic link
         if: ${{ steps.robolectric_version.outputs.patchVersion }}
@@ -92,7 +92,7 @@ jobs:
           git add -A
           git commit -m "Publish javadoc for Robolectric ${{ steps.robolectric_version.outputs.patchVersion }}" \
             -m "- Add javadoc for Robolectric ${{ steps.robolectric_version.outputs.patchVersion }}." \
-            -m "- Update mkdocs.yml to add a navigation entry to the new javadoc." \
-            -m "- Update mkdocs.yml to use version ${{ steps.robolectric_version.outputs.patchVersion }}."
+            -m "- Update properdocs.yml to add a navigation entry to the new javadoc." \
+            -m "- Update properdocs.yml to use version ${{ steps.robolectric_version.outputs.patchVersion }}."
           git push --set-upstream origin publish-javadoc-robolectric-${{ steps.robolectric_version.outputs.patchVersion }}
           gh pr create --fill

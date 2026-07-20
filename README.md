@@ -24,7 +24,7 @@ Then you can execute the following command to access the documentation locally a
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/):
 
 ```bash
-mkdocs serve --open
+properdocs serve --open
 ```
 
 ### Using code snippets
