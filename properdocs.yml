@@ -109,6 +109,7 @@ nav:
   - "Setup":
     - "Getting Started": getting-started.md
     - "Writing Your First Test": writing-a-test.md
+    - "Compatibility Table": compatibility_table.md
   - "User Guide":
     - "AndroidX Test": androidx_test.md
     - "Configuring Robolectric": configuring.md
