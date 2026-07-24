@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import org.robolectric.snippets.common.R
 
 class MyActivity : Activity() {
   override fun onCreate(savedInstanceState: Bundle?) {

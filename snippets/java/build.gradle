@@ -27,6 +27,8 @@ java {
 }
 
 dependencies {
+    implementation(project(":common"))
+
     testImplementation(libs.androidx.test.ext.junit)
     testImplementation(libs.junit)
     testImplementation(libs.robolectric)

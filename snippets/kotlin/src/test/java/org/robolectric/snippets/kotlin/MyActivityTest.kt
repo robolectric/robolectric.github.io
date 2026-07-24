@@ -8,6 +8,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
+import org.robolectric.snippets.common.R
 
 // --8<-- [start:index_sample_test]
 @RunWith(AndroidJUnit4::class)

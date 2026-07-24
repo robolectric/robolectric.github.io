@@ -27,6 +27,7 @@ dependencyResolutionManagement {
 rootProject.name = "Robolectric Snippets"
 
 include(
+  ":common",
   ":java",
   ":kotlin",
 )

@@ -12,4 +12,5 @@ robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless-gradle-plugin" }

@@ -3,6 +3,7 @@ package org.robolectric.snippets.java;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
+import org.robolectric.snippets.common.R;
 
 public class MyActivity extends Activity {
   @Override
