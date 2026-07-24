@@ -28,19 +28,7 @@ Tests run inside the JVM in seconds. With Robolectric you can write tests like t
 /// tab | Kotlin
 
 ```kotlin
-@RunWith(AndroidJUnit4::class)
-class MyActivityTest {
-  @Test
-  fun clickingButton_shouldChangeMessage() {
-    Robolectric.buildActivity(MyActivity::class.java).use { controller ->
-      controller.setup() // Moves the Activity to the RESUMED state
-      val activity = controller.get()
-
-      activity.findViewById(R.id.button).performClick()
-      assertEquals(activity.findViewById<TextView>(R.id.text).text, "Robolectric Rocks!")
-    }
-  }
-}
+--8<-- "snippets/kotlin/src/test/java/org/robolectric/snippets/kotlin/MyActivityTest.kt:index_sample_test"
 ```
 
 ///

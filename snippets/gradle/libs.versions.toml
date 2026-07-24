@@ -3,6 +3,7 @@ android-gradle-plugin = "9.3.0"
 androidx-test-ext-junit = "1.3.0"
 junit = "4.13.2"
 robolectric = "4.16.1"
+spotless-gradle-plugin = "8.8.0"
 
 [libraries]
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
@@ -11,3 +12,4 @@ robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless-gradle-plugin" }
