@@ -47,7 +47,7 @@ jobs:
         uses: actions/setup-java@v5
         if: ${{ steps.robolectric_version.outputs.minorVersion }}
         with:
-          distribution: 'adopt'
+          distribution: 'temurin'
           java-version: 21
 
       - name: Assemble and aggregate javadoc
