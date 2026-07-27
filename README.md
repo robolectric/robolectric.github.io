@@ -11,7 +11,7 @@ This is the default branch, so Git should put you there automatically.
 ### Build the documentation locally
 
 Before submitting a Pull Request, run the documentation locally to check that the content and layout
-are correct. The documentation is built using [MkDocs](https://www.mkdocs.org/).
+are correct. The documentation is built using [ProperDocs](https://properdocs.org/).
 
 To do so, make sure that you have [Python 3+ installed](https://www.python.org/downloads/), and then
 install the required dependencies by running:
@@ -34,7 +34,7 @@ project.
 
 To use a new code snippet, follow these steps:
 
-1. Define your code snippet in the `snippets/java` module.
+1. Define your code snippet in the `snippets/java` and/or `snippets/kotlin` module.
 2. Surround it with
 
 ```java
@@ -48,7 +48,7 @@ my code snippet
 
 ````markdown
 ```java
---8<-- "snippets/java/path/to/my/snippet/MyCodeSnippet.java:my_code_snippet_identifier"
+--8<-- "snippets/path/to/my/snippet/MyCodeSnippet.java:my_code_snippet_identifier"
 ```
 ````
 
