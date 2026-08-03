@@ -1,0 +1,3415 @@
+<!--
+  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="test-drive your Android code">
+      
+      
+      
+        <link rel="canonical" href="https://robolectric.org/blog/2026/07/03/designing-local-testing-libraries/">
+      
+      
+        <link rel="prev" href="../../../../2024/02/25/robolectric-2024-gsoc/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Designing Robolectric-based local-testing libraries for platforms and modules - Robolectric</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-19269905-2"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-19269905-2",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-19269905-2",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#designing-robolectric-based-local-testing-libraries-for-platforms-and-modules" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Robolectric" class="md-header__button md-logo" aria-label="Robolectric" data-md-component="logo">
+      
+  <img src="../../../../../images/robolectric-stacked.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Robolectric
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Designing Robolectric-based local-testing libraries for platforms and modules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/robolectric/robolectric" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Robolectric
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../getting-started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../androidx_test/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../build-system-integration/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Customizing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../building-robolectric/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../automated-migration/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Robolectric" class="md-nav__button md-logo" aria-label="Robolectric" data-md-component="logo">
+      
+  <img src="../../../../../images/robolectric-stacked.png" alt="logo">
+
+    </a>
+    Robolectric
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/robolectric/robolectric" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Robolectric
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../writing-a-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing Your First Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../compatibility_table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compatibility Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../androidx_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AndroidX Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../configuring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring Robolectric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../device-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../using-qualifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Qualified Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../using-add-on-modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Add-On Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices & Limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../simulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customizing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customizing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../build-system-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build System Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../custom-test-runner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customizing the Test Runner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../building-robolectric/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Robolectric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Robolectric Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributor Guidelines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../extending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shadows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../automated-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../upgrade_to_version_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrade to Robolectric 4.x
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../upgrade_to_version_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrade to Robolectric 3.x
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Javadoc
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Javadoc
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.15
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.13
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/javadoc/4.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/robolectric/robolectric/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/robolectric/robolectric/releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/robolectric/robolectric/issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2021
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2019
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2017/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2017
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-a-local-testing-library-and-why-robolectric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why a local-testing library, and why Robolectric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-eleven-androidx-libraries-do-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How eleven AndroidX libraries do it
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How eleven AndroidX libraries do it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#family-a-one-test-two-runtimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Family A — One test, two runtimes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Family A — One test, two runtimes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1-jetpack-compose-ui-test-composeuiui-test-ui-test-junit4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Jetpack Compose UI test (compose/ui/ui-test, ui-test-junit4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#family-b-contract-fake-the-test-double-triad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Family B — Contract + fake (the test-double triad)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Family B — Contract + fake (the test-double triad)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b1-android-xr-xrruntime-scenecore-arcore-projected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B1. Android XR (xr/runtime, scenecore, arcore, projected)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b2-appfunctions-appfunctionsappfunctions-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B2. AppFunctions (appfunctions/appfunctions-testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b3-navigation-navigationnavigation-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B3. Navigation (navigation/navigation-testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b4-lifecycle-viewmodel-lifecyclelifecycle-viewmodel-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B4. Lifecycle ViewModel (lifecycle/lifecycle-viewmodel-testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#family-c-production-owned-seams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Family C — Production-owned seams
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Family C — Production-owned seams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c1-window-windowwindow-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C1. Window (window/window-testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c2-workmanager-workwork-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C2. WorkManager (work/work-testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#family-d-host-and-service-harnesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Family D — Host and service harnesses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Family D — Host and service harnesses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d1-car-app-library-carappapp-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D1. Car App Library (car/app/app-testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d2-wear-tiles-weartilestiles-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D2. Wear Tiles (wear/tiles/tiles-testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#family-e-assertion-dsls-over-data-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Family E — Assertion DSLs over data trees
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Family E — Assertion DSLs over data trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#e1-glance-glanceglance-testing-glance-appwidget-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E1. Glance (glance/glance-testing, glance-appwidget-testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e2-wear-protolayout-wearprotolayoutprotolayout-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E2. Wear ProtoLayout (wear/protolayout/protolayout-testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-robolectric-actually-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Robolectric actually provides
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-checklist-for-your-own-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A checklist for your own platform
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendation-do-the-same-for-your-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendation: do the same for your platform
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+<div class="md-content md-content--post" data-md-component="content">
+
+    <!-- Sidebar -->
+    <div
+            class="md-sidebar md-sidebar--post"
+            data-md-component="sidebar"
+            data-md-type="navigation"
+    >
+        <div class="md-sidebar__scrollwrap">
+            <div class="md-sidebar__inner md-post">
+                <nav class="md-nav md-nav--primary">
+
+                    <!-- Back to overview link -->
+                    <div class="md-post__back">
+                        <div class="md-nav__title md-nav__container">
+                            <a href="../../../../" class=" md-nav__link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                                <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Post authors -->
+                    
+                    <div class="md-post__authors md-typeset">
+                        
+                        <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/43091780?v=4" alt="utzcoz"/>
+                    </span>
+                            <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/utzcoz">utzcoz</a>
+                        
+                      </strong>
+                      <br/>
+                      Maintainer
+                    </span>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <!-- Post metadata -->
+                    <ul class="md-post__meta md-nav__list">
+                        <li class="md-nav__item md-nav__item--section">
+                            <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                            </div>
+                            <nav class="md-nav">
+                                <ul class="md-nav__list">
+
+                                    <!-- Post date -->
+                                    <li class="md-nav__item">
+                                        <div class="md-nav__link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                                            <time
+                                                    datetime="2026-07-03 00:00:00+00:00"
+                                                    class="md-ellipsis"
+                                            >July 3, 2026</time>
+                                        </div>
+                                    </li>
+
+                                    <!-- Post date updated -->
+                                    
+
+                                    <!-- Post categories -->
+                                    
+
+                                    <!-- Post readtime -->
+                                    
+                                    
+                                    <li class="md-nav__item">
+                                        <div class="md-nav__link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                                            <span class="md-ellipsis">
+                            
+                              12 min read
+                            
+                          </span>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </nav>
+                        </li>
+                    </ul>
+
+                    <!-- Related links -->
+                    
+
+                    <!-- START Robolectric modification -->
+                    <!-- Share post -->
+                    <ul class="md-post__meta md-nav__list">
+                        <li class="md-nav__item md-nav__item--section">
+                            <div class="md-post__title">
+                                <span class="md-ellipsis">
+                                    Share
+                                </span>
+                            </div>
+                            <nav class="md-nav">
+                                <ul class="md-nav__list md-typeset">
+                                    <li class="md-nav__item">
+                                        <div class="md-nav__link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+                                            <span class="md-ellipsis">
+                                                <a href="https://x.com/intent/tweet?text=Designing Robolectric-based local-testing libraries for platforms and modules&url=https://robolectric.org/blog/2026/07/03/designing-local-testing-libraries/&via=robolectric" rel="nofollow" target="_blank" title="Share on X">Share on X</a>
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <li class="md-nav__item">
+                                        <div class="md-nav__link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+                                            <span class="md-ellipsis">
+                                                <a href="https://facebook.com/sharer.php?u=https://robolectric.org/blog/2026/07/03/designing-local-testing-libraries/" rel="nofollow" target="_blank" title="Share on Facebook">Share on Facebook</a>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                    </ul>
+                    <!-- END Robolectric modification -->
+                </nav>
+
+                <!-- Table of contents, if integrated -->
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Page content -->
+    <article class="md-content__inner md-typeset">
+        
+        
+  
+
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/robolectric/robolectric.github.io/tree/main/docs/blog/posts/2026-07-03-designing-local-testing-libraries.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="designing-robolectric-based-local-testing-libraries-for-platforms-and-modules">Designing Robolectric-based local-testing libraries for platforms and modules</h1>
+<p>A <em>local-testing library</em> is a small companion artifact (in AndroidX, often a sibling module named
+<code>&lt;module&gt;-testing</code>) that lets developers exercise some Android surface in plain JVM unit tests, with
+no emulator or device. That surface is one of two kinds:</p>
+<ul>
+<li>an <strong>AOSP-based or customized platform</strong>: a whole Android variant, such as Android TV or Android
+  Automotive, with its own system services and APIs;</li>
+<li>a <strong>module, library, or SDK</strong>: anything shipped as a library that exposes APIs developers build on,
+  whether an expanded platform feature such as Android XR or AppFunctions, or an app-facing component
+  such as Compose UI, Glance, WorkManager, or Navigation.</li>
+</ul>
+<p>Either way the goal is the same: let the people coding against it test their code quickly and
+deterministically, off-device. Many AndroidX libraries ship exactly such an artifact, distributed as
+an ordinary dependency that developers add to their own library or app's test configuration, and the
+engine underneath is almost always Robolectric. It is what lets a Compose UI test, an Android XR
+perception test, or a WorkManager worker run on the JVM in milliseconds instead of on an emulator.
+This post dissects eleven of them to show how they use Robolectric, why it fits the job, and why a
+similar approach is worth adopting if you ship a custom AOSP-expanded feature or a customized AOSP
+platform.</p>
+<p>This is an outside read of the code as it stands in mid-2026, not an official AndroidX position;
+specifics will shift as the libraries evolve. Every claim is grounded in real code in the AndroidX
+(<a href="https://cs.android.com/androidx/platform/frameworks/support"><code>frameworks/support</code></a>) tree, linked inline.</p>
+<h2 id="why-a-local-testing-library-and-why-robolectric">Why a local-testing library, and why Robolectric</h2>
+<p>Android sorts tests by where they run: <em>local</em> tests on your machine's JVM, <em>instrumented</em> tests on
+a device or emulator (<a href="https://developer.android.com/training/testing/fundamentals">Fundamentals of testing Android apps</a>). Local tests are fast and hermetic; the guidance
+is to reserve device tests for "cases where you must test against the behavior of a real device"
+(<a href="https://developer.android.com/training/testing/instrumented-tests">Instrumented tests</a>). A platform with no local-testing story pushes every
+consumer onto the slow, flaky end of that tradeoff.</p>
+<p>Android's guidance also prefers <em>fakes</em> (lightweight, no mocking framework) over mocks, and tells
+consumers to "check with the authors to see if they provide any officially-supported testing
+infrastructures, such as fakes, that you can reliably depend on" (<a href="https://developer.android.com/training/testing/fundamentals/test-doubles">test doubles</a>). If
+you own a platform or module, you are those authors.</p>
+<p>Robolectric is what makes a fakes-based library practical, and the mechanism is simple to state: it
+gives your tests a fake Android environment on the JVM. Instead of an emulator it loads the real
+Android framework classes and replaces their device-and-native behavior with stand-ins, so
+<code>Context</code>, resources, <code>Looper</code>, <code>Parcel</code>, SQLite, binders, and even graphics behave much like they do on a
+real device, just in-process and fast (<a href="https://robolectric.org/architecture/">Robolectric architecture</a>). You choose the SDK level with
+<code>@Config</code> and can switch on real graphics for screenshots (<a href="https://robolectric.org/configuring/">Configuring Robolectric</a>). That is the
+whole idea: a real-enough Android runtime without a device.</p>
+<p>The piece that ties it together is the <code>androidx.test.ext.junit.runners.AndroidJUnit4</code> runner: the
+<em>same</em> <code>@RunWith(AndroidJUnit4::class)</code> test runs on Robolectric locally and on a real device when
+instrumented, because the runner delegates to Robolectric's test runner in local runs
+(<a href="https://developer.android.com/reference/androidx/test/ext/junit/runners/AndroidJUnit4">AndroidJUnit4</a>; <a href="https://developer.android.com/training/testing/local-tests/robolectric">Robolectric strategies</a>). So a good test library
+never chooses "Robolectric or device". It targets that unified runner and runs in both. Robolectric
+is best thought of as a deployment target for your tests, not a separate code path.</p>
+<h2 id="how-eleven-androidx-libraries-do-it">How eleven AndroidX libraries do it</h2>
+<p>The eleven libraries fall into five families. Each one fakes the smallest seam it can and lets
+Robolectric carry the surrounding Android runtime.</p>
+<h3 id="family-a-one-test-two-runtimes">Family A — One test, two runtimes</h3>
+<p>The ideal: write a test once, run it on the JVM for speed and on a device for fidelity, unchanged.
+Compose is the most ambitious example.</p>
+<h4 id="a1-jetpack-compose-ui-test-composeuiui-test-ui-test-junit4">A1. Jetpack Compose UI test (<code>compose/ui/ui-test</code>, <code>ui-test-junit4</code>)</h4>
+<p>Compose normally renders through a real <code>Choreographer</code>/<code>RenderThread</code>/VSYNC loop. The same
+<code>createAndroidComposeRule&lt;ComponentActivity&gt;()</code> / <code>runComposeUiTest { }</code> code runs on a device and
+on the JVM from one binary, with no Robolectric-specific source set. The only runtime detection is a
+single fingerprint check (<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:compose/ui/ui-test/src/androidMain/kotlin/androidx/compose/ui/test/RobolectricIdlingStrategy.android.kt"><code>RobolectricIdlingStrategy.android.kt</code></a>):</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">internal</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">HasRobolectricFingerprint</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">get</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Build</span><span class="p">.</span><span class="na">FINGERPRINT</span><span class="p">.</span><span class="na">lowercase</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;robolectric&quot;</span>
+</span></code></pre></div>
+<p>That boolean swaps one internal <code>IdlingStrategy</code> (Espresso on device; a main-thread loop that pumps
+Compose and forces layout on the JVM, where there is no draw pass). Frames come from a virtual-time
+test clock rather than a real <code>Choreographer</code>, and screenshot tests use Robolectric's
+native-graphics <code>PixelCopy</code> shadow. The tests live in an <code>androidHostTest</code> (JVM/Robolectric) source
+set beside <code>androidDeviceTest</code> (instrumented), sharing one body.</p>
+<h3 id="family-b-contract-fake-the-test-double-triad">Family B — Contract + fake (the test-double triad)</h3>
+<p>These libraries define a contract interface, ship a real implementation and a fake, and hand the
+fake to consumers through a rule or factory.</p>
+<h4 id="b1-android-xr-xrruntime-scenecore-arcore-projected">B1. Android XR (<code>xr/runtime</code>, <code>scenecore</code>, <code>arcore</code>, <code>projected</code>)</h4>
+<p>XR code runs against a runtime that only exists on XR hardware. XR layers its public API (<code>Session</code>,
+<code>Anchor</code>, <code>Entity</code>) over <code>@RestrictTo</code> runtime interfaces (<code>JxrRuntime</code>, <code>PerceptionManager</code>, …)
+that either a device implementation or a fake can satisfy; each <code>-testing</code> module ships in-memory
+<code>Fake*</code> implementations declaring <code>requirements = emptySet()</code>. <code>Session.create()</code> discovers
+factories via a provider list plus <code>ServiceLoader</code> and picks the first whose feature requirements
+the device meets. Under Robolectric, the device reports no features, so only the zero-requirement
+fakes are eligible (<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:xr/runtime/runtime/src/main/kotlin/androidx/xr/runtime/ServiceLoaderExt.kt"><code>ServiceLoaderExt.kt</code></a>):</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">internal</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">getDeviceContextFeatures</span><span class="p">(</span><span class="n">context</span><span class="p">:</span><span class="w"> </span><span class="n">Context</span><span class="p">):</span><span class="w"> </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Feature</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Build</span><span class="p">.</span><span class="na">FINGERPRINT</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;robolectric&quot;</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">emptySet</span><span class="p">()</span><span class="w">  </span><span class="c1">// short-circuit for unit tests</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Developers touch a <code>TestRule</code> (<code>ArCoreTestRule</code>, <code>SceneCoreTestRule</code>) that reaches the
+reflectively-built fake through a static-field handshake. The fakes contain no Robolectric; it only
+supplies the JVM <code>Context</code>/<code>Activity</code> and the fingerprint. The exception is <code>projected-testing</code>,
+whose contract <em>is</em> the OS (virtual devices, AIDL), so it shadows the platform and mocks binders
+instead of hand-writing a fake.</p>
+<h4 id="b2-appfunctions-appfunctionsappfunctions-testing">B2. AppFunctions (<code>appfunctions/appfunctions-testing</code>)</h4>
+<p>An AppFunction is normally invoked through the <code>AppFunctionManager</code> system service. The module
+exposes one public type whose <code>getAppFunctionManager()</code> returns the <em>real</em> production manager with
+two fake internal backends injected (<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:appfunctions/appfunctions-testing/src/main/java/androidx/appfunctions/testing/AppFunctionTestRule.kt"><code>AppFunctionTestRule.kt</code></a>):</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">AppFunctionTestRule</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">context</span><span class="p">:</span><span class="w"> </span><span class="n">Context</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">TestRule</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">appFunctionReader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FakeAppFunctionReader</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">appFunctionManagerApi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FakeAppFunctionManagerApi</span><span class="p">(</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">appFunctionReader</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="c1">// ...apply() also sets one ShadowSystemProperties override...</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">getAppFunctionManager</span><span class="p">():</span><span class="w"> </span><span class="n">AppFunctionManager</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="n">AppFunctionManager</span><span class="p">(</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">appFunctionReader</span><span class="p">,</span><span class="w"> </span><span class="n">appFunctionManagerApi</span><span class="p">,</span><span class="w"> </span><span class="n">NullTranslatorSelector</span><span class="p">())</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Tests run the genuine public API against fakes of its internal interfaces; the fake reader seeds a
+<code>MutableStateFlow</code> from the KSP-generated inventory, and execution runs the real delegate
+in-process. Robolectric's only runtime job is one <code>ShadowSystemProperties.override(...)</code> for a
+missing SDK-extension property.</p>
+<h4 id="b3-navigation-navigationnavigation-testing">B3. Navigation (<code>navigation/navigation-testing</code>)</h4>
+<p>A <code>NavController</code> only exists hosted in an Activity/Fragment with a <code>Context</code>, lifecycle, and real
+navigators. <code>TestNavHostController</code> <em>extends</em> the real controller and swaps only the navigator
+registry (<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:navigation/navigation-testing/src/androidMain/kotlin/androidx/navigation/testing/TestNavHostController.android.kt"><code>TestNavHostController.android.kt</code></a>):</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">actual</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">TestNavHostController</span><span class="p">(</span><span class="n">context</span><span class="p">:</span><span class="w"> </span><span class="n">Context</span><span class="p">)</span><span class="w"> </span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">NavHostController</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="na">applicationContext</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">actual</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">backStack</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">NavBackStackEntry</span><span class="o">&gt;</span><span class="w"> </span><span class="k">get</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentBackStack</span><span class="p">.</span><span class="na">value</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">init</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">navigatorProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TestNavigatorProvider</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Its <code>setCurrentDestination</code> is built on the production deep-link machinery, not private state, so
+the back stack it produces is the real one. The fakes are hand-written and multiplatform;
+Robolectric runs only the Android-host tests that need real <code>Bundle</code>/<code>Uri</code> behavior.</p>
+<h4 id="b4-lifecycle-viewmodel-lifecyclelifecycle-viewmodel-testing">B4. Lifecycle ViewModel (<code>lifecycle/lifecycle-viewmodel-testing</code>)</h4>
+<p>A <code>ViewModel</code> needs a <code>ViewModelStoreOwner</code> + <code>SavedStateRegistryOwner</code> + lifecycle from its host,
+and the hardest thing to test is process death. <code>viewModelScenario { }</code> fabricates that owner trio
+in-memory and exposes <code>recreate()</code> (<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:lifecycle/lifecycle-viewmodel-testing/src/commonMain/kotlin/androidx/lifecycle/viewmodel/testing/internal/ViewModelScenarioOwner.kt"><code>ViewModelScenarioOwner.kt</code></a>):</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">viewModelScenario</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">TestViewModel</span><span class="p">(</span><span class="n">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createSavedStateHandle</span><span class="p">())</span><span class="w"> </span><span class="p">}.</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">scenario</span><span class="w"> </span><span class="o">-&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">scenario</span><span class="p">.</span><span class="na">viewModel</span><span class="p">.</span><span class="na">handle</span><span class="o">[</span><span class="s">&quot;key&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;value&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">scenario</span><span class="p">.</span><span class="na">recreate</span><span class="p">()</span><span class="w">                                  </span><span class="c1">// simulate process death</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="n">scenario</span><span class="p">.</span><span class="na">viewModel</span><span class="p">.</span><span class="na">handle</span><span class="p">.</span><span class="na">get</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;key&quot;</span><span class="p">)).</span><span class="na">isEqualTo</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>recreate()</code> round-trips the saved state through a real <code>Parcel</code> (and enforces the 1 MB Binder
+limit), reproducing real serialization loss rather than an in-memory copy. Robolectric supplies that
+JVM <code>Parcel</code>/<code>Bundle</code>, attached on the Android host through a thin <code>expect</code>/<code>actual</code> test base.</p>
+<h3 id="family-c-production-owned-seams">Family C — Production-owned seams</h3>
+<p>Here the production library was built with test substitution in mind. It exposes a seam the official
+test artifact can reach but ordinary apps cannot.</p>
+<h4 id="c1-window-windowwindow-testing">C1. Window (<code>window/window-testing</code>)</h4>
+<p><code>androidx.window</code> surfaces fold state, activity embedding, and window metrics that exist only on
+specific hardware or OEM builds. Every production factory routes through a swappable <code>decorator</code>
+field (default identity) behind <code>@RestrictTo(LIBRARY_GROUP)</code> <code>overrideDecorator()</code>/<code>reset()</code>. Each
+test rule installs a decorator and resets it in <code>finally</code>
+(<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:window/window-testing/src/main/java/androidx/window/testing/layout/WindowLayoutInfoPublisherRule.kt"><code>WindowLayoutInfoPublisherRule.kt</code></a>):</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">WindowLayoutInfoPublisherRule</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">TestRule</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">flow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MutableSharedFlow</span><span class="o">&lt;</span><span class="n">WindowLayoutInfo</span><span class="o">&gt;</span><span class="p">(</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="n">extraBufferCapacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">onBufferOverflow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DROP_OLDEST</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="n">base</span><span class="p">:</span><span class="w"> </span><span class="n">Statement</span><span class="p">,</span><span class="w"> </span><span class="n">description</span><span class="p">:</span><span class="w"> </span><span class="n">Description</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">Statement</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">            </span><span class="n">WindowInfoTracker</span><span class="p">.</span><span class="na">overrideDecorator</span><span class="p">(</span><span class="n">PublishWindowInfoTrackerDecorator</span><span class="p">(</span><span class="n">flow</span><span class="p">))</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">base</span><span class="p">.</span><span class="na">evaluate</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">WindowInfoTracker</span><span class="p">.</span><span class="na">reset</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">overrideWindowLayoutInfo</span><span class="p">(</span><span class="n">info</span><span class="p">:</span><span class="w"> </span><span class="n">WindowLayoutInfo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">flow</span><span class="p">.</span><span class="na">tryEmit</span><span class="p">(</span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The fakes are pure JUnit; Robolectric only provides the JVM Android types (<code>Rect</code>,
+<code>WindowLayoutInfo</code>) so the tests can build them off-device.</p>
+<h4 id="c2-workmanager-workwork-testing">C2. WorkManager (<code>work/work-testing</code>)</h4>
+<p>WorkManager runs deferrable work on the OS scheduler and clock. <code>work-testing</code> keeps the <em>real</em>
+engine and a real in-memory Room database, faking only the trigger seam and the executor. It
+installs the real engine via a static delegate with a <code>SynchronousExecutor</code>, and <code>TestDriver</code>
+exposes imperative levers, so a test sees the finished state immediately
+(<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:work/work-testing/src/main/java/androidx/work/testing/TestScheduler.kt"><code>TestScheduler.kt</code></a>):</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">workManager</span><span class="p">.</span><span class="na">enqueue</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">assertThat</span><span class="p">(</span><span class="n">workManager</span><span class="p">.</span><span class="na">getWorkInfoById</span><span class="p">(</span><span class="n">id</span><span class="p">).</span><span class="na">get</span><span class="p">().</span><span class="na">getState</span><span class="p">().</span><span class="na">isFinished</span><span class="p">()).</span><span class="na">isFalse</span><span class="p">();</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">mTestDriver</span><span class="p">.</span><span class="na">setAllConstraintsMet</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w">                                  </span><span class="c1">// the lever</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">assertThat</span><span class="p">(</span><span class="n">workManager</span><span class="p">.</span><span class="na">getWorkInfoById</span><span class="p">(</span><span class="n">id</span><span class="p">).</span><span class="na">get</span><span class="p">().</span><span class="na">getState</span><span class="p">().</span><span class="na">isFinished</span><span class="p">()).</span><span class="na">isTrue</span><span class="p">();</span><span class="w">  </span><span class="c1">// ran inline</span>
+</span></code></pre></div>
+<p>Here Robolectric does the heavy lifting: it provides the <code>Context</code>, SQLite, and <code>Looper</code> so the
+entire real engine runs on the JVM.</p>
+<h3 id="family-d-host-and-service-harnesses">Family D — Host and service harnesses</h3>
+<p>These components are driven by a remote host or a bound service that does not exist on a JVM. The
+test library plays that host itself, in-process.</p>
+<h4 id="d1-car-app-library-carappapp-testing">D1. Car App Library (<code>car/app/app-testing</code>)</h4>
+<p>A Car App is bound by a host (head unit) over AIDL binders that don't exist on a JVM.
+<code>TestCarContext.createCarContext()</code> wires a <code>FakeHost</code> and recording managers, and <code>getCarService</code>
+returns the doubles (<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:car/app/app-testing/src/main/java/androidx/car/app/testing/TestCarContext.java"><code>TestCarContext.java</code></a>). The trick is faking the <em>callback</em>
+direction so output is assertable (<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:car/app/app-testing/src/main/java/androidx/car/app/testing/FakeHost.java"><code>FakeHost.java</code></a>):</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">class</span> <span class="nc">TestAppHost</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">IAppHost</span><span class="p">.</span><span class="na">Stub</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">invalidate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="n">Screen</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mTestCarContext</span><span class="p">.</span><span class="na">getCarService</span><span class="p">(</span><span class="n">TestScreenManager</span><span class="p">.</span><span class="na">class</span><span class="p">).</span><span class="na">getTop</span><span class="p">();</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="n">mTestCarContext</span><span class="p">.</span><span class="na">getCarService</span><span class="p">(</span><span class="n">TestAppManager</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">            </span><span class="p">.</span><span class="na">addTemplateReturned</span><span class="p">(</span><span class="n">top</span><span class="p">,</span><span class="w"> </span><span class="n">top</span><span class="p">.</span><span class="na">onGetTemplate</span><span class="p">());</span><span class="w">   </span><span class="c1">// captured for assertions</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>SessionController</code>/<code>ScreenController</code> drive the lifecycle via <code>moveToState(...)</code>. Robolectric supplies
+the JVM <code>Context</code>/<code>Intent</code> and one broadcast shadow.</p>
+<h4 id="d2-wear-tiles-weartilestiles-testing">D2. Wear Tiles (<code>wear/tiles/tiles-testing</code>)</h4>
+<p>A Tile is delivered by a bound <code>TileService</code> over a proto AIDL interface. Rather than mock the
+client, <code>TestTileClient</code> runs the <em>real</em> <code>DefaultTileClient</code> and fakes only the bind, using
+Robolectric's <code>ServiceController</code> + <code>ShadowApplication</code> (<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:wear/tiles/tiles-testing/src/main/java/androidx/wear/tiles/testing/TestTileClient.kt"><code>TestTileClient.kt</code></a>):</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">maybeBind</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">hasBound</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">binder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">controller</span><span class="p">.</span><span class="na">create</span><span class="p">().</span><span class="na">get</span><span class="p">().</span><span class="na">onBind</span><span class="p">(</span><span class="n">controller</span><span class="p">.</span><span class="na">intent</span><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span><span class="n">shadowOf</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="o">&lt;</span><span class="n">Application</span><span class="o">&gt;</span><span class="p">())</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">            </span><span class="p">.</span><span class="na">setComponentNameAndServiceForBindServiceForIntent</span><span class="p">(</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">                </span><span class="n">controller</span><span class="p">.</span><span class="na">intent</span><span class="p">,</span><span class="w"> </span><span class="n">componentName</span><span class="p">,</span><span class="w"> </span><span class="n">binder</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The full proto round-trip runs unchanged, so real serialization is tested. A custom
+<code>RobolectricTestRunner</code> with <code>doNotInstrumentPackage(...)</code> keeps the binder/proto packages running
+as real bytecode.</p>
+<h3 id="family-e-assertion-dsls-over-data-trees">Family E — Assertion DSLs over data trees</h3>
+<p>When a platform's output is a serializable tree rather than pixels, the test library can skip device
+emulation almost entirely and assert on the structure directly.</p>
+<h4 id="e1-glance-glanceglance-testing-glance-appwidget-testing">E1. Glance (<code>glance/glance-testing</code>, <code>glance-appwidget-testing</code>)</h4>
+<p>Glance widgets are a Compose composition that emits a tree of <code>Emittable</code>s. Modeled on
+<code>runComposeUiTest</code>, the harness runs a real composition with no rendering and asserts on the tree
+(<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:glance/glance-appwidget-testing/src/main/java/androidx/glance/appwidget/testing/unit/GlanceAppWidgetUnitTest.kt"><code>GlanceAppWidgetUnitTest.kt</code></a>):</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">header_smallSize_showsShortText</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runGlanceAppWidgetUnitTest</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">setAppWidgetSize</span><span class="p">(</span><span class="n">DpSize</span><span class="p">(</span><span class="m">50.</span><span class="n">dp</span><span class="p">,</span><span class="w"> </span><span class="m">100.</span><span class="n">dp</span><span class="p">))</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">provideComposable</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">StatusRow</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">onNode</span><span class="p">(</span><span class="n">hasTestTag</span><span class="p">(</span><span class="s">&quot;header-text&quot;</span><span class="p">)).</span><span class="na">assert</span><span class="p">(</span><span class="n">hasText</span><span class="p">(</span><span class="s">&quot;MyApp&quot;</span><span class="p">))</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The environment is faked entirely through Glance composition locals (<code>LocalSize</code>, <code>LocalState</code>, …);
+the library contains no Robolectric, and a consumer only needs it when a composable reads resources.
+The matcher and assertion engine is its own surface-agnostic layer with composable, self-describing
+matchers.</p>
+<h4 id="e2-wear-protolayout-wearprotolayoutprotolayout-testing">E2. Wear ProtoLayout (<code>wear/protolayout/protolayout-testing</code>)</h4>
+<p>ProtoLayout describes UI as a serializable tree, some values computed by dynamic expressions. Almost
+nothing is faked: the tree is real (round-tripped through proto) and only the dynamic-data inputs
+are injected (<a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:wear/protolayout/protolayout-testing/src/main/java/androidx/wear/protolayout/testing/LayoutElementAssertionsProvider.kt"><code>LayoutElementAssertionsProvider.kt</code></a>):</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">provider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LayoutElementAssertionsProvider</span><span class="p">(</span><span class="n">TEST_LAYOUT</span><span class="p">)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="p">.</span><span class="na">withDynamicData</span><span class="p">(</span><span class="n">intAppKey</span><span class="w"> </span><span class="n">mapTo</span><span class="w"> </span><span class="n">intAppValue</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">                     </span><span class="n">PlatformHealthSources</span><span class="p">.</span><span class="na">Keys</span><span class="p">.</span><span class="na">DAILY_STEPS</span><span class="w"> </span><span class="n">mapTo</span><span class="w"> </span><span class="n">dailySteps</span><span class="p">)</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">provider</span><span class="p">.</span><span class="na">onElement</span><span class="p">(</span><span class="n">isText</span><span class="p">).</span><span class="na">assert</span><span class="p">(</span><span class="n">hasText</span><span class="p">(</span><span class="s">&quot;12,345 steps&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+<p>Dynamic values resolve through the <em>real</em> evaluator, so you test the actual pipeline. This module
+barely touches Robolectric: its tests use <code>@RunWith(AndroidJUnit4::class)</code> and a few <code>android.*</code>
+value classes, nothing more. It is the counter-example showing how little Robolectric you sometimes
+need.</p>
+<h2 id="what-robolectric-actually-provides">What Robolectric actually provides</h2>
+<p>Across all eleven cases, Robolectric plays the same role. It is almost never the code under test,
+and almost never the test double itself; the faking is done by hand-written fakes, rules, and
+harnesses. What Robolectric provides is the ground they stand on: a real Android runtime on the JVM.
+It loads the actual framework classes rather than the throwaway <code>Stub!</code> ones, so <code>Context</code>,
+resources, <code>Looper</code>, <code>Parcel</code>, SQLite, binders, and graphics behave closely enough to a device that
+production code runs unmodified, in-process. Its role ranges widely across the libraries.</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>What Robolectric does for it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WorkManager</td>
+<td>Runs the <em>entire</em> real engine and its Room/SQLite database on the JVM</td>
+</tr>
+<tr>
+<td>Compose UI</td>
+<td>JVM <code>Looper</code> plus native-graphics shadows for rendering and <code>PixelCopy</code> screenshots</td>
+</tr>
+<tr>
+<td>Wear Tiles</td>
+<td><code>ServiceController</code> + <code>ShadowApplication</code> to bind a real <code>TileService</code> with no IPC</td>
+</tr>
+<tr>
+<td>Car App</td>
+<td>JVM <code>Context</code>/<code>Intent</code>/<code>PendingIntent</code>, plus one broadcast shadow, for the fake host</td>
+</tr>
+<tr>
+<td>XR <code>projected</code></td>
+<td>Shadows <code>VirtualDeviceManager</code>/<code>PackageManager</code>; AIDL binders are mocked on top</td>
+</tr>
+<tr>
+<td>AppFunctions</td>
+<td>One <code>ShadowSystemProperties</code> override for a missing SDK-extension property</td>
+</tr>
+<tr>
+<td>XR arcore/scenecore</td>
+<td>Just the JVM <code>Context</code>/<code>Activity</code> and the <code>robolectric</code> fingerprint; fakes do the rest</td>
+</tr>
+<tr>
+<td>Window / Navigation / Lifecycle</td>
+<td>JVM Android primitives (<code>Rect</code>, <code>Bundle</code>, <code>Parcel</code>, <code>Looper</code>) so real types build off-device</td>
+</tr>
+<tr>
+<td>Glance / ProtoLayout</td>
+<td>Little to nothing: a real <code>Context</code> only when a composable reads resources</td>
+</tr>
+</tbody>
+</table>
+<p>The table shows the range: one dependency stretches from running WorkManager's entire engine and
+database to lending Glance a single <code>Context</code>. That range is worth building on for three reasons.
+The tests are fast and deterministic, finishing in milliseconds with no emulator boot and none of a
+device's flakiness, so they sit in the run-on-every-commit tier of the pyramid. They are
+high-fidelity, because they run the real framework code instead of a guessed stub, so the surface
+developers build on behaves like the real thing. And they do not lock anyone in: the same
+<code>@RunWith(AndroidJUnit4::class)</code> test still runs on a device when instrumented, so leaning on
+Robolectric never forecloses real-device testing.</p>
+<p>It is not a full emulator, and that is the point. Robolectric handles the platform plumbing while
+your library supplies the behavior specific to it; anything that truly needs real hardware or
+cross-process IPC still belongs in an instrumented test. Within those limits, that pairing of broad
+reach and one uniform, device-compatible execution model is exactly what makes it the right
+foundation for a local-testing library.</p>
+<h2 id="a-checklist-for-your-own-platform">A checklist for your own platform</h2>
+<p>Distilled from the eleven libraries, this is the recipe for shipping your own. Each step points to a
+case above that shows it in practice.</p>
+<ol>
+<li><strong>Find the seam.</strong> Pin down the one boundary that must vanish in a test: a system service
+   (AppFunctions), a runtime or factory (XR), a host binder (Car, Tiles), an OS trigger and clock
+   (WorkManager), a hardware signal (Window), or a host owner (Navigation, Lifecycle). Fake that, and
+   nothing more.</li>
+<li><strong>Pick a substitution mechanism.</strong> If the entry point is injectable, just pass a fake (Lifecycle,
+   Glance). If it is built reflectively, register the fake through <code>ServiceLoader</code> and feature-gate it
+   so it wins under Robolectric (XR). If it is a global singleton, add a <code>@RestrictTo</code> override hook
+   (Window) or a static delegate (WorkManager).</li>
+<li><strong>Prefer a fake to a shadow.</strong> Write a plain object that implements your real interface and holds
+   in-memory state. Reach for a Robolectric shadow only for genuine platform surfaces (a system
+   property in AppFunctions, service binding in Tiles, a <code>Parcel</code> in Lifecycle), and shadow the OS
+   outright only when the contract <em>is</em> the OS (XR <code>projected</code>).</li>
+<li><strong>Pick a public shape.</strong> A JUnit <code>TestRule</code> (XR, Window, Car), a scenario object (Lifecycle), or a
+   <code>run…Test { }</code> harness (Compose, Glance). Keep the fakes themselves <code>internal</code>.</li>
+<li><strong>Make it deterministic.</strong> Collapse async with synchronous executors, drive frames with a
+   virtual-time clock instead of <code>Choreographer</code>, and expose an explicit idle/await primitive.</li>
+<li><strong>Target <code>AndroidJUnit4</code>.</strong> One test body then runs on Robolectric locally and on a device when
+   instrumented; split sources into host, device, and shared sets so nothing forks.</li>
+<li><strong>Ship it as a dependency.</strong> Publish a first-class <code>&lt;module&gt;-testing</code> artifact that declares an
+   <code>api</code> dependency on the module under test, so consumers get it (and the contract) by adding one
+   line to their test configuration.</li>
+<li><strong>Restore global state in <code>finally</code>,</strong> and add a test that proves the restore happened. Leaked
+   static state is the most common source of cross-test contamination.</li>
+<li><strong>Make failures self-explanatory.</strong> Give matchers human-readable descriptions, and mark
+   unsupported surfaces with a loud <code>TODO()</code> rather than a silent no-op.</li>
+</ol>
+<h2 id="recommendation-do-the-same-for-your-platform">Recommendation: do the same for your platform</h2>
+<p>The throughline is one decision, made well each time: fake the smallest seam you can, and substitute
+it as honestly as possible, usually with a hand-written fake behind a small public surface. What
+makes that worth doing is Robolectric. It turns "test against the platform" from an emulator job
+measured in seconds into a JVM job measured in milliseconds, and the payoff lands in the consumer's
+project as nothing more exotic than a test dependency: they add your <code>-testing</code> artifact, write
+<code>@RunWith(AndroidJUnit4::class)</code> tests against your real API, and run them on every commit.</p>
+<p>So, plainly: if you ship a custom AOSP-expanded feature, a customized AOSP platform, or any module
+whose APIs developers build on, ship them a <code>-testing</code> companion library built on Robolectric. The
+cost is modest: a fake or two plus a rule or a harness, and the eleven libraries above are a working
+blueprint for every shape it can take. Android's own guidance, read from the consumer's side, is to
+"check with the authors … for … fakes … you can reliably depend on." If you own the platform or
+module, you are those authors, and Robolectric is how you answer.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Robolectric: <a href="https://robolectric.org/architecture/">how it works</a>, <a href="https://robolectric.org/configuring/">configuration</a>, <a href="https://robolectric.org/javadoc/latest/org/robolectric/annotation/GraphicsMode.html">native
+  graphics</a>, and <a href="https://robolectric.org/getting-started/">getting started</a>.</li>
+<li>Android testing guidance: <a href="https://developer.android.com/training/testing/fundamentals">test fundamentals</a>, <a href="https://developer.android.com/training/testing/fundamentals/test-doubles">test doubles</a>,
+  <a href="https://developer.android.com/training/testing/local-tests/robolectric">Robolectric strategies</a>.</li>
+<li>Platform test libraries worth modeling yours on: <a href="https://developer.android.com/training/cars/apps/library/test-library">Car app-testing</a>, <a href="https://developer.android.com/health-and-fitness/health-connect/test/unit-tests">Health Connect
+  connect-testing</a>.</li>
+<li>Every source link in the case studies points at the AndroidX <code>frameworks/support</code> tree on Android
+  Code Search.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+
+        
+    </article>
+</div>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ©2010-2026. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/robolectric/robolectric" target="_blank" rel="noopener" title="GitHub Project" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://groups.google.com/group/robolectric" target="_blank" rel="noopener" title="robolectric@googlegroups.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M61.4 64C27.5 64 0 91.5 0 125.4c0 .9 0 1.7.1 2.6H0v256c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V128h-.1c0-.9.1-1.7.1-2.6 0-33.9-27.5-61.4-61.4-61.4zM464 192.3V384c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192.3l154.8 117.4c31.4 23.9 74.9 23.9 106.4 0zM48 125.4c0-7.4 6-13.4 13.4-13.4h389.2c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://x.com/robolectric" target="_blank" rel="noopener" title="@Robolectric" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["content.action.view", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
