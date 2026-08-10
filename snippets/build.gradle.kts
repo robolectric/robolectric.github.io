@@ -6,15 +6,21 @@ plugins {
 }
 
 spotless {
+  // Add configurations for Java files
+  java {
+    target("**/*.java")
+    googleJavaFormat("1.36.1")
+  }
+
   // Add configurations for Kotlin files
   kotlin {
     target("**/*.kt")
-    ktfmt().googleStyle()
+    ktfmt("0.64").googleStyle()
   }
 
   // Add configurations for Kotlin Gradle files
   kotlinGradle {
     target("**/*.kts")
-    ktfmt().googleStyle()
+    ktfmt("0.64").googleStyle()
   }
 }

@@ -1,5 +1,30 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "google/google-java-format",
+      "extractVersionTemplate": "^v(?\u003cversion\u003e.*)$",
+      "managerFilePatterns": [
+        "/^snippets/build.gradle.kts$/"
+      ],
+      "matchStrings": [
+        "googleJavaFormat\\(\"(?\u003ccurrentValue\u003e.*)\"\\)"
+      ]
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "Kotlin/ktfmt",
+      "managerFilePatterns": [
+        "/^snippets/build.gradle.kts$/"
+      ],
+      "matchStrings": [
+        "ktfmt\\(\"(?\u003ccurrentValue\u003e.*)\"\\)"
+      ]
+    }
+  ],
   "extends": [
     "config:recommended",
     ":disableDependencyDashboard",
