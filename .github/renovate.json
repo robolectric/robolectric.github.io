@@ -27,8 +27,7 @@
   ],
   "extends": [
     "config:recommended",
-    ":disableDependencyDashboard",
-    "schedule:weekly"
+    ":disableDependencyDashboard"
   ],
   "labels": [
     "dependencies"
