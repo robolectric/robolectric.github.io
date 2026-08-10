@@ -33,17 +33,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
 
-      - name: Check Java code style
-        uses: axel-op/googlejavaformat-action@v4.0.0
-        with:
-          args: "--replace"
-          files: snippets/**/*.java
-          skip-commit: true
-
-      - name: Print codestyle issues
-        run: git --no-pager diff --exit-code
-
-      - name: Check Kotlin code style
+      - name: Check code style
         run: |
           cd snippets
           ./gradlew :spotlessCheck
