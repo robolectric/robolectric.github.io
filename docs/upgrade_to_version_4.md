@@ -1,4 +1,29 @@
 <!-- markdownlint-disable MD024 MD041 -->
+## Migrating to 4.17
+
+### Potential Breaking Changes
+
+- We started using [JSpecify nullness annotations](https://jspecify.dev/) inside Robolectric. You may see new warnings
+  regarding non-nullable or potentatial null pointer exception.
+- `ConscryptMode` is now `ON` on every platform (it was `OFF` on Mac arm64).
+
+### Deprecations
+
+| Deprecated symbol                    | Replacement                                                                           |
+|--------------------------------------|---------------------------------------------------------------------------------------|
+| `org.robolectric:shadows-httpclient` | N/A                                                                                   |
+| `SQLiteMode`                         | `SQLiteMode.Mode.NATIVE` is now the default, and usages of these APIs can be removed- |
+| `SQLiteModeConfigurer`               | `SQLiteMode.Mode.NATIVE` is now the default, and usages of these APIs can be removed- |
+
+### Removals
+
+| Removed symbol                             | Replacement                                         |
+|--------------------------------------------|-----------------------------------------------------|
+| `AndroidVersionInitTools`                  | N/A                                                 |
+| `AndroidVersions`                          | `Build.VERSION_CODES.*` and `VersionCalculator`     |
+| `Implements#callThroughByDefault(boolean)` | N/A                                                 |
+| `Implements#looseSignatures(boolean)`      | `@ClassName` or `Implementation#methodName(String)` |
+
 ## Migrating to 4.16
 
 ### Breaking Changes
