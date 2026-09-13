@@ -54,7 +54,7 @@ jobs:
         if: ${{ steps.robolectric_version.outputs.minorVersion }}
         run: |
           cd robolectric
-          ./gradlew clean aggregateDocs
+          ./gradlew clean aggregateDocs --no-parallel
 
       - name: Move the new javadoc
         if: ${{ steps.robolectric_version.outputs.patchVersion }}
