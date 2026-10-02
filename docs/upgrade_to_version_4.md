@@ -4,7 +4,7 @@
 ### Potential Breaking Changes
 
 - We started using [JSpecify nullness annotations](https://jspecify.dev/) inside Robolectric. You may see new warnings
-  regarding non-nullable or potentatial null pointer exception.
+  regarding non-nullable or potential null pointer exception.
 - `ConscryptMode` is now `ON` on every platform (it was `OFF` on Mac arm64).
 
 ### Deprecations
@@ -206,6 +206,134 @@
 | Removed symbol                      | Replacement                                                                   |
 |-------------------------------------|-------------------------------------------------------------------------------|
 | `org.robolectric:shadows-supportv4` | See [Test your fragments](https://developer.android.com/guide/fragments/test) |
+
+## Migrating to 4.8
+
+### Deprecations
+
+| Deprecated symbol           | Replacement |
+|-----------------------------|-------------|
+| `SupportFragmentController` | N/A         |
+
+### Removals
+
+| Removed symbol    | Replacement |
+|-------------------|-------------|
+| `ShadowScroller`  | N/A         |
+| `ShadowTextPaint` | N/A         |
+| `ShadowsPlugin`   | N/A         |
+
+## Migrating to 4.7
+
+### Deprecations
+
+| Deprecated symbol                   | Replacement                |
+|-------------------------------------|----------------------------|
+| `ShadowSwipeRefreshLayout`          | N/A                        |
+| `directlyOn` proxy version          | `@Direct` with `reflector` |
+| `org.robolectric:shadows-supportv4` | N/A                        |
+
+### Removals
+
+| Removed symbol         | Replacement |
+|------------------------|-------------|
+| `ShadowBaseLooper`     | N/A         |
+| `OldClassInstrumentor` | N/A         |
+
+## Migrating to 4.6
+
+### Deprecations
+
+| Deprecated symbol             | Replacement |
+|-------------------------------|-------------|
+| `RoboExecutorService`         | N/A         |
+| `TextLayoutMode`              | N/A         |
+| `ShadowBitmapFactory` methods | N/A         |
+
+### Removals
+
+| Removed symbol                                   | Replacement |
+|--------------------------------------------------|-------------|
+| `ShadowBuild.Q`                                  | N/A         |
+| `ShadowIntrumentation#execStartActivityAsCaller` | N/A         |
+| `ShadowBluetoothAdapter#getBluetoothLeAvertiser` | N/A         |
+
+## Migrating to 4.5
+
+### Removals
+
+| Removed symbol          | Replacement        |
+|-------------------------|--------------------|
+| `RoboCharsets`          | `StandardCharsets` |
+| `ShadowContentObserver` | N/A                |
+| `ShadowPhoneAccount`    | N/A                |
+| `ShadowDateFormat`      | N/A                |
+
+## Migrating to 4.4
+
+### Deprecations
+
+| Deprecated symbol                       | Replacement                                 |
+|-----------------------------------------|---------------------------------------------|
+| `ShadowContentProviderOperation` APIs   | N/A                                         |
+| `ShadowTelephonyManager#setNetworkType` | `ShadowTelephonyManager#getDataNetworkType` |
+| `LooperMode.LEGACY`                     | `LooperMode.PAUSED`                         |
+
+### Removals
+
+| Removed symbol                      | Replacement |
+|-------------------------------------|-------------|
+| `ShadowKeyguardManager#getCallback` | N/A         |
+| `ShadowOverscroller`                | N/A         |
+
+## Migrating to 4.3
+
+### Deprecations
+
+| Deprecated symbol                | Replacement |
+|----------------------------------|-------------|
+| `ShadowRealisticAsyncTaskLoader` | N/A         |
+| Some methods in `ShadowView`     | Espresso    |
+
+### Removals
+
+| Removed symbol        | Replacement         |
+|-----------------------|---------------------|
+| `ShadowExifInterface` | Call actual methods |
+| `ShadowHandler`       | N/A                 |
+
+## Migrating to 4.2
+
+### Deprecations
+
+| Deprecated symbol                              | Replacement        |
+|------------------------------------------------|--------------------|
+| `Robolectric#setupActivity`                    | `ActivityScenario` |
+| `RobolectricTestRunner#buildGlobalConfig()`    | N/A                |
+| `ShadowPackageManager#addResolveInfoForIntent` | N/A                |
+
+### Removals
+
+| Removed symbol        | Replacement |
+|-----------------------|-------------|
+| `DefaultConfigMerger` | N/A         |
+
+## Migrating to 4.1
+
+### Deprecations
+
+| Deprecated symbol                 | Replacement                           |
+|-----------------------------------|---------------------------------------|
+| `ShadowPackageManager#addPackage` | `ShadowPackageManager#installPackage` |
+
+### Removals
+
+| Removed symbol                          | Replacement |
+|-----------------------------------------|-------------|
+| `ShadowApplication#getLayoutInflater()` | N/A         |
+| `RoboLayoutInflator`                    | N/A         |
+| `ShadowHandler`                         | N/A         |
+| `ShadowView#getDrawingCache()`          | N/A         |
 
 <!-- markdownlint-disable-next-line MD033 -->
 ## Migrating to 4.0<a name="migrating-to-40"></a>
