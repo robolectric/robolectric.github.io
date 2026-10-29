@@ -9,7 +9,7 @@ spotless {
   // Add configurations for Java files
   java {
     target("**/*.java")
-    googleJavaFormat("1.36.1")
+    googleJavaFormat("1.37.0")
   }
 
   // Add configurations for Kotlin files
