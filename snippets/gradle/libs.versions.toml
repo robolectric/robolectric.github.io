@@ -2,7 +2,7 @@
 android-gradle-plugin = "9.5.1"
 androidx-test-ext-junit = "1.3.0"
 junit = "4.13.2"
-robolectric = "4.17"
+robolectric = "4.18"
 spotless-gradle-plugin = "8.11.0"
 
 [libraries]
