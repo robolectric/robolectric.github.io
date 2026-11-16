@@ -7,7 +7,7 @@ hide:
 <!-- markdownlint-disable MD033 MD041 -->
 
 <div align="center">
-  <img src="images/robolectric-horizontal.png" alt="{{ config.site_name }}" />
+  <img src="images/robolectric-horizontal.svg" alt="{{ config.site_name }}" />
 
   <h1>{{ config.site_description }}</h1>
 </div>
