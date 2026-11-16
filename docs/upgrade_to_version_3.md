@@ -484,7 +484,7 @@ testCompile("org.robolectric:shadows-maps:3.0")
 [context-wrapper-documentation]: https://developer.android.com/reference/android/content/ContextWrapper
 [display-documentation]: https://developer.android.com/reference/android/view/Display
 [display-metrics-documentation]: https://developer.android.com/reference/android/util/DisplayMetrics
-[fake-http-get-latest-sent-http-request-javadoc]: javadoc/latest/org/robolectric/shadows/httpclient/FakeHttp.html#getLatestSentHttpRequest()
+[fake-http-get-latest-sent-http-request-javadoc]: javadoc/4.17/org/robolectric/shadows/httpclient/FakeHttp.html#getLatestSentHttpRequest()
 [fragment-controller-javadoc]: javadoc/latest/org/robolectric/android/controller/FragmentController.html
 [intent-service-controller-javadoc]: javadoc/latest/org/robolectric/android/controller/IntentServiceController.html
 [mockito]: https://site.mockito.org/
