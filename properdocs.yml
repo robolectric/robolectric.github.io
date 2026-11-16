@@ -10,7 +10,7 @@ edit_uri: https://github.com/robolectric/robolectric.github.io/tree/main/docs
 theme:
   name: material
   favicon: images/favicon.ico
-  logo: images/robolectric-stacked.png
+  logo: images/robolectric-stacked.svg
   icon:
     repo: fontawesome/brands/github
   custom_dir: overrides
