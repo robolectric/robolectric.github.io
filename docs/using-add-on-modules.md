@@ -7,15 +7,11 @@ dedicated packages.
 
 > [!NOTE]
 >
+> - Since [Robolectric 4.18][robolectric-4.18-release], all add-on packages have been removed. Only
+    the main Robolectric module remains.
 > - [Robolectric 3.4][robolectric-3.4-release] doesn't include the `shadows-` prefix in the package
     name (i.e., `org.robolectric:playservices` and `org.robolectric:httpclient`).
 > - Before Robolectric 3.4, `org.robolectric:playservices` was named `shadow-play-services`.
-
-## Deprecated packages
-
-| SDK package                            | Robolectric add-on package                                        | Javadoc                               | Comment                                                                     |
-|----------------------------------------|-------------------------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------|
-| `org.apache.httpcomponents:httpclient` | [`org.robolectric:shadows-httpclient`][shadows-httpclient-source] | [Javadoc][shadows-httpclient-javadoc] | This package was deprecated in [Robolectric 4.17][robolectric-4.17-release] |
 
 ## Removed packages
 
@@ -26,6 +22,7 @@ dedicated packages.
 | `com.android.support.multidex`         | `org.robolectric:shadows-multidex`     | Deprecated in [Robolectric 4.14][robolectric-4.14-release]<br/>Removed in [Robolectric 4.15][robolectric-4.15-release] |
 | `com.android.support.support-v4`       | `org.robolectric:shadows-supportv4`    | Deprecated in [Robolectric 4.8][robolectric-4.8-release]<br/>Removed in [Robolectric 4.9][robolectric-4.9-release]     |
 | `com.google.android.gms:play-services` | `org.robolectric:shadows-playservices` | Deprecated in [Robolectric 4.15][robolectric-4.15-release]<br/>Removed in [Robolectric 4.16][robolectric-4.16-release] |
+| `org.apache.httpcomponents:httpclient` | `org.robolectric:shadows-httpclient`   | Deprecated in [Robolectric 4.17][robolectric-4.17-release]<br/>Removed in [Robolectric 4.18][robolectric-4.18-release] |
 
 [robolectric-3.4-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-3.4
 [robolectric-4.8-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.8
@@ -34,5 +31,4 @@ dedicated packages.
 [robolectric-4.15-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.15
 [robolectric-4.16-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.16
 [robolectric-4.17-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.17
-[shadows-httpclient-javadoc]: javadoc/latest/org/robolectric/shadows/httpclient/package-summary.html
-[shadows-httpclient-source]: https://github.com/robolectric/robolectric/tree/master/shadows/httpclient
+[robolectric-4.18-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-4.18

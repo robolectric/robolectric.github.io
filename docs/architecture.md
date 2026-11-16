@@ -81,9 +81,8 @@ There are two categories of shadows: Robolectric’s built-in shadows that are a
 [Robolectric Annotation Processor (RAP)][robolectric-annotation-processor], and custom shadows that
 are commonly specified using `@Config(shadows = …)`. RAP is configured to process all the shadow
 files that exist in Robolectric’s code. The main shadow package is
-[framework shadows][framework-shadows], which contain shadows for the Android framework. There are
-other shadow packages in Robolectric's code, such as [httpclient shadows][httpclient-shadows], but
-all of them outside of framework shadows are deprecated. When Robolectric is built, each shadow
+[framework shadows][framework-shadows], which contain shadows for the Android framework. Since
+Robolectric 4.18, it is the only shadow package in Robolectric's code. When Robolectric is built, each shadow
 package is processed by RAP and a [ShadowProvider][shadow-provider] file is generated. For example,
 to see the `ShadowProvider` for the framework shadows, you can run:
 
@@ -175,7 +174,6 @@ project.
 [class-instrumentor]: https://github.com/robolectric/robolectric/blob/master/sandbox/src/main/java/org/robolectric/internal/bytecode/ClassInstrumentor.java
 [class-loader]: https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html
 [framework-shadows]: https://github.com/robolectric/robolectric/tree/master/shadows/framework
-[httpclient-shadows]: https://github.com/robolectric/robolectric/tree/master/shadows/httpclient
 [injector-source]: https://github.com/robolectric/robolectric/blob/master/utils/src/main/java/org/robolectric/util/inject/Injector.java
 [intent-source]: https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/java/android/content/Intent.java
 [invoke-dynamic-support]: https://github.com/robolectric/robolectric/blob/master/sandbox/src/main/java/org/robolectric/internal/bytecode/InvokeDynamicSupport.java
