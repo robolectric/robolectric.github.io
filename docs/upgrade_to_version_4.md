@@ -1,4 +1,40 @@
 <!-- markdownlint-disable MD024 MD041 -->
+## Migrating to 4.18
+
+### Breaking Changes
+
+- Drop support for API 23. Robolectric now supports API 24 (N) up to 37 (Cinnamon Bun), matching AndroidX's minimum
+  SDK.
+- `HttpResponseCache#install()` now also sets `ResponseCache.getDefault()`, as it does on a device.
+
+### Potential Breaking Changes
+
+- On SDK 33 and 34, the scalar and `int[]` `RuntimeShader` uniform setters now forward their values to native code.
+  This can change how Material ripples are drawn in screenshot tests. You can temporarily restore the previous behavior
+  by setting the `robolectric.runtimeShaderScalarUniform` system property to `false`. This property will be removed in a
+  future release.
+- `META-INF/services` resources are now cached by default. Set the `robolectric.cacheServiceLoaderResources` system
+  property to `false` to restore the dynamic discovery of these files.
+- The `org.apache.http` package is no longer instrumented.
+
+### Deprecations
+
+| Deprecated symbol                                  | Replacement                        |
+|----------------------------------------------------|------------------------------------|
+| `ShadowTotalCaptureResult`                         | `TotalCaptureResultBuilder`        |
+| `ShadowTotalCaptureResult#newTotalCaptureResult()` | `TotalCaptureResultBuilder`        |
+| `VersionCalculator#CINNAMON_BUN`                   | `Build.VERSION_CODES#CINNAMON_BUN` |
+
+### Removals
+
+| Removed symbol                       | Replacement                                                                   |
+|--------------------------------------|-------------------------------------------------------------------------------|
+| `org.robolectric:shadows-httpclient` | N/A                                                                           |
+| `ShadowRemoteCallbackList`           | N/A (the real `RemoteCallbackList` works without it)                          |
+| `ShadowTabWidget`                    | N/A                                                                           |
+| `TextLayoutMode`                     | N/A (`TextLayoutMode.Mode.REALISTIC` was the default, and is now always used) |
+| `TextLayoutModeConfigurer`           | N/A (`TextLayoutMode.Mode.REALISTIC` was the default, and is now always used) |
+
 ## Migrating to 4.17
 
 ### Potential Breaking Changes

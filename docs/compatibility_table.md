@@ -7,6 +7,7 @@ and the Android Gradle Plugin used to build Robolectric.
 
 | Robolectric version | Android API levels | Gradle version | Android Gradle Plugin version |
 |---------------------|--------------------|----------------|-------------------------------|
+| 4.18                | 24 → 37            | 9.8.2          | 9.5.0                         |
 | 4.17                | 23 → 37            | 9.6.1          | 9.2.1                         |
 | 4.16                | 23 → 36            | 8.14.3         | 8.12.0                        |
 | 4.15                | 21 → 35            | 8.14.1         | 8.10.1                        |
