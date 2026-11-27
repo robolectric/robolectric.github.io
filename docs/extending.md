@@ -305,6 +305,40 @@ Note, by default `Shadows.shadowOf()` method will not work with custom shadows. 
 use [`Shadow.extract()`][shadow-extract] and cast the return value to the custom Shadow class you
 implemented.
 
+### Shadowing Hidden Android Classes
+
+Android projects compile against the public `android.jar`, which omits internal (`@hide`) classes
+such as `android.view.ViewRootImpl`. Do not add `org.robolectric:android-all` to your test
+dependencies to make those classes compile: Robolectric loads the instrumented framework jar inside
+its own sandbox class loader (see
+[Android framework Jars and instrumentation](architecture.md#android-framework-jars-and-instrumentation)),
+and putting `android-all` on the test classpath causes linkage errors.
+
+Instead, pass the binary class name to `@Implements` and set `isInAndroidSdk = false`, which tells
+the shadow annotation processor not to generate a `shadowOf()` method for an inaccessible type:
+
+/// tab | Java
+
+```java
+--8<-- "snippets/java/src/test/java/org/robolectric/snippets/java/MyShadowViewRootImplTest.java:hidden_shadow_class"
+```
+
+///
+
+/// tab | Kotlin
+
+```kotlin
+--8<-- "snippets/kotlin/src/test/java/org/robolectric/snippets/kotlin/MyShadowViewRootImplTest.kt:hidden_shadow_class"
+```
+
+///
+
+If a shadowed method uses a hidden parameter or return type, declare it as `Object` (Java) or `Any`
+(Kotlin) with [`@ClassName`][class-name-documentation] (for example,
+`@ClassName("android.view.View$AttachInfo")`). To call hidden methods or access hidden fields on
+`@RealObject`, use a [`@ForType(className = "...")`][for-type-documentation] interface with
+[`Reflector`][reflector-documentation].
+
 ### Building a library of Custom Shadows
 
 If you find yourself building a library of custom shadows, you should consider running Robolectric's
@@ -392,10 +426,12 @@ can't better refactor your code and use a popular mocking library such as [Mocki
 Please [contribute](contributing.md) your enhancements to Robolectric. This will help the community
 and reduce the bloat in your own codebase.
 
+[class-name-documentation]: javadoc/latest/org/robolectric/annotation/ClassName.html
 [config-documentation]: javadoc/latest/org/robolectric/annotation/Config.html
 [config-shadows]: javadoc/latest/org/robolectric/annotation/Config.html#shadows()
 [context-documentation]: https://developer.android.com/reference/android/content/Context
 [fake-object]: https://c2.com/cgi/wiki?FakeObject "Fake Object"
+[for-type-documentation]: javadoc/latest/org/robolectric/util/reflector/ForType.html
 [implementation-documentation]: javadoc/latest/org/robolectric/annotation/Implementation.html
 [implements-documentation]: javadoc/latest/org/robolectric/annotation/Implements.html
 <!-- markdownlint-disable-next-line MD053 -->
@@ -405,6 +441,7 @@ and reduce the bloat in your own codebase.
 [point-documentation]: https://developer.android.com/reference/android/graphics/Point
 [proxy-pattern]: https://en.wikipedia.org/wiki/Proxy_pattern "Proxy pattern - Wikipedia, the free encyclopedia"
 [real-object-documentation]: javadoc/latest/org/robolectric/annotation/RealObject.html
+[reflector-documentation]: javadoc/latest/org/robolectric/util/reflector/Reflector.html
 [resetter-documentation]: javadoc/latest/org/robolectric/annotation/Resetter.html
 [robolectric-3.7-release]: https://github.com/robolectric/robolectric/releases/tag/robolectric-3.7
 [shadow-directly-on]: javadoc/latest/org/robolectric/shadow/api/Shadow.html#directlyOn(java.lang.Class,java.lang.String,org.robolectric.util.ReflectionHelpers.ClassParameter...)
